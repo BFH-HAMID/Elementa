@@ -7,7 +7,16 @@ import { Button } from '@/components/ui/Button';
 
 export function SimToolbar({ running, onToggle, onReset, onRecord, onScreenshot, onFullscreen }: { running: boolean; onToggle: () => void; onReset: () => void; onRecord: () => void; onScreenshot: () => void; onFullscreen: () => void }) {
   const t = useTranslations('common');
-  return <div className="flex flex-wrap items-center gap-2 border-b border-[var(--line)] pb-4"><Button onClick={onToggle} icon={running ? <Pause size={16} /> : <Play size={16} />}>{running ? t('pause') : t('resume')}</Button><Button variant="secondary" onClick={onReset} icon={<RotateCcw size={15} />}>{t('reset')}</Button><Button variant="secondary" onClick={onRecord}>＋ {t('record')}</Button><span className="flex-1" /><Button variant="ghost" onClick={onScreenshot} icon={<Camera size={16} />}>{t('screenshot')}</Button><Button variant="ghost" onClick={onFullscreen} icon={<Maximize2 size={16} />}>{t('fullscreen')}</Button></div>;
+  return (
+    <div className="grid grid-cols-2 gap-2 border-b border-[var(--line)] pb-4 sm:flex sm:flex-wrap sm:items-center">
+      <Button onClick={onToggle} icon={running ? <Pause size={16} /> : <Play size={16} />} className="w-full sm:w-auto">{running ? t('pause') : t('resume')}</Button>
+      <Button variant="secondary" onClick={onReset} icon={<RotateCcw size={15} />} className="w-full sm:w-auto">{t('reset')}</Button>
+      <Button variant="secondary" onClick={onRecord} className="w-full sm:w-auto">＋ {t('record')}</Button>
+      <span className="hidden flex-1 sm:block" />
+      <Button variant="ghost" onClick={onScreenshot} icon={<Camera size={16} />} className="w-full sm:w-auto">{t('screenshot')}</Button>
+      <Button variant="ghost" onClick={onFullscreen} icon={<Maximize2 size={16} />} className="w-full sm:w-auto">{t('fullscreen')}</Button>
+    </div>
+  );
 }
 
 export function FormulaPanel({ formula }: { formula: string }) {

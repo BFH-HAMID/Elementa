@@ -28,8 +28,7 @@ export function PhetSimulationEmbed({ simulation, locale }: { simulation: PhetSi
         <iframe
           src={src}
           title={`PhET Interactive Simulation: ${simulation.title}`}
-          className="block w-full border-0 bg-white"
-          style={{ height: 'min(78vh, 52rem)', minHeight: '34rem' }}
+          className="block h-[min(78vh,52rem)] min-h-[22rem] w-full border-0 bg-white sm:min-h-[34rem]"
           allow="fullscreen"
           allowFullScreen
           loading="eager"

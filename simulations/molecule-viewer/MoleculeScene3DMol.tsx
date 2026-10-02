@@ -28,5 +28,5 @@ export function MoleculeScene3DMol({ molecule }: { molecule: MoleculeName }) {
     }).catch(() => undefined);
     return () => { alive = false; viewer?.clear(); };
   }, [molecule]);
-  return <div ref={containerRef} className="h-[330px] w-full rounded-2xl sm:h-[410px]" aria-label={`${molecule} 3Dmol.js molecule viewer`} />;
+  return <div ref={containerRef} className="h-[260px] w-full rounded-2xl sm:h-[340px] lg:h-[410px]" aria-label={`${molecule} 3Dmol.js molecule viewer`} />;
 }

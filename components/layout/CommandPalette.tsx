@@ -34,8 +34,13 @@ export function CommandPalette() {
 
   return (
     <>
+      {/* Wide screens get the labelled pill with the shortcut hint; phones get an icon
+          button so search is never more than one tap away. */}
       <button type="button" onClick={() => setOpen(true)} className="btn-secondary hidden min-h-9 gap-2 rounded-lg px-3 text-xs sm:inline-flex" aria-label="Open command palette">
         <Search size={15} /><span>{t('search')}</span><kbd className="rounded border border-[var(--line)] px-1.5 py-0.5 font-mono text-[10px]">⌘K</kbd>
+      </button>
+      <button type="button" onClick={() => setOpen(true)} className="btn-secondary min-h-9 rounded-lg px-2.5 sm:hidden" aria-label={t('search')}>
+        <Search size={17} />
       </button>
       {open && (
         <div className="fixed inset-0 z-[60] flex items-start justify-center bg-ink-900/50 p-4 pt-[12vh] backdrop-blur-sm" role="dialog" aria-modal="true" aria-label={t('search')}>
@@ -43,7 +48,7 @@ export function CommandPalette() {
           <div className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)] shadow-float">
             <div className="flex items-center gap-3 border-b border-[var(--line)] px-4">
               <Search size={20} className="text-[var(--muted)]" />
-              <input ref={inputRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder={t('searchPlaceholder')} className="h-14 flex-1 bg-transparent text-sm outline-none placeholder:text-[var(--muted)]" />
+              <input ref={inputRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder={t('searchPlaceholder')} className="h-14 min-w-0 flex-1 bg-transparent text-base outline-none placeholder:text-[var(--muted)] sm:text-sm" />
               <button type="button" onClick={() => setOpen(false)} className="btn-ghost min-h-8 rounded-lg p-1.5" aria-label="Close"><X size={16} /></button>
             </div>
             <div className="max-h-[55vh] overflow-y-auto p-2">

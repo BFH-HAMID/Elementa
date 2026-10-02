@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react';
 import { SlidersHorizontal } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-export function ControlPanel({ title, children }: { title: string; children: ReactNode }) {
-  return <aside className="space-y-4 rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-4 sm:p-5"><div className="flex items-center gap-2 border-b border-[var(--line)] pb-3"><SlidersHorizontal size={17} className="text-physics-600" /><h2 className="text-sm font-black uppercase tracking-widest">{title}</h2></div>{children}</aside>;
+export function ControlPanel({ title, children, className }: { title: string; children: ReactNode; className?: string }) {
+  return <aside className={cn('space-y-4 self-start rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-4 sm:p-5', className)}><div className="flex items-center gap-2 border-b border-[var(--line)] pb-3"><SlidersHorizontal size={17} className="text-physics-600" /><h2 className="text-sm font-black uppercase tracking-widest">{title}</h2></div>{children}</aside>;
 }
 
 export function RangeControl({ label, value, min, max, step, onChange, suffix }: { label: string; value: number; min: number; max: number; step: number; onChange: (value: number) => void; suffix?: string }) {

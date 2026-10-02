@@ -8,7 +8,7 @@ export function Footer() {
   const locale = useLocale();
   const t = useTranslations();
   return <footer className="mt-16 border-t border-[var(--line)] bg-[var(--surface)]">
-    <div className="page-shell grid gap-8 py-10 sm:grid-cols-[1.5fr_1fr_1fr_1fr]">
+    <div className="page-shell grid gap-8 py-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
       <div><div className="mb-3 flex items-center gap-2 font-black"><span className="grid h-8 w-8 place-items-center rounded-lg bg-physics-600 text-white">∫</span>PhysChem Lab</div><p className="max-w-sm text-sm leading-6 muted">{t('footer.built')}.</p></div>
       <div><p className="mb-3 text-xs font-black uppercase tracking-widest text-[var(--muted)]">Learn</p><div className="grid gap-2 text-sm font-bold text-[var(--muted)]"><Link href={`/${locale}/equations`} className="hover:text-physics-600">{t('nav.equations')}</Link><Link href={`/${locale}/experiments`} className="hover:text-physics-600">{t('nav.experiments')}</Link><Link href={`/${locale}/simulations`} className="hover:text-physics-600">{t('nav.simulations')}</Link><Link href={`/${locale}/quiz`} className="hover:text-physics-600">{t('nav.quiz')}</Link></div></div>
       <div><p className="mb-3 text-xs font-black uppercase tracking-widest text-[var(--muted)]">{t('nav.subjects')}</p><div className="grid gap-2 text-sm font-bold text-[var(--muted)]"><Link href={`/${locale}/physics`} className="hover:text-physics-600">{t('common.physics')}</Link><Link href={`/${locale}/chemistry`} className="hover:text-chemistry-600">{t('common.chemistry')}</Link></div></div>

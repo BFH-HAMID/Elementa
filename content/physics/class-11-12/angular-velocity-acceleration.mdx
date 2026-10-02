@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "angular-velocity-acceleration"
+title_bn: "কৌণিক বেগ ও কৌণিক ত্বরণ"
+title_en: "Angular velocity and angular acceleration"
+subject: physics
+level: class-11-12
+chapter: "Rotational Motion"
+chapter_bn: "ঘূর্ণন গতি"
+latex: "\\omega = \\frac{d\\theta}{dt}, \\qquad \\alpha = \\frac{d\\omega}{dt}"
+calculator: false
+variables:
+  - symbol: "ω"
+    name: "instantaneous angular velocity"
+    name_bn: "তাৎক্ষণিক কৌণিক বেগ"
+    unit: "rad/s"
+    si_unit: "rad/s"
+  - symbol: "α"
+    name: "angular acceleration"
+    name_bn: "কৌণিক ত্বরণ"
+    unit: "rad/s²"
+    si_unit: "rad/s²"
+  - symbol: "θ"
+    name: "angular displacement"
+    name_bn: "কৌণিক সরণ"
+    unit: "rad"
+    si_unit: "rad"
+  - symbol: "t"
+    name: "time"
+    name_bn: "সময়"
+    unit: "s"
+    si_unit: "s"
+derivation: "Rotational kinematics mirrors translational kinematics with linear displacement s replaced by angular displacement θ. Rates of change of θ and ω define angular velocity and acceleration respectively."
+derivation_bn: "রৈখিক গতির অনুরূপে সরণ s-এর পরিবর্তে কৌণিক সরণ θ ব্যবহার করলে ঘূর্ণন গতির চলকগুলোর সংজ্ঞা পাওয়া যায়। θ ও ω-এর সময় সাপেক্ষে পরিবর্তনের হারই কৌণিক বেগ ও ত্বরণ।"
+derivation_steps:
+  - step_en: "Define average angular velocity over an interval and take the limit as Δt → 0."
+    step_bn: "সময় ব্যবধানে গড় কৌণিক বেগ লিখে Δt → 0 সীমা নিন।"
+    latex: "\\omega = \\lim_{\\Delta t \\to 0}\\frac{\\Delta\\theta}{\\Delta t} = \\frac{d\\theta}{dt}"
+  - step_en: "Define angular acceleration as the rate of change of angular velocity."
+    step_bn: "কৌণিক বেগের পরিবর্তনের হার হিসেবে কৌণিক ত্বরণ লিখুন।"
+    latex: "\\alpha = \\frac{d\\omega}{dt} = \\frac{d^2\\theta}{dt^2}"
+  - step_en: "For constant angular acceleration, integrate to get the rotational analogue of v = u + at."
+    step_bn: "ধ্রুব কৌণিক ত্বরণে সমাকলন করে v = u + at-এর ঘূর্ণন রূপ পান।"
+    latex: "\\omega_f = \\omega_i + \\alpha t"
+summary_en: "Describe rotating bodies with angular position, velocity and acceleration."
+summary_bn: "ঘূর্ণায়মান বস্তুর কৌণিক অবস্থান, বেগ ও ত্বরণের মধ্যে সম্পর্ক স্থাপন।"
+related: ["centripetal-acceleration", "torque-angular-acceleration", "circular-motion-formula-sheet"]
+tags: ["angular velocity", "angular acceleration", "rotation", "radian"]
+---
+
+A radian is dimensionless, so the SI units of $\omega$ and $\alpha$ are formally $\text{s}^{-1}$ and $\text{s}^{-2}$.

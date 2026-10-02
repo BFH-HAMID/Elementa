@@ -45,7 +45,7 @@ The README uses self-hosted SVG artwork so the project page has a visual identit
 
 ## What is included
 
-- 45+ typed MDX equation notes, including bilingual chapter-level formula sheets for the supplied physics and chemistry topics.
+- 230+ typed MDX equation notes, including bilingual chapter-level formula sheets for the supplied physics and chemistry topics. Every entry carries a step-by-step mathematical derivation with bilingual prose and optional KaTeX lines for each step.
 - A searchable, bilingual checklist of 78 school and HSC practical topics, alongside full lab guides for a simple pendulum, Ohm's law, convex-lens focal length and acid–base titration.
 - Original interactive Canvas 2D simulations for projectile motion, a pendulum, circuits, wave interference, Newton's second law, lens rays, titration, pH, ideal gases and reaction kinetics.
 - An embedded, searchable PhET HTML5 library with 67 Physics and 35 Chemistry subject entries (81 unique simulations); official `/latest/` builds are loaded only on each detail page, with direct-open fallback and attribution.
@@ -116,6 +116,13 @@ variables:
     si_unit: J
 derivation: Original English intuition for the relationship.
 derivation_bn: সমীকরণের বাংলা intuition।
+derivation_steps:
+  - step_en: Start from the definition of work and substitute F = ma.
+    step_bn: কাজের সংজ্ঞা থেকে শুরু করে F = ma বসান।
+    latex: 'W = Fs = mas'
+  - step_en: Use v² = u² + 2as to remove the acceleration term.
+    step_bn: v² = u² + 2as ব্যবহার করে ত্বরণের পদ সরান।
+    latex: 'W = \\frac{1}{2}mv^2 - \\frac{1}{2}mu^2'
 summary_en: One-sentence English summary.
 summary_bn: এক বাক্যে বাংলা summary।
 related: [work-done]
@@ -124,6 +131,8 @@ tags: [energy, conservation]
 
 Longer original MDX notes can be written here. Inline math such as `$E = mc^2$` is supported.
 ```
+
+`derivation_steps` is optional but strongly recommended. Each step needs `step_en` and `step_bn`; add `latex` when a line of algebra belongs to that step. The detail page renders them as a numbered list, the library shows a "Derivation" badge, and Fuse.js indexes the step text so students can search derivations directly.
 
 3. Add the slug to `lib/calculations.ts` if the equation should have a calculator. The equation page still renders safely without a solver.
 4. Add a simulation slug to `simulation` only when it exists in `lib/simulations.ts`.

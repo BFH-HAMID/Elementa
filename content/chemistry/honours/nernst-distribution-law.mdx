@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "nernst-distribution-law"
+title_bn: "নার্নস্টের বন্টন সূত্র"
+title_en: "Nernst distribution (partition) law"
+subject: chemistry
+level: honours
+chapter: "Equilibrium"
+chapter_bn: "সাম্যাবস্থা"
+latex: "K_D = \\frac{C_1}{C_2} = \\frac{C_1^{\\,n}}{C_2}\\ \\text{(if the solute dimerises in phase 1)}"
+calculator: false
+variables:
+  - symbol: "K_D"
+    name: "distribution (partition) coefficient"
+    name_bn: "বন্টন সহগ"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "C_1"
+    name: "concentration in solvent 1"
+    name_bn: "প্রথম দ্রাবকে ঘনমাত্রা"
+    unit: "mol/L"
+    si_unit: "mol/m³"
+  - symbol: "C_2"
+    name: "concentration in solvent 2"
+    name_bn: "দ্বিতীয় দ্রাবকে ঘনমাত্রা"
+    unit: "mol/L"
+    si_unit: "mol/m³"
+  - symbol: "n"
+    name: "degree of association"
+    name_bn: "সংযোজন মাত্রা"
+    unit: "1"
+    si_unit: "1"
+derivation: "At equilibrium the chemical potential of the solute must be equal in the two immiscible solvents. For dilute solutions this fixes a constant ratio of concentrations, modified if the solute associates in one phase."
+derivation_bn: "সাম্যাবস্থায় দুই অমিশ্রণীয় দ্রাবকে দ্রাবের রাসায়নিক বিভব সমান থাকতে হয়। লঘু দ্রবণের জন্য এটি ঘনমাত্রার ধ্রুব অনুপাত নির্ধারণ করে, যা এক দশায় সংযোজন ঘটলে পরিবর্তিত হয়।"
+derivation_steps:
+  - step_en: "Equate solute chemical potentials in the two phases."
+    step_bn: "দুই দশায় দ্রাবের রাসায়নিক বিভব সমান করুন।"
+    latex: "\\mu_1 = \\mu_2 \\implies \\mu_1^\\circ + RT\\ln C_1 = \\mu_2^\\circ + RT\\ln C_2"
+  - step_en: "Collect constants to obtain a fixed concentration ratio."
+    step_bn: "ধ্রুবকগুলো একত্রিত করে স্থির ঘনমাত্রা অনুপাত পান।"
+    latex: "\\frac{C_1}{C_2} = e^{-(\\mu_1^\\circ - \\mu_2^\\circ)/RT} = K_D"
+  - step_en: "If the solute associates into n-mers in phase 1, replace C_1 by C_1^n."
+    step_bn: "দ্রাব প্রথম দশায় n-মার গঠন করলে C_1-কে C_1^n দ্বারা প্রতিস্থাপন করুন।"
+    latex: "K_D = \\frac{C_1^{\\,n}}{C_2}"
+summary_en: "Describe solute partitioning between two immiscible solvents."
+summary_bn: "দুই অমিশ্রণীয় দ্রাবকের মধ্যে দ্রাবের বন্টন বিশ্লেষণ।"
+related: ["equilibrium-constant", "raoults-law", "solutions-formula-sheet"]
+tags: ["nernst distribution", "partition coefficient", "solvent extraction", "honours"]
+---
+
+Solvent extraction exploits this law: repeated small-volume extractions recover more solute than one large one.

@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "wheatstone-bridge"
+title_bn: "হুইটস্টোন ব্রিজের ভারসাম্য শর্ত"
+title_en: "Wheatstone bridge balance condition"
+subject: physics
+level: class-11-12
+chapter: "Current Electricity"
+chapter_bn: "চল তড়িৎ"
+latex: "\\frac{P}{Q} = \\frac{R}{S}"
+calculator: false
+variables:
+  - symbol: "P"
+    name: "resistance of first arm"
+    name_bn: "প্রথম বাহুর রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "Q"
+    name: "resistance of second arm"
+    name_bn: "দ্বিতীয় বাহুর রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "R"
+    name: "resistance of third arm"
+    name_bn: "তৃতীয় বাহুর রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "S"
+    name: "unknown resistance"
+    name_bn: "অজানা রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+derivation: "When the bridge is balanced no current flows through the galvanometer, so the midpoints of the two arms are at the same potential. Dividing the equal potential drops along each branch gives the ratio condition."
+derivation_bn: "ব্রিজ সাম্যাবস্থায় গ্যালভানোমিটারের মধ্য দিয়ে কোনো প্রবাহ যায় না, ফলে দুই শাখার মধ্যবিন্দুর বিভব সমান হয়। প্রতি শাখার সমান বিভব পতন ভাগ করলে অনুপাতের শর্ত পাওয়া যায়।"
+derivation_steps:
+  - step_en: "With zero galvanometer current, currents through P and Q are equal, as are currents through R and S."
+    step_bn: "গ্যালভানোমিটারে প্রবাহ শূন্য হলে P ও Q-এর প্রবাহ সমান, তেমনি R ও S-এরও।"
+    latex: "I_1 P = I_2 R, \\qquad I_1 Q = I_2 S"
+  - step_en: "Divide the first equation by the second to eliminate the currents."
+    step_bn: "প্রথম সমীকরণকে দ্বিতীয় দিয়ে ভাগ করে প্রবাহ বাতিল করুন।"
+    latex: "\\frac{P}{Q} = \\frac{R}{S}"
+  - step_en: "Solve for the unknown resistance S."
+    step_bn: "অজানা রোধ S-এর জন্য সমাধান করুন।"
+    latex: "S = \\frac{RQ}{P}"
+summary_en: "Determine an unknown resistance precisely from three known resistors."
+summary_bn: "তিনটি জ্ঞাত রোধ ব্যবহার করে অজানা রোধ নির্ভুলভাবে নির্ণয়।"
+related: ["resistance-series-combination", "ohms-law", "resistivity-formula"]
+tags: ["wheatstone bridge", "null method", "resistance measurement"]
+---
+
+The bridge is a null method, so the measurement is independent of the galvanometer calibration.

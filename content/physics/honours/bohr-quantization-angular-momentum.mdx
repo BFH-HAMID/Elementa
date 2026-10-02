@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "bohr-quantization-angular-momentum"
+title_bn: "বোরের কৌণিক ভরবেগের কোয়ান্টায়ন"
+title_en: "Bohr quantisation of angular momentum"
+subject: physics
+level: honours
+chapter: "Atomic Physics"
+chapter_bn: "পারমাণবিক পদার্থবিজ্ঞান"
+latex: "L = mvr = \\frac{nh}{2\\pi} = n\\hbar"
+calculator: false
+variables:
+  - symbol: "L"
+    name: "orbital angular momentum"
+    name_bn: "কক্ষীয় কৌণিক ভরবেগ"
+    unit: "J s"
+    si_unit: "J s"
+  - symbol: "m"
+    name: "electron mass"
+    name_bn: "ইলেকট্রনের ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "v"
+    name: "orbital speed"
+    name_bn: "কক্ষীয় বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "r"
+    name: "orbit radius"
+    name_bn: "কক্ষপথের ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "n"
+    name: "principal quantum number"
+    name_bn: "প্রধান কোয়ান্টাম সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+derivation: "Bohr required the electron’s de Broglie wave to form a standing wave around the orbit, so the circumference must hold a whole number of wavelengths: 2πr = nλ. Substituting λ = h/(mv) gives the quantisation rule."
+derivation_bn: "বোরের শর্ত অনুযায়ী ইলেকট্রনের ডি-ব্রগলি তরঙ্গকে কক্ষপথে স্থির তরঙ্গ গঠন করতে হবে, তাই পরিধি পূর্ণসংখ্যক তরঙ্গদৈর্ঘ্য ধারণ করবে: 2πr = nλ। λ = h/(mv) বসালে কোয়ান্টায়ন নীতি পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Impose the standing-wave condition around a circular orbit."
+    step_bn: "বৃত্তাকার কক্ষপথে স্থির তরঙ্গের শর্ত আরোপ করুন।"
+    latex: "2\\pi r = n\\lambda"
+  - step_en: "Substitute the de Broglie wavelength λ = h/(mv)."
+    step_bn: "ডি-ব্রগলি তরঙ্গদৈর্ঘ্য λ = h/(mv) বসান।"
+    latex: "2\\pi r = \\frac{nh}{mv} \\implies mvr = \\frac{nh}{2\\pi}"
+  - step_en: "Write the result compactly with the reduced Planck constant."
+    step_bn: "হ্রাসকৃত প্ল্যাঙ্ক ধ্রুবক দিয়ে সংক্ষিপ্ত রূপ লিখুন।"
+    latex: "L = mvr = n\\hbar"
+summary_en: "Derive the quantum condition that fixes allowed atomic orbits."
+summary_bn: "পারমাণবিক কক্ষপথের অনুমোদিত শর্ত প্রতিপাদন করুন।"
+related: ["hydrogen-energy-levels-bohr", "de-broglie-wavelength", "particle-in-box-energy"]
+tags: ["bohr", "quantisation", "angular momentum", "honours"]
+---
+
+This ad-hoc rule was later justified by the full Schrödinger treatment of the hydrogen atom.

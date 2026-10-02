@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "thermal-expansion-coefficients"
+title_bn: "দৈর্ঘ্য, ক্ষেত্র ও আয়তন প্রসারণ সহগের সম্পর্ক"
+title_en: "Relation among linear, area and volume expansion coefficients"
+subject: physics
+level: class-9-10
+chapter: "Effect of Heat on Matter"
+chapter_bn: "পদার্থের ওপর তাপের প্রভাব"
+latex: "\\alpha = \\frac{\\beta}{2} = \\frac{\\gamma}{3}"
+calculator: false
+variables:
+  - symbol: "α"
+    name: "linear expansion coefficient"
+    name_bn: "দৈর্ঘ্য প্রসারণ সহগ"
+    unit: "K⁻¹"
+    si_unit: "K⁻¹"
+  - symbol: "β"
+    name: "area expansion coefficient"
+    name_bn: "ক্ষেত্র প্রসারণ সহগ"
+    unit: "K⁻¹"
+    si_unit: "K⁻¹"
+  - symbol: "γ"
+    name: "volume expansion coefficient"
+    name_bn: "আয়তন প্রসারণ সহগ"
+    unit: "K⁻¹"
+    si_unit: "K⁻¹"
+derivation: "Squaring and cubing the linear expansion factor (1 + αΔT) for an isotropic square plate and cube, then neglecting tiny higher-order terms in αΔT, yields β = 2α and γ = 3α."
+derivation_bn: "একটি সুষম বর্গাকার পাত ও ঘনকের প্রতিটি বাহুর প্রসারণ L = L_0(1 + αΔT) ধরে ক্ষেত্রফল ও আয়তন প্রসারণ নির্ণয় এবং ক্ষুদ্রতর উচ্চঘাত উপেক্ষা করলে β = 2α এবং γ = 3α পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Expand the area A = L² of a square plate heated by ΔT."
+    step_bn: "বর্গাকার পাতের ক্ষেত্রফল A = L² প্রসারিত করে লিখুন।"
+    latex: "A = L_0^2(1 + \\alpha\\Delta T)^2 = A_0(1 + 2\\alpha\\Delta T + \\alpha^2\\Delta T^2)"
+  - step_en: "Since α is very small (~10⁻⁵ K⁻¹), neglect α²ΔT² and compare with A = A_0(1 + βΔT)."
+    step_bn: "α অত্যন্ত ক্ষুদ্র হওয়ায় α²ΔT² উপেক্ষা করে A = A_0(1 + βΔT)-এর সাথে তুলনা করুন।"
+    latex: "\\beta = 2\\alpha"
+  - step_en: "Similarly expand V = L³ = V_0(1 + αΔT)³ ≈ V_0(1 + 3αΔT) to relate γ and α."
+    step_bn: "একইভাবে ঘনকের আয়তন V = L³ প্রসারিত করে γ = 3α এবং এদের সমন্বিত সম্পর্ক পান।"
+    latex: "\\gamma = 3\\alpha \\implies 6\\alpha = 3\\beta = 2\\gamma"
+summary_en: "Convert between linear, superficial and volumetric thermal expansion coefficients."
+summary_bn: "কঠিন পদার্থের দৈর্ঘ্য, ক্ষেত্র ও আয়তন প্রসারণ সহগের পারস্পরিক রূপান্তর।"
+related: ["linear-thermal-expansion"]
+tags: ["thermal expansion", "isotropic", "alpha", "beta", "gamma"]
+---
+
+This relation holds for isotropic solids that expand equally in all three spatial directions.

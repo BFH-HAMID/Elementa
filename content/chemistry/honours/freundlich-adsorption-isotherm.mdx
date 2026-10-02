@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "freundlich-adsorption-isotherm"
+title_bn: "ফ্রয়েন্ডলিচ শোষণ সমোষ্ণ রেখা"
+title_en: "Freundlich adsorption isotherm"
+subject: chemistry
+level: honours
+chapter: "Surface Chemistry"
+chapter_bn: "পৃষ্ঠ রসায়ন"
+latex: "\\frac{x}{m} = k P^{1/n}, \\qquad \\log\\frac{x}{m} = \\log k + \\frac{1}{n}\\log P"
+calculator: false
+variables:
+  - symbol: "x/m"
+    name: "mass adsorbed per unit mass of adsorbent"
+    name_bn: "শোষকের একক ভরে শোষিত ভর"
+    unit: "g/g"
+    si_unit: "kg/kg"
+  - symbol: "k"
+    name: "Freundlich constant"
+    name_bn: "ফ্রয়েন্ডলিচ ধ্রুবক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "n"
+    name: "Freundlich exponent (n > 1)"
+    name_bn: "ফ্রয়েন্ডলিচ সূচক (n > ১)"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "P"
+    name: "equilibrium pressure"
+    name_bn: "সাম্য চাপ"
+    unit: "Pa"
+    si_unit: "Pa"
+derivation: "The Freundlich isotherm is an empirical relation for adsorption on heterogeneous surfaces; plotting log(x/m) against log P linearises it, with slope 1/n and intercept log k."
+derivation_bn: "ফ্রয়েন্ডলিচ সমোষ্ণ রেখা অসমসত্ত্ব পৃষ্ঠে শোষণের একটি অভিজ্ঞতালব্ধ সম্পর্ক। log(x/m) বনাম log P লেখ আঁকলে রৈখিক হয়, নতি 1/n এবং ছেদক log k।"
+derivation_steps:
+  - step_en: "Postulate a power-law dependence of adsorbed mass on pressure."
+    step_bn: "শোষিত ভরের চাপের ওপর ঘাত-সূত্র নির্ভরতা কল্পনা করুন।"
+    latex: "\\frac{x}{m} \\propto P^{1/n}"
+  - step_en: "Introduce the constant k to form the equation."
+    step_bn: "ধ্রুবক k যোগ করে সমীকরণ গঠন করুন।"
+    latex: "\\frac{x}{m} = k P^{1/n}"
+  - step_en: "Take logarithms to obtain the straight-line test form."
+    step_bn: "লগারিদম নিয়ে রৈখিক পরীক্ষার রূপ পান।"
+    latex: "\\log\\frac{x}{m} = \\log k + \\frac{1}{n}\\log P"
+summary_en: "Fit experimental adsorption data on real, heterogeneous surfaces."
+summary_bn: "বাস্তব অসমসত্ত্ব পৃষ্ঠের শোষণ তথ্যের সাথে মানানসই মডেল।"
+related: ["langmuir-adsorption-isotherm"]
+tags: ["freundlich", "adsorption", "empirical isotherm", "honours"]
+---
+
+It works well over moderate pressures but has no correct high-pressure saturation limit.

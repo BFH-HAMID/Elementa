@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "electrode-potential-emf"
+title_bn: "কোষের তড়িৎচালক বল"
+title_en: "Cell emf from electrode potentials"
+subject: chemistry
+level: class-11-12
+chapter: "Electrochemistry"
+chapter_bn: "তড়িৎ রসায়ন"
+latex: "E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} = E^\\circ_{\\text{reduction}} + E^\\circ_{\\text{oxidation}}"
+calculator: false
+variables:
+  - symbol: "E°_cell"
+    name: "standard cell emf"
+    name_bn: "প্রমাণ কোষের তড়িৎচালক বল"
+    unit: "V"
+    si_unit: "V"
+  - symbol: "E°_cathode"
+    name: "standard reduction potential of cathode"
+    name_bn: "ক্যাথোডের প্রমাণ বিজারণ বিভব"
+    unit: "V"
+    si_unit: "V"
+  - symbol: "E°_anode"
+    name: "standard reduction potential of anode"
+    name_bn: "অ্যানোডের প্রমাণ বিজারণ বিভব"
+    unit: "V"
+    si_unit: "V"
+derivation: "Cell emf is the difference in electric potential between the two electrodes. Using tabulated standard reduction potentials, subtracting the anode value from the cathode value automatically accounts for reversing the anode half-reaction."
+derivation_bn: "কোষের তড়িৎচালক বল হলো দুই তড়িৎদ্বারের মধ্যে বিভব পার্থক্য। সারণিভুক্ত প্রমাণ বিজারণ বিভব ব্যবহার করলে ক্যাথোডের মান থেকে অ্যানোডের মান বিয়োগ করলে অ্যানোডের অর্ধ-বিক্রিয়া বিপরীত হওয়া স্বয়ংক্রিয়ভাবে বিবেচিত হয়।"
+derivation_steps:
+  - step_en: "Identify the cathode (reduction) and anode (oxidation) half-cells."
+    step_bn: "ক্যাথোড (বিজারণ) ও অ্যানোড (জারণ) অর্ধ-কোষ চিহ্নিত করুন।"
+    latex: "\\text{cathode: reduction}, \\qquad \\text{anode: oxidation}"
+  - step_en: "Write both half-reactions with their tabulated reduction potentials."
+    step_bn: "উভয় অর্ধ-বিক্রিয়া তাদের সারণিভুক্ত বিজারণ বিভব সহ লিখুন।"
+    latex: "E^\\circ_{\\text{cathode}},\\; E^\\circ_{\\text{anode}}"
+  - step_en: "Subtract, because the anode reaction runs in reverse of its tabulated direction."
+    step_bn: "বিয়োগ করুন, কারণ অ্যানোডের বিক্রিয়া সারণির বিপরীত দিকে চলে।"
+    latex: "E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}"
+summary_en: "Predict the voltage of a galvanic cell from standard potentials."
+summary_bn: "প্রমাণ বিভব থেকে গ্যালভানিক কোষের ভোল্টেজ নির্ণয়।"
+related: ["nernst-equation", "gibbs-free-energy-equilibrium", "electrochemistry-formula-sheet"]
+tags: ["cell emf", "electrode potential", "galvanic cell", "standard potential"]
+---
+
+A positive $E^\circ_{\text{cell}}$ means the reaction is spontaneous; link to thermodynamics via $\Delta G^\circ = -nFE^\circ$.

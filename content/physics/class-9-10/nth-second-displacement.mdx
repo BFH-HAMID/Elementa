@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "nth-second-displacement"
+title_bn: "n-তম সেকেন্ডে অতিক্রান্ত দূরত্ব"
+title_en: "Displacement in the nth second"
+subject: physics
+level: class-9-10
+chapter: "Motion"
+chapter_bn: "গতি"
+latex: "s_n = u + \\frac{1}{2}a(2n - 1)"
+calculator: false
+variables:
+  - symbol: "s_n"
+    name: "displacement in nth second"
+    name_bn: "n-তম সেকেন্ডে সরণ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "u"
+    name: "initial velocity"
+    name_bn: "আদি বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "a"
+    name: "uniform acceleration"
+    name_bn: "সুষম ত্বরণ"
+    unit: "m/s²"
+    si_unit: "m/s²"
+  - symbol: "n"
+    name: "nth one-second interval"
+    name_bn: "n-তম সেকেন্ড"
+    unit: "s"
+    si_unit: "s"
+derivation: "The displacement during the single second between t = n − 1 and t = n is found by subtracting total displacement in n − 1 seconds from total displacement in n seconds."
+derivation_bn: "n সেকেন্ডে অতিক্রান্ত মোট সরণ থেকে (n − 1) সেকেন্ডে অতিক্রান্ত সরণ বিয়োগ করলে শুধুমাত্র n-তম সেকেন্ডে অতিক্রান্ত দূরত্ব পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the total displacements for t = n and t = n − 1 using the second equation of motion."
+    step_bn: "গতির দ্বিতীয় সমীকরণ ব্যবহার করে n সেকেন্ডে এবং (n − 1) সেকেন্ডে সরণ লিখুন।"
+    latex: "S_n = un + \\frac{1}{2}an^2, \\qquad S_{n-1} = u(n-1) + \\frac{1}{2}a(n-1)^2"
+  - step_en: "Subtract S_{n-1} from S_n to isolate the motion during the nth second."
+    step_bn: "S_n থেকে S_{n-1} বিয়োগ করুন।"
+    latex: "s_n = S_n - S_{n-1} = u[n - (n-1)] + \\frac{1}{2}a[n^2 - (n-1)^2]"
+  - step_en: "Simplify the algebraic difference n² − (n − 1)² = 2n − 1."
+    step_bn: "বীজগণিতীয় রাশি সরল করে চূড়ান্ত সূত্র পান:"
+    latex: "s_n = u + \\frac{1}{2}a(2n - 1)"
+summary_en: "Find how far a uniformly accelerating body travels during a specific one-second interval."
+summary_bn: "সুষম ত্বরণে চলমান বস্তু নির্দিষ্ট n-তম এক সেকেন্ডে কত পথ যায় তা নির্ণয়।"
+related: ["second-equation-of-motion", "kinematics-formula-sheet"]
+tags: ["kinematics", "nth second", "displacement"]
+---
+
+Remember that an implicit $\Delta t = 1\text{ s}$ multiplies the terms on the right-hand side, keeping the equation dimensionally consistent.

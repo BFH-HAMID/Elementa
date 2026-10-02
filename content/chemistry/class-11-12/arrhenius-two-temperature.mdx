@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "arrhenius-two-temperature"
+title_bn: "দুই তাপমাত্রায় অ্যারেনিয়াস সমীকরণ"
+title_en: "Two-point Arrhenius equation"
+subject: chemistry
+level: class-11-12
+chapter: "Chemical Kinetics"
+chapter_bn: "রাসায়নিক গতিবিদ্যা"
+latex: "\\ln\\frac{k_2}{k_1} = -\\frac{E_a}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)"
+calculator: false
+variables:
+  - symbol: "k_1"
+    name: "rate constant at T_1"
+    name_bn: "T_1 তাপমাত্রায় হার ধ্রুবক"
+    unit: "s⁻¹"
+    si_unit: "s⁻¹"
+  - symbol: "k_2"
+    name: "rate constant at T_2"
+    name_bn: "T_2 তাপমাত্রায় হার ধ্রুবক"
+    unit: "s⁻¹"
+    si_unit: "s⁻¹"
+  - symbol: "E_a"
+    name: "activation energy"
+    name_bn: "সক্রিয়ন শক্তি"
+    unit: "J/mol"
+    si_unit: "J/mol"
+  - symbol: "R"
+    name: "molar gas constant"
+    name_bn: "মোলার গ্যাস ধ্রুবক"
+    unit: "J/(mol K)"
+    si_unit: "J/(mol K)"
+derivation: "Writing the Arrhenius equation k = A e^(−E_a/RT) at two temperatures and dividing cancels the pre-exponential factor A, leaving the difference of the logarithmic rate constants."
+derivation_bn: "অ্যারেনিয়াস সমীকরণ k = A e^(−E_a/RT) দুই তাপমাত্রায় লিখে ভাগ করলে প্রাক-সূচকীয় গুণক A বাতিল হয়ে যায় এবং হার ধ্রুবকের লগারিদমের পার্থক্য অবশিষ্ট থাকে।"
+derivation_steps:
+  - step_en: "Write the Arrhenius equation at each temperature."
+    step_bn: "প্রতিটি তাপমাত্রায় অ্যারেনিয়াস সমীকরণ লিখুন।"
+    latex: "k_1 = A e^{-E_a/(RT_1)}, \\qquad k_2 = A e^{-E_a/(RT_2)}"
+  - step_en: "Take the ratio so that A cancels."
+    step_bn: "অনুপাত নিন যাতে A বাতিল হয়।"
+    latex: "\\frac{k_2}{k_1} = e^{-\\frac{E_a}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)}"
+  - step_en: "Take natural logarithms to obtain the linear working form."
+    step_bn: "স্বাভাবিক লগারিদম নিয়ে রৈখিক কার্যকরী রূপ পান।"
+    latex: "\\ln\\frac{k_2}{k_1} = -\\frac{E_a}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)"
+summary_en: "Extract activation energy from rate constants at two temperatures."
+summary_bn: "দুই তাপমাত্রার হার ধ্রুবক থেকে সক্রিয়ন শক্তি নির্ণয়।"
+related: ["arrhenius-equation", "half-life-first-order", "chemical-kinetics-formula-sheet"]
+tags: ["arrhenius", "activation energy", "temperature dependence", "kinetics"]
+---
+
+A plot of $\ln k$ against $1/T$ gives a straight line of slope $-E_a/R$.

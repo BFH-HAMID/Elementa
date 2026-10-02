@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "first-order-integrated-rate-law"
+title_bn: "প্রথম ক্রম বিক্রিয়ার সমাকলিত হার সূত্র"
+title_en: "Integrated rate law for a first-order reaction"
+subject: chemistry
+level: class-11-12
+chapter: "Chemical Kinetics"
+chapter_bn: "রাসায়নিক গতিবিদ্যা"
+latex: "\\ln\\frac{[A]_0}{[A]} = kt \\iff [A] = [A]_0 e^{-kt}"
+calculator: false
+variables:
+  - symbol: "[A]"
+    name: "reactant concentration at time t"
+    name_bn: "t সময়ে বিক্রিয়কের ঘনমাত্রা"
+    unit: "mol/L"
+    si_unit: "mol/m³"
+  - symbol: "[A]_0"
+    name: "initial concentration"
+    name_bn: "প্রাথমিক ঘনমাত্রা"
+    unit: "mol/L"
+    si_unit: "mol/m³"
+  - symbol: "k"
+    name: "first-order rate constant"
+    name_bn: "প্রথম ক্রম হার ধ্রুবক"
+    unit: "s⁻¹"
+    si_unit: "s⁻¹"
+  - symbol: "t"
+    name: "elapsed time"
+    name_bn: "অতিক্রান্ত সময়"
+    unit: "s"
+    si_unit: "s"
+derivation: "The differential rate law −d[A]/dt = k[A] is separable. Integrating from [A]_0 at t = 0 to [A] at time t and exponentiating gives the familiar exponential decay."
+derivation_bn: "অন্তরক হার সূত্র −d[A]/dt = k[A] চলক-পৃথকযোগ্য। t = 0-এ [A]_0 থেকে t সময়ে [A] পর্যন্ত সমাকলন করে সূচকীয় রূপে নিলে পরিচিত ক্ষয় সূত্র পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the first-order differential rate law and separate variables."
+    step_bn: "প্রথম ক্রম অন্তরক হার সূত্র লিখে চলক পৃথক করুন।"
+    latex: "-\\frac{d[A]}{dt} = k[A] \\implies \\frac{d[A]}{[A]} = -k\\,dt"
+  - step_en: "Integrate both sides over the corresponding limits."
+    step_bn: "উভয় পক্ষকে সংশ্লিষ্ট সীমায় সমাকলন করুন।"
+    latex: "\\int_{[A]_0}^{[A]}\\frac{d[A]}{[A]} = -k\\int_0^t dt \\implies \\ln[A] - \\ln[A]_0 = -kt"
+  - step_en: "Rearrange and exponentiate to obtain the exponential decay form."
+    step_bn: "পক্ষান্তর করে সূচকীয় রূপে প্রকাশ করুন।"
+    latex: "\\ln\\frac{[A]_0}{[A]} = kt \\iff [A] = [A]_0 e^{-kt}"
+summary_en: "Track first-order decay of concentration with time."
+summary_bn: "প্রথম ক্রম বিক্রিয়ায় ঘনমাত্রার সূচকীয় হ্রাস নির্ণয়।"
+related: ["half-life-first-order", "rate-law", "zero-order-kinetics"]
+tags: ["first order", "integrated rate law", "exponential decay", "kinetics"]
+---
+
+A plot of $\ln[A]$ versus $t$ is a straight line of slope $-k$ for a first-order reaction.

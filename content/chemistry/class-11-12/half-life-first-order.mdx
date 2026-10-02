@@ -1,0 +1,41 @@
+---
+type: equation
+slug: "half-life-first-order"
+title_bn: "প্রথম ক্রম বিক্রিয়ার অর্ধায়ু"
+title_en: "Half-life of a first-order reaction"
+subject: chemistry
+level: class-11-12
+chapter: "Chemical Kinetics"
+chapter_bn: "রাসায়নিক গতিবিদ্যা"
+latex: "t_{1/2} = \\frac{\\ln 2}{k} \\approx \\frac{0.693}{k}"
+calculator: false
+variables:
+  - symbol: "t_1/2"
+    name: "half-life"
+    name_bn: "অর্ধায়ু"
+    unit: "s"
+    si_unit: "s"
+  - symbol: "k"
+    name: "first-order rate constant"
+    name_bn: "প্রথম ক্রম হার ধ্রুবক"
+    unit: "s⁻¹"
+    si_unit: "s⁻¹"
+derivation: "By definition $[A] = [A]_0/2$ when $t = t_{1/2}$. Substituting this into the integrated first-order law makes the concentration cancel, leaving a half-life independent of the starting amount."
+derivation_bn: "সংজ্ঞা অনুযায়ী t = t_{1/2} হলে [A] = [A]_0/2। সমাকলিত প্রথম ক্রম সূত্রে বসালে ঘনমাত্রা বাতিল হয়ে যায় এবং অর্ধায়ু প্রাথমিক পরিমাণের ওপর নির্ভরশীল হয় না।"
+derivation_steps:
+  - step_en: "Insert [A] = [A]_0/2 into the integrated rate law."
+    step_bn: "সমাকলিত হার সূত্রে [A] = [A]_0/2 বসান।"
+    latex: "\\ln\\frac{[A]_0}{[A]_0/2} = k t_{1/2}"
+  - step_en: "Simplify the logarithmic ratio to ln 2."
+    step_bn: "লগারিদমীয় অনুপাতকে ln 2-এ সরল করুন।"
+    latex: "\\ln 2 = k t_{1/2}"
+  - step_en: "Solve for the half-life."
+    step_bn: "অর্ধায়ুর জন্য সমাধান করুন।"
+    latex: "t_{1/2} = \\frac{\\ln 2}{k} \\approx \\frac{0.693}{k}"
+summary_en: "Show that first-order half-life is constant regardless of starting concentration."
+summary_bn: "প্রমাণ করুন যে প্রথম ক্রম বিক্রিয়ার অর্ধায়ু প্রাথমিক ঘনমাত্রার ওপর নির্ভর করে না।"
+related: ["first-order-integrated-rate-law", "zero-order-kinetics", "arrhenius-two-temperature"]
+tags: ["half-life", "first order", "kinetics", "radioactive analogy"]
+---
+
+This mirrors radioactive decay, which is also a first-order process with $k$ replaced by the decay constant $\lambda$.

@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "torricelli-theorem"
+title_bn: "তোরিচেল্লির উপপাদ্য"
+title_en: "Torricelli’s theorem for efflux"
+subject: physics
+level: class-11-12
+chapter: "Fluid Dynamics"
+chapter_bn: "প্রবাহী গতিবিদ্যা"
+latex: "v = \\sqrt{2gh}"
+calculator: false
+variables:
+  - symbol: "v"
+    name: "speed of efflux"
+    name_bn: "নির্গমনের বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "g"
+    name: "gravitational acceleration"
+    name_bn: "অভিকর্ষজ ত্বরণ"
+    unit: "m/s²"
+    si_unit: "m/s²"
+  - symbol: "h"
+    name: "depth of hole below free surface"
+    name_bn: "মুক্ত পৃষ্ঠ থেকে ছিদ্রের গভীরতা"
+    unit: "m"
+    si_unit: "m"
+derivation: "Applying Bernoulli’s equation between the free surface and the exit hole, both open to atmospheric pressure, with a negligible surface speed, leaves the hydrostatic head gh converted entirely to kinetic energy per unit mass."
+derivation_bn: "মুক্ত পৃষ্ঠ ও নির্গম ছিদ্রের মধ্যে বার্নোলির সমীকরণ প্রয়োগ করলে উভয় স্থানেই চাপ বায়ুমণ্ডলীয় এবং পৃষ্ঠের বেগ নগণ্য ধরা হয়, ফলে স্থিতিশীল উচ্চতা gh সম্পূর্ণ গতিশক্তিতে রূপান্তরিত হয়।"
+derivation_steps:
+  - step_en: "Write Bernoulli’s equation between the free surface (point 1) and the orifice (point 2)."
+    step_bn: "মুক্ত পৃষ্ঠ (বিন্দু ১) ও ছিদ্রের (বিন্দু ২) মধ্যে বার্নোলির সমীকরণ লিখুন।"
+    latex: "P_1 + \\frac{1}{2}\\rho v_1^2 + \\rho g h_1 = P_2 + \\frac{1}{2}\\rho v_2^2 + \\rho g h_2"
+  - step_en: "Set P_1 = P_2 = P_atm, take v_1 ≈ 0 and use h_1 − h_2 = h."
+    step_bn: "P_1 = P_2 = P_atm, v_1 ≈ 0 এবং h_1 − h_2 = h বসান।"
+    latex: "\\rho g(h_1 - h_2) = \\frac{1}{2}\\rho v_2^2 \\implies gh = \\frac{1}{2}v_2^2"
+  - step_en: "Solve for the efflux speed v."
+    step_bn: "নির্গম বেগ v নির্ণয় করুন।"
+    latex: "v = \\sqrt{2gh}"
+summary_en: "Find how fast a liquid jets out of a hole in a tank."
+summary_bn: "পাত্রের ছিদ্র দিয়ে তরল কত বেগে বের হবে তা নির্ণয়।"
+related: ["bernoulli-equation", "equation-of-continuity"]
+tags: ["torricelli", "efflux", "free fall", "hydrodynamics"]
+---
+
+The horizontal range of the jet from a hole at depth $h$ in a tank of total depth $H$ is $R = 2\sqrt{h(H-h)}$, maximum at $h = H/2$.

@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "poiseuilles-equation"
+title_bn: "পয়জুলির সমীকরণ"
+title_en: "Poiseuille’s equation for laminar tube flow"
+subject: physics
+level: class-11-12
+chapter: "Viscosity and Flow"
+chapter_bn: "সান্দ্রতা ও প্রবাহ"
+latex: "Q = \\frac{\\pi R^4 \\Delta P}{8\\eta L}"
+calculator: false
+variables:
+  - symbol: "Q"
+    name: "volume flow rate"
+    name_bn: "আয়তন প্রবাহের হার"
+    unit: "m³/s"
+    si_unit: "m³/s"
+  - symbol: "R"
+    name: "tube radius"
+    name_bn: "নলের ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "ΔP"
+    name: "pressure difference"
+    name_bn: "চাপ পার্থক্য"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "η"
+    name: "dynamic viscosity"
+    name_bn: "সান্দ্রতা সহগ"
+    unit: "Pa s"
+    si_unit: "Pa s"
+  - symbol: "L"
+    name: "tube length"
+    name_bn: "নলের দৈর্ঘ্য"
+    unit: "m"
+    si_unit: "m"
+derivation: "For steady laminar flow the velocity profile across the tube is parabolic. Integrating the parabolic velocity over the circular cross-section gives the volumetric flow rate proportional to R⁴."
+derivation_bn: "স্থির ধারারেখীয় প্রবাহে নলের প্রস্থচ্ছেদে বেগের বিস্তার পরাবৃত্তাকার। পরাবৃত্তীয় বেগকে ক্ষেত্রফলের ওপর সমাকলন করলে প্রবাহ হার ব্যাসার্ধের চতুর্ঘাতের সমানুপাতিক পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the parabolic velocity profile for laminar flow in a tube of radius R."
+    step_bn: "নলের ব্যাসার্ধ R-এর জন্য পরাবৃত্তীয় বেগের বিস্তার লিখুন।"
+    latex: "v(r) = \\frac{\\Delta P}{4\\eta L}(R^2 - r^2)"
+  - step_en: "Integrate the flow through an annulus of radius r and thickness dr."
+    step_bn: "r ব্যাসার্ধের বলয়াকার ক্ষেত্রের মধ্য দিয়ে প্রবাহের সমাকলন করুন।"
+    latex: "Q = \\int_0^R v(r)\\,2\\pi r\\,dr = \\frac{2\\pi\\Delta P}{4\\eta L}\\int_0^R (R^2r - r^3)\\,dr"
+  - step_en: "Evaluate the integral to obtain Poiseuille’s result."
+    step_bn: "সমাকলন সমাধান করে পয়জুলির সূত্র পান।"
+    latex: "Q = \\frac{\\pi R^4 \\Delta P}{8\\eta L}"
+summary_en: "Relate flow rate through a capillary to pressure drop, radius and viscosity."
+summary_bn: "সরু নলে প্রবাহ হারের ওপর চাপ, ব্যাসার্ধ ও সান্দ্রতার প্রভাব নির্ণয়।"
+related: ["newtons-law-of-viscosity", "reynolds-number"]
+tags: ["poiseuille", "laminar flow", "capillary", "blood flow"]
+---
+
+Because $Q \propto R^4$, halving a blood vessel’s radius reduces flow sixteenfold.

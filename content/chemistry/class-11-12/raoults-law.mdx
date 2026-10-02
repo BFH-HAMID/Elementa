@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "raoults-law"
+title_bn: "রাউল্টের সূত্র"
+title_en: "Raoult’s law for ideal solutions"
+subject: chemistry
+level: class-11-12
+chapter: "Solutions"
+chapter_bn: "দ্রবণ"
+latex: "P_A = x_A P_A^\\circ, \\qquad P_{\\text{total}} = \\sum_i x_i P_i^\\circ"
+calculator: false
+variables:
+  - symbol: "P_A"
+    name: "partial vapour pressure of A"
+    name_bn: "A-এর আংশিক বাষ্পচাপ"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "x_A"
+    name: "mole fraction of A in liquid"
+    name_bn: "তরলে A-এর মোল ভগ্নাংশ"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "P_A°"
+    name: "vapour pressure of pure A"
+    name_bn: "বিশুদ্ধ A-এর বাষ্পচাপ"
+    unit: "Pa"
+    si_unit: "Pa"
+derivation: "In an ideal solution the intermolecular forces are the same everywhere, so each component’s escaping tendency is simply its pure vapour pressure scaled by how many surface sites it occupies, i.e. its mole fraction."
+derivation_bn: "আদর্শ দ্রবণে সর্বত্র আন্তঃআণবিক বল একই রকম, তাই প্রতিটি উপাদানের বেরিয়ে যাওয়ার প্রবণতা তার বিশুদ্ধ বাষ্পচাপকে তার মোল ভগ্নাংশ দ্বারা গুণ করলে পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Postulate that a component’s partial vapour pressure is proportional to its mole fraction."
+    step_bn: "উপাদানের আংশিক বাষ্পচাপ তার মোল ভগ্নাংশের সমানুপাতিক ধরুন।"
+    latex: "P_A \\propto x_A"
+  - step_en: "Fix the constant using the pure liquid limit x_A = 1, where P_A = P_A°."
+    step_bn: "বিশুদ্ধ তরলের সীমা x_A = 1 ব্যবহার করে ধ্রুবক নির্ণয় করুন।"
+    latex: "P_A = x_A P_A^\\circ"
+  - step_en: "Sum over all volatile components using Dalton’s law for the total pressure."
+    step_bn: "ডাল্টনের সূত্র ব্যবহার করে সব উদ্বায়ী উপাদানের যোগফল নিন।"
+    latex: "P_{\\text{total}} = \\sum_i x_i P_i^\\circ"
+summary_en: "Predict vapour pressure lowering for ideal liquid mixtures."
+summary_bn: "আদর্শ তরল মিশ্রণের বাষ্পচাপ হ্রাসের হিসাব।"
+related: ["clausius-clapeyron-equation", "mole-fraction-equation", "solutions-formula-sheet"]
+tags: ["raoults law", "ideal solution", "vapour pressure", "mole fraction"]
+---
+
+Positive deviations occur when A–B attractions are weaker than A–A or B–B attractions.

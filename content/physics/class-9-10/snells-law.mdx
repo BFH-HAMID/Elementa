@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "snells-law"
+title_bn: "স্নেলের প্রতিসরণ সূত্র"
+title_en: "Snell’s law of refraction"
+subject: physics
+level: class-9-10
+chapter: "Refraction of Light"
+chapter_bn: "আলোর প্রতিসরণ"
+latex: "n_1\\sin\\theta_1 = n_2\\sin\\theta_2 \\implies {}^1 n_2 = \\frac{\\sin\\theta_1}{\\sin\\theta_2}"
+calculator: false
+variables:
+  - symbol: "n_1"
+    name: "refractive index of first medium"
+    name_bn: "প্রথম মাধ্যমের প্রতিসরণাঙ্ক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "n_2"
+    name: "refractive index of second medium"
+    name_bn: "দ্বিতীয় মাধ্যমের প্রতিসরণাঙ্ক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "θ_1"
+    name: "angle of incidence"
+    name_bn: "আপতন কোণ"
+    unit: "°"
+    si_unit: "rad"
+  - symbol: "θ_2"
+    name: "angle of refraction"
+    name_bn: "প্রতিসরণ কোণ"
+    unit: "°"
+    si_unit: "rad"
+derivation: "Combining the definition of relative refractive index with the reversibility of light paths gives the constant product n sinθ across a plane interface between two isotropic media."
+derivation_bn: "আপেক্ষিক প্রতিসরণাঙ্কের সংজ্ঞা এবং আলোর পথের প্রত্যাবর্তনশীলতা ব্যবহার করে দেখা যায় যে দুই মাধ্যমের বিভেদ তলে n sinθ ধ্রুব থাকে।"
+derivation_steps:
+  - step_en: "Write the relative refractive index using the speed ratio in the two media."
+    step_bn: "দুই মাধ্যমে আলোর বেগের অনুপাত হিসেবে আপেক্ষিক প্রতিসরণাঙ্ক লিখুন।"
+    latex: "{}^1 n_2 = \\frac{v_1}{v_2} = \\frac{\\sin\\theta_1}{\\sin\\theta_2}"
+  - step_en: "Express each speed as c/n to bring the absolute indices into the same expression."
+    step_bn: "প্রতিটি বেগকে c/n আকারে লিখে পরম প্রতিসরণাঙ্কের মাধ্যমে প্রকাশ করুন।"
+    latex: "\\frac{\\sin\\theta_1}{\\sin\\theta_2} = \\frac{c/n_1}{c/n_2} = \\frac{n_2}{n_1}"
+  - step_en: "Cross-multiply to obtain the invariant form used for ray tracing."
+    step_bn: "আড়গুণন করে রশ্মি অঙ্কনে ব্যবহৃত মানক রূপটি পান।"
+    latex: "n_1\\sin\\theta_1 = n_2\\sin\\theta_2"
+summary_en: "Trace a light ray across any plane boundary between two transparent media."
+summary_bn: "দুই স্বচ্ছ মাধ্যমের বিভেদ তলে আলোর রশ্মির পথ নির্ণয়।"
+related: ["refractive-index-definition", "critical-angle-total-internal-reflection", "lens-makers-equation"]
+tags: ["snell", "refraction", "optics", "ray tracing"]
+---
+
+For a stack of parallel layers, $n\sin\theta$ is invariant, so the emergent ray is parallel to the incident ray.

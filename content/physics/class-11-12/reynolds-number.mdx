@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "reynolds-number"
+title_bn: "রেইনোল্ডস সংখ্যা"
+title_en: "Reynolds number for flow regime"
+subject: physics
+level: class-11-12
+chapter: "Fluid Dynamics"
+chapter_bn: "প্রবাহী গতিবিদ্যা"
+latex: "Re = \\frac{\\rho v D}{\\eta} = \\frac{v D}{\\nu}"
+calculator: false
+variables:
+  - symbol: "Re"
+    name: "Reynolds number"
+    name_bn: "রেইনোল্ডস সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "ρ"
+    name: "fluid density"
+    name_bn: "প্রবাহীর ঘনত্ব"
+    unit: "kg/m³"
+    si_unit: "kg/m³"
+  - symbol: "v"
+    name: "characteristic flow speed"
+    name_bn: "প্রবাহের বৈশিষ্ট্যমূলক বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "D"
+    name: "characteristic length (diameter)"
+    name_bn: "বৈশিষ্ট্যমূলক দৈর্ঘ্য (ব্যাস)"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "η"
+    name: "dynamic viscosity"
+    name_bn: "সান্দ্রতা সহগ"
+    unit: "Pa s"
+    si_unit: "Pa s"
+derivation: "Reynolds number estimates the ratio of inertial forces (ρv²D²) to viscous forces (ηvD). Simplifying this ratio gives the dimensionless group that decides whether flow is laminar or turbulent."
+derivation_bn: "জড়তা বল (ρv²D²) ও সান্দ্র বলের (ηvD) অনুপাত হিসেবে রেইনোল্ডস সংখ্যা সংজ্ঞায়িত করা হয়। এই মাত্রাহীন রাশিটি প্রবাহ ধারারেখীয় না অশান্ত তা নির্ধারণ করে।"
+derivation_steps:
+  - step_en: "Estimate the inertial force scale from mass × acceleration."
+    step_bn: "ভর × ত্বরণ হতে জড়তা বলের মাত্রা লিখুন।"
+    latex: "F_{\\text{inertia}} \\sim \\rho D^3 \\cdot \\frac{v^2}{D} = \\rho v^2 D^2"
+  - step_en: "Estimate the viscous force scale using Newton’s viscosity law."
+    step_bn: "সান্দ্রতার নিউটনের সূত্র হতে সান্দ্র বলের মাত্রা লিখুন।"
+    latex: "F_{\\text{viscous}} \\sim \\eta\\frac{v}{D}D^2 = \\eta v D"
+  - step_en: "Take the ratio and substitute ν = η/ρ for the compact form."
+    step_bn: "অনুপাত নিন এবং ν = η/ρ বসিয়ে সংক্ষিপ্ত রূপ পান।"
+    latex: "Re = \\frac{\\rho v^2 D^2}{\\eta v D} = \\frac{\\rho v D}{\\eta} = \\frac{vD}{\\nu}"
+summary_en: "Decide whether flow through a pipe is laminar, transitional or turbulent."
+summary_bn: "পাইপের প্রবাহ ধারারেখীয়, পরিবর্তনশীল না অশান্ত তা নির্ণয়।"
+related: ["newtons-law-of-viscosity", "kinetic-viscosity", "poiseuilles-equation"]
+tags: ["reynolds number", "laminar flow", "turbulence", "dimensionless"]
+---
+
+Pipe flow is usually laminar for $Re < 2300$, transitional up to about 4000 and turbulent above that.

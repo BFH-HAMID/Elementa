@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "rolling-without-slipping"
+title_bn: "পিছলে না গিয়ে গড়ানোর শর্ত"
+title_en: "Rolling without slipping condition"
+subject: physics
+level: class-11-12
+chapter: "Rotational Motion"
+chapter_bn: "ঘূর্ণন গতি"
+latex: "v_{\\text{cm}} = \\omega R, \\qquad a_{\\text{cm}} = \\alpha R"
+calculator: false
+variables:
+  - symbol: "v_cm"
+    name: "centre-of-mass speed"
+    name_bn: "ভরকেন্দ্রের বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "ω"
+    name: "angular speed"
+    name_bn: "কৌণিক বেগ"
+    unit: "rad/s"
+    si_unit: "rad/s"
+  - symbol: "R"
+    name: "radius of the rolling body"
+    name_bn: "গড়ানো বস্তুর ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "a_cm"
+    name: "centre-of-mass acceleration"
+    name_bn: "ভরকেন্দ্রের ত্বরণ"
+    unit: "m/s²"
+    si_unit: "m/s²"
+derivation: "In pure rolling the contact point is instantaneously at rest, so in one full revolution (angle 2π) the centre advances one circumference 2πR, giving v_cm = ωR."
+derivation_bn: "বিশুদ্ধ গড়ানোয় ভূমির সংস্পর্শে থাকা বিন্দুটির আপেক্ষিক বেগ শূন্য হয়। এক পূর্ণ আবর্তনে (২π কোণ) বস্তু তার পরিধি ২πR সমান পথ যায়, ফলে v_cm = ωR।"
+derivation_steps:
+  - step_en: "Relate the arc length unrolled in angle θ to the horizontal advance of the centre."
+    step_bn: "θ কোণ ঘোরায় সৃষ্ট চাপের দৈর্ঘ্য ও ভরকেন্দ্রের সরণ সমান করুন।"
+    latex: "s = R\\theta"
+  - step_en: "Differentiate with respect to time to link linear and angular speeds."
+    step_bn: "সময়ের সাপেক্ষে অন্তরীকরণ করে রৈখিক ও কৌণিক বেগের সম্পর্ক পান।"
+    latex: "\\frac{ds}{dt} = R\\frac{d\\theta}{dt} \\implies v_{\\text{cm}} = \\omega R"
+  - step_en: "Differentiate once more for the acceleration relation."
+    step_bn: "আবার অন্তরীকরণ করে ত্বরণের সম্পর্কটি লিখুন।"
+    latex: "a_{\\text{cm}} = \\alpha R"
+summary_en: "Link the translation and rotation of a wheel, disc or sphere that rolls cleanly."
+summary_bn: "পিছলে না গিয়ে গড়ানো চাকা বা গোলকের রৈখিক ও কৌণিক গতির সম্পর্ক নির্ণয়।"
+related: ["rotational-kinetic-energy", "centripetal-acceleration"]
+tags: ["rolling", "slipping", "friction", "constraint"]
+---
+
+A solid sphere rolling down an incline accelerates at $a = \dfrac{g\sin\theta}{1 + I/(mR^2)} = \frac{5}{7}g\sin\theta$.

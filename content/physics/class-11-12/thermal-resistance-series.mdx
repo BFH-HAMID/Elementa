@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "thermal-resistance-series"
+title_bn: "তাপীয় রোধ ও যৌগিক প্রাচীর"
+title_en: "Thermal resistance of composite walls"
+subject: physics
+level: class-11-12
+chapter: "Thermal Radiation"
+chapter_bn: "তাপীয় বিকিরণ"
+latex: "R_{\\text{th}} = \\frac{L}{kA}, \\qquad R_{\\text{total}} = \\sum_i \\frac{L_i}{k_i A}"
+calculator: false
+variables:
+  - symbol: "R_th"
+    name: "thermal resistance of a layer"
+    name_bn: "স্তরের তাপীয় রোধ"
+    unit: "K/W"
+    si_unit: "K/W"
+  - symbol: "L"
+    name: "layer thickness"
+    name_bn: "স্তরের বেধ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "k"
+    name: "thermal conductivity"
+    name_bn: "তাপীয় পরিবাহিতা"
+    unit: "W/(m K)"
+    si_unit: "W/(m K)"
+  - symbol: "A"
+    name: "area normal to heat flow"
+    name_bn: "তাপ প্রবাহের লম্ব ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+derivation: "Comparing Fourier’s conduction law with Ohm’s law shows that heat flow, temperature difference and L/(kA) play the roles of current, voltage and resistance; layers in series add their resistances."
+derivation_bn: "ফুরিয়ের সূত্রকে ওহমের সূত্রের সাথে তুলনা করলে দেখা যায় তাপ প্রবাহ, তাপমাত্রা পার্থক্য ও L/(kA) যথাক্রমে প্রবাহ, বিভব ও রোধের ভূমিকা পালন করে। ফলে শ্রেণিস্থ স্তরের রোধ যোগ হয়।"
+derivation_steps:
+  - step_en: "Rewrite the steady conduction rate in the form of a driving potential over a resistance."
+    step_bn: "স্থির পরিবহন হারকে চালিকা বিভব ও রোধের অনুপাত আকারে লিখুন।"
+    latex: "\\frac{Q}{t} = \\frac{\\Delta T}{L/(kA)}"
+  - step_en: "Identify the thermal resistance of a single homogeneous layer."
+    step_bn: "একটি সমসত্ত্ব স্তরের তাপীয় রোধ চিহ্নিত করুন।"
+    latex: "R_{\\text{th}} = \\frac{L}{kA}"
+  - step_en: "For layers in series with the same heat flux, add the individual resistances."
+    step_bn: "একই তাপ প্রবাহবিশিষ্ট শ্রেণিস্থ স্তরের ক্ষেত্রে রোধগুলো যোগ করুন।"
+    latex: "R_{\\text{total}} = \\sum_i \\frac{L_i}{k_i A}"
+summary_en: "Size insulation for composite walls, pipes and building envelopes."
+summary_bn: "একাধিক স্তরের যৌগিক দেয়াল বা পাইপের অন্তরক নকশার হিসাব।"
+related: ["thermal-conductivity-equation", "resistance-series-combination"]
+tags: ["thermal resistance", "insulation", "conduction", "composite wall"]
+---
+
+The U-value used in building codes is simply $U = 1/(R_{\text{total}}A)$ per unit area.

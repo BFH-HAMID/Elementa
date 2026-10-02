@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "spherical-mirror-equation"
+title_bn: "গোলীয় দর্পণের সমীকরণ"
+title_en: "Spherical mirror equation"
+subject: physics
+level: class-9-10
+chapter: "Reflection of Light"
+chapter_bn: "আলোর প্রতিফলন"
+latex: "\\frac{1}{f} = \\frac{1}{u} + \\frac{1}{v} = \\frac{2}{r}"
+calculator: false
+variables:
+  - symbol: "f"
+    name: "focal length"
+    name_bn: "ফোকাস দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "u"
+    name: "object distance"
+    name_bn: "লক্ষ্যবস্তুর দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "v"
+    name: "image distance"
+    name_bn: "বিম্বের দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "r"
+    name: "radius of curvature"
+    name_bn: "বক্রতার ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+derivation: "Using paraxial rays and similar triangles formed by the object, image, pole and center of curvature of a spherical mirror, the geometric ratios simplify to 1/u + 1/v = 2/r = 1/f."
+derivation_bn: "উপাক্ষীয় রশ্মির ক্ষেত্রে গোলীয় দর্পণের মেরু, বক্রতার কেন্দ্র, লক্ষ্যবস্তু ও বিম্ব দ্বারা গঠিত সদৃশকোণী ত্রিভুজগুলোর বাহুর অনুপাত হতে সমীকরণটি প্রতিপাদন করা যায়।"
+derivation_steps:
+  - step_en: "From similar triangles around the center of curvature C and pole P, equate height ratios."
+    step_bn: "বক্রতার কেন্দ্র C এবং মেরু P-তে গঠিত সদৃশ ত্রিভুজ হতে বাহুর অনুপাত সমান লিখুন।"
+    latex: "\\frac{u - r}{r - v} = \\frac{u}{v}"
+  - step_en: "Cross-multiply and divide every term by uvr."
+    step_bn: "আড়গুণন করে প্রতিটি পদকে uvr দ্বারা ভাগ করুন।"
+    latex: "uv - vr = ur - uv \\implies 2uv = vr + ur \\implies \\frac{2}{r} = \\frac{1}{u} + \\frac{1}{v}"
+  - step_en: "Substitute f = r/2 for paraxial rays to obtain the mirror formula."
+    step_bn: "উপাক্ষীয় রশ্মির জন্য f = r/2 বসিয়ে দর্পণের সমীকরণ পান।"
+    latex: "\\frac{1}{f} = \\frac{1}{u} + \\frac{1}{v}"
+summary_en: "Locate the image formed by a concave or convex mirror using focal length."
+summary_bn: "অবতল বা উত্তল দর্পণে লক্ষ্যবস্তু ও বিম্বের অবস্থান এবং ফোকাস দূরত্ব নির্ণয়।"
+related: ["lens-formula", "linear-magnification"]
+tags: ["mirror", "reflection", "optics", "focal length"]
+---
+
+Apply a consistent sign convention (such as real-is-positive or Cartesian) for concave and convex mirrors.

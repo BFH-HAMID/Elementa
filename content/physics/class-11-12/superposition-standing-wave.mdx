@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "superposition-standing-wave"
+title_bn: "স্থির তরঙ্গের সমীকরণ"
+title_en: "Standing wave formed by superposition"
+subject: physics
+level: class-11-12
+chapter: "Waves"
+chapter_bn: "তরঙ্গ"
+latex: "y = 2A\\sin(kx)\\cos(\\omega t)"
+calculator: false
+variables:
+  - symbol: "y"
+    name: "resultant displacement"
+    name_bn: "লব্ধি সরণ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "A"
+    name: "amplitude of each travelling wave"
+    name_bn: "প্রতিটি তরঙ্গের বিস্তার"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "k"
+    name: "wave number"
+    name_bn: "তরঙ্গ সংখ্যা"
+    unit: "rad/m"
+    si_unit: "rad/m"
+  - symbol: "ω"
+    name: "angular frequency"
+    name_bn: "কৌণিক কম্পাঙ্ক"
+    unit: "rad/s"
+    si_unit: "rad/s"
+derivation: "Two identical waves travelling in opposite directions superpose. Using the identity sin(a − b) + sin(a + b) = 2 sin a cos b converts the sum into a product of a fixed spatial envelope and a time oscillation."
+derivation_bn: "বিপরীত দিকে গমনকারী দুটি অভিন্ন তরঙ্গ উপরিপাতিত হয়। sin(a − b) + sin(a + b) = 2 sin a cos b অভেদ ব্যবহার করলে যোগফল স্থানীয় খাম ও কালিক দোলনের গুণফলে পরিণত হয়।"
+derivation_steps:
+  - step_en: "Write the two counter-propagating waves with equal amplitude A."
+    step_bn: "সমান বিস্তার A-এর বিপরীতমুখী দুটি তরঙ্গ লিখুন।"
+    latex: "y_1 = A\\sin(kx - \\omega t), \\qquad y_2 = A\\sin(kx + \\omega t)"
+  - step_en: "Add them and apply the sum-to-product trigonometric identity."
+    step_bn: "যোগ করে যোগফল-থেকে-গুণফল অভেদ প্রয়োগ করুন।"
+    latex: "y = y_1 + y_2 = 2A\\sin(kx)\\cos(\\omega t)"
+  - step_en: "Identify nodes where sin(kx) = 0 and antinodes where |sin(kx)| = 1."
+    step_bn: "নোড (sin kx = 0) ও অ্যান্টিনোড (|sin kx| = 1)-এর অবস্থান চিহ্নিত করুন।"
+    latex: "x_{\\text{node}} = \\frac{n\\lambda}{2}, \\qquad \\lambda = \\frac{2\\pi}{k}"
+summary_en: "Explain resonance patterns on strings and in air columns."
+summary_bn: "তার ও বায়ু স্তম্ভে অনুনাদ ও স্থির তরঙ্গের ধরন ব্যাখ্যা করুন।"
+related: ["progressive-wave-equation", "fundamental-frequency-string", "wave-velocity-string"]
+tags: ["standing wave", "superposition", "nodes", "antinodes"]
+---
+
+Nodes are spaced $\lambda/2$ apart and the pattern does not travel — that is why no energy is transported along it.

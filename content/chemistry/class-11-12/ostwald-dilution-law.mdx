@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "ostwald-dilution-law"
+title_bn: "অস্টওয়াল্ডের লঘুকরণ সূত্র"
+title_en: "Ostwald’s dilution law"
+subject: chemistry
+level: class-11-12
+chapter: "Ionic Equilibrium"
+chapter_bn: "আয়নিক সাম্যাবস্থা"
+latex: "K_a = \\frac{\\alpha^2 c}{1 - \\alpha} \\approx \\alpha^2 c\\ \\text{ for }\\alpha \\ll 1"
+calculator: false
+variables:
+  - symbol: "K_a"
+    name: "acid dissociation constant"
+    name_bn: "অম্ল বিয়োজন ধ্রুবক"
+    unit: "mol/L"
+    si_unit: "1"
+  - symbol: "α"
+    name: "degree of dissociation"
+    name_bn: "বিয়োজন মাত্রা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "c"
+    name: "initial concentration"
+    name_bn: "প্রাথমিক ঘনমাত্রা"
+    unit: "mol/L"
+    si_unit: "mol/m³"
+derivation: "For a weak acid HA ⇌ H⁺ + A⁻ starting at concentration c, at equilibrium each ion has concentration αc while the undissociated part is (1 − α)c. Substituting into the equilibrium expression gives the dilution law."
+derivation_bn: "দুর্বল অম্ল HA ⇌ H⁺ + A⁻ এর প্রাথমিক ঘনমাত্রা c হলে সাম্যাবস্থায় প্রতিটি আয়নের ঘনমাত্রা αc এবং অবিয়োজিত অংশ (1 − α)c। সাম্য রাশিতে বসালে লঘুকরণ সূত্র পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write equilibrium concentrations in terms of α and the starting concentration c."
+    step_bn: "α ও প্রাথমিক ঘনমাত্রা c-এর মাধ্যমে সাম্য ঘনমাত্রা লিখুন।"
+    latex: "[\\mathrm{H}^+] = [\\mathrm{A}^-] = \\alpha c, \\qquad [\\mathrm{HA}] = (1-\\alpha)c"
+  - step_en: "Substitute into the acid dissociation constant expression."
+    step_bn: "অম্ল বিয়োজন ধ্রুবকের রাশিতে বসান।"
+    latex: "K_a = \\frac{\\alpha c \\cdot \\alpha c}{(1-\\alpha)c} = \\frac{\\alpha^2 c}{1-\\alpha}"
+  - step_en: "For very weak acids α ≪ 1, so (1 − α) ≈ 1."
+    step_bn: "অত্যন্ত দুর্বল অম্লে α ≪ 1, তাই (1 − α) ≈ 1 ধরা যায়।"
+    latex: "K_a \\approx \\alpha^2 c \\implies \\alpha = \\sqrt{\\frac{K_a}{c}}"
+summary_en: "Relate weak-electrolyte dissociation to concentration."
+summary_bn: "দুর্বল তড়িৎবিশ্লেষ্যের বিয়োজন ও ঘনমাত্রার সম্পর্ক নির্ণয়।"
+related: ["kohlrausch-law", "molar-conductivity", "equilibrium-acid-base-formula-sheet"]
+tags: ["ostwald", "dilution law", "weak electrolyte", "dissociation"]
+---
+
+As $c$ falls, $\alpha$ rises — dilution favours dissociation, which is why conductivity per mole increases.

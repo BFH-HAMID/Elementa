@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "stefan-boltzmann-law"
+title_bn: "স্টেফান-বোলটজমান সূত্র"
+title_en: "Stefan–Boltzmann law of radiation"
+subject: physics
+level: class-11-12
+chapter: "Thermal Radiation"
+chapter_bn: "তাপীয় বিকিরণ"
+latex: "P = \\sigma A e T^4"
+calculator: false
+variables:
+  - symbol: "P"
+    name: "radiated power"
+    name_bn: "বিকিরিত ক্ষমতা"
+    unit: "W"
+    si_unit: "W"
+  - symbol: "σ"
+    name: "Stefan–Boltzmann constant"
+    name_bn: "স্টেফান-বোলটজমান ধ্রুবক"
+    unit: "W/(m² K⁴)"
+    si_unit: "W/(m² K⁴)"
+  - symbol: "A"
+    name: "surface area"
+    name_bn: "পৃষ্ঠের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+  - symbol: "e"
+    name: "emissivity of the surface"
+    name_bn: "পৃষ্ঠের বিকিরণ ক্ষমতা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "T"
+    name: "absolute temperature"
+    name_bn: "পরম তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+derivation: "Integrating Planck’s blackbody spectral distribution over all wavelengths shows that the total emitted energy flux scales as T⁴; the empirical Stefan–Boltzmann constant is the integrated proportionality factor."
+derivation_bn: "প্ল্যাঙ্কের কৃষ্ণবস্তু বর্ণালী বন্টনকে সব তরঙ্গদৈর্ঘ্যে সমাকলন করলে দেখা যায় মোট বিকিরিত শক্তি প্রবাহ T⁴-এর সমানুপাতিক; সমাকলিত সমানুপাতিক ধ্রুবকই স্টেফান-বোলটজমান ধ্রুবক।"
+derivation_steps:
+  - step_en: "State the empirical proportionality between radiated power, area and fourth power of temperature."
+    step_bn: "বিকিরিত ক্ষমতা ক্ষেত্রফল ও তাপমাত্রার চতুর্ঘাতের সমানুপাতিক লিখুন।"
+    latex: "P \\propto A T^4"
+  - step_en: "Introduce the Stefan–Boltzmann constant σ and the emissivity factor e."
+    step_bn: "স্টেফান ধ্রুবক σ এবং বিকিরণ ক্ষমতা e যোগ করুন।"
+    latex: "P = \\sigma A e T^4"
+  - step_en: "For net exchange with surroundings at T_0, write the difference of the two fourth powers."
+    step_bn: "পরিবেশের তাপমাত্রা T_0 হলে নিট বিনিময়ের জন্য চতুর্ঘাতের পার্থক্য লিখুন।"
+    latex: "P_{\\text{net}} = \\sigma A e (T^4 - T_0^4)"
+summary_en: "Compute radiative heat loss from a hot body at temperature T."
+summary_bn: "উত্তপ্ত বস্তু থেকে বিকিরণের মাধ্যমে তাপ বিনিময়ের হার নির্ণয়।"
+related: ["newtons-law-of-cooling", "wien-displacement-law"]
+tags: ["stefan boltzmann", "radiation", "blackbody", "emissivity"]
+---
+
+The constant is $\sigma \approx 5.67 \times 10^{-8}\ \text{W m}^{-2}\text{K}^{-4}$; an ideal blackbody has $e = 1$.

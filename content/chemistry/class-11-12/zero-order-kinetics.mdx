@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "zero-order-kinetics"
+title_bn: "শূন্য ক্রম বিক্রিয়ার গতিবিদ্যা"
+title_en: "Zero-order reaction kinetics"
+subject: chemistry
+level: class-11-12
+chapter: "Chemical Kinetics"
+chapter_bn: "রাসায়নিক গতিবিদ্যা"
+latex: "[A] = [A]_0 - kt, \\qquad t_{1/2} = \\frac{[A]_0}{2k}"
+calculator: false
+variables:
+  - symbol: "[A]"
+    name: "concentration at time t"
+    name_bn: "t সময়ে ঘনমাত্রা"
+    unit: "mol/L"
+    si_unit: "mol/m³"
+  - symbol: "[A]_0"
+    name: "initial concentration"
+    name_bn: "প্রাথমিক ঘনমাত্রা"
+    unit: "mol/L"
+    si_unit: "mol/m³"
+  - symbol: "k"
+    name: "zero-order rate constant"
+    name_bn: "শূন্য ক্রম হার ধ্রুবক"
+    unit: "mol/(L s)"
+    si_unit: "mol/(m³ s)"
+derivation: "When the rate is independent of reactant concentration, −d[A]/dt = k. Direct integration gives a linear fall in concentration with time, and setting [A] = [A]_0/2 gives the half-life."
+derivation_bn: "বিক্রিয়ার হার বিক্রিয়কের ঘনমাত্রার ওপর নির্ভর না করলে −d[A]/dt = k হয়। সরাসরি সমাকলন করলে ঘনমাত্রা সময়ের সাথে রৈখিকভাবে কমে এবং [A] = [A]_0/2 বসালে অর্ধায়ু পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the zero-order differential rate law."
+    step_bn: "শূন্য ক্রম অন্তরক হার সূত্র লিখুন।"
+    latex: "-\\frac{d[A]}{dt} = k"
+  - step_en: "Integrate from t = 0 to t."
+    step_bn: "t = 0 থেকে t পর্যন্ত সমাকলন করুন।"
+    latex: "[A] - [A]_0 = -kt \\implies [A] = [A]_0 - kt"
+  - step_en: "Set [A] = [A]_0/2 and solve for the half-life."
+    step_bn: "[A] = [A]_0/2 বসিয়ে অর্ধায়ু নির্ণয় করুন।"
+    latex: "t_{1/2} = \\frac{[A]_0}{2k}"
+summary_en: "Model reactions whose rate is fixed by a saturated catalyst or surface."
+summary_bn: "সম্পৃক্ত প্রভাবক বা পৃষ্ঠ দ্বারা নিয়ন্ত্রিত বিক্রিয়ার হার বিশ্লেষণ।"
+related: ["first-order-integrated-rate-law", "rate-law", "chemical-kinetics-formula-sheet"]
+tags: ["zero order", "rate law", "catalysis", "kinetics"]
+---
+
+Unlike first order, the zero-order half-life depends on the starting concentration.

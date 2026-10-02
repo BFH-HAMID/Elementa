@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "rydberg-equation-hydrogen"
+title_bn: "রিডবার্গ সমীকরণ"
+title_en: "Rydberg equation for hydrogen spectra"
+subject: chemistry
+level: honours
+chapter: "Atomic Structure"
+chapter_bn: "পরমাণুর গঠন"
+latex: "\\frac{1}{\\lambda} = R_H\\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right), \\quad n_2 > n_1"
+calculator: false
+variables:
+  - symbol: "λ"
+    name: "emitted or absorbed wavelength"
+    name_bn: "নির্গত বা শোষিত তরঙ্গদৈর্ঘ্য"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "R_H"
+    name: "Rydberg constant for hydrogen"
+    name_bn: "হাইড্রোজেনের রিডবার্গ ধ্রুবক"
+    unit: "m⁻¹"
+    si_unit: "m⁻¹"
+  - symbol: "n_1"
+    name: "lower energy level"
+    name_bn: "নিম্ন শক্তিস্তর"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "n_2"
+    name: "higher energy level"
+    name_bn: "উচ্চ শক্তিস্তর"
+    unit: "1"
+    si_unit: "1"
+derivation: "Substituting Bohr’s E_n = −13.6/n² eV into the photon energy relation hc/λ = E_{n_2} − E_{n_1} and collecting constants gives the Rydberg form with R_H the empirical constant."
+derivation_bn: "বোরের E_n = −13.6/n² eV কে ফোটন শক্তির সম্পর্ক hc/λ = E_{n_2} − E_{n_1}-এ বসিয়ে ধ্রুবকগুলো একত্রিত করলে রিডবার্গ রূপ পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the photon energy as the difference of two Bohr levels."
+    step_bn: "দুই বোর স্তরের পার্থক্য হিসেবে ফোটন শক্তি লিখুন।"
+    latex: "\\frac{hc}{\\lambda} = E_{n_2} - E_{n_1}"
+  - step_en: "Insert E_n = −(me⁴)/(8ε_0²h²)(1/n²) and factor the common constant."
+    step_bn: "E_n-এর রাশি বসিয়ে সাধারণ ধ্রুবক ফ্যাক্টর করুন."
+    latex: "\\frac{1}{\\lambda} = \\frac{me^4}{8\\varepsilon_0^2 h^3 c}\\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right)"
+  - step_en: "Identify the prefactor as the Rydberg constant R_H ≈ 1.097 × 10⁷ m⁻¹."
+    step_bn: "গুণকটিকে রিডবার্গ ধ্রুবক R_H ≈ ১.০৯৭ × 10⁷ m⁻¹ হিসেবে চিহ্নিত করুন।"
+    latex: "R_H \\approx 1.097\\times 10^7\\ \\text{m}^{-1}"
+summary_en: "Calculate the wavelengths of hydrogen’s spectral series."
+summary_bn: "হাইড্রোজেনের বর্ণালী সিরিজের তরঙ্গদৈর্ঘ্য নির্ণয়।"
+related: ["hydrogen-energy-levels-bohr", "bohr-quantization-angular-momentum", "photoelectric-effect-equation"]
+tags: ["rydberg", "hydrogen spectrum", "balmer", "honours"]
+---
+
+With $n_1 = 2$ you get the Balmer series in visible light; $n_1 = 1$ gives the ultraviolet Lyman series.

@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "torque-angular-acceleration"
+title_bn: "টর্ক ও কৌণিক ত্বরণের সম্পর্ক"
+title_en: "Rotational analogue of Newton’s second law"
+subject: physics
+level: class-11-12
+chapter: "Rotational Motion"
+chapter_bn: "ঘূর্ণন গতি"
+latex: "\\tau = I\\alpha \\implies \\alpha = \\frac{\\tau}{I}"
+calculator: false
+variables:
+  - symbol: "τ"
+    name: "net external torque"
+    name_bn: "লব্ধ বাহ্যিক টর্ক"
+    unit: "N m"
+    si_unit: "N m"
+  - symbol: "I"
+    name: "moment of inertia"
+    name_bn: "জড়তার ভ্রামক"
+    unit: "kg m²"
+    si_unit: "kg m²"
+  - symbol: "α"
+    name: "angular acceleration"
+    name_bn: "কৌণিক ত্বরণ"
+    unit: "rad/s²"
+    si_unit: "rad/s²"
+derivation: "Summing the tangential Newton’s second law F = ma_t for every particle of a rigid body, replacing a_t = rα and summing mr² as the moment of inertia, gives τ = Iα."
+derivation_bn: "দৃঢ় বস্তুর প্রতিটি কণার জন্য স্পর্শকীয়ভাবে F = ma_t লিখে a_t = rα এবং Σmr² = I বসালে ঘূর্ণনের ক্ষেত্রে নিউটনের দ্বিতীয় সূত্র τ = Iα পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the tangential force on a particle at radius r with tangential acceleration a_t."
+    step_bn: "r দূরত্বস্থ কণার স্পর্শকীয় বল ও ত্বরণ লিখুন।"
+    latex: "F_i = m_i a_{t,i}"
+  - step_en: "Replace a_t by rα and multiply both sides by r to convert force into torque."
+    step_bn: "a_t = rα বসিয়ে উভয় পক্ষকে r দ্বারা গুণ করে টর্কে রূপান্তর করুন।"
+    latex: "r_i F_i = m_i r_i^2 \\alpha \\implies \\tau_i = I_i\\alpha"
+  - step_en: "Sum over all particles so that Σm_i r_i² becomes the total moment of inertia I."
+    step_bn: "সব কণার জন্য সমষ্টি নিলে Σm_i r_i² = I পাওয়া যায়।"
+    latex: "\\sum \\tau_i = \\left(\\sum m_i r_i^2\\right)\\alpha = I\\alpha"
+summary_en: "Predict how a rigid body accelerates about a fixed axis under a net torque."
+summary_bn: "কোনো দৃঢ় বস্তু নির্দিষ্ট অক্ষের চারদিকে লব্ধ টর্কের প্রভাবে কীভাবে ঘূর্ণন ত্বরণ পায় তা নির্ণয়।"
+related: ["moment-of-inertia-point-mass", "angular-momentum-conservation", "moment-of-force"]
+tags: ["torque", "moment of inertia", "rotation", "newton second law"]
+---
+
+This is the exact rotational analogue of $F = ma$, with torque replacing force and moment of inertia replacing mass.

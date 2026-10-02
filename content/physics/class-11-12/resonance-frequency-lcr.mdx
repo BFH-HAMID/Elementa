@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "resonance-frequency-lcr"
+title_bn: "এলসিআর বর্তনীর অনুনাদী কম্পাঙ্ক"
+title_en: "Resonant frequency of a series LCR circuit"
+subject: physics
+level: class-11-12
+chapter: "Alternating Current"
+chapter_bn: "পরিবর্তী প্রবাহ"
+latex: "f_0 = \\frac{1}{2\\pi\\sqrt{LC}}, \\qquad Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}}"
+calculator: false
+variables:
+  - symbol: "f_0"
+    name: "resonant frequency"
+    name_bn: "অনুনাদী কম্পাঙ্ক"
+    unit: "Hz"
+    si_unit: "Hz"
+  - symbol: "L"
+    name: "inductance"
+    name_bn: "আবেশাঙ্ক"
+    unit: "H"
+    si_unit: "H"
+  - symbol: "C"
+    name: "capacitance"
+    name_bn: "ধারকত্ব"
+    unit: "F"
+    si_unit: "F"
+  - symbol: "Q"
+    name: "quality factor"
+    name_bn: "গুণমান নির্ণায়ক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "R"
+    name: "series resistance"
+    name_bn: "শ্রেণি রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+derivation: "At resonance the inductive and capacitive reactances cancel, so X_L = X_C. Solving ωL = 1/(ωC) gives ω_0 = 1/√(LC) and the current becomes maximum."
+derivation_bn: "অনুনাদে আবেশিক ও ধারকীয় রিঅ্যাকট্যান্স পরস্পর বাতিল করে, অর্থাৎ X_L = X_C। ωL = 1/(ωC) সমাধান করলে ω_0 = 1/√(LC) পাওয়া যায় এবং প্রবাহ সর্বাধিক হয়।"
+derivation_steps:
+  - step_en: "Write the resonance condition X_L = X_C for minimum impedance."
+    step_bn: "ন্যূনতম প্রতিবন্ধকতার জন্য অনুনাদ শর্ত X_L = X_C লিখুন।"
+    latex: "\\omega_0 L = \\frac{1}{\\omega_0 C}"
+  - step_en: "Solve for the resonant angular frequency."
+    step_bn: "অনুনাদী কৌণিক কম্পাঙ্কের জন্য সমাধান করুন।"
+    latex: "\\omega_0^2 = \\frac{1}{LC} \\implies \\omega_0 = \\frac{1}{\\sqrt{LC}}"
+  - step_en: "Convert to ordinary frequency and define the quality factor."
+    step_bn: "সাধারণ কম্পাঙ্কে রূপান্তর করুন এবং গুণমান নির্ণায়ক সংজ্ঞায়িত করুন।"
+    latex: "f_0 = \\frac{1}{2\\pi\\sqrt{LC}}, \\qquad Q = \\frac{\\omega_0 L}{R} = \\frac{1}{R}\\sqrt{\\frac{L}{C}}"
+summary_en: "Tune a radio receiver or filter to a chosen frequency."
+summary_bn: "রেডিও রিসিভার বা ফিল্টারকে নির্দিষ্ট কম্পাঙ্কে সুরমেল করা।"
+related: ["impedance-lcr-series", "lc-oscillation-frequency", "ac-rms-values"]
+tags: ["resonance", "LCR", "tuning", "quality factor"]
+---
+
+A higher $Q$ means a sharper resonance peak and better frequency selectivity.

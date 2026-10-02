@@ -1,5 +1,16 @@
 [
   {
+    "slug": "celsius-kelvin-conversion",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Celsius to Kelvin temperature relation",
+    "title_bn": "সেলসিয়াস ও কেলভিন তাপমাত্রার সম্পর্ক",
+    "description_en": "Convert everyday Celsius readings into SI kelvin temperatures.",
+    "description_bn": "সেলসিয়াস স্কেলের পাঠকে আন্তর্জাতিক একক কেলভিনে রূপান্তর করুন।",
+    "href": "/equations/celsius-kelvin-conversion",
+    "tags": []
+  },
+  {
     "slug": "density",
     "kind": "equation",
     "subject": "physics",
@@ -8,6 +19,72 @@
     "description_en": "Compare how much mass is packed into each unit of volume.",
     "description_bn": "একক আয়তনে কত ভর আছে তার পরিমাপ।",
     "href": "/equations/density",
+    "tags": []
+  },
+  {
+    "slug": "echo-minimum-distance",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Echo distance and sound reflection",
+    "title_bn": "প্রতিধ্বনি শোনার ন্যূনতম দূরত্ব",
+    "description_en": "Determine reflector depth or obstacle distance from the round-trip time of an echo.",
+    "description_bn": "প্রতিধ্বনি ফিরে আসার সময় ও শব্দের বেগ থেকে প্রতিফলকের দূরত্ব নির্ণয়।",
+    "href": "/equations/echo-minimum-distance",
+    "tags": []
+  },
+  {
+    "slug": "electric-charge-current",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Electric charge and steady current",
+    "title_bn": "তড়িৎ প্রবাহ ও আধানের সম্পর্ক",
+    "description_en": "Compute the total electric charge transferred by a steady current over time.",
+    "description_bn": "নির্দিষ্ট সময়ে সুষম তড়িৎ প্রবাহের ফলে স্থানান্তরিত মোট চার্জ নির্ণয়।",
+    "href": "/equations/electric-charge-current",
+    "tags": []
+  },
+  {
+    "slug": "fahrenheit-celsius-relation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Celsius and Fahrenheit temperature conversion",
+    "title_bn": "সেলসিয়াস ও ফারেনহাইট স্কেলের সম্পর্ক",
+    "description_en": "Convert temperatures between Celsius and Fahrenheit thermometers.",
+    "description_bn": "সেলসিয়াস ও ফারেনহাইট থার্মোমিটারের পাঠের মধ্যে রূপান্তর করুন।",
+    "href": "/equations/fahrenheit-celsius-relation",
+    "tags": []
+  },
+  {
+    "slug": "liquid-column-pressure",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Hydrostatic pressure in a liquid column",
+    "title_bn": "স্থির তরলের অভ্যন্তরে চাপ",
+    "description_en": "Calculate how liquid pressure increases linearly with depth and density.",
+    "description_bn": "গভীরতা ও ঘনত্বের সাথে তরলের চাপ কীভাবে বৃদ্ধি পায় তা হিসাব করুন।",
+    "href": "/equations/liquid-column-pressure",
+    "tags": []
+  },
+  {
+    "slug": "mechanical-advantage",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Mechanical advantage of a simple machine",
+    "title_bn": "সরল যন্ত্রের যান্ত্রিক সুবিধা",
+    "description_en": "Measure how much a lever, pulley or inclined plane multiplies input force.",
+    "description_bn": "লিভার, কপিকল বা হেলানো তল প্রযুক্ত বলকে কত গুণ বৃদ্ধি করে তা নির্ণয়।",
+    "href": "/equations/mechanical-advantage",
+    "tags": []
+  },
+  {
+    "slug": "moment-of-force",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Moment of a force (Torque)",
+    "title_bn": "বলের ভ্রামক বা টর্ক",
+    "description_en": "Quantify the turning effect of a force about a pivot or hinge.",
+    "description_bn": "কব্জা বা ফালক্রামের চারদিকে বলের ঘূর্ণন ক্ষমতা পরিমাপ করুন।",
+    "href": "/equations/moment-of-force",
     "tags": []
   },
   {
@@ -33,6 +110,127 @@
     "tags": []
   },
   {
+    "slug": "weight-gravity",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Weight of an object under gravity",
+    "title_bn": "বস্তুর ওজন ও অভিকর্ষজ ত্বরণ",
+    "description_en": "Relate mass and local gravitational acceleration to the downward weight force.",
+    "description_bn": "ভর ও স্থানীয় অভিকর্ষজ ত্বরণের গুণফল থেকে বস্তুর ওজন নির্ণয়।",
+    "href": "/equations/weight-gravity",
+    "tags": []
+  },
+  {
+    "slug": "apparent-depth-refraction",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Apparent depth in a refracting medium",
+    "title_bn": "প্রতিসরণের কারণে আপাত গভীরতা",
+    "description_en": "Explain why objects under water appear shallower than they truly are.",
+    "description_bn": "পানির নিচের বস্তু কেন প্রকৃত অবস্থানের চেয়ে উপরে দেখায় তা ব্যাখ্যা করুন।",
+    "href": "/equations/apparent-depth-refraction",
+    "tags": []
+  },
+  {
+    "slug": "archimedes-buoyant-force",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Archimedes’ principle and buoyant force",
+    "title_bn": "আর্কিমিডিসের নীতি ও প্লবতা বল",
+    "description_en": "Find the upward buoyant thrust from fluid density and displaced volume.",
+    "description_bn": "অপসারিত তরলের আয়তন ও ঘনত্ব থেকে প্লবতা বল ও হারানো ওজন নির্ণয়।",
+    "href": "/equations/archimedes-buoyant-force",
+    "tags": []
+  },
+  {
+    "slug": "calorimetry-heat-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Calorimetry and specific heat capacity equation",
+    "title_bn": "আপেক্ষিক তাপ ও গৃহীত বা বর্জিত তাপ",
+    "description_en": "Calculate sensible heat transfer from mass, specific heat and temperature change.",
+    "description_bn": "ভর, আপেক্ষিক তাপ এবং তাপমাত্রা পরিবর্তন থেকে গৃহীত বা বর্জিত তাপ নির্ণয়।",
+    "href": "/equations/calorimetry-heat-equation",
+    "tags": []
+  },
+  {
+    "slug": "capillary-rise",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Capillary rise in a narrow tube",
+    "title_bn": "কৈশিক উত্তোলনের সমীকরণ",
+    "description_en": "Predict how far a wetting liquid climbs in a narrow tube.",
+    "description_bn": "সরু নলে কৈশিকতার কারণে তরল কত উচ্চতা পর্যন্ত উঠবে তা নির্ণয়।",
+    "href": "/equations/capillary-rise",
+    "tags": []
+  },
+  {
+    "slug": "conservation-of-momentum",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Law of conservation of linear momentum",
+    "title_bn": "ভরবেগের সংরক্ষণ সূত্র",
+    "description_en": "Analyze collisions and explosions when net external force on a system is zero.",
+    "description_bn": "বাহ্যিক বল শূন্য হলে সংঘর্ষের আগে ও পরে মোট ভরবেগের সমতা বিশ্লেষণ।",
+    "href": "/equations/conservation-of-momentum",
+    "tags": []
+  },
+  {
+    "slug": "critical-angle-total-internal-reflection",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Critical angle and total internal reflection",
+    "title_bn": "সংকট কোণ ও পূর্ণ অভ্যন্তরীণ প্রতিফলন",
+    "description_en": "Find the incidence angle beyond which light is totally internally reflected.",
+    "description_bn": "কোন আপতন কোণের চেয়ে বেশি হলে পূর্ণ অভ্যন্তরীণ প্রতিফলন ঘটবে তা নির্ণয়।",
+    "href": "/equations/critical-angle-total-internal-reflection",
+    "tags": []
+  },
+  {
+    "slug": "efficiency-formula",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Mechanical efficiency of a system",
+    "title_bn": "কর্মদক্ষতার সমীকরণ",
+    "description_en": "Evaluate the fraction of input energy or power converted into useful work.",
+    "description_bn": "প্রদত্ত শক্তি বা ক্ষমতার কত শতাংশ কার্যকর কাজে রূপান্তরিত হয় তা নির্ণয়।",
+    "href": "/equations/efficiency-formula",
+    "tags": []
+  },
+  {
+    "slug": "elastic-collision-velocities",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Final velocities in a one-dimensional elastic collision",
+    "title_bn": "স্থিতিস্থাপক সংঘর্ষে শেষ বেগ",
+    "description_en": "Predict post-collision speeds when kinetic energy is conserved.",
+    "description_bn": "গতিশক্তি সংরক্ষিত হলে সংঘর্ষের পরের বেগ নির্ণয়।",
+    "href": "/equations/elastic-collision-velocities",
+    "tags": []
+  },
+  {
+    "slug": "elastic-potential-energy",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Elastic potential energy stored in a spring",
+    "title_bn": "স্প্রিংয়ে সঞ্চিত স্থিতিস্থাপক বিভবশক্তি",
+    "description_en": "Find the recoverable energy stored in a stretched or compressed spring.",
+    "description_bn": "প্রসারিত বা সংকুচিত স্প্রিংয়ে সঞ্চিত স্থিতিস্থাপক শক্তির পরিমাণ নির্ণয়।",
+    "href": "/equations/elastic-potential-energy",
+    "tags": []
+  },
+  {
+    "slug": "electrical-energy-kilowatt-hour",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Electrical energy and kilowatt-hour billing",
+    "title_bn": "বৈদ্যুতিক শক্তি ও কিলোওয়াট-ঘণ্টা",
+    "description_en": "Compute household energy consumption and cost from appliance ratings.",
+    "description_bn": "বৈদ্যুতিক যন্ত্রের ক্ষমতা ও ব্যবহারের সময় থেকে বিদ্যুৎ খরচ নির্ণয়।",
+    "href": "/equations/electrical-energy-kilowatt-hour",
+    "tags": []
+  },
+  {
     "slug": "electrical-power",
     "kind": "equation",
     "subject": "physics",
@@ -41,6 +239,17 @@
     "description_en": "Calculate the rate at which a circuit transfers electrical energy.",
     "description_bn": "সার্কিটে বৈদ্যুতিক শক্তি স্থানান্তরের হার হিসাব করুন।",
     "href": "/equations/electrical-power",
+    "tags": []
+  },
+  {
+    "slug": "first-equation-of-motion",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "First equation of motion (velocity–time)",
+    "title_bn": "গতির প্রথম সমীকরণ (বেগ-সময় সম্পর্ক)",
+    "description_en": "Find the final velocity of a body moving with constant linear acceleration.",
+    "description_bn": "সুষম ত্বরণে গতিশীল বস্তুর নির্দিষ্ট সময় পরের শেষ বেগ নির্ণয়।",
+    "href": "/equations/first-equation-of-motion",
     "tags": []
   },
   {
@@ -55,6 +264,50 @@
     "tags": []
   },
   {
+    "slug": "gravitational-potential-energy",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Gravitational potential energy near Earth",
+    "title_bn": "অভিকর্ষজ বিভবশক্তি",
+    "description_en": "Calculate energy stored by raising an object in a uniform gravitational field.",
+    "description_bn": "সুষম অভিকর্ষীয় ক্ষেত্রে বস্তুকে ওপরে তুললে সঞ্চিত বিভবশক্তি নির্ণয়।",
+    "href": "/equations/gravitational-potential-energy",
+    "tags": []
+  },
+  {
+    "slug": "hookes-law-spring",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Hooke’s law for an elastic spring",
+    "title_bn": "স্প্রিংয়ের ক্ষেত্রে হুকের সূত্র",
+    "description_en": "Relate spring extension to linear restoring force within the elastic limit.",
+    "description_bn": "স্থিতিস্থাপক সীমার মধ্যে স্প্রিংয়ের সরণ ও প্রত্যয়নী বলের সম্পর্ক।",
+    "href": "/equations/hookes-law-spring",
+    "tags": []
+  },
+  {
+    "slug": "impulse-momentum-theorem",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Impulse–momentum theorem",
+    "title_bn": "বলের ঘাত ও ভরবেগের পরিবর্তন",
+    "description_en": "Explain why increasing impact time reduces peak force for a given momentum change.",
+    "description_bn": "ভরবেগের নির্দিষ্ট পরিবর্তনে সময় বাড়ালে কেন আঘাতজনিত বল কমে তা ব্যাখ্যা করুন।",
+    "href": "/equations/impulse-momentum-theorem",
+    "tags": []
+  },
+  {
+    "slug": "joules-heating-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Joule’s law of electrical heating",
+    "title_bn": "জুলের তাপীয় ক্রিয়ার সূত্র",
+    "description_en": "Calculate thermal energy generated by current flowing through a resistor.",
+    "description_bn": "রোধের মধ্য দিয়ে তড়িৎ প্রবাহের ফলে উৎপন্ন তাপশক্তির পরিমাণ নির্ণয়।",
+    "href": "/equations/joules-heating-law",
+    "tags": []
+  },
+  {
     "slug": "kinematics-formula-sheet",
     "kind": "equation",
     "subject": "physics",
@@ -63,6 +316,17 @@
     "description_en": "A quick reference for speed, constant acceleration, free fall and vector resultants.",
     "description_bn": "দ্রুতি, সমত্বরণ, মুক্তপতন ও ভেক্টর লব্ধির সংক্ষিপ্ত সূত্রপত্র।",
     "href": "/equations/kinematics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "kinetic-energy",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Translational kinetic energy",
+    "title_bn": "গতিশক্তির সমীকরণ",
+    "description_en": "Compute the mechanical energy of motion and its quadratic dependence on speed.",
+    "description_bn": "গতিশীল বস্তুর গতিশক্তি এবং ভরবেগের সাথে তার সম্পর্ক নির্ণয়।",
+    "href": "/equations/kinetic-energy",
     "tags": []
   },
   {
@@ -88,6 +352,61 @@
     "tags": []
   },
   {
+    "slug": "lens-power-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Optical power of a lens",
+    "title_bn": "লেন্সের ক্ষমতার সমীকরণ",
+    "description_en": "Convert lens focal length in meters to prescription power in dioptres (D).",
+    "description_bn": "লেন্সের ফোকাস দূরত্ব থেকে ডায়প্টার (D) এককে লেন্সের ক্ষমতা নির্ণয়।",
+    "href": "/equations/lens-power-equation",
+    "tags": []
+  },
+  {
+    "slug": "linear-magnification",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Linear magnification of mirrors and lenses",
+    "title_bn": "রৈখিক বিবর্ধনের সমীকরণ",
+    "description_en": "Determine relative image size and orientation from object and image distances.",
+    "description_bn": "লক্ষ্যবস্তু ও বিম্বের দূরত্ব থেকে বিম্বের আকার ও প্রকৃতি নির্ণয়।",
+    "href": "/equations/linear-magnification",
+    "tags": []
+  },
+  {
+    "slug": "linear-momentum",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Linear momentum of a particle",
+    "title_bn": "রৈখিক ভরবেগের সমীকরণ",
+    "description_en": "Quantify the translational motion of a body from its mass and velocity.",
+    "description_bn": "বস্তুর ভর ও বেগের গুণফল থেকে রৈখিক ভরবেগ পরিমাপ।",
+    "href": "/equations/linear-momentum",
+    "tags": []
+  },
+  {
+    "slug": "linear-thermal-expansion",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Linear thermal expansion of solids",
+    "title_bn": "কঠিন পদার্থের দৈর্ঘ্য প্রসারণ",
+    "description_en": "Predict how rails, bridges and metal rods lengthen when heated.",
+    "description_bn": "তাপমাত্রা পরিবর্তনে ধাতব দণ্ড বা রেললাইনের দৈর্ঘ্য প্রসারণ হিসাব করুন।",
+    "href": "/equations/linear-thermal-expansion",
+    "tags": []
+  },
+  {
+    "slug": "mechanical-power",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Mechanical power and force–velocity relation",
+    "title_bn": "যান্ত্রিক ক্ষমতা ও বেগের সম্পর্ক",
+    "description_en": "Connect rate of work to applied force and the speed of the moving object.",
+    "description_bn": "কাজ করার হারকে প্রযুক্ত বল এবং বস্তুর বেগের সাথে সম্পর্কিত করুন।",
+    "href": "/equations/mechanical-power",
+    "tags": []
+  },
+  {
     "slug": "newtons-second-law",
     "kind": "equation",
     "subject": "physics",
@@ -96,6 +415,17 @@
     "description_en": "Connect net force, mass and acceleration in one compact model.",
     "description_bn": "লব্ধি বল, ভর ও ত্বরণকে একটি সহজ মডেলে যুক্ত করুন।",
     "href": "/equations/newtons-second-law",
+    "tags": []
+  },
+  {
+    "slug": "nth-second-displacement",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Displacement in the nth second",
+    "title_bn": "n-তম সেকেন্ডে অতিক্রান্ত দূরত্ব",
+    "description_en": "Find how far a uniformly accelerating body travels during a specific one-second interval.",
+    "description_bn": "সুষম ত্বরণে চলমান বস্তু নির্দিষ্ট n-তম এক সেকেন্ডে কত পথ যায় তা নির্ণয়।",
+    "href": "/equations/nth-second-displacement",
     "tags": []
   },
   {
@@ -121,6 +451,94 @@
     "tags": []
   },
   {
+    "slug": "pascal-hydraulic-lift",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Pascal’s law and hydraulic force multiplication",
+    "title_bn": "প্যাসকেলের সূত্র ও হাইড্রোলিক প্রেস",
+    "description_en": "Show how hydraulic brakes and jacks multiply force using piston area ratios.",
+    "description_bn": "পিস্টনের ক্ষেত্রফলের অনুপাত ব্যবহার করে হাইড্রোলিক যন্ত্রে বল বৃদ্ধির হিসাব।",
+    "href": "/equations/pascal-hydraulic-lift",
+    "tags": []
+  },
+  {
+    "slug": "refractive-index-definition",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Definition of refractive index",
+    "title_bn": "প্রতিসরণাঙ্কের সংজ্ঞা",
+    "description_en": "Connect the bending of light at an interface with the change in light speed.",
+    "description_bn": "মাধ্যমের পরিবর্তনে আলোর বেগ ও দিক পরিবর্তনের মধ্যকার সম্পর্ক নির্ণয়।",
+    "href": "/equations/refractive-index-definition",
+    "tags": []
+  },
+  {
+    "slug": "relative-density",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Relative density and specific gravity",
+    "title_bn": "আপেক্ষিক ঘনত্ব",
+    "description_en": "Compare a material density with water density using a hydrostatic balance.",
+    "description_bn": "পানির সাপেক্ষে কোনো পদার্থের আপেক্ষিক ঘনত্ব ওজন পরিমাপের মাধ্যমে নির্ণয়।",
+    "href": "/equations/relative-density",
+    "tags": []
+  },
+  {
+    "slug": "resistance-parallel-combination",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Equivalent resistance in parallel",
+    "title_bn": "সমান্তরাল সমবায়ের তুল্য রোধ",
+    "description_en": "Determine the net resistance of parallel-connected branches.",
+    "description_bn": "সমান্তরালভাবে যুক্ত একাধিক রোধের তুল্য রোধ নির্ণয়।",
+    "href": "/equations/resistance-parallel-combination",
+    "tags": []
+  },
+  {
+    "slug": "resistance-series-combination",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Equivalent resistance in series",
+    "title_bn": "শ্রেণি সমবায়ের তুল্য রোধ",
+    "description_en": "Find the total resistance of resistors connected end to end.",
+    "description_bn": "একাধিক রোধ শ্রেণিতে যুক্ত থাকলে তুল্য রোধের মান নির্ণয়।",
+    "href": "/equations/resistance-series-combination",
+    "tags": []
+  },
+  {
+    "slug": "resistivity-formula",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Resistance and electrical resistivity",
+    "title_bn": "পরিবাহীর রোধ ও রোধাঙ্ক",
+    "description_en": "Calculate wire resistance from geometry and material resistivity.",
+    "description_bn": "পরিবাহীর দৈর্ঘ্য, প্রস্থচ্ছেদ ও উপাদানের রোধাঙ্ক থেকে রোধ নির্ণয়।",
+    "href": "/equations/resistivity-formula",
+    "tags": []
+  },
+  {
+    "slug": "rocket-recoil-velocity",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Recoil velocity of a gun",
+    "title_bn": "বন্দুকের পশ্চাৎ বেগ",
+    "description_en": "Calculate backward recoil speed using conservation of linear momentum.",
+    "description_bn": "ভরবেগের সংরক্ষণ সূত্র প্রয়োগ করে বন্দুকের পশ্চাৎ বেগ নির্ণয়।",
+    "href": "/equations/rocket-recoil-velocity",
+    "tags": []
+  },
+  {
+    "slug": "second-equation-of-motion",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Second equation of motion (displacement–time)",
+    "title_bn": "গতির দ্বিতীয় সমীকরণ (সরণ-সময় সম্পর্ক)",
+    "description_en": "Calculate displacement from initial velocity, constant acceleration and time.",
+    "description_bn": "আদি বেগ, সুষম ত্বরণ এবং সময় থেকে বস্তুর সরণ নির্ণয়।",
+    "href": "/equations/second-equation-of-motion",
+    "tags": []
+  },
+  {
     "slug": "simple-pendulum",
     "kind": "experiment",
     "subject": "physics",
@@ -129,6 +547,83 @@
     "description_en": "Measure the period of a simple pendulum for several lengths and estimate the local gravitational acceleration.",
     "description_bn": "বিভিন্ন দৈর্ঘ্যের সরল দোলকের পর্যায়কাল মেপে স্থানীয় মহাকর্ষজ ত্বরণ নির্ণয় করা।",
     "href": "/experiments/simple-pendulum",
+    "tags": []
+  },
+  {
+    "slug": "snells-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Snell’s law of refraction",
+    "title_bn": "স্নেলের প্রতিসরণ সূত্র",
+    "description_en": "Trace a light ray across any plane boundary between two transparent media.",
+    "description_bn": "দুই স্বচ্ছ মাধ্যমের বিভেদ তলে আলোর রশ্মির পথ নির্ণয়।",
+    "href": "/equations/snells-law",
+    "tags": []
+  },
+  {
+    "slug": "speed-of-sound-temperature",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Speed of sound in air versus temperature",
+    "title_bn": "তাপমাত্রার সাথে বায়ুতে শব্দের বেগ",
+    "description_en": "Estimate how the speed of sound in air changes with air temperature.",
+    "description_bn": "বায়ুর তাপমাত্রা পরিবর্তনের সাথে শব্দের বেগের পরিবর্তন হিসাব।",
+    "href": "/equations/speed-of-sound-temperature",
+    "tags": []
+  },
+  {
+    "slug": "spherical-mirror-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Spherical mirror equation",
+    "title_bn": "গোলীয় দর্পণের সমীকরণ",
+    "description_en": "Locate the image formed by a concave or convex mirror using focal length.",
+    "description_bn": "অবতল বা উত্তল দর্পণে লক্ষ্যবস্তু ও বিম্বের অবস্থান এবং ফোকাস দূরত্ব নির্ণয়।",
+    "href": "/equations/spherical-mirror-equation",
+    "tags": []
+  },
+  {
+    "slug": "surface-tension-force",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Surface tension force on a liquid film",
+    "title_bn": "পৃষ্ঠটানের সমীকরণ",
+    "description_en": "Quantify the contractile force acting along a liquid surface.",
+    "description_bn": "তরলের মুক্ত পৃষ্ঠে ক্রিয়াশীল সংকোচন বলের পরিমাণ নির্ণয়।",
+    "href": "/equations/surface-tension-force",
+    "tags": []
+  },
+  {
+    "slug": "thermal-expansion-coefficients",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Relation among linear, area and volume expansion coefficients",
+    "title_bn": "দৈর্ঘ্য, ক্ষেত্র ও আয়তন প্রসারণ সহগের সম্পর্ক",
+    "description_en": "Convert between linear, superficial and volumetric thermal expansion coefficients.",
+    "description_bn": "কঠিন পদার্থের দৈর্ঘ্য, ক্ষেত্র ও আয়তন প্রসারণ সহগের পারস্পরিক রূপান্তর।",
+    "href": "/equations/thermal-expansion-coefficients",
+    "tags": []
+  },
+  {
+    "slug": "third-equation-of-motion",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Third equation of motion (velocity–displacement)",
+    "title_bn": "গতির তৃতীয় সমীকরণ (বেগ-সরণ সম্পর্ক)",
+    "description_en": "Link initial and final velocities to displacement without needing elapsed time.",
+    "description_bn": "সময় জানা না থাকলেও আদি বেগ, শেষ বেগ ও ত্বরণ থেকে সরণ বা বেগ নির্ণয়।",
+    "href": "/equations/third-equation-of-motion",
+    "tags": []
+  },
+  {
+    "slug": "wave-period-frequency-relation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Period and frequency of a wave",
+    "title_bn": "পর্যায়কাল ও কম্পাঙ্কের সম্পর্ক",
+    "description_en": "Convert between oscillation period (seconds) and frequency (hertz).",
+    "description_bn": "পর্যায়কাল ও কম্পাঙ্কের মধ্যে রূপান্তর এবং তরঙ্গ বেগের সাথে এর সম্পর্ক।",
+    "href": "/equations/wave-period-frequency-relation",
     "tags": []
   },
   {
@@ -165,6 +660,204 @@
     "tags": []
   },
   {
+    "slug": "work-energy-theorem",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Work–energy theorem",
+    "title_bn": "কাজ-শক্তি উপপাদ্য",
+    "description_en": "Connect net work on a body directly to its change in kinetic energy.",
+    "description_bn": "বস্তুর ওপর লব্ধি কৃতকাজ ও গতিশক্তির পরিবর্তনের সরাসরি সম্পর্ক।",
+    "href": "/equations/work-energy-theorem",
+    "tags": []
+  },
+  {
+    "slug": "ac-rms-values",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "RMS values in AC circuits",
+    "title_bn": "পরিবর্তী প্রবাহের আরএমএস মান",
+    "description_en": "Convert peak AC values to the RMS values quoted by instruments.",
+    "description_bn": "পরিবর্তী প্রবাহের শীর্ষ মানকে যন্ত্রে প্রদর্শিত আরএমএস মানে রূপান্তর।",
+    "href": "/equations/ac-rms-values",
+    "tags": []
+  },
+  {
+    "slug": "adiabatic-relation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Adiabatic relation for an ideal gas",
+    "title_bn": "রুদ্ধতাপ প্রক্রিয়ার সমীকরণ",
+    "description_en": "Model rapid compression and expansion where no heat is exchanged.",
+    "description_bn": "তাপ বিনিময় না হওয়া দ্রুত সংকোচন বা প্রসারণের সম্পর্ক নির্ণয়।",
+    "href": "/equations/adiabatic-relation",
+    "tags": []
+  },
+  {
+    "slug": "ampere-circuital-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Ampère’s circuital law",
+    "title_bn": "অ্যাম্পিয়ারের পরিপথ সূত্র",
+    "description_en": "Find magnetic fields of highly symmetric current distributions.",
+    "description_bn": "প্রতিসম প্রবাহ বন্টনের চৌম্বক ক্ষেত্র সহজে নির্ণয়।",
+    "href": "/equations/ampere-circuital-law",
+    "tags": []
+  },
+  {
+    "slug": "angular-momentum-conservation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Conservation of angular momentum",
+    "title_bn": "কৌণিক ভরবেগের সংরক্ষণ সূত্র",
+    "description_en": "Explain why a spinning skater speeds up when pulling in their arms.",
+    "description_bn": "হাত গুটিয়ে নিলে ঘূর্ণায়মান স্কেটারের গতি কেন বাড়ে তা ব্যাখ্যা করুন।",
+    "href": "/equations/angular-momentum-conservation",
+    "tags": []
+  },
+  {
+    "slug": "angular-velocity-acceleration",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Angular velocity and angular acceleration",
+    "title_bn": "কৌণিক বেগ ও কৌণিক ত্বরণ",
+    "description_en": "Describe rotating bodies with angular position, velocity and acceleration.",
+    "description_bn": "ঘূর্ণায়মান বস্তুর কৌণিক অবস্থান, বেগ ও ত্বরণের মধ্যে সম্পর্ক স্থাপন।",
+    "href": "/equations/angular-velocity-acceleration",
+    "tags": []
+  },
+  {
+    "slug": "average-kinetic-energy-molecule",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Mean kinetic energy of a gas molecule",
+    "title_bn": "অণুর গড় গতিশক্তি ও তাপমাত্রা",
+    "description_en": "Identify absolute temperature with mean molecular kinetic energy.",
+    "description_bn": "পরম তাপমাত্রাকে অণুগুলোর গড় গতিশক্তির মাধ্যমে ব্যাখ্যা করুন।",
+    "href": "/equations/average-kinetic-energy-molecule",
+    "tags": []
+  },
+  {
+    "slug": "banking-angle-road",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Banking angle of a curved road",
+    "title_bn": "রাস্তার বাঁকের হেলানো কোণ",
+    "description_en": "Choose the road banking angle that lets vehicles corner without relying on friction.",
+    "description_bn": "ঘর্ষণের ওপর নির্ভর না করে নিরাপদে বাঁক নেওয়ার জন্য রাস্তার হেলানো কোণ নির্ণয়।",
+    "href": "/equations/banking-angle-road",
+    "tags": []
+  },
+  {
+    "slug": "beats-frequency",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Beat frequency of two superposed waves",
+    "title_bn": "বিস্পন্দনের কম্পাঙ্ক",
+    "description_en": "Use beats to tune instruments by matching two close frequencies.",
+    "description_bn": "দুটি নিকটবর্তী কম্পাঙ্কের বিস্পন্দন ব্যবহার করে বাদ্যযন্ত্র সুর মেলানো।",
+    "href": "/equations/beats-frequency",
+    "tags": []
+  },
+  {
+    "slug": "bernoulli-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Bernoulli’s equation for ideal fluid flow",
+    "title_bn": "বার্নোলির সমীকরণ",
+    "description_en": "Trade pressure against speed and height along a streamline.",
+    "description_bn": "প্রবাহরেখা বরাবর চাপ, বেগ ও উচ্চতার পারস্পরিক বিনিময় নির্ণয়।",
+    "href": "/equations/bernoulli-equation",
+    "tags": []
+  },
+  {
+    "slug": "biot-savart-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Biot–Savart law for magnetic field",
+    "title_bn": "বিও-সাভার সূত্র",
+    "description_en": "Compute the magnetic field produced by any current-carrying wire.",
+    "description_bn": "যেকোনো প্রবাহবাহী তারের চারপাশে সৃষ্ট চৌম্বক ক্ষেত্র নির্ণয়।",
+    "href": "/equations/biot-savart-law",
+    "tags": []
+  },
+  {
+    "slug": "bulk-modulus",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Bulk modulus of a fluid or solid",
+    "title_bn": "আয়তন গুণাঙ্ক",
+    "description_en": "Measure a material’s resistance to uniform compression.",
+    "description_bn": "সর্বদিকে সমান চাপে বস্তুর আয়তন কমার প্রতিরোধ ক্ষমতা নির্ণয়।",
+    "href": "/equations/bulk-modulus",
+    "tags": []
+  },
+  {
+    "slug": "capacitance-parallel-plate",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Capacitance of a parallel-plate capacitor",
+    "title_bn": "সমান্তরাল পাত ধারকের ধারকত্ব",
+    "description_en": "Design a capacitor from plate area, spacing and dielectric material.",
+    "description_bn": "পাতের ক্ষেত্রফল, দূরত্ব ও পরাবৈদ্যুতিক মাধ্যম থেকে ধারকত্ব নির্ণয়।",
+    "href": "/equations/capacitance-parallel-plate",
+    "tags": []
+  },
+  {
+    "slug": "capacitor-energy",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Energy stored in a charged capacitor",
+    "title_bn": "ধারকে সঞ্চিত শক্তি",
+    "description_en": "Find the energy held by a charged capacitor at a given voltage.",
+    "description_bn": "নির্দিষ্ট ভোল্টেজে আহিত ধারকে সঞ্চিত শক্তির পরিমাণ নির্ণয়।",
+    "href": "/equations/capacitor-energy",
+    "tags": []
+  },
+  {
+    "slug": "capacitors-series-parallel",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Capacitors in series and parallel",
+    "title_bn": "ধারকের শ্রেণি ও সমান্তরাল সমবায়",
+    "description_en": "Combine capacitors into an equivalent single capacitance.",
+    "description_bn": "একাধিক ধারকের শ্রেণি বা সমান্তরাল সমবায়ের তুল্য ধারকত্ব নির্ণয়।",
+    "href": "/equations/capacitors-series-parallel",
+    "tags": []
+  },
+  {
+    "slug": "carnot-engine-efficiency",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Carnot engine efficiency",
+    "title_bn": "কার্নো ইঞ্জিনের কর্মদক্ষতা",
+    "description_en": "Find the theoretical upper limit on any heat engine’s efficiency.",
+    "description_bn": "যেকোনো তাপ ইঞ্জিনের তাত্ত্বিক সর্বোচ্চ কর্মদক্ষতা নির্ণয়।",
+    "href": "/equations/carnot-engine-efficiency",
+    "tags": []
+  },
+  {
+    "slug": "centripetal-acceleration",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Centripetal acceleration in uniform circular motion",
+    "title_bn": "কেন্দ্রমুখী ত্বরণের সমীকরণ",
+    "description_en": "Quantify the inward acceleration required to keep a body on a circular path.",
+    "description_bn": "বৃত্তাকার পথে বস্তুকে ধরে রাখতে প্রয়োজনীয় কেন্দ্রমুখী ত্বরণ নির্ণয়।",
+    "href": "/equations/centripetal-acceleration",
+    "tags": []
+  },
+  {
+    "slug": "centripetal-force",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Centripetal force required for circular motion",
+    "title_bn": "কেন্দ্রমুখী বল",
+    "description_en": "Calculate the inward force keeping a mass on a circular track or orbit.",
+    "description_bn": "বাঁকা পথে বা কক্ষপথে বস্তুকে ধরে রাখতে প্রয়োজনীয় কেন্দ্রমুখী বল নির্ণয়।",
+    "href": "/equations/centripetal-force",
+    "tags": []
+  },
+  {
     "slug": "circular-motion-formula-sheet",
     "kind": "equation",
     "subject": "physics",
@@ -173,6 +866,28 @@
     "description_en": "Relate angular speed, period, tangential speed and centripetal acceleration/force.",
     "description_bn": "কৌণিক বেগ, পর্যায়কাল, স্পর্শকীয় দ্রুতি ও কেন্দ্রমুখী ত্বরণ/বলের সম্পর্ক।",
     "href": "/equations/circular-motion-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "compressibility-fluid",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Compressibility of a fluid",
+    "title_bn": "সংকোচনশীলতা",
+    "description_en": "Quantify how much a fluid volume shrinks under pressure.",
+    "description_bn": "চাপ প্রয়োগে প্রবাহীর আয়তন কতটা কমে তা নির্ণয়।",
+    "href": "/equations/compressibility-fluid",
+    "tags": []
+  },
+  {
+    "slug": "coulombs-law-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Coulomb’s law of electrostatic force",
+    "title_bn": "কুলম্বের সূত্র",
+    "description_en": "Find the force between any two stationary point charges.",
+    "description_bn": "দুটি স্থির বিন্দু আধানের মধ্যকার স্থির তড়িৎ বল নির্ণয়।",
+    "href": "/equations/coulombs-law-equation",
     "tags": []
   },
   {
@@ -187,6 +902,61 @@
     "tags": []
   },
   {
+    "slug": "cyclotron-frequency",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Cyclotron frequency of a charged particle",
+    "title_bn": "সাইক্লোট্রন কম্পাঙ্ক",
+    "description_en": "Find the orbit size and revolution rate of ions in a cyclotron.",
+    "description_bn": "সাইক্লোট্রনে আয়নের কক্ষীয় ব্যাসার্ধ ও আবর্তন হার নির্ণয়।",
+    "href": "/equations/cyclotron-frequency",
+    "tags": []
+  },
+  {
+    "slug": "de-broglie-wavelength",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "de Broglie wavelength of matter waves",
+    "title_bn": "ডি-ব্রগলি তরঙ্গদৈর্ঘ্য",
+    "description_en": "Show that fast electrons diffract like waves in an electron microscope.",
+    "description_bn": "ইলেকট্রন মাইক্রোস্কোপে দ্রুত ইলেকট্রনের তরঙ্গধর্মী অপবর্তন ব্যাখ্যা করুন।",
+    "href": "/equations/de-broglie-wavelength",
+    "tags": []
+  },
+  {
+    "slug": "diffraction-grating-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Diffraction grating equation",
+    "title_bn": "অপবর্তন গ্রেটিং-এর সমীকরণ",
+    "description_en": "Determine wavelengths from spectra produced by a grating.",
+    "description_bn": "গ্রেটিং দ্বারা সৃষ্ট বর্ণালী থেকে আলোর তরঙ্গদৈর্ঘ্য নির্ণয়।",
+    "href": "/equations/diffraction-grating-equation",
+    "tags": []
+  },
+  {
+    "slug": "doppler-effect",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Doppler effect for sound",
+    "title_bn": "ডপলার ক্রিয়ার সমীকরণ",
+    "description_en": "Explain the pitch change of a passing siren or racing car.",
+    "description_bn": "চলমান শব্দ উৎসের কম্পাঙ্ক পরিবর্তন (যেমন সাইরেনের স্বর) ব্যাখ্যা করুন।",
+    "href": "/equations/doppler-effect",
+    "tags": []
+  },
+  {
+    "slug": "drift-velocity",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Drift velocity of charge carriers",
+    "title_bn": "জোয়ার বেগ",
+    "description_en": "Find how fast electrons creep through a conductor carrying current I.",
+    "description_bn": "প্রবাহ বহনকারী পরিবাহীতে ইলেকট্রনের গড় গতিবেগ নির্ণয়।",
+    "href": "/equations/drift-velocity",
+    "tags": []
+  },
+  {
     "slug": "elasticity-formula-sheet",
     "kind": "equation",
     "subject": "physics",
@@ -195,6 +965,28 @@
     "description_en": "Definitions of stress and strain, Young’s modulus, and the spring form of Hooke’s law.",
     "description_bn": "পীড়ন ও বিকৃতির সংজ্ঞা, ইয়ং গুণাঙ্ক এবং স্প্রিংয়ের হুকের সূত্র।",
     "href": "/equations/elasticity-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "electric-field-intensity",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Electric field intensity of a point charge",
+    "title_bn": "তড়িৎ ক্ষেত্রের প্রাবল্য",
+    "description_en": "Find the electric field created by a charge distribution at a point.",
+    "description_bn": "কোনো বিন্দুতে আধান দ্বারা সৃষ্ট তড়িৎ ক্ষেত্রের প্রাবল্য নির্ণয়।",
+    "href": "/equations/electric-field-intensity",
+    "tags": []
+  },
+  {
+    "slug": "electric-potential-difference-work",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Electric potential difference and work",
+    "title_bn": "বিভব পার্থক্য ও কৃতকাজ",
+    "description_en": "Compute voltage between two points from the electric field or work done.",
+    "description_bn": "তড়িৎ ক্ষেত্র বা কৃতকাজ থেকে দুই বিন্দুর মধ্যে বিভব পার্থক্য নির্ণয়।",
+    "href": "/equations/electric-potential-difference-work",
     "tags": []
   },
   {
@@ -220,6 +1012,50 @@
     "tags": []
   },
   {
+    "slug": "equation-of-continuity",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Equation of continuity for fluid flow",
+    "title_bn": "প্রবাহের ধারাবাহিকতা সমীকরণ",
+    "description_en": "Predict how fluid speed changes when a pipe narrows or widens.",
+    "description_bn": "নল সরু বা চওড়া হলে প্রবাহীর বেগ কীভাবে বদলায় তা নির্ণয়।",
+    "href": "/equations/equation-of-continuity",
+    "tags": []
+  },
+  {
+    "slug": "escape-velocity",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Escape velocity from a planet",
+    "title_bn": "মুক্তি বেগ",
+    "description_en": "Find the minimum launch speed needed to leave a planet’s gravity permanently.",
+    "description_bn": "কোনো গ্রহের মহাকর্ষ অতিক্রম করতে প্রয়োজনীয় ন্যূনতম বেগ নির্ণয়।",
+    "href": "/equations/escape-velocity",
+    "tags": []
+  },
+  {
+    "slug": "excess-pressure-soap-bubble",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Excess pressure inside a soap bubble",
+    "title_bn": "সাবানের বুদবুদের অতিরিক্ত চাপ",
+    "description_en": "Find why small bubbles and droplets hold higher internal pressure.",
+    "description_bn": "ছোট বুদবুদ বা ফোঁটার অভ্যন্তরে চাপ বেশি কেন হয় তা নির্ণয়।",
+    "href": "/equations/excess-pressure-soap-bubble",
+    "tags": []
+  },
+  {
+    "slug": "first-law-thermodynamics",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "First law of thermodynamics",
+    "title_bn": "তাপগতিবিদ্যার প্রথম সূত্র",
+    "description_en": "Track energy flow between heat, internal energy and mechanical work.",
+    "description_bn": "তাপ, অভ্যন্তরীণ শক্তি ও যান্ত্রিক কাজের মধ্যে শক্তির প্রবাহ বিশ্লেষণ।",
+    "href": "/equations/first-law-thermodynamics",
+    "tags": []
+  },
+  {
     "slug": "fluid-mechanics-formula-sheet",
     "kind": "equation",
     "subject": "physics",
@@ -228,6 +1064,50 @@
     "description_en": "Hydrostatic pressure, buoyancy, continuity, Bernoulli’s principle and Stokes drag.",
     "description_bn": "স্থির তরলের চাপ, প্লবতা, ধারাবাহিকতা, বার্নুলির নীতি ও স্টোকসের বাধা।",
     "href": "/equations/fluid-mechanics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "force-between-parallel-conductors",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Force per unit length between parallel currents",
+    "title_bn": "সমান্তরাল প্রবাহবাহী পরিবাহীর মধ্যকার বল",
+    "description_en": "Understand the definition of the ampere and forces in busbars.",
+    "description_bn": "অ্যাম্পিয়ার এককের সংজ্ঞা ও বাসবারে ক্রিয়াশীল বল বোঝা।",
+    "href": "/equations/force-between-parallel-conductors",
+    "tags": []
+  },
+  {
+    "slug": "force-current-carrying-conductor",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Force on a current-carrying conductor in a magnetic field",
+    "title_bn": "প্রবাহবাহী পরিবাহীর ওপর চৌম্বক বল",
+    "description_en": "Calculate the force that drives electric motors and moving-coil meters.",
+    "description_bn": "বৈদ্যুতিক মোটর ও চল-কুণ্ডলী যন্ত্রের মূলনীতি চৌম্বক বল নির্ণয়।",
+    "href": "/equations/force-current-carrying-conductor",
+    "tags": []
+  },
+  {
+    "slug": "fundamental-frequency-string",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Fundamental frequency of a stretched string",
+    "title_bn": "বদ্ধ তারের মৌলিক কম্পাঙ্ক",
+    "description_en": "Find the note produced by a vibrating string of given length and tension.",
+    "description_bn": "নির্দিষ্ট দৈর্ঘ্য ও টানযুক্ত তার থেকে উৎপন্ন স্বরের কম্পাঙ্ক নির্ণয়।",
+    "href": "/equations/fundamental-frequency-string",
+    "tags": []
+  },
+  {
+    "slug": "gauss-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Gauss’s law for electric flux",
+    "title_bn": "গাউসের সূত্র",
+    "description_en": "Relate the flux through a closed surface to the charge it encloses.",
+    "description_bn": "বদ্ধ তলের মধ্য দিয়ে তড়িৎ ফ্লাক্স ও এর অভ্যন্তরস্থ আধানের সম্পর্ক স্থাপন।",
+    "href": "/equations/gauss-law",
     "tags": []
   },
   {
@@ -242,6 +1122,50 @@
     "tags": []
   },
   {
+    "slug": "gravitational-field-strength",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Gravitational field strength of a point mass",
+    "title_bn": "মহাকর্ষ ক্ষেত্রের প্রাবল্য",
+    "description_en": "Find the gravitational acceleration produced by a planet or star at distance r.",
+    "description_bn": "কোনো গ্রহ বা তারা থেকে r দূরত্বে সৃষ্ট মহাকর্ষীয় ত্বরণ নির্ণয়।",
+    "href": "/equations/gravitational-field-strength",
+    "tags": []
+  },
+  {
+    "slug": "gravitational-potential-energy-general",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "General gravitational potential energy",
+    "title_bn": "সাধারণ মহাকর্ষীয় বিভবশক্তি",
+    "description_en": "Compute the binding energy of a satellite or planet in a gravitational field.",
+    "description_bn": "মহাকর্ষীয় ক্ষেত্রে উপগ্রহ বা গ্রহের বন্ধন শক্তি নির্ণয়।",
+    "href": "/equations/gravitational-potential-energy-general",
+    "tags": []
+  },
+  {
+    "slug": "half-life-radioactivity",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Half-life of a radioactive isotope",
+    "title_bn": "তেজস্ক্রিয় পদার্থের অর্ধায়ু",
+    "description_en": "Convert between decay constant, half-life and mean lifetime.",
+    "description_bn": "ক্ষয় ধ্রুবক, অর্ধায়ু ও গড় আয়ুর মধ্যে রূপান্তর।",
+    "href": "/equations/half-life-radioactivity",
+    "tags": []
+  },
+  {
+    "slug": "heat-engine-efficiency",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Thermal efficiency of a heat engine",
+    "title_bn": "তাপ ইঞ্জিনের কর্মদক্ষতা",
+    "description_en": "Measure how much absorbed heat a heat engine converts into work.",
+    "description_bn": "তাপ ইঞ্জিন গৃহীত তাপের কত অংশ কাজে রূপান্তর করে তা নির্ণয়।",
+    "href": "/equations/heat-engine-efficiency",
+    "tags": []
+  },
+  {
     "slug": "heat-thermodynamics-formula-sheet",
     "kind": "equation",
     "subject": "physics",
@@ -250,6 +1174,83 @@
     "description_en": "Specific heat, latent heat, expansion, gas laws, kinetic theory, first law, Carnot efficiency and conduction.",
     "description_bn": "আপেক্ষিক তাপ, সুপ্ততাপ, প্রসারণ, গ্যাস সূত্র, গতিতত্ত্ব, প্রথম সূত্র, কার্নো দক্ষতা ও তাপ পরিবহন।",
     "href": "/equations/heat-thermodynamics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "impedance-lcr-series",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Impedance of a series LCR circuit",
+    "title_bn": "সিরিজ এলসিআর বর্তনীর প্রতিবন্ধকতা",
+    "description_en": "Analyse how resistors, inductors and capacitors oppose AC together.",
+    "description_bn": "রোধ, আবেশক ও ধারক একসাথে পরিবর্তী প্রবাহের বিরুদ্ধে কীভাবে বাধা দেয় তা বিশ্লেষণ।",
+    "href": "/equations/impedance-lcr-series",
+    "tags": []
+  },
+  {
+    "slug": "isothermal-work",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Work done in an isothermal gas process",
+    "title_bn": "সমোষ্ণ প্রক্রিয়ায় কৃতকাজ",
+    "description_en": "Calculate work for a slow, constant-temperature expansion or compression.",
+    "description_bn": "ধীর ও ধ্রুব তাপমাত্রায় গ্যাসের প্রসারণ বা সংকোচনে কৃতকাজ নির্ণয়।",
+    "href": "/equations/isothermal-work",
+    "tags": []
+  },
+  {
+    "slug": "keplers-third-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Kepler’s third law of planetary motion",
+    "title_bn": "কেপলারের তৃতীয় সূত্র",
+    "description_en": "Compare the periods of planets, moons or satellites from their orbital radii.",
+    "description_bn": "গ্রহ, উপগ্রহ বা কৃত্রিম স্যাটেলাইটের কক্ষীয় ব্যাসার্ধ থেকে আবর্তনকাল নির্ণয়।",
+    "href": "/equations/keplers-third-law",
+    "tags": []
+  },
+  {
+    "slug": "kinetic-theory-pressure",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Kinetic theory expression for gas pressure",
+    "title_bn": "গতীয় তত্ত্বে গ্যাসের চাপ",
+    "description_en": "Derive gas pressure from the momentum transfer of moving molecules.",
+    "description_bn": "অণুগুলোর ভরবেগ স্থানান্তর থেকে গ্যাসের চাপের উৎপত্তি নির্ণয়।",
+    "href": "/equations/kinetic-theory-pressure",
+    "tags": []
+  },
+  {
+    "slug": "kinetic-viscosity",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Kinematic viscosity of a fluid",
+    "title_bn": "গতীয় সান্দ্রতা",
+    "description_en": "Convert dynamic viscosity to the density-independent kinematic form.",
+    "description_bn": "গতীয় সান্দ্রতাকে ঘনত্বমুক্ত গতীয় সান্দ্রতায় রূপান্তর।",
+    "href": "/equations/kinetic-viscosity",
+    "tags": []
+  },
+  {
+    "slug": "lc-oscillation-frequency",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Natural frequency of an LC oscillator",
+    "title_bn": "এলসি বর্তনীর দোলন কম্পাঙ্ক",
+    "description_en": "Find the natural oscillation rate of an ideal LC tank circuit.",
+    "description_bn": "আদর্শ এলসি ট্যাঙ্ক বর্তনীর স্বাভাবিক দোলন কম্পাঙ্ক নির্ণয়।",
+    "href": "/equations/lc-oscillation-frequency",
+    "tags": []
+  },
+  {
+    "slug": "lens-makers-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Lens maker’s formula",
+    "title_bn": "লেন্স প্রস্তুতকারীর সূত্র",
+    "description_en": "Predict the focal length of a lens from its shape and glass index.",
+    "description_bn": "লেন্সের আকৃতি ও কাঁচের প্রতিসরণাঙ্ক থেকে ফোকাস দূরত্ব নির্ণয়।",
+    "href": "/equations/lens-makers-equation",
     "tags": []
   },
   {
@@ -264,6 +1265,17 @@
     "tags": []
   },
   {
+    "slug": "lorentz-force",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Lorentz force on a moving charge",
+    "title_bn": "লরেন্টজ বল",
+    "description_en": "Predict the trajectory of charged particles in electric and magnetic fields.",
+    "description_bn": "তড়িৎ ও চৌম্বক ক্ষেত্রে আহিত কণার গতিপথ নির্ণয়।",
+    "href": "/equations/lorentz-force",
+    "tags": []
+  },
+  {
     "slug": "magnetism-emi-ac-formula-sheet",
     "kind": "equation",
     "subject": "physics",
@@ -275,6 +1287,39 @@
     "tags": []
   },
   {
+    "slug": "malus-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Malus’s law for polarised light",
+    "title_bn": "ম্যালাসের সূত্র",
+    "description_en": "Predict brightness through crossed polarisers and analysers.",
+    "description_bn": "ক্রস পোলারাইজারের মধ্য দিয়ে আলোর তীব্রতা হ্রাস নির্ণয়।",
+    "href": "/equations/malus-law",
+    "tags": []
+  },
+  {
+    "slug": "mass-defect-binding-energy",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Mass defect and nuclear binding energy",
+    "title_bn": "ভর ত্রুটি ও নিউক্লিয় বন্ধন শক্তি",
+    "description_en": "Compute nuclear binding energy from the mass defect of a nuclide.",
+    "description_bn": "ভর ত্রুটি থেকে নিউক্লিয় বন্ধন শক্তি ও প্রতি নিউক্লিয়নে বন্ধন শক্তি নির্ণয়।",
+    "href": "/equations/mass-defect-binding-energy",
+    "tags": []
+  },
+  {
+    "slug": "mass-energy-equivalence",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Mass–energy equivalence",
+    "title_bn": "ভর-শক্তি সমতুল্যতা",
+    "description_en": "Convert between mass defect and the energy released in nuclear reactions.",
+    "description_bn": "ভর ত্রুটি থেকে নিউক্লিয় বিক্রিয়ায় নির্গত শক্তি নির্ণয়।",
+    "href": "/equations/mass-energy-equivalence",
+    "tags": []
+  },
+  {
     "slug": "modern-physics-formula-sheet",
     "kind": "equation",
     "subject": "physics",
@@ -283,6 +1328,127 @@
     "description_en": "Photons, photoelectric effect, matter waves, Bohr energy, mass–energy, radioactive decay and special relativity.",
     "description_bn": "ফোটন, আলোকতড়িৎ ক্রিয়া, পদার্থ তরঙ্গ, বোর শক্তিস্তর, ভর-শক্তি, তেজস্ক্রিয় ক্ষয় ও বিশেষ আপেক্ষিকতা।",
     "href": "/equations/modern-physics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "moment-of-inertia-point-mass",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Moment of inertia of a point mass",
+    "title_bn": "বিন্দু ভরের জড়তার ভ্রামক",
+    "description_en": "Compute the rotational inertia of simple bodies about a chosen axis.",
+    "description_bn": "নির্দিষ্ট অক্ষের সাপেক্ষে বস্তুর জড়তার ভ্রামক নির্ণয়।",
+    "href": "/equations/moment-of-inertia-point-mass",
+    "tags": []
+  },
+  {
+    "slug": "motional-emf",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Motional emf of a moving conductor",
+    "title_bn": "গতিজ আবেশ তড়িৎচালক বল",
+    "description_en": "Calculate the voltage generated by a conductor cutting magnetic field lines.",
+    "description_bn": "চৌম্বক বলরেখা কাটিয়ে চলমান পরিবাহীতে উৎপন্ন বিভব নির্ণয়।",
+    "href": "/equations/motional-emf",
+    "tags": []
+  },
+  {
+    "slug": "newtons-law-of-cooling",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Newton’s law of cooling",
+    "title_bn": "নিউটনের শীতলীকরণ সূত্র",
+    "description_en": "Model how a hot object cools toward room temperature.",
+    "description_bn": "উত্তপ্ত বস্তু কীভাবে পরিবেশের তাপমাত্রার দিকে ধীরে ধীরে ঠান্ডা হয় তা হিসাব।",
+    "href": "/equations/newtons-law-of-cooling",
+    "tags": []
+  },
+  {
+    "slug": "newtons-law-of-gravitation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Newton’s universal law of gravitation",
+    "title_bn": "নিউটনের মহাকর্ষ সূত্র",
+    "description_en": "Compute the mutual attractive force between any two masses.",
+    "description_bn": "মহাবিশ্বের যেকোনো দুটি ভরের মধ্যকার মহাকর্ষীয় আকর্ষণ বল নির্ণয়।",
+    "href": "/equations/newtons-law-of-gravitation",
+    "tags": []
+  },
+  {
+    "slug": "newtons-law-of-viscosity",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Newton’s law of viscous flow",
+    "title_bn": "সান্দ্রতার নিউটনের সূত্র",
+    "description_en": "Compute internal friction between layers of a flowing fluid.",
+    "description_bn": "প্রবাহমান তরলের স্তরগুলোর মধ্যকার অভ্যন্তরীণ ঘর্ষণ বল নির্ণয়।",
+    "href": "/equations/newtons-law-of-viscosity",
+    "tags": []
+  },
+  {
+    "slug": "orbital-velocity-satellite",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Orbital velocity of a satellite",
+    "title_bn": "উপগ্রহের কক্ষীয় বেগ",
+    "description_en": "Calculate the speed a satellite needs to stay in a circular orbit.",
+    "description_bn": "নির্দিষ্ট উচ্চতায় বৃত্তাকার কক্ষপথে থাকতে উপগ্রহের প্রয়োজনীয় বেগ নির্ণয়।",
+    "href": "/equations/orbital-velocity-satellite",
+    "tags": []
+  },
+  {
+    "slug": "parallel-axis-theorem",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Parallel-axis theorem for moment of inertia",
+    "title_bn": "সমান্তরাল অক্ষ উপপাদ্য",
+    "description_en": "Shift a known centre-of-mass moment of inertia to any parallel axis.",
+    "description_bn": "ভরকেন্দ্রীয় অক্ষের জড়তার ভ্রামক থেকে যেকোনো সমান্তরাল অক্ষের মান নির্ণয়।",
+    "href": "/equations/parallel-axis-theorem",
+    "tags": []
+  },
+  {
+    "slug": "photoelectric-effect-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Photoelectric effect equation",
+    "title_bn": "আলোক-তড়িৎ ক্রিয়ার সমীকরণ",
+    "description_en": "Explain emission thresholds and stopping potential in photoemission.",
+    "description_bn": "আলোক-তড়িৎ নিঃসরণে সীমা কম্পাঙ্ক ও নিবৃত্তি বিভব ব্যাখ্যা করুন।",
+    "href": "/equations/photoelectric-effect-equation",
+    "tags": []
+  },
+  {
+    "slug": "poiseuilles-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Poiseuille’s equation for laminar tube flow",
+    "title_bn": "পয়জুলির সমীকরণ",
+    "description_en": "Relate flow rate through a capillary to pressure drop, radius and viscosity.",
+    "description_bn": "সরু নলে প্রবাহ হারের ওপর চাপ, ব্যাসার্ধ ও সান্দ্রতার প্রভাব নির্ণয়।",
+    "href": "/equations/poiseuilles-equation",
+    "tags": []
+  },
+  {
+    "slug": "prism-minimum-deviation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Minimum deviation through a prism",
+    "title_bn": "প্রিজমের ন্যূনতম বিচ্যুতি",
+    "description_en": "Measure the refractive index of glass from prism geometry.",
+    "description_bn": "প্রিজমের জ্যামিতি ব্যবহার করে কাঁচের প্রতিসরণাঙ্ক পরিমাপ।",
+    "href": "/equations/prism-minimum-deviation",
+    "tags": []
+  },
+  {
+    "slug": "progressive-wave-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Progressive sinusoidal wave equation",
+    "title_bn": "অগ্রগামী তরঙ্গের সমীকরণ",
+    "description_en": "Write and interpret the travelling-wave expression for any wave.",
+    "description_bn": "যেকোনো অগ্রগামী তরঙ্গের গাণিতিক রূপ ও এর তাৎপর্য বিশ্লেষণ।",
+    "href": "/equations/progressive-wave-equation",
     "tags": []
   },
   {
@@ -308,6 +1474,149 @@
     "tags": []
   },
   {
+    "slug": "radioactive-decay-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Radioactive decay law",
+    "title_bn": "তেজস্ক্রিয় ক্ষয়ের সূত্র",
+    "description_en": "Predict how much of a radioactive sample remains after time t.",
+    "description_bn": "নির্দিষ্ট সময় পরে তেজস্ক্রিয় নমুনার কত অংশ অবশিষ্ট থাকবে তা নির্ণয়।",
+    "href": "/equations/radioactive-decay-law",
+    "tags": []
+  },
+  {
+    "slug": "resistivity-temperature-coefficient",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Temperature dependence of resistance",
+    "title_bn": "তাপমাত্রার সাথে রোধের পরিবর্তন",
+    "description_en": "Correct resistance readings for temperature changes in metals.",
+    "description_bn": "ধাতুর রোধের ওপর তাপমাত্রার প্রভাব ও সংশোধন নির্ণয়।",
+    "href": "/equations/resistivity-temperature-coefficient",
+    "tags": []
+  },
+  {
+    "slug": "resolving-power-rayleigh",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Rayleigh criterion for optical resolution",
+    "title_bn": "রেলির বিভেদন ক্ষমতার মানদণ্ড",
+    "description_en": "Explain why larger telescopes and microscopes resolve finer detail.",
+    "description_bn": "বড় টেলিস্কোপ ও মাইক্রোস্কোপ কেন সূক্ষ্ম বিবরণ দেখাতে পারে তা ব্যাখ্যা করুন।",
+    "href": "/equations/resolving-power-rayleigh",
+    "tags": []
+  },
+  {
+    "slug": "resonance-frequency-lcr",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Resonant frequency of a series LCR circuit",
+    "title_bn": "এলসিআর বর্তনীর অনুনাদী কম্পাঙ্ক",
+    "description_en": "Tune a radio receiver or filter to a chosen frequency.",
+    "description_bn": "রেডিও রিসিভার বা ফিল্টারকে নির্দিষ্ট কম্পাঙ্কে সুরমেল করা।",
+    "href": "/equations/resonance-frequency-lcr",
+    "tags": []
+  },
+  {
+    "slug": "reynolds-number",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Reynolds number for flow regime",
+    "title_bn": "রেইনোল্ডস সংখ্যা",
+    "description_en": "Decide whether flow through a pipe is laminar, transitional or turbulent.",
+    "description_bn": "পাইপের প্রবাহ ধারারেখীয়, পরিবর্তনশীল না অশান্ত তা নির্ণয়।",
+    "href": "/equations/reynolds-number",
+    "tags": []
+  },
+  {
+    "slug": "rms-speed-gas",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Root-mean-square speed of gas molecules",
+    "title_bn": "অণুর রুট-মিন-স্কয়ার বেগ",
+    "description_en": "Estimate typical molecular speeds at a given temperature.",
+    "description_bn": "নির্দিষ্ট তাপমাত্রায় গ্যাসীয় অণুগুলোর গড় বেগ নির্ণয়।",
+    "href": "/equations/rms-speed-gas",
+    "tags": []
+  },
+  {
+    "slug": "rolling-without-slipping",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Rolling without slipping condition",
+    "title_bn": "পিছলে না গিয়ে গড়ানোর শর্ত",
+    "description_en": "Link the translation and rotation of a wheel, disc or sphere that rolls cleanly.",
+    "description_bn": "পিছলে না গিয়ে গড়ানো চাকা বা গোলকের রৈখিক ও কৌণিক গতির সম্পর্ক নির্ণয়।",
+    "href": "/equations/rolling-without-slipping",
+    "tags": []
+  },
+  {
+    "slug": "rotational-kinetic-energy",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Rotational kinetic energy of a rigid body",
+    "title_bn": "ঘূর্ণন গতিশক্তি",
+    "description_en": "Find the energy of a spinning flywheel or rolling body.",
+    "description_bn": "ঘূর্ণায়মান ফ্লাইহুইল বা গড়িয়ে যাওয়া বস্তুর ঘূর্ণন শক্তি নির্ণয়।",
+    "href": "/equations/rotational-kinetic-energy",
+    "tags": []
+  },
+  {
+    "slug": "self-inductance-energy",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Self-inductance and energy stored in an inductor",
+    "title_bn": "স্ব-আবেশ ও ইন্ডাক্টরে সঞ্চিত শক্তি",
+    "description_en": "Find induced back emf and magnetic energy in a coil or solenoid.",
+    "description_bn": "কুণ্ডলী বা সলিনয়েডে বিপরীত emf ও সঞ্চিত চৌম্বক শক্তি নির্ণয়।",
+    "href": "/equations/self-inductance-energy",
+    "tags": []
+  },
+  {
+    "slug": "shear-modulus",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Shear modulus (modulus of rigidity)",
+    "title_bn": "দৃঢ়তার গুণাঙ্ক",
+    "description_en": "Quantify a solid’s resistance to shape-changing shear stress.",
+    "description_bn": "আকৃতি পরিবর্তনকারী কর্তন পীড়নের বিরুদ্ধে কঠিন পদার্থের প্রতিরোধ পরিমাপ।",
+    "href": "/equations/shear-modulus",
+    "tags": []
+  },
+  {
+    "slug": "shm-acceleration-displacement",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "SHM acceleration–displacement relation",
+    "title_bn": "সরল ছন্দিত গতিতে ত্বরণ ও সরণ",
+    "description_en": "Recognise simple harmonic motion from its defining force law.",
+    "description_bn": "প্রত্যয়নী বল ও সরণের সম্পর্ক থেকে সরল ছন্দিত গতি শনাক্তকরণ।",
+    "href": "/equations/shm-acceleration-displacement",
+    "tags": []
+  },
+  {
+    "slug": "shm-angular-frequency",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Angular frequency of a simple harmonic oscillator",
+    "title_bn": "সরল ছন্দিত গতির কৌণিক কম্পাঙ্ক",
+    "description_en": "Find oscillation frequency from stiffness and mass of the system.",
+    "description_bn": "দোলকের স্প্রিং ধ্রুবক ও ভর থেকে কম্পাঙ্ক ও পর্যায়কাল নির্ণয়।",
+    "href": "/equations/shm-angular-frequency",
+    "tags": []
+  },
+  {
+    "slug": "shm-velocity-displacement",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "SHM speed as a function of displacement",
+    "title_bn": "সরল ছন্দিত গতিতে বেগ ও সরণ",
+    "description_en": "Find oscillator speed at any position along its path.",
+    "description_bn": "দোলকের পথের যেকোনো স্থানে তার বেগ ও সর্বোচ্চ বেগ নির্ণয়।",
+    "href": "/equations/shm-velocity-displacement",
+    "tags": []
+  },
+  {
     "slug": "shm-waves-formula-sheet",
     "kind": "equation",
     "subject": "physics",
@@ -330,6 +1639,281 @@
     "tags": []
   },
   {
+    "slug": "simple-pendulum-period",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Time period of a simple pendulum",
+    "title_bn": "সরল দোলকের পর্যায়কাল",
+    "description_en": "Determine the swing period of a pendulum from its length and local g.",
+    "description_bn": "দোলকের দৈর্ঘ্য ও স্থানীয় অভিকর্ষজ ত্বরণ থেকে দোলনকাল নির্ণয়।",
+    "href": "/equations/simple-pendulum-period",
+    "tags": []
+  },
+  {
+    "slug": "sound-intensity-level-decibel",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Sound intensity level in decibels",
+    "title_bn": "শব্দের তীব্রতা ও ডেসিবেল স্কেল",
+    "description_en": "Convert sound intensity in W/m² to the decibel scale used in acoustics.",
+    "description_bn": "W/m² এককের শব্দ তীব্রতাকে ব্যবহারিক ডেসিবেল স্কেলে রূপান্তর।",
+    "href": "/equations/sound-intensity-level-decibel",
+    "tags": []
+  },
+  {
+    "slug": "stefan-boltzmann-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Stefan–Boltzmann law of radiation",
+    "title_bn": "স্টেফান-বোলটজমান সূত্র",
+    "description_en": "Compute radiative heat loss from a hot body at temperature T.",
+    "description_bn": "উত্তপ্ত বস্তু থেকে বিকিরণের মাধ্যমে তাপ বিনিময়ের হার নির্ণয়।",
+    "href": "/equations/stefan-boltzmann-law",
+    "tags": []
+  },
+  {
+    "slug": "stokes-law-terminal-velocity",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Stokes’ law and terminal velocity",
+    "title_bn": "স্টোকসের সূত্র ও প্রান্তীয় বেগ",
+    "description_en": "Predict the settling speed of small spheres, droplets or sediments.",
+    "description_bn": "ক্ষুদ্র গোলক, ফোঁটা বা পলির সান্দ্র মাধ্যমে থিতানোর বেগ নির্ণয়।",
+    "href": "/equations/stokes-law-terminal-velocity",
+    "tags": []
+  },
+  {
+    "slug": "superposition-standing-wave",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Standing wave formed by superposition",
+    "title_bn": "স্থির তরঙ্গের সমীকরণ",
+    "description_en": "Explain resonance patterns on strings and in air columns.",
+    "description_bn": "তার ও বায়ু স্তম্ভে অনুনাদ ও স্থির তরঙ্গের ধরন ব্যাখ্যা করুন।",
+    "href": "/equations/superposition-standing-wave",
+    "tags": []
+  },
+  {
+    "slug": "thermal-conductivity-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Rate of heat conduction through a slab",
+    "title_bn": "তাপ পরিবহনের সমীকরণ",
+    "description_en": "Calculate heat leaking through a wall, window or insulating layer.",
+    "description_bn": "দেয়াল, জানালা বা অন্তরক স্তর ভেদ করে তাপ ক্ষয়ের হার নির্ণয়।",
+    "href": "/equations/thermal-conductivity-equation",
+    "tags": []
+  },
+  {
+    "slug": "thermal-resistance-series",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Thermal resistance of composite walls",
+    "title_bn": "তাপীয় রোধ ও যৌগিক প্রাচীর",
+    "description_en": "Size insulation for composite walls, pipes and building envelopes.",
+    "description_bn": "একাধিক স্তরের যৌগিক দেয়াল বা পাইপের অন্তরক নকশার হিসাব।",
+    "href": "/equations/thermal-resistance-series",
+    "tags": []
+  },
+  {
+    "slug": "torque-angular-acceleration",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Rotational analogue of Newton’s second law",
+    "title_bn": "টর্ক ও কৌণিক ত্বরণের সম্পর্ক",
+    "description_en": "Predict how a rigid body accelerates about a fixed axis under a net torque.",
+    "description_bn": "কোনো দৃঢ় বস্তু নির্দিষ্ট অক্ষের চারদিকে লব্ধ টর্কের প্রভাবে কীভাবে ঘূর্ণন ত্বরণ পায় তা নির্ণয়।",
+    "href": "/equations/torque-angular-acceleration",
+    "tags": []
+  },
+  {
+    "slug": "torricelli-theorem",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Torricelli’s theorem for efflux",
+    "title_bn": "তোরিচেল্লির উপপাদ্য",
+    "description_en": "Find how fast a liquid jets out of a hole in a tank.",
+    "description_bn": "পাত্রের ছিদ্র দিয়ে তরল কত বেগে বের হবে তা নির্ণয়।",
+    "href": "/equations/torricelli-theorem",
+    "tags": []
+  },
+  {
+    "slug": "transformer-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Ideal transformer voltage and current ratios",
+    "title_bn": "ট্রান্সফরমারের সমীকরণ",
+    "description_en": "Design step-up and step-down transformers for power distribution.",
+    "description_bn": "বিদ্যুৎ বিতরণে স্টেপ-আপ ও স্টেপ-ডাউন ট্রান্সফরমারের হিসাব।",
+    "href": "/equations/transformer-equation",
+    "tags": []
+  },
+  {
+    "slug": "venturi-flow-meter",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Venturi meter flow-rate equation",
+    "title_bn": "ভেঞ্চুরি মিটারের সমীকরণ",
+    "description_en": "Measure pipe flow rate from the pressure drop across a constriction.",
+    "description_bn": "সংকীর্ণ অংশের চাপ পার্থক্য থেকে পাইপের প্রবাহ হার নির্ণয়।",
+    "href": "/equations/venturi-flow-meter",
+    "tags": []
+  },
+  {
+    "slug": "wave-velocity-string",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Wave speed on a stretched string",
+    "title_bn": "টানা তারে তরঙ্গের বেগ",
+    "description_en": "Predict the pitch of a stringed instrument from tension and thickness.",
+    "description_bn": "তারের টান ও রৈখিক ঘনত্ব থেকে তাতে সৃষ্ট তরঙ্গের বেগ নির্ণয়।",
+    "href": "/equations/wave-velocity-string",
+    "tags": []
+  },
+  {
+    "slug": "wheatstone-bridge",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Wheatstone bridge balance condition",
+    "title_bn": "হুইটস্টোন ব্রিজের ভারসাম্য শর্ত",
+    "description_en": "Determine an unknown resistance precisely from three known resistors.",
+    "description_bn": "তিনটি জ্ঞাত রোধ ব্যবহার করে অজানা রোধ নির্ভুলভাবে নির্ণয়।",
+    "href": "/equations/wheatstone-bridge",
+    "tags": []
+  },
+  {
+    "slug": "wien-displacement-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Wien’s displacement law",
+    "title_bn": "উইনের সরণ সূত্র",
+    "description_en": "Find the colour (peak wavelength) of light emitted by a hot object.",
+    "description_bn": "উত্তপ্ত বস্তুর বিকিরণের প্রধান তরঙ্গদৈর্ঘ্য বা বর্ণ নির্ণয়।",
+    "href": "/equations/wien-displacement-law",
+    "tags": []
+  },
+  {
+    "slug": "young-double-slit-fringe-width",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Fringe width in Young’s double-slit experiment",
+    "title_bn": "ইয়ং-এর দ্বি-চির পরীক্ষায় ডোরার প্রস্থ",
+    "description_en": "Predict interference fringe spacing and measure wavelength.",
+    "description_bn": "ব্যতিচার ডোরার দূরত্ব থেকে আলোর তরঙ্গদৈর্ঘ্য পরিমাপ।",
+    "href": "/equations/young-double-slit-fringe-width",
+    "tags": []
+  },
+  {
+    "slug": "youngs-modulus-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Young’s modulus of elasticity",
+    "title_bn": "ইয়ং-এর গুণাঙ্ক",
+    "description_en": "Relate the stretching of a wire to the tensile stress producing it.",
+    "description_bn": "তারের প্রসারণ, প্রযুক্ত বল ও উপাদানের স্থিতিস্থাপক গুণাঙ্কের সম্পর্ক নির্ণয়।",
+    "href": "/equations/youngs-modulus-equation",
+    "tags": []
+  },
+  {
+    "slug": "bohr-quantization-angular-momentum",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Bohr quantisation of angular momentum",
+    "title_bn": "বোরের কৌণিক ভরবেগের কোয়ান্টায়ন",
+    "description_en": "Derive the quantum condition that fixes allowed atomic orbits.",
+    "description_bn": "পারমাণবিক কক্ষপথের অনুমোদিত শর্ত প্রতিপাদন করুন।",
+    "href": "/equations/bohr-quantization-angular-momentum",
+    "tags": []
+  },
+  {
+    "slug": "bragg-equation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Bragg’s law for X-ray diffraction",
+    "title_bn": "ব্র্যাগের সমীকরণ",
+    "description_en": "Determine crystal lattice spacings from X-ray diffraction patterns.",
+    "description_bn": "এক্স-রশ্মির অপবর্তন নমুনা থেকে স্ফটিকের আন্তঃতল দূরত্ব নির্ণয়।",
+    "href": "/equations/bragg-equation",
+    "tags": []
+  },
+  {
+    "slug": "compton-effect-wavelength-shift",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Compton scattering wavelength shift",
+    "title_bn": "কম্পটন বিচ্যুতির তরঙ্গদৈর্ঘ্য পরিবর্তন",
+    "description_en": "Show how photon scattering proves light carries momentum.",
+    "description_bn": "ফোটন বিচ্ছুরণের মাধ্যমে আলোর ভরবেগের প্রমাণ উপস্থাপন।",
+    "href": "/equations/compton-effect-wavelength-shift",
+    "tags": []
+  },
+  {
+    "slug": "heisenberg-uncertainty-principle",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Heisenberg uncertainty principle",
+    "title_bn": "হাইজেনবার্গের অনিশ্চয়তা নীতি",
+    "description_en": "Quantify the fundamental limit on simultaneous position–momentum knowledge.",
+    "description_bn": "একই সাথে অবস্থান ও ভরবেগ জানার মৌলিক সীমা নির্ণয়।",
+    "href": "/equations/heisenberg-uncertainty-principle",
+    "tags": []
+  },
+  {
+    "slug": "hydrogen-energy-levels-bohr",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Energy levels of the hydrogen atom",
+    "title_bn": "হাইড্রোজেন পরমাণুর শক্তিস্তর",
+    "description_en": "Predict hydrogen’s spectral lines from quantised energy levels.",
+    "description_bn": "কোয়ান্টায়িত শক্তিস্তর থেকে হাইড্রোজেনের বর্ণালী রেখা নির্ণয়।",
+    "href": "/equations/hydrogen-energy-levels-bohr",
+    "tags": []
+  },
+  {
+    "slug": "maxwell-em-wave-speed",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Speed of electromagnetic waves from Maxwell’s equations",
+    "title_bn": "তড়িৎচুম্বকীয় তরঙ্গের বেগ",
+    "description_en": "Show that light is an electromagnetic wave travelling at c.",
+    "description_bn": "প্রমাণ করুন যে আলো একটি তড়িৎচুম্বকীয় তরঙ্গ যার বেগ c।",
+    "href": "/equations/maxwell-em-wave-speed",
+    "tags": []
+  },
+  {
+    "slug": "particle-in-box-energy",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Energy levels of a particle in a one-dimensional box",
+    "title_bn": "একমাত্রিক বাক্সে কণার শক্তিস্তর",
+    "description_en": "Derive quantised energy levels for the simplest bound quantum system.",
+    "description_bn": "সরলতম বদ্ধ কোয়ান্টাম সিস্টেমের কোয়ান্টায়িত শক্তিস্তর প্রতিপাদন।",
+    "href": "/equations/particle-in-box-energy",
+    "tags": []
+  },
+  {
+    "slug": "relativistic-length-contraction",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Relativistic length contraction",
+    "title_bn": "আপেক্ষিক দৈর্ঘ্য সংকোচন",
+    "description_en": "Find how much a fast-moving object shortens along its motion.",
+    "description_bn": "দ্রুত গতিশীল বস্তু গতির দিকে কতটা সংকুচিত হয় তা নির্ণয়।",
+    "href": "/equations/relativistic-length-contraction",
+    "tags": []
+  },
+  {
+    "slug": "relativistic-time-dilation",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Relativistic time dilation",
+    "title_bn": "আপেক্ষিক সময় প্রসারণ",
+    "description_en": "Compute how moving clocks run slow compared with stationary ones.",
+    "description_bn": "চলমান ঘড়ি স্থির ঘড়ির তুলনায় কত ধীরে চলে তা নির্ণয়।",
+    "href": "/equations/relativistic-time-dilation",
+    "tags": []
+  },
+  {
     "slug": "schrodinger-equation",
     "kind": "equation",
     "subject": "physics",
@@ -338,6 +1922,72 @@
     "description_en": "Meet the wave equation that turns allowed quantum states into an eigenvalue problem.",
     "description_bn": "allowed quantum state-কে eigenvalue problem-এ রূপ দেওয়া wave equation-এর পরিচয়।",
     "href": "/equations/schrodinger-equation",
+    "tags": []
+  },
+  {
+    "slug": "atomic-number-mass-number",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Atomic number and mass number",
+    "title_bn": "পারমাণবিক সংখ্যা ও ভর সংখ্যা",
+    "description_en": "Read proton, neutron and nucleon counts from a nuclide symbol.",
+    "description_bn": "নিউক্লাইড প্রতীক থেকে প্রোটন, নিউট্রন ও নিউক্লিয়ন সংখ্যা নির্ণয়।",
+    "href": "/equations/atomic-number-mass-number",
+    "tags": []
+  },
+  {
+    "slug": "conservation-of-mass-law",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Law of conservation of mass",
+    "title_bn": "রাসায়নিক বিক্রিয়ায় ভরের সংরক্ষণ",
+    "description_en": "Explain why a balanced equation keeps the total mass unchanged.",
+    "description_bn": "সমতুল সমীকরণে মোট ভর কেন অপরিবর্তিত থাকে তা ব্যাখ্যা করুন।",
+    "href": "/equations/conservation-of-mass-law",
+    "tags": []
+  },
+  {
+    "slug": "electronic-configuration-shell",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Electron shell capacity rule",
+    "title_bn": "কক্ষপথে ইলেকট্রনের বিন্যাস",
+    "description_en": "Work out how many electrons fit in each shell of an atom.",
+    "description_bn": "পরমাণুর প্রতিটি কক্ষে সর্বাধিক কতটি ইলেকট্রন থাকতে পারে তা নির্ণয়।",
+    "href": "/equations/electronic-configuration-shell",
+    "tags": []
+  },
+  {
+    "slug": "isotopes-mass-number",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Isotopes and average atomic mass",
+    "title_bn": "আইসোটোপ ও গড় পারমাণবিক ভর",
+    "description_en": "Calculate the atomic mass shown on the periodic table from isotope data.",
+    "description_bn": "আইসোটোপের তথ্য থেকে পর্যায় সারণিতে প্রদর্শিত পারমাণবিক ভর নির্ণয়।",
+    "href": "/equations/isotopes-mass-number",
+    "tags": []
+  },
+  {
+    "slug": "law-of-definite-proportions",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Law of definite proportions",
+    "title_bn": "নির্দিষ্ট অনুপাতের সূত্র",
+    "description_en": "Show that a pure compound always contains the same mass ratio of elements.",
+    "description_bn": "বিশুদ্ধ যৌগে মৌলগুলোর ভরের অনুপাত সর্বদা স্থির থাকে তা প্রমাণ করুন।",
+    "href": "/equations/law-of-definite-proportions",
+    "tags": []
+  },
+  {
+    "slug": "molecular-mass-formula",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Molecular (formula) mass of a compound",
+    "title_bn": "আণবিক ভর নির্ণয়",
+    "description_en": "Add up atomic masses to get the formula mass of any compound.",
+    "description_bn": "যেকোনো যৌগের সংকেত ভর বা আণবিক ভর নির্ণয়।",
+    "href": "/equations/molecular-mass-formula",
     "tags": []
   },
   {
@@ -352,6 +2002,28 @@
     "tags": []
   },
   {
+    "slug": "solubility-saturated-solution",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Solubility and saturated solutions",
+    "title_bn": "দ্রাব্যতা ও সম্পৃক্ত দ্রবণ",
+    "description_en": "Express and compare the dissolving capacity of different solvents.",
+    "description_bn": "বিভিন্ন দ্রাবকের দ্রবীভূত করার ক্ষমতা প্রকাশ ও তুলনা করুন।",
+    "href": "/equations/solubility-saturated-solution",
+    "tags": []
+  },
+  {
+    "slug": "valency-chemical-formula",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Valency and the criss-cross formula rule",
+    "title_bn": "যোজ্যতা ও রাসায়নিক সংকেত",
+    "description_en": "Write correct formulae for binary ionic compounds from valencies.",
+    "description_bn": "যোজ্যতা থেকে দ্বি-মৌলিক আয়নিক যৌগের সঠিক সংকেত লিখুন।",
+    "href": "/equations/valency-chemical-formula",
+    "tags": []
+  },
+  {
     "slug": "atom-mole-formula-sheet",
     "kind": "equation",
     "subject": "chemistry",
@@ -360,6 +2032,105 @@
     "description_en": "Mole conversions, concentration, composition, empirical formula, yield, photons and quantum-number reminders.",
     "description_bn": "মোল রূপান্তর, ঘনমাত্রা, সংযুতি, স্থূল সংকেত, উৎপাদন, ফোটন ও কোয়ান্টাম সংখ্যার সূত্র।",
     "href": "/equations/atom-mole-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "average-rate-of-reaction",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Average rate of a chemical reaction",
+    "title_bn": "বিক্রিয়ার গড় হার",
+    "description_en": "Track how fast reactants are consumed or products appear.",
+    "description_bn": "বিক্রিয়ক কত দ্রুত শেষ হচ্ছে বা উৎপাদ তৈরি হচ্ছে তা পরিমাপ।",
+    "href": "/equations/average-rate-of-reaction",
+    "tags": []
+  },
+  {
+    "slug": "dilution-equation",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Dilution of a stock solution",
+    "title_bn": "লঘুকরণের সমীকরণ",
+    "description_en": "Prepare a dilute solution from a concentrated stock.",
+    "description_bn": "গাঢ় স্টক দ্রবণ থেকে নির্দিষ্ট ঘনমাত্রার লঘু দ্রবণ তৈরি।",
+    "href": "/equations/dilution-equation",
+    "tags": []
+  },
+  {
+    "slug": "empirical-formula-determination",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Empirical formula from percentage composition",
+    "title_bn": "সরলতম সংকেত নির্ণয়",
+    "description_en": "Convert composition data into the simplest atom ratio.",
+    "description_bn": "সংযুতির তথ্য থেকে সরলতম পরমাণু অনুপাত নির্ণয়।",
+    "href": "/equations/empirical-formula-determination",
+    "tags": []
+  },
+  {
+    "slug": "heat-of-neutralization",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Enthalpy of neutralisation",
+    "title_bn": "প্রশমন তাপ",
+    "description_en": "Measure the heat released when an acid neutralises a base.",
+    "description_bn": "অম্ল ও ক্ষারের প্রশমনে নির্গত তাপ পরিমাপ।",
+    "href": "/equations/heat-of-neutralization",
+    "tags": []
+  },
+  {
+    "slug": "ionic-product-of-water",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Ionic product of water (K_w)",
+    "title_bn": "পানির আয়নিক গুণফল",
+    "description_en": "Quantify water’s self-ionisation and the neutral point of the pH scale.",
+    "description_bn": "পানির স্ব-আয়নন ও pH স্কেলের নিরপেক্ষ বিন্দু নির্ণয়।",
+    "href": "/equations/ionic-product-of-water",
+    "tags": []
+  },
+  {
+    "slug": "limiting-reactant-yield",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Limiting reactant and theoretical yield",
+    "title_bn": "সীমিত বিক্রিয়ক ও তাত্ত্বিক উৎপাদ",
+    "description_en": "Identify which starting material runs out first and how much product forms.",
+    "description_bn": "কোন বিক্রিয়ক আগে শেষ হবে এবং কত উৎপাদ পাওয়া যাবে তা নির্ণয়।",
+    "href": "/equations/limiting-reactant-yield",
+    "tags": []
+  },
+  {
+    "slug": "mass-percentage-composition",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Mass percentage composition",
+    "title_bn": "ভরের শতকরা সংযুতি",
+    "description_en": "Work out the mass share of each element in a compound.",
+    "description_bn": "যৌগে প্রতিটি মৌলের ভরের শতকরা অংশ নির্ণয়।",
+    "href": "/equations/mass-percentage-composition",
+    "tags": []
+  },
+  {
+    "slug": "molality-equation",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Molality of a solution",
+    "title_bn": "মোলালিটি",
+    "description_en": "Express concentration on a temperature-independent mass basis.",
+    "description_bn": "তাপমাত্রা-নিরপেক্ষ ভিত্তিতে দ্রবণের ঘনমাত্রা প্রকাশ করুন।",
+    "href": "/equations/molality-equation",
+    "tags": []
+  },
+  {
+    "slug": "molar-volume-of-gas-stp",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Molar volume of a gas at STP",
+    "title_bn": "প্রমাণ অবস্থায় গ্যাসের মোলার আয়তন",
+    "description_en": "Convert gas volumes to moles and back at standard conditions.",
+    "description_bn": "প্রমাণ অবস্থায় গ্যাসের আয়তন ও মোল সংখ্যার মধ্যে রূপান্তর।",
+    "href": "/equations/molar-volume-of-gas-stp",
     "tags": []
   },
   {
@@ -374,6 +2145,39 @@
     "tags": []
   },
   {
+    "slug": "mole-fraction-equation",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Mole fraction of a component",
+    "title_bn": "মোল ভগ্নাংশ",
+    "description_en": "Describe mixture composition on a dimensionless mole basis.",
+    "description_bn": "মিশ্রণের সংযুতিকে মাত্রাহীন মোল ভিত্তিতে প্রকাশ করুন।",
+    "href": "/equations/mole-fraction-equation",
+    "tags": []
+  },
+  {
+    "slug": "mole-particle-count",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Mole–particle relationship",
+    "title_bn": "মোল ও কণা সংখ্যার সম্পর্ক",
+    "description_en": "Count atoms, molecules or ions in a weighed sample.",
+    "description_bn": "ওজন করা নমুনায় পরমাণু, অণু বা আয়নের সংখ্যা গণনা।",
+    "href": "/equations/mole-particle-count",
+    "tags": []
+  },
+  {
+    "slug": "molecular-formula-from-empirical",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Molecular formula from the empirical formula",
+    "title_bn": "সরলতম সংকেত থেকে আণবিক সংকেত",
+    "description_en": "Scale an empirical formula up using the measured molar mass.",
+    "description_bn": "পরিমাপকৃত মোলার ভর ব্যবহার করে সরলতম সংকেত থেকে আণবিক সংকেত নির্ণয়।",
+    "href": "/equations/molecular-formula-from-empirical",
+    "tags": []
+  },
+  {
     "slug": "organic-chemistry-reaction-sheet",
     "kind": "equation",
     "subject": "chemistry",
@@ -385,6 +2189,17 @@
     "tags": []
   },
   {
+    "slug": "percentage-yield",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Percentage yield of a reaction",
+    "title_bn": "শতকরা উৎপাদ",
+    "description_en": "Compare the actual product mass to the theoretical maximum.",
+    "description_bn": "প্রকৃত উৎপাদের পরিমাণকে তাত্ত্বিক সর্বাধিকের সাথে তুলনা করুন।",
+    "href": "/equations/percentage-yield",
+    "tags": []
+  },
+  {
     "slug": "ph",
     "kind": "equation",
     "subject": "chemistry",
@@ -393,6 +2208,17 @@
     "description_en": "Translate hydrogen-ion concentration into the familiar pH scale.",
     "description_bn": "হাইড্রোজেন আয়নের ঘনমাত্রাকে পরিচিত pH স্কেলে প্রকাশ করুন।",
     "href": "/equations/ph",
+    "tags": []
+  },
+  {
+    "slug": "poh-and-ph-relation",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Relationship between pH and pOH",
+    "title_bn": "pH ও pOH-এর সম্পর্ক",
+    "description_en": "Convert between pH and pOH for aqueous solutions at 25 °C.",
+    "description_bn": "২৫ °C তাপমাত্রায় জলীয় দ্রবণের pH ও pOH-এর মধ্যে রূপান্তর।",
+    "href": "/equations/poh-and-ph-relation",
     "tags": []
   },
   {
@@ -415,6 +2241,17 @@
     "description_en": "Model the strong temperature dependence of a reaction rate.",
     "description_bn": "বিক্রিয়ার হারের উপর তাপমাত্রার শক্তিশালী প্রভাব মডেল করুন।",
     "href": "/equations/arrhenius-equation",
+    "tags": []
+  },
+  {
+    "slug": "arrhenius-two-temperature",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Two-point Arrhenius equation",
+    "title_bn": "দুই তাপমাত্রায় অ্যারেনিয়াস সমীকরণ",
+    "description_en": "Extract activation energy from rate constants at two temperatures.",
+    "description_bn": "দুই তাপমাত্রার হার ধ্রুবক থেকে সক্রিয়ন শক্তি নির্ণয়।",
+    "href": "/equations/arrhenius-two-temperature",
     "tags": []
   },
   {
@@ -451,6 +2288,28 @@
     "tags": []
   },
   {
+    "slug": "clausius-clapeyron-equation",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Clausius–Clapeyron equation",
+    "title_bn": "ক্লসিয়াস-ক্ল্যাপিরন সমীকরণ",
+    "description_en": "Predict how vapour pressure changes with temperature.",
+    "description_bn": "তাপমাত্রার সাথে বাষ্পচাপের পরিবর্তন এবং বাষ্পীভবন তাপ নির্ণয়।",
+    "href": "/equations/clausius-clapeyron-equation",
+    "tags": []
+  },
+  {
+    "slug": "depression-of-freezing-point",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Depression of freezing point",
+    "title_bn": "হিমাঙ্কের অবনমন",
+    "description_en": "Explain why salt melts ice and find molar mass from freezing data.",
+    "description_bn": "লবণ কেন বরফ গলায় তা ব্যাখ্যা করুন এবং হিমাঙ্ক থেকে মোলার ভর নির্ণয় করুন।",
+    "href": "/equations/depression-of-freezing-point",
+    "tags": []
+  },
+  {
     "slug": "electrochemistry-formula-sheet",
     "kind": "equation",
     "subject": "chemistry",
@@ -459,6 +2318,39 @@
     "description_en": "Standard cell potential, Nernst equation, Faraday electrolysis, conductivity and Kohlrausch’s law.",
     "description_bn": "প্রমাণ কোষ বিভব, নার্নস্ট সমীকরণ, ফ্যারাডের তড়িৎ বিশ্লেষণ, পরিবাহিতা ও কোলরাউশের সূত্র।",
     "href": "/equations/electrochemistry-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "electrode-potential-emf",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Cell emf from electrode potentials",
+    "title_bn": "কোষের তড়িৎচালক বল",
+    "description_en": "Predict the voltage of a galvanic cell from standard potentials.",
+    "description_bn": "প্রমাণ বিভব থেকে গ্যালভানিক কোষের ভোল্টেজ নির্ণয়।",
+    "href": "/equations/electrode-potential-emf",
+    "tags": []
+  },
+  {
+    "slug": "elevation-of-boiling-point",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Elevation of boiling point",
+    "title_bn": "স্ফুটনাঙ্কের উন্নয়ন",
+    "description_en": "Calculate how much a dissolved solute raises a solvent’s boiling point.",
+    "description_bn": "দ্রবীভূত দ্রাব দ্রাবকের স্ফুটনাঙ্ক কতটা বাড়ায় তা নির্ণয়।",
+    "href": "/equations/elevation-of-boiling-point",
+    "tags": []
+  },
+  {
+    "slug": "entropy-change-reversible",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Entropy change in a reversible process",
+    "title_bn": "প্রত্যাবর্তী প্রক্রিয়ায় এনট্রপির পরিবর্তন",
+    "description_en": "Compute entropy changes for heating and phase transitions.",
+    "description_bn": "উত্তাপন ও দশা পরিবর্তনে এনট্রপির পরিবর্তন নির্ণয়।",
+    "href": "/equations/entropy-change-reversible",
     "tags": []
   },
   {
@@ -473,6 +2365,17 @@
     "tags": []
   },
   {
+    "slug": "first-order-integrated-rate-law",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Integrated rate law for a first-order reaction",
+    "title_bn": "প্রথম ক্রম বিক্রিয়ার সমাকলিত হার সূত্র",
+    "description_en": "Track first-order decay of concentration with time.",
+    "description_bn": "প্রথম ক্রম বিক্রিয়ায় ঘনমাত্রার সূচকীয় হ্রাস নির্ণয়।",
+    "href": "/equations/first-order-integrated-rate-law",
+    "tags": []
+  },
+  {
     "slug": "gas-laws-formula-sheet",
     "kind": "equation",
     "subject": "chemistry",
@@ -484,6 +2387,28 @@
     "tags": []
   },
   {
+    "slug": "gibbs-free-energy-equilibrium",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Gibbs free energy and the equilibrium constant",
+    "title_bn": "গিবস মুক্ত শক্তি ও সাম্য ধ্রুবক",
+    "description_en": "Link thermodynamic driving force to the position of equilibrium.",
+    "description_bn": "তাপগতীয় চালিকা শক্তি ও সাম্যাবস্থার অবস্থানের মধ্যে সম্পর্ক স্থাপন।",
+    "href": "/equations/gibbs-free-energy-equilibrium",
+    "tags": []
+  },
+  {
+    "slug": "half-life-first-order",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Half-life of a first-order reaction",
+    "title_bn": "প্রথম ক্রম বিক্রিয়ার অর্ধায়ু",
+    "description_en": "Show that first-order half-life is constant regardless of starting concentration.",
+    "description_bn": "প্রমাণ করুন যে প্রথম ক্রম বিক্রিয়ার অর্ধায়ু প্রাথমিক ঘনমাত্রার ওপর নির্ভর করে না।",
+    "href": "/equations/half-life-first-order",
+    "tags": []
+  },
+  {
     "slug": "henderson-hasselbalch",
     "kind": "equation",
     "subject": "chemistry",
@@ -492,6 +2417,17 @@
     "description_en": "Estimate the pH of a weak-acid/conjugate-base buffer.",
     "description_bn": "দুর্বল অম্ল ও conjugate base-এর buffer-এর pH অনুমান করুন।",
     "href": "/equations/henderson-hasselbalch",
+    "tags": []
+  },
+  {
+    "slug": "henry-law",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Henry’s law for gas solubility",
+    "title_bn": "হেনরির সূত্র",
+    "description_en": "Predict how much gas dissolves under a given partial pressure.",
+    "description_bn": "নির্দিষ্ট আংশিক চাপে কত গ্যাস দ্রবীভূত হবে তা নির্ণয়।",
+    "href": "/equations/henry-law",
     "tags": []
   },
   {
@@ -517,6 +2453,39 @@
     "tags": []
   },
   {
+    "slug": "kohlrausch-law",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Kohlrausch’s law of independent migration of ions",
+    "title_bn": "কোলরাউশের সূত্র",
+    "description_en": "Find limiting conductivities and dissociation degrees of weak electrolytes.",
+    "description_bn": "সীমা পরিবাহিতা ও দুর্বল তড়িৎবিশ্লেষ্যের বিয়োজন মাত্রা নির্ণয়।",
+    "href": "/equations/kohlrausch-law",
+    "tags": []
+  },
+  {
+    "slug": "kp-kc-relation",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Relation between Kp and Kc",
+    "title_bn": "Kp ও Kc-এর সম্পর্ক",
+    "description_en": "Convert between concentration-based and pressure-based equilibrium constants.",
+    "description_bn": "ঘনমাত্রা-ভিত্তিক ও চাপ-ভিত্তিক সাম্য ধ্রুবকের মধ্যে রূপান্তর।",
+    "href": "/equations/kp-kc-relation",
+    "tags": []
+  },
+  {
+    "slug": "molar-conductivity",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Molar conductivity of an electrolyte solution",
+    "title_bn": "মোলার পরিবাহিতা",
+    "description_en": "Convert conductivity readings into concentration-normalised values.",
+    "description_bn": "পরিবাহিতা পরিমাপকে ঘনমাত্রা-স্বাভাবিকীকৃত মানে রূপান্তর।",
+    "href": "/equations/molar-conductivity",
+    "tags": []
+  },
+  {
     "slug": "nernst-equation",
     "kind": "equation",
     "subject": "chemistry",
@@ -525,6 +2494,39 @@
     "description_en": "Connect electrochemical potential to temperature and reaction composition.",
     "description_bn": "তড়িৎ রাসায়নিক বিভবকে তাপমাত্রা ও বিক্রিয়ার সংযোজনের সঙ্গে যুক্ত করুন।",
     "href": "/equations/nernst-equation",
+    "tags": []
+  },
+  {
+    "slug": "osmotic-pressure-vant-hoff",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Osmotic pressure (van’t Hoff equation)",
+    "title_bn": "অভিস্রবণ চাপ",
+    "description_en": "Measure osmotic pressure to find molar mass of macromolecules.",
+    "description_bn": "অভিস্রবণ চাপ পরিমাপ করে বৃহদাণুর মোলার ভর নির্ণয়।",
+    "href": "/equations/osmotic-pressure-vant-hoff",
+    "tags": []
+  },
+  {
+    "slug": "ostwald-dilution-law",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Ostwald’s dilution law",
+    "title_bn": "অস্টওয়াল্ডের লঘুকরণ সূত্র",
+    "description_en": "Relate weak-electrolyte dissociation to concentration.",
+    "description_bn": "দুর্বল তড়িৎবিশ্লেষ্যের বিয়োজন ও ঘনমাত্রার সম্পর্ক নির্ণয়।",
+    "href": "/equations/ostwald-dilution-law",
+    "tags": []
+  },
+  {
+    "slug": "raoults-law",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Raoult’s law for ideal solutions",
+    "title_bn": "রাউল্টের সূত্র",
+    "description_en": "Predict vapour pressure lowering for ideal liquid mixtures.",
+    "description_bn": "আদর্শ তরল মিশ্রণের বাষ্পচাপ হ্রাসের হিসাব।",
+    "href": "/equations/raoults-law",
     "tags": []
   },
   {
@@ -550,6 +2552,39 @@
     "tags": []
   },
   {
+    "slug": "zero-order-kinetics",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Zero-order reaction kinetics",
+    "title_bn": "শূন্য ক্রম বিক্রিয়ার গতিবিদ্যা",
+    "description_en": "Model reactions whose rate is fixed by a saturated catalyst or surface.",
+    "description_bn": "সম্পৃক্ত প্রভাবক বা পৃষ্ঠ দ্বারা নিয়ন্ত্রিত বিক্রিয়ার হার বিশ্লেষণ।",
+    "href": "/equations/zero-order-kinetics",
+    "tags": []
+  },
+  {
+    "slug": "boltzmann-distribution",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Boltzmann distribution of energies",
+    "title_bn": "বোলটজমান বন্টন",
+    "description_en": "Predict how molecules populate energy levels at temperature T.",
+    "description_bn": "তাপমাত্রা T-তে অণুগুলো কীভাবে শক্তিস্তরে বণ্টিত হয় তা নির্ণয়।",
+    "href": "/equations/boltzmann-distribution",
+    "tags": []
+  },
+  {
+    "slug": "debye-huckel-limiting-law",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Debye–Hückel limiting law",
+    "title_bn": "ডিবাই-হাকেল সীমা সূত্র",
+    "description_en": "Estimate activity coefficients in dilute electrolyte solutions.",
+    "description_bn": "লঘু তড়িৎবিশ্লেষ্য দ্রবণে সক্রিয়তা সহগ অনুমান।",
+    "href": "/equations/debye-huckel-limiting-law",
+    "tags": []
+  },
+  {
     "slug": "equilibrium-constant",
     "kind": "equation",
     "subject": "chemistry",
@@ -561,6 +2596,17 @@
     "tags": []
   },
   {
+    "slug": "eyring-transition-state-equation",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Eyring transition-state rate equation",
+    "title_bn": "আইরিং-এর অন্তর্বর্তী অবস্থা সমীকরণ",
+    "description_en": "Connect rate constants to activation enthalpy and entropy.",
+    "description_bn": "হার ধ্রুবককে সক্রিয়ন এনথালপি ও এনট্রপির সাথে সম্পর্কিত করুন।",
+    "href": "/equations/eyring-transition-state-equation",
+    "tags": []
+  },
+  {
     "slug": "faradays-law",
     "kind": "equation",
     "subject": "chemistry",
@@ -569,6 +2615,50 @@
     "description_en": "Relate electric charge to the mass deposited in electrolysis.",
     "description_bn": "তড়িৎ বিশ্লেষণে চার্জ ও সঞ্চিত ভরের সম্পর্ক।",
     "href": "/equations/faradays-law",
+    "tags": []
+  },
+  {
+    "slug": "freundlich-adsorption-isotherm",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Freundlich adsorption isotherm",
+    "title_bn": "ফ্রয়েন্ডলিচ শোষণ সমোষ্ণ রেখা",
+    "description_en": "Fit experimental adsorption data on real, heterogeneous surfaces.",
+    "description_bn": "বাস্তব অসমসত্ত্ব পৃষ্ঠের শোষণ তথ্যের সাথে মানানসই মডেল।",
+    "href": "/equations/freundlich-adsorption-isotherm",
+    "tags": []
+  },
+  {
+    "slug": "langmuir-adsorption-isotherm",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Langmuir adsorption isotherm",
+    "title_bn": "ল্যাংমুয়ার শোষণ সমোষ্ণ রেখা",
+    "description_en": "Model monolayer adsorption on a uniform solid surface.",
+    "description_bn": "সুষম কঠিন পৃষ্ঠে একস্তরীয় শোষণের মডেল তৈরি।",
+    "href": "/equations/langmuir-adsorption-isotherm",
+    "tags": []
+  },
+  {
+    "slug": "nernst-distribution-law",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Nernst distribution (partition) law",
+    "title_bn": "নার্নস্টের বন্টন সূত্র",
+    "description_en": "Describe solute partitioning between two immiscible solvents.",
+    "description_bn": "দুই অমিশ্রণীয় দ্রাবকের মধ্যে দ্রাবের বন্টন বিশ্লেষণ।",
+    "href": "/equations/nernst-distribution-law",
+    "tags": []
+  },
+  {
+    "slug": "rydberg-equation-hydrogen",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Rydberg equation for hydrogen spectra",
+    "title_bn": "রিডবার্গ সমীকরণ",
+    "description_en": "Calculate the wavelengths of hydrogen’s spectral series.",
+    "description_bn": "হাইড্রোজেনের বর্ণালী সিরিজের তরঙ্গদৈর্ঘ্য নির্ণয়।",
+    "href": "/equations/rydberg-equation-hydrogen",
     "tags": []
   },
   {

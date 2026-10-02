@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "electrical-energy-kilowatt-hour"
+title_bn: "বৈদ্যুতিক শক্তি ও কিলোওয়াট-ঘণ্টা"
+title_en: "Electrical energy and kilowatt-hour billing"
+subject: physics
+level: class-9-10
+chapter: "Current Electricity"
+chapter_bn: "চল তড়িৎ"
+latex: "E = P t = V I t"
+calculator: false
+variables:
+  - symbol: "E"
+    name: "electrical energy"
+    name_bn: "বৈদ্যুতিক শক্তি"
+    unit: "kWh"
+    si_unit: "J"
+  - symbol: "P"
+    name: "power rating"
+    name_bn: "ক্ষমতা"
+    unit: "kW"
+    si_unit: "W"
+  - symbol: "t"
+    name: "operating time"
+    name_bn: "চলার সময়"
+    unit: "h"
+    si_unit: "s"
+  - symbol: "V"
+    name: "supply voltage"
+    name_bn: "সরবরাহকৃত ভোল্টেজ"
+    unit: "V"
+    si_unit: "V"
+  - symbol: "I"
+    name: "current drawn"
+    name_bn: "গৃহীত প্রবাহমাত্রা"
+    unit: "A"
+    si_unit: "A"
+derivation: "Power is work per unit time, so total electrical energy consumed is the product of power and operating time. Substituting P = VI gives the energy in terms of circuit quantities."
+derivation_bn: "ক্ষমতা হলো একক সময়ে কৃতকাজ বা শক্তি। তাই নির্দিষ্ট সময় ধরে চললে মোট বৈদ্যুতিক শক্তি ক্ষমতা ও সময়ের গুণফলের সমান; P = VI বসালে বর্তনীর রাশির মাধ্যমে রূপ পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Start from power as the rate of energy conversion and multiply by time."
+    step_bn: "একক সময়ে রূপান্তরিত শক্তি হিসেবে ক্ষমতাকে সময় দিয়ে গুণ করুন।"
+    latex: "E = P t"
+  - step_en: "Substitute the electrical power expression P = VI."
+    step_bn: "বৈদ্যুতিক ক্ষমতার রাশি P = VI বসান।"
+    latex: "E = V I t = I^2 R t = \\frac{V^2}{R}t"
+  - step_en: "For billing, express power in kW and time in hours to obtain the practical kWh unit and convert to joules."
+    step_bn: "বিদ্যুৎ বিলে ক্ষমতা kW ও সময় ঘণ্টায় বসিয়ে kWh একক ব্যবহার করুন।"
+    latex: "1\\ \\text{kWh} = 1000\\ \\text{W} \\times 3600\\ \\text{s} = 3.6 \\times 10^6\\ \\text{J}"
+summary_en: "Compute household energy consumption and cost from appliance ratings."
+summary_bn: "বৈদ্যুতিক যন্ত্রের ক্ষমতা ও ব্যবহারের সময় থেকে বিদ্যুৎ খরচ নির্ণয়।"
+related: ["electrical-power", "ohms-law", "joules-heating-law"]
+tags: ["energy", "kilowatt hour", "electricity bill", "power"]
+---
+
+A 100 W bulb running for 10 hours consumes $100\text{ W} \times 10\text{ h} = 1000\text{ Wh} = 1\text{ kWh}$, i.e. one "unit" of electricity.

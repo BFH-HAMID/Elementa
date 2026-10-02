@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "impedance-lcr-series"
+title_bn: "সিরিজ এলসিআর বর্তনীর প্রতিবন্ধকতা"
+title_en: "Impedance of a series LCR circuit"
+subject: physics
+level: class-11-12
+chapter: "Alternating Current"
+chapter_bn: "পরিবর্তী প্রবাহ"
+latex: "Z = \\sqrt{R^2 + \\left(X_L - X_C\\right)^2}, \\qquad X_L = \\omega L,\\; X_C = \\frac{1}{\\omega C}"
+calculator: false
+variables:
+  - symbol: "Z"
+    name: "impedance"
+    name_bn: "প্রতিবন্ধকতা"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "R"
+    name: "resistance"
+    name_bn: "রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "X_L"
+    name: "inductive reactance"
+    name_bn: "আবেশিক রিঅ্যাকট্যান্স"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "X_C"
+    name: "capacitive reactance"
+    name_bn: "ধারকীয় রিঅ্যাকট্যান্স"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "L"
+    name: "inductance"
+    name_bn: "আবেশাঙ্ক"
+    unit: "H"
+    si_unit: "H"
+derivation: "In a series circuit the resistor voltage is in phase with current, the inductor leads by 90° and the capacitor lags by 90°. Drawing these as perpendicular phasors gives the net voltage magnitude V = IZ with the stated Z."
+derivation_bn: "সিরিজ বর্তনীতে রোধের বিভব প্রবাহের সাথে একই দশায়, ইন্ডাক্টর ৯০° এগিয়ে ও ক্যাপাসিটর ৯০° পিছিয়ে থাকে। এদের লম্ব ফেজর হিসেবে সাজালে লব্ধি বিভব V = IZ এবং উক্ত Z পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the three phasor voltages: V_R = IR in phase, V_L = IX_L leading, V_C = IX_C lagging."
+    step_bn: "তিনটি ফেজর বিভব লিখুন: V_R = IR সমদশায়, V_L = IX_L অগ্রগামী, V_C = IX_C পশ্চাদগামী।"
+    latex: "V_L - V_C = I(X_L - X_C)"
+  - step_en: "Combine the in-phase and quadrature components using Pythagoras."
+    step_bn: "সমদশা ও লম্ব উপাংশ পিথাগোরাসের সূত্রে একত্রিত করুন।"
+    latex: "V = \\sqrt{(IR)^2 + [I(X_L - X_C)]^2}"
+  - step_en: "Divide by I to obtain the impedance and note the phase angle."
+    step_bn: "I দিয়ে ভাগ করে প্রতিবন্ধকতা ও দশা কোণ নির্ণয় করুন।"
+    latex: "Z = \\frac{V}{I} = \\sqrt{R^2 + (X_L - X_C)^2}, \\qquad \\tan\\phi = \\frac{X_L - X_C}{R}"
+summary_en: "Analyse how resistors, inductors and capacitors oppose AC together."
+summary_bn: "রোধ, আবেশক ও ধারক একসাথে পরিবর্তী প্রবাহের বিরুদ্ধে কীভাবে বাধা দেয় তা বিশ্লেষণ।"
+related: ["resonance-frequency-lcr", "ac-rms-values", "lc-oscillation-frequency"]
+tags: ["impedance", "LCR", "reactance", "phasor"]
+---
+
+When $X_L = X_C$ the impedance is minimum and equals $R$; this is the resonance condition.

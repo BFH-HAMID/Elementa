@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "newtons-law-of-cooling"
+title_bn: "নিউটনের শীতলীকরণ সূত্র"
+title_en: "Newton’s law of cooling"
+subject: physics
+level: class-11-12
+chapter: "Thermal Radiation"
+chapter_bn: "তাপীয় বিকিরণ"
+latex: "\\frac{dT}{dt} = -k(T - T_s) \\implies T(t) = T_s + (T_0 - T_s)e^{-kt}"
+calculator: false
+variables:
+  - symbol: "T"
+    name: "body temperature"
+    name_bn: "বস্তুর তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "T_s"
+    name: "surroundings temperature"
+    name_bn: "পরিবেশের তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "k"
+    name: "cooling constant"
+    name_bn: "শীতলীকরণ ধ্রুবক"
+    unit: "s⁻¹"
+    si_unit: "s⁻¹"
+  - symbol: "t"
+    name: "elapsed time"
+    name_bn: "অতিক্রান্ত সময়"
+    unit: "s"
+    si_unit: "s"
+derivation: "For a small temperature difference the rate of heat loss is proportional to the excess temperature. Equating the loss rate to mc dT/dt and integrating gives an exponential approach to the ambient temperature."
+derivation_bn: "তাপমাত্রার পার্থক্য কম হলে তাপ বর্জনের হার অতিরিক্ত তাপমাত্রার সমানুপাতিক। বর্জন হারকে mc dT/dt-এর সমান ধরে সমাকলন করলে সূচকীয় হ্রাস পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Postulate that the heat loss rate is proportional to the excess temperature."
+    step_bn: "তাপ বর্জনের হার অতিরিক্ত তাপমাত্রার সমানুপাতিক ধরুন।"
+    latex: "\\frac{dQ}{dt} = -hA(T - T_s)"
+  - step_en: "Relate heat loss to the body’s temperature change via dQ = mc dT."
+    step_bn: "dQ = mc dT ব্যবহার করে তাপমাত্রার পরিবর্তনের সাথে সম্পর্ক স্থাপন করুন।"
+    latex: "mc\\frac{dT}{dt} = -hA(T - T_s) \\implies \\frac{dT}{dt} = -k(T - T_s)"
+  - step_en: "Separate variables and integrate with T(0) = T_0."
+    step_bn: "চলক পৃথক করে T(0) = T_0 শর্ত দিয়ে সমাকলন করুন।"
+    latex: "T(t) = T_s + (T_0 - T_s)e^{-kt}"
+summary_en: "Model how a hot object cools toward room temperature."
+summary_bn: "উত্তপ্ত বস্তু কীভাবে পরিবেশের তাপমাত্রার দিকে ধীরে ধীরে ঠান্ডা হয় তা হিসাব।"
+related: ["stefan-boltzmann-law", "calorimetry-heat-equation"]
+tags: ["cooling", "exponential decay", "convection", "heat transfer"]
+---
+
+The approximation works best for small temperature differences and forced convection; radiation losses follow $T^4$ instead.

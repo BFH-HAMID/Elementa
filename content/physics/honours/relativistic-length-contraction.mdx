@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "relativistic-length-contraction"
+title_bn: "আপেক্ষিক দৈর্ঘ্য সংকোচন"
+title_en: "Relativistic length contraction"
+subject: physics
+level: honours
+chapter: "Special Relativity"
+chapter_bn: "বিশেষ আপেক্ষিকতা"
+latex: "L = \\frac{L_0}{\\gamma} = L_0\\sqrt{1 - \\frac{v^2}{c^2}}"
+calculator: false
+variables:
+  - symbol: "L"
+    name: "length measured in moving frame"
+    name_bn: "চলমান কাঠামোতে মাপা দৈর্ঘ্য"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "L_0"
+    name: "proper length"
+    name_bn: "স্বকীয় দৈর্ঘ্য"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "γ"
+    name: "Lorentz factor"
+    name_bn: "লরেন্টজ ফ্যাক্টর"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "v"
+    name: "relative speed"
+    name_bn: "আপেক্ষিক বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+derivation: "Measuring a moving rod requires marking both ends simultaneously in the observer’s frame. Combining that simultaneity requirement with the Lorentz transformation gives the contracted length."
+derivation_bn: "চলমান দণ্ড পরিমাপ করতে পর্যবেক্ষকের কাঠামোতে একই সময়ে উভয় প্রান্ত চিহ্নিত করতে হয়। এই সমসাময়িকতার শর্ত ও লরেন্টজ রূপান্তর একত্রিত করলে সংকুচিত দৈর্ঘ্য পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the Lorentz transformation for two events at the rod’s ends."
+    step_bn: "দণ্ডের দুই প্রান্তে দুই ঘটনার জন্য লরেন্টজ রূপান্তর লিখুন।"
+    latex: "x' = \\gamma(x - vt), \\qquad t' = \\gamma\\left(t - \\frac{vx}{c^2}\\right)"
+  - step_en: "Demand Δt = 0 in the measuring frame and relate Δx' to Δx."
+    step_bn: "পরিমাপকারী কাঠামোতে Δt = 0 শর্ত দিয়ে Δx' ও Δx-এর সম্পর্ক বের করুন।"
+    latex: "\\Delta x' = \\gamma(\\Delta x - v\\Delta t) = \\gamma\\Delta x"
+  - step_en: "Identify Δx' as the proper length L_0 and Δx as the measured length L."
+    step_bn: "Δx'-কে স্বকীয় দৈর্ঘ্য L_0 ও Δx-কে মাপা দৈর্ঘ্য L হিসেবে চিহ্নিত করুন।"
+    latex: "L = \\frac{L_0}{\\gamma} = L_0\\sqrt{1 - \\frac{v^2}{c^2}}"
+summary_en: "Find how much a fast-moving object shortens along its motion."
+summary_bn: "দ্রুত গতিশীল বস্তু গতির দিকে কতটা সংকুচিত হয় তা নির্ণয়।"
+related: ["relativistic-time-dilation", "mass-energy-equivalence"]
+tags: ["length contraction", "relativity", "lorentz", "honours"]
+---
+
+Contraction occurs only along the direction of motion; transverse dimensions are unchanged.

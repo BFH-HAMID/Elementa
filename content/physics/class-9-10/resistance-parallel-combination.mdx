@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "resistance-parallel-combination"
+title_bn: "সমান্তরাল সমবায়ের তুল্য রোধ"
+title_en: "Equivalent resistance in parallel"
+subject: physics
+level: class-9-10
+chapter: "Current Electricity"
+chapter_bn: "চল তড়িৎ"
+latex: "\\frac{1}{R_{\\text{eq}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots + \\frac{1}{R_n}"
+calculator: false
+variables:
+  - symbol: "R_eq"
+    name: "equivalent resistance"
+    name_bn: "তুল্য রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "R_1"
+    name: "first branch resistance"
+    name_bn: "প্রথম শাখার রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "R_2"
+    name: "second branch resistance"
+    name_bn: "দ্বিতীয় শাখার রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "I"
+    name: "total supply current"
+    name_bn: "মোট প্রবাহমাত্রা"
+    unit: "A"
+    si_unit: "A"
+derivation: "In a parallel network every branch experiences the same potential difference V, and charge conservation requires the total current to equal the sum of the branch currents."
+derivation_bn: "সমান্তরাল সমবায়ে প্রতিটি শাখার বিভব পার্থক্য V সমান থাকে। আধানের সংরক্ষণশীলতা অনুযায়ী মূল প্রবাহমাত্রা শাখা প্রবাহগুলোর সমষ্টির সমান।"
+derivation_steps:
+  - step_en: "Write the total current as the sum of the branch currents with common voltage V."
+    step_bn: "সাধারণ বিভব V-এর জন্য শাখা প্রবাহের সমষ্টি লিখুন।"
+    latex: "I = I_1 + I_2 + I_3 = \\frac{V}{R_1} + \\frac{V}{R_2} + \\frac{V}{R_3}"
+  - step_en: "Replace I by V/R_eq on the left and factor out V."
+    step_bn: "বামপক্ষে I = V/R_eq বসিয়ে V কমন নিন।"
+    latex: "\\frac{V}{R_{\\text{eq}}} = V\\left(\\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}\\right)"
+  - step_en: "Cancel V to get the reciprocal sum rule."
+    step_bn: "V বাতিল করে ব্যস্তানুপাতের সূত্রটি পান।"
+    latex: "\\frac{1}{R_{\\text{eq}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}"
+summary_en: "Determine the net resistance of parallel-connected branches."
+summary_bn: "সমান্তরালভাবে যুক্ত একাধিক রোধের তুল্য রোধ নির্ণয়।"
+related: ["resistance-series-combination", "ohms-law", "joules-heating-law"]
+tags: ["parallel circuit", "equivalent resistance", "household wiring"]
+---
+
+Household appliances are wired in parallel so each receives the full mains voltage and can be switched independently.

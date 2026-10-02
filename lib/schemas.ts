@@ -21,6 +21,12 @@ export const referenceFormulaSchema = z.object({
   note_bn: z.string().optional()
 });
 
+export const derivationStepSchema = z.object({
+  step_en: z.string().min(1),
+  step_bn: z.string().min(1),
+  latex: z.string().optional()
+});
+
 export const equationFrontmatterSchema = z.object({
   type: z.literal('equation').default('equation'),
   slug: z.string().min(1),
@@ -38,6 +44,7 @@ export const equationFrontmatterSchema = z.object({
   reference_note_bn: z.string().optional(),
   derivation: z.string().min(1),
   derivation_bn: z.string().optional(),
+  derivation_steps: z.array(derivationStepSchema).default([]),
   summary_en: z.string().optional(),
   summary_bn: z.string().optional(),
   related: z.array(z.string()).default([]),

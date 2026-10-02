@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "capillary-rise"
+title_bn: "কৈশিক উত্তোলনের সমীকরণ"
+title_en: "Capillary rise in a narrow tube"
+subject: physics
+level: class-9-10
+chapter: "State of Matter and Pressure"
+chapter_bn: "পদার্থের অবস্থা ও চাপ"
+latex: "h = \\frac{2T\\cos\\theta}{r\\rho g}"
+calculator: false
+variables:
+  - symbol: "h"
+    name: "height of capillary rise"
+    name_bn: "কৈশিক উত্তোলনের উচ্চতা"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "T"
+    name: "surface tension"
+    name_bn: "পৃষ্ঠটান"
+    unit: "N/m"
+    si_unit: "N/m"
+  - symbol: "θ"
+    name: "angle of contact"
+    name_bn: "সংস্পর্শ কোণ"
+    unit: "°"
+    si_unit: "rad"
+  - symbol: "r"
+    name: "tube radius"
+    name_bn: "নলের ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "ρ"
+    name: "liquid density"
+    name_bn: "তরলের ঘনত্ব"
+    unit: "kg/m³"
+    si_unit: "kg/m³"
+derivation: "The upward vertical component of the surface-tension force acting around the circular liquid meniscus (circumference 2πr) balances the weight of the raised liquid column of height h."
+derivation_bn: "নলের ভেতরের তরল স্তম্ভের ওজন এবং মুক্ত পৃষ্ঠের পৃষ্ঠটানের উল্লম্ব উপাংশের ভারসাম্য থেকে কৈশিক উত্তোলনের সমীকরণ প্রতিপাদন করা যায়।"
+derivation_steps:
+  - step_en: "Find the total upward force from the vertical component of surface tension around the circumference 2πr."
+    step_bn: "নলের পরিধি 2πr বরাবর পৃষ্ঠটানের উল্লম্ব উপাংশ থেকে ঊর্ধ্বমুখী বল বের করুন।"
+    latex: "F_{\\text{up}} = 2\\pi r T\\cos\\theta"
+  - step_en: "Equate this to the weight W = mg = πr²hρg of the suspended column, ignoring the meniscus volume."
+    step_bn: "ভরসাম্যের শর্তে এই বলকে উত্তোলিত তরল স্তম্ভের ওজনের সমান ধরুন।"
+    latex: "2\\pi r T\\cos\\theta = \\pi r^2 h \\rho g"
+  - step_en: "Cancel πr and solve for the rise height h."
+    step_bn: "πr বাতিল করে উচ্চতা h নির্ণয় করুন।"
+    latex: "h = \\frac{2T\\cos\\theta}{r\\rho g}"
+summary_en: "Predict how far a wetting liquid climbs in a narrow tube."
+summary_bn: "সরু নলে কৈশিকতার কারণে তরল কত উচ্চতা পর্যন্ত উঠবে তা নির্ণয়।"
+related: ["surface-tension-force", "liquid-column-pressure"]
+tags: ["capillarity", "surface tension", "meniscus", "jurin law"]
+---
+
+Height is inversely proportional to tube radius, so finer capillaries lift water higher; mercury ($\theta \approx 140^\circ$) is depressed instead.

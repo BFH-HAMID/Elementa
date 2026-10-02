@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "first-law-thermodynamics"
+title_bn: "তাপগতিবিদ্যার প্রথম সূত্র"
+title_en: "First law of thermodynamics"
+subject: physics
+level: class-11-12
+chapter: "Thermodynamics"
+chapter_bn: "তাপগতিবিদ্যা"
+latex: "\\Delta U = Q - W"
+calculator: false
+variables:
+  - symbol: "ΔU"
+    name: "change in internal energy"
+    name_bn: "অভ্যন্তরীণ শক্তির পরিবর্তন"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "Q"
+    name: "heat supplied to the system"
+    name_bn: "সিস্টেমে সরবরাহকৃত তাপ"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "W"
+    name: "work done by the system"
+    name_bn: "সিস্টেম কর্তৃক কৃতকাজ"
+    unit: "J"
+    si_unit: "J"
+derivation: "The first law is the principle of energy conservation applied to thermodynamic systems: supplied heat either raises the internal energy or leaves the system as work done on the surroundings."
+derivation_bn: "তাপগতিবিদ্যার প্রথম সূত্র আসলে তাপীয় সিস্টেমে প্রয়োগকৃত শক্তির সংরক্ষণশীলতা। সরবরাহকৃত তাপ হয় সিস্টেমের অভ্যন্তরীণ শক্তি বাড়ায়, নয়তো বাইরে কাজ সম্পাদনে ব্যয় হয়।"
+derivation_steps:
+  - step_en: "State energy conservation for a closed system gaining heat Q and doing work W."
+    step_bn: "বদ্ধ সিস্টেমের জন্য তাপ গ্রহণ Q এবং কাজ W করার শক্তি-সংরক্ষণ সমীকরণ লিখুন।"
+    latex: "Q = \\Delta U + W"
+  - step_en: "Rearrange to isolate the internal energy change."
+    step_bn: "অভ্যন্তরীণ শক্তির পরিবর্তন আলাদা করে পক্ষান্তর করুন।"
+    latex: "\\Delta U = Q - W"
+  - step_en: "For a quasi-static process, write the work term as the integral of P dV."
+    step_bn: "ধীর প্রক্রিয়ায় কাজের পদটি P dV-এর সমাকলন হিসেবে লিখুন।"
+    latex: "\\Delta U = Q - \\int P\\,dV"
+summary_en: "Track energy flow between heat, internal energy and mechanical work."
+summary_bn: "তাপ, অভ্যন্তরীণ শক্তি ও যান্ত্রিক কাজের মধ্যে শক্তির প্রবাহ বিশ্লেষণ।"
+related: ["isothermal-work", "adiabatic-relation", "heat-engine-efficiency"]
+tags: ["first law", "thermodynamics", "internal energy", "energy conservation"]
+---
+
+Sign convention matters: if work is done *on* the system, the law is written $\Delta U = Q + W_{\text{on}}$.

@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "carnot-engine-efficiency"
+title_bn: "কার্নো ইঞ্জিনের কর্মদক্ষতা"
+title_en: "Carnot engine efficiency"
+subject: physics
+level: class-11-12
+chapter: "Thermodynamics"
+chapter_bn: "তাপগতিবিদ্যা"
+latex: "\\eta_{\\text{Carnot}} = 1 - \\frac{T_C}{T_H}"
+calculator: false
+variables:
+  - symbol: "η_Carnot"
+    name: "maximum possible efficiency"
+    name_bn: "সর্বাধিক সম্ভব কর্মদক্ষতা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "T_C"
+    name: "cold reservoir temperature"
+    name_bn: "শীতল উৎসের তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "T_H"
+    name: "hot reservoir temperature"
+    name_bn: "উষ্ণ উৎসের তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+derivation: "For a reversible engine the heat exchanged with each reservoir is proportional to reservoir temperature, Q_C/Q_H = T_C/T_H. Substituting this into the general efficiency expression gives the Carnot limit."
+derivation_bn: "প্রত্যাবর্তী ইঞ্জিনের ক্ষেত্রে তাপ বিনিময়ের অনুপাত উষ্ণায়তনিক তাপমাত্রার অনুপাতের সমান, অর্থাৎ Q_C/Q_H = T_C/T_H। সাধারণ কর্মদক্ষতার রাশিতে বসিয়ে কার্নো সীমা পাওয়া যায়।"
+derivation_steps:
+  - step_en: "For the reversible isothermal steps of a Carnot cycle, equate heat ratios with temperature ratios."
+    step_bn: "কার্নো চক্রের প্রত্যাবর্তী সমোষ্ণ ধাপগুলোর জন্য তাপ ও তাপমাত্রার অনুপাত সমান করুন।"
+    latex: "\\frac{Q_C}{Q_H} = \\frac{T_C}{T_H}"
+  - step_en: "Insert this into the general heat-engine efficiency expression."
+    step_bn: "সাধারণ কর্মদক্ষতার সমীকরণে এই অনুপাত বসান।"
+    latex: "\\eta = 1 - \\frac{Q_C}{Q_H} = 1 - \\frac{T_C}{T_H}"
+  - step_en: "Note that temperatures must be in kelvin, and that equality holds only for reversible engines."
+    step_bn: "মনে রাখবেন তাপমাত্রা কেলভিনে হতে হবে এবং সমতা কেবল প্রত্যাবর্তী ইঞ্জিনের জন্য প্রযোজ্য।"
+    latex: "\\eta_{\\text{real}} < 1 - \\frac{T_C}{T_H}"
+summary_en: "Find the theoretical upper limit on any heat engine’s efficiency."
+summary_bn: "যেকোনো তাপ ইঞ্জিনের তাত্ত্বিক সর্বোচ্চ কর্মদক্ষতা নির্ণয়।"
+related: ["heat-engine-efficiency", "adiabatic-relation", "first-law-thermodynamics"]
+tags: ["carnot", "efficiency", "second law", "reversible"]
+---
+
+A steam engine between 373 K and 293 K has a Carnot ceiling of only $\eta \approx 21\%$.

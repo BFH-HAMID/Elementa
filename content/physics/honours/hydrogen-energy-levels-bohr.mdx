@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "hydrogen-energy-levels-bohr"
+title_bn: "হাইড্রোজেন পরমাণুর শক্তিস্তর"
+title_en: "Energy levels of the hydrogen atom"
+subject: physics
+level: honours
+chapter: "Atomic Physics"
+chapter_bn: "পারমাণবিক পদার্থবিজ্ঞান"
+latex: "E_n = -\\frac{me^4}{8\\varepsilon_0^2 h^2}\\cdot\\frac{1}{n^2} = -\\frac{13.6}{n^2}\\ \\text{eV}"
+calculator: false
+variables:
+  - symbol: "E_n"
+    name: "energy of nth level"
+    name_bn: "n-তম স্তরের শক্তি"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "n"
+    name: "principal quantum number"
+    name_bn: "প্রধান কোয়ান্টাম সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "m"
+    name: "electron mass"
+    name_bn: "ইলেকট্রনের ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "e"
+    name: "elementary charge"
+    name_bn: "মৌলিক আধান"
+    unit: "C"
+    si_unit: "C"
+  - symbol: "ε_0"
+    name: "permittivity of free space"
+    name_bn: "শূন্যস্থানের ভেদনযোগ্যতা"
+    unit: "F/m"
+    si_unit: "F/m"
+derivation: "Balancing the Coulomb attraction against the centripetal requirement, then imposing Bohr’s angular-momentum quantisation, fixes discrete radii. Substituting the allowed radii into the total energy E = K + U gives the 1/n² spectrum."
+derivation_bn: "কুলম্ব আকর্ষণকে কেন্দ্রমুখী শর্তের সাথে সাম্য করে বোরের কৌণিক ভরবেগ কোয়ান্টায়ন প্রয়োগ করলে বিচ্ছিন্ন ব্যাসার্ধ পাওয়া যায়। অনুমোদিত ব্যাসার্ধ মোট শক্তি E = K + U-এ বসালে 1/n² বর্ণালী আসে।"
+derivation_steps:
+  - step_en: "Equate Coulomb attraction to centripetal force for an electron in orbit radius r."
+    step_bn: "r ব্যাসার্ধের কক্ষে ইলেকট্রনের জন্য কুলম্ব আকর্ষণ ও কেন্দ্রমুখী বল সাম্য করুন।"
+    latex: "\\frac{mv^2}{r} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{e^2}{r^2}"
+  - step_en: "Impose mvr = nħ to eliminate v and solve for the allowed radius r_n."
+    step_bn: "mvr = nħ প্রয়োগ করে v অপসারণ করুন ও অনুমোদিত ব্যাসার্ধ r_n নির্ণয় করুন।"
+    latex: "r_n = \\frac{n^2\\varepsilon_0 h^2}{\\pi m e^2}"
+  - step_en: "Write total energy E = K + U with K = e²/(8πε_0 r) and U = −e²/(4πε_0 r), then substitute r_n."
+    step_bn: "E = K + U লিখুন যেখানে K = e²/(8πε_0 r) ও U = −e²/(4πε_0 r), তারপর r_n বসান।"
+    latex: "E_n = -\\frac{me^4}{8\\varepsilon_0^2 h^2}\\cdot\\frac{1}{n^2} \\approx -\\frac{13.6}{n^2}\\ \\text{eV}"
+summary_en: "Predict hydrogen’s spectral lines from quantised energy levels."
+summary_bn: "কোয়ান্টায়িত শক্তিস্তর থেকে হাইড্রোজেনের বর্ণালী রেখা নির্ণয়।"
+related: ["bohr-quantization-angular-momentum", "photoelectric-effect-equation", "rydberg-equation-hydrogen"]
+tags: ["hydrogen", "bohr", "energy levels", "honours"]
+---
+
+Transitions between levels give photon energies $hf = E_{n_i} - E_{n_f}$, reproducing the Balmer series.

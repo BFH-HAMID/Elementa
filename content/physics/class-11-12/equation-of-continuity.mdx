@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "equation-of-continuity"
+title_bn: "প্রবাহের ধারাবাহিকতা সমীকরণ"
+title_en: "Equation of continuity for fluid flow"
+subject: physics
+level: class-11-12
+chapter: "Fluid Dynamics"
+chapter_bn: "প্রবাহী গতিবিদ্যা"
+latex: "A_1 v_1 = A_2 v_2 \\implies \\rho A v = \\text{constant}"
+calculator: false
+variables:
+  - symbol: "A_1"
+    name: "cross-section at inlet"
+    name_bn: "প্রবেশপথের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+  - symbol: "v_1"
+    name: "flow speed at inlet"
+    name_bn: "প্রবেশপথে বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "A_2"
+    name: "cross-section at outlet"
+    name_bn: "নির্গমপথের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+  - symbol: "ρ"
+    name: "fluid density"
+    name_bn: "প্রবাহীর ঘনত্ব"
+    unit: "kg/m³"
+    si_unit: "kg/m³"
+derivation: "For steady flow of an incompressible fluid, mass cannot accumulate inside a fixed control volume, so the mass flow rate entering must equal the mass leaving."
+derivation_bn: "অসংকোচনীয় প্রবাহীর স্থির প্রবাহে কোনো নির্দিষ্ট আয়তনে ভর জমা হতে পারে না, তাই প্রবেশকৃত ও নির্গত ভরের হার সমান হতে হবে।"
+derivation_steps:
+  - step_en: "Write the mass flow rate through a cross-section of area A as ρAv."
+    step_bn: "A ক্ষেত্রফলের মধ্য দিয়ে ভর প্রবাহের হার ρAv লিখুন।"
+    latex: "\\dot{m} = \\rho A v"
+  - step_en: "Equate the mass flow rates at two sections for steady incompressible flow."
+    step_bn: "স্থির ও অসংকোচনীয় প্রবাহে দুই প্রস্থচ্ছেদের ভর প্রবাহের হার সমান করুন।"
+    latex: "\\rho A_1 v_1 = \\rho A_2 v_2"
+  - step_en: "Cancel the constant density ρ to obtain the familiar area–speed relation."
+    step_bn: "ধ্রুব ঘনত্ব ρ বাতিল করে ক্ষেত্রফল-বেগের সম্পর্ক পান।"
+    latex: "A_1 v_1 = A_2 v_2"
+summary_en: "Predict how fluid speed changes when a pipe narrows or widens."
+summary_bn: "নল সরু বা চওড়া হলে প্রবাহীর বেগ কীভাবে বদলায় তা নির্ণয়।"
+related: ["bernoulli-equation", "torricelli-theorem"]
+tags: ["continuity", "mass conservation", "fluid flow", "incompressible"]
+---
+
+For a compressible fluid the conserved quantity is the full mass flux $\rho A v$, not just $Av$.

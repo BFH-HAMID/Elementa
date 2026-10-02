@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "wien-displacement-law"
+title_bn: "উইনের সরণ সূত্র"
+title_en: "Wien’s displacement law"
+subject: physics
+level: class-11-12
+chapter: "Thermal Radiation"
+chapter_bn: "তাপীয় বিকিরণ"
+latex: "\\lambda_{\\max} T = b \\approx 2.898 \\times 10^{-3}\\ \\text{m K}"
+calculator: false
+variables:
+  - symbol: "λ_max"
+    name: "peak emission wavelength"
+    name_bn: "সর্বাধিক বিকিরণের তরঙ্গদৈর্ঘ্য"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "T"
+    name: "absolute temperature"
+    name_bn: "পরম তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "b"
+    name: "Wien’s displacement constant"
+    name_bn: "উইনের সরণ ধ্রুবক"
+    unit: "m K"
+    si_unit: "m K"
+derivation: "Maximising Planck’s blackbody spectral radiance with respect to wavelength gives a transcendental equation whose numerical solution (x ≈ 4.965) yields the inverse relation between peak wavelength and temperature."
+derivation_bn: "প্ল্যাঙ্কের বর্ণালী বিকিরণ রাশিকে তরঙ্গদৈর্ঘ্যের সাপেক্ষে চরমীকরণ করলে একটি অতিক্রমী সমীকরণ পাওয়া যায়, যার সংখ্যাসূচক সমাধান (x ≈ ৪.৯৬৫) থেকে তরঙ্গদৈর্ঘ্য ও তাপমাত্রার ব্যস্ত সম্পর্ক নির্ণীত হয়।"
+derivation_steps:
+  - step_en: "Write Planck’s spectral radiance as a function of wavelength λ and temperature T."
+    step_bn: "প্ল্যাঙ্কের বর্ণালী বিকিরণ রাশি তরঙ্গদৈর্ঘ্য ও তাপমাত্রার অপেক্ষক হিসেবে লিখুন।"
+    latex: "B_\\lambda = \\frac{2hc^2}{\\lambda^5}\\frac{1}{e^{hc/(\\lambda k_BT)} - 1}"
+  - step_en: "Set dB_λ/dλ = 0 and substitute x = hc/(λk_BT)."
+    step_bn: "dB_λ/dλ = 0 ধরে x = hc/(λk_BT) প্রতিস্থাপন করুন।"
+    latex: "\\frac{x e^x}{e^x - 1} = 5"
+  - step_en: "Solving numerically gives x ≈ 4.965, so λ_max T = hc/(k_B x) is constant."
+    step_bn: "সংখ্যাসূচক সমাধান x ≈ ৪.৯৬৫ দেয়, ফলে λ_max T = hc/(k_B x) ধ্রুব হয়।"
+    latex: "\\lambda_{\\max}T = \\frac{hc}{4.965\\,k_B} \\approx 2.898\\times 10^{-3}\\ \\text{m K}"
+summary_en: "Find the colour (peak wavelength) of light emitted by a hot object."
+summary_bn: "উত্তপ্ত বস্তুর বিকিরণের প্রধান তরঙ্গদৈর্ঘ্য বা বর্ণ নির্ণয়।"
+related: ["stefan-boltzmann-law", "modern-physics-formula-sheet"]
+tags: ["wien", "blackbody", "radiation", "planck"]
+---
+
+The Sun’s surface at ~5800 K peaks near 500 nm, which is why our eyes are most sensitive to green light.

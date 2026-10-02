@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "beats-frequency"
+title_bn: "বিস্পন্দনের কম্পাঙ্ক"
+title_en: "Beat frequency of two superposed waves"
+subject: physics
+level: class-11-12
+chapter: "Waves"
+chapter_bn: "তরঙ্গ"
+latex: "f_{\\text{beat}} = |f_1 - f_2|"
+calculator: false
+variables:
+  - symbol: "f_beat"
+    name: "beat frequency"
+    name_bn: "বিস্পন্দন কম্পাঙ্ক"
+    unit: "Hz"
+    si_unit: "Hz"
+  - symbol: "f_1"
+    name: "frequency of first wave"
+    name_bn: "প্রথম তরঙ্গের কম্পাঙ্ক"
+    unit: "Hz"
+    si_unit: "Hz"
+  - symbol: "f_2"
+    name: "frequency of second wave"
+    name_bn: "দ্বিতীয় তরঙ্গের কম্পাঙ্ক"
+    unit: "Hz"
+    si_unit: "Hz"
+derivation: "Superposing two close frequencies gives a resultant whose slowly varying amplitude envelope has angular frequency (ω_1 − ω_2)/2. Loudness maxima occur twice per envelope cycle, so the beat rate is |f_1 − f_2|."
+derivation_bn: "নিকটবর্তী দুই কম্পাঙ্কের তরঙ্গ উপরিপাতিত করলে ধীরে পরিবর্তনশীল বিস্তার খামের কৌণিক কম্পাঙ্ক (ω_1 − ω_2)/2 হয়। প্রতি খাম-চক্রে দুইবার শব্দের তীব্রতা সর্বাধিক হয়, তাই বিস্পন্দন হার |f_1 − f_2|।"
+derivation_steps:
+  - step_en: "Add two waves of equal amplitude with slightly different angular frequencies."
+    step_bn: "সামান্য ভিন্ন কৌণিক কম্পাঙ্কের সমবিস্তার দুটি তরঙ্গ যোগ করুন।"
+    latex: "y = A\\sin(\\omega_1 t) + A\\sin(\\omega_2 t)"
+  - step_en: "Apply the sum-to-product identity to reveal a fast carrier and slow envelope."
+    step_bn: "যোগফল-থেকে-গুণফল অভেদ প্রয়োগ করে দ্রুত বাহক ও ধীর খাম পৃথক করুন।"
+    latex: "y = 2A\\cos\\left(\\frac{\\omega_1 - \\omega_2}{2}t\\right)\\sin\\left(\\frac{\\omega_1 + \\omega_2}{2}t\\right)"
+  - step_en: "Count intensity maxima per second: |ω_1 − ω_2|/(2π) × 2 gives the beat frequency."
+    step_bn: "প্রতি সেকেন্ডে তীব্রতার চরম সংখ্যা গণনা করুন: |ω_1 − ω_2|/(2π) × 2।"
+    latex: "f_{\\text{beat}} = \\frac{|\\omega_1 - \\omega_2|}{2\\pi}\\times\\frac{2}{2} = |f_1 - f_2|"
+summary_en: "Use beats to tune instruments by matching two close frequencies."
+summary_bn: "দুটি নিকটবর্তী কম্পাঙ্কের বিস্পন্দন ব্যবহার করে বাদ্যযন্ত্র সুর মেলানো।"
+related: ["superposition-standing-wave", "wave-speed"]
+tags: ["beats", "superposition", "tuning", "interference"]
+---
+
+Human ears detect beats only up to roughly 10 Hz; faster differences are heard as roughness.

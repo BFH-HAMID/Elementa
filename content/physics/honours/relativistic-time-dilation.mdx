@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "relativistic-time-dilation"
+title_bn: "আপেক্ষিক সময় প্রসারণ"
+title_en: "Relativistic time dilation"
+subject: physics
+level: honours
+chapter: "Special Relativity"
+chapter_bn: "বিশেষ আপেক্ষিকতা"
+latex: "\\Delta t = \\gamma\\Delta t_0 = \\frac{\\Delta t_0}{\\sqrt{1 - v^2/c^2}}"
+calculator: false
+variables:
+  - symbol: "Δt"
+    name: "interval measured by moving observer"
+    name_bn: "চলমান পর্যবেক্ষকের মাপা সময়"
+    unit: "s"
+    si_unit: "s"
+  - symbol: "Δt_0"
+    name: "proper time interval"
+    name_bn: "স্বকীয় সময় ব্যবধান"
+    unit: "s"
+    si_unit: "s"
+  - symbol: "γ"
+    name: "Lorentz factor"
+    name_bn: "লরেন্টজ ফ্যাক্টর"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "v"
+    name: "relative speed"
+    name_bn: "আপেক্ষিক বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+derivation: "The speed of light is the same in all inertial frames. For a light clock moving sideways, the light path length is longer in the lab frame, so the tick interval must be longer by the Lorentz factor γ."
+derivation_bn: "সকল জড় প্রসঙ্গ কাঠামোতে আলোর বেগ সমান। পার্শ্বীয়ভাবে চলমান আলো ঘড়িতে গবেষণাগার কাঠামোতে আলোর পথ দীর্ঘতর, তাই টিক ব্যবধান লরেন্টজ ফ্যাক্টর γ দ্বারা দীর্ঘ হয়।"
+derivation_steps:
+  - step_en: "In the clock’s rest frame a light pulse travels 2L between mirrors in time Δt_0 = 2L/c."
+    step_bn: "ঘড়ির স্বকীয় কাঠামোতে আলো দুই দর্পণের মধ্যে 2L পথ যায়, সময় Δt_0 = 2L/c।"
+    latex: "\\Delta t_0 = \\frac{2L}{c}"
+  - step_en: "In the lab frame the clock moves vΔt/2 during each half tick, giving a diagonal path."
+    step_bn: "গবেষণাগার কাঠামোতে ঘড়ি প্রতি অর্ধ-টিকে vΔt/2 সরে, ফলে পথ তির্যক হয়।"
+    latex: "\\left(\\frac{c\\Delta t}{2}\\right)^2 = L^2 + \\left(\\frac{v\\Delta t}{2}\\right)^2"
+  - step_en: "Solve for Δt and substitute Δt_0 = 2L/c."
+    step_bn: "Δt-এর জন্য সমাধান করে Δt_0 = 2L/c বসান।"
+    latex: "\\Delta t = \\frac{2L/c}{\\sqrt{1 - v^2/c^2}} = \\gamma\\Delta t_0"
+summary_en: "Compute how moving clocks run slow compared with stationary ones."
+summary_bn: "চলমান ঘড়ি স্থির ঘড়ির তুলনায় কত ধীরে চলে তা নির্ণয়।"
+related: ["relativistic-length-contraction", "mass-energy-equivalence"]
+tags: ["time dilation", "relativity", "lorentz factor", "honours"]
+---
+
+GPS satellites must correct for both special and general relativistic time offsets every day.

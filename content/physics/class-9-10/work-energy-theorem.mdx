@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "work-energy-theorem"
+title_bn: "কাজ-শক্তি উপপাদ্য"
+title_en: "Work–energy theorem"
+subject: physics
+level: class-9-10
+chapter: "Work, Power and Energy"
+chapter_bn: "কাজ, ক্ষমতা ও শক্তি"
+latex: "W_{\\text{net}} = \\Delta E_k = \\frac{1}{2}mv^2 - \\frac{1}{2}mu^2"
+calculator: false
+variables:
+  - symbol: "W_net"
+    name: "net work done by all forces"
+    name_bn: "সব বলের লব্ধি কৃতকাজ"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "ΔE_k"
+    name: "change in kinetic energy"
+    name_bn: "গতিশক্তির পরিবর্তন"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "m"
+    name: "mass of the body"
+    name_bn: "বস্তুর ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "u"
+    name: "initial speed"
+    name_bn: "আদি দ্রুতি"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "v"
+    name: "final speed"
+    name_bn: "শেষ দ্রুতি"
+    unit: "m/s"
+    si_unit: "m/s"
+derivation: "The net work is the line integral of the resultant force along the displacement. Substituting F = ma and using the constant-acceleration identity v² = u² + 2as converts that work directly into the change of kinetic energy."
+derivation_bn: "লব্ধি কৃতকাজ হলো সরণ বরাবর লব্ধি বলের রেখা-সমাকলন। F = ma বসিয়ে এবং সুষম ত্বরণের অভেদ v² = u² + 2as ব্যবহার করলে কাজ সরাসরি গতিশক্তির পরিবর্তনে রূপান্তরিত হয়."
+derivation_steps:
+  - step_en: "Write the net work as force times displacement for a constant resultant force."
+    step_bn: "ধ্রুব লব্ধি বলের জন্য কাজকে বল × সরণ হিসেবে লিখুন।"
+    latex: "W_{\\text{net}} = (ma)s"
+  - step_en: "Replace as using the third equation of motion, as = (v² − u²)/2."
+    step_bn: "গতির তৃতীয় সমীকরণ থেকে as = (v² − u²)/2 বসান।"
+    latex: "W_{\\text{net}} = m\\frac{v^2 - u^2}{2} = \\frac{1}{2}mv^2 - \\frac{1}{2}mu^2"
+  - step_en: "Recognise the right-hand side as the change in kinetic energy."
+    step_bn: "ডান পক্ষটিকে গতিশক্তির পরিবর্তন হিসেবে চিহ্নিত করুন।"
+    latex: "W_{\\text{net}} = \\Delta E_k"
+summary_en: "Connect net work on a body directly to its change in kinetic energy."
+summary_bn: "বস্তুর ওপর লব্ধি কৃতকাজ ও গতিশক্তির পরিবর্তনের সরাসরি সম্পর্ক।"
+related: ["kinetic-energy", "work-done", "gravitational-potential-energy"]
+tags: ["work energy theorem", "kinetic energy", "net work"]
+---
+
+The theorem also holds for variable forces if the work is evaluated as $W = \int \vec{F}\cdot d\vec{s}$.

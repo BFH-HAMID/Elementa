@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "elastic-potential-energy"
+title_bn: "স্প্রিংয়ে সঞ্চিত স্থিতিস্থাপক বিভবশক্তি"
+title_en: "Elastic potential energy stored in a spring"
+subject: physics
+level: class-9-10
+chapter: "Work, Power and Energy"
+chapter_bn: "কাজ, ক্ষমতা ও শক্তি"
+latex: "U = \\frac{1}{2}kx^2 = \\frac{1}{2}F_s x"
+calculator: false
+variables:
+  - symbol: "U"
+    name: "elastic potential energy"
+    name_bn: "স্থিতিস্থাপক বিভবশক্তি"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "k"
+    name: "spring constant"
+    name_bn: "স্প্রিং ধ্রুবক"
+    unit: "N/m"
+    si_unit: "N/m"
+  - symbol: "x"
+    name: "extension or compression"
+    name_bn: "প্রসারণ বা সংকোচন"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "F_s"
+    name: "restoring force"
+    name_bn: "প্রত্যয়নী বল"
+    unit: "N"
+    si_unit: "N"
+derivation: "The restoring force F = kx grows linearly from zero as the spring is stretched. Work done equals the area under the linear force–extension graph, i.e. the average force (½kx) multiplied by extension x."
+derivation_bn: "প্রসারণ শূন্য থেকে x পর্যন্ত বাড়ালে প্রত্যয়নী বল kx রৈখিকভাবে বাড়ে। বল-প্রসারণ লেখের নিচের ক্ষেত্রফল বা গড় বল ½kx কে x দিয়ে গুণ করলে সঞ্চিত শক্তি পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Set up the work integral of the variable restoring force from extension 0 to x."
+    step_bn: "শূন্য থেকে x প্রসারণে পরিবর্তনশীল প্রত্যয়নী বলের কাজের সমাকলন লিখুন।"
+    latex: "U = W = \\int_0^{x} F_s\\,dx' = \\int_0^{x} kx'\\,dx'"
+  - step_en: "Evaluate the integral of the linear force function."
+    step_bn: "রৈখিক বলের সমাকলন সমাধান করে মান বের করুন।"
+    latex: "U = k\\left[\\frac{x'^2}{2}\\right]_0^{x} = \\frac{1}{2}kx^2"
+  - step_en: "Since F_s = kx at full extension, write the energy as half the product of final force and extension."
+    step_bn: "পূর্ণ প্রসারণে F_s = kx হলে রাশিটিকে বল ও প্রসারণের গুণফলের অর্ধেক হিসেবে লিখুন।"
+    latex: "U = \\frac{1}{2}(kx)x = \\frac{1}{2}F_s x"
+summary_en: "Find the recoverable energy stored in a stretched or compressed spring."
+summary_bn: "প্রসারিত বা সংকুচিত স্প্রিংয়ে সঞ্চিত স্থিতিস্থাপক শক্তির পরিমাণ নির্ণয়।"
+related: ["hookes-law-spring", "kinetic-energy", "simple-harmonic-motion"]
+tags: ["elastic energy", "spring", "work", "potential energy"]
+---
+
+This stored energy converts completely into kinetic energy at the equilibrium position, giving $v_{\max} = x\sqrt{k/m}$.

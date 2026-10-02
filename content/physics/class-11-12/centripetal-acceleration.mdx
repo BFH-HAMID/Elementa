@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "centripetal-acceleration"
+title_bn: "কেন্দ্রমুখী ত্বরণের সমীকরণ"
+title_en: "Centripetal acceleration in uniform circular motion"
+subject: physics
+level: class-11-12
+chapter: "Rotational Motion"
+chapter_bn: "ঘূর্ণন গতি"
+latex: "a_c = \\frac{v^2}{r} = \\omega^2 r"
+calculator: false
+variables:
+  - symbol: "a_c"
+    name: "centripetal acceleration"
+    name_bn: "কেন্দ্রমুখী ত্বরণ"
+    unit: "m/s²"
+    si_unit: "m/s²"
+  - symbol: "v"
+    name: "linear (tangential) speed"
+    name_bn: "রৈখিক বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "r"
+    name: "radius of the circle"
+    name_bn: "বৃত্তের ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "ω"
+    name: "angular velocity"
+    name_bn: "কৌণিক বেগ"
+    unit: "rad/s"
+    si_unit: "rad/s"
+derivation: "Even at constant speed, the velocity direction rotates. The velocity vectors at two nearby instants form similar triangles with the corresponding radii, giving the magnitude of the inward acceleration as v²/r."
+derivation_bn: "সুষম বৃত্তীয় গতিতে দ্রুতি ধ্রুব হলেও বেগের দিক পরিবর্তিত হয়। সামান্য সময় ব্যবধানে বেগ ভেক্টর ও সংশ্লিষ্ট ব্যাসার্ধ দ্বারা গঠিত সদৃশ ত্রিভুজ থেকে কেন্দ্রমুখী ত্বরণ a_c = v²/r প্রতিপাদন করা যায়।"
+derivation_steps:
+  - step_en: "Velocity vectors at times t and t + Δt have equal magnitude v but differ by angle Δθ; the vector change is Δv ≈ vΔθ."
+    step_bn: "t ও t + Δt সময়ে সমমানের বেগ ভেক্টরের মধ্যবর্তী কোণ Δθ হলে বেগের পরিবর্তন Δv ≈ vΔθ।"
+    latex: "|\\Delta \\vec{v}| \\approx v\\Delta\\theta"
+  - step_en: "Divide by Δt and use the angular velocity definition ω = Δθ/Δt."
+    step_bn: "Δt দ্বারা ভাগ করে কৌণিক বেগ ω = Δθ/Δt ব্যবহার করুন।"
+    latex: "a_c = \\frac{|\\Delta \\vec{v}|}{\\Delta t} = v\\omega"
+  - step_en: "Substitute v = ωr to express the acceleration in terms of angular speed or linear speed."
+    step_bn: "v = ωr প্রতিস্থাপন করে দুই রূপের সমীকরণ পান।"
+    latex: "a_c = \\omega^2 r = \\frac{v^2}{r}"
+summary_en: "Quantify the inward acceleration required to keep a body on a circular path."
+summary_bn: "বৃত্তাকার পথে বস্তুকে ধরে রাখতে প্রয়োজনীয় কেন্দ্রমুখী ত্বরণ নির্ণয়।"
+related: ["centripetal-force", "angular-velocity-acceleration", "banking-angle-road"]
+tags: ["centripetal", "circular motion", "acceleration", "rotation"]
+---
+
+The acceleration direction is always radially inward, perpendicular to the instantaneous tangential velocity.

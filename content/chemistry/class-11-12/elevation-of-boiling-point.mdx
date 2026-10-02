@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "elevation-of-boiling-point"
+title_bn: "স্ফুটনাঙ্কের উন্নয়ন"
+title_en: "Elevation of boiling point"
+subject: chemistry
+level: class-11-12
+chapter: "Colligative Properties"
+chapter_bn: "সমষ্টিগত ধর্ম"
+latex: "\\Delta T_b = i K_b m"
+calculator: false
+variables:
+  - symbol: "ΔT_b"
+    name: "boiling-point elevation"
+    name_bn: "স্ফুটনাঙ্ক বৃদ্ধি"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "i"
+    name: "van’t Hoff factor"
+    name_bn: "ভ্যান্ট হফ গুণক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "K_b"
+    name: "ebullioscopic constant"
+    name_bn: "স্ফুটনাঙ্ক উন্নয়ন ধ্রুবক"
+    unit: "K kg/mol"
+    si_unit: "K kg/mol"
+  - symbol: "m"
+    name: "molality of solution"
+    name_bn: "দ্রবণের মোলালিটি"
+    unit: "mol/kg"
+    si_unit: "mol/kg"
+derivation: "A non-volatile solute lowers the vapour pressure, so the liquid must be heated further before its vapour pressure reaches atmospheric pressure. For dilute solutions the required extra temperature is proportional to molality."
+derivation_bn: "অ-উদ্বায়ী দ্রাব বাষ্পচাপ কমিয়ে দেয়, তাই বাষ্পচাপ বায়ুমণ্ডলীয় চাপে পৌঁছাতে তরলকে আরও গরম করতে হয়। লঘু দ্রবণের জন্য অতিরিক্ত তাপমাত্রা মোলালিটির সমানুপাতিক।"
+derivation_steps:
+  - step_en: "Write Raoult’s law for the solvent with a non-volatile solute present."
+    step_bn: "অ-উদ্বায়ী দ্রাব উপস্থিতিতে দ্রাবকের জন্য রাউল্টের সূত্র লিখুন।"
+    latex: "P_{\\text{solvent}} = x_{\\text{solvent}} P^\\circ"
+  - step_en: "For dilute solutions, ln x_solvent ≈ −x_solute, and Clausius–Clapeyron links ΔT to the pressure ratio."
+    step_bn: "লঘু দ্রবণে ln x_দ্রাবক ≈ −x_দ্রাব এবং ক্লসিয়াস-ক্ল্যাপিরন ΔT কে চাপ অনুপাতের সাথে যুক্ত করে।"
+    latex: "\\Delta T_b = \\frac{R T_b^2 M_{\\text{solvent}}}{\\Delta H_{\\text{vap}}}\\,m"
+  - step_en: "Collect constants into K_b and add the van’t Hoff factor for electrolytes."
+    step_bn: "ধ্রুবকগুলোকে K_b-তে একত্রিত করুন এবং তড়িৎবিশ্লেষ্যের জন্য ভ্যান্ট হফ গুণক যোগ করুন।"
+    latex: "\\Delta T_b = i K_b m"
+summary_en: "Calculate how much a dissolved solute raises a solvent’s boiling point."
+summary_bn: "দ্রবীভূত দ্রাব দ্রাবকের স্ফুটনাঙ্ক কতটা বাড়ায় তা নির্ণয়।"
+related: ["depression-of-freezing-point", "raoults-law", "molality-equation"]
+tags: ["boiling point elevation", "colligative", "ebullioscopy", "molality"]
+---
+
+For water $K_b \approx 0.512\ \text{K kg mol}^{-1}$; for benzene $K_b \approx 2.53\ \text{K kg mol}^{-1}$.

@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "entropy-change-reversible"
+title_bn: "প্রত্যাবর্তী প্রক্রিয়ায় এনট্রপির পরিবর্তন"
+title_en: "Entropy change in a reversible process"
+subject: chemistry
+level: class-11-12
+chapter: "Chemical Thermodynamics"
+chapter_bn: "রাসায়নিক তাপগতিবিদ্যা"
+latex: "\\Delta S = \\int \\frac{dq_{\\text{rev}}}{T}, \\qquad \\Delta S = \\frac{\\Delta H}{T}\\ \\text{(at a phase transition)}"
+calculator: false
+variables:
+  - symbol: "ΔS"
+    name: "entropy change"
+    name_bn: "এনট্রপির পরিবর্তন"
+    unit: "J/(mol K)"
+    si_unit: "J/(mol K)"
+  - symbol: "dq_rev"
+    name: "reversible heat transfer"
+    name_bn: "প্রত্যাবর্তী তাপ স্থানান্তর"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "T"
+    name: "absolute temperature"
+    name_bn: "পরম তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "ΔH"
+    name: "enthalpy of the transition"
+    name_bn: "দশা পরিবর্তনের এনথালপি"
+    unit: "J/mol"
+    si_unit: "J/mol"
+derivation: "Entropy is a state function defined by dS = dq_rev/T. For an isothermal phase change the temperature is constant, so the integral reduces to the transition enthalpy divided by that temperature."
+derivation_bn: "এনট্রপি একটি অবস্থা অপেক্ষক যা dS = dq_rev/T দ্বারা সংজ্ঞায়িত। সমোষ্ণ দশা পরিবর্তনে তাপমাত্রা ধ্রুব থাকে, তাই সমাকলনটি দশা-পরিবর্তন এনথালপিকে ঐ তাপমাত্রা দিয়ে ভাগ করার সমান হয়।"
+derivation_steps:
+  - step_en: "Start from the thermodynamic definition of entropy."
+    step_bn: "এনট্রপির তাপগতীয় সংজ্ঞা থেকে শুরু করুন।"
+    latex: "dS = \\frac{dq_{\\text{rev}}}{T}"
+  - step_en: "For an isothermal reversible step, T is constant and comes out of the integral."
+    step_bn: "সমোষ্ণ প্রত্যাবর্তী ধাপে T ধ্রুব, তাই সমাকলনের বাইরে আসে।"
+    latex: "\\Delta S = \\frac{1}{T}\\int dq_{\\text{rev}} = \\frac{q_{\\text{rev}}}{T}"
+  - step_en: "At constant pressure q_rev equals the enthalpy change ΔH, giving the transition result."
+    step_bn: "স্থির চাপে q_rev এনথালপির পরিবর্তন ΔH-এর সমান, ফলে দশা-পরিবর্তনের রূপটি পাওয়া যায়।"
+    latex: "\\Delta S = \\frac{\\Delta H}{T}"
+summary_en: "Compute entropy changes for heating and phase transitions."
+summary_bn: "উত্তাপন ও দশা পরিবর্তনে এনট্রপির পরিবর্তন নির্ণয়।"
+related: ["gibbs-free-energy-equilibrium", "chemical-thermodynamics-formula-sheet"]
+tags: ["entropy", "reversible process", "second law", "phase transition"]
+---
+
+Boiling water has $\Delta S_{\text{vap}} \approx 109\ \text{J mol}^{-1}\text{K}^{-1}$, far larger than melting ice.

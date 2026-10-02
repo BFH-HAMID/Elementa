@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "shm-angular-frequency"
+title_bn: "সরল ছন্দিত গতির কৌণিক কম্পাঙ্ক"
+title_en: "Angular frequency of a simple harmonic oscillator"
+subject: physics
+level: class-11-12
+chapter: "Oscillations"
+chapter_bn: "দোলন"
+latex: "\\omega = \\sqrt{\\frac{k}{m}} = \\frac{2\\pi}{T} = 2\\pi f"
+calculator: false
+variables:
+  - symbol: "ω"
+    name: "angular frequency"
+    name_bn: "কৌণিক কম্পাঙ্ক"
+    unit: "rad/s"
+    si_unit: "rad/s"
+  - symbol: "k"
+    name: "force constant"
+    name_bn: "বল ধ্রুবক"
+    unit: "N/m"
+    si_unit: "N/m"
+  - symbol: "m"
+    name: "oscillating mass"
+    name_bn: "দোলকের ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "T"
+    name: "time period"
+    name_bn: "পর্যায়কাল"
+    unit: "s"
+    si_unit: "s"
+derivation: "Comparing the SHM differential equation d²x/dt² = −(k/m)x with the general harmonic form d²x/dt² = −ω²x identifies ω² = k/m, which then relates to period and frequency."
+derivation_bn: "সরল ছন্দিত গতির অন্তরক সমীকরণ d²x/dt² = −(k/m)x কে সাধারণ রূপ d²x/dt² = −ω²x-এর সাথে তুলনা করলে ω² = k/m পাওয়া যায়, যা পর্যায়কাল ও কম্পাঙ্কের সাথে সম্পর্কিত।"
+derivation_steps:
+  - step_en: "Match the oscillator equation to the standard SHM form."
+    step_bn: "দোলকের সমীকরণকে আদর্শ SHM রূপের সাথে মিলিয়ে দিন।"
+    latex: "\\frac{d^2x}{dt^2} = -\\frac{k}{m}x \\equiv -\\omega^2 x \\implies \\omega^2 = \\frac{k}{m}"
+  - step_en: "Take the square root to obtain the angular frequency."
+    step_bn: "বর্গমূল নিয়ে কৌণিক কম্পাঙ্ক নির্ণয় করুন।"
+    latex: "\\omega = \\sqrt{\\frac{k}{m}}"
+  - step_en: "Since one cycle corresponds to 2π radians, relate ω to T and f."
+    step_bn: "এক পূর্ণ দোলনে ২π রেডিয়ান হওয়ায় ω কে T ও f-এর সাথে সম্পর্কিত করুন।"
+    latex: "\\omega = \\frac{2\\pi}{T} = 2\\pi f"
+summary_en: "Find oscillation frequency from stiffness and mass of the system."
+summary_bn: "দোলকের স্প্রিং ধ্রুবক ও ভর থেকে কম্পাঙ্ক ও পর্যায়কাল নির্ণয়।"
+related: ["shm-acceleration-displacement", "simple-harmonic-motion", "shm-velocity-displacement"]
+tags: ["angular frequency", "shm", "spring constant", "period"]
+---
+
+Increasing the mass lowers the frequency as $\omega \propto m^{-1/2}$ — a heavier oscillator is slower.

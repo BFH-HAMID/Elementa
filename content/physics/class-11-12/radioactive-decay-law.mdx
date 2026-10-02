@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "radioactive-decay-law"
+title_bn: "তেজস্ক্রিয় ক্ষয়ের সূত্র"
+title_en: "Radioactive decay law"
+subject: physics
+level: class-11-12
+chapter: "Modern Physics"
+chapter_bn: "আধুনিক পদার্থবিজ্ঞান"
+latex: "N = N_0 e^{-\\lambda t}, \\qquad A = \\lambda N"
+calculator: false
+variables:
+  - symbol: "N"
+    name: "number of undecayed nuclei"
+    name_bn: "অবিক্ষিপ্ত নিউক্লিয়াসের সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "N_0"
+    name: "initial number of nuclei"
+    name_bn: "প্রাথমিক নিউক্লিয়াস সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "λ"
+    name: "decay constant"
+    name_bn: "ক্ষয় ধ্রুবক"
+    unit: "s⁻¹"
+    si_unit: "s⁻¹"
+  - symbol: "t"
+    name: "elapsed time"
+    name_bn: "অতিক্রান্ত সময়"
+    unit: "s"
+    si_unit: "s"
+  - symbol: "A"
+    name: "activity"
+    name_bn: "সক্রিয়তা"
+    unit: "Bq"
+    si_unit: "Bq"
+derivation: "Nuclear decay is a random process whose probability per unit time is constant, so dN/dt = −λN. Separating variables and integrating gives the exponential decay law."
+derivation_bn: "নিউক্লিয় ক্ষয় একটি দৈব প্রক্রিয়া যার একক সময়ে সম্ভাবনা ধ্রুব, তাই dN/dt = −λN। চলক পৃথক করে সমাকলন করলে সূচকীয় ক্ষয় সূত্র পাওয়া যায়।"
+derivation_steps:
+  - step_en: "State that the decay rate is proportional to the number of nuclei present."
+    step_bn: "ক্ষয়ের হার উপস্থিত নিউক্লিয়াস সংখ্যার সমানুপাতিক লিখুন।"
+    latex: "\\frac{dN}{dt} = -\\lambda N"
+  - step_en: "Separate variables and integrate from N_0 at t = 0 to N at time t."
+    step_bn: "চলক পৃথক করে t = 0-এ N_0 থেকে t-এ N পর্যন্ত সমাকলন করুন।"
+    latex: "\\int_{N_0}^{N}\\frac{dN}{N} = -\\lambda\\int_0^t dt \\implies \\ln\\frac{N}{N_0} = -\\lambda t"
+  - step_en: "Exponentiate and define the activity as A = λN."
+    step_bn: "সূচকীয় রূপে নিন এবং সক্রিয়তা A = λN সংজ্ঞায়িত করুন।"
+    latex: "N = N_0 e^{-\\lambda t}, \\qquad A = \\lambda N"
+summary_en: "Predict how much of a radioactive sample remains after time t."
+summary_bn: "নির্দিষ্ট সময় পরে তেজস্ক্রিয় নমুনার কত অংশ অবশিষ্ট থাকবে তা নির্ণয়।"
+related: ["half-life-radioactivity", "mass-energy-equivalence"]
+tags: ["radioactivity", "exponential decay", "decay constant", "becquerel"]
+---
+
+One becquerel equals one decay per second; the older unit curie is $3.7\times10^{10}\ \text{Bq}$.

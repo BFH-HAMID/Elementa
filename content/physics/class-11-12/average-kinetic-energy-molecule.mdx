@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "average-kinetic-energy-molecule"
+title_bn: "অণুর গড় গতিশক্তি ও তাপমাত্রা"
+title_en: "Mean kinetic energy of a gas molecule"
+subject: physics
+level: class-11-12
+chapter: "Kinetic Theory of Gases"
+chapter_bn: "গ্যাসের গতীয় তত্ত্ব"
+latex: "\\overline{E_k} = \\frac{3}{2}k_BT = \\frac{3}{2}\\frac{RT}{N_A}"
+calculator: false
+variables:
+  - symbol: "E_k"
+    name: "mean translational kinetic energy"
+    name_bn: "গড় স্থানান্তরমূলক গতিশক্তি"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "k_B"
+    name: "Boltzmann constant"
+    name_bn: "বোলটজমান ধ্রুবক"
+    unit: "J/K"
+    si_unit: "J/K"
+  - symbol: "T"
+    name: "absolute temperature"
+    name_bn: "পরম তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "N_A"
+    name: "Avogadro constant"
+    name_bn: "অ্যাভোগাড্রো সংখ্যা"
+    unit: "mol⁻¹"
+    si_unit: "mol⁻¹"
+derivation: "Each translational degree of freedom contributes ½k_BT by the equipartition theorem. A gas molecule has three independent translational directions, so its mean translational kinetic energy is 3/2 k_BT."
+derivation_bn: "সমবণ্টন উপপাদ্য অনুযায়ী প্রতিটি স্থানান্তরমূলক স্বাধীনতার মাত্রায় গড় শক্তি ½k_BT। গ্যাসীয় অণুর তিনটি স্বাধীন দিক থাকায় মোট গড় গতিশক্তি 3/2 k_BT হয়।"
+derivation_steps:
+  - step_en: "Write the mean translational kinetic energy using the mean square speed."
+    step_bn: "বর্গীয় গড় বেগ ব্যবহার করে গড় গতিশক্তি লিখুন।"
+    latex: "\\overline{E_k} = \\frac{1}{2}m\\overline{c^2}"
+  - step_en: "Substitute the kinetic-theory result c̄² = 3k_BT/m."
+    step_bn: "c̄² = 3k_BT/m প্রতিস্থাপন করুন।"
+    latex: "\\overline{E_k} = \\frac{1}{2}m\\cdot\\frac{3k_BT}{m} = \\frac{3}{2}k_BT"
+  - step_en: "Use k_B = R/N_A to express the energy with molar quantities."
+    step_bn: "k_B = R/N_A ব্যবহার করে মোলার রূপে লিখুন।"
+    latex: "\\overline{E_k} = \\frac{3}{2}\\frac{RT}{N_A}"
+summary_en: "Identify absolute temperature with mean molecular kinetic energy."
+summary_bn: "পরম তাপমাত্রাকে অণুগুলোর গড় গতিশক্তির মাধ্যমে ব্যাখ্যা করুন।"
+related: ["rms-speed-gas", "kinetic-theory-pressure", "first-law-thermodynamics"]
+tags: ["equipartition", "kinetic energy", "boltzmann", "temperature"]
+---
+
+For one mole of an ideal gas, total translational internal energy is $U = \frac{3}{2}RT$.

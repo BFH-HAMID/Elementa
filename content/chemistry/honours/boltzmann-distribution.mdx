@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "boltzmann-distribution"
+title_bn: "বোলটজমান বন্টন"
+title_en: "Boltzmann distribution of energies"
+subject: chemistry
+level: honours
+chapter: "Statistical Thermodynamics"
+chapter_bn: "পরিসংখ্যানিক তাপগতিবিদ্যা"
+latex: "\\frac{N_j}{N_0} = \\frac{g_j}{g_0}e^{-(E_j - E_0)/k_BT}"
+calculator: false
+variables:
+  - symbol: "N_j"
+    name: "population of level j"
+    name_bn: "j স্তরের জনসংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "g_j"
+    name: "degeneracy of level j"
+    name_bn: "j স্তরের অবক্ষয় গুণক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "E_j"
+    name: "energy of level j"
+    name_bn: "j স্তরের শক্তি"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "k_B"
+    name: "Boltzmann constant"
+    name_bn: "বোলটজমান ধ্রুবক"
+    unit: "J/K"
+    si_unit: "J/K"
+derivation: "Maximising the number of ways of distributing N distinguishable particles among energy levels subject to fixed total particle number and energy (using Lagrange multipliers) gives an exponentially decaying population with energy."
+derivation_bn: "মোট কণা সংখ্যা ও শক্তি স্থির রেখে N সংখ্যক শনাক্তযোগ্য কণাকে শক্তিস্তরে বণ্টনের উপায় সংখ্যা চরমীকরণ করলে (ল্যাগ্রাঁজ গুণক ব্যবহারে) শক্তির সাথে সূচকীয়ভাবে হ্রাসশীল জনসংখ্যা পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Maximise ln W = ln(N! / ∏ N_j!) subject to ΣN_j = N and ΣN_j E_j = E."
+    step_bn: "ΣN_j = N ও ΣN_j E_j = E শর্তে ln W চরমীকরণ করুন।"
+    latex: "\\frac{\\partial}{\\partial N_j}\\left[\\ln W - \\alpha\\sum N_j - \\beta\\sum N_j E_j\\right] = 0"
+  - step_en: "Using Stirling’s approximation this gives N_j ∝ e^{−βE_j} with β = 1/(k_BT)."
+    step_bn: "স্টার্লিং আসন্ন মান ব্যবহার করলে N_j ∝ e^{−βE_j} পাওয়া যায় যেখানে β = 1/(k_BT)।"
+    latex: "N_j = A g_j e^{-E_j/k_BT}"
+  - step_en: "Take the ratio with the ground level to eliminate the normalisation constant."
+    step_bn: "ভূমি স্তরের সাথে অনুপাত নিয়ে স্বাভাবিকীকরণ ধ্রুবক বাতিল করুন।"
+    latex: "\\frac{N_j}{N_0} = \\frac{g_j}{g_0}e^{-(E_j - E_0)/k_BT}"
+summary_en: "Predict how molecules populate energy levels at temperature T."
+summary_bn: "তাপমাত্রা T-তে অণুগুলো কীভাবে শক্তিস্তরে বণ্টিত হয় তা নির্ণয়।"
+related: ["eyring-transition-state-equation", "arrhenius-equation", "hydrogen-energy-levels-bohr"]
+tags: ["boltzmann", "statistical mechanics", "population", "honours"]
+---
+
+This distribution explains why raising the temperature dramatically increases the fraction of molecules above the activation energy.

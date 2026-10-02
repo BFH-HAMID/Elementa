@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "resistance-series-combination"
+title_bn: "শ্রেণি সমবায়ের তুল্য রোধ"
+title_en: "Equivalent resistance in series"
+subject: physics
+level: class-9-10
+chapter: "Current Electricity"
+chapter_bn: "চল তড়িৎ"
+latex: "R_{\\text{eq}} = R_1 + R_2 + R_3 + \\dots + R_n"
+calculator: false
+variables:
+  - symbol: "R_eq"
+    name: "equivalent resistance"
+    name_bn: "তুল্য রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "R_1"
+    name: "first resistance"
+    name_bn: "প্রথম রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "R_2"
+    name: "second resistance"
+    name_bn: "দ্বিতীয় রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "I"
+    name: "common current"
+    name_bn: "সাধারণ প্রবাহমাত্রা"
+    unit: "A"
+    si_unit: "A"
+derivation: "In a series chain the same current I passes through every resistor, while the supply voltage equals the sum of the individual potential drops V = IR across each element."
+derivation_bn: "শ্রেণি সমবায়ে প্রতিটি রোধের মধ্য দিয়ে একই প্রবাহমাত্রা I যায়। এখানে প্রতিটি রোধের বিভব পার্থক্য V_i = IR_i হয় এবং সরবরাহকৃত মোট বিভব সেগুলোর সমষ্টির সমান।"
+derivation_steps:
+  - step_en: "Write the total battery voltage as the sum of individual ohmic drops sharing current I."
+    step_bn: "মোট বিভব পার্থক্যকে পৃথক পৃথক বিভব পতনের সমষ্টি হিসেবে লিখুন।"
+    latex: "V = V_1 + V_2 + V_3 = I R_1 + I R_2 + I R_3"
+  - step_en: "Factor out the common current I and replace the sum by R_eq."
+    step_bn: "সাধারণ প্রবাহমাত্রা I কমন নিন এবং V = I R_eq ধরুন।"
+    latex: "V = I(R_1 + R_2 + R_3) = I R_{\\text{eq}}"
+  - step_en: "Divide both sides by I to obtain the equivalent resistance."
+    step_bn: "উভয় পক্ষকে I দ্বারা ভাগ করলে তুল্য রোধ পাওয়া যায়।"
+    latex: "R_{\\text{eq}} = R_1 + R_2 + R_3"
+summary_en: "Find the total resistance of resistors connected end to end."
+summary_bn: "একাধিক রোধ শ্রেণিতে যুক্ত থাকলে তুল্য রোধের মান নির্ণয়।"
+related: ["resistance-parallel-combination", "ohms-law", "resistivity-formula"]
+tags: ["series circuit", "equivalent resistance", "kirchhoff"]
+---
+
+The equivalent resistance of a series chain is always larger than the largest individual resistance.

@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "molecular-formula-from-empirical"
+title_bn: "সরলতম সংকেত থেকে আণবিক সংকেত"
+title_en: "Molecular formula from the empirical formula"
+subject: chemistry
+level: class-9-10
+chapter: "Mole Concept"
+chapter_bn: "মোল ধারণা"
+latex: "k = \\frac{M_{\\text{molar}}}{M_{\\text{empirical}}}, \\qquad \\text{molecular} = (\\text{empirical})_k"
+calculator: false
+variables:
+  - symbol: "k"
+    name: "whole-number multiplier"
+    name_bn: "পূর্ণসংখ্যা গুণক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "M_molar"
+    name: "measured molar mass"
+    name_bn: "পরিমাপকৃত মোলার ভর"
+    unit: "g/mol"
+    si_unit: "kg/mol"
+  - symbol: "M_empirical"
+    name: "empirical formula mass"
+    name_bn: "সরলতম সংকেত ভর"
+    unit: "g/mol"
+    si_unit: "kg/mol"
+derivation: "The molecular formula is a whole-number multiple of the empirical formula. Dividing the true molar mass by the empirical formula mass gives that multiple."
+derivation_bn: "আণবিক সংকেত হলো সরলতম সংকেতের পূর্ণসংখ্যা গুণিতক। প্রকৃত মোলার ভরকে সরলতম সংকেত ভর দিয়ে ভাগ করলে সেই গুণক পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Compute the empirical formula mass from atomic masses."
+    step_bn: "পারমাণবিক ভর থেকে সরলতম সংকেত ভর হিসাব করুন।"
+    latex: "M_{\\text{empirical}} = \\sum n_i A_r(i)"
+  - step_en: "Divide the experimental molar mass by this value."
+    step_bn: "পরীক্ষালব্ধ মোলার ভরকে এই মান দিয়ে ভাগ করুন।"
+    latex: "k = \\frac{M_{\\text{molar}}}{M_{\\text{empirical}}}"
+  - step_en: "Multiply every subscript in the empirical formula by k (rounded to a whole number)."
+    step_bn: "সরলতম সংকেতের প্রতিটি সাবস্ক্রিপ্টকে k (পূর্ণসংখ্যায় rounded) দ্বারা গুণ করুন।"
+    latex: "\\text{molecular formula} = (\\text{empirical})_k"
+summary_en: "Scale an empirical formula up using the measured molar mass."
+summary_bn: "পরিমাপকৃত মোলার ভর ব্যবহার করে সরলতম সংকেত থেকে আণবিক সংকেত নির্ণয়।"
+related: ["empirical-formula-determination", "molecular-mass-formula"]
+tags: ["molecular formula", "empirical formula", "multiplier", "molar mass"]
+---
+
+Example: empirical CH₂O with $M = 180\ \text{g mol}^{-1}$ gives $k = 6$, so the formula is C₆H₁₂O₆.

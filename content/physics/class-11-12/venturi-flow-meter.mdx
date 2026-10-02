@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "venturi-flow-meter"
+title_bn: "ভেঞ্চুরি মিটারের সমীকরণ"
+title_en: "Venturi meter flow-rate equation"
+subject: physics
+level: class-11-12
+chapter: "Fluid Dynamics"
+chapter_bn: "প্রবাহী গতিবিদ্যা"
+latex: "Q = A_1 A_2\\sqrt{\\frac{2\\Delta P}{\\rho(A_1^2 - A_2^2)}}"
+calculator: false
+variables:
+  - symbol: "Q"
+    name: "volume flow rate"
+    name_bn: "আয়তন প্রবাহের হার"
+    unit: "m³/s"
+    si_unit: "m³/s"
+  - symbol: "A_1"
+    name: "inlet cross-section"
+    name_bn: "প্রবেশপথের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+  - symbol: "A_2"
+    name: "throat cross-section"
+    name_bn: "সংকীর্ণ অংশের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+  - symbol: "ΔP"
+    name: "pressure difference"
+    name_bn: "চাপ পার্থক্য"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "ρ"
+    name: "fluid density"
+    name_bn: "প্রবাহীর ঘনত্ব"
+    unit: "kg/m³"
+    si_unit: "kg/m³"
+derivation: "Combining the continuity equation with Bernoulli’s equation for a horizontal contraction expresses the pressure drop in terms of the flow rate through the two areas."
+derivation_bn: "অনুভূমিক সংকীর্ণ নলে ধারাবাহিকতা সমীকরণ ও বার্নোলির সমীকরণ একত্রিত করলে দুই প্রস্থচ্ছেদের ক্ষেত্রফলের মাধ্যমে প্রবাহ হার ও চাপ পার্থক্যের সম্পর্ক পাওয়া যায়।"
+derivation_steps:
+  - step_en: "From continuity, relate the throat speed to the inlet speed."
+    step_bn: "ধারাবাহিকতা সমীকরণ হতে সরু অংশের বেগ v_2 কে v_1-এর মাধ্যমে প্রকাশ করুন।"
+    latex: "A_1 v_1 = A_2 v_2 \\implies v_2 = \\frac{A_1}{A_2}v_1"
+  - step_en: "Apply Bernoulli’s equation for a horizontal tube and eliminate v_2."
+    step_bn: "অনুভূমিক নলে বার্নোলির সমীকরণ প্রয়োগ করে v_2 অপসারণ করুন।"
+    latex: "\\Delta P = P_1 - P_2 = \\frac{1}{2}\\rho(v_2^2 - v_1^2) = \\frac{1}{2}\\rho v_1^2\\left(\\frac{A_1^2}{A_2^2} - 1\\right)"
+  - step_en: "Solve for v_1 and multiply by A_1 to get the volumetric flow rate Q."
+    step_bn: "v_1 নির্ণয় করে A_1 দ্বারা গুণ করে প্রবাহ হার Q পান।"
+    latex: "Q = A_1 v_1 = A_1 A_2\\sqrt{\\frac{2\\Delta P}{\\rho(A_1^2 - A_2^2)}}"
+summary_en: "Measure pipe flow rate from the pressure drop across a constriction."
+summary_bn: "সংকীর্ণ অংশের চাপ পার্থক্য থেকে পাইপের প্রবাহ হার নির্ণয়।"
+related: ["bernoulli-equation", "equation-of-continuity"]
+tags: ["venturi", "flow meter", "bernoulli", "pressure drop"]
+---
+
+Real meters include a discharge coefficient $C_d \approx 0.98$ to account for small viscous losses.

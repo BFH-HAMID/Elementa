@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "ac-rms-values"
+title_bn: "পরিবর্তী প্রবাহের আরএমএস মান"
+title_en: "RMS values in AC circuits"
+subject: physics
+level: class-11-12
+chapter: "Alternating Current"
+chapter_bn: "পরিবর্তী প্রবাহ"
+latex: "I_{\\text{rms}} = \\frac{I_0}{\\sqrt{2}}, \\qquad V_{\\text{rms}} = \\frac{V_0}{\\sqrt{2}}, \\qquad P_{\\text{avg}} = V_{\\text{rms}}I_{\\text{rms}}\\cos\\phi"
+calculator: false
+variables:
+  - symbol: "I_rms"
+    name: "root-mean-square current"
+    name_bn: "আরএমএস প্রবাহমাত্রা"
+    unit: "A"
+    si_unit: "A"
+  - symbol: "I_0"
+    name: "peak current"
+    name_bn: "শীর্ষ প্রবাহমাত্রা"
+    unit: "A"
+    si_unit: "A"
+  - symbol: "V_rms"
+    name: "root-mean-square voltage"
+    name_bn: "আরএমএস ভোল্টেজ"
+    unit: "V"
+    si_unit: "V"
+  - symbol: "φ"
+    name: "phase angle between V and I"
+    name_bn: "ভোল্টেজ ও প্রবাহের দশা পার্থক্য"
+    unit: "°"
+    si_unit: "rad"
+derivation: "The RMS value is the steady DC value that would deliver the same average power to a resistor. Averaging I² = I_0²sin²ωt over a cycle uses the identity ⟨sin²⟩ = ½."
+derivation_bn: "আরএমএস মান হলো সেই সমতুল্য ডিসি মান যা রোধে একই গড় ক্ষমতা দেয়। একটি পূর্ণ চক্রে I² = I_0² sin²ωt-এর গড় নিতে ⟨sin²⟩ = ½ ব্যবহার করা হয়।"
+derivation_steps:
+  - step_en: "Square the sinusoidal current and average over one full period."
+    step_bn: "সাইন-রূপী প্রবাহের বর্গকে এক পূর্ণ চক্রে গড় করুন।"
+    latex: "\\langle I^2\\rangle = I_0^2\\langle\\sin^2\\omega t\\rangle = \\frac{I_0^2}{2}"
+  - step_en: "Take the square root to define the RMS current."
+    step_bn: "বর্গমূল নিয়ে আরএমএস প্রবাহের সংজ্ঞা দিন।"
+    latex: "I_{\\text{rms}} = \\sqrt{\\langle I^2\\rangle} = \\frac{I_0}{\\sqrt{2}}"
+  - step_en: "Average the instantaneous power to get the useful AC power with power factor cos φ."
+    step_bn: "তাৎক্ষণিক ক্ষমতার গড় নিলে পাওয়ার ফ্যাক্টর cos φ সহ কার্যকর AC ক্ষমতা পাওয়া যায়।"
+    latex: "P_{\\text{avg}} = V_{\\text{rms}}I_{\\text{rms}}\\cos\\phi"
+summary_en: "Convert peak AC values to the RMS values quoted by instruments."
+summary_bn: "পরিবর্তী প্রবাহের শীর্ষ মানকে যন্ত্রে প্রদর্শিত আরএমএস মানে রূপান্তর।"
+related: ["impedance-lcr-series", "resonance-frequency-lcr", "transformer-equation"]
+tags: ["rms", "alternating current", "power factor", "sinusoidal"]
+---
+
+Domestic "230 V" supply is an RMS value; the peak reaches about $325\ \text{V}$.

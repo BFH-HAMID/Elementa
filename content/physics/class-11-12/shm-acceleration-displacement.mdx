@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "shm-acceleration-displacement"
+title_bn: "সরল ছন্দিত গতিতে ত্বরণ ও সরণ"
+title_en: "SHM acceleration–displacement relation"
+subject: physics
+level: class-11-12
+chapter: "Oscillations"
+chapter_bn: "দোলন"
+latex: "a = -\\omega^2 x"
+calculator: false
+variables:
+  - symbol: "a"
+    name: "instantaneous acceleration"
+    name_bn: "তাৎক্ষণিক ত্বরণ"
+    unit: "m/s²"
+    si_unit: "m/s²"
+  - symbol: "ω"
+    name: "angular frequency"
+    name_bn: "কৌণিক কম্পাঙ্ক"
+    unit: "rad/s"
+    si_unit: "rad/s"
+  - symbol: "x"
+    name: "displacement from equilibrium"
+    name_bn: "সাম্যাবস্থান থেকে সরণ"
+    unit: "m"
+    si_unit: "m"
+derivation: "Simple harmonic motion is defined as motion under a restoring force proportional to displacement, F = −kx. Applying Newton’s second law and identifying k/m = ω² gives the defining differential equation."
+derivation_bn: "সরল ছন্দিত গতির সংজ্ঞা অনুযায়ী প্রত্যয়নী বল সরণের সমানুপাতিক ও বিপরীতমুখী, F = −kx। নিউটনের দ্বিতীয় সূত্র প্রয়োগ করে k/m = ω² ধরলে গতির অন্তরক সমীকরণ পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the restoring force for a linear oscillator."
+    step_bn: "রৈখিক দোলকের প্রত্যয়নী বল লিখুন।"
+    latex: "F = -kx"
+  - step_en: "Apply Newton’s second law and rearrange into a second-order differential equation."
+    step_bn: "নিউটনের দ্বিতীয় সূত্র প্রয়োগ করে দ্বিতীয় ক্রমের অন্তরক সমীকরণে রূপ দিন।"
+    latex: "m\\frac{d^2x}{dt^2} = -kx \\implies \\frac{d^2x}{dt^2} + \\frac{k}{m}x = 0"
+  - step_en: "Identify k/m = ω² and write the acceleration form."
+    step_bn: "k/m = ω² ধরে ত্বরণের রূপটি লিখুন।"
+    latex: "a = \\frac{d^2x}{dt^2} = -\\omega^2 x"
+summary_en: "Recognise simple harmonic motion from its defining force law."
+summary_bn: "প্রত্যয়নী বল ও সরণের সম্পর্ক থেকে সরল ছন্দিত গতি শনাক্তকরণ।"
+related: ["shm-angular-frequency", "simple-harmonic-motion", "shm-velocity-displacement"]
+tags: ["shm", "oscillation", "restoring force", "differential equation"]
+---
+
+The general solution is $x(t) = A\sin(\omega t + \phi)$, with $\omega = 2\pi f = 2\pi/T$.

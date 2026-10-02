@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "gravitational-field-strength"
+title_bn: "মহাকর্ষ ক্ষেত্রের প্রাবল্য"
+title_en: "Gravitational field strength of a point mass"
+subject: physics
+level: class-11-12
+chapter: "Gravitation"
+chapter_bn: "মহাকর্ষ"
+latex: "g = \\frac{GM}{r^2} = -\\frac{d\\Phi}{dr}"
+calculator: false
+variables:
+  - symbol: "g"
+    name: "gravitational field strength"
+    name_bn: "মহাকর্ষ ক্ষেত্রের প্রাবল্য"
+    unit: "N/kg"
+    si_unit: "m/s²"
+  - symbol: "G"
+    name: "gravitational constant"
+    name_bn: "মহাকর্ষীয় ধ্রুবক"
+    unit: "N m²/kg²"
+    si_unit: "N m²/kg²"
+  - symbol: "M"
+    name: "source mass"
+    name_bn: "উৎস ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "r"
+    name: "distance from centre"
+    name_bn: "কেন্দ্র থেকে দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+derivation: "The gravitational field strength at a point is the force per unit test mass. Dividing the gravitational force on a small test mass m by m leaves GM/r²."
+derivation_bn: "মহাকর্ষ ক্ষেত্রের প্রাবল্য হলো ঐ স্থানে স্থাপিত একক ভরের ওপর ক্রিয়াশীল মহাকর্ষ বল। পরীক্ষামূলক ক্ষুদ্র ভর m-এর ওপর বলকে m দিয়ে ভাগ করলে প্রাবল্য পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the gravitational force on a small test mass m placed at distance r."
+    step_bn: "r দূরত্বে স্থাপিত ক্ষুদ্র পরীক্ষা-ভর m-এর ওপর মহাকর্ষ বল লিখুন।"
+    latex: "F = \\frac{GMm}{r^2}"
+  - step_en: "Divide by m to obtain force per unit mass, i.e. the field strength."
+    step_bn: "একক ভরের বল পেতে m দ্বারা ভাগ করুন।"
+    latex: "g = \\frac{F}{m} = \\frac{GM}{r^2}"
+  - step_en: "Write the potential Φ = −GM/r and confirm the field is its negative radial gradient."
+    step_bn: "বিভব Φ = −GM/r ধরে নিন এবং ক্ষেত্র যে এর ঋণাত্মক নতি তা যাচাই করুন।"
+    latex: "g = -\\frac{d}{dr}\\left(-\\frac{GM}{r}\\right)"
+summary_en: "Find the gravitational acceleration produced by a planet or star at distance r."
+summary_bn: "কোনো গ্রহ বা তারা থেকে r দূরত্বে সৃষ্ট মহাকর্ষীয় ত্বরণ নির্ণয়।"
+related: ["newtons-law-of-gravitation", "gravitational-potential-energy-general", "escape-velocity"]
+tags: ["gravitational field", "g", "inverse square", "potential gradient"]
+---
+
+On Earth’s surface this gives $g \approx 9.8\ \text{N kg}^{-1}$, identical numerically to the acceleration of free fall.

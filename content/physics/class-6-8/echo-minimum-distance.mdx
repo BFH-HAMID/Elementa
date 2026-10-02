@@ -1,0 +1,43 @@
+---
+type: equation
+slug: "echo-minimum-distance"
+title_bn: "প্রতিধ্বনি শোনার ন্যূনতম দূরত্ব"
+title_en: "Echo distance and sound reflection"
+subject: physics
+level: class-6-8
+chapter: "Sound"
+chapter_bn: "শব্দ"
+latex: "d = \\frac{v t}{2}"
+calculator: false
+variables:
+  - symbol: "d"
+    name: "distance to reflector"
+    name_bn: "প্রতিফলকের দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "v"
+    name: "speed of sound"
+    name_bn: "শব্দের বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "t"
+    name: "round-trip echo time"
+    name_bn: "প্রতিধ্বনি শোনার সময়"
+    unit: "s"
+    si_unit: "s"
+derivation: "A sound pulse travels distance d to the reflecting wall and another distance d back to the listener, so total distance covered in time t is 2d."
+derivation_bn: "উৎস থেকে শব্দ প্রতিফলকে গিয়ে ফিরে আসতে মোট 2d দূরত্ব অতিক্রম করে। সমবেগে গতির সূত্রে অতিক্রান্ত দূরত্ব 2d বসালে প্রতিফলকের দূরত্ব পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Express the total round-trip path travelled by the sound wave as 2d."
+    step_bn: "শব্দ উৎস থেকে প্রতিফলকে গিয়ে ফিরে আসার মোট দূরত্ব 2d লিখুন।"
+    latex: "2d = v t"
+  - step_en: "Divide by 2 to get the one-way distance from source to reflector."
+    step_bn: "উভয় পক্ষকে ২ দ্বারা ভাগ করে প্রতিফলকের দূরত্ব d নির্ণয় করুন।"
+    latex: "d = \\frac{v t}{2}"
+summary_en: "Determine reflector depth or obstacle distance from the round-trip time of an echo."
+summary_bn: "প্রতিধ্বনি ফিরে আসার সময় ও শব্দের বেগ থেকে প্রতিফলকের দূরত্ব নির্ণয়।"
+related: ["speed", "wave-speed"]
+tags: ["sound", "echo", "sonar", "persistence of hearing"]
+---
+
+Because human persistence of hearing is about $0.1\text{ s}$, at $v \approx 332\text{ m/s}$ the minimum reflector distance for a distinct echo is roughly $16.6\text{ m}$.

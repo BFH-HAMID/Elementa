@@ -1,0 +1,48 @@
+---
+type: equation
+slug: "heat-engine-efficiency"
+title_bn: "তাপ ইঞ্জিনের কর্মদক্ষতা"
+title_en: "Thermal efficiency of a heat engine"
+subject: physics
+level: class-11-12
+chapter: "Thermodynamics"
+chapter_bn: "তাপগতিবিদ্যা"
+latex: "\\eta = \\frac{W}{Q_H} = 1 - \\frac{Q_C}{Q_H}"
+calculator: false
+variables:
+  - symbol: "η"
+    name: "thermal efficiency"
+    name_bn: "তাপীয় কর্মদক্ষতা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "W"
+    name: "net work output per cycle"
+    name_bn: "প্রতি চক্রে নিট কাজ"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "Q_H"
+    name: "heat absorbed from hot reservoir"
+    name_bn: "উষ্ণ উৎস থেকে গৃহীত তাপ"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "Q_C"
+    name: "heat rejected to cold reservoir"
+    name_bn: "শীতল উৎসে বর্জিত তাপ"
+    unit: "J"
+    si_unit: "J"
+derivation: "Over one complete cycle the working substance returns to its initial state, so ΔU = 0 and the first law gives W = Q_H − Q_C. Dividing by the heat input Q_H defines the thermal efficiency."
+derivation_bn: "একটি পূর্ণ চক্রে কার্যকারী পদার্থ প্রাথমিক অবস্থায় ফিরে যায়, তাই ΔU = 0 এবং প্রথম সূত্র থেকে W = Q_H − Q_C। গৃহীত তাপ Q_H দিয়ে ভাগ করলে তাপীয় কর্মদক্ষতা পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Apply the first law over a complete cycle where ΔU = 0."
+    step_bn: "সম্পূর্ণ চক্রের জন্য প্রথম সূত্র প্রয়োগ করুন যেখানে ΔU = 0।"
+    latex: "W = Q_H - Q_C"
+  - step_en: "Divide by the heat input Q_H to obtain the efficiency ratio."
+    step_bn: "প্রদত্ত তাপ Q_H দিয়ে ভাগ করুন।"
+    latex: "\\eta = \\frac{W}{Q_H} = \\frac{Q_H - Q_C}{Q_H} = 1 - \\frac{Q_C}{Q_H}"
+summary_en: "Measure how much absorbed heat a heat engine converts into work."
+summary_bn: "তাপ ইঞ্জিন গৃহীত তাপের কত অংশ কাজে রূপান্তর করে তা নির্ণয়।"
+related: ["carnot-engine-efficiency", "first-law-thermodynamics", "efficiency-formula"]
+tags: ["heat engine", "efficiency", "thermodynamics", "cycle"]
+---
+
+No engine can be 100% efficient; the second law requires some heat rejection to a colder reservoir.

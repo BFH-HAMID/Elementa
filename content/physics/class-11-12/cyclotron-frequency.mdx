@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "cyclotron-frequency"
+title_bn: "সাইক্লোট্রন কম্পাঙ্ক"
+title_en: "Cyclotron frequency of a charged particle"
+subject: physics
+level: class-11-12
+chapter: "Magnetism"
+chapter_bn: "চুম্বকত্ব"
+latex: "f_c = \\frac{qB}{2\\pi m}, \\qquad r = \\frac{mv}{qB}"
+calculator: false
+variables:
+  - symbol: "f_c"
+    name: "cyclotron frequency"
+    name_bn: "সাইক্লোট্রন কম্পাঙ্ক"
+    unit: "Hz"
+    si_unit: "Hz"
+  - symbol: "q"
+    name: "charge of the particle"
+    name_bn: "কণার আধান"
+    unit: "C"
+    si_unit: "C"
+  - symbol: "B"
+    name: "magnetic flux density"
+    name_bn: "চৌম্বক ফ্লাক্স ঘনত্ব"
+    unit: "T"
+    si_unit: "T"
+  - symbol: "m"
+    name: "mass of the particle"
+    name_bn: "কণার ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "r"
+    name: "radius of circular orbit"
+    name_bn: "বৃত্তাকার পথের ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+derivation: "In a uniform magnetic field the Lorentz force qvB supplies the centripetal force mv²/r. Solving for the angular speed shows it is independent of the orbit radius."
+derivation_bn: "সুষম চৌম্বক ক্ষেত্রে লরেন্টজ বল qvB কেন্দ্রমুখী বল mv²/r যোগান দেয়। কৌণিক বেগের সমাধান করলে দেখা যায় তা কক্ষপথের ব্যাসার্ধের ওপর নির্ভর করে না।"
+derivation_steps:
+  - step_en: "Equate the magnetic Lorentz force to the centripetal force."
+    step_bn: "লরেন্টজ বলকে কেন্দ্রমুখী বলের সমান ধরুন।"
+    latex: "qvB = \\frac{mv^2}{r}"
+  - step_en: "Solve for the orbital radius r and the angular speed ω = v/r."
+    step_bn: "কক্ষীয় ব্যাসার্ধ r ও কৌণিক বেগ ω = v/r নির্ণয় করুন।"
+    latex: "r = \\frac{mv}{qB}, \\qquad \\omega = \\frac{v}{r} = \\frac{qB}{m}"
+  - step_en: "Convert angular speed to ordinary frequency f = ω/2π."
+    step_bn: "কৌণিক বেগকে সাধারণ কম্পাঙ্কে রূপান্তর করুন।"
+    latex: "f_c = \\frac{qB}{2\\pi m}"
+summary_en: "Find the orbit size and revolution rate of ions in a cyclotron."
+summary_bn: "সাইক্লোট্রনে আয়নের কক্ষীয় ব্যাসার্ধ ও আবর্তন হার নির্ণয়।"
+related: ["lorentz-force", "magnetism-emi-ac-formula-sheet"]
+tags: ["cyclotron", "magnetic field", "charged particle", "resonance"]
+---
+
+The radius-independent frequency is what lets a fixed-frequency alternating voltage accelerate the particles repeatedly.

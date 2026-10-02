@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "debye-huckel-limiting-law"
+title_bn: "ডিবাই-হাকেল সীমা সূত্র"
+title_en: "Debye–Hückel limiting law"
+subject: chemistry
+level: honours
+chapter: "Electrochemistry"
+chapter_bn: "তড়িৎ রসায়ন"
+latex: "\\log\\gamma_\\pm = -A |z_+ z_-| \\sqrt{I}, \\qquad I = \\frac{1}{2}\\sum_i c_i z_i^2"
+calculator: false
+variables:
+  - symbol: "γ_±"
+    name: "mean ionic activity coefficient"
+    name_bn: "গড় আয়নিক সক্রিয়তা সহগ"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "I"
+    name: "ionic strength"
+    name_bn: "আয়নিক প্রাবল্য"
+    unit: "mol/L"
+    si_unit: "mol/m³"
+  - symbol: "z"
+    name: "ionic charge number"
+    name_bn: "আয়নের আধান সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "A"
+    name: "Debye–Hückel constant (≈0.509 in water at 25 °C)"
+    name_bn: "ডিবাই-হাকেল ধ্রুবক"
+    unit: "L^½ mol^−½"
+    si_unit: "1"
+derivation: "Solving the linearised Poisson–Boltzmann equation for the electrostatic potential around a central ion, then equating the electrical work of charging to the excess chemical potential, gives a logarithm of the activity coefficient proportional to √I."
+derivation_bn: "কেন্দ্রীয় আয়নের চারপাশে স্থির তড়িৎ বিভবের জন্য রৈখিকীকৃত পোয়াসন-বোলটজমান সমীকরণ সমাধান করে আহিতকরণের তড়িৎ কাজকে অতিরিক্ত রাসায়নিক বিভবের সমান ধরলে সক্রিয়তা সহগের লগারিদম √I-এর সমানুপাতিক পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the linearised Poisson–Boltzmann equation for the potential ψ around an ion."
+    step_bn: "আয়নের চারপাশে বিভব ψ-এর জন্য রৈখিকীকৃত পোয়াসন-বোলটজমান সমীকরণ লিখুন।"
+    latex: "\\nabla^2\\psi = \\kappa^2 \\psi, \\qquad \\kappa \\propto \\sqrt{I}"
+  - step_en: "Obtain the screened Coulomb potential with Debye length 1/κ."
+    step_bn: "ডিবাই দৈর্ঘ্য 1/κ সহ আচ্ছাদিত কুলম্ব বিভব পান।"
+    latex: "\\psi(r) = \\frac{z e}{4\\pi\\varepsilon}\\frac{e^{-\\kappa r}}{r}"
+  - step_en: "Equate the charging work to the excess chemical potential to reach the limiting law."
+    step_bn: "আহিতকরণের কাজকে অতিরিক্ত রাসায়নিক বিভবের সমান ধরে সীমা সূত্র পান."
+    latex: "\\log\\gamma_\\pm = -A|z_+ z_-|\\sqrt{I}"
+summary_en: "Estimate activity coefficients in dilute electrolyte solutions."
+summary_bn: "লঘু তড়িৎবিশ্লেষ্য দ্রবণে সক্রিয়তা সহগ অনুমান।"
+related: ["nernst-equation", "molar-conductivity", "equilibrium-constant"]
+tags: ["debye huckel", "activity coefficient", "ionic strength", "honours"]
+---
+
+The limiting law is reliable only below about $I = 0.01\ \text{mol L}^{-1}$; extended forms add a size term.

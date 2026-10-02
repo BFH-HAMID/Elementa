@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "mole-fraction-equation"
+title_bn: "মোল ভগ্নাংশ"
+title_en: "Mole fraction of a component"
+subject: chemistry
+level: class-9-10
+chapter: "Solutions"
+chapter_bn: "দ্রবণ"
+latex: "x_A = \\frac{n_A}{\\sum_i n_i}, \\qquad \\sum_i x_i = 1"
+calculator: false
+variables:
+  - symbol: "x_A"
+    name: "mole fraction of component A"
+    name_bn: "উপাদান A-এর মোল ভগ্নাংশ"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "n_A"
+    name: "moles of component A"
+    name_bn: "উপাদান A-এর মোল"
+    unit: "mol"
+    si_unit: "mol"
+  - symbol: "n_total"
+    name: "total moles in the mixture"
+    name_bn: "মিশ্রণে মোট মোল"
+    unit: "mol"
+    si_unit: "mol"
+derivation: "The mole fraction is the ratio of one component’s mole count to the total. Because the parts add to the whole, all mole fractions in a mixture sum to exactly one."
+derivation_bn: "মোল ভগ্নাংশ হলো কোনো উপাদানের মোল সংখ্যা ও মোট মোল সংখ্যার অনুপাত। অংশগুলো যোগ করলে পুরো হয়, তাই সব মোল ভগ্নাংশের সমষ্টি এক।"
+derivation_steps:
+  - step_en: "Convert every component to moles."
+    step_bn: "প্রতিটি উপাদানকে মোলে রূপান্তর করুন।"
+    latex: "n_i = \\frac{m_i}{M_i}"
+  - step_en: "Add them to get the total amount."
+    step_bn: "মোট পরিমাণ পেতে সেগুলো যোগ করুন।"
+    latex: "n_{\\text{total}} = \\sum_i n_i"
+  - step_en: "Divide the component moles by the total and verify the fractions sum to 1."
+    step_bn: "উপাদানের মোলকে মোট দিয়ে ভাগ করুন এবং যোগফল ১ কিনা যাচাই করুন।"
+    latex: "x_A = \\frac{n_A}{n_{\\text{total}}}, \\qquad \\sum_i x_i = 1"
+summary_en: "Describe mixture composition on a dimensionless mole basis."
+summary_bn: "মিশ্রণের সংযুতিকে মাত্রাহীন মোল ভিত্তিতে প্রকাশ করুন।"
+related: ["molality-equation", "molarity", "raoults-law"]
+tags: ["mole fraction", "mixture", "composition", "dimensionless"]
+---
+
+For gas mixtures the mole fraction equals the ratio of partial to total pressure (Dalton’s law).

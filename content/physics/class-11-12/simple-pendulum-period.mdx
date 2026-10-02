@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "simple-pendulum-period"
+title_bn: "সরল দোলকের পর্যায়কাল"
+title_en: "Time period of a simple pendulum"
+subject: physics
+level: class-11-12
+chapter: "Oscillations"
+chapter_bn: "দোলন"
+latex: "T = 2\\pi\\sqrt{\\frac{L}{g}}"
+calculator: false
+variables:
+  - symbol: "T"
+    name: "time period"
+    name_bn: "পর্যায়কাল"
+    unit: "s"
+    si_unit: "s"
+  - symbol: "L"
+    name: "length of the pendulum"
+    name_bn: "দোলকের দৈর্ঘ্য"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "g"
+    name: "gravitational acceleration"
+    name_bn: "অভিকর্ষজ ত্বরণ"
+    unit: "m/s²"
+    si_unit: "m/s²"
+derivation: "Resolving the bob weight along the arc gives a restoring torque −mgL sinθ. For small angles sinθ ≈ θ, so the motion is simple harmonic with ω² = g/L."
+derivation_bn: "দোলকের ওজনকে বৃত্তচাপ বরাবর বিশ্লিষ্ট করলে প্রত্যয়নী টর্ক −mgL sinθ পাওয়া যায়। ক্ষুদ্র কোণে sinθ ≈ θ হলে গতি সরল ছন্দিত হয় এবং ω² = g/L হয়।"
+derivation_steps:
+  - step_en: "Write the tangential restoring force on the bob at angular displacement θ."
+    step_bn: "θ কোণে দোলকের স্পর্শকীয় প্রত্যয়নী বল লিখুন।"
+    latex: "F = -mg\\sin\\theta"
+  - step_en: "Use the small-angle approximation sinθ ≈ θ and s = Lθ to form the SHM equation."
+    step_bn: "sinθ ≈ θ ও s = Lθ ব্যবহার করে SHM সমীকরণ গঠন করুন।"
+    latex: "m\\frac{d^2 s}{dt^2} = -mg\\frac{s}{L} \\implies \\frac{d^2s}{dt^2} + \\frac{g}{L}s = 0"
+  - step_en: "Identify ω² = g/L and convert to the period T = 2π/ω."
+    step_bn: "ω² = g/L ধরে পর্যায়কাল T = 2π/ω নির্ণয় করুন।"
+    latex: "T = 2\\pi\\sqrt{\\frac{L}{g}}"
+summary_en: "Determine the swing period of a pendulum from its length and local g."
+summary_bn: "দোলকের দৈর্ঘ্য ও স্থানীয় অভিকর্ষজ ত্বরণ থেকে দোলনকাল নির্ণয়।"
+related: ["shm-angular-frequency", "gravitation-formula-sheet"]
+tags: ["pendulum", "oscillation", "period", "small angle"]
+---
+
+The period is independent of bob mass; a seconds pendulum (T = 2 s) is about 0.994 m long.

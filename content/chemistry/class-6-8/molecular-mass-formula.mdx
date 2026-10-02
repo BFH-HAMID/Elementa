@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "molecular-mass-formula"
+title_bn: "আণবিক ভর নির্ণয়"
+title_en: "Molecular (formula) mass of a compound"
+subject: chemistry
+level: class-6-8
+chapter: "Chemical Formulae"
+chapter_bn: "রাসায়নিক সংকেত"
+latex: "M_r = \\sum_i n_i\\,A_r(i)"
+calculator: false
+variables:
+  - symbol: "M_r"
+    name: "relative molecular mass"
+    name_bn: "আপেক্ষিক আণবিক ভর"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "n_i"
+    name: "number of atoms of element i"
+    name_bn: "i-তম মৌলের পরমাণু সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "A_r"
+    name: "relative atomic mass"
+    name_bn: "আপেক্ষিক পারমাণবিক ভর"
+    unit: "1"
+    si_unit: "1"
+derivation: "A molecule’s mass is the sum of the masses of all atoms in its formula. Multiplying each element’s relative atomic mass by its atom count and adding gives the relative molecular mass."
+derivation_bn: "অণুর ভর হলো তার সংকেতে থাকা সব পরমাণুর ভরের সমষ্টি। প্রতিটি মৌলের আপেক্ষিক পারমাণবিক ভরকে তার পরমাণু সংখ্যা দিয়ে গুণ করে যোগ করলে আপেক্ষিক আণবিক ভর পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Read the atom counts of each element from the chemical formula."
+    step_bn: "রাসায়নিক সংকেত থেকে প্রতিটি মৌলের পরমাণু সংখ্যা পড়ুন।"
+    latex: "\\text{H}_2\\text{O}: n_H = 2,\\; n_O = 1"
+  - step_en: "Multiply each count by the element’s relative atomic mass."
+    step_bn: "প্রতিটি সংখ্যাকে ঐ মৌলের আপেক্ষিক পারমাণবিক ভর দিয়ে গুণ করুন।"
+    latex: "2(1.008) + 1(16.00)"
+  - step_en: "Sum the contributions to obtain M_r, numerically equal to the molar mass in g mol⁻¹."
+    step_bn: "অবদানগুলো যোগ করে M_r পান, যা গ্রামে মোলার ভরের সমান।"
+    latex: "M_r(\\text{H}_2\\text{O}) = 18.02 \\implies M = 18.02\\ \\text{g mol}^{-1}"
+summary_en: "Add up atomic masses to get the formula mass of any compound."
+summary_bn: "যেকোনো যৌগের সংকেত ভর বা আণবিক ভর নির্ণয়।"
+related: ["isotopes-mass-number", "moles", "mass-percentage-composition"]
+tags: ["molecular mass", "formula mass", "molar mass", "relative mass"]
+---
+
+Relative molecular mass is dimensionless, but its numerical value equals the molar mass in $\text{g mol}^{-1}$.

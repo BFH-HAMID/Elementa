@@ -13,6 +13,7 @@ import {
   type Subject,
   type Level
 } from './schemas';
+import { hasCalculatorModel } from './calculator-models';
 
 const contentRoot = path.join(process.cwd(), 'content');
 
@@ -52,7 +53,12 @@ export function getEquationEntries(): EquationEntry[] {
       const parsed = matter(raw);
       if ((parsed.data.type ?? 'equation') !== 'equation') return null;
       const data = equationFrontmatterSchema.parse({ ...parsed.data, type: 'equation' });
-      return { ...data, body: parsed.content.trim(), filePath };
+      return {
+        ...data,
+        body: parsed.content.trim(),
+        filePath,
+        interactive: data.calculator || hasCalculatorModel(data.slug)
+      };
     })
     .filter((entry): entry is EquationEntry => entry !== null && entry.type === 'equation')
     .sort((a, b) => a.title_en.localeCompare(b.title_en));

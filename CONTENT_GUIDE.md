@@ -20,7 +20,37 @@ PhysChem Lab content is authored as small, reviewable repository files. The site
 - `variables`: `symbol`, `name`, `unit`, `si_unit`; `name_bn` is recommended
 - `derivation`; `derivation_bn` is strongly recommended
 
-`summary_en`, `summary_bn`, `related`, `simulation` and `tags` improve discovery and are optional. To add a calculator, use the slug in `lib/calculations.ts`, then make sure the variable symbols match the solver.
+`summary_en`, `summary_bn`, `related`, `simulation` and `tags` improve discovery and are optional.
+
+### Calculators
+
+An equation becomes interactive as soon as it has a solver. Prefer the declarative route: add an entry to `calculatorModels` in `lib/calculator-models.ts`, keyed by the slug.
+
+```ts
+'liquid-column-pressure': {
+  formula: 'P = hρg',
+  unit: { P: 'Pa', h: 'm', 'ρ': 'kg/m³', g: 'm/s²' },
+  solve: (v) => ({
+    P: v.h * v['ρ'] * v.g,
+    h: v.P / (v['ρ'] * v.g),
+    'ρ': v.P / (v.h * v.g),
+    g: v.P / (v.h * v['ρ'])
+  })
+}
+```
+
+Rules that keep a model honest:
+
+- Every symbol in the MDX `variables:` list must have an entry in `unit`, and the strings must match the declared `unit` exactly — that is what picks the dropdown of alternative units.
+- `solve` receives the known values already converted into the declared units and must return a value for *every* symbol, including the ones it was given. The UI then simply reads the requested unknown.
+- Angles arrive in degrees because the frontmatter unit is `°`; convert with `deg()` and return with `toDeg()`.
+- Add a `steps(v, out, unknown)` override when the generic substitution list would mislead — for example when the rearrangement has no closed form and is solved numerically.
+
+`npm run check:models` enforces the parts that TypeScript cannot see: it fails when a symbol is missing from `unit`, when a unit string disagrees with the frontmatter, or when a rearrangement is not the true inverse of the others. Run it whenever you touch `lib/calculator-models.ts`.
+
+Older equations use hand-written `case` blocks in `lib/calculations.ts` instead. That is fine for one-off wording, but new equations should use the declarative registry so all rearrangements sit side by side and can be reviewed together.
+
+Set `calculator: false` when an entry is a chapter-level collection rather than a single relation; the detail page then shows the formula collection without a non-working calculator.
 
 ### Step-by-step derivations
 

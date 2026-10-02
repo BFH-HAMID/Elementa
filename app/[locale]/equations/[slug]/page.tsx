@@ -36,7 +36,8 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
   const isReference = equation.reference_formulas.length > 0;
   const related = equation.related.map((slug) => getEquationBySlug(slug)).filter((item) => item !== undefined).slice(0, 3);
   const simulation = equation.simulation ? getSimulationMeta(equation.simulation) : undefined;
-  const hasSidebar = equation.calculator || Boolean(simulation);
+  const hasCalculator = equation.interactive;
+  const hasSidebar = hasCalculator || Boolean(simulation);
 
   return (
     <section className="page-shell section-space">
@@ -170,7 +171,7 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
 
         {hasSidebar && (
           <aside className="space-y-5 lg:sticky lg:top-24">
-            {equation.calculator && <Calculator equation={equation} />}
+            {hasCalculator && <Calculator equation={equation} />}
             {simulation && (
               <Link href={`/${locale}/simulations/${simulation.slug}`} className="group block rounded-2xl border border-chemistry-200 bg-chemistry-50 p-4 transition hover:-translate-y-0.5 dark:border-chemistry-700 dark:bg-chemistry-900/50">
                 <div className="flex items-center gap-3">

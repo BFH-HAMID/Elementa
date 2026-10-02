@@ -117,6 +117,9 @@ export type Level = z.infer<typeof levelSchema>;
 export type EquationEntry = EquationFrontmatter & {
   body: string;
   filePath: string;
+  /** True when the entry can be solved numerically, either by a hand-written
+   *  routine or by a declarative model in `lib/calculator-models.ts`. */
+  interactive: boolean;
 };
 
 export type ExperimentEntry = ExperimentFrontmatter & {

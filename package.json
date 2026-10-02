@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "check:models": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-calculator-models.mjs",
     "prebuild": "node scripts/build-search-index.mjs"
   },
   "dependencies": {

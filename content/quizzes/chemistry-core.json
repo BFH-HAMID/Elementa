@@ -1,0 +1,49 @@
+{
+  "slug": "chemistry-core",
+  "title_en": "Chemistry core: solutions and gases",
+  "title_bn": "রসায়নের ভিত্তি: দ্রবণ ও গ্যাস",
+  "subject": "chemistry",
+  "level": "class-11-12",
+  "chapter": "Solutions, acids and gases",
+  "chapter_bn": "দ্রবণ, অম্ল ও গ্যাস",
+  "description_en": "Test your feel for moles, pH and the ideal gas law.",
+  "description_bn": "মোল, pH ও আদর্শ গ্যাস সূত্র সম্পর্কে আপনার বোঝাপড়া যাচাই করুন।",
+  "questions": [
+    {
+      "q": "What does one mole count?",
+      "q_bn": "এক মোল কী গণনা করে?",
+      "options": ["A fixed number of particles", "One gram of every substance", "One litre of gas only", "One electron"],
+      "options_bn": ["একটি নির্দিষ্ট সংখ্যক কণা", "প্রতিটি পদার্থের এক gram", "শুধু এক litre gas", "একটি electron"],
+      "answer": 0,
+      "explanation": "A mole contains Avogadro's number of specified entities, regardless of their identity.",
+      "explanation_bn": "এক মোলে পদার্থের পরিচয় যাই হোক, Avogadro সংখ্যক নির্দিষ্ট কণা থাকে।"
+    },
+    {
+      "q": "If [H⁺] changes from 10⁻³ M to 10⁻⁴ M, what happens to pH?",
+      "q_bn": "[H⁺] 10⁻³ M থেকে 10⁻⁴ M হলে pH কীভাবে বদলায়?",
+      "options": ["It decreases by 1", "It increases by 1", "It stays at 3", "It becomes zero"],
+      "options_bn": ["১ কমে", "১ বাড়ে", "৩-এ থাকে", "শূন্য হয়"],
+      "answer": 1,
+      "explanation": "pH = −log[H⁺]. A tenfold lower concentration makes pH one unit higher.",
+      "explanation_bn": "pH = −log[H⁺]। ঘনমাত্রা দশ গুণ কমলে pH এক unit বাড়ে।"
+    },
+    {
+      "q": "Which temperature scale belongs in PV = nRT?",
+      "q_bn": "PV = nRT-তে কোন temperature scale ব্যবহার করতে হয়?",
+      "options": ["Celsius", "Fahrenheit", "Kelvin", "Any scale without conversion"],
+      "options_bn": ["Celsius", "Fahrenheit", "Kelvin", "conversion ছাড়া যেকোনো scale"],
+      "answer": 2,
+      "explanation": "The gas constant form uses absolute temperature in kelvin.",
+      "explanation_bn": "গ্যাস ধ্রুবকের এই form-এ absolute temperature, অর্থাৎ kelvin লাগে।"
+    },
+    {
+      "q": "What happens to molarity when the same solute amount is diluted with solvent?",
+      "q_bn": "একই solute-এ solvent যোগ করে dilute করলে molarity কী হয়?",
+      "options": ["It increases", "It decreases", "It is always zero", "It becomes the molar mass"],
+      "options_bn": ["বাড়ে", "কমে", "সবসময় শূন্য হয়", "molar mass হয়ে যায়"],
+      "answer": 1,
+      "explanation": "M = n/V; with n fixed and V larger, the molarity falls.",
+      "explanation_bn": "M = n/V; n একই রেখে V বাড়ালে molarity কমে।"
+    }
+  ]
+}

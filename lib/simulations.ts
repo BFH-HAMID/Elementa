@@ -1,0 +1,32 @@
+import type { Subject } from './schemas';
+
+export type SimulationMeta = {
+  slug: string;
+  subject: Subject;
+  title_bn: string;
+  title_en: string;
+  description_bn: string;
+  description_en: string;
+  level: 'class-6-8' | 'class-9-10' | 'class-11-12' | 'honours';
+  symbol: string;
+  formula: string;
+  tags: string[];
+};
+
+export const simulationMetas: SimulationMeta[] = [
+  { slug: 'projectile-motion', subject: 'physics', title_bn: 'প্রক্ষেপণ গতি', title_en: 'Projectile motion', description_bn: 'কোণ ও বেগ বদলে উড়ন্ত বস্তুর পথ দেখুন।', description_en: 'Change the angle and speed of a launched object.', level: 'class-9-10', symbol: '↗', formula: 'R = u² sin(2θ) / g', tags: ['motion', 'trajectory'] },
+  { slug: 'simple-pendulum', subject: 'physics', title_bn: 'সরল দোলক', title_en: 'Simple pendulum', description_bn: 'দৈর্ঘ্য ও মহাকর্ষের সঙ্গে দোলনকাল কীভাবে বদলায়?', description_en: 'See how length and gravity set the period.', level: 'class-9-10', symbol: '◌', formula: 'T = 2π√(L/g)', tags: ['oscillation', 'period'] },
+  { slug: 'ohms-law-circuit', subject: 'physics', title_bn: 'ওহমের সূত্র সার্কিট', title_en: "Ohm's law circuit", description_bn: 'সিরিজ ও প্যারালাল রোধে কারেন্ট দেখুন।', description_en: 'Explore current through series and parallel resistors.', level: 'class-9-10', symbol: '⌁', formula: 'V = IR', tags: ['electricity', 'circuit'] },
+  { slug: 'wave-interference', subject: 'physics', title_bn: 'তরঙ্গের ব্যতিচার', title_en: 'Wave interference', description_bn: 'দুটি উৎস থেকে গঠনমূলক ও ধ্বংসাত্মক ব্যতিচার।', description_en: 'Watch constructive and destructive interference.', level: 'class-11-12', symbol: '≈', formula: 'y = 2A cos(φ/2) sin(ωt)', tags: ['waves', 'superposition'] },
+  { slug: 'newtons-second-law', subject: 'physics', title_bn: 'নিউটনের দ্বিতীয় সূত্র', title_en: "Newton's second law", description_bn: 'বল বা ভর বদলে ত্বরণের ফল দেখুন।', description_en: 'Change force or mass and see acceleration respond.', level: 'class-9-10', symbol: 'F', formula: 'F = ma', tags: ['force', 'motion'] },
+  { slug: 'lens-ray-diagram', subject: 'physics', title_bn: 'লেন্সের রশ্মি চিত্র', title_en: 'Lens ray diagram', description_bn: 'উত্তল লেন্সে প্রতিবিম্ব কোথায় তৈরি হয়?', description_en: 'Trace rays and locate the image of an object.', level: 'class-9-10', symbol: '◐', formula: '1/f = 1/v + 1/u', tags: ['optics', 'image'] },
+  { slug: 'acid-base-titration', subject: 'chemistry', title_bn: 'অ্যাসিড–বেস টাইট্রেশন', title_en: 'Acid–base titration', description_bn: 'বিউরেটের ফোঁটায় pH curve ও equivalence point দেখুন।', description_en: 'Add titrant and follow the pH curve to equivalence.', level: 'class-11-12', symbol: '滴', formula: 'n₁V₁ = n₂V₂', tags: ['titration', 'pH'] },
+  { slug: 'ph-scale', subject: 'chemistry', title_bn: 'pH স্কেল', title_en: 'pH scale', description_bn: 'হাইড্রোজেন আয়নের ঘনত্ব থেকে অম্লত্ব বুঝুন।', description_en: 'Connect hydrogen-ion concentration to acidity.', level: 'class-9-10', symbol: 'pH', formula: 'pH = −log₁₀[H⁺]', tags: ['acid', 'base'] },
+  { slug: 'ideal-gas-law', subject: 'chemistry', title_bn: 'আদর্শ গ্যাস সূত্র', title_en: 'Ideal gas law', description_bn: 'চাপ, আয়তন ও তাপমাত্রার live graph।', description_en: 'Move P, V and T while the gas state updates.', level: 'class-11-12', symbol: 'PV', formula: 'PV = nRT', tags: ['gas', 'thermodynamics'] },
+  { slug: 'molecule-viewer', subject: 'chemistry', title_bn: '3D অণু দর্শক', title_en: '3D molecule viewer', description_bn: 'জল, মিথেন ও বেঞ্জিনের গঠন ঘুরিয়ে দেখুন।', description_en: 'Inspect water, methane and benzene in 3D.', level: 'class-11-12', symbol: '◉', formula: 'structure → properties', tags: ['molecules', '3D'] },
+  { slug: 'reaction-rate-temperature', subject: 'chemistry', title_bn: 'তাপমাত্রা ও বিক্রিয়ার হার', title_en: 'Reaction rate vs temperature', description_bn: 'Arrhenius সূত্রে তাপমাত্রার প্রভাব দেখুন।', description_en: 'Use Arrhenius behaviour to explore temperature effects.', level: 'honours', symbol: 'Ea', formula: 'k = A e⁻ᴱᵃ/ᴿᵀ', tags: ['kinetics', 'arrhenius'] }
+];
+
+export function getSimulationMeta(slug: string): SimulationMeta | undefined {
+  return simulationMetas.find((simulation) => simulation.slug === slug);
+}

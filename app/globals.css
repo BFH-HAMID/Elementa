@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7fafc;
+  --surface: #ffffff;
+  --surface-soft: #f1f6fb;
+  --ink: #14283d;
+  --muted: #59718e;
+  --line: #dbe6f0;
+  --brand: #075db1;
+  --brand-soft: #d9edff;
+  --chem: #087d60;
+  --focus: #f4b942;
+}
+
+[data-theme='dark'] {
+  --background: #0d1926;
+  --surface: #14283d;
+  --surface-soft: #1b344b;
+  --ink: #edf5fc;
+  --muted: #a7bdd1;
+  --line: #29465e;
+  --brand: #72b9ff;
+  --brand-soft: #123d66;
+  --chem: #6ce3bb;
+  --focus: #ffd369;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  min-width: 320px;
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font-inter), var(--font-bengali), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: #b9dcff; color: #082e55; }
+[data-theme='dark'] ::selection { background: #245b88; color: #fff; }
+
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+@layer components {
+  .page-shell { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .section-space { @apply py-14 sm:py-20; }
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[0.18em] text-physics-600 dark:text-physics-200; }
+  .display-title { @apply text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl; }
+  .section-title { @apply text-2xl font-extrabold tracking-tight sm:text-3xl; }
+  .muted { color: var(--muted); }
+  .surface { background: var(--surface); border: 1px solid var(--line); }
+  .surface-soft { background: var(--surface-soft); border: 1px solid var(--line); }
+  .card { @apply rounded-2xl; background: var(--surface); border: 1px solid var(--line); box-shadow: 0 12px 35px rgba(20, 40, 61, 0.07); }
+  .card-hover { @apply transition duration-200 hover:-translate-y-1 hover:shadow-float; }
+  .btn { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition duration-200 active:scale-[.98] disabled:pointer-events-none disabled:opacity-50; }
+  .btn-primary { @apply btn bg-physics-600 text-white shadow-sm hover:bg-physics-700; }
+  .btn-secondary { @apply btn border border-[var(--line)] bg-[var(--surface)] text-[var(--ink)] hover:border-physics-300 hover:bg-physics-50 dark:hover:bg-physics-900; }
+  .btn-ghost { @apply btn text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]; }
+  .input { @apply min-h-11 w-full rounded-xl border border-[var(--line)] bg-[var(--surface)] px-3 text-sm text-[var(--ink)] outline-none transition placeholder:text-[var(--muted)] focus:border-physics-500 focus:ring-4 focus:ring-physics-100 dark:focus:ring-physics-900; }
+  .pill { @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-bold; }
+  .prose-lab p { @apply my-3 leading-7; color: var(--muted); }
+  .prose-lab h2 { @apply mb-3 mt-7 text-xl font-extrabold; }
+  .prose-lab ul { @apply my-3 list-disc space-y-2 pl-5; color: var(--muted); }
+  .prose-lab code { @apply rounded bg-[var(--surface-soft)] px-1.5 py-0.5 font-mono text-sm; }
+}
+
+.grid-dots {
+  background-image: radial-gradient(rgba(22, 119, 210, 0.13) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.dark-grid-dots { background-image: radial-gradient(rgba(114, 185, 255, 0.12) 1px, transparent 1px); }
+
+.hero-glow {
+  background:
+    radial-gradient(circle at 17% 20%, rgba(22, 119, 210, 0.18), transparent 34%),
+    radial-gradient(circle at 84% 10%, rgba(14, 159, 120, 0.14), transparent 30%),
+    linear-gradient(135deg, var(--surface), var(--surface-soft));
+}
+
+.equation-display { overflow-x: auto; padding: 1rem 0; color: var(--ink); }
+.katex { font-size: 1.08em; }
+.katex-display { margin: 0.4rem 0 !important; overflow-x: auto; overflow-y: hidden; padding-bottom: 0.25rem; }
+
+.canvas-frame { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: #f5faff; }
+[data-theme='dark'] .canvas-frame { background: #0c2236; }
+.canvas-frame canvas { display: block; max-width: 100%; }
+
+.scrollbar-thin { scrollbar-width: thin; scrollbar-color: #9ab2c8 transparent; }
+
+/* The lab's reduced-motion preference applies to both our CSS and the app's canvas loops. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.001ms !important; }
+}
+
+@media print {
+  .no-print, nav, footer { display: none !important; }
+  body { background: white; }
+  .card { box-shadow: none; }
+}

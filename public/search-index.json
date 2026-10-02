@@ -44,6 +44,28 @@
     "tags": []
   },
   {
+    "slug": "force-momentum-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Force, momentum and impulse",
+    "title_bn": "বল, ভরবেগ ও ঘাত",
+    "description_en": "Connect force, momentum, impulse, friction and momentum conservation in collisions.",
+    "description_bn": "বল, ভরবেগ, ঘাত, ঘর্ষণ ও সংঘর্ষে ভরবেগ সংরক্ষণের সম্পর্ক।",
+    "href": "/equations/force-momentum-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "kinematics-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Motion and kinematics formula sheet",
+    "title_bn": "গতি ও গতিবিদ্যার সূত্রসমূহ",
+    "description_en": "A quick reference for speed, constant acceleration, free fall and vector resultants.",
+    "description_bn": "দ্রুতি, সমত্বরণ, মুক্তপতন ও ভেক্টর লব্ধির সংক্ষিপ্ত সূত্রপত্র।",
+    "href": "/equations/kinematics-formula-sheet",
+    "tags": []
+  },
+  {
     "slug": "lens-focal-length",
     "kind": "experiment",
     "subject": "physics",
@@ -132,6 +154,149 @@
     "tags": []
   },
   {
+    "slug": "work-energy-power-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Work, energy, power and efficiency",
+    "title_bn": "কাজ, শক্তি, ক্ষমতা ও দক্ষতা",
+    "description_en": "Work by a constant force, kinetic and gravitational potential energy, power and efficiency.",
+    "description_bn": "ধ্রুব বলের কাজ, গতিশক্তি, মহাকর্ষীয় বিভবশক্তি, ক্ষমতা ও দক্ষতা।",
+    "href": "/equations/work-energy-power-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "circular-motion-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Circular motion and angular speed",
+    "title_bn": "বৃত্তীয় গতি ও কৌণিক বেগ",
+    "description_en": "Relate angular speed, period, tangential speed and centripetal acceleration/force.",
+    "description_bn": "কৌণিক বেগ, পর্যায়কাল, স্পর্শকীয় দ্রুতি ও কেন্দ্রমুখী ত্বরণ/বলের সম্পর্ক।",
+    "href": "/equations/circular-motion-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "current-electricity-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Current electricity and circuits",
+    "title_bn": "চল তড়িৎ ও বর্তনী",
+    "description_en": "Ohm’s law, resistance, power, heating, Kirchhoff rules, source emf and Wheatstone balance.",
+    "description_bn": "ওহমের সূত্র, রোধ, ক্ষমতা, তাপ, কির্খফের সূত্র, উৎসের তড়িচ্চালক বল ও হুইটস্টোন সেতু।",
+    "href": "/equations/current-electricity-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "elasticity-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Elasticity, stress and Hooke’s law",
+    "title_bn": "স্থিতিস্থাপকতা, পীড়ন ও হুকের সূত্র",
+    "description_en": "Definitions of stress and strain, Young’s modulus, and the spring form of Hooke’s law.",
+    "description_bn": "পীড়ন ও বিকৃতির সংজ্ঞা, ইয়ং গুণাঙ্ক এবং স্প্রিংয়ের হুকের সূত্র।",
+    "href": "/equations/elasticity-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "electronics-logic-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Electronics, transistors and logic gates",
+    "title_bn": "ইলেকট্রনিক্স, ট্রানজিস্টর ও লজিক গেট",
+    "description_en": "A quick reference for diode behaviour, transistor current gains and basic digital logic.",
+    "description_bn": "ডায়োডের আচরণ, ট্রানজিস্টরের কারেন্ট গেইন ও মৌলিক ডিজিটাল লজিকের সংক্ষিপ্ত রেফারেন্স।",
+    "href": "/equations/electronics-logic-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "electrostatics-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Electrostatics and capacitors",
+    "title_bn": "স্থির তড়িৎ ও ধারক",
+    "description_en": "Coulomb force, electric field and potential, capacitance, stored energy and capacitor combinations.",
+    "description_bn": "কুলম্ব বল, তড়িৎ ক্ষেত্র ও বিভব, ধারকত্ব, সঞ্চিত শক্তি ও ধারকের সমবায়।",
+    "href": "/equations/electrostatics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "fluid-mechanics-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Fluid pressure, flow and viscosity",
+    "title_bn": "তরলের চাপ, প্রবাহ ও সান্দ্রতা",
+    "description_en": "Hydrostatic pressure, buoyancy, continuity, Bernoulli’s principle and Stokes drag.",
+    "description_bn": "স্থির তরলের চাপ, প্লবতা, ধারাবাহিকতা, বার্নুলির নীতি ও স্টোকসের বাধা।",
+    "href": "/equations/fluid-mechanics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "gravitation-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Gravitation and orbital motion",
+    "title_bn": "মহাকর্ষ ও কক্ষীয় গতি",
+    "description_en": "Universal gravitation, surface gravity, escape speed and Kepler’s third law.",
+    "description_bn": "সার্বজনীন মহাকর্ষ, পৃষ্ঠে অভিকর্ষজ ত্বরণ, মুক্তিবেগ ও কেপলারের তৃতীয় সূত্র।",
+    "href": "/equations/gravitation-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "heat-thermodynamics-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Heat, gas laws and thermodynamics",
+    "title_bn": "তাপ, গ্যাস সূত্র ও তাপগতিবিদ্যা",
+    "description_en": "Specific heat, latent heat, expansion, gas laws, kinetic theory, first law, Carnot efficiency and conduction.",
+    "description_bn": "আপেক্ষিক তাপ, সুপ্ততাপ, প্রসারণ, গ্যাস সূত্র, গতিতত্ত্ব, প্রথম সূত্র, কার্নো দক্ষতা ও তাপ পরিবহন।",
+    "href": "/equations/heat-thermodynamics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "light-optics-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Geometrical and wave optics",
+    "title_bn": "জ্যামিতিক ও তরঙ্গ আলোকবিজ্ঞান",
+    "description_en": "Refraction, critical angle, lenses and mirrors, optical power, interference and diffraction gratings.",
+    "description_bn": "প্রতিসরণ, ক্রান্তি কোণ, লেন্স ও দর্পণ, লেন্সের ক্ষমতা, ব্যতিচার ও অপবর্তন গ্রেটিং।",
+    "href": "/equations/light-optics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "magnetism-emi-ac-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Magnetism, induction and AC circuits",
+    "title_bn": "চুম্বকত্ব, তড়িৎচৌম্বক আবেশ ও AC বর্তনী",
+    "description_en": "Magnetic forces and fields, Faraday induction, transformer relations, RMS values and AC impedance.",
+    "description_bn": "চৌম্বক বল ও ক্ষেত্র, ফ্যারাডের আবেশ, ট্রান্সফরমার, RMS মান ও AC প্রতিবন্ধকতা।",
+    "href": "/equations/magnetism-emi-ac-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "modern-physics-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Modern physics and radioactivity",
+    "title_bn": "আধুনিক পদার্থবিজ্ঞান ও তেজস্ক্রিয়তা",
+    "description_en": "Photons, photoelectric effect, matter waves, Bohr energy, mass–energy, radioactive decay and special relativity.",
+    "description_bn": "ফোটন, আলোকতড়িৎ ক্রিয়া, পদার্থ তরঙ্গ, বোর শক্তিস্তর, ভর-শক্তি, তেজস্ক্রিয় ক্ষয় ও বিশেষ আপেক্ষিকতা।",
+    "href": "/equations/modern-physics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "projectile-motion-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Projectile motion formula sheet",
+    "title_bn": "প্রক্ষেপণ গতির সূত্রসমূহ",
+    "description_en": "Time of flight, maximum height and horizontal range for an ideal projectile.",
+    "description_bn": "আদর্শ প্রক্ষেপণের উড্ডয়নকাল, সর্বোচ্চ উচ্চতা ও অনুভূমিক পাল্লা।",
+    "href": "/equations/projectile-motion-formula-sheet",
+    "tags": []
+  },
+  {
     "slug": "projectile-range",
     "kind": "equation",
     "subject": "physics",
@@ -140,6 +305,17 @@
     "description_en": "See how launch angle and speed control a projectile's horizontal range.",
     "description_bn": "নিক্ষেপ কোণ ও বেগ কীভাবে প্রক্ষেপণের পাল্লা বদলায় তা দেখুন।",
     "href": "/equations/projectile-range",
+    "tags": []
+  },
+  {
+    "slug": "shm-waves-formula-sheet",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Simple harmonic motion and wave formula sheet",
+    "title_bn": "সরল ছন্দিত গতি ও তরঙ্গের সূত্রসমূহ",
+    "description_en": "Pendulums, spring oscillators, wave speed, energy, Doppler shift, beats and standing-wave frequencies.",
+    "description_bn": "দোলক, স্প্রিং দোলক, তরঙ্গবেগ, শক্তি, ডপলার সরণ, বিট ও স্থির তরঙ্গের কম্পাঙ্ক।",
+    "href": "/equations/shm-waves-formula-sheet",
     "tags": []
   },
   {
@@ -176,6 +352,17 @@
     "tags": []
   },
   {
+    "slug": "atom-mole-formula-sheet",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Atoms, moles and chemical composition",
+    "title_bn": "পরমাণু, মোল ও রাসায়নিক সংযুতি",
+    "description_en": "Mole conversions, concentration, composition, empirical formula, yield, photons and quantum-number reminders.",
+    "description_bn": "মোল রূপান্তর, ঘনমাত্রা, সংযুতি, স্থূল সংকেত, উৎপাদন, ফোটন ও কোয়ান্টাম সংখ্যার সূত্র।",
+    "href": "/equations/atom-mole-formula-sheet",
+    "tags": []
+  },
+  {
     "slug": "molarity",
     "kind": "equation",
     "subject": "chemistry",
@@ -184,6 +371,17 @@
     "description_en": "Describe how much solute is present in a solution volume.",
     "description_bn": "নির্দিষ্ট দ্রবণ আয়তনে দ্রবের পরিমাণ প্রকাশ করুন।",
     "href": "/equations/molarity",
+    "tags": []
+  },
+  {
+    "slug": "organic-chemistry-reaction-sheet",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Organic formulae and reaction patterns",
+    "title_bn": "জৈব যৌগের সাধারণ সংকেত ও বিক্রিয়ার ধরন",
+    "description_en": "General hydrocarbon formulae and common organic reaction classes, with representative balanced patterns.",
+    "description_bn": "হাইড্রোকার্বনের সাধারণ সংকেত ও প্রচলিত জৈব বিক্রিয়ার ধরন, উদাহরণসহ।",
+    "href": "/equations/organic-chemistry-reaction-sheet",
     "tags": []
   },
   {
@@ -231,6 +429,61 @@
     "tags": []
   },
   {
+    "slug": "chemical-kinetics-formula-sheet",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Chemical kinetics and reaction rates",
+    "title_bn": "রাসায়নিক গতিবিদ্যা ও বিক্রিয়ার হার",
+    "description_en": "Rate laws, the first-order half-life and Arrhenius temperature dependence.",
+    "description_bn": "হার-সূত্র, প্রথম-ক্রম বিক্রিয়ার অর্ধায়ু ও তাপমাত্রায় অ্যারেনিয়াস নির্ভরতা।",
+    "href": "/equations/chemical-kinetics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "chemical-thermodynamics-formula-sheet",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Chemical thermodynamics",
+    "title_bn": "রাসায়নিক তাপগতিবিদ্যা",
+    "description_en": "Heat absorbed, enthalpy, Hess’s law and Gibbs energy for chemical processes.",
+    "description_bn": "শোষিত তাপ, এনথালপি, হেসের সূত্র ও রাসায়নিক প্রক্রিয়ায় গিবস শক্তি।",
+    "href": "/equations/chemical-thermodynamics-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "electrochemistry-formula-sheet",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Electrochemistry and conductivity",
+    "title_bn": "তড়িৎরসায়ন ও পরিবাহিতা",
+    "description_en": "Standard cell potential, Nernst equation, Faraday electrolysis, conductivity and Kohlrausch’s law.",
+    "description_bn": "প্রমাণ কোষ বিভব, নার্নস্ট সমীকরণ, ফ্যারাডের তড়িৎ বিশ্লেষণ, পরিবাহিতা ও কোলরাউশের সূত্র।",
+    "href": "/equations/electrochemistry-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "equilibrium-acid-base-formula-sheet",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Equilibrium, acids and bases",
+    "title_bn": "সাম্যাবস্থা, অ্যাসিড ও ক্ষার",
+    "description_en": "Kc/Kp, water ion product, pH, Ka/Kb, buffers, solubility product and weak-acid dilution.",
+    "description_bn": "Kc/Kp, পানির আয়নিক গুণফল, pH, Ka/Kb, বাফার, দ্রাব্যতা গুণফল ও দুর্বল অম্লের লঘুকরণ।",
+    "href": "/equations/equilibrium-acid-base-formula-sheet",
+    "tags": []
+  },
+  {
+    "slug": "gas-laws-formula-sheet",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Gas laws and molecular motion",
+    "title_bn": "গ্যাস সূত্র ও অণুর গতি",
+    "description_en": "Boyle, Charles, Gay-Lussac, Avogadro, Dalton, Graham and van der Waals relations.",
+    "description_bn": "বয়েল, চার্লস, গে-লুসাক, অ্যাভোগাড্রো, ডাল্টন, গ্রাহাম ও ভ্যান ডার ওয়ালসের সম্পর্ক।",
+    "href": "/equations/gas-laws-formula-sheet",
+    "tags": []
+  },
+  {
     "slug": "henderson-hasselbalch",
     "kind": "equation",
     "subject": "chemistry",
@@ -250,6 +503,17 @@
     "description_en": "Explore how the four state variables of an ideal gas fit together.",
     "description_bn": "আদর্শ গ্যাসের চারটি state variable কীভাবে যুক্ত তা দেখুন।",
     "href": "/equations/ideal-gas-law",
+    "tags": []
+  },
+  {
+    "slug": "industrial-inorganic-reaction-sheet",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Industrial and inorganic reactions",
+    "title_bn": "শিল্প ও অজৈব রসায়নের বিক্রিয়া",
+    "description_en": "Haber, Contact and Ostwald processes plus displacement, precipitation, redox and neutralisation patterns.",
+    "description_bn": "হ্যাবার, কন্টাক্ট ও অস্টওয়াল্ড প্রক্রিয়া এবং স্থানচ্যুতি, অধঃক্ষেপণ, রেডক্স ও প্রশমন বিক্রিয়া।",
+    "href": "/equations/industrial-inorganic-reaction-sheet",
     "tags": []
   },
   {
@@ -275,6 +539,17 @@
     "tags": []
   },
   {
+    "slug": "solutions-formula-sheet",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Solutions and colligative properties",
+    "title_bn": "দ্রবণ ও সমষ্টিগত ধর্ম",
+    "description_en": "Raoult’s and Henry’s laws, boiling-point elevation, freezing-point depression and osmotic pressure.",
+    "description_bn": "রাউল্ট ও হেনরির সূত্র, স্ফুটনাঙ্ক বৃদ্ধি, হিমাঙ্ক অবনমন ও অভিস্রবণ চাপ।",
+    "href": "/equations/solutions-formula-sheet",
+    "tags": []
+  },
+  {
     "slug": "equilibrium-constant",
     "kind": "equation",
     "subject": "chemistry",
@@ -295,6 +570,1176 @@
     "description_bn": "তড়িৎ বিশ্লেষণে চার্জ ও সঞ্চিত ভরের সম্পর্ক।",
     "href": "/equations/faradays-law",
     "tags": []
+  },
+  {
+    "slug": "physics-ruler-vernier-measurement",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Ruler and vernier measurements",
+    "title_bn": "স্কেল ও ভার্নিয়ার দিয়ে পরিমাপ",
+    "description_en": "Measure length with a ruler and vernier scale; note the least count, zero error and corrected reading.",
+    "description_bn": "স্কেল ও ভার্নিয়ার দিয়ে দৈর্ঘ্য মাপুন; লঘিষ্ঠ গণন, শূন্য ত্রুটি ও সংশোধিত পাঠ লিখুন।",
+    "href": "/experiments#lab-physics-ruler-vernier-measurement",
+    "tags": [
+      "practical",
+      "school",
+      "Measurement"
+    ]
+  },
+  {
+    "slug": "physics-density-solid-liquid",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Density of a solid and a liquid",
+    "title_bn": "কঠিন ও তরলের ঘনত্ব",
+    "description_en": "Find mass with a balance and volume by dimensions or displacement; for a liquid, use a measuring cylinder.",
+    "description_bn": "তুলায় ভর এবং মাত্রা বা অপসারণ পদ্ধতিতে আয়তন বের করুন; তরলের ক্ষেত্রে মাপনী সিলিন্ডার নিন।",
+    "href": "/experiments#lab-physics-density-solid-liquid",
+    "tags": [
+      "practical",
+      "school",
+      "Properties of matter"
+    ]
+  },
+  {
+    "slug": "physics-archimedes-principle-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Archimedes’ principle",
+    "title_bn": "আর্কিমিডিসের নীতি",
+    "description_en": "Compare an object’s loss of apparent weight in water with the weight of displaced water.",
+    "description_bn": "পানিতে বস্তুর আপাত ওজনের হ্রাসকে অপসারিত পানির ওজনের সঙ্গে তুলনা করুন।",
+    "href": "/experiments#lab-physics-archimedes-principle-lab",
+    "tags": [
+      "practical",
+      "school",
+      "Fluids"
+    ]
+  },
+  {
+    "slug": "physics-simple-pendulum-school",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Simple pendulum",
+    "title_bn": "সরল দোলক",
+    "description_en": "Time many small-angle oscillations, repeat for different lengths and examine the T²–L relation.",
+    "description_bn": "ছোট কোণে বহু দোলনের সময় নিন, বিভিন্ন দৈর্ঘ্যে পুনরাবৃত্তি করুন এবং T²–L সম্পর্ক দেখুন।",
+    "href": "/experiments#lab-physics-simple-pendulum-school",
+    "tags": [
+      "practical",
+      "school",
+      "Oscillations"
+    ]
+  },
+  {
+    "slug": "physics-spring-constant-school",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Spring constant",
+    "title_bn": "স্প্রিং ধ্রুবক",
+    "description_en": "Add known loads within the elastic range and record extension; the force–extension slope estimates k.",
+    "description_bn": "স্থিতিস্থাপক সীমার মধ্যে পরিচিত ভার যোগ করে প্রসারণ মাপুন; বল–প্রসারণ রেখার ঢাল থেকে k পাওয়া যায়।",
+    "href": "/experiments#lab-physics-spring-constant-school",
+    "tags": [
+      "practical",
+      "school",
+      "Mechanics"
+    ]
+  },
+  {
+    "slug": "physics-lever-inclined-plane-ma",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Lever and inclined plane: mechanical advantage",
+    "title_bn": "লিভার ও আনত তল: যান্ত্রিক সুবিধা",
+    "description_en": "Compare load with effort; friction makes actual mechanical advantage lower than the ideal value.",
+    "description_bn": "ভার ও প্রযুক্ত বল তুলনা করুন; ঘর্ষণের কারণে বাস্তব যান্ত্রিক সুবিধা আদর্শ মানের চেয়ে কম হয়।",
+    "href": "/experiments#lab-physics-lever-inclined-plane-ma",
+    "tags": [
+      "practical",
+      "school",
+      "Simple machines"
+    ]
+  },
+  {
+    "slug": "physics-friction-coefficient-school",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Friction",
+    "title_bn": "ঘর্ষণ",
+    "description_en": "Increase the pull gradually until a block just starts sliding; relate limiting friction to normal reaction.",
+    "description_bn": "বস্তুটি চলা শুরু করা পর্যন্ত টান ধীরে বাড়ান; সীমান্ত ঘর্ষণকে অভিলম্ব প্রতিক্রিয়ার সঙ্গে তুলনা করুন।",
+    "href": "/experiments#lab-physics-friction-coefficient-school",
+    "tags": [
+      "practical",
+      "school",
+      "Mechanics"
+    ]
+  },
+  {
+    "slug": "physics-specific-heat-mixture-school",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Specific heat capacity by mixtures",
+    "title_bn": "মিশ্রণ পদ্ধতিতে আপেক্ষিক তাপ",
+    "description_en": "Mix measured amounts at known temperatures in an insulated calorimeter and use heat lost = heat gained.",
+    "description_bn": "অন্তরিত ক্যালোরিমিটারে জানা তাপমাত্রার পরিমিত পদার্থ মিশিয়ে তাপক্ষয় = তাপলাভ সম্পর্ক ব্যবহার করুন।",
+    "href": "/experiments#lab-physics-specific-heat-mixture-school",
+    "tags": [
+      "practical",
+      "school",
+      "Heat"
+    ]
+  },
+  {
+    "slug": "physics-ohms-law-school",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Ohm’s law",
+    "title_bn": "ওহমের সূত্র",
+    "description_en": "Vary current through a resistor while limiting heating; plot V against I and find the slope.",
+    "description_bn": "রোধ অতিরিক্ত গরম না করে ধারা বদলান; I-এর বিপরীতে V লেখচিত্র এঁকে ঢাল নির্ণয় করুন।",
+    "href": "/experiments#lab-physics-ohms-law-school",
+    "tags": [
+      "practical",
+      "school",
+      "Electricity"
+    ]
+  },
+  {
+    "slug": "physics-series-parallel-resistance-school",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Series and parallel resistance",
+    "title_bn": "রোধের শ্রেণি ও সমান্তরাল সমবায়",
+    "description_en": "Measure equivalent resistance for the same resistors in series and parallel, then compare with predicted values.",
+    "description_bn": "একই রোধগুলো শ্রেণি ও সমান্তরালে যুক্ত করে তুল্য রোধ মাপুন এবং তাত্ত্বিক মানের সঙ্গে মিলান।",
+    "href": "/experiments#lab-physics-series-parallel-resistance-school",
+    "tags": [
+      "practical",
+      "school",
+      "Electricity"
+    ]
+  },
+  {
+    "slug": "physics-glass-slab-refraction-school",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Refraction through a glass slab",
+    "title_bn": "কাচের স্ল্যাবে প্রতিসরণ",
+    "description_en": "Trace incident and emergent rays, measure i and r, and note the parallel emergent ray and lateral shift.",
+    "description_bn": "আপতিত ও নির্গত রশ্মি আঁকুন, i ও r মাপুন, সমান্তরাল নির্গত রশ্মি ও পার্শ্ব সরণ লক্ষ করুন।",
+    "href": "/experiments#lab-physics-glass-slab-refraction-school",
+    "tags": [
+      "practical",
+      "school",
+      "Optics"
+    ]
+  },
+  {
+    "slug": "physics-lens-mirror-image-school",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Lens and mirror image formation",
+    "title_bn": "লেন্স ও দর্পণে প্রতিবিম্ব গঠন",
+    "description_en": "Use principal rays or a screen to locate the image; record whether it is real/virtual, inverted/erect and magnified/reduced.",
+    "description_bn": "প্রধান রশ্মি বা পর্দা দিয়ে প্রতিবিম্বের অবস্থান বের করুন; বাস্তব/অবাস্তব, উল্টো/সোজা ও বিবর্ধিত/খর্ব লিখুন।",
+    "href": "/experiments#lab-physics-lens-mirror-image-school",
+    "tags": [
+      "practical",
+      "school",
+      "Optics"
+    ]
+  },
+  {
+    "slug": "physics-vernier-callipers-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Vernier callipers",
+    "title_bn": "ভার্নিয়ার ক্যালিপার্স",
+    "description_en": "Measure external/internal diameter and depth; determine least count and apply zero correction.",
+    "description_bn": "বাহ্যিক/অভ্যন্তরীণ ব্যাস ও গভীরতা মাপুন; লঘিষ্ঠ গণন নির্ণয় করে শূন্য সংশোধন প্রয়োগ করুন।",
+    "href": "/experiments#lab-physics-vernier-callipers-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Measurement"
+    ]
+  },
+  {
+    "slug": "physics-screw-gauge-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Screw gauge (micrometer)",
+    "title_bn": "স্ক্রু গজ (মাইক্রোমিটার)",
+    "description_en": "Find pitch and least count, check zero error, then measure wire diameter or sheet thickness at several positions.",
+    "description_bn": "পিচ ও লঘিষ্ঠ গণন বের করে শূন্য ত্রুটি দেখুন; তারের ব্যাস বা পাতের পুরুত্ব কয়েক স্থানে মাপুন।",
+    "href": "/experiments#lab-physics-screw-gauge-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Measurement"
+    ]
+  },
+  {
+    "slug": "physics-spherometer-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Spherometer",
+    "title_bn": "স্ফেরোমিটার",
+    "description_en": "Determine the sagitta h of a curved surface and the mean separation l of the legs.",
+    "description_bn": "বক্র পৃষ্ঠের স্যাজিটা h ও পায়াগুলোর গড় ব্যবধান l নির্ণয় করুন।",
+    "href": "/experiments#lab-physics-spherometer-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Measurement"
+    ]
+  },
+  {
+    "slug": "physics-g-pendulum-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Acceleration due to gravity by pendulum",
+    "title_bn": "দোলকের সাহায্যে অভিকর্ষজ ত্বরণ",
+    "description_en": "Measure the effective length to the bob’s centre, time repeated oscillations, and plot T² against L.",
+    "description_bn": "দোলকের কেন্দ্র পর্যন্ত কার্যকর দৈর্ঘ্য মাপুন, বহু দোলনের সময় নিন এবং L-এর বিপরীতে T² লেখচিত্র আঁকুন।",
+    "href": "/experiments#lab-physics-g-pendulum-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Mechanics"
+    ]
+  },
+  {
+    "slug": "physics-young-modulus-searle-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Young’s modulus by Searle’s apparatus",
+    "title_bn": "সিয়ার্লের যন্ত্রে ইয়ং গুণাঙ্ক",
+    "description_en": "Compare extension of the experimental and reference wires as load changes; measure wire length and cross-section carefully.",
+    "description_bn": "ভার বদলালে পরীক্ষণ ও রেফারেন্স তারের প্রসারণ তুলনা করুন; তারের দৈর্ঘ্য ও প্রস্থচ্ছেদ সতর্কভাবে মাপুন।",
+    "href": "/experiments#lab-physics-young-modulus-searle-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Mechanics"
+    ]
+  },
+  {
+    "slug": "physics-spring-oscillation-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Spring oscillation",
+    "title_bn": "স্প্রিংয়ের দোলন",
+    "description_en": "Measure the period for several attached masses; a T²–m graph can be used to estimate the spring constant.",
+    "description_bn": "বিভিন্ন সংযুক্ত ভরের জন্য পর্যায়কাল মাপুন; T²–m লেখচিত্র থেকে স্প্রিং ধ্রুবক পাওয়া যায়।",
+    "href": "/experiments#lab-physics-spring-oscillation-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Mechanics"
+    ]
+  },
+  {
+    "slug": "physics-surface-tension-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Surface tension",
+    "title_bn": "পৃষ্ঠটান",
+    "description_en": "Use an approved capillary-rise or drop method; control temperature and note the tube/drop geometry.",
+    "description_bn": "অনুমোদিত কৈশিক উত্থান বা ফোঁটা পদ্ধতি নিন; তাপমাত্রা ও নল/ফোঁটার জ্যামিতি নিয়ন্ত্রণ করুন।",
+    "href": "/experiments#lab-physics-surface-tension-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Properties of matter"
+    ]
+  },
+  {
+    "slug": "physics-viscosity-stokes-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Viscosity by Stokes’ method",
+    "title_bn": "স্টোকস পদ্ধতিতে সান্দ্রতা",
+    "description_en": "Track a small sphere only after it reaches terminal speed in a wide, temperature-controlled column.",
+    "description_bn": "প্রশস্ত ও তাপমাত্রা-নিয়ন্ত্রিত নলে ছোট গোলক প্রান্তিক বেগে পৌঁছানোর পরই তার গতি মাপুন।",
+    "href": "/experiments#lab-physics-viscosity-stokes-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Properties of matter"
+    ]
+  },
+  {
+    "slug": "physics-specific-heat-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Specific heat capacity",
+    "title_bn": "আপেক্ষিক তাপ",
+    "description_en": "Use a calorimeter or electrical heating method; account for the calorimeter and heat losses where required.",
+    "description_bn": "ক্যালোরিমিটার বা বৈদ্যুতিক উত্তাপন পদ্ধতি নিন; প্রয়োজনমতো ক্যালোরিমিটার ও তাপক্ষয় ধরুন।",
+    "href": "/experiments#lab-physics-specific-heat-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Heat"
+    ]
+  },
+  {
+    "slug": "physics-latent-heat-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Specific latent heat",
+    "title_bn": "আপেক্ষিক সুপ্ততাপ",
+    "description_en": "Measure mass melted or condensed during a phase change and relate it to transferred heat.",
+    "description_bn": "দশা পরিবর্তনে গলা বা ঘনীভূত পদার্থের ভর মেপে তাপ স্থানান্তরের সঙ্গে সম্পর্ক করুন।",
+    "href": "/experiments#lab-physics-latent-heat-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Heat"
+    ]
+  },
+  {
+    "slug": "physics-thermal-conductivity-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Thermal conductivity",
+    "title_bn": "তাপ পরিবাহিতা",
+    "description_en": "Use the prescribed Lee’s-disc or bar method; record steady temperatures, dimensions and the heating/cooling interval.",
+    "description_bn": "নির্ধারিত লির ডিস্ক বা দণ্ড পদ্ধতি নিন; স্থির তাপমাত্রা, মাত্রা ও উত্তাপন/শীতলনের সময় লিখুন।",
+    "href": "/experiments#lab-physics-thermal-conductivity-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Heat"
+    ]
+  },
+  {
+    "slug": "physics-speed-sound-resonance-tube-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Speed of sound by resonance tube",
+    "title_bn": "অনুনাদ নলে শব্দের বেগ",
+    "description_en": "Find successive resonances of a closed air column; use the spacing between resonant lengths to reduce end-correction error.",
+    "description_bn": "বন্ধ বায়ুস্তম্ভের পরপর অনুনাদ খুঁজুন; অনুনাদী দৈর্ঘ্যের ব্যবধান নিয়ে প্রান্ত-সংশোধনের ত্রুটি কমান।",
+    "href": "/experiments#lab-physics-speed-sound-resonance-tube-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Sound"
+    ]
+  },
+  {
+    "slug": "physics-sonometer-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Sonometer",
+    "title_bn": "সোনোমিটার",
+    "description_en": "Test how resonant frequency varies with vibrating length, tension and linear density of the wire.",
+    "description_bn": "কম্পমান তারের দৈর্ঘ্য, টান ও একক দৈর্ঘ্যের ভরের সঙ্গে অনুনাদী কম্পাঙ্কের সম্পর্ক যাচাই করুন।",
+    "href": "/experiments#lab-physics-sonometer-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Sound"
+    ]
+  },
+  {
+    "slug": "physics-convex-lens-uv-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Convex lens focal length by the u–v method",
+    "title_bn": "u–v পদ্ধতিতে উত্তল লেন্সের ফোকাস দূরত্ব",
+    "description_en": "Form a sharp real image for several object distances; use a consistent positive-magnitude classroom convention.",
+    "description_bn": "বিভিন্ন বস্তু দূরত্বে তীক্ষ্ণ বাস্তব প্রতিবিম্ব গঠন করুন; ধনাত্মক মানের একই শ্রেণিকক্ষ-রীতি নিন।",
+    "href": "/experiments#lab-physics-convex-lens-uv-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Optics"
+    ]
+  },
+  {
+    "slug": "physics-prism-refractive-index-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Refractive index of a prism",
+    "title_bn": "প্রিজমের প্রতিসরাঙ্ক",
+    "description_en": "Measure prism angle A and minimum deviation δm with a spectrometer; avoid parallax when reading the circle.",
+    "description_bn": "স্পেকট্রোমিটারে প্রিজম কোণ A ও ন্যূনতম বিচ্যুতি δm মাপুন; বৃত্তাকার স্কেলে প্যারাল্যাক্স এড়ান।",
+    "href": "/experiments#lab-physics-prism-refractive-index-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Optics"
+    ]
+  },
+  {
+    "slug": "physics-spectrometer-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Spectrometer adjustment and measurements",
+    "title_bn": "স্পেকট্রোমিটার সমন্বয় ও পরিমাপ",
+    "description_en": "Level and focus the telescope/collimator, remove backlash consistently, then measure prism angle, deviation or spectral lines.",
+    "description_bn": "দূরবীক্ষণ/কলিমেটর সমতল ও ফোকাস করুন, ব্যাকল্যাশ একইভাবে সামলান, তারপর প্রিজম কোণ/বিচ্যুতি/বর্ণরেখা মাপুন।",
+    "href": "/experiments#lab-physics-spectrometer-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Optics"
+    ]
+  },
+  {
+    "slug": "physics-newtons-rings-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Newton’s rings",
+    "title_bn": "নিউটনের বলয়",
+    "description_en": "Measure diameters of several dark rings and plot D² against ring order to determine wavelength or lens curvature.",
+    "description_bn": "কয়েকটি অন্ধকার বলয়ের ব্যাস মেপে ক্রমের বিপরীতে D² লেখচিত্র এঁকে তরঙ্গদৈর্ঘ্য বা লেন্সের বক্রতা বের করুন।",
+    "href": "/experiments#lab-physics-newtons-rings-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Optics"
+    ]
+  },
+  {
+    "slug": "physics-diffraction-grating-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Diffraction grating",
+    "title_bn": "অপবর্তন গ্রেটিং",
+    "description_en": "Measure diffraction angles for known spectral lines or estimate wavelength from a calibrated grating spacing.",
+    "description_bn": "পরিচিত বর্ণরেখার অপবর্তন কোণ মাপুন অথবা ক্যালিব্রেটেড গ্রেটিং ব্যবধান থেকে তরঙ্গদৈর্ঘ্য নির্ণয় করুন।",
+    "href": "/experiments#lab-physics-diffraction-grating-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Optics"
+    ]
+  },
+  {
+    "slug": "physics-meter-bridge-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Meter bridge",
+    "title_bn": "মিটার ব্রিজ",
+    "description_en": "With unknown X in the left gap and standard R in the right, balance by moving the jockey gently and use the stated ratio; interchange the gaps to reduce end error.",
+    "description_bn": "বাম ফাঁকে অজানা X ও ডান ফাঁকে প্রমাণ R রেখে জকি আলতোভাবে সরিয়ে সাম্য করুন; প্রান্ত ত্রুটি কমাতে ফাঁক অদলবদল করুন।",
+    "href": "/experiments#lab-physics-meter-bridge-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Electricity"
+    ]
+  },
+  {
+    "slug": "physics-potentiometer-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Potentiometer",
+    "title_bn": "পটেনশিওমিটার",
+    "description_en": "Keep the primary current steady; compare emf by balancing lengths and use a suitable load for internal resistance.",
+    "description_bn": "প্রাথমিক ধারা স্থির রাখুন; সাম্য দৈর্ঘ্য দিয়ে তড়িচ্চালক বল তুলনা করুন এবং অভ্যন্তরীণ রোধে উপযুক্ত লোড নিন।",
+    "href": "/experiments#lab-physics-potentiometer-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Electricity"
+    ]
+  },
+  {
+    "slug": "physics-galvanometer-conversion-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Galvanometer conversion to ammeter/voltmeter",
+    "title_bn": "গ্যালভানোমিটারকে অ্যামিটার/ভোল্টমিটারে রূপান্তর",
+    "description_en": "Measure galvanometer resistance and full-scale current; calculate a parallel shunt for an ammeter or series multiplier for a voltmeter.",
+    "description_bn": "গ্যালভানোমিটারের রোধ ও পূর্ণ-স্কেল ধারা মেপে অ্যামিটারের সমান্তরাল শান্ট বা ভোল্টমিটারের শ্রেণি গুণক হিসাব করুন।",
+    "href": "/experiments#lab-physics-galvanometer-conversion-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Electricity"
+    ]
+  },
+  {
+    "slug": "physics-deflection-magnetometer-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Deflection magnetometer",
+    "title_bn": "বিক্ষেপ চুম্বক মাপক",
+    "description_en": "Align the instrument with the magnetic meridian and use the tangent law for the prescribed coil/current geometry.",
+    "description_bn": "যন্ত্রকে চৌম্বক মধ্যরেখায় সাজিয়ে নির্ধারিত কুণ্ডলী/ধারা বিন্যাসে tangent law ব্যবহার করুন।",
+    "href": "/experiments#lab-physics-deflection-magnetometer-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Magnetism"
+    ]
+  },
+  {
+    "slug": "physics-diode-transistor-characteristics-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Diode and transistor characteristics",
+    "title_bn": "ডায়োড ও ট্রানজিস্টরের বৈশিষ্ট্য",
+    "description_en": "Plot forward/reverse diode I–V data and transistor input/output curves within the specified safe current limits.",
+    "description_bn": "নির্ধারিত নিরাপদ ধারা-সীমায় ডায়োডের ফরোয়ার্ড/রিভার্স I–V ও ট্রানজিস্টরের ইনপুট/আউটপুট লেখচিত্র আঁকুন।",
+    "href": "/experiments#lab-physics-diode-transistor-characteristics-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Electronics"
+    ]
+  },
+  {
+    "slug": "physics-logic-gates-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Logic gates",
+    "title_bn": "লজিক গেট",
+    "description_en": "Build or simulate AND, OR, NOT, NAND, NOR and XOR gates; verify every input combination against a truth table.",
+    "description_bn": "AND, OR, NOT, NAND, NOR ও XOR গেট তৈরি/সিমুলেট করে প্রতিটি ইনপুট-সমন্বয় সত্যক সারণির সঙ্গে যাচাই করুন।",
+    "href": "/experiments#lab-physics-logic-gates-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Electronics"
+    ]
+  },
+  {
+    "slug": "chemistry-lab-safety-apparatus-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Lab safety and apparatus",
+    "title_bn": "ল্যাব নিরাপত্তা ও যন্ত্রপাতি",
+    "description_en": "Identify glassware and hazards; wear eye protection, label samples, follow teacher instructions and never taste chemicals or pipette by mouth.",
+    "description_bn": "কাচের যন্ত্র ও ঝুঁকি চিনুন; চোখের সুরক্ষা ব্যবহার, নমুনায় লেবেল, শিক্ষকের নির্দেশ মানুন; রাসায়নিক স্বাদ নেবেন না বা মুখে পিপেট করবেন না।",
+    "href": "/experiments#lab-chemistry-lab-safety-apparatus-school",
+    "tags": [
+      "practical",
+      "school",
+      "Lab skills"
+    ]
+  },
+  {
+    "slug": "chemistry-flame-test-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Flame test",
+    "title_bn": "শিখা পরীক্ষা",
+    "description_en": "Use a clean wire and small teacher-approved samples; compare characteristic colours while preventing cross-contamination.",
+    "description_bn": "পরিষ্কার তার ও শিক্ষকের অনুমোদিত অল্প নমুনা নিন; দূষণ এড়িয়ে বৈশিষ্ট্যপূর্ণ শিখার রং তুলনা করুন।",
+    "href": "/experiments#lab-chemistry-flame-test-school",
+    "tags": [
+      "practical",
+      "school",
+      "Identification"
+    ]
+  },
+  {
+    "slug": "chemistry-filtration-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Filtration",
+    "title_bn": "পরিস্রাবণ",
+    "description_en": "Separate an insoluble solid from a liquid; distinguish the residue on the filter from the filtrate.",
+    "description_bn": "তরল থেকে অদ্রবণীয় কঠিন পৃথক করুন; ফিল্টারে থাকা অবশেষ ও পরিস্রুত তরল আলাদা করে চিনুন।",
+    "href": "/experiments#lab-chemistry-filtration-school",
+    "tags": [
+      "practical",
+      "school",
+      "Separation"
+    ]
+  },
+  {
+    "slug": "chemistry-evaporation-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Evaporation",
+    "title_bn": "বাষ্পীভবন",
+    "description_en": "Recover a dissolved non-volatile solid by gently removing solvent; do not heat a solution to dryness unless instructed.",
+    "description_bn": "দ্রাবক ধীরে সরিয়ে দ্রবীভূত অউদ্বায়ী কঠিন ফেরত নিন; নির্দেশ না থাকলে সম্পূর্ণ শুকানো পর্যন্ত গরম করবেন না।",
+    "href": "/experiments#lab-chemistry-evaporation-school",
+    "tags": [
+      "practical",
+      "school",
+      "Separation"
+    ]
+  },
+  {
+    "slug": "chemistry-distillation-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Simple distillation",
+    "title_bn": "সরল পাতন",
+    "description_en": "Separate a volatile liquid from dissolved solids or liquids with sufficiently different boiling points; never seal a heated setup.",
+    "description_bn": "দ্রবীভূত কঠিন বা যথেষ্ট ভিন্ন স্ফুটনাঙ্কের তরল থেকে উদ্বায়ী তরল পৃথক করুন; উত্তপ্ত যন্ত্র বন্ধ করে সিল করবেন না।",
+    "href": "/experiments#lab-chemistry-distillation-school",
+    "tags": [
+      "practical",
+      "school",
+      "Separation"
+    ]
+  },
+  {
+    "slug": "chemistry-chromatography-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Paper chromatography",
+    "title_bn": "কাগজ ক্রোমাটোগ্রাফি",
+    "description_en": "Spot a small sample above the solvent level and compare how its components travel with the mobile phase.",
+    "description_bn": "দ্রাবকের স্তরের ওপরে অল্প নমুনা লাগিয়ে চলমান দশায় উপাদানগুলোর চলন তুলনা করুন।",
+    "href": "/experiments#lab-chemistry-chromatography-school",
+    "tags": [
+      "practical",
+      "school",
+      "Separation"
+    ]
+  },
+  {
+    "slug": "chemistry-acid-base-indicators-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Acid–base indicators",
+    "title_bn": "অম্ল-ক্ষার নির্দেশক",
+    "description_en": "Test known dilute acids and bases with a suitable indicator; compare the observed colour with the indicator range.",
+    "description_bn": "উপযুক্ত নির্দেশক দিয়ে পরিচিত লঘু অম্ল ও ক্ষার পরীক্ষা করুন; রংকে নির্দেশকের পরিবর্তন-পরিসরের সঙ্গে তুলনা করুন।",
+    "href": "/experiments#lab-chemistry-acid-base-indicators-school",
+    "tags": [
+      "practical",
+      "school",
+      "Acids and bases"
+    ]
+  },
+  {
+    "slug": "chemistry-ph-universal-indicator-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "pH with universal indicator",
+    "title_bn": "সার্বজনীন নির্দেশকে pH",
+    "description_en": "Estimate pH from the colour chart; universal indicator gives an approximate value, not a precision measurement.",
+    "description_bn": "রঙের চার্ট থেকে আনুমানিক pH নির্ণয় করুন; সার্বজনীন নির্দেশক নির্ভুল পরিমাপ দেয় না।",
+    "href": "/experiments#lab-chemistry-ph-universal-indicator-school",
+    "tags": [
+      "practical",
+      "school",
+      "Acids and bases"
+    ]
+  },
+  {
+    "slug": "chemistry-prepare-test-common-gases-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Preparation and tests for O₂, CO₂ and H₂",
+    "title_bn": "O₂, CO₂ ও H₂ প্রস্তুতি ও পরীক্ষা",
+    "description_en": "Use only small teacher-supervised samples: oxygen relights a glowing splint, carbon dioxide clouds limewater, and hydrogen gives a squeaky pop with a lit splint.",
+    "description_bn": "শুধু শিক্ষকের তত্ত্বাবধানে অল্প নমুনা নিন: অক্সিজেন জ্বলন্ত কাঠি পুনরায় জ্বালায়, CO₂ চুনপানি ঘোলা করে, আর H₂ জ্বলন্ত কাঠির কাছে ‘পপ’ শব্দ করে।",
+    "href": "/experiments#lab-chemistry-prepare-test-common-gases-school",
+    "tags": [
+      "practical",
+      "school",
+      "Gases"
+    ]
+  },
+  {
+    "slug": "chemistry-rusting-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Rusting of iron",
+    "title_bn": "লোহার মরিচা",
+    "description_en": "Compare clean iron under dry, wet and air-limited conditions; rusting requires both water and oxygen.",
+    "description_bn": "শুকনো, ভেজা ও বায়ু-সীমিত পরিবেশে পরিষ্কার লোহা তুলনা করুন; মরিচায় পানি ও অক্সিজেন দুটিই লাগে।",
+    "href": "/experiments#lab-chemistry-rusting-school",
+    "tags": [
+      "practical",
+      "school",
+      "Metals and corrosion"
+    ]
+  },
+  {
+    "slug": "chemistry-electrolysis-water-cuso4-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Electrolysis of water and CuSO₄",
+    "title_bn": "পানি ও CuSO₄-এর তড়িৎ বিশ্লেষণ",
+    "description_en": "Use a low-voltage, teacher-approved supply; product identity depends on electrolyte, electrode material and conditions.",
+    "description_bn": "কম ভোল্টেজের অনুমোদিত উৎস নিন; উৎপাদের পরিচয় ইলেক্ট্রোলাইট, ইলেক্ট্রোড ও শর্তের ওপর নির্ভর করে।",
+    "href": "/experiments#lab-chemistry-electrolysis-water-cuso4-school",
+    "tags": [
+      "practical",
+      "school",
+      "Electrochemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-electroplating-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Electroplating",
+    "title_bn": "তড়িৎ প্রলেপ",
+    "description_en": "The object to be coated is usually the cathode and the coating metal supplies ions; use approved solutions and dispose of them as directed.",
+    "description_bn": "যে বস্তুর প্রলেপ হবে তা সাধারণত ক্যাথোড; প্রলেপের ধাতু আয়ন জোগায়। অনুমোদিত দ্রবণ নিন ও নির্দেশমতো বর্জ্য ফেলুন।",
+    "href": "/experiments#lab-chemistry-electroplating-school",
+    "tags": [
+      "practical",
+      "school",
+      "Electrochemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-reactivity-series-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Reactivity series and displacement",
+    "title_bn": "সক্রিয়তার ধারা ও স্থানচ্যুতি",
+    "description_en": "Compare safe metal/metal-salt combinations; a more reactive metal can displace a less reactive metal from solution.",
+    "description_bn": "নিরাপদ ধাতু-লবণ জোড়া তুলনা করুন; বেশি সক্রিয় ধাতু দ্রবণ থেকে কম সক্রিয় ধাতুকে সরাতে পারে।",
+    "href": "/experiments#lab-chemistry-reactivity-series-school",
+    "tags": [
+      "practical",
+      "school",
+      "Metals and reactions"
+    ]
+  },
+  {
+    "slug": "chemistry-neutralisation-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Neutralisation",
+    "title_bn": "প্রশমন",
+    "description_en": "Add dilute acid and base in measured amounts, use an indicator, and identify the salt solution formed.",
+    "description_bn": "মাপা পরিমাণে লঘু অম্ল ও ক্ষার মিশিয়ে নির্দেশক নিন এবং তৈরি লবণদ্রবণ শনাক্ত করুন।",
+    "href": "/experiments#lab-chemistry-neutralisation-school",
+    "tags": [
+      "practical",
+      "school",
+      "Acids and bases"
+    ]
+  },
+  {
+    "slug": "chemistry-crystallisation-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Crystallisation",
+    "title_bn": "কেলাসন",
+    "description_en": "Prepare a hot saturated solution and cool it slowly to obtain crystals; rinse and dry only as instructed.",
+    "description_bn": "গরম সম্পৃক্ত দ্রবণ তৈরি করে ধীরে ঠান্ডা করুন; নির্দেশমতো কেলাস ধুয়ে শুকান।",
+    "href": "/experiments#lab-chemistry-crystallisation-school",
+    "tags": [
+      "practical",
+      "school",
+      "Separation"
+    ]
+  },
+  {
+    "slug": "chemistry-water-hardness-school",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Water hardness",
+    "title_bn": "পানির খরতা",
+    "description_en": "Compare soap lather or use the prescribed EDTA method to estimate calcium and magnesium ions.",
+    "description_bn": "সাবানের ফেনা তুলনা করুন অথবা নির্ধারিত EDTA পদ্ধতিতে ক্যালসিয়াম ও ম্যাগনেসিয়াম আয়ন নির্ণয় করুন।",
+    "href": "/experiments#lab-chemistry-water-hardness-school",
+    "tags": [
+      "practical",
+      "school",
+      "Water chemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-hcl-naoh-titration-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "HCl vs NaOH titration",
+    "title_bn": "HCl বনাম NaOH টাইট্রেশন",
+    "description_en": "Use a standard solution and a suitable indicator; at equivalence, acid/base stoichiometric amounts have reacted.",
+    "description_bn": "প্রমাণ দ্রবণ ও উপযুক্ত নির্দেশক নিন; সমতুল্য বিন্দুতে অম্ল-ক্ষারের স্টয়কিওমেট্রিক পরিমাণ বিক্রিয়া করে।",
+    "href": "/experiments#lab-chemistry-hcl-naoh-titration-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Titration"
+    ]
+  },
+  {
+    "slug": "chemistry-sodium-carbonate-hcl-titration-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Na₂CO₃ vs HCl titration",
+    "title_bn": "Na₂CO₃ বনাম HCl টাইট্রেশন",
+    "description_en": "Account for the 1:2 carbonate-to-HCl mole ratio and use the indicator procedure prescribed for the endpoint.",
+    "description_bn": "কার্বনেট:HCl মোল অনুপাত ১:২ ধরুন এবং সমাপ্তি বিন্দুর জন্য নির্ধারিত নির্দেশক-পদ্ধতি নিন।",
+    "href": "/experiments#lab-chemistry-sodium-carbonate-hcl-titration-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Titration"
+    ]
+  },
+  {
+    "slug": "chemistry-permanganate-redox-titration-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "KMnO₄ vs oxalic acid / Mohr’s salt",
+    "title_bn": "KMnO₄ বনাম অক্সালিক অ্যাসিড / মোহর লবণ",
+    "description_en": "Acidified permanganate is self-indicating; warm the oxalate titration only as prescribed and use the correct redox stoichiometry.",
+    "description_bn": "অম্লীয় পারম্যাঙ্গানেট স্ব-নির্দেশক; অক্সালেট টাইট্রেশন নির্দেশমতো গরম করুন এবং সঠিক রেডক্স অনুপাত নিন।",
+    "href": "/experiments#lab-chemistry-permanganate-redox-titration-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Titration"
+    ]
+  },
+  {
+    "slug": "chemistry-edta-water-hardness-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "EDTA titration for water hardness",
+    "title_bn": "পানির খরতা নির্ণয়ে EDTA টাইট্রেশন",
+    "description_en": "At the prescribed pH near 10, EDTA complexes Ca²⁺/Mg²⁺ approximately 1:1; use the specified buffer and indicator.",
+    "description_bn": "প্রায় pH ১০-এ EDTA, Ca²⁺/Mg²⁺-এর সঙ্গে প্রায় ১:১ জটিল গঠন করে; নির্ধারিত বাফার ও নির্দেশক নিন।",
+    "href": "/experiments#lab-chemistry-edta-water-hardness-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Titration"
+    ]
+  },
+  {
+    "slug": "chemistry-iodometric-copper-titration-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Iodometric determination of copper",
+    "title_bn": "আয়োডোমেট্রিক পদ্ধতিতে তামা নির্ণয়",
+    "description_en": "Liberate iodine from the copper sample with iodide and titrate with standard thiosulfate; add starch near the endpoint.",
+    "description_bn": "তামার নমুনায় আয়োডাইড দিয়ে আয়োডিন মুক্ত করে প্রমাণ থায়োসালফেট দিয়ে টাইট্রেট করুন; সমাপ্তির কাছে স্টার্চ দিন।",
+    "href": "/experiments#lab-chemistry-iodometric-copper-titration-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Titration"
+    ]
+  },
+  {
+    "slug": "chemistry-cation-analysis-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Cation analysis: Pb²⁺, Cu²⁺, Fe²⁺/Fe³⁺, Al³⁺, Zn²⁺, Ca²⁺, Ba²⁺, NH₄⁺",
+    "title_bn": "ধনায়ন বিশ্লেষণ: Pb²⁺, Cu²⁺, Fe²⁺/Fe³⁺, Al³⁺, Zn²⁺, Ca²⁺, Ba²⁺, NH₄⁺",
+    "description_en": "Use the course’s systematic group and confirmatory tests; record precipitate colour/solubility and flame observations, not a single colour alone.",
+    "description_bn": "পাঠ্যক্রমের ধাপে ধাপে দলীয় ও নিশ্চিতকরণ পরীক্ষা নিন; শুধু একটি রং নয়—অধঃক্ষেপের রং/দ্রাব্যতা ও শিখার পর্যবেক্ষণ লিখুন।",
+    "href": "/experiments#lab-chemistry-cation-analysis-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Qualitative analysis"
+    ]
+  },
+  {
+    "slug": "chemistry-anion-analysis-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Anion analysis: Cl⁻, Br⁻, I⁻, SO₄²⁻, CO₃²⁻, NO₃⁻, PO₄³⁻",
+    "title_bn": "ঋণায়ন বিশ্লেষণ: Cl⁻, Br⁻, I⁻, SO₄²⁻, CO₃²⁻, NO₃⁻, PO₄³⁻",
+    "description_en": "Perform the prescribed acid, silver-nitrate, barium-salt and confirmatory tests with clean separate portions and appropriate controls.",
+    "description_bn": "পরিষ্কার আলাদা নমুনায় নির্ধারিত অ্যাসিড, সিলভার নাইট্রেট, বেরিয়াম লবণ ও নিশ্চিতকরণ পরীক্ষা উপযুক্ত নিয়ন্ত্রণসহ করুন।",
+    "href": "/experiments#lab-chemistry-anion-analysis-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Qualitative analysis"
+    ]
+  },
+  {
+    "slug": "chemistry-alcohol-functional-group-test-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Alcohol test",
+    "title_bn": "অ্যালকোহল পরীক্ষা",
+    "description_en": "Use the course-approved test and controls; oxidation behaviour differs for primary, secondary and tertiary alcohols.",
+    "description_bn": "পাঠ্যক্রমে অনুমোদিত পরীক্ষা ও নিয়ন্ত্রণ নিন; প্রাইমারি, সেকেন্ডারি ও টারশিয়ারি অ্যালকোহলের জারণ আচরণ ভিন্ন।",
+    "href": "/experiments#lab-chemistry-alcohol-functional-group-test-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Organic tests"
+    ]
+  },
+  {
+    "slug": "chemistry-aldehyde-tollens-fehling-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Aldehyde test: Tollens’ / Fehling’s",
+    "title_bn": "অ্যালডিহাইড পরীক্ষা: টোলেন্স / ফেলিং",
+    "description_en": "A positive Tollens silver mirror or Fehling brick-red Cu₂O supports an aldehyde; prepare Tollens reagent fresh and never store it.",
+    "description_bn": "টোলেন্সে রূপালি আস্তরণ বা ফেলিংয়ে ইট-লাল Cu₂O অ্যালডিহাইড নির্দেশ করে; টোলেন্স দ্রবণ তাজা তৈরি করে কখনও সংরক্ষণ করবেন না।",
+    "href": "/experiments#lab-chemistry-aldehyde-tollens-fehling-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Organic tests"
+    ]
+  },
+  {
+    "slug": "chemistry-ketone-functional-group-test-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Ketone test",
+    "title_bn": "কিটোন পরীক্ষা",
+    "description_en": "Use a carbonyl test such as 2,4-DNP, then an approved confirmatory test; 2,4-DNP also reacts with aldehydes.",
+    "description_bn": "2,4-DNP-এর মতো কার্বনিল পরীক্ষা করে অনুমোদিত নিশ্চিতকরণ নিন; 2,4-DNP অ্যালডিহাইডেও বিক্রিয়া করে।",
+    "href": "/experiments#lab-chemistry-ketone-functional-group-test-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Organic tests"
+    ]
+  },
+  {
+    "slug": "chemistry-carboxylic-acid-test-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Carboxylic acid test",
+    "title_bn": "কার্বক্সিলিক অ্যাসিড পরীক্ষা",
+    "description_en": "A dilute sodium hydrogencarbonate test releases CO₂; confirm the gas as prescribed and compare with a control.",
+    "description_bn": "লঘু সোডিয়াম হাইড্রোজেনকার্বনেট পরীক্ষায় CO₂ বের হয়; নির্ধারিতভাবে গ্যাস নিশ্চিত করে নিয়ন্ত্রণের সঙ্গে তুলনা করুন।",
+    "href": "/experiments#lab-chemistry-carboxylic-acid-test-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Organic tests"
+    ]
+  },
+  {
+    "slug": "chemistry-phenol-test-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Phenol test",
+    "title_bn": "ফেনল পরীক্ষা",
+    "description_en": "Ferric chloride colour or bromine-water observations can support identification; use controls because results depend on structure.",
+    "description_bn": "ফেরিক ক্লোরাইডের রং বা ব্রোমিন পানির পর্যবেক্ষণ শনাক্তকরণে সহায়ক; গঠনের প্রভাবে ফল বদলায় বলে নিয়ন্ত্রণ নিন।",
+    "href": "/experiments#lab-chemistry-phenol-test-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Organic tests"
+    ]
+  },
+  {
+    "slug": "chemistry-amine-test-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Amine test",
+    "title_bn": "অ্যামিন পরীক্ষা",
+    "description_en": "Test basicity with indicator and follow only the teacher-approved confirmatory method; never improvise tests that release toxic vapours.",
+    "description_bn": "নির্দেশকে ক্ষারধর্ম পরীক্ষা করে শিক্ষকের অনুমোদিত নিশ্চিতকরণ পদ্ধতি অনুসরণ করুন; বিষাক্ত বাষ্প তৈরি করতে পারে এমন পরীক্ষা নিজে করবেন না।",
+    "href": "/experiments#lab-chemistry-amine-test-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Organic tests"
+    ]
+  },
+  {
+    "slug": "chemistry-unsaturation-baeyer-test-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Unsaturation test: Baeyer’s test",
+    "title_bn": "অসম্পৃক্ততা পরীক্ষা: বেয়ার পরীক্ষা",
+    "description_en": "A prescribed dilute permanganate or bromine test can indicate C=C/C≡C; compare a blank and avoid inferring structure from one test alone.",
+    "description_bn": "নির্ধারিত লঘু পারম্যাঙ্গানেট বা ব্রোমিন পরীক্ষা C=C/C≡C নির্দেশ করতে পারে; blank তুলনা করুন এবং এক পরীক্ষায় গঠন চূড়ান্ত করবেন না।",
+    "href": "/experiments#lab-chemistry-unsaturation-baeyer-test-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Organic tests"
+    ]
+  },
+  {
+    "slug": "chemistry-soap-preparation-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Soap preparation",
+    "title_bn": "সাবান প্রস্তুতি",
+    "description_en": "Saponify a fat/oil with alkali using the supervised procedure; hot caustic alkali is corrosive and requires full PPE.",
+    "description_bn": "তত্ত্বাবধানে চর্বি/তেলকে ক্ষার দিয়ে সাবানীভূত করুন; গরম কস্টিক ক্ষার ক্ষয়কারী—পূর্ণ সুরক্ষা নিন।",
+    "href": "/experiments#lab-chemistry-soap-preparation-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Organic preparation"
+    ]
+  },
+  {
+    "slug": "chemistry-aspirin-preparation-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Aspirin preparation",
+    "title_bn": "অ্যাসপিরিন প্রস্তুতি",
+    "description_en": "Prepare acetylsalicylic acid from salicylic acid using the approved microscale procedure; avoid skin contact and verify product purity as directed.",
+    "description_bn": "অনুমোদিত ক্ষুদ্র-স্কেল পদ্ধতিতে স্যালিসাইলিক অ্যাসিড থেকে অ্যাসিটাইলস্যালিসাইলিক অ্যাসিড তৈরি করুন; ত্বকের সংস্পর্শ এড়িয়ে নির্দেশমতো বিশুদ্ধতা যাচাই করুন।",
+    "href": "/experiments#lab-chemistry-aspirin-preparation-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Organic preparation"
+    ]
+  },
+  {
+    "slug": "chemistry-ester-preparation-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Ester preparation",
+    "title_bn": "এস্টার প্রস্তুতি",
+    "description_en": "Prepare a small ester sample only under supervision; use the specified catalyst, water bath and ventilation, and never smell directly.",
+    "description_bn": "শুধু তত্ত্বাবধানে অল্প এস্টার তৈরি করুন; নির্ধারিত অনুঘটক, জলস্নান ও বায়ু চলাচল ব্যবহার করুন, সরাসরি গন্ধ নেবেন না।",
+    "href": "/experiments#lab-chemistry-ester-preparation-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Organic preparation"
+    ]
+  },
+  {
+    "slug": "chemistry-thiosulfate-hcl-rate-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Rate of reaction: thiosulfate–HCl",
+    "title_bn": "বিক্রিয়ার হার: থায়োসালফেট–HCl",
+    "description_en": "Time how long a cross beneath the vessel takes to disappear as sulfur forms; repeat with one concentration changed at a time.",
+    "description_bn": "সালফার তৈরি হলে পাত্রের নিচের ক্রস অদৃশ্য হতে কত সময় লাগে মাপুন; একবারে একটি ঘনমাত্রা বদলে পুনরাবৃত্তি করুন।",
+    "href": "/experiments#lab-chemistry-thiosulfate-hcl-rate-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Physical chemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-neutralisation-enthalpy-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Enthalpy of neutralisation",
+    "title_bn": "প্রশমন এনথালপি",
+    "description_en": "Mix measured acid/base solutions in an insulated cup, record the temperature rise and account for solution heat capacity.",
+    "description_bn": "অন্তরিত কাপে মাপা অম্ল/ক্ষার দ্রবণ মিশিয়ে তাপমাত্রা বৃদ্ধি লিখুন এবং দ্রবণের তাপধারণ ক্ষমতা ধরুন।",
+    "href": "/experiments#lab-chemistry-neutralisation-enthalpy-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Physical chemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-solubility-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Solubility determination",
+    "title_bn": "দ্রাব্যতা নির্ণয়",
+    "description_en": "Prepare a saturated solution at a controlled temperature and determine dissolved solute per fixed mass of solvent.",
+    "description_bn": "নিয়ন্ত্রিত তাপমাত্রায় সম্পৃক্ত দ্রবণ তৈরি করে নির্দিষ্ট দ্রাবক ভরে দ্রবীভূত দ্রবের পরিমাণ নির্ণয় করুন।",
+    "href": "/experiments#lab-chemistry-solubility-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Physical chemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-conductometric-titration-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Conductometric titration",
+    "title_bn": "কন্ডাক্টোমেট্রিক টাইট্রেশন",
+    "description_en": "Record conductance after small titrant additions, rinse the probe consistently and locate the endpoint from intersecting graph segments.",
+    "description_bn": "অল্প অল্প টাইট্রান্ট যোগের পর পরিবাহিতা লিখুন, প্রোব একইভাবে ধুয়ে ছেদকারী লেখচিত্র রেখা থেকে সমাপ্তি বিন্দু নিন।",
+    "href": "/experiments#lab-chemistry-conductometric-titration-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Physical chemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-ph-metric-titration-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "pH-metric titration",
+    "title_bn": "pH-মেট্রিক টাইট্রেশন",
+    "description_en": "Calibrate the pH meter, add titrant in measured increments and plot pH against volume to identify the equivalence region.",
+    "description_bn": "pH মিটার ক্যালিব্রেট করে পরিমিত ধাপে টাইট্রান্ট দিন এবং সমতুল্য অঞ্চল পেতে আয়তনের বিপরীতে pH লিখুন।",
+    "href": "/experiments#lab-chemistry-ph-metric-titration-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Physical chemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-rf-chromatography-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Rf by chromatography",
+    "title_bn": "ক্রোমাটোগ্রাফিতে Rf নির্ণয়",
+    "description_en": "Measure the spot centre and solvent front from the baseline; keep the origin above solvent and use the same units.",
+    "description_bn": "মূলরেখা থেকে দাগের কেন্দ্র ও দ্রাবক-সীমা মাপুন; উৎপত্তি দ্রাবকের ওপরে রাখুন এবং একই একক নিন।",
+    "href": "/experiments#lab-chemistry-rf-chromatography-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Physical chemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-buffer-preparation-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Buffer preparation",
+    "title_bn": "বাফার প্রস্তুতি",
+    "description_en": "Prepare a conjugate acid/base pair at the target ratio, measure pH with a calibrated meter and compare with the Henderson–Hasselbalch estimate.",
+    "description_bn": "লক্ষ্য অনুপাতে অনুবন্ধী অম্ল-ক্ষার জোড়া তৈরি করে ক্যালিব্রেটেড মিটারে pH মাপুন ও হেন্ডারসন–হ্যাসেলবাল্ক মানের সঙ্গে তুলনা করুন।",
+    "href": "/experiments#lab-chemistry-buffer-preparation-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Physical chemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-melting-boiling-point-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Melting and boiling point",
+    "title_bn": "গলনাঙ্ক ও স্ফুটনাঙ্ক",
+    "description_en": "Use a clean sample, calibrated thermometer and the prescribed capillary/setup; pressure affects boiling point and impurities broaden melting range.",
+    "description_bn": "পরিষ্কার নমুনা, ক্যালিব্রেটেড থার্মোমিটার ও নির্ধারিত কৈশিক/যন্ত্র নিন; চাপে স্ফুটনাঙ্ক এবং অপদ্রব্যে গলন-পরিসর বদলায়।",
+    "href": "/experiments#lab-chemistry-melting-boiling-point-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Physical chemistry"
+    ]
+  },
+  {
+    "slug": "chemistry-galvanic-cell-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Galvanic cell",
+    "title_bn": "গ্যালভানিক কোষ",
+    "description_en": "Assemble two half-cells with a salt bridge, measure open-circuit voltage and identify electron flow from anode to cathode.",
+    "description_bn": "লবণ-সেতুসহ দুটি অর্ধকোষ জুড়ে মুক্তবর্তনী বিভব মাপুন এবং অ্যানোড থেকে ক্যাথোডে ইলেকট্রন প্রবাহ নির্ণয় করুন।",
+    "href": "/experiments#lab-chemistry-galvanic-cell-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Physical chemistry"
+    ]
   },
   {
     "slug": "projectile-motion",

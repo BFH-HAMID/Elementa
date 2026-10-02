@@ -13,6 +13,14 @@ export const variableSchema = z.object({
   max: z.number().optional()
 });
 
+export const referenceFormulaSchema = z.object({
+  label_en: z.string().min(1),
+  label_bn: z.string().min(1),
+  latex: z.string().min(1),
+  note_en: z.string().optional(),
+  note_bn: z.string().optional()
+});
+
 export const equationFrontmatterSchema = z.object({
   type: z.literal('equation').default('equation'),
   slug: z.string().min(1),
@@ -24,6 +32,10 @@ export const equationFrontmatterSchema = z.object({
   chapter_bn: z.string().optional(),
   latex: z.string().min(1),
   variables: z.array(variableSchema).min(1),
+  calculator: z.boolean().default(true),
+  reference_formulas: z.array(referenceFormulaSchema).default([]),
+  reference_note_en: z.string().optional(),
+  reference_note_bn: z.string().optional(),
   derivation: z.string().min(1),
   derivation_bn: z.string().optional(),
   summary_en: z.string().optional(),

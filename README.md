@@ -45,8 +45,8 @@ The README uses self-hosted SVG artwork so the project page has a visual identit
 
 ## What is included
 
-- 20+ typed MDX equations with Bangla/English titles, variables, SI units, derivation notes and related links.
-- Practical guides for a simple pendulum, Ohm's law, convex-lens focal length and acid–base titration.
+- 45+ typed MDX equation notes, including bilingual chapter-level formula sheets for the supplied physics and chemistry topics.
+- A searchable, bilingual checklist of 78 school and HSC practical topics, alongside full lab guides for a simple pendulum, Ohm's law, convex-lens focal length and acid–base titration.
 - Interactive Canvas 2D simulations for projectile motion, a pendulum, circuits, wave interference, Newton's second law, lens rays, titration, pH, ideal gases and reaction kinetics.
 - A dynamically loaded 3Dmol.js molecule viewer for water, methane and benzene, plus an optional React Three Fiber optics field preview.
 - KaTeX equations, MDX rendering, Zod frontmatter validation, Fuse.js search and a Ctrl/Cmd+K command palette.
@@ -76,14 +76,14 @@ npm run build
 npm start
 ```
 
-The `prebuild` script creates `public/search-index.json` from the MDX frontmatter and the simulation registry. The build is otherwise fully static.
+The `prebuild` script creates `public/search-index.json` from MDX frontmatter, the practical-topic catalog and the simulation registry. The build is otherwise fully static.
 
 ## Project map
 
 ```text
 app/[locale]       Static App Router pages and locale layouts
 components/        UI, layout, content and simulation building blocks
-content/           MDX equations/experiments and JSON quizzes
+content/           MDX equation/experiment guides, JSON practical index and quizzes
 lib/               Schemas, content loader, calculations, constants and store
 messages/          next-intl Bangla and English messages
 simulations/       One discoverable folder per simulation
@@ -213,13 +213,13 @@ Create `content/quizzes/my-quiz.json` following this shape:
 
 ## GitHub push
 
-This checkout is already on the session branch `arena/01a0f92d-elementa`. Keep working on that branch:
+Keep working on your current contribution branch:
 
 ```bash
 git status
 git add .
 git commit -m "Build PhysChem Lab learning platform"
-git push origin arena/01a0f92d-elementa
+git push origin HEAD
 ```
 
 Do not push this work to another branch in an Arena session.

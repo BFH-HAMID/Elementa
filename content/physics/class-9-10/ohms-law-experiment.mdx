@@ -1,0 +1,74 @@
+---
+type: experiment
+slug: ohms-law-experiment
+title_bn: ওহমের সূত্র যাচাই
+title_en: Verify Ohm's law
+subject: physics
+level: class-9-10
+aim: Investigate the relationship between potential difference and current for a resistor at approximately constant temperature.
+aim_bn: প্রায় ধ্রুব তাপমাত্রায় একটি রোধের বিভব পার্থক্য ও তড়িৎ প্রবাহের সম্পর্ক যাচাই করা।
+apparatus:
+  - Low-voltage DC supply
+  - Resistor and key
+  - Ammeter and voltmeter
+  - Connecting wires
+  - Rheostat
+apparatus_bn:
+  - কম ভোল্টেজ DC supply
+  - resistor ও key
+  - ammeter ও voltmeter
+  - connecting wires
+  - rheostat
+theory: Ohm's law predicts V = IR when physical conditions are stable. A V–I graph should be a straight line through the origin, with slope equal to R.
+theory_bn: physical condition স্থির থাকলে Ohm-এর সূত্র V = IR বলে। V–I graph origin দিয়ে যাওয়া সরলরেখা হবে এবং slope হবে R।
+procedure:
+  - Connect the ammeter in series and the voltmeter in parallel across the resistor.
+  - Keep the key open while checking polarity and ranges.
+  - Change the rheostat gradually and record paired V and I readings.
+  - Open the key between readings so the resistor does not heat excessively.
+  - Plot V against I and obtain the slope.
+procedure_bn:
+  - ammeter series-এ এবং voltmeter resistor-এর parallel-এ যুক্ত করুন।
+  - polarity ও range যাচাই করার সময় key খোলা রাখুন।
+  - rheostat ধীরে বদলে V ও I-এর জোড়া reading নিন।
+  - resistor বেশি গরম না করতে reading-এর মাঝে key খুলুন।
+  - I-এর বিপরীতে V graph এঁকে slope নিন।
+observation_table:
+  headers: [Potential difference V (V), Current I (A), V/I (Ω)]
+  rows:
+    - ['1.0', '0.10', '10.0']
+    - ['2.0', '0.20', '10.0']
+    - ['3.0', '0.30', '10.0']
+    - ['4.0', '0.40', '10.0']
+calculation: Calculate R = V/I for each pair and compare with the slope of the V against I graph.
+calculation_bn: প্রতিটি জোড়ার জন্য R = V/I হিসাব করে V বনাম I graph-এর slope-এর সঙ্গে তুলনা করুন।
+precautions:
+  - Use the correct meter polarity and range.
+  - Do not leave the key closed for long periods.
+  - Record readings without parallax on analogue scales.
+precautions_bn:
+  - meter-এর polarity ও range ঠিক রাখুন।
+  - দীর্ঘ সময় key বন্ধ রাখবেন না।
+  - analogue scale-এ parallax ছাড়া reading নিন।
+sources_of_error:
+  - Heating changes the resistance
+  - Meter zero or calibration error
+  - Loose connections
+sources_of_error_bn:
+  - heating-এর ফলে resistance বদলে যায়
+  - meter-এর zero বা calibration error
+  - loose connection
+viva:
+  - q: Why is the ammeter connected in series?
+    a: Its low resistance lets it measure the same current through the component.
+    q_bn: ammeter series-এ যুক্ত করা হয় কেন?
+    a_bn: কম resistance-এর ammeter component-এর একই current মাপে।
+  - q: What does a non-zero intercept suggest?
+    a: It may indicate contact potential, meter zero error or an unmodelled resistance.
+    q_bn: non-zero intercept কী বোঝাতে পারে?
+    a_bn: contact potential, meter zero error বা অতিরিক্ত resistance-এর ইঙ্গিত হতে পারে।
+simulation: ohms-law-circuit
+tags: [electricity, circuits, practical]
+---
+
+A good experiment is not only a straight line: it also documents what was controlled and where the model might fail.

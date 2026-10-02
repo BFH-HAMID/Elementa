@@ -1,0 +1,175 @@
+'use client';
+
+import dynamic from 'next/dynamic';
+import { useLocale, useTranslations } from 'next-intl';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { ControlPanel, NumberControl, RangeControl } from './ControlPanel';
+import { DataTable } from './DataTable';
+import { GraphPanel, type GraphPoint } from './GraphPanel';
+import { LiveReadout, type Readout } from './LiveReadout';
+import { FormulaPanel, SimLayout, SimToolbar } from './SimLayout';
+import { Button } from '@/components/ui/Button';
+import type { SimulationMeta } from '@/lib/simulations';
+import { formatNumber } from '@/lib/utils';
+
+const MoleculeScene = dynamic(() => import('@/simulations/molecule-viewer/MoleculeScene3DMol').then((module) => module.MoleculeScene3DMol), { ssr: false, loading: () => <div className="grid h-[330px] place-items-center rounded-2xl bg-[#0c2236] text-sm text-white/70">Loading 3D scene…</div> });
+const OpticsFieldScene = dynamic(() => import('@/simulations/lens-ray-diagram/OpticsFieldScene').then((module) => module.OpticsFieldScene), { ssr: false, loading: () => <div className="grid h-64 place-items-center rounded-2xl bg-[#071b2d] text-sm text-white/70">Loading 3D field…</div> });
+
+type SimState = {
+  speed: number; animationSpeed: number; angle: number; gravity: number; length: number; amplitude: number;
+  voltage: number; resistance: number; circuitMode: 'series' | 'parallel';
+  frequency: number; phase: number; force: number; mass: number;
+  focal: number; objectDistance: number;
+  acidVolume: number; acidConc: number; baseConc: number;
+  phConcentration: number;
+  pressure: number; volume: number; temperature: number; moles: number;
+  molecule: 'water' | 'methane' | 'benzene'; rateTemperature: number; activationEnergy: number;
+};
+
+const initialState: SimState = {
+  speed: 18, animationSpeed: 10, angle: 45, gravity: 9.81, length: 1, amplitude: 12,
+  voltage: 9, resistance: 10, circuitMode: 'series', frequency: 1.5, phase: 1.2,
+  force: 20, mass: 5, focal: 15, objectDistance: 30,
+  acidVolume: 25, acidConc: 0.1, baseConc: 0.1, phConcentration: 0.001,
+  pressure: 101325, volume: 0.024, temperature: 298, moles: 1,
+  molecule: 'water', rateTemperature: 298, activationEnergy: 42000
+};
+
+function drawGrid(ctx: CanvasRenderingContext2D, width: number, height: number, dark = false) {
+  ctx.fillStyle = dark ? '#0c2236' : '#f5faff'; ctx.fillRect(0, 0, width, height);
+  ctx.strokeStyle = dark ? 'rgba(142,190,230,.12)' : 'rgba(22,119,210,.1)'; ctx.lineWidth = 1;
+  for (let x = 0; x < width; x += 32) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, height); ctx.stroke(); }
+  for (let y = 0; y < height; y += 32) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(width, y); ctx.stroke(); }
+}
+function line(ctx: CanvasRenderingContext2D, points: Array<[number, number]>, stroke: string, width = 2) { if (points.length < 2) return; ctx.beginPath(); points.forEach(([x, y], index) => index ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.strokeStyle = stroke; ctx.lineWidth = width; ctx.stroke(); }
+function circle(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number, fill: string, stroke?: string) { ctx.beginPath(); ctx.arc(x, y, radius, 0, Math.PI * 2); ctx.fillStyle = fill; ctx.fill(); if (stroke) { ctx.strokeStyle = stroke; ctx.lineWidth = 2; ctx.stroke(); } }
+function arrow(ctx: CanvasRenderingContext2D, from: [number, number], to: [number, number], color: string) { line(ctx, [from, to], color, 3); const angle = Math.atan2(to[1] - from[1], to[0] - from[0]); const size = 9; line(ctx, [to, [to[0] - size * Math.cos(angle - Math.PI / 6), to[1] - size * Math.sin(angle - Math.PI / 6)]], color, 3); line(ctx, [to, [to[0] - size * Math.cos(angle + Math.PI / 6), to[1] - size * Math.sin(angle + Math.PI / 6)]], color, 3); }
+function text(ctx: CanvasRenderingContext2D, value: string, x: number, y: number, color = '#2d4158', size = 12, weight = '600') { ctx.fillStyle = color; ctx.font = `${weight} ${size}px Inter, sans-serif`; ctx.fillText(value, x, y); }
+
+function drawSimulation(ctx: CanvasRenderingContext2D, width: number, height: number, slug: string, state: SimState, time: number, dark: boolean) {
+  drawGrid(ctx, width, height, dark);
+  const ink = dark ? '#d9e9f5' : '#2d4158'; const blue = dark ? '#72b9ff' : '#1677d2'; const green = dark ? '#6ce3bb' : '#0e9f78'; const coral = '#e8795b';
+  if (slug === 'projectile-motion') {
+    const ground = height - 54; const maxRange = Math.max(10, state.speed ** 2 * Math.sin(2 * state.angle * Math.PI / 180) / state.gravity); const maxHeight = Math.max(3, state.speed ** 2 * Math.sin(state.angle * Math.PI / 180) ** 2 / (2 * state.gravity)); const scale = Math.min((width - 70) / maxRange, (ground - 45) / maxHeight); const origin: [number, number] = [36, ground];
+    line(ctx, [[30, ground], [width - 25, ground]], ink, 2); const points: Array<[number, number]> = []; for (let i = 0; i <= 60; i++) { const x = maxRange * i / 60; const y = x * Math.tan(state.angle * Math.PI / 180) - state.gravity * x ** 2 / (2 * state.speed ** 2 * Math.cos(state.angle * Math.PI / 180) ** 2); points.push([origin[0] + x * scale, ground - y * scale]); } line(ctx, points, blue, 3); const flight = (time * 0.18) % 1; const flightTime = 2 * state.speed * Math.sin(state.angle * Math.PI / 180) / state.gravity; const current = Math.min(1, (time % Math.max(flightTime, 0.1)) / flightTime); const x = state.speed * Math.cos(state.angle * Math.PI / 180) * flightTime * current; const y = state.speed * Math.sin(state.angle * Math.PI / 180) * flightTime * current - 0.5 * state.gravity * (flightTime * current) ** 2; circle(ctx, origin[0] + x * scale, ground - y * scale, 8, coral); text(ctx, 'y', 15, 28, ink); text(ctx, 'x', width - 28, ground + 25, ink); text(ctx, `${formatNumber(maxRange, 2)} m range`, 44, 27, blue, 13, '700'); void flight;
+  } else if (slug === 'simple-pendulum') {
+    const pivot: [number, number] = [width / 2, 62]; const omega = Math.sqrt(state.gravity / state.length); const theta = state.amplitude * Math.PI / 180 * Math.cos(omega * time); const lengthPx = Math.min(220, 100 + state.length * 75); const bob: [number, number] = [pivot[0] + Math.sin(theta) * lengthPx, pivot[1] + Math.cos(theta) * lengthPx]; line(ctx, [pivot, bob], ink, 3); circle(ctx, pivot[0], pivot[1], 7, coral); circle(ctx, bob[0], bob[1], 18, blue, '#fff'); line(ctx, [[pivot[0] - 45, pivot[1] + lengthPx], [pivot[0] + 45, pivot[1] + lengthPx]], ink, 2); text(ctx, `T = ${formatNumber(2 * Math.PI * Math.sqrt(state.length / state.gravity), 3)} s`, 20, height - 24, green, 14, '700');
+  } else if (slug === 'ohms-law-circuit') {
+    const y = height / 2; const left = 55; const right = width - 55; line(ctx, [[left, y - 65], [left, y + 65], [right, y + 65], [right, y - 65], [left, y - 65]], ink, 2); line(ctx, [[left - 1, y - 22], [left - 1, y + 22]], coral, 4); line(ctx, [[left - 10, y - 12], [left + 8, y - 12]], coral, 2); line(ctx, [[left - 6, y + 12], [left + 5, y + 12]], coral, 2); const resistorY = y - 65; if (state.circuitMode === 'series') { line(ctx, [[width / 2 - 55, resistorY], [width / 2 - 35, resistorY], [width / 2 - 24, resistorY - 14], [width / 2 - 8, resistorY + 14], [width / 2 + 8, resistorY - 14], [width / 2 + 24, resistorY + 14], [width / 2 + 35, resistorY]], blue, 3); text(ctx, `R = ${state.resistance} Ω`, width / 2 - 42, resistorY - 24, ink); } else { const mid = width / 2; line(ctx, [[left, y - 65], [mid - 55, y - 65], [mid - 55, y - 23], [mid + 55, y - 23], [mid + 55, y - 65], [right, y - 65]], ink, 2); line(ctx, [[mid - 55, y - 65], [mid - 55, y + 23], [mid + 55, y + 23], [mid + 55, y - 65]], ink, 2); text(ctx, 'parallel branches', mid - 52, y + 49, ink); } const current = state.circuitMode === 'series' ? state.voltage / state.resistance : state.voltage / (state.resistance / 2); for (let i = 0; i < 6; i++) { const dotX = left + ((time * 45 + i * 70) % (right - left)); circle(ctx, dotX, y + 65, 4, green); } text(ctx, `I = ${formatNumber(current, 3)} A`, 22, 26, blue, 14, '700');
+  } else if (slug === 'wave-interference') {
+    const centre = height / 2; const amp = 48; const k = 0.045; const omega = state.frequency * 3; const combined: Array<[number, number]> = []; const first: Array<[number, number]> = []; const second: Array<[number, number]> = []; for (let x = 12; x < width - 12; x += 3) { const a = Math.sin(k * x - omega * time); const b = Math.sin(k * x - omega * time + state.phase); first.push([x, centre - amp * a * 0.55]); second.push([x, centre - amp * b * 0.55]); combined.push([x, centre - amp * (a + b)]); } line(ctx, first, `${blue}88`, 1.5); line(ctx, second, `${green}88`, 1.5); line(ctx, combined, coral, 3); line(ctx, [[12, centre], [width - 12, centre]], ink, 1); text(ctx, 'sum', 18, 26, coral, 13, '700');
+  } else if (slug === 'newtons-second-law') {
+    const floor = height - 70; line(ctx, [[20, floor], [width - 20, floor]], ink, 2); const acceleration = state.force / state.mass; const position = Math.min(width - 120, 75 + 0.5 * acceleration * (time % 6) ** 2 * 10); ctx.fillStyle = blue; ctx.fillRect(position, floor - 52, 58, 52); arrow(ctx, [position + 29, floor - 80], [position + 29 + Math.min(80, state.force * 2), floor - 80], coral); text(ctx, `F = ${state.force} N`, position + 28, floor - 89, coral, 12, '700'); text(ctx, `a = ${formatNumber(acceleration, 2)} m/s²`, 22, 28, green, 14, '700');
+  } else if (slug === 'lens-ray-diagram') {
+    const axis = height / 2; line(ctx, [[20, axis], [width - 20, axis]], ink, 1.5); const lensX = width * 0.58; ctx.beginPath(); ctx.ellipse(lensX, axis, 13, 105, 0, 0, Math.PI * 2); ctx.strokeStyle = blue; ctx.lineWidth = 3; ctx.stroke(); const scale = Math.min(3.2, width / 180); const objX = Math.max(40, lensX - state.objectDistance * scale); const focalX = lensX - state.focal * scale; const imageDistance = state.focal * state.objectDistance / Math.max(1, state.objectDistance - state.focal); const imageX = lensX + imageDistance * scale; const objTop = axis - 75; arrow(ctx, [objX, axis], [objX, objTop], coral); line(ctx, [[objX, objTop], [lensX, objTop], [imageX, axis]], green, 2); line(ctx, [[objX, objTop], [lensX, axis], [imageX, axis]], blue, 2); if (imageX < width - 20) arrow(ctx, [imageX, axis], [imageX, axis - 75 * (imageDistance / state.objectDistance)], coral); line(ctx, [[focalX, axis - 6], [focalX, axis + 6]], ink, 2); line(ctx, [[lensX + state.focal * scale, axis - 6], [lensX + state.focal * scale, axis + 6]], ink, 2); text(ctx, 'F', focalX - 5, axis + 22, ink); text(ctx, `v = ${formatNumber(imageDistance, 2)} cm`, 22, 28, blue, 14, '700');
+  } else if (slug === 'acid-base-titration') {
+    const liquid = Math.min(1, state.acidVolume / 50); ctx.fillStyle = state.acidVolume > 25 ? '#a8e6cf' : '#ffd1dc'; ctx.fillRect(width / 2 - 75, height - 80 - liquid * 100, 150, liquid * 100); ctx.strokeStyle = ink; ctx.lineWidth = 3; ctx.strokeRect(width / 2 - 75, height - 180, 150, 100); line(ctx, [[width / 2, 28], [width / 2, height - 180]], ink, 3); ctx.fillStyle = '#e9eef2'; ctx.fillRect(width / 2 - 12, 20, 24, 35); const tipY = height - 174; circle(ctx, width / 2, tipY, 4, blue); const pH = titrationPh(state); text(ctx, `pH ≈ ${formatNumber(pH, 2)}`, 20, 28, green, 14, '700'); text(ctx, 'burette', width / 2 + 20, 43, ink); text(ctx, `${formatNumber(state.acidVolume, 1)} mL added`, 20, height - 25, blue, 13, '700');
+  } else if (slug === 'ph-scale') {
+    const barY = height / 2 - 22; const grad = ctx.createLinearGradient(30, 0, width - 30, 0); grad.addColorStop(0, '#ef476f'); grad.addColorStop(0.5, '#f4d35e'); grad.addColorStop(1, '#4cc9f0'); ctx.fillStyle = grad; ctx.fillRect(30, barY, width - 60, 44); const pH = Math.max(0, Math.min(14, -Math.log10(state.phConcentration))); const px = 30 + (width - 60) * pH / 14; circle(ctx, px, barY + 22, 10, '#14283d', '#fff'); text(ctx, '0 acidic', 28, barY + 68, ink); text(ctx, '7 neutral', width / 2 - 30, barY + 68, ink); text(ctx, '14 basic', width - 72, barY + 68, ink); text(ctx, `pH = ${formatNumber(pH, 3)}`, 24, 30, blue, 15, '700');
+  } else if (slug === 'ideal-gas-law') {
+    const box = { x: width * 0.14, y: 45, w: width * 0.72, h: height - 90 }; ctx.strokeStyle = blue; ctx.lineWidth = 3; ctx.strokeRect(box.x, box.y, box.w, box.h); const count = 18; for (let i = 0; i < count; i++) { const px = box.x + 18 + ((i * 47 + time * (20 + i % 4 * 5)) % (box.w - 36)); const py = box.y + 20 + ((i * 29 + Math.sin(time + i) * 18 + box.h) % (box.h - 40)); circle(ctx, px, py, 4, i % 3 === 0 ? green : blue); } text(ctx, `PV = ${formatNumber(state.pressure * state.volume, 1)} J`, 22, 28, blue, 14, '700'); text(ctx, `${formatNumber(state.temperature, 0)} K`, box.x + 12, box.y + 22, ink);
+  } else if (slug === 'reaction-rate-temperature') {
+    const baseY = height - 48; line(ctx, [[35, baseY], [width - 25, baseY]], ink, 2); line(ctx, [[35, baseY], [35, 30]], ink, 2); const points: Array<[number, number]> = []; for (let temp = 250; temp <= 500; temp += 5) { const k = Math.exp(-state.activationEnergy / (8.314 * temp)); const x = 35 + (width - 65) * (temp - 250) / 250; const y = baseY - (height - 85) * k / Math.exp(-state.activationEnergy / (8.314 * 500)); points.push([x, y]); } line(ctx, points, green, 3); const selected = 35 + (width - 65) * (state.rateTemperature - 250) / 250; line(ctx, [[selected, baseY], [selected, 38]], coral, 2); circle(ctx, selected, points[Math.min(points.length - 1, Math.round((state.rateTemperature - 250) / 5))]?.[1] ?? baseY, 7, coral); text(ctx, 'T (K)', width - 64, baseY + 25, ink); text(ctx, 'k', 20, 38, ink); text(ctx, `T = ${state.rateTemperature} K`, 52, 29, green, 14, '700');
+  } else {
+    text(ctx, 'Choose a control to explore this model.', 22, 30, ink, 14, '700');
+  }
+}
+
+function titrationPh(state: SimState): number {
+  const equivalence = state.acidVolume * state.acidConc / Math.max(state.baseConc, 0.00001);
+  if (state.acidVolume < equivalence * 0.98) { const ratio = Math.max(0.001, (equivalence - state.acidVolume) / Math.max(state.acidVolume, 0.001)); return Math.max(1, -Math.log10(state.baseConc * ratio)); }
+  if (Math.abs(state.acidVolume - equivalence) <= equivalence * 0.04) return 7;
+  const excess = state.acidVolume - equivalence; return Math.min(14, 14 + Math.log10(Math.max(0.0001, state.baseConc * excess / (state.acidVolume + equivalence))));
+}
+
+function stateGraph(slug: string, state: SimState): GraphPoint[] {
+  if (slug === 'projectile-motion') { const range = state.speed ** 2 * Math.sin(2 * state.angle * Math.PI / 180) / state.gravity; return Array.from({ length: 21 }, (_, index) => { const x = range * index / 20; return { x, y: Math.max(0, x * Math.tan(state.angle * Math.PI / 180) - state.gravity * x ** 2 / (2 * state.speed ** 2 * Math.cos(state.angle * Math.PI / 180) ** 2)) }; }); }
+  if (slug === 'simple-pendulum') return Array.from({ length: 21 }, (_, index) => { const x = index * 0.2; return { x, y: state.amplitude * Math.cos(Math.sqrt(state.gravity / state.length) * x) }; });
+  if (slug === 'ohms-law-circuit') return Array.from({ length: 11 }, (_, index) => { const x = state.voltage * index / 10; return { x, y: state.circuitMode === 'series' ? x / state.resistance : x / (state.resistance / 2) }; });
+  if (slug === 'wave-interference') return Array.from({ length: 31 }, (_, index) => { const x = index / 5; return { x, y: Math.sin(x) + Math.sin(x + state.phase) }; });
+  if (slug === 'newtons-second-law') return Array.from({ length: 21 }, (_, index) => { const x = index * 0.25; return { x, y: 0.5 * state.force / state.mass * x * x }; });
+  if (slug === 'lens-ray-diagram') return Array.from({ length: 10 }, (_, index) => { const x = state.focal + 3 + index * 3; return { x, y: state.focal * x / (x - state.focal) }; });
+  if (slug === 'acid-base-titration') return Array.from({ length: 21 }, (_, index) => { const x = state.acidVolume * 1.8 * index / 20; const adjusted = { ...state, acidVolume: x }; return { x, y: titrationPh(adjusted) }; });
+  if (slug === 'ph-scale') return Array.from({ length: 15 }, (_, index) => ({ x: index, y: 10 ** (-index) }));
+  if (slug === 'ideal-gas-law') return Array.from({ length: 15 }, (_, index) => { const x = Math.max(0.005, state.volume * (0.5 + index / 10)); return { x, y: state.moles * 8.314 * state.temperature / x }; });
+  if (slug === 'reaction-rate-temperature') return Array.from({ length: 21 }, (_, index) => { const x = 250 + index * 12.5; return { x, y: Math.exp(-state.activationEnergy / (8.314 * x)) }; });
+  return [];
+}
+
+export function SimulationWorkbench({ meta }: { meta: SimulationMeta }) {
+  const locale = useLocale() as 'bn' | 'en';
+  const tCommon = useTranslations('common');
+  const tSim = useTranslations('simulations');
+  const [state, setState] = useState<SimState>(initialState);
+  const [running, setRunning] = useState(true);
+  const [time, setTime] = useState(0);
+  const [rows, setRows] = useState<Record<string, number | string>[]>([]);
+  const [matterReady, setMatterReady] = useState(false);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const update = <K extends keyof SimState>(key: K, value: SimState[K]) => setState((current) => ({ ...current, [key]: value }));
+  const labels = locale === 'bn';
+
+  useEffect(() => {
+    if (meta.slug !== 'newtons-second-law') return;
+    let active = true;
+    import('matter-js').then(({ Engine, Bodies, World }) => { if (!active) return; const engine = Engine.create(); const body = Bodies.rectangle(0, 0, 20, 20); World.add(engine.world, body); setMatterReady(true); Engine.clear(engine); }).catch(() => setMatterReady(false));
+    return () => { active = false; };
+  }, [meta.slug]);
+
+  useEffect(() => {
+    if (!running) return;
+    let frame = 0;
+    const tick = () => { setTime((current) => current + 0.016 * state.animationSpeed / 10); frame = window.requestAnimationFrame(tick); };
+    frame = window.requestAnimationFrame(tick);
+    return () => window.cancelAnimationFrame(frame);
+  }, [running, state.animationSpeed]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current; if (!canvas) return;
+    const resizeAndDraw = () => {
+      const rect = canvas.getBoundingClientRect(); const dpr = window.devicePixelRatio || 1; const width = Math.max(320, rect.width); const height = 380;
+      canvas.width = width * dpr; canvas.height = height * dpr; const ctx = canvas.getContext('2d'); if (!ctx) return; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); const dark = document.documentElement.dataset.theme === 'dark'; drawSimulation(ctx, width, height, meta.slug, state, time, dark);
+    };
+    resizeAndDraw(); const observer = new ResizeObserver(resizeAndDraw); observer.observe(canvas); return () => observer.disconnect();
+  }, [meta.slug, state, time]);
+
+  const graph = useMemo(() => stateGraph(meta.slug, state), [meta.slug, state]);
+  const readout = useMemo<Readout[]>(() => {
+    switch (meta.slug) {
+      case 'projectile-motion': return [{ label: 'Range', value: state.speed ** 2 * Math.sin(2 * state.angle * Math.PI / 180) / state.gravity, unit: 'm' }, { label: 'Max height', value: state.speed ** 2 * Math.sin(state.angle * Math.PI / 180) ** 2 / (2 * state.gravity), unit: 'm' }, { label: 'Flight time', value: 2 * state.speed * Math.sin(state.angle * Math.PI / 180) / state.gravity, unit: 's' }, { label: 'Gravity', value: state.gravity, unit: 'm/s²' }];
+      case 'simple-pendulum': return [{ label: 'Period T', value: 2 * Math.PI * Math.sqrt(state.length / state.gravity), unit: 's' }, { label: 'Frequency', value: 1 / (2 * Math.PI * Math.sqrt(state.length / state.gravity)), unit: 'Hz' }, { label: 'Length', value: state.length, unit: 'm' }, { label: 'Gravity', value: state.gravity, unit: 'm/s²' }];
+      case 'ohms-law-circuit': { const resistance = state.circuitMode === 'series' ? state.resistance : state.resistance / 2; const current = state.voltage / resistance; return [{ label: 'Current I', value: current, unit: 'A' }, { label: 'Equivalent R', value: resistance, unit: 'Ω' }, { label: 'Power', value: state.voltage * current, unit: 'W' }, { label: 'Mode', value: state.circuitMode }]; }
+      case 'wave-interference': return [{ label: 'Frequency', value: state.frequency, unit: 'Hz' }, { label: 'Phase gap', value: state.phase, unit: 'rad' }, { label: 'Result amplitude', value: 2 * Math.cos(state.phase / 2), unit: 'A' }, { label: 'Time', value: time, unit: 's' }];
+      case 'newtons-second-law': return [{ label: 'Acceleration', value: state.force / state.mass, unit: 'm/s²' }, { label: 'Force', value: state.force, unit: 'N' }, { label: 'Mass', value: state.mass, unit: 'kg' }, { label: 'Engine', value: matterReady ? 'Matter.js' : 'Canvas' }];
+      case 'lens-ray-diagram': { const image = state.focal * state.objectDistance / Math.max(1, state.objectDistance - state.focal); return [{ label: 'Image distance', value: image, unit: 'cm' }, { label: 'Focal length', value: state.focal, unit: 'cm' }, { label: 'Magnification', value: image / state.objectDistance, unit: '×' }, { label: 'Object distance', value: state.objectDistance, unit: 'cm' }]; }
+      case 'acid-base-titration': return [{ label: 'pH', value: titrationPh(state), unit: '' , accent: 'chemistry' }, { label: 'Added base', value: state.acidVolume, unit: 'mL', accent: 'chemistry' }, { label: 'Equivalence', value: state.acidVolume * state.acidConc / state.baseConc, unit: 'mL', accent: 'chemistry' }, { label: 'Indicator', value: titrationPh(state) > 8.2 ? 'pink' : 'clear', accent: 'chemistry' }];
+      case 'ph-scale': return [{ label: 'pH', value: -Math.log10(state.phConcentration), unit: '', accent: 'chemistry' }, { label: '[H⁺]', value: state.phConcentration, unit: 'mol/L', accent: 'chemistry' }, { label: 'Character', value: -Math.log10(state.phConcentration) < 7 ? 'acidic' : -Math.log10(state.phConcentration) > 7 ? 'basic' : 'neutral', accent: 'chemistry' }];
+      case 'ideal-gas-law': return [{ label: 'Pressure', value: state.moles * 8.314 * state.temperature / state.volume, unit: 'Pa', accent: 'chemistry' }, { label: 'Volume', value: state.volume, unit: 'm³', accent: 'chemistry' }, { label: 'Temperature', value: state.temperature, unit: 'K', accent: 'chemistry' }, { label: 'Amount', value: state.moles, unit: 'mol', accent: 'chemistry' }];
+      case 'molecule-viewer': return [{ label: 'Model', value: state.molecule, accent: 'chemistry' }, { label: 'Atoms', value: state.molecule === 'water' ? 3 : state.molecule === 'methane' ? 5 : 12, accent: 'chemistry' }];
+      case 'reaction-rate-temperature': return [{ label: 'Rate constant k', value: Math.exp(-state.activationEnergy / (8.314 * state.rateTemperature)), unit: 's⁻¹', accent: 'chemistry' }, { label: 'Temperature', value: state.rateTemperature, unit: 'K', accent: 'chemistry' }, { label: 'Ea', value: state.activationEnergy / 1000, unit: 'kJ/mol', accent: 'chemistry' }, { label: 'Factor A', value: '1 s⁻¹', accent: 'chemistry' }];
+      default: return [];
+    }
+  }, [meta.slug, state, time, matterReady]);
+
+  const reset = () => { setState(initialState); setTime(0); setRows([]); setRunning(true); };
+  const record = () => setRows((current) => [...current, { time: Number(time.toFixed(2)), ...Object.fromEntries(readout.map((item) => [item.label, typeof item.value === 'number' ? Number(item.value.toFixed(5)) : item.value])) }].slice(-20));
+  const screenshot = () => { const canvas = canvasRef.current; if (!canvas) return; const link = document.createElement('a'); link.download = `${meta.slug}.png`; link.href = canvas.toDataURL('image/png'); link.click(); };
+  const fullscreen = () => { const element = rootRef.current; if (!element) return; if (document.fullscreenElement) document.exitFullscreen(); else element.requestFullscreen?.(); };
+  const label = (en: string, bn: string) => labels ? bn : en;
+
+  return <div ref={rootRef} data-sim-root className="rounded-3xl border border-[var(--line)] bg-[var(--surface-soft)] p-3 sm:p-5"><SimLayout><SimToolbar running={running} onToggle={() => setRunning((value) => !value)} onReset={reset} onRecord={record} onScreenshot={screenshot} onFullscreen={fullscreen} /><div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_290px]"><div className="min-w-0 space-y-4"><div className="canvas-frame"><canvas ref={canvasRef} className="h-[380px] w-full" aria-label={`${meta.title_en} canvas simulation`} />{meta.slug === 'molecule-viewer' && <div className="absolute inset-0"><MoleculeScene molecule={state.molecule} /></div>}</div>{meta.slug === 'lens-ray-diagram' && <details className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-4"><summary className="cursor-pointer text-sm font-extrabold">Optional 3D optics field · React Three Fiber</summary><div className="mt-4"><OpticsFieldScene /></div></details>}<LiveReadout items={readout} title={tCommon('liveReadout')} /><GraphPanel data={graph} xLabel={meta.slug === 'projectile-motion' ? 'distance (m)' : 'input'} yLabel="output" color={meta.subject === 'chemistry' ? '#0e9f78' : '#1677d2'} title="Live graph" /><DataTable rows={rows} onClear={() => setRows([])} /><FormulaPanel formula={meta.formula} /></div><ControlPanel title={tSim('control')}>
+    {meta.slug === 'projectile-motion' && <><RangeControl label={label('Launch speed', 'প্রাথমিক বেগ')} value={state.speed} min={5} max={35} step={1} onChange={(value) => update('speed', value)} suffix="m/s" /><RangeControl label={label('Angle', 'কোণ')} value={state.angle} min={10} max={80} step={1} onChange={(value) => update('angle', value)} suffix="°" /><RangeControl label={label('Gravity', 'মহাকর্ষ')} value={state.gravity} min={1} max={15} step={0.1} onChange={(value) => update('gravity', value)} suffix="m/s²" /></>}
+    {meta.slug === 'simple-pendulum' && <><RangeControl label={label('Length', 'দৈর্ঘ্য')} value={state.length} min={0.2} max={2.5} step={0.1} onChange={(value) => update('length', value)} suffix="m" /><RangeControl label={label('Amplitude', 'বিস্তার')} value={state.amplitude} min={3} max={25} step={1} onChange={(value) => update('amplitude', value)} suffix="°" /><RangeControl label={label('Gravity', 'মহাকর্ষ')} value={state.gravity} min={1} max={15} step={0.1} onChange={(value) => update('gravity', value)} suffix="m/s²" /></>}
+    {meta.slug === 'ohms-law-circuit' && <><RangeControl label={label('Voltage', 'ভোল্টেজ')} value={state.voltage} min={1} max={24} step={1} onChange={(value) => update('voltage', value)} suffix="V" /><RangeControl label={label('Resistance', 'রোধ')} value={state.resistance} min={2} max={50} step={1} onChange={(value) => update('resistance', value)} suffix="Ω" /><label className="block text-sm font-bold">{label('Circuit mode', 'সার্কিট মোড')}<select value={state.circuitMode} onChange={(event) => update('circuitMode', event.target.value as SimState['circuitMode'])} className="input mt-2"><option value="series">Series</option><option value="parallel">Parallel</option></select></label></>}
+    {meta.slug === 'wave-interference' && <><RangeControl label={label('Frequency', 'কম্পাঙ্ক')} value={state.frequency} min={0.3} max={4} step={0.1} onChange={(value) => update('frequency', value)} suffix="Hz" /><RangeControl label={label('Phase difference', 'phase difference')} value={state.phase} min={0} max={Math.PI * 2} step={0.1} onChange={(value) => update('phase', value)} suffix="rad" /></>}
+    {meta.slug === 'newtons-second-law' && <><RangeControl label={label('Force', 'বল')} value={state.force} min={0} max={60} step={1} onChange={(value) => update('force', value)} suffix="N" /><RangeControl label={label('Mass', 'ভর')} value={state.mass} min={1} max={20} step={1} onChange={(value) => update('mass', value)} suffix="kg" /><p className="rounded-xl bg-[var(--surface-soft)] p-3 text-xs leading-5 muted">Matter.js is used as the small-body physics engine while this canvas keeps the lesson lightweight.</p></>}
+    {meta.slug === 'lens-ray-diagram' && <><RangeControl label={label('Focal length', 'ফোকাস দূরত্ব')} value={state.focal} min={5} max={30} step={1} onChange={(value) => update('focal', value)} suffix="cm" /><RangeControl label={label('Object distance', 'বস্তুর দূরত্ব')} value={state.objectDistance} min={state.focal + 2} max={70} step={1} onChange={(value) => update('objectDistance', value)} suffix="cm" /></>}
+    {meta.slug === 'acid-base-titration' && <><RangeControl label={label('Base added', 'যোগ করা base')} value={state.acidVolume} min={0} max={55} step={0.5} onChange={(value) => update('acidVolume', value)} suffix="mL" /><NumberControl label={label('Acid concentration', 'acid concentration')} value={state.acidConc} min={0.01} max={1} step={0.01} onChange={(value) => update('acidConc', value)} suffix="M" /><NumberControl label={label('Base concentration', 'base concentration')} value={state.baseConc} min={0.01} max={1} step={0.01} onChange={(value) => update('baseConc', value)} suffix="M" /></>}
+    {meta.slug === 'ph-scale' && <RangeControl label={label('Hydrogen-ion concentration', 'হাইড্রোজেন আয়ন')} value={state.phConcentration} min={0.0000001} max={0.1} step={0.0001} onChange={(value) => update('phConcentration', value)} suffix="M" />}
+    {meta.slug === 'ideal-gas-law' && <><RangeControl label={label('Volume', 'আয়তন')} value={state.volume} min={0.005} max={0.08} step={0.001} onChange={(value) => update('volume', value)} suffix="m³" /><RangeControl label={label('Temperature', 'তাপমাত্রা')} value={state.temperature} min={200} max={500} step={1} onChange={(value) => update('temperature', value)} suffix="K" /><RangeControl label={label('Moles', 'মোল')} value={state.moles} min={0.1} max={3} step={0.1} onChange={(value) => update('moles', value)} suffix="mol" /></>}
+    {meta.slug === 'molecule-viewer' && <label className="block text-sm font-bold">{label('Molecule', 'অণু')}<select value={state.molecule} onChange={(event) => update('molecule', event.target.value as SimState['molecule'])} className="input mt-2"><option value="water">Water · H₂O</option><option value="methane">Methane · CH₄</option><option value="benzene">Benzene · C₆H₆</option></select></label>}
+    {meta.slug === 'reaction-rate-temperature' && <><RangeControl label={label('Temperature', 'তাপমাত্রা')} value={state.rateTemperature} min={250} max={500} step={1} onChange={(value) => update('rateTemperature', value)} suffix="K" /><RangeControl label={label('Activation energy', 'সক্রিয়ণ শক্তি')} value={state.activationEnergy} min={10000} max={90000} step={1000} onChange={(value) => update('activationEnergy', value)} suffix="J/mol" /></>}
+    <RangeControl label={tSim('speed')} value={state.animationSpeed} min={1} max={20} step={1} onChange={(value) => update('animationSpeed', value)} suffix="×" /><Button variant="secondary" className="w-full" onClick={() => setRunning(true)}>{tSim('play')}</Button>
+  </ControlPanel></div></SimLayout></div>;
+}

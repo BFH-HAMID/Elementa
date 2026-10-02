@@ -47,14 +47,15 @@ The README uses self-hosted SVG artwork so the project page has a visual identit
 
 - 45+ typed MDX equation notes, including bilingual chapter-level formula sheets for the supplied physics and chemistry topics.
 - A searchable, bilingual checklist of 78 school and HSC practical topics, alongside full lab guides for a simple pendulum, Ohm's law, convex-lens focal length and acid–base titration.
-- Interactive Canvas 2D simulations for projectile motion, a pendulum, circuits, wave interference, Newton's second law, lens rays, titration, pH, ideal gases and reaction kinetics.
+- Original interactive Canvas 2D simulations for projectile motion, a pendulum, circuits, wave interference, Newton's second law, lens rays, titration, pH, ideal gases and reaction kinetics.
+- An embedded, searchable PhET HTML5 library with 67 Physics and 35 Chemistry subject entries (81 unique simulations); official `/latest/` builds are loaded only on each detail page, with direct-open fallback and attribution.
 - A dynamically loaded 3Dmol.js molecule viewer for water, methane and benzene, plus an optional React Three Fiber optics field preview.
 - KaTeX equations, MDX rendering, Zod frontmatter validation, Fuse.js search and a Ctrl/Cmd+K command palette.
 - Recharts live graphs, CSV data export, screenshot download and fullscreen simulation mode.
 - Local-only bookmarks, recently viewed items, quiz score history, progress, theme and language preferences with Zustand.
 - Bangla-first routing (`/bn`) with English (`/en`), a manual service worker, manifest, SEO metadata, sitemap, robots and OpenGraph artwork.
 
-There is no database, backend API, login, paid service or required environment variable.
+There is no database, backend API, login or required environment variable. PhET's official embedded sims are fetched from PhET's servers, so they need an internet connection. PhET currently licenses its simulation files under CC BY-NC 4.0; commercial or ad-supported use requires separate permission from PhET. See the [official licensing terms](https://phet.colorado.edu/en/licensing).
 
 ## Local setup
 
@@ -179,6 +180,8 @@ The experiment detail page automatically creates tabs for Aim, Theory, Apparatus
 5. If the model needs a large browser-only library, use `next/dynamic(..., { ssr: false })` as the molecule viewer does.
 
 The shared workbench already provides play/pause, reset, speed, live readouts, Recharts graph, recorded table, CSV, screenshot and fullscreen controls.
+
+The PhET HTML5 catalog is maintained in `content/phet-simulations.json`. Each official PhET page is embedded from its `/sims/html/<slug>/latest/<slug>_all.html` URL, so PhET's current HTML5 release is used without copying the simulation files into this repository. Legacy Java/Flash sims are intentionally excluded because they are not dependable in modern browsers. Keep the visible attribution and PhET logo intact, and follow the non-commercial license terms.
 
 ## Add a quiz
 

@@ -7,6 +7,11 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'phet.colorado.edu', pathname: '/sims/html/**' }
+    ]
+  },
   experimental: {
     optimizePackageImports: ['lucide-react', 'recharts']
   }

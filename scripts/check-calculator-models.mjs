@@ -15,7 +15,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { calculatorModels, solveWithModel, unitChoicesFor } from '../lib/calculator-models.ts';
+import { calculatorModels, inputsNeeded, solveWithModel, unitChoicesFor } from '../lib/calculator-models.ts';
 
 const contentRoot = path.join(process.cwd(), 'content');
 
@@ -112,6 +112,68 @@ const SEEDS = {
   'langmuir-adsorption-isotherm': { 'θ': 0.5, K: 1e-5, P: 100000 },
   'freundlich-adsorption-isotherm': { 'x/m': 158.11, k: 0.5, P: 100000, n: 2 },
   'nernst-distribution-law': { K_D: 0.2, C_1: 0.1, C_2: 0.05, n: 2 },
+  'centripetal-acceleration': { a_c: 25, v: 10, r: 4, 'ω': 2.5 },
+  'centripetal-force': { F_c: 12.5, m: 2, v: 5, r: 4, T: 5.026548 },
+  'escape-velocity': { v_e: 11184.3, G: 6.674e-11, M: 5.97e24, R: 6.371e6, g: 9.8163 },
+  'orbital-velocity-satellite': { v_o: 7544.5, G: 6.674e-11, M: 5.97e24, r: 7e6 },
+  'capacitor-energy': { U: 0.0072, C: 0.0001, V: 12, Q: 0.0012 },
+  'capacitance-parallel-plate': { C: 1.7708376e-10, 'ε': 1.7708376e-11, A: 0.01, d: 0.001, 'ε_r': 2 },
+  'de-broglie-wavelength': { 'λ': 7.2741e-10, h: 6.626e-34, p: 9.109e-25, m: 9.109e-31, v: 1e6 },
+  'photoelectric-effect-equation': { h: 6.626e-34, f: 1e15, 'φ': 3.313e-19, K_max: 3.313e-19, f_0: 5e14 },
+  'radioactive-decay-law': { N: 367.879, N_0: 1000, 'λ': 0.01, t: 100, A: 3.67879 },
+  'half-life-radioactivity': { 'T_1/2': 69.3147, 'λ': 0.01, 't̄': 100 },
+  'resistivity-temperature-coefficient': { R_T: 120, R_0: 100, 'α': 0.004, 'ΔT': 50 },
+  'diffraction-grating-equation': { d: 2e-6, 'θ': 30, n: 2, 'λ': 5e-7, N: 5e5 },
+  'motional-emf': { 'ε': 0.3, B: 0.5, l: 0.2, v: 3 },
+  'lc-oscillation-frequency': { f: 1591.55, L: 0.01, C: 1e-6 },
+  'kinetic-theory-pressure': { P: 100000, 'ρ': 1.2, 'c̄²': 250000 },
+  'average-kinetic-energy-molecule': { E_k: 6.21292e-21, k_B: 1.380649e-23, T: 300, N_A: 6.0221e23 },
+  'compressibility-fluid': { 'β': 5e-10, K: 2e9 },
+  'electric-potential-difference-work': { 'ΔV': 5, W_AB: 1e-5, q_0: 2e-6 },
+  'gauss-law': { 'Φ_E': 112940.9, Q_enc: 1e-6, 'ε_0': 8.8541878128e-12 },
+  'newtons-law-of-cooling': { T: 336.90493, T_s: 293, k: 0.01, t: 60, T_0: 373 },
+  'cyclotron-frequency': { f_c: 1.39955e10, q: 1.602e-19, B: 0.5, m: 9.109e-31, r: 1e-4, v: 8.7935e6 },
+  'resolving-power-rayleigh': { 'θ_min': 6.71e-6, 'λ': 5.5e-7, D: 0.1 },
+  'angular-velocity-acceleration': { 'ω': 5, 'α': 1.25, 'θ': 20, t: 4 },
+  'force-between-parallel-conductors': { 'F/L': 2e-4, I_1: 10, I_2: 10, d: 0.1, 'μ_0': 1.256637e-6 },
+  'mass-energy-equivalence': { E: 9e13, m: 1e-3, c: 3e8, 'Δm': 1e-6, 'ΔE': 9e10 },
+  'compton-effect-wavelength-shift': { 'Δλ': 2.42631e-12, h: 6.62607e-34, m_e: 9.10938e-31, 'θ': 90, 'λ_C': 2.42631e-12 },
+  'maxwell-em-wave-speed': { c: 2.99792e8, 'μ_0': 1.256637e-6, 'ε_0': 8.8541878e-12, E_0: 300, B_0: 1.00069e-6 },
+  'particle-in-box-energy': { E_n: 6.0248e-20, n: 1, h: 6.62607e-34, m: 9.10938e-31, L: 1e-9 },
+  'relativistic-length-contraction': { L: 5, L_0: 10, 'γ': 2, v: 2.59616e8 },
+  'relativistic-time-dilation': { 'Δt': 10, 'Δt_0': 5, 'γ': 2, v: 2.59616e8 },
+  'molar-conductivity': { 'Λ_m': 10, 'κ': 0.001, c: 0.1 },
+  'osmotic-pressure-vant-hoff': { 'π': 247757.2, i: 1, c: 100, R: 8.314, T: 298 },
+  'raoults-law': { P_A: 2000, x_A: 0.4, 'P_A°': 5000 },
+  'kohlrausch-law': { 'Λ_m°': 425.9, 'λ_+°': 349.6, 'λ_-°': 76.3, 'ν': 1 },
+  'henderson-hasselbalch': { pH: 5.06103, pKa: 4.76, base: 0.2, acid: 0.1 },
+  'gibbs-free-energy-equilibrium': { 'ΔG°': -5705.66, K: 10, T: 298 },
+  'entropy-change-reversible': { 'ΔS': 20, dq_rev: 6000, T: 300, 'ΔH': 6000 },
+  'rate-law': { r: 0.001, k: 0.5, A: 0.2, m: 1, B: 0.1, n: 2 },
+  'debye-huckel-limiting-law': { 'γ_±': 0.88936, I: 0.01, z: 1, A: 0.509 },
+  'faradays-law': { m: 6.3509e-4, Q: 1930, M: 0.0635, n: 2, F: 96485 },
+  'moles': { n: 1, m: 0.018, M: 0.018 },
+  'mole-particle-count': { N: 1.2044e24, n: 2, N_A: 6.022e23 },
+  'empirical-formula-determination': { n: 1, m: 12, A_r: 12 },
+  'molecular-mass-formula': { M_r: 24, n_i: 2, A_r: 12 },
+  'celsius-kelvin-conversion': { T: 293.15, 'θ': 20 },
+  'fahrenheit-celsius-relation': { C: 100, F: 212 },
+  'kinetic-energy': { E_k: 9, m: 2, v: 3, p: 6 },
+  'elastic-potential-energy': { U: 0.25, k: 200, x: 0.05, F_s: 10 },
+  'impulse-momentum-theorem': { J: 12, F: 3, 'Δt': 4, m: 2, v: 11, u: 5 },
+  'joules-heating-law': { H: 200, I: 2, R: 5, t: 10, V: 10 },
+  'apparent-depth-refraction': { d_app: 0.8, d_real: 1.2, n: 1.5 },
+  'capillary-rise': { h: 0.0288, T: 0.072, 'θ': 0, r: 0.0005, 'ρ': 1000, g: 10 },
+  'critical-angle-total-internal-reflection': { C: 41.8103, n_1: 1.5, n_2: 1 },
+  'snells-law': { n_1: 1, n_2: 1.5, 'θ_1': 30, 'θ_2': 19.4712 },
+  'spherical-mirror-equation': { f: 0.1, u: 0.3, v: 0.15, r: 0.2 },
+  'wave-period-frequency-relation': { f: 5, T: 0.2, n: 100, t: 20 },
+  'work-energy-theorem': { W_net: 16, 'ΔE_k': 16, m: 2, u: 3, v: 5 },
+  'conservation-of-momentum': { m_1: 2, m_2: 3, u_1: 4, u_2: 1, v_1: 1, v_2: 3 },
+  'elastic-collision-velocities': { m_1: 2, m_2: 1, u_1: 3, u_2: 0, v_1: 1, v_2: 4 },
+  'linear-magnification': { m: -2, h_i: -0.1, h_o: 0.05, v: 0.6, u: 0.3 },
+  'speed-of-sound-temperature': { v_t: 343.2, v_0: 331, t: 20 },
+  'electrical-energy-kilowatt-hour': { E: 6.9, P: 2.3, t: 3, V: 230, I: 10 },
   'rydberg-equation-hydrogen': { 'λ': 6.563e-7, R_H: 1.097e7, n_1: 2, n_2: 3 }
 };
 
@@ -144,10 +206,14 @@ for (const [slug, model] of Object.entries(calculatorModels)) {
   if (!entry) { fail(`${slug}: no equation entry with this slug`); continue; }
   const declared = new Map(entry.variables.map((variable) => [variable.symbol, variable.unit]));
   const modelled = Object.keys(model.unit);
-  for (const symbol of declared.keys()) if (!modelled.includes(symbol)) fail(`${slug}: "${symbol}" is in variables but missing from model.unit`);
-  for (const symbol of modelled) if (!declared.has(symbol)) fail(`${slug}: "${symbol}" is in model.unit but not in variables`);
+  // A model may cover only the symbols the featured relation actually determines
+  // — Gauss's law closes over Φ, Q_enc and ε₀ but not E — so this is a subset
+  // check, not an equality check. Every modelled symbol must exist in the table
+  // with exactly the same unit string.
+  if (modelled.length === 0) fail(`${slug}: model.unit is empty`);
   for (const symbol of modelled) {
-    if (declared.has(symbol) && model.unit[symbol] !== declared.get(symbol)) {
+    if (!declared.has(symbol)) fail(`${slug}: "${symbol}" is in model.unit but not in variables`);
+    else if (model.unit[symbol] !== declared.get(symbol)) {
       fail(`${slug}: "${symbol}" unit is "${model.unit[symbol]}" in the model but "${declared.get(symbol)}" in frontmatter`);
     }
   }
@@ -166,8 +232,9 @@ for (const [slug, model] of Object.entries(calculatorModels)) {
 
   for (const target of symbols) {
     const raw = {};
-    for (const symbol of symbols) {
-      if (symbol === target) continue;
+    for (const symbol of inputsNeeded(slug, target)) {
+      if (symbol === target) { fail(`${slug}: "${target}" lists itself in needs`); continue; }
+      if (!symbols.includes(symbol)) { fail(`${slug}: needs of "${target}" names unknown symbol "${symbol}"`); continue; }
       raw[symbol] = computed[symbol] !== undefined ? computed[symbol] : seed[symbol];
     }
     const solved = solveWithModel(slug, raw, units, target);
@@ -176,7 +243,7 @@ for (const [slug, model] of Object.entries(calculatorModels)) {
   }
 
   const first = symbols[0];
-  const raw = Object.fromEntries(symbols.filter((symbol) => symbol !== first).map((symbol) => [symbol, computed[symbol]]));
+  const raw = Object.fromEntries(inputsNeeded(slug, first).map((symbol) => [symbol, computed[symbol]]));
   const recovered = solveWithModel(slug, raw, units, first);
   if (!recovered) { fail(`${slug}: could not recover "${first}"`); continue; }
   const drift = Math.abs(recovered.result - seed[first]) / Math.max(1e-12, Math.abs(seed[first]));

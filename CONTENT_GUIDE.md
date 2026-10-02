@@ -41,10 +41,12 @@ An equation becomes interactive as soon as it has a solver. Prefer the declarati
 
 Rules that keep a model honest:
 
-- Every symbol in the MDX `variables:` list must have an entry in `unit`, and the strings must match the declared `unit` exactly — that is what picks the dropdown of alternative units.
+- Every symbol in the MDX `variables:` list must have an entry in `unit` when the relation actually determines it. A model may cover a **subset**: Gauss's law closes over `Φ_E`, `Q_enc` and `ε₀` but not `E`, so `E` is left out of `unit` and the calculator simply says which symbols it uses. The full variable table still renders on the page.
+- The strings in `unit` must match the declared `unit` exactly — that is what picks the dropdown of alternative units.
 - `solve` receives the known values already converted into the declared units and must return a value for *every* symbol, including the ones it was given. The UI then simply reads the requested unknown.
 - Angles arrive in degrees because the frontmatter unit is `°`; convert with `deg()` and return with `toDeg()`.
 - Add a `steps(v, out, unknown)` override when the generic substitution list would mislead — for example when the rearrangement has no closed form and is solved numerically.
+- Add a `needs` map when the entry chains two relations. `E_k = ½mv² = p²/2m` shares symbols between two equalities, so `E_k` needs `m` and `v` but not `p`, and `m` needs `p` and `E_k` but not `v`. Write it as `needs: { E_k: ['m', 'v'], m: ['p', 'E_k'], ... }`. Without it the calculator asks for every other symbol, which is wrong for chained relations and confusing for anyone who has to fill in a value the rearrangement ignores. Omit `needs` entirely for a single relation that joins all of its symbols.
 
 `npm run check:models` enforces the parts that TypeScript cannot see: it fails when a symbol is missing from `unit`, when a unit string disagrees with the frontmatter, or when a rearrangement is not the true inverse of the others. Run it whenever you touch `lib/calculator-models.ts`.
 

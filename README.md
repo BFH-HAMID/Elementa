@@ -46,7 +46,7 @@ The README uses self-hosted SVG artwork so the project page has a visual identit
 ## What is included
 
 - 238 typed MDX equation notes, including bilingual chapter-level formula sheets for the supplied physics and chemistry topics. Every entry carries a step-by-step mathematical derivation with bilingual prose and optional KaTeX lines for each step.
-- 108 interactive equation calculators that solve for any variable, with unit conversion and a worked-substitution panel; 92 are declarative models in `lib/calculator-models.ts` and 16 are hand-written solvers in `lib/calculations.ts`.
+- 170 interactive equation calculators that solve for any variable, with unit conversion and a worked-substitution panel; 154 are declarative models in `lib/calculator-models.ts` and 16 are hand-written solvers in `lib/calculations.ts`.
 - A searchable, bilingual checklist of 78 school and HSC practical topics, alongside full lab guides for a simple pendulum, Ohm's law, convex-lens focal length and acid–base titration.
 - Original interactive Canvas 2D simulations for projectile motion, a pendulum, circuits, wave interference, Newton's second law, lens rays, titration, pH, ideal gases and reaction kinetics.
 - An embedded, searchable PhET HTML5 library with 67 Physics and 35 Chemistry subject entries (81 unique simulations); official `/latest/` builds are loaded only on each detail page, with direct-open fallback and attribution.

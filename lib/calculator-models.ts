@@ -133,7 +133,34 @@ export const unitChoices: Record<string, UnitChoice[]> = {
     { label: 'kg/m³', factor: 1 },
     { label: 'g/cm³', factor: 1000 }
   ],
-  '°': [{ label: '°', factor: 1 }]
+  '°': [{ label: '°', factor: 1 }],
+  rad: [
+    { label: 'rad', factor: 1 },
+    { label: '°', factor: Math.PI / 180 }
+  ],
+  's⁻¹': [
+    { label: 's⁻¹', factor: 1 },
+    { label: 'min⁻¹', factor: 1 / 60 },
+    { label: 'h⁻¹', factor: 1 / 3600 }
+  ],
+  '°C': [{ label: '°C', factor: 1 }],
+  '°F': [{ label: '°F', factor: 1 }],
+  'N s': [{ label: 'N s', factor: 1 }],
+  kW: [
+    { label: 'kW', factor: 1 },
+    { label: 'W', factor: 0.001 },
+    { label: 'MW', factor: 1000 }
+  ],
+  kWh: [
+    { label: 'kWh', factor: 1 },
+    { label: 'Wh', factor: 0.001 },
+    { label: 'J', factor: 1 / 3.6e6 }
+  ],
+  h: [
+    { label: 'h', factor: 1 },
+    { label: 'min', factor: 1 / 60 },
+    { label: 's', factor: 1 / 3600 }
+  ]
 };
 
 /**
@@ -150,11 +177,33 @@ export function hasCalculatorModel(slug: string): boolean {
   return Object.prototype.hasOwnProperty.call(calculatorModels, slug);
 }
 
+/**
+ * Symbols the student has to supply in order to solve for `unknown`.
+ *
+ * Defaults to every other symbol, which is right for a single relation. Models
+ * that chain two relations declare `needs` so that, for example, finding `E_k`
+ * from `E_k = ½mv²` does not also ask for `p`.
+ */
+export function inputsNeeded(slug: string, unknown: string): string[] {
+  const model = calculatorModels[slug];
+  if (!model) return [];
+  return model.needs?.[unknown] ?? Object.keys(model.unit).filter((symbol) => symbol !== unknown);
+}
+
 export type CalculatorModel = {
   /** Formula shown in the "step-by-step working" panel. */
   formula: string;
   /** Display unit for each variable symbol, keyed by symbol. */
   unit: Record<string, string>;
+  /**
+   * Symbols each unknown actually depends on, keyed by the unknown.
+   *
+   * Omit this when the relation is a single equation joining every symbol, so
+   * solving for any one of them needs all the others. Supply it when the entry
+   * chains two relations — `E_k = ½mv²` and `p = mv` share only some symbols, so
+   * finding `E_k` needs `m` and `v` but not `p`.
+   */
+  needs?: Record<string, string[]>;
   /** Returns a value for every symbol, in SI. */
   solve: (v: Record<string, number>) => Record<string, number>;
   /** Optional richer worked steps; a generic two-line fallback is used otherwise. */
@@ -175,6 +224,10 @@ const HEISENBERG_UNITS: Record<string, string> = {
 
 /** Reduced Planck constant ħ = h / 2π. */
 const H_BAR = H_PLANCK / (2 * Math.PI);
+/** Vacuum permittivity ε₀, used by the capacitor and Compton models. */
+const EPSILON_0 = 8.8541878128e-12;
+/** Speed of light in vacuum. */
+const C_LIGHT = 299792458;
 /** Elementary charge, used for hydrogen energy levels. */
 const E_CHARGE = 1.602176634e-19;
 
@@ -233,6 +286,16 @@ export const calculatorModels: Record<string, CalculatorModel> = {
     solve: (v) => ({ F: 2 * v.T * v.L, T: v.F / (2 * v.L), L: v.F / (2 * v.T) })
   },
 
+  'celsius-kelvin-conversion': {
+    formula: 'T = θ + 273.15',
+    unit: { T: 'K', 'θ': '°C' },
+    solve: (v) => ({ T: v['θ'] + 273.15, 'θ': v.T - 273.15 })
+  },
+  'fahrenheit-celsius-relation': {
+    formula: 'C / 5 = (F − 32) / 9',
+    unit: { C: '°C', F: '°F' },
+    solve: (v) => ({ C: ((v.F - 32) * 5) / 9, F: (v.C * 9) / 5 + 32 })
+  },
   /* -------------------------------------------------------------- 9–10 */
   'first-equation-of-motion': {
     formula: 'v = u + at',
@@ -338,6 +401,7 @@ export const calculatorModels: Record<string, CalculatorModel> = {
   'thermal-expansion-coefficients': {
     formula: '6α = 3β = 2γ',
     unit: { 'α': 'K⁻¹', 'β': 'K⁻¹', 'γ': 'K⁻¹' },
+    needs: { 'α': ['β'], 'β': ['α'], 'γ': ['α'] },
     solve: (v) => ({ 'α': v['β'] / 2, 'β': 2 * v['α'], 'γ': 3 * v['α'] })
   },
   'calorimetry-heat-equation': {
@@ -366,6 +430,186 @@ export const calculatorModels: Record<string, CalculatorModel> = {
     })
   },
 
+  'kinetic-energy': {
+    formula: 'E_k = ½mv² = p² / 2m',
+    unit: { E_k: 'J', m: 'kg', v: 'm/s', p: 'kg m/s' },
+    needs: { E_k: ['m', 'v'], m: ['p', 'E_k'], v: ['p', 'm'], p: ['m', 'v'] },
+    solve: (v) => ({
+      E_k: 0.5 * v.m * v.v ** 2,
+      m: v.p ** 2 / (2 * v.E_k),
+      v: v.p / v.m,
+      p: v.m * v.v
+    })
+  },
+  'elastic-potential-energy': {
+    formula: 'U = ½kx², with Fₛ = kx',
+    unit: { U: 'J', k: 'N/m', x: 'm', F_s: 'N' },
+    needs: { U: ['k', 'x'], k: ['U', 'x'], x: ['U', 'F_s'], F_s: ['k', 'x'] },
+    solve: (v) => ({
+      U: 0.5 * v.k * v.x ** 2,
+      k: (2 * v.U) / v.x ** 2,
+      x: (2 * v.U) / v.F_s,
+      F_s: v.k * v.x
+    })
+  },
+  'impulse-momentum-theorem': {
+    formula: 'J = FΔt = m(v − u)',
+    unit: { J: 'N s', F: 'N', 'Δt': 's', m: 'kg', v: 'm/s', u: 'm/s' },
+    needs: { J: ['m', 'v', 'u'], F: ['m', 'v', 'u', 'Δt'], 'Δt': ['m', 'v', 'u', 'F'], m: ['J', 'v', 'u'], v: ['J', 'm', 'u'], u: ['J', 'm', 'v'] },
+    solve: (v) => ({
+      J: v.m * (v.v - v.u),
+      F: (v.m * (v.v - v.u)) / v['Δt'],
+      'Δt': (v.m * (v.v - v.u)) / v.F,
+      m: v.J / (v.v - v.u),
+      v: v.u + v.J / v.m,
+      u: v.v - v.J / v.m
+    })
+  },
+  'joules-heating-law': {
+    formula: 'H = I²Rt = VIt, with V = IR',
+    unit: { H: 'J', I: 'A', R: 'Ω', t: 's', V: 'V' },
+    needs: { H: ['I', 'R', 't'], I: ['V', 'R'], R: ['V', 'I'], t: ['H', 'I', 'R'], V: ['I', 'R'] },
+    solve: (v) => ({
+      H: v.I ** 2 * v.R * v.t,
+      I: v.V / v.R,
+      R: v.V / v.I,
+      t: v.H / (v.I ** 2 * v.R),
+      V: v.I * v.R
+    })
+  },
+  'apparent-depth-refraction': {
+    formula: 'd_app = d_real / n',
+    unit: { d_app: 'm', d_real: 'm', n: '1' },
+    solve: (v) => ({ d_app: v.d_real / v.n, d_real: v.d_app * v.n, n: v.d_real / v.d_app })
+  },
+  'capillary-rise': {
+    formula: 'h = 2T cos θ / rρg',
+    unit: { h: 'm', T: 'N/m', 'θ': '°', r: 'm', 'ρ': 'kg/m³', g: 'm/s²' },
+    solve: (v) => {
+      const cos = Math.cos(deg(v['θ']));
+      const top = 2 * v.T * cos;
+      return {
+        h: top / (v.r * v['ρ'] * v.g),
+        T: (v.h * v.r * v['ρ'] * v.g) / (2 * cos),
+        'θ': toDeg(Math.acos((v.h * v.r * v['ρ'] * v.g) / (2 * v.T))),
+        r: top / (v.h * v['ρ'] * v.g),
+        'ρ': top / (v.h * v.r * v.g),
+        g: top / (v.h * v.r * v['ρ'])
+      };
+    }
+  },
+  'critical-angle-total-internal-reflection': {
+    formula: 'sin C = n₂ / n₁',
+    unit: { C: '°', n_1: '1', n_2: '1' },
+    solve: (v) => ({
+      C: toDeg(Math.asin(v.n_2 / v.n_1)),
+      n_1: v.n_2 / Math.sin(deg(v.C)),
+      n_2: v.n_1 * Math.sin(deg(v.C))
+    })
+  },
+  'snells-law': {
+    formula: 'n₁ sin θ₁ = n₂ sin θ₂',
+    unit: { n_1: '1', n_2: '1', 'θ_1': '°', 'θ_2': '°' },
+    solve: (v) => ({
+      n_1: (v.n_2 * Math.sin(deg(v['θ_2']))) / Math.sin(deg(v['θ_1'])),
+      n_2: (v.n_1 * Math.sin(deg(v['θ_1']))) / Math.sin(deg(v['θ_2'])),
+      'θ_1': toDeg(Math.asin((v.n_2 * Math.sin(deg(v['θ_2']))) / v.n_1)),
+      'θ_2': toDeg(Math.asin((v.n_1 * Math.sin(deg(v['θ_1']))) / v.n_2))
+    })
+  },
+  'spherical-mirror-equation': {
+    formula: '1/f = 1/u + 1/v = 2/r',
+    unit: { f: 'm', u: 'm', v: 'm', r: 'm' },
+    needs: { f: ['u', 'v'], u: ['f', 'v'], v: ['f', 'u'], r: ['f'] },
+    solve: (v) => ({
+      f: 1 / (1 / v.u + 1 / v.v),
+      u: 1 / (1 / v.f - 1 / v.v),
+      v: 1 / (1 / v.f - 1 / v.u),
+      r: 2 * v.f
+    })
+  },
+  'wave-period-frequency-relation': {
+    formula: 'f = 1 / T = n / t',
+    unit: { f: 'Hz', T: 's', n: '1', t: 's' },
+    needs: { f: ['n', 't'], T: ['n', 't'], n: ['f', 't'], t: ['f', 'n'] },
+    solve: (v) => ({ f: v.n / v.t, T: v.t / v.n, n: v.f * v.t, t: v.n / v.f })
+  },
+  'work-energy-theorem': {
+    formula: 'W_net = ΔE_k = ½m(v² − u²)',
+    unit: { W_net: 'J', 'ΔE_k': 'J', m: 'kg', u: 'm/s', v: 'm/s' },
+    needs: { W_net: ['m', 'u', 'v'], 'ΔE_k': ['m', 'u', 'v'], m: ['ΔE_k', 'u', 'v'], u: ['ΔE_k', 'm', 'v'], v: ['ΔE_k', 'm', 'u'] },
+    solve: (v) => ({
+      W_net: 0.5 * v.m * (v.v ** 2 - v.u ** 2),
+      'ΔE_k': 0.5 * v.m * (v.v ** 2 - v.u ** 2),
+      m: (2 * v['ΔE_k']) / (v.v ** 2 - v.u ** 2),
+      u: Math.sqrt(Math.max(0, v.v ** 2 - (2 * v['ΔE_k']) / v.m)),
+      v: Math.sqrt(Math.max(0, v.u ** 2 + (2 * v['ΔE_k']) / v.m))
+    })
+  },
+  'conservation-of-momentum': {
+    formula: 'm₁u₁ + m₂u₂ = m₁v₁ + m₂v₂',
+    unit: { m_1: 'kg', m_2: 'kg', u_1: 'm/s', u_2: 'm/s', v_1: 'm/s', v_2: 'm/s' },
+    solve: (v) => ({
+      m_1: (v.m_2 * (v.u_2 - v.v_2)) / (v.v_1 - v.u_1),
+      m_2: (v.m_1 * (v.u_1 - v.v_1)) / (v.v_2 - v.u_2),
+      u_1: (v.m_1 * v.v_1 + v.m_2 * (v.v_2 - v.u_2)) / v.m_1,
+      u_2: (v.m_2 * v.v_2 + v.m_1 * (v.v_1 - v.u_1)) / v.m_2,
+      v_1: (v.m_1 * v.u_1 + v.m_2 * (v.u_2 - v.v_2)) / v.m_1,
+      v_2: (v.m_2 * v.u_2 + v.m_1 * (v.u_1 - v.v_1)) / v.m_2
+    })
+  },
+  'elastic-collision-velocities': {
+    formula: 'v₁ = ((m₁ − m₂)u₁ + 2m₂u₂)/(m₁ + m₂)',
+    unit: { m_1: 'kg', m_2: 'kg', u_1: 'm/s', u_2: 'm/s', v_1: 'm/s', v_2: 'm/s' },
+    needs: { m_1: ['m_2', 'u_1', 'u_2', 'v_1'], m_2: ['m_1', 'u_1', 'u_2', 'v_2'], u_1: ['m_1', 'm_2', 'u_2', 'v_2'], u_2: ['m_1', 'm_2', 'u_1', 'v_1'], v_1: ['m_1', 'm_2', 'u_1', 'u_2'], v_2: ['m_1', 'm_2', 'u_1', 'u_2'] },
+    solve: (v) => {
+      const total = v.m_1 + v.m_2;
+      return {
+        // from v₁: m₁(v₁ − u₁) = m₂(2u₂ − u₁ − v₁)
+        m_1: (v.m_2 * (2 * v.u_2 - v.u_1 - v.v_1)) / (v.v_1 - v.u_1),
+        // from v₂: m₂(v₂ − u₂) = m₁(2u₁ − u₂ − v₂)
+        m_2: (v.m_1 * (2 * v.u_1 - v.u_2 - v.v_2)) / (v.v_2 - v.u_2),
+        // inverted from the v₂ expression, which avoids dividing by (m₁ − m₂)
+        u_1: (v.v_2 * total + (v.m_1 - v.m_2) * v.u_2) / (2 * v.m_1),
+        u_2: (v.v_1 * total - (v.m_1 - v.m_2) * v.u_1) / (2 * v.m_2),
+        v_1: ((v.m_1 - v.m_2) * v.u_1 + 2 * v.m_2 * v.u_2) / total,
+        v_2: ((v.m_2 - v.m_1) * v.u_2 + 2 * v.m_1 * v.u_1) / total
+      };
+    }
+  },
+  'linear-magnification': {
+    formula: 'm = h_i / h_o = −v / u',
+    unit: { m: '1', h_i: 'm', h_o: 'm', v: 'm', u: 'm' },
+    needs: { m: ['h_i', 'h_o'], h_i: ['h_o', 'v', 'u'], h_o: ['h_i', 'v', 'u'], v: ['m', 'u'], u: ['m', 'v'] },
+    solve: (v) => ({
+      m: v.h_i / v.h_o,
+      h_i: -(v.v * v.h_o) / v.u,
+      h_o: -(v.u * v.h_i) / v.v,
+      v: -(v.m * v.u),
+      u: -(v.v / v.m)
+    })
+  },
+  'speed-of-sound-temperature': {
+    formula: 'v_t = v₀ + 0.61 t  (t in °C)',
+    unit: { v_t: 'm/s', v_0: 'm/s', t: '°C' },
+    solve: (v) => ({
+      v_t: v.v_0 + 0.61 * v.t,
+      v_0: v.v_t - 0.61 * v.t,
+      t: (v.v_t - v.v_0) / 0.61
+    })
+  },
+  'electrical-energy-kilowatt-hour': {
+    formula: 'E = Pt (kWh), with P = VI / 1000 (kW)',
+    unit: { E: 'kWh', P: 'kW', t: 'h', V: 'V', I: 'A' },
+    needs: { E: ['P', 't'], P: ['E', 't'], t: ['E', 'P'], V: ['P', 'I'], I: ['P', 'V'] },
+    solve: (v) => ({
+      E: v.P * v.t,
+      P: v.E / v.t,
+      t: v.E / v.P,
+      V: (1000 * v.P) / v.I,
+      I: (1000 * v.P) / v.V
+    })
+  },
   /* ------------------------------------------------------------- 11–12 */
   'banking-angle-road': {
     formula: 'tan θ = v² / rg',
@@ -556,6 +800,7 @@ export const calculatorModels: Record<string, CalculatorModel> = {
   'heat-engine-efficiency': {
     formula: 'η = W / Q_H = 1 − Q_C / Q_H',
     unit: { 'η': '1', W: 'J', Q_H: 'J', Q_C: 'J' },
+    needs: { 'η': ['W', 'Q_H'], W: ['Q_H', 'Q_C'], Q_H: ['W', 'η'], Q_C: ['Q_H', 'η'] },
     solve: (v) => ({
       'η': v.W / v.Q_H,
       W: v.Q_H - v.Q_C,
@@ -790,16 +1035,342 @@ export const calculatorModels: Record<string, CalculatorModel> = {
     })
   },
 
+  'compton-effect-wavelength-shift': {
+    formula: 'Δλ = λ_C(1 − cos θ), with λ_C = h / m_e c',
+    unit: { 'Δλ': 'm', h: 'J s', m_e: 'kg', 'θ': '°', 'λ_C': 'm' },
+    needs: { 'Δλ': ['λ_C', 'θ'], h: ['λ_C', 'm_e'], m_e: ['λ_C', 'h'], 'θ': ['Δλ', 'λ_C'], 'λ_C': ['Δλ', 'θ'] },
+    solve: (v) => ({
+      'Δλ': v['λ_C'] * (1 - Math.cos(deg(v['θ']))),
+      h: v['λ_C'] * v.m_e * C_LIGHT,
+      m_e: v.h / (v['λ_C'] * C_LIGHT),
+      'θ': toDeg(Math.acos(1 - v['Δλ'] / v['λ_C'])),
+      'λ_C': v['Δλ'] / (1 - Math.cos(deg(v['θ'])))
+    })
+  },
+  'maxwell-em-wave-speed': {
+    formula: 'c = 1 / √(μ₀ε₀) = E₀ / B₀',
+    unit: { c: 'm/s', 'μ_0': 'H/m', 'ε_0': 'F/m', E_0: 'V/m', B_0: 'T' },
+    needs: { c: ['μ_0', 'ε_0'], 'μ_0': ['c', 'ε_0'], 'ε_0': ['c', 'μ_0'], E_0: ['c', 'B_0'], B_0: ['c', 'E_0'] },
+    solve: (v) => ({
+      c: 1 / Math.sqrt(v['μ_0'] * v['ε_0']),
+      'μ_0': 1 / (v.c ** 2 * v['ε_0']),
+      'ε_0': 1 / (v.c ** 2 * v['μ_0']),
+      E_0: v.c * v.B_0,
+      B_0: v.E_0 / v.c
+    })
+  },
+  'particle-in-box-energy': {
+    formula: 'E_n = n²h² / (8mL²)',
+    unit: { E_n: 'J', n: '1', h: 'J s', m: 'kg', L: 'm' },
+    solve: (v) => ({
+      E_n: (v.n ** 2 * v.h ** 2) / (8 * v.m * v.L ** 2),
+      n: Math.sqrt((8 * v.m * v.L ** 2 * v.E_n) / v.h ** 2),
+      h: Math.sqrt((8 * v.m * v.L ** 2 * v.E_n) / v.n ** 2),
+      m: (v.n ** 2 * v.h ** 2) / (8 * v.L ** 2 * v.E_n),
+      L: Math.sqrt((v.n ** 2 * v.h ** 2) / (8 * v.m * v.E_n))
+    })
+  },
+  'relativistic-length-contraction': {
+    formula: 'L = L₀ / γ, with γ = 1 / √(1 − v²/c²)',
+    unit: { L: 'm', L_0: 'm', 'γ': '1', v: 'm/s' },
+    needs: { L: ['L_0', 'γ'], L_0: ['L', 'γ'], 'γ': ['L', 'L_0'], v: ['γ'] },
+    solve: (v) => ({
+      L: v.L_0 / v['γ'],
+      L_0: v.L * v['γ'],
+      'γ': v.L_0 / v.L,
+      v: C_LIGHT * Math.sqrt(Math.max(0, 1 - 1 / v['γ'] ** 2))
+    })
+  },
+  'relativistic-time-dilation': {
+    formula: 'Δt = γΔt₀, with γ = 1 / √(1 − v²/c²)',
+    unit: { 'Δt': 's', 'Δt_0': 's', 'γ': '1', v: 'm/s' },
+    needs: { 'Δt': ['γ', 'Δt_0'], 'Δt_0': ['γ', 'Δt'], 'γ': ['Δt', 'Δt_0'], v: ['γ'] },
+    solve: (v) => ({
+      'Δt': v['γ'] * v['Δt_0'],
+      'Δt_0': v['Δt'] / v['γ'],
+      'γ': v['Δt'] / v['Δt_0'],
+      v: C_LIGHT * Math.sqrt(Math.max(0, 1 - 1 / v['γ'] ** 2))
+    })
+  },
+  'centripetal-acceleration': {
+    formula: 'a_c = v² / r = ω²r',
+    unit: { a_c: 'm/s²', v: 'm/s', r: 'm', 'ω': 'rad/s' },
+    needs: { a_c: ['v', 'r'], v: ['a_c', 'r'], r: ['a_c', 'v'], 'ω': ['a_c', 'r'] },
+    solve: (v) => ({
+      a_c: v.v ** 2 / v.r,
+      v: Math.sqrt(v.a_c * v.r),
+      r: v.v ** 2 / v.a_c,
+      'ω': Math.sqrt(v.a_c / v.r)
+    })
+  },
+  'centripetal-force': {
+    formula: 'F_c = mv² / r = 4π²mr / T²',
+    unit: { F_c: 'N', m: 'kg', v: 'm/s', r: 'm', T: 's' },
+    needs: { F_c: ['m', 'v', 'r'], m: ['F_c', 'v', 'r'], v: ['F_c', 'm', 'r'], r: ['F_c', 'm', 'v'], T: ['m', 'r', 'F_c'] },
+    solve: (v) => ({
+      F_c: (v.m * v.v ** 2) / v.r,
+      m: (v.F_c * v.r) / v.v ** 2,
+      v: Math.sqrt((v.F_c * v.r) / v.m),
+      r: (v.m * v.v ** 2) / v.F_c,
+      T: 2 * Math.PI * Math.sqrt((v.m * v.r) / v.F_c)
+    })
+  },
+  'escape-velocity': {
+    formula: 'v_e = √(2GM / R), with g = GM / R²',
+    unit: { v_e: 'm/s', G: 'N m²/kg²', M: 'kg', R: 'm', g: 'm/s²' },
+    needs: { v_e: ['G', 'M', 'R'], G: ['v_e', 'M', 'R'], M: ['v_e', 'G', 'R'], R: ['v_e', 'G', 'M'], g: ['G', 'M', 'R'] },
+    solve: (v) => ({
+      v_e: Math.sqrt((2 * v.G * v.M) / v.R),
+      G: (v.v_e ** 2 * v.R) / (2 * v.M),
+      M: (v.v_e ** 2 * v.R) / (2 * v.G),
+      R: (2 * v.G * v.M) / v.v_e ** 2,
+      g: (v.G * v.M) / v.R ** 2
+    })
+  },
+  'orbital-velocity-satellite': {
+    formula: 'v_o = √(GM / r)',
+    unit: { v_o: 'm/s', G: 'N m²/kg²', M: 'kg', r: 'm' },
+    solve: (v) => ({
+      v_o: Math.sqrt((v.G * v.M) / v.r),
+      G: (v.v_o ** 2 * v.r) / v.M,
+      M: (v.v_o ** 2 * v.r) / v.G,
+      r: (v.G * v.M) / v.v_o ** 2
+    })
+  },
+  'capacitor-energy': {
+    formula: 'U = ½CV² = ½QV',
+    unit: { U: 'J', C: 'F', V: 'V', Q: 'C' },
+    needs: { U: ['C', 'V'], C: ['U', 'V'], V: ['U', 'Q'], Q: ['C', 'V'] },
+    solve: (v) => ({
+      U: 0.5 * v.C * v.V ** 2,
+      C: (2 * v.U) / v.V ** 2,
+      V: (2 * v.U) / v.Q,
+      Q: v.C * v.V
+    })
+  },
+  'capacitance-parallel-plate': {
+    formula: 'C = εA / d, with ε = ε_r ε₀',
+    unit: { C: 'F', 'ε': 'F/m', A: 'm²', d: 'm', 'ε_r': '1' },
+    needs: { C: ['ε', 'A', 'd'], 'ε': ['ε_r'], A: ['C', 'd', 'ε'], d: ['C', 'A', 'ε'], 'ε_r': ['ε'] },
+    solve: (v) => ({
+      C: (v['ε'] * v.A) / v.d,
+      'ε': v['ε_r'] * EPSILON_0,
+      A: (v.C * v.d) / v['ε'],
+      d: (v['ε'] * v.A) / v.C,
+      'ε_r': v['ε'] / EPSILON_0
+    })
+  },
+  'de-broglie-wavelength': {
+    formula: 'λ = h / p = h / mv',
+    unit: { 'λ': 'm', h: 'J s', p: 'kg m/s', m: 'kg', v: 'm/s' },
+    needs: { 'λ': ['h', 'p'], h: ['λ', 'm', 'v'], p: ['m', 'v'], m: ['λ', 'h', 'v'], v: ['λ', 'h', 'm'] },
+    solve: (v) => ({
+      'λ': v.h / v.p,
+      h: v['λ'] * v.m * v.v,
+      p: v.m * v.v,
+      m: v.h / (v['λ'] * v.v),
+      v: v.h / (v['λ'] * v.m)
+    })
+  },
+  'photoelectric-effect-equation': {
+    formula: 'hf = φ + K_max, with φ = hf₀',
+    unit: { h: 'J s', f: 'Hz', 'φ': 'J', K_max: 'J', f_0: 'Hz' },
+    needs: { h: ['φ', 'f_0'], f: ['φ', 'K_max', 'h'], 'φ': ['h', 'f_0'], K_max: ['h', 'f', 'φ'], f_0: ['φ', 'h'] },
+    solve: (v) => ({
+      h: v['φ'] / v.f_0,
+      f: (v['φ'] + v.K_max) / v.h,
+      'φ': v.h * v.f_0,
+      K_max: v.h * v.f - v['φ'],
+      f_0: v['φ'] / v.h
+    })
+  },
+  'radioactive-decay-law': {
+    formula: 'N = N₀e^(−λt), with A = λN',
+    unit: { N: '1', N_0: '1', 'λ': 's⁻¹', t: 's', A: 'Bq' },
+    needs: { N: ['N_0', 'λ', 't'], N_0: ['N', 'λ', 't'], 'λ': ['A', 'N'], t: ['N_0', 'N', 'λ'], A: ['λ', 'N'] },
+    solve: (v) => ({
+      N: v.N_0 * Math.exp(-v['λ'] * v.t),
+      N_0: v.N * Math.exp(v['λ'] * v.t),
+      'λ': v.A / v.N,
+      t: Math.log(v.N_0 / v.N) / v['λ'],
+      A: v['λ'] * v.N
+    })
+  },
+  'half-life-radioactivity': {
+    formula: 'T½ = ln 2 / λ, with t̄ = 1 / λ',
+    unit: { 'T_1/2': 's', 'λ': 's⁻¹', 't̄': 's' },
+    needs: { 'T_1/2': ['λ'], 'λ': ['T_1/2'], 't̄': ['λ'] },
+    solve: (v) => ({
+      'T_1/2': Math.LN2 / v['λ'],
+      'λ': Math.LN2 / v['T_1/2'],
+      't̄': 1 / v['λ']
+    })
+  },
+  'resistivity-temperature-coefficient': {
+    formula: 'R_T = R₀(1 + αΔT)',
+    unit: { R_T: 'Ω', R_0: 'Ω', 'α': 'K⁻¹', 'ΔT': 'K' },
+    solve: (v) => ({
+      R_T: v.R_0 * (1 + v['α'] * v['ΔT']),
+      R_0: v.R_T / (1 + v['α'] * v['ΔT']),
+      'α': (v.R_T / v.R_0 - 1) / v['ΔT'],
+      'ΔT': (v.R_T / v.R_0 - 1) / v['α']
+    })
+  },
+  'diffraction-grating-equation': {
+    formula: 'd sin θ = nλ, with d = 1 / N',
+    unit: { d: 'm', 'θ': '°', n: '1', 'λ': 'm', N: 'm⁻¹' },
+    needs: { d: ['θ', 'n', 'λ'], 'θ': ['d', 'n', 'λ'], n: ['d', 'θ', 'λ'], 'λ': ['d', 'θ', 'n'], N: ['d'] },
+    solve: (v) => ({
+      d: (v.n * v['λ']) / Math.sin(deg(v['θ'])),
+      'θ': toDeg(Math.asin((v.n * v['λ']) / v.d)),
+      n: (v.d * Math.sin(deg(v['θ']))) / v['λ'],
+      'λ': (v.d * Math.sin(deg(v['θ']))) / v.n,
+      N: 1 / v.d
+    })
+  },
+  'motional-emf': {
+    formula: 'ε = Blv',
+    unit: { 'ε': 'V', B: 'T', l: 'm', v: 'm/s' },
+    solve: (v) => ({
+      'ε': v.B * v.l * v.v,
+      B: v['ε'] / (v.l * v.v),
+      l: v['ε'] / (v.B * v.v),
+      v: v['ε'] / (v.B * v.l)
+    })
+  },
+  'lc-oscillation-frequency': {
+    formula: 'f = 1 / (2π√(LC))',
+    unit: { f: 'Hz', L: 'H', C: 'F' },
+    solve: (v) => ({
+      f: 1 / (2 * Math.PI * Math.sqrt(v.L * v.C)),
+      L: 1 / ((2 * Math.PI * v.f) ** 2 * v.C),
+      C: 1 / ((2 * Math.PI * v.f) ** 2 * v.L)
+    })
+  },
+  'kinetic-theory-pressure': {
+    formula: 'P = ⅓ρc̄²',
+    unit: { P: 'Pa', 'ρ': 'kg/m³', 'c̄²': 'm²/s²' },
+    solve: (v) => ({
+      P: (v['ρ'] * v['c̄²']) / 3,
+      'ρ': (3 * v.P) / v['c̄²'],
+      'c̄²': (3 * v.P) / v['ρ']
+    })
+  },
+  'average-kinetic-energy-molecule': {
+    formula: 'Ē_k = (3/2)k_B T = (3/2)RT / N_A',
+    unit: { E_k: 'J', k_B: 'J/K', T: 'K', N_A: 'mol⁻¹' },
+    needs: { E_k: ['k_B', 'T'], k_B: ['E_k', 'T'], T: ['E_k', 'k_B'], N_A: ['E_k', 'T'] },
+    solve: (v) => ({
+      E_k: 1.5 * v.k_B * v.T,
+      k_B: (2 * v.E_k) / (3 * v.T),
+      T: (2 * v.E_k) / (3 * v.k_B),
+      N_A: (1.5 * 8.314462618 * v.T) / v.E_k
+    })
+  },
+  'compressibility-fluid': {
+    formula: 'β = 1 / K',
+    unit: { 'β': 'Pa⁻¹', K: 'Pa' },
+    solve: (v) => ({ 'β': 1 / v.K, K: 1 / v['β'] })
+  },
+  'electric-potential-difference-work': {
+    formula: 'V_B − V_A = W_AB / q₀',
+    unit: { 'ΔV': 'V', W_AB: 'J', q_0: 'C' },
+    solve: (v) => ({
+      'ΔV': v.W_AB / v.q_0,
+      W_AB: v['ΔV'] * v.q_0,
+      q_0: v.W_AB / v['ΔV']
+    })
+  },
+  'gauss-law': {
+    formula: 'Φ_E = Q_enc / ε₀',
+    unit: { 'Φ_E': 'N m²/C', Q_enc: 'C', 'ε_0': 'F/m' },
+    solve: (v) => ({
+      'Φ_E': v.Q_enc / v['ε_0'],
+      Q_enc: v['Φ_E'] * v['ε_0'],
+      'ε_0': v.Q_enc / v['Φ_E']
+    })
+  },
+  'newtons-law-of-cooling': {
+    formula: 'T(t) = T_s + (T₀ − T_s)e^(−kt)',
+    unit: { T: 'K', T_s: 'K', k: 's⁻¹', t: 's', T_0: 'K' },
+    solve: (v) => {
+      const decay = Math.exp(-v.k * v.t);
+      return {
+        T: v.T_s + (v.T_0 - v.T_s) * decay,
+        T_s: (v.T - v.T_0 * decay) / (1 - decay),
+        k: -Math.log((v.T - v.T_s) / (v.T_0 - v.T_s)) / v.t,
+        t: -Math.log((v.T - v.T_s) / (v.T_0 - v.T_s)) / v.k,
+        T_0: v.T_s + (v.T - v.T_s) / decay
+      };
+    }
+  },
+  'cyclotron-frequency': {
+    formula: 'f_c = qB / (2πm), with r = mv / qB',
+    unit: { f_c: 'Hz', q: 'C', B: 'T', m: 'kg', r: 'm', v: 'm/s' },
+    needs: { f_c: ['q', 'B', 'm'], q: ['f_c', 'B', 'm'], B: ['f_c', 'q', 'm'], m: ['f_c', 'q', 'B'], r: ['m', 'v', 'q', 'B'], v: ['r', 'q', 'B', 'm'] },
+    solve: (v) => ({
+      f_c: (v.q * v.B) / (2 * Math.PI * v.m),
+      q: (2 * Math.PI * v.m * v.f_c) / v.B,
+      B: (2 * Math.PI * v.m * v.f_c) / v.q,
+      m: (v.q * v.B) / (2 * Math.PI * v.f_c),
+      r: (v.m * v.v) / (v.q * v.B),
+      v: (v.q * v.B * v.r) / v.m
+    })
+  },
+  'resolving-power-rayleigh': {
+    formula: 'θ_min = 1.22 λ / D',
+    unit: { 'θ_min': 'rad', 'λ': 'm', D: 'm' },
+    solve: (v) => ({
+      'θ_min': (1.22 * v['λ']) / v.D,
+      'λ': (v['θ_min'] * v.D) / 1.22,
+      D: (1.22 * v['λ']) / v['θ_min']
+    })
+  },
+  'angular-velocity-acceleration': {
+    formula: 'ω = θ / t and α = ω² / θ',
+    unit: { 'ω': 'rad/s', 'α': 'rad/s²', 'θ': 'rad', t: 's' },
+    needs: { 'ω': ['θ', 't'], 'α': ['ω', 'θ'], 'θ': ['ω', 'α'], t: ['θ', 'ω'] },
+    solve: (v) => ({
+      'ω': v['θ'] / v.t,
+      'α': v['ω'] ** 2 / v['θ'],
+      'θ': v['ω'] ** 2 / v['α'],
+      t: v['θ'] / v['ω']
+    })
+  },
+  'force-between-parallel-conductors': {
+    formula: 'F/L = μ₀I₁I₂ / (2πd)',
+    unit: { 'F/L': 'N/m', I_1: 'A', I_2: 'A', d: 'm', 'μ_0': 'H/m' },
+    solve: (v) => ({
+      'F/L': (v['μ_0'] * v.I_1 * v.I_2) / (2 * Math.PI * v.d),
+      I_1: (2 * Math.PI * v.d * v['F/L']) / (v['μ_0'] * v.I_2),
+      I_2: (2 * Math.PI * v.d * v['F/L']) / (v['μ_0'] * v.I_1),
+      d: (v['μ_0'] * v.I_1 * v.I_2) / (2 * Math.PI * v['F/L']),
+      'μ_0': (2 * Math.PI * v.d * v['F/L']) / (v.I_1 * v.I_2)
+    })
+  },
+  'mass-energy-equivalence': {
+    formula: 'E = mc², with ΔE = Δm c²',
+    unit: { E: 'J', m: 'kg', c: 'm/s', 'Δm': 'kg', 'ΔE': 'J' },
+    needs: { E: ['m', 'c'], m: ['E', 'c'], c: ['E', 'm'], 'Δm': ['ΔE', 'c'], 'ΔE': ['Δm', 'c'] },
+    solve: (v) => ({
+      E: v.m * v.c ** 2,
+      m: v.E / v.c ** 2,
+      c: Math.sqrt(v.E / v.m),
+      'Δm': v['ΔE'] / v.c ** 2,
+      'ΔE': v['Δm'] * v.c ** 2
+    })
+  },
   /* ----------------------------------------------------------- honours */
   'bohr-quantization-angular-momentum': {
     formula: 'L = mvr = nħ',
     unit: { L: 'J s', m: 'kg', v: 'm/s', r: 'm', n: '1' },
+    needs: { L: ['m', 'v', 'r'], m: ['L', 'v', 'r'], v: ['L', 'm', 'r'], r: ['L', 'm', 'v'], n: ['L'] },
     solve: (v) => ({
       L: v.m * v.v * v.r,
       m: v.L / (v.v * v.r),
       v: v.L / (v.m * v.r),
       r: v.L / (v.m * v.v),
-      n: (v.m * v.v * v.r) / H_BAR
+      n: v.L / H_BAR
     })
   },
   'hydrogen-energy-levels-bohr': {
@@ -820,6 +1391,7 @@ export const calculatorModels: Record<string, CalculatorModel> = {
   'heisenberg-uncertainty-principle': {
     formula: 'Δx Δp ≥ ħ/2  and  ΔE Δt ≥ ħ/2',
     unit: HEISENBERG_UNITS,
+    needs: { 'Δx': ['ħ', 'Δp_x'], 'Δp_x': ['ħ', 'Δx'], 'ħ': ['Δx', 'Δp_x'], 'ΔE': ['ħ', 'Δt'], 'Δt': ['ħ', 'ΔE'] },
     solve: (v) => ({
       'Δx': v['ħ'] / (2 * v['Δp_x']),
       'Δp_x': v['ħ'] / (2 * v['Δx']),
@@ -841,6 +1413,128 @@ export const calculatorModels: Record<string, CalculatorModel> = {
     }
   },
 
+  'molar-conductivity': {
+    formula: 'Λ_m = 1000 κ / c  (κ in S cm⁻¹, c in mol L⁻¹)',
+    unit: { 'Λ_m': 'S cm²/mol', 'κ': 'S/cm', c: 'mol/L' },
+    solve: (v) => ({
+      'Λ_m': (1000 * v['κ']) / v.c,
+      'κ': (v['Λ_m'] * v.c) / 1000,
+      c: (1000 * v['κ']) / v['Λ_m']
+    })
+  },
+  'osmotic-pressure-vant-hoff': {
+    formula: 'π = i c R T  (c in mol m⁻³)',
+    unit: { 'π': 'Pa', i: '1', c: 'mol/m³', R: 'J/(mol K)', T: 'K' },
+    solve: (v) => ({
+      'π': v.i * v.c * v.R * v.T,
+      i: v['π'] / (v.c * v.R * v.T),
+      c: v['π'] / (v.i * v.R * v.T),
+      R: v['π'] / (v.i * v.c * v.T),
+      T: v['π'] / (v.i * v.c * v.R)
+    })
+  },
+  'raoults-law': {
+    formula: 'P_A = x_A P_A°',
+    unit: { P_A: 'Pa', x_A: '1', 'P_A°': 'Pa' },
+    solve: (v) => ({
+      P_A: v.x_A * v['P_A°'],
+      x_A: v.P_A / v['P_A°'],
+      'P_A°': v.P_A / v.x_A
+    })
+  },
+  'kohlrausch-law': {
+    formula: 'Λ_m° = ν(λ₊° + λ₋°)',
+    unit: { 'Λ_m°': 'S cm²/mol', 'λ_+°': 'S cm²/mol', 'λ_-°': 'S cm²/mol', 'ν': '1' },
+    solve: (v) => ({
+      'Λ_m°': v['ν'] * (v['λ_+°'] + v['λ_-°']),
+      'λ_+°': v['Λ_m°'] / v['ν'] - v['λ_-°'],
+      'λ_-°': v['Λ_m°'] / v['ν'] - v['λ_+°'],
+      'ν': v['Λ_m°'] / (v['λ_+°'] + v['λ_-°'])
+    })
+  },
+  'henderson-hasselbalch': {
+    formula: 'pH = pK_a + log₁₀([A⁻] / [HA])',
+    unit: { pH: 'pH', pKa: '1', base: 'mol/L', acid: 'mol/L' },
+    solve: (v) => ({
+      pH: v.pKa + Math.log10(v.base / v.acid),
+      pKa: v.pH - Math.log10(v.base / v.acid),
+      base: v.acid * 10 ** (v.pH - v.pKa),
+      acid: v.base / 10 ** (v.pH - v.pKa)
+    })
+  },
+  'gibbs-free-energy-equilibrium': {
+    formula: 'ΔG° = −RT ln K',
+    unit: { 'ΔG°': 'J/mol', K: '1', T: 'K' },
+    solve: (v) => ({
+      'ΔG°': -8.314462618 * v.T * Math.log(v.K),
+      K: Math.exp(-v['ΔG°'] / (8.314462618 * v.T)),
+      T: -v['ΔG°'] / (8.314462618 * Math.log(v.K))
+    })
+  },
+  'entropy-change-reversible': {
+    formula: 'ΔS = q_rev / T = ΔH / T  (molar quantities)',
+    unit: { 'ΔS': 'J/(mol K)', dq_rev: 'J', T: 'K', 'ΔH': 'J/mol' },
+    needs: { 'ΔS': ['dq_rev', 'T'], dq_rev: ['ΔS', 'T'], T: ['dq_rev', 'ΔS'], 'ΔH': ['ΔS', 'T'] },
+    solve: (v) => ({
+      'ΔS': v.dq_rev / v.T,
+      dq_rev: v['ΔS'] * v.T,
+      T: v.dq_rev / v['ΔS'],
+      'ΔH': v['ΔS'] * v.T
+    })
+  },
+  'rate-law': {
+    formula: 'r = k[A]^m[B]^n',
+    unit: { r: 'mol L⁻¹ s⁻¹', k: 's⁻¹', A: 'mol/L', m: '1', B: 'mol/L', n: '1' },
+    solve: (v) => ({
+      r: v.k * v.A ** v.m * v.B ** v.n,
+      k: v.r / (v.A ** v.m * v.B ** v.n),
+      A: (v.r / (v.k * v.B ** v.n)) ** (1 / v.m),
+      B: (v.r / (v.k * v.A ** v.m)) ** (1 / v.n),
+      m: Math.log(v.r / (v.k * v.B ** v.n)) / Math.log(v.A),
+      n: Math.log(v.r / (v.k * v.A ** v.m)) / Math.log(v.B)
+    })
+  },
+  'debye-huckel-limiting-law': {
+    formula: 'log₁₀ γ± = −A |z₊z₋| √I',
+    unit: { 'γ_±': '1', I: 'mol/L', z: '1', A: 'L^½ mol^−½' },
+    solve: (v) => ({
+      'γ_±': 10 ** (-v.A * v.z * Math.sqrt(v.I)),
+      I: (Math.log10(v['γ_±']) / (-v.A * v.z)) ** 2,
+      z: -Math.log10(v['γ_±']) / (v.A * Math.sqrt(v.I)),
+      A: -Math.log10(v['γ_±']) / (v.z * Math.sqrt(v.I))
+    })
+  },
+  'faradays-law': {
+    formula: 'm = QM / nF',
+    unit: { m: 'kg', Q: 'C', M: 'kg/mol', n: '1', F: 'C/mol' },
+    solve: (v) => ({
+      m: (v.Q * v.M) / (v.n * v.F),
+      Q: (v.m * v.n * v.F) / v.M,
+      M: (v.m * v.n * v.F) / v.Q,
+      n: (v.Q * v.M) / (v.m * v.F),
+      F: (v.Q * v.M) / (v.m * v.n)
+    })
+  },
+  'moles': {
+    formula: 'n = m / M',
+    unit: { n: 'mol', m: 'kg', M: 'kg/mol' },
+    solve: (v) => ({ n: v.m / v.M, m: v.n * v.M, M: v.m / v.n })
+  },
+  'mole-particle-count': {
+    formula: 'N = n N_A',
+    unit: { N: '1', n: 'mol', N_A: 'mol⁻¹' },
+    solve: (v) => ({ N: v.n * v.N_A, n: v.N / v.N_A, N_A: v.N / v.n })
+  },
+  'empirical-formula-determination': {
+    formula: 'n = m / A_r  (m in g, A_r in g mol⁻¹)',
+    unit: { n: 'mol', m: 'g', A_r: 'g/mol' },
+    solve: (v) => ({ n: v.m / v.A_r, m: v.n * v.A_r, A_r: v.m / v.n })
+  },
+  'molecular-mass-formula': {
+    formula: 'M_r = n_i A_r(i)',
+    unit: { M_r: '1', n_i: '1', A_r: '1' },
+    solve: (v) => ({ M_r: v.n_i * v.A_r, n_i: v.M_r / v.A_r, A_r: v.M_r / v.n_i })
+  },
   /* --------------------------------------------------------- chemistry */
   'atomic-number-mass-number': {
     formula: 'A = Z + N',
@@ -1129,8 +1823,9 @@ export function solveWithModel(
   if (!model) return null;
 
   const values: Record<string, number> = {};
-  for (const [symbol, declaredUnit] of Object.entries(model.unit)) {
-    if (symbol === unknown) continue;
+  for (const symbol of inputsNeeded(slug, unknown)) {
+    const declaredUnit = model.unit[symbol];
+    if (declaredUnit === undefined) continue;
     const choice = unitChoicesFor(declaredUnit, symbol).find((item) => item.label === units[symbol])
       ?? { label: declaredUnit, factor: 1 };
     const typed = raw[symbol];

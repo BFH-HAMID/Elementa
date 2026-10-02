@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
 import type { EquationEntry } from '@/lib/schemas';
 import { convertToSI, solveEquation, unitOptions, type CalculatorResult } from '@/lib/calculations';
-import { calculatorModels, solveWithModel, unitChoicesFor } from '@/lib/calculator-models';
+import { calculatorModels, inputsNeeded, solveWithModel, unitChoicesFor } from '@/lib/calculator-models';
 import { Button } from '@/components/ui/Button';
 import { Card, CardBody, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Tex } from './Tex';
@@ -39,7 +39,19 @@ export function Calculator({ equation }: { equation: EquationEntry }) {
   const locale = useLocale() as 'bn' | 'en';
   const t = useTranslations('equations');
   const tCommon = useTranslations('common');
-  const [unknown, setUnknown] = useState(equation.variables[0]?.symbol ?? '');
+  // A declarative model may cover only part of the reference table — for example
+  // the closed form of Gauss's law ignores E — so drive the inputs from the model
+  // when one exists and fall back to the full variable list otherwise.
+  const model = calculatorModels[equation.slug];
+  const bySymbol = useMemo(
+    () => new Map(equation.variables.map((variable) => [variable.symbol, variable])),
+    [equation.variables]
+  );
+  const symbols = useMemo(
+    () => (model ? Object.keys(model.unit) : equation.variables.map((variable) => variable.symbol)),
+    [model, equation.variables]
+  );
+  const [unknown, setUnknown] = useState(symbols[0] ?? '');
   const [inputs, setInputs] = useState<Record<string, string>>({});
   const [units, setUnits] = useState<Record<string, string>>({});
   const [result, setResult] = useState<CalculatorResult | null>(null);
@@ -47,23 +59,26 @@ export function Calculator({ equation }: { equation: EquationEntry }) {
   const labels = locale === 'bn';
 
   // Declarative models ship their own unit choices, so prefer those when present.
-  const model = calculatorModels[equation.slug];
   const choicesFor = (unit: string, symbol: string) =>
     model ? unitChoicesFor(unit, symbol).map((choice) => choice.label) : optionsFor(unit, symbol);
   const unitFor = (symbol: string, unit: string) => units[symbol] ?? choicesFor(unit, symbol)[0] ?? unit;
   const reset = () => { setInputs({}); setUnits({}); setResult(null); setInvalid(false); };
+  // Switching equations reuses this component instance, so adopt the new symbol set.
+  const [slug, setSlug] = useState(equation.slug);
+  if (slug !== equation.slug) { setSlug(equation.slug); setUnknown(symbols[0] ?? ''); setInputs({}); setUnits({}); setResult(null); setInvalid(false); }
 
   const calculate = () => {
     const raw: Record<string, number> = {};
     const chosenUnits: Record<string, string> = {};
     const values: Record<string, number> = {};
-    for (const variable of equation.variables) {
-      if (variable.symbol === unknown) continue;
-      const typed = Number(inputs[variable.symbol]);
-      if (!inputs[variable.symbol] || !Number.isFinite(typed)) { setInvalid(true); setResult(null); return; }
-      raw[variable.symbol] = typed;
-      chosenUnits[variable.symbol] = unitFor(variable.symbol, variable.unit);
-      values[variable.symbol] = convertToSI(typed, chosenUnits[variable.symbol]);
+    for (const symbol of knownVariables) {
+      if (symbol === unknown) continue;
+      const variable = bySymbol.get(symbol);
+      const typed = Number(inputs[symbol]);
+      if (!inputs[symbol] || !Number.isFinite(typed)) { setInvalid(true); setResult(null); return; }
+      raw[symbol] = typed;
+      chosenUnits[symbol] = unitFor(symbol, variable?.unit ?? model?.unit[symbol] ?? '');
+      values[symbol] = convertToSI(typed, chosenUnits[symbol]);
     }
 
     const solved = model
@@ -75,7 +90,12 @@ export function Calculator({ equation }: { equation: EquationEntry }) {
   };
 
   const variableName = (variable: EquationEntry['variables'][number]) => labels ? variable.name_bn ?? variable.name : variable.name;
-  const knownVariables = useMemo(() => equation.variables.filter((variable) => variable.symbol !== unknown), [equation.variables, unknown]);
+  // A model that chains two relations only asks for the symbols its
+  // rearrangement actually touches, so `E_k = ½mv²` does not also demand `p`.
+  const knownVariables = useMemo(
+    () => (model ? inputsNeeded(equation.slug, unknown) : symbols.filter((symbol) => symbol !== unknown)),
+    [model, equation.slug, unknown, symbols]
+  );
 
   return <Card className="overflow-hidden">
     <CardHeader className="border-b border-[var(--line)] bg-[var(--surface-soft)]">
@@ -85,6 +105,12 @@ export function Calculator({ equation }: { equation: EquationEntry }) {
       </div>
       <p className="text-sm muted">{t('enterValues')} · {equation.title_en}</p>
       <div className="equation-display rounded-xl bg-[var(--surface)] px-3"><Tex latex={equation.latex} /></div>
+      {model && symbols.length < equation.variables.length && (
+        <p className="text-xs muted">
+          {labels ? 'এই ক্যালকুলেটরে ব্যবহৃত চলক: ' : 'This calculator uses: '}
+          <span className="font-mono font-bold">{symbols.join(', ')}</span>
+        </p>
+      )}
     </CardHeader>
     <CardBody className="space-y-6 pt-6">
       <div>
@@ -96,35 +122,42 @@ export function Calculator({ equation }: { equation: EquationEntry }) {
           className="input"
         >
           <option value="">—</option>
-          {equation.variables.map((variable) => (
-            <option key={variable.symbol} value={variable.symbol}>{variable.symbol} · {variableName(variable)}</option>
-          ))}
+          {symbols.map((symbol) => {
+            const variable = bySymbol.get(symbol);
+            return (
+              <option key={symbol} value={symbol}>
+                {symbol}{variable ? ` · ${variableName(variable)}` : ''}
+              </option>
+            );
+          })}
         </select>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        {knownVariables.map((variable) => {
-          const options = choicesFor(variable.unit, variable.symbol);
+        {knownVariables.map((symbol) => {
+          const variable = bySymbol.get(symbol);
+          const unit = variable?.unit ?? model?.unit[symbol] ?? '';
+          const options = choicesFor(unit, symbol);
           return (
-            <div key={variable.symbol}>
-              <label htmlFor={`${equation.slug}-${variable.symbol}`} className="mb-2 block text-sm font-bold">
-                {variable.symbol} <span className="font-normal muted">{variableName(variable)}</span>
+            <div key={symbol}>
+              <label htmlFor={`${equation.slug}-${symbol}`} className="mb-2 block text-sm font-bold">
+                {symbol} {variable && <span className="font-normal muted">{variableName(variable)}</span>}
               </label>
               <div className="flex gap-2">
                 <input
-                  id={`${equation.slug}-${variable.symbol}`}
+                  id={`${equation.slug}-${symbol}`}
                   type="number"
                   inputMode="decimal"
-                  value={inputs[variable.symbol] ?? ''}
-                  onChange={(event) => setInputs((current) => ({ ...current, [variable.symbol]: event.target.value }))}
+                  value={inputs[symbol] ?? ''}
+                  onChange={(event) => setInputs((current) => ({ ...current, [symbol]: event.target.value }))}
                   placeholder="0"
                   className="input min-w-0 flex-1"
                 />
                 <select
-                  value={unitFor(variable.symbol, variable.unit)}
-                  onChange={(event) => setUnits((current) => ({ ...current, [variable.symbol]: event.target.value }))}
+                  value={unitFor(symbol, unit)}
+                  onChange={(event) => setUnits((current) => ({ ...current, [symbol]: event.target.value }))}
                   className="input w-[7.5rem] shrink-0 px-2 text-xs"
-                  aria-label={`${t('unit')} ${variable.symbol}`}
+                  aria-label={`${t('unit')} ${symbol}`}
                 >
                   {options.map((option) => <option key={option} value={option}>{option}</option>)}
                 </select>

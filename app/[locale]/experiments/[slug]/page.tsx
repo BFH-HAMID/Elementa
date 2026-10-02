@@ -6,5 +6,5 @@ import { isLocale, locales } from '@/i18n/routing';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return locales.flatMap((locale) => getExperimentEntries().map((experiment) => ({ locale, slug: experiment.slug }))); }
-export async function generateMetadata({ params }: { params: { locale: string; slug: string } }): Promise<Metadata> { const experiment = getExperimentBySlug(params.slug); return experiment ? { title: params.locale === 'bn' ? experiment.title_bn : experiment.title_en, description: experiment.aim } : {}; }
-export default function ExperimentPage({ params }: { params: { locale: string; slug: string } }) { if (!isLocale(params.locale)) notFound(); const experiment = getExperimentBySlug(params.slug); if (!experiment) notFound(); return <ExperimentDetail experiment={experiment} />; }
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> { const { locale, slug } = await params; const experiment = getExperimentBySlug(slug); return experiment ? { title: locale === 'bn' ? experiment.title_bn : experiment.title_en, description: experiment.aim } : {}; }
+export default async function ExperimentPage({ params }: { params: Promise<{ locale: string; slug: string }> }) { const { locale, slug } = await params; if (!isLocale(locale)) notFound(); const experiment = getExperimentBySlug(slug); if (!experiment) notFound(); return <ExperimentDetail experiment={experiment} />; }

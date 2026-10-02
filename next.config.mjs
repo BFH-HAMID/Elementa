@@ -7,6 +7,7 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  transpilePackages: ['next-mdx-remote'],
   experimental: {
     optimizePackageImports: ['lucide-react', 'recharts']
   }

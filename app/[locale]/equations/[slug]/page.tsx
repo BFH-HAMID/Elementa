@@ -17,16 +17,18 @@ export const dynamicParams = false;
 
 export function generateStaticParams() { return locales.flatMap((locale) => getEquationEntries().map((equation) => ({ locale, slug: equation.slug }))); }
 
-export async function generateMetadata({ params }: { params: { locale: string; slug: string } }): Promise<Metadata> {
-  const equation = getEquationBySlug(params.slug); if (!equation) return {};
-  const title = params.locale === 'bn' ? equation.title_bn : equation.title_en;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const equation = getEquationBySlug(slug); if (!equation) return {};
+  const title = locale === 'bn' ? equation.title_bn : equation.title_en;
   return { title, description: equation.summary_en ?? equation.derivation };
 }
 
-export default function EquationDetailPage({ params }: { params: { locale: string; slug: string } }) {
-  if (!isLocale(params.locale)) notFound();
-  const locale = params.locale as Locale;
-  const equation = getEquationBySlug(params.slug); if (!equation) notFound();
+export default async function EquationDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale: rawLocale, slug } = await params;
+  if (!isLocale(rawLocale)) notFound();
+  const locale = rawLocale as Locale;
+  const equation = getEquationBySlug(slug); if (!equation) notFound();
   const title = titleFor(locale, equation.title_bn, equation.title_en);
   const related = equation.related.map((slug) => getEquationBySlug(slug)).filter((item) => item !== undefined).slice(0, 3);
   const simulation = equation.simulation ? getSimulationMeta(equation.simulation) : undefined;

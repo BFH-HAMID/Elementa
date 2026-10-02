@@ -12,15 +12,17 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  if (!isLocale(params.locale)) return {};
-  const isBangla = params.locale === 'bn';
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+  const isBangla = locale === 'bn';
   return { title: isBangla ? 'PhysChem Lab — শিখুন, দেখুন, চেষ্টা করুন' : 'PhysChem Lab — Learn it. See it. Try it', description: isBangla ? 'বাংলাদেশের শিক্ষার্থীদের জন্য বিনামূল্যের বাংলা-ইংরেজি বিজ্ঞান ল্যাব।' : 'A free bilingual science lab for learners in Bangladesh.' };
 }
 
-export default function LocaleLayout({ children, params }: Readonly<{ children: React.ReactNode; params: { locale: string } }>) {
-  if (!isLocale(params.locale)) notFound();
-  const locale = params.locale as Locale;
+export default async function LocaleLayout({ children, params }: Readonly<{ children: React.ReactNode; params: Promise<{ locale: string }> }>) {
+  const { locale: rawLocale } = await params;
+  if (!isLocale(rawLocale)) notFound();
+  const locale = rawLocale as Locale;
   const messages = locale === 'bn' ? bnMessages : enMessages;
   return <NextIntlClientProvider locale={locale} now={new Date(0)} timeZone="UTC" messages={messages}><AppShell>{children}</AppShell></NextIntlClientProvider>;
 }

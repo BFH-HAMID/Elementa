@@ -41,6 +41,22 @@ for (const subject of ['physics', 'chemistry']) {
     }
   }
 }
+const practicalCatalog = JSON.parse(fs.readFileSync(path.join(contentRoot, 'practical-topics.json'), 'utf8'));
+for (const group of practicalCatalog.groups) {
+  for (const topic of group.topics) {
+    records.push({
+      slug: topic.slug,
+      kind: 'experiment',
+      subject: group.subject,
+      title_en: topic.title_en,
+      title_bn: topic.title_bn,
+      description_en: topic.note_en,
+      description_bn: topic.note_bn,
+      href: `/experiments#lab-${topic.slug}`,
+      tags: ['practical', group.stage, topic.category_en]
+    });
+  }
+}
 for (const [slug, subject, title_en, title_bn] of simulations) {
   records.push({ slug, kind: 'simulation', subject, title_en, title_bn, description_en: 'Interactive browser simulation', description_bn: 'ইন্টার‌্যাক্টিভ ব্রাউজার সিমুলেশন', href: `/simulations/${slug}`, tags: [] });
 }

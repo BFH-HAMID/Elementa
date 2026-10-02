@@ -22,11 +22,13 @@ PhysChem Lab content is authored as small, reviewable repository files. The site
 
 `summary_en`, `summary_bn`, `related`, `simulation` and `tags` improve discovery and are optional. To add a calculator, use the slug in `lib/calculations.ts`, then make sure the variable symbols match the solver.
 
+For a chapter-level formula sheet, add `reference_formulas` entries with `label_en`, `label_bn`, `latex`, and optional bilingual notes. Use `reference_note_en` / `reference_note_bn` for shared assumptions or caveats. Set `calculator: false` when the entry is a collection rather than a single supported calculator model; the detail page then shows the formula collection without a non-working calculator.
+
 ## Experiment frontmatter
 
 An experiment supplies bilingual versions of its aim, apparatus, theory, procedure, calculations, precautions and error sources. `observation_table` contains `headers` and a two-dimensional `rows` array. Viva items use `q`, `a`, `q_bn` and `a_bn`.
 
-The UI intentionally displays a tabbed guide rather than a wall of text. Keep each procedure step short enough to scan on a phone.
+The UI intentionally displays a tabbed guide rather than a wall of text. Keep each procedure step short enough to scan on a phone. `content/practical-topics.json` supplies a bilingual school/HSC checklist for syllabus items that do not yet have a complete step-by-step guide; keep topic slugs unique and any `guide_slug` links valid.
 
 ## Quizzes
 

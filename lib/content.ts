@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
+import practicalCatalog from '../content/practical-topics.json';
 import {
   equationFrontmatterSchema,
   experimentFrontmatterSchema,
@@ -109,7 +110,18 @@ export function getSearchRecords(): SearchRecord[] {
     href: `/experiments/${entry.slug}`,
     tags: entry.tags
   }));
-  return [...equations, ...experiments];
+  const practicals: SearchRecord[] = practicalCatalog.groups.flatMap((group) => group.topics.map((topic) => ({
+    slug: topic.slug,
+    kind: 'experiment' as const,
+    subject: group.subject as Subject,
+    title_en: topic.title_en,
+    title_bn: topic.title_bn,
+    description_en: topic.note_en,
+    description_bn: topic.note_bn,
+    href: `/experiments#lab-${topic.slug}`,
+    tags: ['practical', group.stage, topic.category_en]
+  })));
+  return [...equations, ...experiments, ...practicals];
 }
 
 export function formatLevel(level: Level, locale: 'bn' | 'en'): string {

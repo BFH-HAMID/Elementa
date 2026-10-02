@@ -1,0 +1,11 @@
+{
+  "name": "PhysChem Lab",
+  "short_name": "PhysChem Lab",
+  "description": "A bilingual browser laboratory for physics and chemistry learners.",
+  "start_url": "/bn",
+  "display": "standalone",
+  "background_color": "#f7fafc",
+  "theme_color": "#075db1",
+  "lang": "bn",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

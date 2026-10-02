@@ -1,0 +1,49 @@
+{
+  "slug": "physics-foundations",
+  "title_en": "Physics foundations: motion and circuits",
+  "title_bn": "পদার্থবিজ্ঞানের ভিত্তি: গতি ও সার্কিট",
+  "subject": "physics",
+  "level": "class-9-10",
+  "chapter": "Motion and current electricity",
+  "chapter_bn": "গতি ও চল তড়িৎ",
+  "description_en": "A gentle check on speed, force and Ohm's law.",
+  "description_bn": "গতি, বল ও Ohm-এর সূত্রের ছোট যাচাই।",
+  "questions": [
+    {
+      "q": "A car travels 120 m in 10 s. What is its average speed?",
+      "q_bn": "একটি গাড়ি ১০ s-এ ১২০ m যায়। গড় গতি কত?",
+      "options": ["12 m/s", "1200 m/s", "0.083 m/s", "110 m/s"],
+      "options_bn": ["১২ m/s", "১২০০ m/s", "০.০৮৩ m/s", "১১০ m/s"],
+      "answer": 0,
+      "explanation": "Speed is distance divided by time: 120/10 = 12 m/s.",
+      "explanation_bn": "গতি = দূরত্ব/সময় = ১২০/১০ = ১২ m/s।"
+    },
+    {
+      "q": "If the net force on a 2 kg object is 10 N, what is its acceleration?",
+      "q_bn": "২ kg বস্তুর উপর লব্ধি বল ১০ N হলে ত্বরণ কত?",
+      "options": ["5 m/s²", "20 m/s²", "0.2 m/s²", "12 m/s²"],
+      "options_bn": ["৫ m/s²", "২০ m/s²", "০.২ m/s²", "১২ m/s²"],
+      "answer": 0,
+      "explanation": "Newton's second law gives a = F/m = 10/2 = 5 m/s².",
+      "explanation_bn": "নিউটনের সূত্রে a = F/m = ১০/২ = ৫ m/s²।"
+    },
+    {
+      "q": "A 6 Ω resistor carries 2 A. What voltage is across it?",
+      "q_bn": "৬ Ω রোধে ২ A current হলে voltage কত?",
+      "options": ["3 V", "8 V", "12 V", "0.33 V"],
+      "options_bn": ["৩ V", "৮ V", "১২ V", "০.৩৩ V"],
+      "answer": 2,
+      "explanation": "Ohm's law is V = IR, so V = 2 × 6 = 12 V.",
+      "explanation_bn": "Ohm-এর সূত্র V = IR, তাই V = ২ × ৬ = ১২ V।"
+    },
+    {
+      "q": "Which change increases pressure for the same force?",
+      "q_bn": "একই বলের ক্ষেত্রে কোন পরিবর্তনে pressure বাড়ে?",
+      "options": ["Increase contact area", "Decrease contact area", "Remove the force", "Change the colour"],
+      "options_bn": ["contact area বাড়ানো", "contact area কমানো", "বল সরানো", "রং বদলানো"],
+      "answer": 1,
+      "explanation": "P = F/A, so a smaller contact area concentrates the same force.",
+      "explanation_bn": "P = F/A; তাই একই বল ছোট area-তে বেশি concentrated হয়।"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+---
+type: experiment
+slug: simple-pendulum
+title_bn: সরল দোলকের সাহায্যে g নির্ণয়
+title_en: Determine g with a simple pendulum
+subject: physics
+level: class-9-10
+aim: Measure the period of a simple pendulum for several lengths and estimate the local gravitational acceleration.
+aim_bn: বিভিন্ন দৈর্ঘ্যের সরল দোলকের পর্যায়কাল মেপে স্থানীয় মহাকর্ষজ ত্বরণ নির্ণয় করা।
+apparatus:
+  - Retort stand and clamp
+  - Light string and dense bob
+  - Metre scale
+  - Stopwatch
+  - Small marker and spirit level
+apparatus_bn:
+  - retort stand ও clamp
+  - হালকা সুতা ও ভারী bob
+  - মিটার স্কেল
+  - stopwatch
+  - marker ও spirit level
+theory: For small angular amplitudes, a simple pendulum behaves approximately as T = 2π√(L/g). Squaring gives T² = (4π²/g)L, so the slope of a T²–L graph is 4π²/g.
+theory_bn: ছোট কৌণিক বিস্তারে সরল দোলকের জন্য T = 2π√(L/g)। তাই T² = (4π²/g)L; T²–L গ্রাফের slope হলো 4π²/g।
+procedure:
+  - Set the bob length from the support to the centre of the bob and record it.
+  - Displace the bob by a small angle and release without pushing.
+  - Time 20 complete oscillations, then divide by 20 for T.
+  - Repeat for at least four lengths and average repeated readings.
+  - Plot T² against L and calculate g from the slope.
+procedure_bn:
+  - support থেকে bob-এর centre পর্যন্ত দৈর্ঘ্য মেপে লিখুন।
+  - bob-কে ছোট কোণে সরিয়ে ধাক্কা না দিয়ে ছাড়ুন।
+  - ২০টি পূর্ণ দোলনের সময় নিয়ে ২০ দিয়ে ভাগ করে T বের করুন।
+  - অন্তত চারটি দৈর্ঘ্যে পুনরাবৃত্তি করে গড় নিন।
+  - L-এর বিপরীতে T² গ্রাফ এঁকে slope থেকে g হিসাব করুন।
+observation_table:
+  headers: [Length L (m), Time for 20 oscillations (s), Period T (s), T² (s²)]
+  rows:
+    - ['0.40', '25.4', '1.27', '1.61']
+    - ['0.60', '31.2', '1.56', '2.43']
+    - ['0.80', '36.0', '1.80', '3.24']
+calculation: From the model, g = 4π²L/T² for one reading, or g = 4π² divided by the best-fit slope of the T² versus L graph.
+calculation_bn: মডেল অনুযায়ী একটি reading-এ g = 4π²L/T², অথবা T² বনাম L graph-এর best-fit slope-এর 4π² ভাগ করে g বের করুন।
+precautions:
+  - Keep the amplitude small, ideally below about 10 degrees.
+  - Measure length to the bob centre, not its top.
+  - Release gently and count only complete cycles.
+precautions_bn:
+  - বিস্তার ছোট রাখুন, প্রায় ১০ ডিগ্রির কম।
+  - bob-এর উপরের অংশ নয়, centre পর্যন্ত দৈর্ঘ্য মাপুন।
+  - আলতো করে ছেড়ে পূর্ণ cycle গুনুন।
+sources_of_error:
+  - Human reaction time at start and stop
+  - Air resistance and friction at the support
+  - An amplitude that is too large
+sources_of_error_bn:
+  - start ও stop করার সময় reaction time
+  - বায়ুর বাধা ও support-এ ঘর্ষণ
+  - অতিরিক্ত বড় বিস্তার
+viva:
+  - q: Why should the amplitude be small?
+    a: The small-angle approximation makes sin θ close to θ, giving the simple formula.
+    q_bn: বিস্তার ছোট রাখা হয় কেন?
+    a_bn: ছোট-কোণ approximation sin θ-কে θ-এর কাছাকাছি ধরে সহজ সূত্রটি দেয়।
+  - q: What does the slope of T² against L represent?
+    a: It is 4π²/g, so its reciprocal relationship gives g.
+    q_bn: T² বনাম L-এর slope কী বোঝায়?
+    a_bn: এটি 4π²/g; এই সম্পর্ক থেকেই g নির্ণয় করা যায়।
+simulation: simple-pendulum
+tags: [mechanics, oscillation, practical]
+---
+
+This experiment turns a moving bob into a measurement of a constant. The graph is often more reliable than trusting a single timing.

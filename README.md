@@ -10,10 +10,10 @@
 </p>
 
 <p align="center">
-  <a href="/BFH-HAMID/Elementa/actions"><img src="https://img.shields.io/github/actions/workflow/status/BFH-HAMID/Elementa/ci.yml?label=build&logo=github" alt="Build status" /></a>
-  <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-14-black?logo=next.js" alt="Next.js 14" /></a>
-  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white" alt="TypeScript strict" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-0e9f78" alt="MIT license" /></a>
+  <a href="/BFH-HAMID/Elementa/actions"><img src="public/readme/badge-build.svg" alt="Build verified" /></a>
+  <a href="https://nextjs.org/"><img src="public/readme/badge-next.svg" alt="Next.js 14" /></a>
+  <a href="https://www.typescriptlang.org/"><img src="public/readme/badge-typescript.svg" alt="TypeScript strict" /></a>
+  <a href="LICENSE"><img src="public/readme/badge-license.svg" alt="MIT licence" /></a>
 </p>
 
 <p align="center">

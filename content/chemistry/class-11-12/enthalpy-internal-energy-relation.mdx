@@ -1,0 +1,58 @@
+---
+type: equation
+slug: enthalpy-internal-energy-relation
+title_bn: এনথালপি ও অভ্যন্তরীণ শক্তির সম্পর্ক
+title_en: Enthalpy and internal-energy relation for gases
+subject: chemistry
+level: class-11-12
+chapter: Thermodynamics
+chapter_bn: তাপগতিবিদ্যা
+latex: '\\Delta H=\\Delta U+\\Delta n_gRT'
+calculator: false
+variables:
+  - symbol: ΔH
+    name: enthalpy change
+    name_bn: এনথালপি পরিবর্তন
+    unit: J/mol
+    si_unit: J/mol
+  - symbol: ΔU
+    name: internal-energy change
+    name_bn: অভ্যন্তরীণ শক্তির পরিবর্তন
+    unit: J/mol
+    si_unit: J/mol
+  - symbol: Δn_g
+    name: gaseous product moles minus gaseous reactant moles
+    name_bn: গ্যাসীয় উৎপাদ ও বিকারকের মোল সংখ্যার পার্থক্য
+    unit: mol
+    si_unit: mol
+  - symbol: R
+    name: molar gas constant
+    name_bn: মোলার গ্যাস ধ্রুবক
+    unit: J mol⁻¹ K⁻¹
+    si_unit: J mol⁻¹ K⁻¹
+  - symbol: T
+    name: absolute temperature
+    name_bn: পরম তাপমাত্রা
+    unit: K
+    si_unit: K
+derivation: Enthalpy is H=U+PV. For ideal-gas reactants and products at the same temperature, the net change in the gas PV terms is Δn_gRT; contributions from condensed phases are usually negligible in the classroom approximation.
+derivation_bn: এনথালপি H=U+PV। একই তাপমাত্রায় আদর্শ গ্যাসীয় বিকারক ও উৎপাদের জন্য গ্যাসের PV পদের মোট পরিবর্তন Δn_gRT; শ্রেণিকক্ষের আনুমানিকতায় ঘনীভূত দশার অবদান সাধারণত উপেক্ষণীয়।
+derivation_steps:
+  - step_en: Start from the definition of enthalpy for the system.
+    step_bn: সিস্টেমের এনথালপির সংজ্ঞা দিয়ে শুরু করুন।
+    latex: 'H=U+PV'
+  - step_en: Take the reaction change and use PV=n_gRT for the ideal gases at a common temperature.
+    step_bn: বিক্রিয়ার পরিবর্তন নিয়ে একই তাপমাত্রায় আদর্শ গ্যাসের জন্য PV=n_gRT বসান।
+    latex: '\\Delta H=\\Delta U+\\Delta(PV)=\\Delta U+\\Delta n_gRT'
+  - step_en: Define Δn_g using gaseous stoichiometric coefficients only.
+    step_bn: Δn_g-কে শুধু গ্যাসীয় প্রজাতির স্টয়কিওমেট্রিক সহগ দিয়ে নির্ধারণ করুন।
+    latex: '\\Delta n_g=\\sum\\nu_{g,\\,products}-\\sum\\nu_{g,\\,reactants}'
+summary_en: Convert between reaction enthalpy and internal-energy change when ideal gases are involved.
+summary_bn: আদর্শ গ্যাস জড়িত বিক্রিয়ায় এনথালপি ও অভ্যন্তরীণ শক্তির পরিবর্তনের মধ্যে রূপান্তর।
+reference_note_en: Count gaseous species only in Δn_g; pure solids and liquids do not contribute to Δn_g. If using molar reaction quantities, keep Δn_g in mol per reaction as defined by the balanced equation.
+reference_note_bn: Δn_g-তে কেবল গ্যাসীয় প্রজাতি গণনা করুন; বিশুদ্ধ কঠিন ও তরল এতে যোগ হয় না। মোলার বিক্রিয়া রাশি ব্যবহার করলে সুষম সমীকরণ অনুযায়ী প্রতি বিক্রিয়ায় Δn_g-এর একক সামঞ্জস্য রাখুন।
+related: [chemical-thermodynamics-formula-sheet, ideal-gas-law, first-order-integrated-rate-law]
+tags: [enthalpy, internal energy, ideal gas, thermodynamics, reaction heat]
+---
+
+The sign of Δn_g matters: when gas moles increase, ΔH is more positive than ΔU by Δn_gRT at the stated temperature; when they decrease, the correction is negative.

@@ -1,0 +1,66 @@
+---
+type: equation
+slug: conservation-of-mechanical-energy
+title_bn: যান্ত্রিক শক্তির সংরক্ষণ
+title_en: Conservation of mechanical energy
+subject: physics
+level: class-11-12
+chapter: Work, energy and power
+chapter_bn: কাজ, শক্তি ও ক্ষমতা
+latex: 'E_{\\rm mech}=K+U=\\text{constant}'
+calculator: false
+variables:
+  - symbol: E_mech
+    name: mechanical energy
+    name_bn: যান্ত্রিক শক্তি
+    unit: J
+    si_unit: J
+  - symbol: K
+    name: kinetic energy
+    name_bn: গতিশক্তি
+    unit: J
+    si_unit: J
+  - symbol: U
+    name: potential energy
+    name_bn: বিভবশক্তি
+    unit: J
+    si_unit: J
+derivation: For a system acted on only by conservative forces, the work–energy theorem and the definition of potential energy show that any loss of potential energy becomes an equal gain in kinetic energy. Therefore their sum is constant.
+derivation_bn: কোনো সিস্টেমে কেবল সংরক্ষণশীল বল কাজ করলে কার্য-শক্তি উপপাদ্য ও বিভবশক্তির সংজ্ঞা থেকে দেখা যায়, বিভবশক্তির যতটুকু হ্রাস ঘটে গতিশক্তি ততটুকুই বাড়ে। তাই তাদের যোগফল ধ্রুব থাকে।
+derivation_steps:
+  - step_en: Apply the work–energy theorem to the change from state 1 to state 2.
+    step_bn: অবস্থা ১ থেকে ২-এ পরিবর্তনের জন্য কার্য-শক্তি উপপাদ্য লিখুন।
+    latex: '\\Delta K=W_{\\rm net}'
+  - step_en: For a conservative force, its work is the negative change in potential energy.
+    step_bn: সংরক্ষণশীল বলের কাজ বিভবশক্তির পরিবর্তনের ঋণাত্মক মান।
+    latex: 'W_{\\rm cons}=-\\Delta U'
+  - step_en: Combine the relations; the total mechanical energy has the same value in both states.
+    step_bn: সম্পর্ক দুটি একত্র করলে দুই অবস্থায় মোট যান্ত্রিক শক্তি সমান হয়।
+    latex: '\\Delta K+\\Delta U=0 \\quad\\Longrightarrow\\quad K_1+U_1=K_2+U_2'
+summary_en: Show why kinetic and potential energy trade while their total remains fixed in an ideal conservative system.
+summary_bn: আদর্শ সংরক্ষণশীল সিস্টেমে গতিশক্তি ও বিভবশক্তি বিনিময় হলেও মোট যান্ত্রিক শক্তি কেন ধ্রুব থাকে তা প্রমাণ।
+reference_note_en: The result assumes no net non-conservative work. With friction or an applied drive, Δ(K+U)=W_non-conservative; total energy is still conserved when thermal and other forms are included.
+reference_note_bn: এখানে মোট অসংরক্ষণশীল কাজ শূন্য ধরা হয়েছে। ঘর্ষণ বা বাহ্যিক চালনা থাকলে Δ(K+U)=W_অসংরক্ষণশীল; তাপসহ সব শক্তির রূপ ধরলে মোট শক্তি সংরক্ষিতই থাকে।
+reference_formulas:
+  - label_en: Translational kinetic energy
+    label_bn: সরণগত গতিশক্তি
+    latex: 'K=\\frac12 mv^2'
+    note_en: For a particle or centre-of-mass translation.
+    note_bn: কণা বা ভরকেন্দ্রের সরণগতির জন্য।
+  - label_en: Gravitational potential energy near Earth
+    label_bn: পৃথিবীপৃষ্ঠের কাছে মহাকর্ষীয় বিভবশক্তি
+    latex: 'U_g=mgh'
+    note_en: Choose and state a zero-height reference.
+    note_bn: শূন্য উচ্চতার নির্দেশতল নির্দিষ্ট করুন।
+  - label_en: Spring potential energy
+    label_bn: স্প্রিংয়ের স্থিতিস্থাপক বিভবশক্তি
+    latex: 'U_s=\\frac12 kx^2'
+    note_en: For an ideal Hookean spring within its elastic range.
+    note_bn: স্থিতিস্থাপক সীমার মধ্যে আদর্শ হুকীয় স্প্রিংয়ের জন্য।
+related: [work-energy-theorem, kinetic-energy, elastic-potential-energy, gravitational-potential-energy]
+simulation: mass-spring-oscillator
+experiment: mass-spring-shm
+tags: [mechanical energy, conservation, work-energy theorem, potential energy, kinetic energy]
+---
+
+A falling body exchanges gravitational potential energy for kinetic energy. A spring oscillator exchanges elastic potential energy and kinetic energy. In either example, friction converts some mechanical energy into thermal energy, so the mechanical-energy sum alone is then not constant.

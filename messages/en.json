@@ -8,7 +8,8 @@
     "quiz": "Quiz",
     "constants": "Constants",
     "about": "About",
-    "bookmarks": "Bookmarks"
+    "bookmarks": "Bookmarks",
+    "subjects": "Subjects"
   },
   "common": {
     "physics": "Physics",
@@ -68,6 +69,44 @@
     "whyText": "Every concept pairs a clean explanation with a way to calculate, observe or test it.",
     "physicsPill": "Motion, fields & circuits",
     "chemistryPill": "Matter, reactions & molecules"
+  },
+  "subjects": {
+    "directoryEyebrow": "Browse by subject",
+    "directoryTitle": "Choose a subject. Find your next step.",
+    "directoryDescription": "Each subject has its own home for equations, practical work, interactive simulations and quick quizzes.",
+    "openHub": "Open learning hub",
+    "resourceEyebrow": "Your subject, one clear route",
+    "resourceTitle": "Explore by resource",
+    "resourceDescription": "Each link opens the catalog already filtered to this subject.",
+    "openResource": "Explore this section",
+    "equationCount": "{count, plural, one {# equation} other {# equations}}",
+    "experimentCounts": "{guides} detailed guides · {topics} syllabus practical topics",
+    "simulationCounts": "{custom} original labs · {phet} PhET simulations",
+    "quizCount": "{count, plural, one {# quiz} other {# quizzes}}",
+    "resources": {
+      "equations": {"title": "Equations", "description": "Search chapter formulas, follow derivations and use supported calculators."},
+      "experiments": {"title": "Experiments & practicals", "description": "Browse syllabus lab topics and step-by-step experiment guides."},
+      "simulations": {"title": "Interactive simulations", "description": "Try original lab models and explore the PhET simulation catalog."},
+      "quizzes": {"title": "Quizzes", "description": "Practice key ideas with short questions and instant explanations."}
+    },
+    "physics": {
+      "name": "Physics",
+      "focus": "Motion · forces · energy · fields · waves",
+      "homeTitle": "See how the physical world works",
+      "homeDescription": "Explore motion, forces, energy, electricity, waves, optics and more.",
+      "hubEyebrow": "PHYSICS · LEARNING HUB",
+      "hubTitle": "Physics, organized around how you learn",
+      "hubDescription": "Move from equations to practical work, then test your ideas in interactive labs. This hub keeps physics resources together and easy to browse."
+    },
+    "chemistry": {
+      "name": "Chemistry",
+      "focus": "Matter · reactions · atoms · molecules · solutions",
+      "homeTitle": "Explore matter and its transformations",
+      "homeDescription": "Study atoms, bonding, reactions, gases, solutions, acids and more.",
+      "hubEyebrow": "CHEMISTRY · LEARNING HUB",
+      "hubTitle": "Chemistry, organized around how you learn",
+      "hubDescription": "Move from equations to practical work, then test your ideas in interactive labs. This hub keeps chemistry resources together and easy to browse."
+    }
   },
   "equations": {
     "title": "Equation library",

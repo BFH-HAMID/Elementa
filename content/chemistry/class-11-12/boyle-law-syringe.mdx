@@ -1,0 +1,73 @@
+---
+type: experiment
+slug: boyle-law-syringe
+title_bn: সিরিঞ্জে বয়েলের সূত্র যাচাই
+title_en: Test Boyle’s law with a syringe and pressure sensor
+subject: chemistry
+level: class-11-12
+aim: Test the inverse pressure–volume relationship for a fixed amount of gas while keeping its temperature approximately constant.
+aim_bn: নির্দিষ্ট পরিমাণ গ্যাসের চাপ ও আয়তনের ব্যস্ত সম্পর্ক তাপমাত্রা প্রায় স্থির রেখে যাচাই।
+apparatus:
+  - Lockable gas syringe with a pressure sensor or manometer
+  - Volume scale and ruler
+  - Stand and clamp
+  - Thermometer
+  - Data sheet
+apparatus_bn:
+  - pressure sensor বা manometer-সহ lockable gas syringe
+  - আয়তন স্কেল ও রুলার
+  - স্ট্যান্ড ও clamp
+  - থার্মোমিটার
+  - উপাত্তপত্র
+theory: For a fixed amount of an ideal gas at constant temperature, PV is constant. Decreasing the trapped gas volume therefore increases its absolute pressure. Use absolute pressure, not gauge pressure alone; the syringe seal must not leak.
+theory_bn: নির্দিষ্ট পরিমাণ আদর্শ গ্যাসের তাপমাত্রা স্থির থাকলে PV ধ্রুব। তাই আবদ্ধ গ্যাসের আয়তন কমালে তার পরম চাপ বাড়ে। শুধু gauge pressure নয়, absolute pressure ব্যবহার করুন; সিরিঞ্জের সিল দিয়ে গ্যাস বের হওয়া চলবে না।
+procedure:
+  - Attach the pressure sensor securely and check the syringe for leaks at a low pressure.
+  - Trap a fixed quantity of air and let it return to room temperature before each reading.
+  - Set several volumes without forcing the plunger; wait briefly, then record volume, gauge pressure and room pressure.
+  - Convert to absolute pressure by adding atmospheric pressure to gauge pressure.
+  - Calculate PV for each reading and compare its spread with the measurement uncertainty.
+procedure_bn:
+  - pressure sensor ভালোভাবে যুক্ত করে কম চাপে সিরিঞ্জে leak আছে কি না পরীক্ষা করুন।
+  - নির্দিষ্ট পরিমাণ বায়ু আটকে প্রতিটি পাঠের আগে ঘরের তাপমাত্রায় ফিরে আসতে দিন।
+  - plunger জোর না করে কয়েকটি আয়তন নিন; অল্প অপেক্ষা করে আয়তন, gauge pressure ও বায়ুমণ্ডলীয় চাপ লিখুন।
+  - gauge pressure-এর সঙ্গে বায়ুমণ্ডলীয় চাপ যোগ করে absolute pressure বের করুন।
+  - প্রতিটি পাঠে PV হিসাব করে মাপের অনিশ্চয়তার সঙ্গে তার বিচ্যুতি তুলনা করুন।
+observation_table:
+  headers: [volume V (mL), gauge pressure (kPa), atmospheric pressure (kPa), absolute P (kPa), PV (kPa·mL)]
+  rows:
+    - ['record', 'record', 'record', 'calculate', 'calculate']
+    - ['record', 'record', 'record', 'calculate', 'calculate']
+    - ['record', 'record', 'record', 'calculate', 'calculate']
+calculation: Use P_absolute=P_gauge+P_atmospheric. At constant temperature, compare P₁V₁ and P₂V₂ or plot P against 1/V; a straight line through the origin is expected for the ideal model when dead volume is accounted for.
+calculation_bn: P_absolute=P_gauge+P_atmospheric নিন। তাপমাত্রা স্থির হলে P₁V₁ ও P₂V₂ তুলনা করুন অথবা 1/V-এর বিপরীতে P লেখচিত্র আঁকুন; dead volume ধরলে আদর্শ মডেলে উৎস দিয়ে যাওয়া সরলরেখা প্রত্যাশিত।
+precautions:
+  - Do not exceed the syringe or sensor pressure rating; do not force the plunger.
+  - Use small changes and wait for thermal equilibration after compression.
+  - Keep the gas amount fixed and check the seal for leaks.
+precautions_bn:
+  - সিরিঞ্জ বা সেন্সরের অনুমোদিত চাপ অতিক্রম করবেন না; plunger জোর করবেন না।
+  - অল্প পরিবর্তন করুন এবং সংকোচনের পর তাপীয় সাম্য ফিরে আসতে দিন।
+  - গ্যাসের পরিমাণ স্থির রাখুন এবং সিল leak করছে কি না দেখুন।
+sources_of_error:
+  - Gas warms during rapid compression
+  - Dead volume in the connector and sensor
+  - Leaks or inaccurate pressure and volume readings
+sources_of_error_bn:
+  - দ্রুত সংকোচনে গ্যাস গরম হয়ে যায়
+  - connector ও sensor-এর dead volume
+  - leak অথবা চাপ-আয়তন পাঠের অনির্ভুলতা
+viva:
+  - q: Why must pressure be absolute in Boyle’s law?
+    a: The gas law relates the gas’s thermodynamic pressure measured from vacuum; gauge pressure omits atmospheric pressure.
+    q_bn: বয়েলের সূত্রে absolute pressure লাগে কেন?
+    a_bn: গ্যাস সূত্রে শূন্যচাপ থেকে মাপা তাপগতীয় চাপ লাগে; gauge pressure-এ বায়ুমণ্ডলীয় চাপ বাদ থাকে।
+  - q: Why wait after moving the plunger?
+    a: Compression or expansion changes gas temperature temporarily; waiting makes the constant-temperature comparison fairer.
+    q_bn: plunger সরানোর পর অপেক্ষা করা হয় কেন?
+    a_bn: সংকোচন বা প্রসারণে গ্যাসের তাপমাত্রা সাময়িক বদলে যায়; অপেক্ষায় তাপমাত্রা প্রায় স্থির হয়।
+simulation: ideal-gas-law
+tags: [Boyle law, gas, pressure, volume, practical]
+---
+
+Do not perform this activity using glass syringes or improvised sealed containers. Keep pressures low and follow the sensor manufacturer’s limits.

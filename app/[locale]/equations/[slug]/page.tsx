@@ -8,7 +8,7 @@ import { Calculator } from '@/components/content/Calculator';
 import { MdxArticle } from '@/components/content/MdxArticle';
 import { Tex } from '@/components/content/Tex';
 import { ViewTracker } from '@/components/content/ViewTracker';
-import { formatLevel, getEquationBySlug, getEquationEntries } from '@/lib/content';
+import { formatLevel, getEquationBySlug, getEquationEntries, getExperimentBySlug } from '@/lib/content';
 import { getSimulationMeta } from '@/lib/simulations';
 import { isLocale, locales, type Locale } from '@/i18n/routing';
 import { titleFor } from '@/lib/utils';
@@ -36,8 +36,9 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
   const isReference = equation.reference_formulas.length > 0;
   const related = equation.related.map((slug) => getEquationBySlug(slug)).filter((item) => item !== undefined).slice(0, 3);
   const simulation = equation.simulation ? getSimulationMeta(equation.simulation) : undefined;
+  const experiment = equation.experiment ? getExperimentBySlug(equation.experiment) : undefined;
   const hasCalculator = equation.interactive;
-  const hasSidebar = hasCalculator || Boolean(simulation);
+  const hasSidebar = hasCalculator || Boolean(simulation) || Boolean(experiment);
 
   return (
     <section className="page-shell section-space">
@@ -177,10 +178,22 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
                 <div className="flex items-center gap-3">
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-chemistry-600 text-white"><Beaker size={19} /></span>
                   <span className="min-w-0 flex-1">
-                    <span className="block text-xs font-black uppercase tracking-widest text-chemistry-700 dark:text-chemistry-200">Try the simulation</span>
+                    <span className="block text-xs font-black uppercase tracking-widest text-chemistry-700 dark:text-chemistry-200">{locale === 'bn' ? 'সিমুলেশন চালান' : 'Try the simulation'}</span>
                     <span className="mt-1 block truncate font-extrabold">{locale === 'bn' ? simulation.title_bn : simulation.title_en}</span>
                   </span>
                   <ChevronRight size={18} className="text-chemistry-600 transition group-hover:translate-x-1" />
+                </div>
+              </Link>
+            )}
+            {experiment && (
+              <Link href={`/${locale}/experiments/${experiment.slug}`} className="group block rounded-2xl border border-physics-200 bg-physics-50 p-4 transition hover:-translate-y-0.5 dark:border-physics-700 dark:bg-physics-900/50">
+                <div className="flex items-center gap-3">
+                  <span className="grid h-10 w-10 place-items-center rounded-xl bg-physics-600 text-white"><Beaker size={19} /></span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-xs font-black uppercase tracking-widest text-physics-700 dark:text-physics-200">{locale === 'bn' ? 'সম্পর্কিত পরীক্ষা' : 'Related experiment'}</span>
+                    <span className="mt-1 block truncate font-extrabold">{locale === 'bn' ? experiment.title_bn : experiment.title_en}</span>
+                  </span>
+                  <ChevronRight size={18} className="text-physics-600 transition group-hover:translate-x-1" />
                 </div>
               </Link>
             )}

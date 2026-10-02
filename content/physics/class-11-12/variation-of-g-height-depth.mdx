@@ -1,0 +1,63 @@
+---
+type: equation
+slug: variation-of-g-height-depth
+title_bn: উচ্চতা ও গভীরতার সঙ্গে g-এর পরিবর্তন
+title_en: Variation of g with altitude and depth
+subject: physics
+level: class-11-12
+chapter: Gravitation
+chapter_bn: মহাকর্ষ
+latex: 'g_h=g_0\\left(\\frac{R}{R+h}\\right)^2, \\qquad g_d\\approx g_0\\left(1-\\frac{d}{R}\\right)'
+calculator: false
+variables:
+  - symbol: g_h
+    name: gravitational acceleration at altitude h
+    name_bn: h উচ্চতায় অভিকর্ষজ ত্বরণ
+    unit: m/s²
+    si_unit: m/s²
+  - symbol: g_d
+    name: gravitational acceleration at depth d
+    name_bn: d গভীরতায় অভিকর্ষজ ত্বরণ
+    unit: m/s²
+    si_unit: m/s²
+  - symbol: g_0
+    name: surface gravitational acceleration
+    name_bn: পৃষ্ঠে অভিকর্ষজ ত্বরণ
+    unit: m/s²
+    si_unit: m/s²
+  - symbol: R
+    name: planetary radius
+    name_bn: গ্রহের ব্যাসার্ধ
+    unit: m
+    si_unit: m
+  - symbol: h
+    name: altitude above surface
+    name_bn: পৃষ্ঠ থেকে উচ্চতা
+    unit: m
+    si_unit: m
+  - symbol: d
+    name: depth below surface
+    name_bn: পৃষ্ঠ থেকে গভীরতা
+    unit: m
+    si_unit: m
+derivation: Outside a spherical planet, use the inverse-square field at radius R+h. Inside a uniform-density spherical planet, only the mass enclosed within the current radius contributes to the field; this gives a linear decrease with depth.
+derivation_bn: গোলাকার গ্রহের বাইরে R+h দূরত্বে ব্যস্তবর্গ ক্ষেত্র ব্যবহার করুন। সমঘনত্বের গোলাকার গ্রহের ভেতরে কেবল বর্তমান ব্যাসার্ধের মধ্যে থাকা ভর ক্ষেত্র সৃষ্টি করে; ফলে গভীরতার সঙ্গে g সরলরৈখিকভাবে কমে।
+derivation_steps:
+  - step_en: At altitude h, the distance from the planet centre is R+h; compare the inverse-square field with its surface value.
+    step_bn: h উচ্চতায় কেন্দ্র থেকে দূরত্ব R+h; ব্যস্তবর্গ ক্ষেত্রকে পৃষ্ঠের মানের সঙ্গে তুলনা করুন।
+    latex: 'g_h=\\frac{GM}{(R+h)^2}=g_0\\left(\\frac{R}{R+h}\\right)^2'
+  - step_en: At depth d, the radius is r=R−d. For uniform density, enclosed mass scales as r³.
+    step_bn: d গভীরতায় ব্যাসার্ধ r=R−d। সমঘনত্বে অন্তর্ভুক্ত ভর r³-এর সমানুপাতিক।
+    latex: 'M_r=M\\left(\\frac{r}{R}\\right)^3, \\qquad g(r)=\\frac{GM_r}{r^2}=g_0\\frac{r}{R}'
+  - step_en: Substitute r=R−d to obtain the depth relation and state its uniform-density assumption.
+    step_bn: r=R−d বসিয়ে গভীরতার সম্পর্কটি লিখুন এবং সমঘনত্বের অনুমানটি উল্লেখ করুন।
+    latex: 'g_d=g_0\\left(1-\\frac{d}{R}\\right)'
+summary_en: Compare how gravity weakens above a planet and toward its centre.
+summary_bn: গ্রহের ওপরের উচ্চতা ও ভেতরের গভীরতার সঙ্গে অভিকর্ষজ ত্বরণ কীভাবে কমে তা তুলনা।
+reference_note_en: The altitude formula assumes a spherical planet. The depth formula is an ideal model for uniform density and ignores rotation, local geology and density layering; it must not be extrapolated to the real centre without that caveat.
+reference_note_bn: উচ্চতার সূত্রে গ্রহকে গোলাকার ধরা হয়। গভীরতার সূত্রটি সমঘনত্বের আদর্শ মডেল; ঘূর্ণন, স্থানীয় ভূতত্ত্ব ও ঘনত্বের স্তর উপেক্ষা করে। এই সতর্কতা ছাড়া বাস্তব কেন্দ্রে সূত্রটি প্রয়োগ করা উচিত নয়।
+related: [gravitational-field-strength, newtons-law-of-gravitation, gravitational-potential-energy-general]
+tags: [gravity, altitude, depth, gravitational acceleration, gravitation]
+---
+
+For h≪R, a first-order approximation is g_h≈g_0(1−2h/R). The exact inverse-square expression is preferable whenever h is not very small compared with the planet's radius.

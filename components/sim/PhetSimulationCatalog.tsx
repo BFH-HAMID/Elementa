@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Atom, Beaker, Search, Sparkles } from 'lucide-react';
 import { useLocale } from 'next-intl';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -19,9 +19,10 @@ import {
 const PAGE_SIZE = 18;
 type SubjectFilter = 'all' | PhetSubject;
 
-export function PhetSimulationCatalog() {
+export function PhetSimulationCatalog({ initialSubject = 'all' }: { initialSubject?: SubjectFilter }) {
   const locale = useLocale() as 'bn' | 'en';
-  const [subject, setSubject] = useState<SubjectFilter>('all');
+  const [subject, setSubject] = useState<SubjectFilter>(initialSubject);
+  useEffect(() => setSubject(initialSubject), [initialSubject]);
   const [query, setQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const isBangla = locale === 'bn';

@@ -36,6 +36,16 @@ variables:
     si_unit: '1'
 derivation: The Nernst equation corrects a standard potential for temperature and composition. Activities are represented by Q; dilute-solution problems often approximate activities with concentrations.
 derivation_bn: Nernst সমীকরণ তাপমাত্রা ও সংযোজনের জন্য standard potential সংশোধন করে। Q দিয়ে activity প্রকাশ করা হয়; dilute solution-এ concentration দিয়ে আনুমানিক মান নেওয়া যায়।
+derivation_steps:
+  - step_en: The Gibbs-energy change for an electrochemical reaction is related to cell potential by ΔG = −nFE.
+    step_bn: তড়িৎ রাসায়নিক বিক্রিয়ায় গিবস শক্তির পরিবর্তন কোষ বিভবের সঙ্গে ΔG = −nFE দ্বারা যুক্ত।
+    latex: '\\Delta G=-nFE, \\qquad \\Delta G^\\circ=-nFE^\\circ'
+  - step_en: Substitute the reaction-isotherm relation ΔG = ΔG° + RT ln Q.
+    step_bn: বিক্রিয়া সমোষ্ণ সম্পর্ক ΔG = ΔG° + RT ln Q বসান।
+    latex: '-nFE=-nFE^\\circ+RT\\ln Q'
+  - step_en: Solve for E to obtain the Nernst equation.
+    step_bn: E-এর জন্য সমাধান করে নার্নস্ট সমীকরণ পান।
+    latex: 'E=E^\\circ-\\frac{RT}{nF}\\ln Q'
 summary_en: Connect electrochemical potential to temperature and reaction composition.
 summary_bn: তড়িৎ রাসায়নিক বিভবকে তাপমাত্রা ও বিক্রিয়ার সংযোজনের সঙ্গে যুক্ত করুন।
 related: [ideal-gas-law]

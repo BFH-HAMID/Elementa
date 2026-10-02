@@ -31,6 +31,16 @@ variables:
     si_unit: K
 derivation: Only a fraction of collisions have enough energy to cross the activation barrier. The exponential term describes how that fraction changes with temperature.
 derivation_bn: পর্যাপ্ত শক্তি থাকা সংঘর্ষের একটি অংশই activation barrier অতিক্রম করে। exponential term তাপমাত্রার সঙ্গে সেই অংশের পরিবর্তন দেখায়।
+derivation_steps:
+  - step_en: In the activated-collision model, the fraction with energy at least Ea has a Boltzmann factor.
+    step_bn: সক্রিয় সংঘর্ষ মডেলে Ea-এর সমান বা বেশি শক্তিসম্পন্ন কণার ভগ্নাংশে বোল্টজম্যান গুণক থাকে।
+    latex: 'f_{\\rm active}\\propto e^{-E_a/(RT)}'
+  - step_en: Assume the rate constant is proportional to this active fraction; collect collision and orientation factors in A.
+    step_bn: হার ধ্রুবককে এই সক্রিয় ভগ্নাংশের সমানুপাতিক ধরে সংঘর্ষ ও দিক-নির্বাচনের গুণক A-তে নিন।
+    latex: 'k=Ae^{-E_a/(RT)}'
+  - step_en: Taking natural logarithms gives a straight-line form useful for checking data.
+    step_bn: স্বাভাবিক লগারিদম নিলে পরীক্ষার উপাত্ত যাচাইয়ের জন্য সরলরৈখিক রূপ পাওয়া যায়।
+    latex: '\\ln k=\\ln A-\\frac{E_a}{R}\\frac{1}{T}'
 summary_en: Model the strong temperature dependence of a reaction rate.
 summary_bn: বিক্রিয়ার হারের উপর তাপমাত্রার শক্তিশালী প্রভাব মডেল করুন।
 related: [rate-law]

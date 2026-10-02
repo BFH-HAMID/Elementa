@@ -1861,5 +1861,1241 @@
     "description_bn": "ইন্টার‌্যাক্টিভ ব্রাউজার সিমুলেশন",
     "href": "/simulations/reaction-rate-temperature",
     "tags": []
+  },
+  {
+    "slug": "phet-atomic-interactions",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Atomic Interactions",
+    "title_bn": "Atomic Interactions",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/atomic-interactions",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-balancing-act",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Balancing Act",
+    "title_bn": "Balancing Act",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/balancing-act",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-balloons-and-static-electricity",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Balloons and Static Electricity",
+    "title_bn": "Balloons and Static Electricity",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/balloons-and-static-electricity",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-bending-light",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Bending Light",
+    "title_bn": "Bending Light",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/bending-light",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-blackbody-spectrum",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Blackbody Spectrum",
+    "title_bn": "Blackbody Spectrum",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/blackbody-spectrum",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-build-a-nucleus",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Build a Nucleus",
+    "title_bn": "Build a Nucleus",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/build-a-nucleus",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-build-an-atom",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Build an Atom",
+    "title_bn": "Build an Atom",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/build-an-atom",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-buoyancy",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Buoyancy",
+    "title_bn": "Buoyancy",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/buoyancy",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-buoyancy-basics",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Buoyancy: Basics",
+    "title_bn": "Buoyancy: Basics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/buoyancy-basics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-calculus-grapher",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Calculus Grapher",
+    "title_bn": "Calculus Grapher",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/calculus-grapher",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-capacitor-lab-basics",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Capacitor Lab: Basics",
+    "title_bn": "Capacitor Lab: Basics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/capacitor-lab-basics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-charges-and-fields",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Charges and Fields",
+    "title_bn": "Charges and Fields",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/charges-and-fields",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-circuit-construction-kit-ac",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Circuit Construction Kit: AC",
+    "title_bn": "Circuit Construction Kit: AC",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/circuit-construction-kit-ac",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-circuit-construction-kit-ac-virtual-lab",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Circuit Construction Kit: AC - Virtual Lab",
+    "title_bn": "Circuit Construction Kit: AC - Virtual Lab",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/circuit-construction-kit-ac-virtual-lab",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-circuit-construction-kit-dc",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Circuit Construction Kit: DC",
+    "title_bn": "Circuit Construction Kit: DC",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/circuit-construction-kit-dc",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-circuit-construction-kit-dc-virtual-lab",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Circuit Construction Kit: DC - Virtual Lab",
+    "title_bn": "Circuit Construction Kit: DC - Virtual Lab",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/circuit-construction-kit-dc-virtual-lab",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-collision-lab",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Collision Lab",
+    "title_bn": "Collision Lab",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/collision-lab",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-color-vision",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Color Vision",
+    "title_bn": "Color Vision",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/color-vision",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-coulombs-law",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Coulomb's Law",
+    "title_bn": "Coulomb's Law",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/coulombs-law",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-curve-fitting",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Curve Fitting",
+    "title_bn": "Curve Fitting",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/curve-fitting",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-density",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Density",
+    "title_bn": "Density",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/density",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-diffusion",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Diffusion",
+    "title_bn": "Diffusion",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/diffusion",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-energy-forms-and-changes",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Energy Forms and Changes",
+    "title_bn": "Energy Forms and Changes",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/energy-forms-and-changes",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-energy-skate-park",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Energy Skate Park",
+    "title_bn": "Energy Skate Park",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/energy-skate-park",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-energy-skate-park-basics",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Energy Skate Park: Basics",
+    "title_bn": "Energy Skate Park: Basics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/energy-skate-park-basics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-faradays-electromagnetic-lab",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Faraday's Electromagnetic Lab",
+    "title_bn": "Faraday's Electromagnetic Lab",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/faradays-electromagnetic-lab",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-faradays-law",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Faraday's Law",
+    "title_bn": "Faraday's Law",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/faradays-law",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-forces-and-motion-basics",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Forces and Motion: Basics",
+    "title_bn": "Forces and Motion: Basics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/forces-and-motion-basics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-fourier-making-waves",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Fourier: Making Waves",
+    "title_bn": "Fourier: Making Waves",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/fourier-making-waves",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-friction",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Friction",
+    "title_bn": "Friction",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/friction",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-gas-properties",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Gas Properties",
+    "title_bn": "Gas Properties",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/gas-properties",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-gases-intro",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Gases Intro",
+    "title_bn": "Gases Intro",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/gases-intro",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-generator",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Generator",
+    "title_bn": "Generator",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/generator",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-geometric-optics",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Geometric Optics",
+    "title_bn": "Geometric Optics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/geometric-optics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-geometric-optics-basics",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Geometric Optics: Basics",
+    "title_bn": "Geometric Optics: Basics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/geometric-optics-basics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-gravity-and-orbits",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Gravity and Orbits",
+    "title_bn": "Gravity and Orbits",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/gravity-and-orbits",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-gravity-force-lab",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Gravity Force Lab",
+    "title_bn": "Gravity Force Lab",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/gravity-force-lab",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-gravity-force-lab-basics",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Gravity Force Lab: Basics",
+    "title_bn": "Gravity Force Lab: Basics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/gravity-force-lab-basics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-hookes-law",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Hooke's Law",
+    "title_bn": "Hooke's Law",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/hookes-law",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-john-travoltage",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "John Travoltage",
+    "title_bn": "John Travoltage",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/john-travoltage",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-keplers-laws",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Kepler's Laws",
+    "title_bn": "Kepler's Laws",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/keplers-laws",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-magnet-and-compass",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Magnet and Compass",
+    "title_bn": "Magnet and Compass",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/magnet-and-compass",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-magnets-and-electromagnets",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Magnets and Electromagnets",
+    "title_bn": "Magnets and Electromagnets",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/magnets-and-electromagnets",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-masses-and-springs",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Masses and Springs",
+    "title_bn": "Masses and Springs",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/masses-and-springs",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-masses-and-springs-basics",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Masses and Springs: Basics",
+    "title_bn": "Masses and Springs: Basics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/masses-and-springs-basics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-models-of-the-hydrogen-atom",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Models of the Hydrogen Atom",
+    "title_bn": "Models of the Hydrogen Atom",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/models-of-the-hydrogen-atom",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-molecules-and-light",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Molecules and Light",
+    "title_bn": "Molecules and Light",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/molecules-and-light",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-my-solar-system",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "My Solar System",
+    "title_bn": "My Solar System",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/my-solar-system",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-normal-modes",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Normal Modes",
+    "title_bn": "Normal Modes",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/normal-modes",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-ohms-law",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Ohm's Law",
+    "title_bn": "Ohm's Law",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/ohms-law",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-pendulum-lab",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Pendulum Lab",
+    "title_bn": "Pendulum Lab",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/pendulum-lab",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-plinko-probability",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Plinko Probability",
+    "title_bn": "Plinko Probability",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/plinko-probability",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-projectile-data-lab",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Projectile Data Lab",
+    "title_bn": "Projectile Data Lab",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/projectile-data-lab",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-projectile-motion",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Projectile Motion",
+    "title_bn": "Projectile Motion",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/projectile-motion",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-quantum-coin-toss",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Quantum Coin Toss",
+    "title_bn": "Quantum Coin Toss",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/quantum-coin-toss",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-quantum-measurement",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Quantum Measurement",
+    "title_bn": "Quantum Measurement",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/quantum-measurement",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-quantum-wave-interference",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Quantum Wave Interference",
+    "title_bn": "Quantum Wave Interference",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/quantum-wave-interference",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-resistance-in-a-wire",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Resistance in a Wire",
+    "title_bn": "Resistance in a Wire",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/resistance-in-a-wire",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-rutherford-scattering",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Rutherford Scattering",
+    "title_bn": "Rutherford Scattering",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/rutherford-scattering",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-sound-waves",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Sound Waves",
+    "title_bn": "Sound Waves",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/sound-waves",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-states-of-matter",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "States of Matter",
+    "title_bn": "States of Matter",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/states-of-matter",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-states-of-matter-basics",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "States of Matter: Basics",
+    "title_bn": "States of Matter: Basics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/states-of-matter-basics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-under-pressure",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Under Pressure",
+    "title_bn": "Under Pressure",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/under-pressure",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-vector-addition",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Vector Addition",
+    "title_bn": "Vector Addition",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/vector-addition",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-wave-interference",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Wave Interference",
+    "title_bn": "Wave Interference",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/wave-interference",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-wave-on-a-string",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Wave on a String",
+    "title_bn": "Wave on a String",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/wave-on-a-string",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-waves-intro",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Waves Intro",
+    "title_bn": "Waves Intro",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/waves-intro",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "physics"
+    ]
+  },
+  {
+    "slug": "phet-acid-base-solutions",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Acid-Base Solutions",
+    "title_bn": "Acid-Base Solutions",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/acid-base-solutions",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-balancing-chemical-equations",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Balancing Chemical Equations",
+    "title_bn": "Balancing Chemical Equations",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/balancing-chemical-equations",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-beers-law-lab",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Beer's Law Lab",
+    "title_bn": "Beer's Law Lab",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/beers-law-lab",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-build-a-molecule",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Build a Molecule",
+    "title_bn": "Build a Molecule",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/build-a-molecule",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-concentration",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Concentration",
+    "title_bn": "Concentration",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/concentration",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-isotopes-and-atomic-mass",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Isotopes and Atomic Mass",
+    "title_bn": "Isotopes and Atomic Mass",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/isotopes-and-atomic-mass",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-membrane-transport",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Membrane Transport",
+    "title_bn": "Membrane Transport",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/membrane-transport",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-molarity",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Molarity",
+    "title_bn": "Molarity",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/molarity",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-molecule-polarity",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Molecule Polarity",
+    "title_bn": "Molecule Polarity",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/molecule-polarity",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-molecule-shapes",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Molecule Shapes",
+    "title_bn": "Molecule Shapes",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/molecule-shapes",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-molecule-shapes-basics",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Molecule Shapes: Basics",
+    "title_bn": "Molecule Shapes: Basics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/molecule-shapes-basics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-ph-scale",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "pH Scale",
+    "title_bn": "pH Scale",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/ph-scale",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-ph-scale-basics",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "pH Scale: Basics",
+    "title_bn": "pH Scale: Basics",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/ph-scale-basics",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
+  },
+  {
+    "slug": "phet-reactants-products-and-leftovers",
+    "kind": "simulation",
+    "subject": "chemistry",
+    "title_en": "Reactants, Products and Leftovers",
+    "title_bn": "Reactants, Products and Leftovers",
+    "description_en": "Official PhET HTML5 simulation",
+    "description_bn": "PhET-এর অফিসিয়াল HTML5 সিমুলেশন",
+    "href": "/simulations/phet/reactants-products-and-leftovers",
+    "tags": [
+      "PhET",
+      "HTML5",
+      "chemistry"
+    ]
   }
 ]

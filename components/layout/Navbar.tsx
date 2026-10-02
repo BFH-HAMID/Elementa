@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { BookOpen, FlaskConical, Home, Menu, X, Atom, Bookmark, Sparkles, ChevronDown } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CommandPalette } from './CommandPalette';
 import { LangSwitch } from './LangSwitch';
 import { ThemeToggle } from './ThemeToggle';
@@ -36,8 +36,28 @@ export function Navbar() {
     { key: 'chemistry', href: '/chemistry', icon: FlaskConical }
   ] as const;
   const subjectActive = subjectLinks.some(({ href }) => pathname === hrefFor(href));
+  const isActive = (href: string) => href === '/' ? pathname === `/${locale}` : pathname.startsWith(`/${locale}${href}`);
 
-  useEffect(() => setSubjectsOpen(false), [pathname]);
+  // Any navigation should collapse both menus, and Escape closes the phone sheet.
+  useEffect(() => { setSubjectsOpen(false); setMobileOpen(false); }, [pathname]);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') setMobileOpen(false); };
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
+  }, [mobileOpen]);
+
+  // Click-away closes the desktop subjects dropdown.
+  const subjectMenuRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!subjectsOpen) return;
+    const close = (event: MouseEvent) => {
+      if (subjectMenuRef.current && !subjectMenuRef.current.contains(event.target as Node)) setSubjectsOpen(false);
+    };
+    document.addEventListener('mousedown', close);
+    return () => document.removeEventListener('mousedown', close);
+  }, [subjectsOpen]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--background)]/90 backdrop-blur-xl">
@@ -45,10 +65,10 @@ export function Navbar() {
         <Logo />
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
           {links.map(({ key, href, icon: Icon }) => {
-            const active = href === '/' ? pathname === `/${locale}` : pathname.startsWith(`/${locale}${href}`);
+            const active = isActive(href);
             return <Link key={key} href={hrefFor(href)} className={cn('flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-bold transition', active ? 'bg-physics-100 text-physics-700 dark:bg-physics-900 dark:text-physics-100' : 'text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]')}><Icon size={15} />{t(key)}</Link>;
           })}
-          <div className="relative">
+          <div className="relative" ref={subjectMenuRef}>
             <button type="button" aria-haspopup="menu" aria-expanded={subjectsOpen} aria-controls="desktop-subject-menu" onClick={() => setSubjectsOpen((value) => !value)} className={cn('flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-bold transition', subjectActive || subjectsOpen ? 'bg-physics-100 text-physics-700 dark:bg-physics-900 dark:text-physics-100' : 'text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]')}>
               <Atom size={15} />{t('subjects')}<ChevronDown size={14} className={cn('transition', subjectsOpen && 'rotate-180')} />
             </button>
@@ -64,11 +84,11 @@ export function Navbar() {
           <button type="button" className="btn-ghost min-h-9 rounded-lg p-2 lg:hidden" onClick={() => setMobileOpen((value) => !value)} aria-label={mobileOpen ? 'Close menu' : 'Open menu'} aria-expanded={mobileOpen}>{mobileOpen ? <X size={20} /> : <Menu size={20} />}</button>
         </div>
       </div>
-      {mobileOpen && <nav className="border-t border-[var(--line)] bg-[var(--surface)] p-3 lg:hidden" aria-label="Mobile navigation">
-        <div className="page-shell grid grid-cols-2 gap-2 sm:grid-cols-4">
-          {links.map(({ key, href, icon: Icon }) => <Link key={key} href={hrefFor(href)} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl p-3 text-sm font-bold text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]"><Icon size={17} />{t(key)}</Link>)}
-          <Link href={hrefFor('/constants')} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl p-3 text-sm font-bold text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]"><Atom size={17} />{t('constants')}</Link>
-          {subjectLinks.map(({ key, href, icon: Icon }) => <Link key={key} href={hrefFor(href)} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl p-3 text-sm font-bold text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]"><Icon size={17} />{common(key)}</Link>)}
+      {mobileOpen && <nav className="border-t border-[var(--line)] bg-[var(--surface)] lg:hidden" aria-label="Mobile navigation">
+        <div className="page-shell grid max-h-[calc(100dvh-4rem)] grid-cols-2 gap-2 overflow-y-auto py-3 sm:grid-cols-4">
+          {links.map(({ key, href, icon: Icon }) => { const active = isActive(href); return <Link key={key} href={hrefFor(href)} onClick={() => setMobileOpen(false)} aria-current={active ? 'page' : undefined} className={cn('flex items-center gap-2 rounded-xl p-3 text-sm font-bold transition', active ? 'bg-physics-50 text-physics-700 dark:bg-physics-900/60 dark:text-physics-100' : 'text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]')}><Icon size={17} />{t(key)}</Link>; })}
+          <Link href={hrefFor('/constants')} onClick={() => setMobileOpen(false)} className={cn('flex items-center gap-2 rounded-xl p-3 text-sm font-bold transition', pathname.startsWith(hrefFor('/constants')) ? 'bg-physics-50 text-physics-700 dark:bg-physics-900/60 dark:text-physics-100' : 'text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]')}><Atom size={17} />{t('constants')}</Link>
+          {subjectLinks.map(({ key, href, icon: Icon }) => { const active = pathname === hrefFor(href); return <Link key={key} href={hrefFor(href)} onClick={() => setMobileOpen(false)} aria-current={active ? 'page' : undefined} className={cn('flex items-center gap-2 rounded-xl p-3 text-sm font-bold transition', active ? 'bg-physics-50 text-physics-700 dark:bg-physics-900/60 dark:text-physics-100' : 'text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]')}><Icon size={17} />{common(key)}</Link>; })}
         </div>
       </nav>}
     </header>

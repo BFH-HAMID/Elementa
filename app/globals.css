@@ -29,7 +29,12 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* Keep in-page anchor targets clear of the 4rem sticky header. */
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
 body {
   min-width: 320px;
   background: var(--background);
@@ -48,6 +53,24 @@ button { cursor: pointer; }
 
 @layer components {
   .page-shell { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  /* Page canvas: clears the sticky 4rem header, and on phones reserves room for the
+     bottom tab bar plus the iOS home-indicator inset. dvh keeps it honest while
+     mobile browser chrome slides in and out. */
+  .app-main {
+    min-height: calc(100vh - 4rem);
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+  }
+  @supports (min-height: 100dvh) {
+    .app-main { min-height: calc(100dvh - 4rem); }
+  }
+  @media (min-width: 1024px) {
+    .app-main { padding-bottom: 0; }
+  }
+  /* Footers sit below main, so they need the same mobile tab-bar clearance. */
+  .app-footer-clearance { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px)); }
+  @media (min-width: 1024px) {
+    .app-footer-clearance { padding-bottom: 0; }
+  }
   .section-space { @apply py-14 sm:py-20; }
   .eyebrow { @apply text-xs font-bold uppercase tracking-[0.18em] text-physics-600 dark:text-physics-200; }
   .display-title { @apply text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl; }
@@ -91,6 +114,12 @@ button { cursor: pointer; }
 .canvas-frame canvas { display: block; max-width: 100%; }
 
 .scrollbar-thin { scrollbar-width: thin; scrollbar-color: #9ab2c8 transparent; }
+
+/* iOS Safari zooms the whole viewport when a focused form control renders text below
+   16px. Phones get 16px controls; from `sm` up the design's own sizes apply. */
+@media (max-width: 639.98px) {
+  .input { font-size: 16px; }
+}
 
 /* The lab's reduced-motion preference applies to both our CSS and the app's canvas loops. */
 @media (prefers-reduced-motion: reduce) {

@@ -15,6 +15,10 @@ const config: Config = {
       screens: { '2xl': '1280px' }
     },
     extend: {
+      // The design uses `xs:` for tight phones (the navbar wordmark); Tailwind has no such default.
+      screens: {
+        xs: '420px'
+      },
       spacing: {
         '18': '4.5rem',
         '22': '5.5rem'

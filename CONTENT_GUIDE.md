@@ -20,7 +20,7 @@ PhysChem Lab content is authored as small, reviewable repository files. The site
 - `variables`: `symbol`, `name`, `unit`, `si_unit`; `name_bn` is recommended
 - `derivation`; `derivation_bn` is strongly recommended
 
-`summary_en`, `summary_bn`, `related`, `simulation` and `tags` improve discovery and are optional.
+`summary_en`, `summary_bn`, `related`, `simulation`, `experiment` and `tags` improve discovery and are optional. Set `simulation` and/or `experiment` to a valid slug to show direct lab links on the equation detail page.
 
 ### Calculators
 

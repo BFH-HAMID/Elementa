@@ -382,6 +382,72 @@
           "note_en": "Build or simulate AND, OR, NOT, NAND, NOR and XOR gates; verify every input combination against a truth table.",
           "note_bn": "AND, OR, NOT, NAND, NOR ও XOR গেট তৈরি/সিমুলেট করে প্রতিটি ইনপুট-সমন্বয় সত্যক সারণির সঙ্গে যাচাই করুন।",
           "equation": "Y_{AND}=AB, \\quad Y_{OR}=A+B, \\quad Y_{XOR}=A\\oplus B"
+        },
+        {
+          "slug": "physics-vector-addition-force-table-hsc",
+          "category_en": "Mechanics",
+          "category_bn": "বলবিদ্যা",
+          "title_en": "Parallelogram law of vector addition",
+          "title_bn": "ভেক্টর যোগের সামান্তরিক সূত্র",
+          "note_en": "Balance two known forces with an equilibrant on a level force table; compare the measured resultant with its components.",
+          "note_bn": "সমতল force table-এ দুটি জানা বলকে সাম্যকারী বল দিয়ে সাম্যাবস্থায় এনে মাপা লব্ধিকে উপাংশের সঙ্গে তুলনা করুন।",
+          "equation": "R = √(A² + B² + 2AB cos θ)",
+          "guide_slug": "vector-addition-force-table"
+        },
+        {
+          "slug": "physics-projectile-range-hsc",
+          "category_en": "Mechanics",
+          "category_bn": "বলবিদ্যা",
+          "title_en": "Projectile range versus launch angle",
+          "title_bn": "নিক্ষেপ কোণের সঙ্গে প্রক্ষেপণের পাল্লা",
+          "note_en": "Keep launcher speed and launch/landing heights fixed, repeat range readings and compare complementary angles.",
+          "note_bn": "নিক্ষেপ বেগ ও নিক্ষেপ-পতনের উচ্চতা স্থির রেখে পাল্লা বারবার মাপুন এবং পরিপূরক কোণ তুলনা করুন।",
+          "equation": "R = u² sin(2θ)/g",
+          "guide_slug": "projectile-motion-lab"
+        },
+        {
+          "slug": "physics-mass-spring-shm-hsc",
+          "category_en": "Oscillations",
+          "category_bn": "দোলন",
+          "title_en": "Mass–spring oscillation period",
+          "title_bn": "ভর-স্প্রিং দোলনের পর্যায়কাল",
+          "note_en": "Time many cycles for different attached masses and estimate the spring constant from a T²–m graph.",
+          "note_bn": "বিভিন্ন সংযুক্ত ভরে বহু দোলনের সময় নিন এবং T²–m লেখচিত্র থেকে স্প্রিং ধ্রুবক বের করুন।",
+          "equation": "T = 2π√(m/k)",
+          "guide_slug": "mass-spring-shm"
+        },
+        {
+          "slug": "physics-venturi-bernoulli-hsc",
+          "category_en": "Fluid mechanics",
+          "category_bn": "প্রবাহী বলবিদ্যা",
+          "title_en": "Venturi tube: continuity and Bernoulli",
+          "title_bn": "ভেঞ্চুরি নল: ধারাবাহিকতা ও বার্নৌলি",
+          "note_en": "Measure flow and manometer heads in wide and narrow tube sections; identify pressure losses from viscosity.",
+          "note_bn": "নলের প্রশস্ত ও সরু অংশে প্রবাহ এবং ম্যানোমিটারের উচ্চতা মাপুন; সান্দ্রতার চাপ-ক্ষয় শনাক্ত করুন।",
+          "equation": "A₁v₁ = A₂v₂; P + \\frac{1}{2}ρv² + ρgh = constant",
+          "guide_slug": "venturi-bernoulli"
+        },
+        {
+          "slug": "physics-wheatstone-bridge-hsc",
+          "category_en": "Electricity",
+          "category_bn": "তড়িৎ",
+          "title_en": "Unknown resistance with a Wheatstone bridge",
+          "title_bn": "হুইটস্টোন সেতুতে অজানা রোধ",
+          "note_en": "Use a galvanometer null to balance four arms and calculate the unknown resistance from the ratio.",
+          "note_bn": "গ্যালভানোমিটারের শূন্য পাঠে চার বাহু সাম্য করে অনুপাত থেকে অজানা রোধ বের করুন।",
+          "equation": "P/Q = R/S",
+          "guide_slug": "wheatstone-bridge-balance"
+        },
+        {
+          "slug": "physics-young-double-slit-hsc",
+          "category_en": "Optics",
+          "category_bn": "আলোকবিজ্ঞান",
+          "title_en": "Young’s double-slit fringe spacing",
+          "title_bn": "ইয়ং-এর দ্বিচির ঝালরের ব্যবধান",
+          "note_en": "Measure several fringe intervals for coherent monochromatic light; compare β=λD/d and observe how spacing changes with D.",
+          "note_bn": "সুসঙ্গত একরঙা আলোয় একাধিক ঝালর-ব্যবধান মাপুন; β=λD/d মিলিয়ে D বদলালে ব্যবধানের পরিবর্তন দেখুন।",
+          "equation": "β = λD/d",
+          "guide_slug": "young-double-slit-lab"
         }
       ]
     },
@@ -800,6 +866,17 @@
           "note_en": "Assemble two half-cells with a salt bridge, measure open-circuit voltage and identify electron flow from anode to cathode.",
           "note_bn": "লবণ-সেতুসহ দুটি অর্ধকোষ জুড়ে মুক্তবর্তনী বিভব মাপুন এবং অ্যানোড থেকে ক্যাথোডে ইলেকট্রন প্রবাহ নির্ণয় করুন।",
           "equation": "E_{\\rm cell}=E_{\\rm cathode}-E_{\\rm anode}"
+        },
+        {
+          "slug": "chemistry-boyle-law-hsc",
+          "category_en": "Gases",
+          "category_bn": "গ্যাস",
+          "title_en": "Boyle’s law with a gas syringe",
+          "title_bn": "গ্যাস সিরিঞ্জে বয়েলের সূত্র",
+          "note_en": "For a fixed amount of air, change volume slowly, correct gauge pressure to absolute pressure and compare PV.",
+          "note_bn": "নির্দিষ্ট বায়ু ধীরে সংকুচিত করে gauge চাপকে absolute চাপে রূপান্তর করুন এবং PV তুলনা করুন।",
+          "equation": "P₁V₁ = P₂V₂",
+          "guide_slug": "boyle-law-syringe"
         }
       ]
     }

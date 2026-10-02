@@ -1,0 +1,53 @@
+---
+type: equation
+slug: moseley-law
+title_bn: মোসলের সূত্র
+title_en: Moseley’s law of characteristic X-rays
+subject: chemistry
+level: class-11-12
+chapter: Atomic structure and periodicity
+chapter_bn: পরমাণুর গঠন ও পর্যায়বৃত্ততা
+latex: '\\sqrt{\\nu}=a(Z-b)'
+calculator: false
+variables:
+  - symbol: ν
+    name: characteristic X-ray frequency
+    name_bn: বৈশিষ্ট্যপূর্ণ এক্স-রে কম্পাঙ্ক
+    unit: Hz
+    si_unit: Hz
+  - symbol: Z
+    name: atomic number
+    name_bn: পারমাণবিক সংখ্যা
+    unit: dimensionless
+    si_unit: dimensionless
+  - symbol: a
+    name: series-dependent proportionality constant
+    name_bn: সিরিজ-নির্ভর সমানুপাতিক ধ্রুবক
+    unit: Hz^1/2
+    si_unit: Hz^1/2
+  - symbol: b
+    name: screening constant
+    name_bn: আড়াল ধ্রুবক
+    unit: dimensionless
+    si_unit: dimensionless
+derivation: Moseley measured characteristic X-ray frequencies and found a systematic dependence on atomic number. A Bohr-style inner-shell model gives the approximate square-root linear form; it explains why atomic number, not atomic mass, is the basis of the periodic ordering.
+derivation_bn: মোসলে বৈশিষ্ট্যপূর্ণ এক্স-রে কম্পাঙ্ক মেপে পারমাণবিক সংখ্যার সঙ্গে নিয়মিত সম্পর্ক পান। বোর-ধাঁচের অন্তঃকক্ষ মডেল আনুমানিক বর্গমূল-রৈখিক রূপটি ব্যাখ্যা করে; পর্যায় সারণির বিন্যাসে পারমাণবিক ভর নয়, পারমাণবিক সংখ্যাই মৌলিক।
+derivation_steps:
+  - step_en: In a hydrogen-like approximation, an inner-shell transition frequency scales with the square of the effective nuclear charge.
+    step_bn: হাইড্রোজেন-সদৃশ আনুমানিকতায় অন্তঃকক্ষ পরিবর্তনের কম্পাঙ্ক কার্যকর নিউক্লীয় আধানের বর্গের সমানুপাতিক।
+    latex: '\\nu\\propto (Z-b)^2'
+  - step_en: Take the square root and absorb the series-dependent proportionality into a constant a.
+    step_bn: বর্গমূল নিয়ে সিরিজ-নির্ভর সমানুপাতিক ধ্রুবককে a-তে অন্তর্ভুক্ত করুন।
+    latex: '\\sqrt{\\nu}=a(Z-b)'
+  - step_en: Interpret the near-linear trend as an experimental method to order elements by atomic number.
+    step_bn: প্রায় রৈখিক প্রবণতাটিকে পারমাণবিক সংখ্যা অনুসারে মৌল সাজানোর পরীক্ষালব্ধ ভিত্তি হিসেবে ব্যাখ্যা করুন।
+    latex: 'Z_1<Z_2 \\Longrightarrow \\sqrt{\\nu_1}<\\sqrt{\\nu_2} \\quad (\\text{same X-ray series})'
+summary_en: Relate the frequency of characteristic X-rays to atomic number and explain the modern periodic order.
+summary_bn: বৈশিষ্ট্যপূর্ণ এক্স-রের কম্পাঙ্কের সঙ্গে পারমাণবিক সংখ্যার সম্পর্ক এবং আধুনিক পর্যায়ক্রমের ভিত্তি ব্যাখ্যা।
+reference_note_en: a and b depend on the X-ray series and shell transition. This is an empirical/approximate relation, not a universal constant formula for every spectral line.
+reference_note_bn: a ও b এক্স-রে সিরিজ ও কক্ষ পরিবর্তনের ওপর নির্ভরশীল। এটি পরীক্ষালব্ধ আনুমানিক সম্পর্ক, সব বর্ণরেখার জন্য সর্বজনীন ধ্রুবক নয়।
+related: [hydrogen-energy-levels-bohr, bohr-quantization-angular-momentum]
+tags: [Moseley, atomic number, X-ray spectra, periodic law]
+---
+
+Moseley’s result resolved ordering anomalies that arise if elements are arranged only by atomic mass. The modern periodic table is ordered by increasing nuclear charge, Z.

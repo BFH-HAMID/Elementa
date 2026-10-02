@@ -49,6 +49,7 @@ export const equationFrontmatterSchema = z.object({
   summary_bn: z.string().optional(),
   related: z.array(z.string()).default([]),
   simulation: z.string().optional(),
+  experiment: z.string().optional(),
   tags: z.array(z.string()).default([])
 });
 

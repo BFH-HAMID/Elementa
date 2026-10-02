@@ -7,7 +7,7 @@ import { simulationMetas } from '@/lib/simulations';
 const base = 'https://physchem-lab.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const fixed = ['', '/equations', '/experiments', '/simulations', '/quiz', '/constants', '/bookmarks', '/about'];
+  const fixed = ['', '/physics', '/chemistry', '/equations', '/experiments', '/simulations', '/quiz', '/constants', '/bookmarks', '/about'];
   const dynamic = [
     ...getEquationEntries().map((item) => `/equations/${item.slug}`),
     ...getExperimentEntries().map((item) => `/experiments/${item.slug}`),

@@ -3,13 +3,18 @@ import { ExperimentCard } from '@/components/content/ExperimentCard';
 import { PracticalCatalog } from '@/components/content/PracticalCatalog';
 import { getExperimentEntries } from '@/lib/content';
 
+type SubjectFilter = 'physics' | 'chemistry';
+
 export const metadata: Metadata = {
   title: 'Experiments',
   description: 'Bilingual practical physics and chemistry experiments, with a searchable school and HSC lab index.'
 };
 
-export default function ExperimentsPage() {
-  const experiments = getExperimentEntries();
+export default function ExperimentsPage({ searchParams }: { searchParams?: { subject?: string } }) {
+  const selectedSubject = searchParams?.subject === 'physics' || searchParams?.subject === 'chemistry'
+    ? searchParams.subject as SubjectFilter
+    : undefined;
+  const experiments = getExperimentEntries().filter((experiment) => !selectedSubject || experiment.subject === selectedSubject);
 
   return (
     <section className="page-shell section-space">
@@ -21,7 +26,7 @@ export default function ExperimentsPage() {
         </p>
       </div>
 
-      <PracticalCatalog />
+      <PracticalCatalog initialSubject={selectedSubject ?? 'all'} />
 
       <div className="mt-16">
         <div className="mb-6 max-w-3xl">
@@ -31,9 +36,13 @@ export default function ExperimentsPage() {
             Each guide includes an aim, theory, apparatus, procedure, observation table, calculation, precautions and viva prompts.
           </p>
         </div>
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {experiments.map((experiment) => <ExperimentCard key={experiment.slug} experiment={experiment} />)}
-        </div>
+        {experiments.length > 0 ? (
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {experiments.map((experiment) => <ExperimentCard key={experiment.slug} experiment={experiment} />)}
+          </div>
+        ) : (
+          <p className="card p-6 text-sm muted">No detailed guides have been added for this subject yet.</p>
+        )}
       </div>
     </section>
   );

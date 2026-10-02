@@ -6,9 +6,14 @@ const contentRoot = path.join(root, 'content');
 const output = path.join(root, 'public', 'search-index.json');
 const simulations = [
   ['projectile-motion', 'physics', 'Projectile motion', 'প্রক্ষেপণ গতি'],
+  ['vector-addition', 'physics', 'Vector addition and parallelogram law', 'ভেক্টর যোগ ও সামান্তরিক সূত্র'],
+  ['mass-spring-oscillator', 'physics', 'Mass–spring oscillator', 'স্প্রিং-ভর দোলক'],
+  ['fluid-flow-bernoulli', 'physics', 'Fluid flow: continuity and Bernoulli', 'প্রবাহ, ধারাবাহিকতা ও বার্নৌলি'],
+  ['wheatstone-bridge', 'physics', 'Wheatstone bridge', 'হুইটস্টোন ব্রিজ'],
   ['simple-pendulum', 'physics', 'Simple pendulum', 'সরল দোলক'],
   ['ohms-law-circuit', 'physics', "Ohm's law circuit", 'ওহমের সূত্র সার্কিট'],
   ['wave-interference', 'physics', 'Wave interference', 'তরঙ্গের ব্যতিচার'],
+  ['young-double-slit', 'physics', 'Young’s double-slit experiment', 'ইয়ং-এর দ্বিচির ব্যতিচার'],
   ['newtons-second-law', 'physics', "Newton's second law", 'নিউটনের দ্বিতীয় সূত্র'],
   ['lens-ray-diagram', 'physics', 'Lens ray diagram', 'লেন্সের রশ্মি চিত্র'],
   ['acid-base-titration', 'chemistry', 'Acid–base titration', 'অ্যাসিড–বেস টাইট্রেশন'],

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ChevronDown, FlaskConical, Search, X } from 'lucide-react';
 import { useLocale } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
 import practicalCatalog from '@/content/practical-topics.json';
 import { Badge } from '@/components/ui/Badge';
@@ -11,11 +12,20 @@ import { Tex } from './Tex';
 type SubjectFilter = 'all' | 'physics' | 'chemistry';
 type StageFilter = 'all' | 'school' | 'hsc';
 
-export function PracticalCatalog() {
+export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: SubjectFilter }) {
   const locale = useLocale() as 'bn' | 'en';
+  const router = useRouter();
   const [query, setQuery] = useState('');
-  const [subject, setSubject] = useState<SubjectFilter>('all');
+  const [subject, setSubject] = useState<SubjectFilter>(initialSubject);
   const [stage, setStage] = useState<StageFilter>('all');
+  const updateSubject = (value: SubjectFilter) => {
+    setSubject(value);
+    const params = new URLSearchParams(window.location.search);
+    if (value === 'all') params.delete('subject');
+    else params.set('subject', value);
+    const queryString = params.toString();
+    router.replace(`${window.location.pathname}${queryString ? `?${queryString}` : ''}${window.location.hash}`, { scroll: false });
+  };
   const searchTerm = query.trim().toLocaleLowerCase();
 
   const visibleGroups = useMemo(() => practicalCatalog.groups
@@ -38,7 +48,9 @@ export function PracticalCatalog() {
 
   const visibleCount = visibleGroups.reduce((count, group) => count + group.topics.length, 0);
   const hasFilters = query.length > 0 || subject !== 'all' || stage !== 'all';
-  const clearFilters = () => { setQuery(''); setSubject('all'); setStage('all'); };
+  const clearFilters = () => { setQuery(''); updateSubject('all'); setStage('all'); };
+
+  useEffect(() => setSubject(initialSubject), [initialSubject]);
 
   useEffect(() => {
     const revealHashTarget = () => {
@@ -88,7 +100,7 @@ export function PracticalCatalog() {
             </button>
           )}
         </label>
-        <select value={subject} onChange={(event) => setSubject(event.target.value as SubjectFilter)} className="input" aria-label={locale === 'bn' ? 'বিষয় বাছাই' : 'Filter by subject'}>
+        <select value={subject} onChange={(event) => updateSubject(event.target.value as SubjectFilter)} className="input" aria-label={locale === 'bn' ? 'বিষয় বাছাই' : 'Filter by subject'}>
           <option value="all">{locale === 'bn' ? 'সব বিষয়' : 'All subjects'}</option>
           <option value="physics">{locale === 'bn' ? 'পদার্থবিজ্ঞান' : 'Physics'}</option>
           <option value="chemistry">{locale === 'bn' ? 'রসায়ন' : 'Chemistry'}</option>

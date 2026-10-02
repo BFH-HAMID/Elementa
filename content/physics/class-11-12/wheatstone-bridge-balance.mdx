@@ -1,0 +1,72 @@
+---
+type: experiment
+slug: wheatstone-bridge-balance
+title_bn: হুইটস্টোন সেতুতে অজানা রোধ নির্ণয়
+title_en: Measure an unknown resistance with a Wheatstone bridge
+subject: physics
+level: class-11-12
+aim: Find an unknown resistance by balancing a four-arm Wheatstone bridge and verify the ratio condition.
+aim_bn: চার-বাহু হুইটস্টোন সেতুকে সাম্যাবস্থায় এনে অজানা রোধ নির্ণয় ও অনুপাতের শর্ত যাচাই।
+apparatus:
+  - Wheatstone bridge board or four-arm resistor network
+  - Three known resistors and one unknown resistor
+  - Sensitive galvanometer
+  - Low-voltage DC supply with switch
+  - Connecting leads
+apparatus_bn:
+  - হুইটস্টোন ব্রিজ বোর্ড বা চার-বাহু রোধ নেটওয়ার্ক
+  - তিনটি জানা রোধ ও একটি অজানা রোধ
+  - সংবেদনশীল গ্যালভানোমিটার
+  - সুইচসহ নিম্ন-ভোল্টেজ DC উৎস
+  - সংযোগ তার
+theory: Label the four arms P, Q, R and S. At balance, galvanometer current is zero and the two midpoint potentials are equal; the ratio condition is P/Q=R/S, so S=RQ/P. The bridge is a null method and does not require measuring the galvanometer current accurately.
+theory_bn: চার বাহুকে P, Q, R ও S নাম দিন। সাম্যে গ্যালভানোমিটারের প্রবাহ শূন্য ও দুই মধ্যবিন্দুর বিভব সমান; অনুপাত P/Q=R/S, তাই S=RQ/P। এটি null পদ্ধতি—গ্যালভানোমিটার প্রবাহের মান নির্ভুলভাবে মাপতে হয় না।
+procedure:
+  - Connect the bridge arms and galvanometer following the labelled circuit; keep the supply switch open while wiring.
+  - Choose P, Q and R so the unknown arm is expected to lie within the bridge’s useful range.
+  - Close the switch briefly and adjust the resistance box or sliding contact until the galvanometer shows a null.
+  - Record P, Q and R at balance; open the switch before changing a connection.
+  - Repeat with a second P:Q ratio and compare the calculated unknown resistance.
+procedure_bn:
+  - চিহ্নিত বর্তনী অনুসারে বাহু ও গ্যালভানোমিটার যুক্ত করুন; তার লাগানোর সময় উৎসের সুইচ খোলা রাখুন।
+  - P, Q ও R এমনভাবে বাছুন যাতে অজানা রোধ কার্যকর পরিসরে থাকে।
+  - অল্প সময়ের জন্য সুইচ বন্ধ করে resistance box বা sliding contact বদলে গ্যালভানোমিটারের শূন্য পাঠ খুঁজুন।
+  - সাম্যে P, Q ও R লিখুন; সংযোগ বদলানোর আগে সুইচ খুলুন।
+  - P:Q অনুপাত বদলে পুনরাবৃত্তি করে হিসাব করা অজানা রোধ তুলনা করুন।
+observation_table:
+  headers: [trial, P (Ω), Q (Ω), R (Ω), balance S=RQ/P (Ω), measured unknown (Ω), percentage difference (%) ]
+  rows:
+    - ['1', '100', '100', '150', '150', 'record', 'calculate']
+    - ['2', '200', '100', '150', '75', 'record', 'calculate']
+calculation: At balance, S=RQ/P. For P=100 Ω, Q=100 Ω and R=150 Ω, S=150 Ω. Compare the calculated value with the resistance-box label or a multimeter reading; calculate percentage difference using the reference value.
+calculation_bn: সাম্যে S=RQ/P। P=১০০ Ω, Q=১০০ Ω ও R=১৫০ Ω হলে S=১৫০ Ω। হিসাব করা মানকে রোধ বাক্সের লেখা বা multimeter পাঠের সঙ্গে তুলনা করুন; reference মান ধরে শতকরা পার্থক্য বের করুন।
+precautions:
+  - Use a low supply voltage and close the switch only while taking a reading.
+  - Check galvanometer zero and avoid reversing leads during the trial.
+  - Use resistance values appropriate to the galvanometer’s sensitivity.
+precautions_bn:
+  - কম উৎস ভোল্টেজ নিন এবং পাঠ নেওয়ার সময়ই সুইচ বন্ধ করুন।
+  - গ্যালভানোমিটারের শূন্য পরীক্ষা করুন এবং পরীক্ষার মাঝে তার উল্টাবেন না।
+  - গ্যালভানোমিটারের সংবেদনশীলতার উপযোগী রোধ নিন।
+sources_of_error:
+  - Contact and lead resistance
+  - Galvanometer zero error or limited sensitivity
+  - Heating if the switch remains closed too long
+sources_of_error_bn:
+  - সংযোগস্থল ও তারের রোধ
+  - গ্যালভানোমিটারের শূন্য ত্রুটি বা সীমিত সংবেদনশীলতা
+  - সুইচ দীর্ঘক্ষণ বন্ধ থাকলে উত্তাপ
+viva:
+  - q: Why is this called a null method?
+    a: At balance the detector current is zero; the result comes from a ratio of resistors rather than a calibrated detector reading.
+    q_bn: একে null পদ্ধতি বলা হয় কেন?
+    a_bn: সাম্যে detector-এ প্রবাহ শূন্য; ফল calibrated পাঠের বদলে রোধের অনুপাত থেকে আসে।
+  - q: Does the balance condition depend on the supply voltage?
+    a: No, the ideal balance ratio is independent of the source voltage.
+    q_bn: সাম্য শর্ত কি উৎস ভোল্টেজের ওপর নির্ভর করে?
+    a_bn: না, আদর্শ সাম্য অনুপাত উৎস ভোল্টেজের ওপর নির্ভরশীল নয়।
+simulation: wheatstone-bridge
+tags: [Wheatstone bridge, resistance, null method, practical]
+---
+
+Use the simulation to observe how an unbalanced ratio creates galvanometer current, then adjust one arm until the current returns to zero.

@@ -27,9 +27,21 @@ variables:
     si_unit: N/m
 derivation: A mass attached to an ideal spring trades kinetic and elastic potential energy. The ratio m/k sets the time scale, while the amplitude does not change the ideal period.
 derivation_bn: আদর্শ স্প্রিংয়ে ভর গতিশক্তি ও স্থিতিস্থাপক বিভবশক্তির মধ্যে বিনিময় করে। m/k অনুপাত সময়ের মাত্রা ঠিক করে; আদর্শ ক্ষেত্রে বিস্তার পর্যায়কাল বদলায় না।
+derivation_steps:
+  - step_en: Apply Hooke’s law to a displacement x from equilibrium and use Newton’s second law.
+    step_bn: সাম্যাবস্থা থেকে x সরণে হুকের সূত্র ও নিউটনের দ্বিতীয় সূত্র প্রয়োগ করুন।
+    latex: 'F=-kx=m\\frac{d^2x}{dt^2}'
+  - step_en: Compare the resulting differential equation with the standard SHM equation.
+    step_bn: প্রাপ্ত অন্তরক সমীকরণকে SHM-এর আদর্শ সমীকরণের সঙ্গে তুলনা করুন।
+    latex: '\\frac{d^2x}{dt^2}+\\frac{k}{m}x=0 \\quad\\Longrightarrow\\quad \\omega=\\sqrt{\\frac{k}{m}}'
+  - step_en: Use T = 2π/ω to obtain the period.
+    step_bn: T = 2π/ω ব্যবহার করে পর্যায়কাল নির্ণয় করুন।
+    latex: 'T=2\\pi\\sqrt{\\frac{m}{k}}'
 summary_en: Estimate the period of an ideal mass–spring oscillator.
 summary_bn: আদর্শ ভর–স্প্রিং দোলকের পর্যায়কাল অনুমান করুন।
-related: [projectile-range]
+related: [shm-angular-frequency, shm-velocity-displacement, elastic-potential-energy]
+simulation: mass-spring-oscillator
+experiment: mass-spring-shm
 tags: [oscillation, spring, period]
 ---
 

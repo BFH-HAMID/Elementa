@@ -407,6 +407,17 @@
     "tags": []
   },
   {
+    "slug": "newtons-first-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Newton’s first law of motion",
+    "title_bn": "নিউটনের প্রথম সূত্র বা জড়তার সূত্র",
+    "description_en": "Explain inertia and identify when an object’s velocity remains unchanged.",
+    "description_bn": "জড়তা ব্যাখ্যা করুন এবং কোন অবস্থায় বস্তুর বেগ অপরিবর্তিত থাকে তা নির্ধারণ করুন।",
+    "href": "/equations/newtons-first-law",
+    "tags": []
+  },
+  {
     "slug": "newtons-second-law",
     "kind": "equation",
     "subject": "physics",
@@ -415,6 +426,17 @@
     "description_en": "Connect net force, mass and acceleration in one compact model.",
     "description_bn": "লব্ধি বল, ভর ও ত্বরণকে একটি সহজ মডেলে যুক্ত করুন।",
     "href": "/equations/newtons-second-law",
+    "tags": []
+  },
+  {
+    "slug": "newtons-third-law",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Newton’s third law of motion",
+    "title_bn": "নিউটনের তৃতীয় সূত্র: ক্রিয়া ও প্রতিক্রিয়া",
+    "description_en": "Distinguish action–reaction force pairs and predict their direction and magnitude.",
+    "description_bn": "ক্রিয়া-প্রতিক্রিয়া বল-জোড়া শনাক্ত করে তাদের দিক ও মান নির্ধারণ।",
+    "href": "/equations/newtons-third-law",
     "tags": []
   },
   {
@@ -459,6 +481,17 @@
     "description_en": "Show how hydraulic brakes and jacks multiply force using piston area ratios.",
     "description_bn": "পিস্টনের ক্ষেত্রফলের অনুপাত ব্যবহার করে হাইড্রোলিক যন্ত্রে বল বৃদ্ধির হিসাব।",
     "href": "/equations/pascal-hydraulic-lift",
+    "tags": []
+  },
+  {
+    "slug": "projectile-motion-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Investigate projectile range and launch angle",
+    "title_bn": "প্রক্ষেপণের পাল্লা ও নিক্ষেপ কোণ পরীক্ষা",
+    "description_en": "Measure how the horizontal range of a safely launched ball depends on launch angle while keeping launch speed and landing height fixed.",
+    "description_bn": "নিক্ষেপের বেগ ও পতনের উচ্চতা স্থির রেখে নিরাপদে নিক্ষিপ্ত বলের অনুভূমিক পাল্লা নিক্ষেপ কোণের সঙ্গে কীভাবে বদলায় তা মাপা।",
+    "href": "/experiments/projectile-motion-lab",
     "tags": []
   },
   {
@@ -880,6 +913,17 @@
     "tags": []
   },
   {
+    "slug": "conservation-of-mechanical-energy",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Conservation of mechanical energy",
+    "title_bn": "যান্ত্রিক শক্তির সংরক্ষণ",
+    "description_en": "Show why kinetic and potential energy trade while their total remains fixed in an ideal conservative system.",
+    "description_bn": "আদর্শ সংরক্ষণশীল সিস্টেমে গতিশক্তি ও বিভবশক্তি বিনিময় হলেও মোট যান্ত্রিক শক্তি কেন ধ্রুব থাকে তা প্রমাণ।",
+    "href": "/equations/conservation-of-mechanical-energy",
+    "tags": []
+  },
+  {
     "slug": "coulombs-law-equation",
     "kind": "equation",
     "subject": "physics",
@@ -1171,8 +1215,8 @@
     "subject": "physics",
     "title_en": "Heat, gas laws and thermodynamics",
     "title_bn": "তাপ, গ্যাস সূত্র ও তাপগতিবিদ্যা",
-    "description_en": "Specific heat, latent heat, expansion, gas laws, kinetic theory, first law, Carnot efficiency and conduction.",
-    "description_bn": "আপেক্ষিক তাপ, সুপ্ততাপ, প্রসারণ, গ্যাস সূত্র, গতিতত্ত্ব, প্রথম সূত্র, কার্নো দক্ষতা ও তাপ পরিবহন।",
+    "description_en": "Gas laws, kinetic theory, thermodynamic laws zero through three, heat transfer, cooling and thermal radiation.",
+    "description_bn": "গ্যাস সূত্র, গতিতত্ত্ব, শূন্য থেকে তৃতীয় তাপগতিবিদ্যার সূত্র, তাপ সঞ্চালন, শীতলীকরণ ও তাপীয় বিকিরণ।",
     "href": "/equations/heat-thermodynamics-formula-sheet",
     "tags": []
   },
@@ -1259,8 +1303,8 @@
     "subject": "physics",
     "title_en": "Geometrical and wave optics",
     "title_bn": "জ্যামিতিক ও তরঙ্গ আলোকবিজ্ঞান",
-    "description_en": "Refraction, critical angle, lenses and mirrors, optical power, interference and diffraction gratings.",
-    "description_bn": "প্রতিসরণ, ক্রান্তি কোণ, লেন্স ও দর্পণ, লেন্সের ক্ষমতা, ব্যতিচার ও অপবর্তন গ্রেটিং।",
+    "description_en": "Reflection, refraction, polarisation, lenses and mirrors, optical power, interference and diffraction.",
+    "description_bn": "প্রতিফলন, প্রতিসরণ, মেরুকরণ, লেন্স ও দর্পণ, লেন্সের ক্ষমতা, ব্যতিচার ও অপবর্তন।",
     "href": "/equations/light-optics-formula-sheet",
     "tags": []
   },
@@ -1317,6 +1361,17 @@
     "description_en": "Convert between mass defect and the energy released in nuclear reactions.",
     "description_bn": "ভর ত্রুটি থেকে নিউক্লিয় বিক্রিয়ায় নির্গত শক্তি নির্ণয়।",
     "href": "/equations/mass-energy-equivalence",
+    "tags": []
+  },
+  {
+    "slug": "mass-spring-shm",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Measure the period of a mass–spring oscillator",
+    "title_bn": "স্প্রিং-ভর দোলনের পর্যায়কাল যাচাই",
+    "description_en": "Test T=2π√(m/k) by timing oscillations for several attached masses and estimate the spring constant from a T²–m graph.",
+    "description_bn": "বিভিন্ন সংযুক্ত ভরের দোলনকাল মেপে T=2π√(m/k) যাচাই এবং T²–m লেখচিত্র থেকে স্প্রিং ধ্রুবক নির্ণয়।",
+    "href": "/experiments/mass-spring-shm",
     "tags": []
   },
   {
@@ -1749,6 +1804,50 @@
     "tags": []
   },
   {
+    "slug": "variation-of-g-height-depth",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Variation of g with altitude and depth",
+    "title_bn": "উচ্চতা ও গভীরতার সঙ্গে g-এর পরিবর্তন",
+    "description_en": "Compare how gravity weakens above a planet and toward its centre.",
+    "description_bn": "গ্রহের ওপরের উচ্চতা ও ভেতরের গভীরতার সঙ্গে অভিকর্ষজ ত্বরণ কীভাবে কমে তা তুলনা।",
+    "href": "/equations/variation-of-g-height-depth",
+    "tags": []
+  },
+  {
+    "slug": "vector-addition-force-table",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Verify vector addition with a force table",
+    "title_bn": "বল-টেবিলে ভেক্টর সামান্তরিক সূত্র যাচাই",
+    "description_en": "Verify the parallelogram rule by balancing two known forces with an equilibrant and comparing the measured resultant with the component calculation.",
+    "description_bn": "দুটি জ্ঞাত বলকে একটি সাম্যকারী বল দিয়ে সাম্যাবস্থায় এনে সামান্তরিক সূত্র যাচাই এবং মাপা লব্ধিকে উপাংশের হিসাবের সঙ্গে তুলনা করা।",
+    "href": "/experiments/vector-addition-force-table",
+    "tags": []
+  },
+  {
+    "slug": "vector-addition-parallelogram",
+    "kind": "equation",
+    "subject": "physics",
+    "title_en": "Parallelogram law and resolution of vectors",
+    "title_bn": "ভেক্টর যোগের সামান্তরিক সূত্র ও উপাংশে বিভাজন",
+    "description_en": "Add two vectors graphically or by components, and predict the resultant magnitude and direction.",
+    "description_bn": "সামান্তরিক চিত্র বা উপাংশ পদ্ধতিতে দুটি ভেক্টর যোগ করে লব্ধির মান ও দিক নির্ণয়।",
+    "href": "/equations/vector-addition-parallelogram",
+    "tags": []
+  },
+  {
+    "slug": "venturi-bernoulli",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Investigate continuity and Bernoulli’s principle with a Venturi tube",
+    "title_bn": "ভেঞ্চুরি নলে ধারাবাহিকতা ও বার্নৌলির সূত্র যাচাই",
+    "description_en": "Compare flow speed and static pressure in wide and narrow sections of a Venturi tube and test the continuity and Bernoulli relationships.",
+    "description_bn": "ভেঞ্চুরি নলের প্রশস্ত ও সরু অংশে প্রবাহের বেগ ও স্থিতি চাপ তুলনা করে ধারাবাহিকতা ও বার্নৌলির সম্পর্ক যাচাই।",
+    "href": "/experiments/venturi-bernoulli",
+    "tags": []
+  },
+  {
     "slug": "venturi-flow-meter",
     "kind": "equation",
     "subject": "physics",
@@ -1768,6 +1867,17 @@
     "description_en": "Predict the pitch of a stringed instrument from tension and thickness.",
     "description_bn": "তারের টান ও রৈখিক ঘনত্ব থেকে তাতে সৃষ্ট তরঙ্গের বেগ নির্ণয়।",
     "href": "/equations/wave-velocity-string",
+    "tags": []
+  },
+  {
+    "slug": "wheatstone-bridge-balance",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Measure an unknown resistance with a Wheatstone bridge",
+    "title_bn": "হুইটস্টোন সেতুতে অজানা রোধ নির্ণয়",
+    "description_en": "Find an unknown resistance by balancing a four-arm Wheatstone bridge and verify the ratio condition.",
+    "description_bn": "চার-বাহু হুইটস্টোন সেতুকে সাম্যাবস্থায় এনে অজানা রোধ নির্ণয় ও অনুপাতের শর্ত যাচাই।",
+    "href": "/experiments/wheatstone-bridge-balance",
     "tags": []
   },
   {
@@ -1801,6 +1911,17 @@
     "description_en": "Predict interference fringe spacing and measure wavelength.",
     "description_bn": "ব্যতিচার ডোরার দূরত্ব থেকে আলোর তরঙ্গদৈর্ঘ্য পরিমাপ।",
     "href": "/equations/young-double-slit-fringe-width",
+    "tags": []
+  },
+  {
+    "slug": "young-double-slit-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Measure fringe spacing in Young’s double-slit experiment",
+    "title_bn": "ইয়ং-এর দ্বিচির পরীক্ষায় ঝালরের প্রস্থ মাপা",
+    "description_en": "Measure the fringe width β for coherent light and test β=λD/d by varying screen distance or using a known slit separation.",
+    "description_bn": "সুসঙ্গত আলোয় ঝালর-প্রস্থ β মাপা এবং পর্দার দূরত্ব বদলে বা জানা চির-ব্যবধান নিয়ে β=λD/d যাচাই।",
+    "href": "/experiments/young-double-slit-lab",
     "tags": []
   },
   {
@@ -2046,6 +2167,17 @@
     "tags": []
   },
   {
+    "slug": "chemical-laws-of-combination",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Fundamental laws of chemical combination",
+    "title_bn": "রাসায়নিক সংযোজনের মৌলিক সূত্রসমূহ",
+    "description_en": "A bilingual reference for the five classical laws of chemical combination.",
+    "description_bn": "রাসায়নিক সংযোজনের পাঁচটি ধ্রুপদি সূত্রের দ্বিভাষিক সংক্ষিপ্তসার।",
+    "href": "/equations/chemical-laws-of-combination",
+    "tags": []
+  },
+  {
     "slug": "dilution-equation",
     "kind": "equation",
     "subject": "chemistry",
@@ -2266,6 +2398,17 @@
     "tags": []
   },
   {
+    "slug": "boyle-law-syringe",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Test Boyle’s law with a syringe and pressure sensor",
+    "title_bn": "সিরিঞ্জে বয়েলের সূত্র যাচাই",
+    "description_en": "Test the inverse pressure–volume relationship for a fixed amount of gas while keeping its temperature approximately constant.",
+    "description_bn": "নির্দিষ্ট পরিমাণ গ্যাসের চাপ ও আয়তনের ব্যস্ত সম্পর্ক তাপমাত্রা প্রায় স্থির রেখে যাচাই।",
+    "href": "/experiments/boyle-law-syringe",
+    "tags": []
+  },
+  {
     "slug": "chemical-kinetics-formula-sheet",
     "kind": "equation",
     "subject": "chemistry",
@@ -2282,8 +2425,8 @@
     "subject": "chemistry",
     "title_en": "Chemical thermodynamics",
     "title_bn": "রাসায়নিক তাপগতিবিদ্যা",
-    "description_en": "Heat absorbed, enthalpy, Hess’s law and Gibbs energy for chemical processes.",
-    "description_bn": "শোষিত তাপ, এনথালপি, হেসের সূত্র ও রাসায়নিক প্রক্রিয়ায় গিবস শক্তি।",
+    "description_en": "Heat, enthalpy, internal energy, Hess’s law, the first and second laws, and Gibbs energy.",
+    "description_bn": "তাপ, এনথালপি, অভ্যন্তরীণ শক্তি, হেসের সূত্র, প্রথম ও দ্বিতীয় সূত্র এবং গিবস শক্তি।",
     "href": "/equations/chemical-thermodynamics-formula-sheet",
     "tags": []
   },
@@ -2332,6 +2475,17 @@
     "tags": []
   },
   {
+    "slug": "electron-configuration-principles",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Aufbau, Pauli exclusion and Hund’s rules",
+    "title_bn": "ইলেকট্রন বিন্যাসের আউফবাউ, পাউলি ও হুন্ড নীতি",
+    "description_en": "A concise reference for the three rules used to write ground-state electron configurations.",
+    "description_bn": "ভূমিস্তরের ইলেকট্রন বিন্যাস লেখার তিনটি প্রধান নীতির সংক্ষিপ্ত নির্দেশিকা।",
+    "href": "/equations/electron-configuration-principles",
+    "tags": []
+  },
+  {
     "slug": "elevation-of-boiling-point",
     "kind": "equation",
     "subject": "chemistry",
@@ -2340,6 +2494,17 @@
     "description_en": "Calculate how much a dissolved solute raises a solvent’s boiling point.",
     "description_bn": "দ্রবীভূত দ্রাব দ্রাবকের স্ফুটনাঙ্ক কতটা বাড়ায় তা নির্ণয়।",
     "href": "/equations/elevation-of-boiling-point",
+    "tags": []
+  },
+  {
+    "slug": "enthalpy-internal-energy-relation",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Enthalpy and internal-energy relation for gases",
+    "title_bn": "এনথালপি ও অভ্যন্তরীণ শক্তির সম্পর্ক",
+    "description_en": "Convert between reaction enthalpy and internal-energy change when ideal gases are involved.",
+    "description_bn": "আদর্শ গ্যাস জড়িত বিক্রিয়ায় এনথালপি ও অভ্যন্তরীণ শক্তির পরিবর্তনের মধ্যে রূপান্তর।",
+    "href": "/equations/enthalpy-internal-energy-relation",
     "tags": []
   },
   {
@@ -2387,6 +2552,17 @@
     "tags": []
   },
   {
+    "slug": "gibbs-free-energy-enthalpy-entropy",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Gibbs free energy from enthalpy and entropy",
+    "title_bn": "এনথালপি ও এনট্রপি থেকে গিবস মুক্তশক্তি",
+    "description_en": "Use enthalpy and entropy changes to assess thermodynamic favourability at a stated temperature.",
+    "description_bn": "নির্দিষ্ট তাপমাত্রায় এনথালপি ও এনট্রপি পরিবর্তন থেকে তাপগতীয় অনুকূলতা বিচার।",
+    "href": "/equations/gibbs-free-energy-enthalpy-entropy",
+    "tags": []
+  },
+  {
     "slug": "gibbs-free-energy-equilibrium",
     "kind": "equation",
     "subject": "chemistry",
@@ -2395,6 +2571,17 @@
     "description_en": "Link thermodynamic driving force to the position of equilibrium.",
     "description_bn": "তাপগতীয় চালিকা শক্তি ও সাম্যাবস্থার অবস্থানের মধ্যে সম্পর্ক স্থাপন।",
     "href": "/equations/gibbs-free-energy-equilibrium",
+    "tags": []
+  },
+  {
+    "slug": "grahams-law-effusion",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Graham’s law of effusion",
+    "title_bn": "গ্রাহামের নিঃসরণ সূত্র",
+    "description_en": "Predict which gas effuses faster through a tiny opening at the same temperature.",
+    "description_bn": "একই তাপমাত্রায় ক্ষুদ্র ছিদ্র দিয়ে কোন গ্যাস দ্রুত নিঃসৃত হবে তা নির্ণয়।",
+    "href": "/equations/grahams-law-effusion",
     "tags": []
   },
   {
@@ -2483,6 +2670,17 @@
     "description_en": "Convert conductivity readings into concentration-normalised values.",
     "description_bn": "পরিবাহিতা পরিমাপকে ঘনমাত্রা-স্বাভাবিকীকৃত মানে রূপান্তর।",
     "href": "/equations/molar-conductivity",
+    "tags": []
+  },
+  {
+    "slug": "moseley-law",
+    "kind": "equation",
+    "subject": "chemistry",
+    "title_en": "Moseley’s law of characteristic X-rays",
+    "title_bn": "মোসলের সূত্র",
+    "description_en": "Relate the frequency of characteristic X-rays to atomic number and explain the modern periodic order.",
+    "description_bn": "বৈশিষ্ট্যপূর্ণ এক্স-রের কম্পাঙ্কের সঙ্গে পারমাণবিক সংখ্যার সম্পর্ক এবং আধুনিক পর্যায়ক্রমের ভিত্তি ব্যাখ্যা।",
+    "href": "/equations/moseley-law",
     "tags": []
   },
   {
@@ -3202,6 +3400,96 @@
     ]
   },
   {
+    "slug": "physics-vector-addition-force-table-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Parallelogram law of vector addition",
+    "title_bn": "ভেক্টর যোগের সামান্তরিক সূত্র",
+    "description_en": "Balance two known forces with an equilibrant on a level force table; compare the measured resultant with its components.",
+    "description_bn": "সমতল force table-এ দুটি জানা বলকে সাম্যকারী বল দিয়ে সাম্যাবস্থায় এনে মাপা লব্ধিকে উপাংশের সঙ্গে তুলনা করুন।",
+    "href": "/experiments#lab-physics-vector-addition-force-table-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Mechanics"
+    ]
+  },
+  {
+    "slug": "physics-projectile-range-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Projectile range versus launch angle",
+    "title_bn": "নিক্ষেপ কোণের সঙ্গে প্রক্ষেপণের পাল্লা",
+    "description_en": "Keep launcher speed and launch/landing heights fixed, repeat range readings and compare complementary angles.",
+    "description_bn": "নিক্ষেপ বেগ ও নিক্ষেপ-পতনের উচ্চতা স্থির রেখে পাল্লা বারবার মাপুন এবং পরিপূরক কোণ তুলনা করুন।",
+    "href": "/experiments#lab-physics-projectile-range-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Mechanics"
+    ]
+  },
+  {
+    "slug": "physics-mass-spring-shm-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Mass–spring oscillation period",
+    "title_bn": "ভর-স্প্রিং দোলনের পর্যায়কাল",
+    "description_en": "Time many cycles for different attached masses and estimate the spring constant from a T²–m graph.",
+    "description_bn": "বিভিন্ন সংযুক্ত ভরে বহু দোলনের সময় নিন এবং T²–m লেখচিত্র থেকে স্প্রিং ধ্রুবক বের করুন।",
+    "href": "/experiments#lab-physics-mass-spring-shm-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Oscillations"
+    ]
+  },
+  {
+    "slug": "physics-venturi-bernoulli-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Venturi tube: continuity and Bernoulli",
+    "title_bn": "ভেঞ্চুরি নল: ধারাবাহিকতা ও বার্নৌলি",
+    "description_en": "Measure flow and manometer heads in wide and narrow tube sections; identify pressure losses from viscosity.",
+    "description_bn": "নলের প্রশস্ত ও সরু অংশে প্রবাহ এবং ম্যানোমিটারের উচ্চতা মাপুন; সান্দ্রতার চাপ-ক্ষয় শনাক্ত করুন।",
+    "href": "/experiments#lab-physics-venturi-bernoulli-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Fluid mechanics"
+    ]
+  },
+  {
+    "slug": "physics-wheatstone-bridge-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Unknown resistance with a Wheatstone bridge",
+    "title_bn": "হুইটস্টোন সেতুতে অজানা রোধ",
+    "description_en": "Use a galvanometer null to balance four arms and calculate the unknown resistance from the ratio.",
+    "description_bn": "গ্যালভানোমিটারের শূন্য পাঠে চার বাহু সাম্য করে অনুপাত থেকে অজানা রোধ বের করুন।",
+    "href": "/experiments#lab-physics-wheatstone-bridge-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Electricity"
+    ]
+  },
+  {
+    "slug": "physics-young-double-slit-hsc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Young’s double-slit fringe spacing",
+    "title_bn": "ইয়ং-এর দ্বিচির ঝালরের ব্যবধান",
+    "description_en": "Measure several fringe intervals for coherent monochromatic light; compare β=λD/d and observe how spacing changes with D.",
+    "description_bn": "সুসঙ্গত একরঙা আলোয় একাধিক ঝালর-ব্যবধান মাপুন; β=λD/d মিলিয়ে D বদলালে ব্যবধানের পরিবর্তন দেখুন।",
+    "href": "/experiments#lab-physics-young-double-slit-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Optics"
+    ]
+  },
+  {
     "slug": "chemistry-lab-safety-apparatus-school",
     "kind": "experiment",
     "subject": "chemistry",
@@ -3832,6 +4120,21 @@
     ]
   },
   {
+    "slug": "chemistry-boyle-law-hsc",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Boyle’s law with a gas syringe",
+    "title_bn": "গ্যাস সিরিঞ্জে বয়েলের সূত্র",
+    "description_en": "For a fixed amount of air, change volume slowly, correct gauge pressure to absolute pressure and compare PV.",
+    "description_bn": "নির্দিষ্ট বায়ু ধীরে সংকুচিত করে gauge চাপকে absolute চাপে রূপান্তর করুন এবং PV তুলনা করুন।",
+    "href": "/experiments#lab-chemistry-boyle-law-hsc",
+    "tags": [
+      "practical",
+      "hsc",
+      "Gases"
+    ]
+  },
+  {
     "slug": "projectile-motion",
     "kind": "simulation",
     "subject": "physics",
@@ -3840,6 +4143,50 @@
     "description_en": "Interactive browser simulation",
     "description_bn": "ইন্টার‌্যাক্টিভ ব্রাউজার সিমুলেশন",
     "href": "/simulations/projectile-motion",
+    "tags": []
+  },
+  {
+    "slug": "vector-addition",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Vector addition and parallelogram law",
+    "title_bn": "ভেক্টর যোগ ও সামান্তরিক সূত্র",
+    "description_en": "Interactive browser simulation",
+    "description_bn": "ইন্টার‌্যাক্টিভ ব্রাউজার সিমুলেশন",
+    "href": "/simulations/vector-addition",
+    "tags": []
+  },
+  {
+    "slug": "mass-spring-oscillator",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Mass–spring oscillator",
+    "title_bn": "স্প্রিং-ভর দোলক",
+    "description_en": "Interactive browser simulation",
+    "description_bn": "ইন্টার‌্যাক্টিভ ব্রাউজার সিমুলেশন",
+    "href": "/simulations/mass-spring-oscillator",
+    "tags": []
+  },
+  {
+    "slug": "fluid-flow-bernoulli",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Fluid flow: continuity and Bernoulli",
+    "title_bn": "প্রবাহ, ধারাবাহিকতা ও বার্নৌলি",
+    "description_en": "Interactive browser simulation",
+    "description_bn": "ইন্টার‌্যাক্টিভ ব্রাউজার সিমুলেশন",
+    "href": "/simulations/fluid-flow-bernoulli",
+    "tags": []
+  },
+  {
+    "slug": "wheatstone-bridge",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Wheatstone bridge",
+    "title_bn": "হুইটস্টোন ব্রিজ",
+    "description_en": "Interactive browser simulation",
+    "description_bn": "ইন্টার‌্যাক্টিভ ব্রাউজার সিমুলেশন",
+    "href": "/simulations/wheatstone-bridge",
     "tags": []
   },
   {
@@ -3873,6 +4220,17 @@
     "description_en": "Interactive browser simulation",
     "description_bn": "ইন্টার‌্যাক্টিভ ব্রাউজার সিমুলেশন",
     "href": "/simulations/wave-interference",
+    "tags": []
+  },
+  {
+    "slug": "young-double-slit",
+    "kind": "simulation",
+    "subject": "physics",
+    "title_en": "Young’s double-slit experiment",
+    "title_bn": "ইয়ং-এর দ্বিচির ব্যতিচার",
+    "description_en": "Interactive browser simulation",
+    "description_bn": "ইন্টার‌্যাক্টিভ ব্রাউজার সিমুলেশন",
+    "href": "/simulations/young-double-slit",
     "tags": []
   },
   {

@@ -36,7 +36,8 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
   const isReference = equation.reference_formulas.length > 0;
   const related = equation.related.map((slug) => getEquationBySlug(slug)).filter((item) => item !== undefined).slice(0, 3);
   const simulation = equation.simulation ? getSimulationMeta(equation.simulation) : undefined;
-  const hasSidebar = equation.calculator || Boolean(simulation);
+  const hasCalculator = equation.interactive;
+  const hasSidebar = hasCalculator || Boolean(simulation);
 
   return (
     <section className="page-shell section-space">
@@ -56,6 +57,7 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
                 <Badge tone={equation.subject === 'physics' ? 'physics' : 'chemistry'}>{equation.subject === 'physics' ? 'Physics' : 'Chemistry'}</Badge>
                 <Badge>{formatLevel(equation.level, locale)}</Badge>
                 <Badge>{locale === 'bn' ? equation.chapter_bn ?? equation.chapter : equation.chapter}</Badge>
+                {equation.derivation_steps.length > 0 && <Badge>{locale === 'bn' ? 'প্রতিপাদনসহ' : 'Step-by-step derivation'}</Badge>}
               </div>
               <h1 className="text-3xl font-black tracking-tight sm:text-4xl">{title}</h1>
               <p className="text-sm leading-6 muted">
@@ -129,9 +131,39 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
           )}
 
           <Card>
-            <CardHeader><CardTitle>{locale === 'bn' ? 'উৎপত্তি ও ধারণা' : 'Derivation & intuition'}</CardTitle></CardHeader>
-            <CardBody>
+            <CardHeader>
+              <CardTitle>{locale === 'bn' ? 'প্রতিপাদন ও ধারণা' : 'Derivation & intuition'}</CardTitle>
+            </CardHeader>
+            <CardBody className="space-y-4">
               <p className="text-sm leading-7 muted">{locale === 'bn' ? equation.derivation_bn ?? equation.derivation : equation.derivation}</p>
+              {equation.derivation_steps.length > 0 && (
+                <div className="space-y-3 pt-2">
+                  <h3 className="text-xs font-black uppercase tracking-widest text-physics-600 dark:text-physics-200">
+                    {locale === 'bn' ? 'ধাপে ধাপে গাণিতিক প্রতিপাদন' : 'Step-by-step mathematical derivation'}
+                  </h3>
+                  <ol className="space-y-3">
+                    {equation.derivation_steps.map((step, index) => (
+                      <li key={index} className="rounded-2xl border border-[var(--line)] bg-[var(--surface-soft)] p-4">
+                        <div className="flex items-start gap-3">
+                          <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-physics-600 text-xs font-black text-white">
+                            {index + 1}
+                          </span>
+                          <div className="min-w-0 flex-1 space-y-2">
+                            <p className="text-sm font-medium leading-6">
+                              {locale === 'bn' ? step.step_bn : step.step_en}
+                            </p>
+                            {step.latex && (
+                              <div className="equation-display rounded-xl bg-[var(--surface)] px-3 py-2">
+                                <Tex latex={step.latex} />
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
               {equation.body && <MdxArticle source={equation.body} />}
             </CardBody>
           </Card>
@@ -139,7 +171,7 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
 
         {hasSidebar && (
           <aside className="space-y-5 lg:sticky lg:top-24">
-            {equation.calculator && <Calculator equation={equation} />}
+            {hasCalculator && <Calculator equation={equation} />}
             {simulation && (
               <Link href={`/${locale}/simulations/${simulation.slug}`} className="group block rounded-2xl border border-chemistry-200 bg-chemistry-50 p-4 transition hover:-translate-y-0.5 dark:border-chemistry-700 dark:bg-chemistry-900/50">
                 <div className="flex items-center gap-3">

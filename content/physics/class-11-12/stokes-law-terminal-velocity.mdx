@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "stokes-law-terminal-velocity"
+title_bn: "স্টোকসের সূত্র ও প্রান্তীয় বেগ"
+title_en: "Stokes’ law and terminal velocity"
+subject: physics
+level: class-11-12
+chapter: "Viscosity and Flow"
+chapter_bn: "সান্দ্রতা ও প্রবাহ"
+latex: "F_d = 6\\pi\\eta r v, \\qquad v_t = \\frac{2r^2(\\rho_s - \\rho_f)g}{9\\eta}"
+calculator: false
+variables:
+  - symbol: "F_d"
+    name: "viscous drag force"
+    name_bn: "সান্দ্র টান বল"
+    unit: "N"
+    si_unit: "N"
+  - symbol: "η"
+    name: "fluid viscosity"
+    name_bn: "প্রবাহীর সান্দ্রতা"
+    unit: "Pa s"
+    si_unit: "Pa s"
+  - symbol: "r"
+    name: "radius of the sphere"
+    name_bn: "গোলকের ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "v_t"
+    name: "terminal velocity"
+    name_bn: "প্রান্তীয় বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "ρ_s"
+    name: "sphere density"
+    name_bn: "গোলকের ঘনত্ব"
+    unit: "kg/m³"
+    si_unit: "kg/m³"
+derivation: "Dimensional analysis of creeping flow past a sphere gives drag proportional to ηrv; the exact coefficient 6π comes from solving the linearised Navier–Stokes equations. Terminal velocity follows by balancing drag plus buoyancy against weight."
+derivation_bn: "অতি মন্থর প্রবাহে গোলকের ওপর সান্দ্র টান মাত্রাবিশ্লেষণ অনুযায়ী ηrv-এর সমানুপাতিক; রৈখিক নেভিয়ার-স্টোকস সমাধানে ধ্রুবক ৬π পাওয়া যায়। প্রান্তীয় বেগে ওজন, প্লবতা ও সান্দ্র টান সাম্যাবস্থায় থাকে।"
+derivation_steps:
+  - step_en: "Postulate the drag law with a dimensionless constant k, later evaluated as 6π."
+    step_bn: "মাত্রাবিশ্লেষণ হতে টান বলের রূপ কল্পনা করুন; পরে ধ্রুবক ৬π পাওয়া যায়।"
+    latex: "F_d = k\\,\\eta\\, r\\, v \\implies F_d = 6\\pi\\eta r v"
+  - step_en: "At terminal velocity, weight equals buoyancy (Archimedes) plus viscous drag."
+    step_bn: "প্রান্তীয় বেগে ওজন = প্লবতা + সান্দ্র টান।"
+    latex: "\\frac{4}{3}\\pi r^3 \\rho_s g = \\frac{4}{3}\\pi r^3 \\rho_f g + 6\\pi\\eta r v_t"
+  - step_en: "Collect the density difference, cancel πr and solve for v_t."
+    step_bn: "ঘনত্বের পার্থক্য নিন, πr বাতিল করে v_t নির্ণয় করুন।"
+    latex: "v_t = \\frac{2r^2(\\rho_s - \\rho_f)g}{9\\eta}"
+summary_en: "Predict the settling speed of small spheres, droplets or sediments."
+summary_bn: "ক্ষুদ্র গোলক, ফোঁটা বা পলির সান্দ্র মাধ্যমে থিতানোর বেগ নির্ণয়।"
+related: ["newtons-law-of-viscosity", "archimedes-buoyant-force"]
+tags: ["stokes law", "terminal velocity", "viscosity", "sedimentation"]
+---
+
+Stokes’ law requires laminar flow ($Re \lesssim 1$) and a sphere far from any container wall.

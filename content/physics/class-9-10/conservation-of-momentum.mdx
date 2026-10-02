@@ -1,0 +1,61 @@
+---
+type: equation
+slug: "conservation-of-momentum"
+title_bn: "ভরবেগের সংরক্ষণ সূত্র"
+title_en: "Law of conservation of linear momentum"
+subject: physics
+level: class-9-10
+chapter: "Force"
+chapter_bn: "বল"
+latex: "m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2"
+calculator: false
+variables:
+  - symbol: "m_1"
+    name: "mass of first body"
+    name_bn: "প্রথম বস্তুর ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "m_2"
+    name: "mass of second body"
+    name_bn: "দ্বিতীয় বস্তুর ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "u_1"
+    name: "initial velocity of first body"
+    name_bn: "প্রথম বস্তুর আদি বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "u_2"
+    name: "initial velocity of second body"
+    name_bn: "দ্বিতীয় বস্তুর আদি বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "v_1"
+    name: "final velocity of first body"
+    name_bn: "প্রথম বস্তুর শেষ বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "v_2"
+    name: "final velocity of second body"
+    name_bn: "দ্বিতীয় বস্তুর শেষ বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+derivation: "During a collision between two isolated bodies, Newton’s third law guarantees equal and opposite interaction forces over the same contact time, so total momentum before and after collision remains equal."
+derivation_bn: "বাহ্যিক বল ক্রিয়া না করলে সংঘর্ষের সময় নিউটনের তৃতীয় সূত্রানুসারে ক্রিয়া ও প্রতিক্রিয়া বল সমান ও বিপরীতমুখী হয়; ফলে সংঘর্ষের পূর্বে ও পরে মোট রৈখিক ভরবেগ অপরিবর্তিত থাকে।"
+derivation_steps:
+  - step_en: "By Newton’s third law, the force exerted by body 1 on body 2 is equal and opposite to that of body 2 on body 1."
+    step_bn: "নিউটনের তৃতীয় সূত্রানুসারে সংঘর্ষকালে ক্রিয়ারত বলদ্বয় সমান ও বিপরীতমুখী।"
+    latex: "F_{12} = -F_{21}"
+  - step_en: "Express each force as the rate of change of momentum over the common collision time t."
+    step_bn: "সংঘর্ষকাল t-এর জন্য উভয় বস্তুর ভরবেগের পরিবর্তনের হার বসান।"
+    latex: "\\frac{m_1 v_1 - m_1 u_1}{t} = -\\frac{m_2 v_2 - m_2 u_2}{t}"
+  - step_en: "Cancel t and group initial and final momenta on opposite sides."
+    step_bn: "সময় t বর্জন করে আদি ও শেষ ভরবেগ পৃথক পাশে সাজিয়ে লিখুন।"
+    latex: "m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2"
+summary_en: "Analyze collisions and explosions when net external force on a system is zero."
+summary_bn: "বাহ্যিক বল শূন্য হলে সংঘর্ষের আগে ও পরে মোট ভরবেগের সমতা বিশ্লেষণ।"
+related: ["impulse-momentum-theorem", "rocket-recoil-velocity", "elastic-collision-velocities"]
+tags: ["conservation", "momentum", "collision", "newton third law"]
+---
+
+Conservation of linear momentum holds in both elastic and inelastic collisions provided the system is isolated from external forces.

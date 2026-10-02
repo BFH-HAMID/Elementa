@@ -1,0 +1,48 @@
+---
+type: equation
+slug: "pascal-hydraulic-lift"
+title_bn: "প্যাসকেলের সূত্র ও হাইড্রোলিক প্রেস"
+title_en: "Pascal’s law and hydraulic force multiplication"
+subject: physics
+level: class-9-10
+chapter: "State of Matter and Pressure"
+chapter_bn: "পদার্থের অবস্থা ও চাপ"
+latex: "\\frac{F_1}{A_1} = \\frac{F_2}{A_2} \\implies F_2 = F_1\\frac{A_2}{A_1}"
+calculator: false
+variables:
+  - symbol: "F_1"
+    name: "force on small piston"
+    name_bn: "ছোট পিস্টনে প্রযুক্ত বল"
+    unit: "N"
+    si_unit: "N"
+  - symbol: "A_1"
+    name: "area of small piston"
+    name_bn: "ছোট পিস্টনের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+  - symbol: "F_2"
+    name: "force on large piston"
+    name_bn: "বড় পিস্টনে প্রাপ্ত বল"
+    unit: "N"
+    si_unit: "N"
+  - symbol: "A_2"
+    name: "area of large piston"
+    name_bn: "বড় পিস্টনের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+derivation: "By Pascal’s principle, pressure applied to an enclosed incompressible fluid is transmitted undiminished to every portion of the fluid, equating the pressures at both pistons."
+derivation_bn: "প্যাসকেলের সূত্রানুসারে আবদ্ধ তরলে প্রযুক্ত চাপ সবদিকে সমানভাবে সঞ্চালিত হয়। তাই ছোট পিস্টনের চাপ এবং বড় পিস্টনের চাপ পরস্পর সমান হয়।"
+derivation_steps:
+  - step_en: "Write the pressure at the input piston and output piston at the same fluid level."
+    step_bn: "উভয় পিস্টনে প্রযুক্ত ও প্রাপ্ত চাপের রাশিমালা লিখুন।"
+    latex: "P_1 = \\frac{F_1}{A_1}, \\qquad P_2 = \\frac{F_2}{A_2}"
+  - step_en: "By Pascal’s principle, equate P_1 and P_2 and solve for output force F_2."
+    step_bn: "প্যাসকেলের নীতি অনুসারে P_1 = P_2 ধরে F_2 নির্ণয় করুন।"
+    latex: "\\frac{F_1}{A_1} = \\frac{F_2}{A_2} \\implies F_2 = F_1\\frac{A_2}{A_1}"
+summary_en: "Show how hydraulic brakes and jacks multiply force using piston area ratios."
+summary_bn: "পিস্টনের ক্ষেত্রফলের অনুপাত ব্যবহার করে হাইড্রোলিক যন্ত্রে বল বৃদ্ধির হিসাব।"
+related: ["pressure", "mechanical-advantage"]
+tags: ["pascal", "hydraulics", "pressure", "fluid"]
+---
+
+Although force is multiplied by $A_2/A_1$, volume conservation ($A_1 d_1 = A_2 d_2$) ensures that work output never exceeds work input.

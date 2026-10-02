@@ -1,0 +1,61 @@
+---
+type: equation
+slug: "clausius-clapeyron-equation"
+title_bn: "ক্লসিয়াস-ক্ল্যাপিরন সমীকরণ"
+title_en: "Clausius–Clapeyron equation"
+subject: chemistry
+level: class-11-12
+chapter: "States of Matter"
+chapter_bn: "পদার্থের অবস্থা"
+latex: "\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)"
+calculator: false
+variables:
+  - symbol: "P_1"
+    name: "vapour pressure at T_1"
+    name_bn: "T_1 তাপমাত্রায় বাষ্পচাপ"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "P_2"
+    name: "vapour pressure at T_2"
+    name_bn: "T_2 তাপমাত্রায় বাষ্পচাপ"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "ΔH_vap"
+    name: "enthalpy of vaporisation"
+    name_bn: "বাষ্পীভবন এনথালপি"
+    unit: "J/mol"
+    si_unit: "J/mol"
+  - symbol: "R"
+    name: "molar gas constant"
+    name_bn: "মোলার গ্যাস ধ্রুবক"
+    unit: "J/(mol K)"
+    si_unit: "J/(mol K)"
+  - symbol: "T_1"
+    name: "absolute temperature of state 1"
+    name_bn: "প্রথম অবস্থার পরম তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "T_2"
+    name: "absolute temperature of state 2"
+    name_bn: "দ্বিতীয় অবস্থার পরম তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+derivation: "The exact Clapeyron equation dP/dT = ΔH/(TΔV) simplifies when the vapour is treated as an ideal gas and the liquid volume is neglected. Integrating the resulting d(ln P)/dT = ΔH_vap/(RT²) between two states gives the log ratio."
+derivation_bn: "সঠিক ক্ল্যাপিরন সমীকরণ dP/dT = ΔH/(TΔV) কে সরল করা যায় যখন বাষ্পকে আদর্শ গ্যাস ধরা হয় এবং তরলের আয়তন উপেক্ষা করা হয়। প্রাপ্ত d(ln P)/dT = ΔH_vap/(RT²) সমাকলন করলে লগ অনুপাতের রূপ পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Neglect the liquid molar volume against the gas volume in the Clapeyron equation."
+    step_bn: "ক্ল্যাপিরন সমীকরণে গ্যাসীয় আয়তনের তুলনায় তরলের মোলার আয়তন উপেক্ষা করুন।"
+    latex: "\\frac{dP}{dT} = \\frac{\\Delta H_{\\text{vap}}}{T\\Delta V} \\approx \\frac{\\Delta H_{\\text{vap}} P}{RT^2}"
+  - step_en: "Rearrange into a logarithmic derivative."
+    step_bn: "লগারিদমীয় অন্তরজে রূপান্তর করুন।"
+    latex: "\\frac{d\\ln P}{dT} = \\frac{\\Delta H_{\\text{vap}}}{RT^2}"
+  - step_en: "Integrate between (P_1, T_1) and (P_2, T_2) assuming constant ΔH_vap."
+    step_bn: "ধ্রুব ΔH_vap ধরে (P_1, T_1) ও (P_2, T_2)-এর মধ্যে সমাকলন করুন।"
+    latex: "\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)"
+summary_en: "Predict how vapour pressure changes with temperature."
+summary_bn: "তাপমাত্রার সাথে বাষ্পচাপের পরিবর্তন এবং বাষ্পীভবন তাপ নির্ণয়।"
+related: ["raoults-law", "ideal-gas-law", "gas-laws-formula-sheet"]
+tags: ["clausius clapeyron", "vapour pressure", "enthalpy", "phase equilibrium"]
+---
+
+A plot of $\ln P$ against $1/T$ is straight, with slope $-\Delta H_{\text{vap}}/R$.

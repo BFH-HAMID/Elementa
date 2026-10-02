@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "heisenberg-uncertainty-principle"
+title_bn: "হাইজেনবার্গের অনিশ্চয়তা নীতি"
+title_en: "Heisenberg uncertainty principle"
+subject: physics
+level: honours
+chapter: "Quantum Mechanics"
+chapter_bn: "কোয়ান্টাম মেকানিক্স"
+latex: "\\Delta x\\,\\Delta p_x \\geq \\frac{\\hbar}{2}, \\qquad \\Delta E\\,\\Delta t \\geq \\frac{\\hbar}{2}"
+calculator: false
+variables:
+  - symbol: "Δx"
+    name: "position uncertainty"
+    name_bn: "অবস্থানের অনিশ্চয়তা"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "Δp_x"
+    name: "momentum uncertainty"
+    name_bn: "ভরবেগের অনিশ্চয়তা"
+    unit: "kg m/s"
+    si_unit: "kg m/s"
+  - symbol: "ħ"
+    name: "reduced Planck constant"
+    name_bn: "হ্রাসকৃত প্ল্যাঙ্ক ধ্রুবক"
+    unit: "J s"
+    si_unit: "J s"
+  - symbol: "ΔE"
+    name: "energy uncertainty"
+    name_bn: "শক্তির অনিশ্চয়তা"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "Δt"
+    name: "time interval of the measurement"
+    name_bn: "পরিমাপের সময় ব্যবধান"
+    unit: "s"
+    si_unit: "s"
+derivation: "Position and momentum are Fourier-conjugate variables, so their wavefunctions cannot both be sharply localised. Applying the Cauchy–Schwarz inequality to the non-commuting operators gives the lower bound ħ/2."
+derivation_bn: "অবস্থান ও ভরবেগ ফুরিয়ে-সংযুগ্ম চলক, তাই তরঙ্গ অপেক্ষক একই সাথে উভয় দিকেই সুসংকুচিত হতে পারে না। অ-বিনিময়যোগ্য অপারেটরে কশি-শোয়ার্জ অসমতা প্রয়োগ করলে ħ/2 নিম্নসীমা পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the commutator of the position and momentum operators."
+    step_bn: "অবস্থান ও ভরবেগ অপারেটরের কমিউটেটর লিখুন।"
+    latex: "[\\hat{x},\\hat{p}_x] = i\\hbar"
+  - step_en: "Apply the general uncertainty relation ΔA ΔB ≥ ½|⟨[A,B]⟩|."
+    step_bn: "সাধারণ অনিশ্চয়তা সম্পর্ক ΔA ΔB ≥ ½|⟨[A,B]⟩| প্রয়োগ করুন।"
+    latex: "\\Delta x\\,\\Delta p_x \\geq \\frac{1}{2}|\\langle i\\hbar\\rangle| = \\frac{\\hbar}{2}"
+  - step_en: "By analogous reasoning for energy and time, obtain the second form."
+    step_bn: "শক্তি ও সময়ের জন্য অনুরূপ যুক্তিতে দ্বিতীয় রূপটি পান।"
+    latex: "\\Delta E\\,\\Delta t \\geq \\frac{\\hbar}{2}"
+summary_en: "Quantify the fundamental limit on simultaneous position–momentum knowledge."
+summary_bn: "একই সাথে অবস্থান ও ভরবেগ জানার মৌলিক সীমা নির্ণয়।"
+related: ["schrodinger-equation", "de-broglie-wavelength", "particle-in-box-energy"]
+tags: ["uncertainty principle", "quantum", "commutator", "honours"]
+---
+
+This is a property of quantum states, not a limitation of measuring instruments.

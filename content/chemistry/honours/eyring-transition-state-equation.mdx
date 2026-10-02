@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "eyring-transition-state-equation"
+title_bn: "আইরিং-এর অন্তর্বর্তী অবস্থা সমীকরণ"
+title_en: "Eyring transition-state rate equation"
+subject: chemistry
+level: honours
+chapter: "Chemical Kinetics"
+chapter_bn: "রাসায়নিক গতিবিদ্যা"
+latex: "k = \\frac{k_B T}{h}e^{-\\Delta G^{\\ddagger}/RT} = \\frac{k_B T}{h}e^{\\Delta S^{\\ddagger}/R}e^{-\\Delta H^{\\ddagger}/RT}"
+calculator: false
+variables:
+  - symbol: "k"
+    name: "rate constant"
+    name_bn: "হার ধ্রুবক"
+    unit: "s⁻¹"
+    si_unit: "s⁻¹"
+  - symbol: "k_B"
+    name: "Boltzmann constant"
+    name_bn: "বোলটজমান ধ্রুবক"
+    unit: "J/K"
+    si_unit: "J/K"
+  - symbol: "ΔG‡"
+    name: "activation Gibbs energy"
+    name_bn: "সক্রিয়ন গিবস শক্তি"
+    unit: "J/mol"
+    si_unit: "J/mol"
+  - symbol: "ΔH‡"
+    name: "activation enthalpy"
+    name_bn: "সক্রিয়ন এনথালপি"
+    unit: "J/mol"
+    si_unit: "J/mol"
+derivation: "Treating the activated complex as being in quasi-equilibrium with reactants and crossing the barrier with a universal frequency k_BT/h converts the equilibrium constant of activation into a rate constant."
+derivation_bn: "সক্রিয়িত সমবায়কে বিক্রিয়কের সাথে আধা-সাম্যাবস্থায় ধরে এবং বাধা অতিক্রমের সার্বজনীন কম্পাঙ্ক k_BT/h ব্যবহার করলে সক্রিয়নের সাম্য ধ্রুবক হার ধ্রুবকে রূপান্তরিত হয়।"
+derivation_steps:
+  - step_en: "Write the quasi-equilibrium constant for forming the activated complex."
+    step_bn: "সক্রিয়িত সমবায় গঠনের আধা-সাম্য ধ্রুবক লিখুন."
+    latex: "K^{\\ddagger} = e^{-\\Delta G^{\\ddagger}/RT}"
+  - step_en: "Multiply by the universal barrier-crossing frequency k_BT/h."
+    step_bn: "সার্বজনীন বাধা-অতিক্রম কম্পাঙ্ক k_BT/h দ্বারা গুণ করুন।"
+    latex: "k = \\frac{k_B T}{h}K^{\\ddagger}"
+  - step_en: "Expand ΔG‡ = ΔH‡ − TΔS‡ to separate enthalpic and entropic contributions."
+    step_bn: "ΔG‡ = ΔH‡ − TΔS‡ বিস্তৃত করে এনথালপিক ও এনট্রপিক অবদান আলাদা করুন।"
+    latex: "k = \\frac{k_B T}{h}e^{\\Delta S^{\\ddagger}/R}e^{-\\Delta H^{\\ddagger}/RT}"
+summary_en: "Connect rate constants to activation enthalpy and entropy."
+summary_bn: "হার ধ্রুবককে সক্রিয়ন এনথালপি ও এনট্রপির সাথে সম্পর্কিত করুন।"
+related: ["arrhenius-equation", "boltzmann-distribution", "chemical-kinetics-formula-sheet"]
+tags: ["eyring", "transition state", "activation parameters", "honours"]
+---
+
+A plot of $\ln(k/T)$ against $1/T$ yields $-\Delta H^{\ddagger}/R$ as its slope.

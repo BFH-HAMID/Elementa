@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "transformer-equation"
+title_bn: "ট্রান্সফরমারের সমীকরণ"
+title_en: "Ideal transformer voltage and current ratios"
+subject: physics
+level: class-11-12
+chapter: "Alternating Current"
+chapter_bn: "পরিবর্তী প্রবাহ"
+latex: "\\frac{V_s}{V_p} = \\frac{N_s}{N_p} = \\frac{I_p}{I_s}"
+calculator: false
+variables:
+  - symbol: "V_s"
+    name: "secondary voltage"
+    name_bn: "গৌণ ভোল্টেজ"
+    unit: "V"
+    si_unit: "V"
+  - symbol: "V_p"
+    name: "primary voltage"
+    name_bn: "প্রাথমিক ভোল্টেজ"
+    unit: "V"
+    si_unit: "V"
+  - symbol: "N_s"
+    name: "secondary turns"
+    name_bn: "গৌণ কুণ্ডলীর পাক সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "N_p"
+    name: "primary turns"
+    name_bn: "প্রাথমিক কুণ্ডলীর পাক সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "I_p"
+    name: "primary current"
+    name_bn: "প্রাথমিক প্রবাহমাত্রা"
+    unit: "A"
+    si_unit: "A"
+derivation: "Faraday’s law makes the induced emf per turn identical on both windings of an ideal core, so voltages scale with turn counts. Energy conservation for a lossless transformer then forces the inverse current ratio."
+derivation_bn: "আদর্শ কোরে ফ্যারাডের সূত্র অনুযায়ী প্রতি পাকে আবিষ্ট emf সমান, তাই ভোল্টেজ পাক সংখ্যার অনুপাতে স্কেল করে। ক্ষতিহীন ট্রান্সফরমারে শক্তি সংরক্ষণের জন্য প্রবাহের অনুপাত বিপরীত হয়।"
+derivation_steps:
+  - step_en: "Apply Faraday’s law to each winding sharing the same core flux."
+    step_bn: "একই কোর ফ্লাক্সের সাথে যুক্ত প্রতিটি কুণ্ডলীতে ফ্যারাডের সূত্র প্রয়োগ করুন।"
+    latex: "V_p = N_p\\frac{d\\Phi_B}{dt}, \\qquad V_s = N_s\\frac{d\\Phi_B}{dt}"
+  - step_en: "Divide the two equations; dΦ_B/dt cancels."
+    step_bn: "দুই সমীকরণ ভাগ করলে dΦ_B/dt বাতিল হয়।"
+    latex: "\\frac{V_s}{V_p} = \\frac{N_s}{N_p}"
+  - step_en: "For an ideal transformer input and output power are equal, giving the current ratio."
+    step_bn: "আদর্শ ট্রান্সফরমারে প্রদত্ত ও প্রাপ্ত ক্ষমতা সমান, ফলে প্রবাহের অনুপাত পাওয়া যায়।"
+    latex: "V_p I_p = V_s I_s \\implies \\frac{I_p}{I_s} = \\frac{N_s}{N_p}"
+summary_en: "Design step-up and step-down transformers for power distribution."
+summary_bn: "বিদ্যুৎ বিতরণে স্টেপ-আপ ও স্টেপ-ডাউন ট্রান্সফরমারের হিসাব।"
+related: ["ac-rms-values", "motional-emf", "joules-heating-law"]
+tags: ["transformer", "mutual induction", "power distribution", "turns ratio"]
+---
+
+Transmission networks step voltage up to reduce current and hence cut $I^2R$ losses dramatically.

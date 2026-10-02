@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "lens-makers-equation"
+title_bn: "লেন্স প্রস্তুতকারীর সূত্র"
+title_en: "Lens maker’s formula"
+subject: physics
+level: class-11-12
+chapter: "Optics"
+chapter_bn: "আলোকবিজ্ঞান"
+latex: "\\frac{1}{f} = (n - 1)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)"
+calculator: false
+variables:
+  - symbol: "f"
+    name: "focal length of the lens"
+    name_bn: "লেন্সের ফোকাস দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "n"
+    name: "refractive index of lens material"
+    name_bn: "লেন্সের উপাদানের প্রতিসরণাঙ্ক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "R_1"
+    name: "radius of first surface"
+    name_bn: "প্রথম পৃষ্ঠের বক্রতার ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "R_2"
+    name: "radius of second surface"
+    name_bn: "দ্বিতীয় পৃষ্ঠের বক্রতার ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+derivation: "Applying the single refracting-surface formula twice, once at each surface of a thin lens, and adding the two contributions gives the reciprocal focal length in terms of the surface curvatures."
+derivation_bn: "পাতলা লেন্সের প্রতিটি পৃষ্ঠে একক প্রতিসারক তলের সূত্র প্রয়োগ করে দুই অবদান যোগ করলে পৃষ্ঠের বক্রতার মাধ্যমে ফোকাস দূরত্বের ব্যস্তানুপাত পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the refraction formula at a single spherical surface from medium n_1 to n_2."
+    step_bn: "একক গোলীয় তলে n_1 থেকে n_2 মাধ্যমে প্রতিসরণের সূত্র লিখুন।"
+    latex: "\\frac{n_2}{v} - \\frac{n_1}{u} = \\frac{n_2 - n_1}{R}"
+  - step_en: "Apply it at the first surface (air to glass) and then at the second (glass to air)."
+    step_bn: "প্রথম পৃষ্ঠে (বায়ু→কাঁচ) ও দ্বিতীয় পৃষ্ঠে (কাঁচ→বায়ু) প্রয়োগ করুন।"
+    latex: "\\frac{n}{v_1} - \\frac{1}{u} = \\frac{n - 1}{R_1}, \\qquad \\frac{1}{v} - \\frac{n}{v_1} = \\frac{1 - n}{R_2}"
+  - step_en: "Add the two equations and set u → ∞ so that v = f."
+    step_bn: "দুই সমীকরণ যোগ করুন এবং u → ∞ বসিয়ে v = f ধরুন।"
+    latex: "\\frac{1}{f} = (n - 1)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)"
+summary_en: "Predict the focal length of a lens from its shape and glass index."
+summary_bn: "লেন্সের আকৃতি ও কাঁচের প্রতিসরণাঙ্ক থেকে ফোকাস দূরত্ব নির্ণয়।"
+related: ["lens-formula", "lens-power-equation", "prism-minimum-deviation"]
+tags: ["lens maker", "optics", "focal length", "refraction"]
+---
+
+Signs of $R_1$ and $R_2$ follow the Cartesian convention: a centre of curvature on the outgoing side gives positive $R$.

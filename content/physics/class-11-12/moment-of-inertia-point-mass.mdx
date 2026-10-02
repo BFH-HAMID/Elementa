@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "moment-of-inertia-point-mass"
+title_bn: "বিন্দু ভরের জড়তার ভ্রামক"
+title_en: "Moment of inertia of a point mass"
+subject: physics
+level: class-11-12
+chapter: "Rotational Motion"
+chapter_bn: "ঘূর্ণন গতি"
+latex: "I = mr^2 = \\sum_i m_i r_i^2 = \\int r^2\\,dm"
+calculator: false
+variables:
+  - symbol: "I"
+    name: "moment of inertia"
+    name_bn: "জড়তার ভ্রামক"
+    unit: "kg m²"
+    si_unit: "kg m²"
+  - symbol: "m"
+    name: "mass of the particle"
+    name_bn: "কণার ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "r"
+    name: "perpendicular distance from axis"
+    name_bn: "অক্ষ থেকে লম্ব দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+derivation: "The moment of inertia measures rotational sluggishness by weighting each mass element by the square of its distance from the rotation axis; the continuous limit replaces the sum by an integral."
+derivation_bn: "ঘূর্ণন অক্ষ থেকে প্রতিটি ভর উপাদানের দূরত্বের বর্গ দ্বারা ভরকে গুণ করে যে রাশি পাওয়া যায় তা জড়তার ভ্রামক। অবিচ্ছিন্ন বস্তুর ক্ষেত্রে সমষ্টির পরিবর্তে সমাকলন ব্যবহার করা হয়।"
+derivation_steps:
+  - step_en: "Write the rotational inertia of a single particle as mass times squared radius."
+    step_bn: "একটি কণার ঘূর্ণন জড়তাকে ভর ও দূরত্বের বর্গের গুণফল হিসেবে লিখুন।"
+    latex: "I = mr^2"
+  - step_en: "For a system of discrete particles, sum the individual contributions."
+    step_bn: "বিচ্ছিন্ন কণা-সমষ্টির ক্ষেত্রে পৃথক অবদানের যোগফল নিন।"
+    latex: "I = \\sum_i m_i r_i^2"
+  - step_en: "In the continuous limit replace the sum by a volume integral using dm = ρ dV."
+    step_bn: "অবিচ্ছিন্ন বস্তুর ক্ষেত্রে যোগফলের পরিবর্তে সমাকলন ব্যবহার করুন।"
+    latex: "I = \\int r^2\\,dm = \\int \\rho r^2\\,dV"
+summary_en: "Compute the rotational inertia of simple bodies about a chosen axis."
+summary_bn: "নির্দিষ্ট অক্ষের সাপেক্ষে বস্তুর জড়তার ভ্রামক নির্ণয়।"
+related: ["torque-angular-acceleration", "parallel-axis-theorem", "rotational-kinetic-energy"]
+tags: ["moment of inertia", "rotation", "rigid body"]
+---
+
+Standard results include a thin ring $I = MR^2$ and a uniform solid disc $I = \frac{1}{2}MR^2$ about the central perpendicular axis.

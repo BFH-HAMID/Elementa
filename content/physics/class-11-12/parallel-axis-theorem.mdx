@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "parallel-axis-theorem"
+title_bn: "সমান্তরাল অক্ষ উপপাদ্য"
+title_en: "Parallel-axis theorem for moment of inertia"
+subject: physics
+level: class-11-12
+chapter: "Rotational Motion"
+chapter_bn: "ঘূর্ণন গতি"
+latex: "I = I_{\\text{cm}} + Md^2"
+calculator: false
+variables:
+  - symbol: "I"
+    name: "moment of inertia about any parallel axis"
+    name_bn: "যেকোনো সমান্তরাল অক্ষের সাপেক্ষে জড়তার ভ্রামক"
+    unit: "kg m²"
+    si_unit: "kg m²"
+  - symbol: "I_cm"
+    name: "moment of inertia about centre-of-mass axis"
+    name_bn: "ভরকেন্দ্রীয় অক্ষের সাপেক্ষে জড়তার ভ্রামক"
+    unit: "kg m²"
+    si_unit: "kg m²"
+  - symbol: "M"
+    name: "total mass of the body"
+    name_bn: "বস্তুর মোট ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "d"
+    name: "separation between the axes"
+    name_bn: "দুই অক্ষের মধ্যবর্তী দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+derivation: "Shifting the reference axis by a vector d and expanding r² = |r_cm + d|² in the integral shows that the cross term vanishes because the centre-of-mass position average is zero."
+derivation_bn: "সমাকলনে সরণ ভেক্টর d যোগ করে r² = |r_cm + d|² বিস্তৃত করলে মধ্যবর্তী পদটি শূন্য হয়, কারণ ভরকেন্দ্রের সাপেক্ষে গড় অবস্থান শূন্য। ফলে উপপাদ্যটি প্রতিপাদিত হয়।"
+derivation_steps:
+  - step_en: "Write the moment of inertia about a displaced axis at separation d."
+    step_bn: "d দূরত্বে সরানো অক্ষের সাপেক্ষে জড়তার ভ্রামকের সমাকলন লিখুন।"
+    latex: "I = \\int |\\vec{r}_{\\text{cm}} + \\vec{d}|^2\\,dm"
+  - step_en: "Expand the squared magnitude into three separate terms."
+    step_bn: "বর্গ বিস্তৃত করে তিনটি পৃথক সমাকলনে ভাগ করুন।"
+    latex: "I = \\int r_{\\text{cm}}^2\\,dm + 2\\vec{d}\\cdot\\int \\vec{r}_{\\text{cm}}\\,dm + d^2\\int dm"
+  - step_en: "The middle term vanishes because Σm r_cm = 0 about the centre of mass, leaving the theorem."
+    step_bn: "ভরকেন্দ্রে ∫r_cm dm = 0 হওয়ায় মধ্যপদ শূন্য হয় এবং উপপাদ্য পাওয়া যায়।"
+    latex: "I = I_{\\text{cm}} + Md^2"
+summary_en: "Shift a known centre-of-mass moment of inertia to any parallel axis."
+summary_bn: "ভরকেন্দ্রীয় অক্ষের জড়তার ভ্রামক থেকে যেকোনো সমান্তরাল অক্ষের মান নির্ণয়।"
+related: ["moment-of-inertia-point-mass", "rotational-kinetic-energy"]
+tags: ["parallel axis theorem", "moment of inertia", "rigid body"]
+---
+
+The perpendicular-axis theorem complements this for plane laminae: $I_z = I_x + I_y$.

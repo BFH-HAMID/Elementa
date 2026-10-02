@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "rotational-kinetic-energy"
+title_bn: "ঘূর্ণন গতিশক্তি"
+title_en: "Rotational kinetic energy of a rigid body"
+subject: physics
+level: class-11-12
+chapter: "Rotational Motion"
+chapter_bn: "ঘূর্ণন গতি"
+latex: "E_{\\text{rot}} = \\frac{1}{2}I\\omega^2 = \\frac{L^2}{2I}"
+calculator: false
+variables:
+  - symbol: "E_rot"
+    name: "rotational kinetic energy"
+    name_bn: "ঘূর্ণন গতিশক্তি"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "I"
+    name: "moment of inertia"
+    name_bn: "জড়তার ভ্রামক"
+    unit: "kg m²"
+    si_unit: "kg m²"
+  - symbol: "ω"
+    name: "angular velocity"
+    name_bn: "কৌণিক বেগ"
+    unit: "rad/s"
+    si_unit: "rad/s"
+  - symbol: "L"
+    name: "angular momentum"
+    name_bn: "কৌণিক ভরবেগ"
+    unit: "kg m²/s"
+    si_unit: "kg m²/s"
+derivation: "Summing the translational kinetic energy ½mv² of every particle with v = rω gives ½(Σmr²)ω² = ½Iω²."
+derivation_bn: "দৃঢ় বস্তুর প্রতিটি কণার গতিশক্তি ½m v² যোগ করে v = rω বসালে ½(Σmr²)ω² = ½Iω² প্রতিপাদন করা যায়।"
+derivation_steps:
+  - step_en: "Write the total kinetic energy as the sum over all constituent particles."
+    step_bn: "সকল কণার গতিশক্তির সমষ্টি লিখুন।"
+    latex: "E_{\\text{rot}} = \\sum_i \\frac{1}{2}m_i v_i^2"
+  - step_en: "Substitute the rigid-body relation v_i = r_i ω."
+    step_bn: "দৃঢ় বস্তুর শর্ত v_i = r_i ω বসান।"
+    latex: "E_{\\text{rot}} = \\frac{1}{2}\\left(\\sum_i m_i r_i^2\\right)\\omega^2 = \\frac{1}{2}I\\omega^2"
+  - step_en: "Substitute L = Iω to express energy in terms of angular momentum."
+    step_bn: "L = Iω ব্যবহার করে শক্তিকে কৌণিক ভরবেগের মাধ্যমে প্রকাশ করুন।"
+    latex: "E_{\\text{rot}} = \\frac{L^2}{2I}"
+summary_en: "Find the energy of a spinning flywheel or rolling body."
+summary_bn: "ঘূর্ণায়মান ফ্লাইহুইল বা গড়িয়ে যাওয়া বস্তুর ঘূর্ণন শক্তি নির্ণয়।"
+related: ["kinetic-energy", "rolling-without-slipping", "moment-of-inertia-point-mass"]
+tags: ["rotational energy", "kinetic energy", "flywheel", "rotation"]
+---
+
+For a body rolling without slipping, total kinetic energy is $\frac{1}{2}Mv^2 + \frac{1}{2}I_{\text{cm}}\omega^2$.

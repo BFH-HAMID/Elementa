@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "kinetic-theory-pressure"
+title_bn: "গতীয় তত্ত্বে গ্যাসের চাপ"
+title_en: "Kinetic theory expression for gas pressure"
+subject: physics
+level: class-11-12
+chapter: "Kinetic Theory of Gases"
+chapter_bn: "গ্যাসের গতীয় তত্ত্ব"
+latex: "P = \\frac{1}{3}\\rho\\overline{c^2} = \\frac{1}{3}\\frac{Nm\\overline{c^2}}{V}"
+calculator: false
+variables:
+  - symbol: "P"
+    name: "gas pressure"
+    name_bn: "গ্যাসের চাপ"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "ρ"
+    name: "gas density"
+    name_bn: "গ্যাসের ঘনত্ব"
+    unit: "kg/m³"
+    si_unit: "kg/m³"
+  - symbol: "c̄²"
+    name: "mean square molecular speed"
+    name_bn: "আণবিক বেগের বর্গের গড়"
+    unit: "m²/s²"
+    si_unit: "m²/s²"
+  - symbol: "N"
+    name: "number of molecules"
+    name_bn: "অণুর সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "V"
+    name: "container volume"
+    name_bn: "পাত্রের আয়তন"
+    unit: "m³"
+    si_unit: "m³"
+derivation: "Molecules striking a wall elastically reverse their normal velocity component, transferring momentum 2mc_x. Counting collisions per unit time per unit area and averaging over the three equivalent directions gives P = ⅓ρc̄²."
+derivation_bn: "পাত্রের দেয়ালে স্থিতিস্থাপক সংঘর্ষে অণু তার স্বাভাবিক উপাংশের 2mc_x ভরবেগ স্থানান্তর করে। একক সময়ে একক ক্ষেত্রফলে সংঘর্ষ গণনা করে তিনটি সমতুল্য দিকের গড় নিলে P = ⅓ρc̄² পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Momentum change per wall collision of a molecule with velocity component c_x is 2mc_x."
+    step_bn: "c_x উপাংশবিশিষ্ট অণুর প্রতি সংঘর্ষে ভরবেগের পরিবর্তন লিখুন।"
+    latex: "\\Delta p = 2mc_x"
+  - step_en: "Count the collisions on area A in time Δt as ½(n A c_x Δt), giving force per molecule class."
+    step_bn: "Δt সময়ে A ক্ষেত্রফলে সংঘর্ষ সংখ্যা ½(n A c_x Δt) গণনা করে বল নির্ণয় করুন।"
+    latex: "F = \\frac{\\Delta p}{\\Delta t} = \\frac{2mc_x \\cdot \\frac{1}{2}n A c_x \\Delta t}{\\Delta t} = n m c_x^2 A"
+  - step_en: "Average over all molecules and use c² = c_x² + c_y² + c_z² with isotropic motion."
+    step_bn: "সব অণুর গড় নিন এবং সমদৈশিক গতিতে c² = c_x² + c_y² + c_z² ব্যবহার করুন।"
+    latex: "P = \\frac{F}{A} = \\frac{1}{3}nm\\overline{c^2} = \\frac{1}{3}\\rho\\overline{c^2}"
+summary_en: "Derive gas pressure from the momentum transfer of moving molecules."
+summary_bn: "অণুগুলোর ভরবেগ স্থানান্তর থেকে গ্যাসের চাপের উৎপত্তি নির্ণয়।"
+related: ["rms-speed-gas", "average-kinetic-energy-molecule", "ideal-gas-law"]
+tags: ["kinetic theory", "pressure", "molecular motion", "gas"]
+---
+
+This microscopic result reproduces the ideal-gas law when combined with the average molecular kinetic energy.

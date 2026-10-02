@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "depression-of-freezing-point"
+title_bn: "হিমাঙ্কের অবনমন"
+title_en: "Depression of freezing point"
+subject: chemistry
+level: class-11-12
+chapter: "Colligative Properties"
+chapter_bn: "সমষ্টিগত ধর্ম"
+latex: "\\Delta T_f = i K_f m"
+calculator: false
+variables:
+  - symbol: "ΔT_f"
+    name: "freezing-point depression"
+    name_bn: "হিমাঙ্ক অবনমন"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "i"
+    name: "van’t Hoff factor"
+    name_bn: "ভ্যান্ট হফ গুণক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "K_f"
+    name: "cryoscopic constant"
+    name_bn: "হিমাঙ্ক অবনমন ধ্রুবক"
+    unit: "K kg/mol"
+    si_unit: "K kg/mol"
+  - symbol: "m"
+    name: "molality of solution"
+    name_bn: "দ্রবণের মোলালিটি"
+    unit: "mol/kg"
+    si_unit: "mol/kg"
+derivation: "Freezing occurs when the chemical potentials of solvent in solution and in the solid are equal. Adding solute lowers the solvent’s chemical potential, so a lower temperature is needed; the shift is proportional to molality."
+derivation_bn: "জমাট বাঁধে যখন দ্রবণে ও কঠিনে দ্রাবকের রাসায়নিক বিভব সমান হয়। দ্রাব যোগ করলে দ্রাবকের রাসায়নিক বিভব কমে, তাই কম তাপমাত্রা প্রয়োজন; এই সরণ মোলালিটির সমানুপাতিক।"
+derivation_steps:
+  - step_en: "Set equality of chemical potentials for the solvent in solution and pure solid."
+    step_bn: "দ্রবণে ও বিশুদ্ধ কঠিনে দ্রাবকের রাসায়নিক বিভবের সমতা লিখুন।"
+    latex: "\\mu_{\\text{solid}} = \\mu_{\\text{solution}} = \\mu^\\circ + RT\\ln x_{\\text{solvent}}"
+  - step_en: "Differentiate with respect to T and use ΔH_fus for the solid–liquid balance."
+    step_bn: "T-এর সাপেক্ষে অন্তরীকরণ করুন এবং কঠিন-তরল ভারসাম্যে ΔH_fus ব্যবহার করুন।"
+    latex: "\\Delta T_f = \\frac{R T_f^2 M_{\\text{solvent}}}{\\Delta H_{\\text{fus}}}\\,m"
+  - step_en: "Collapse constants into K_f and include the van’t Hoff factor."
+    step_bn: "ধ্রুবকগুলো K_f-এ একত্রিত করুন এবং ভ্যান্ট হফ গুণক যোগ করুন।"
+    latex: "\\Delta T_f = i K_f m"
+summary_en: "Explain why salt melts ice and find molar mass from freezing data."
+summary_bn: "লবণ কেন বরফ গলায় তা ব্যাখ্যা করুন এবং হিমাঙ্ক থেকে মোলার ভর নির্ণয় করুন।"
+related: ["elevation-of-boiling-point", "raoults-law", "solutions-formula-sheet"]
+tags: ["freezing point depression", "cryoscopy", "colligative", "de-icing"]
+---
+
+Water has $K_f \approx 1.86\ \text{K kg mol}^{-1}$, which is why road salt works below 0 °C.

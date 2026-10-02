@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "keplers-third-law"
+title_bn: "কেপলারের তৃতীয় সূত্র"
+title_en: "Kepler’s third law of planetary motion"
+subject: physics
+level: class-11-12
+chapter: "Gravitation"
+chapter_bn: "মহাকর্ষ"
+latex: "T^2 = \\frac{4\\pi^2 r^3}{GM} \\propto r^3"
+calculator: false
+variables:
+  - symbol: "T"
+    name: "orbital period"
+    name_bn: "আবর্তনকাল"
+    unit: "s"
+    si_unit: "s"
+  - symbol: "r"
+    name: "semi-major axis of orbit"
+    name_bn: "কক্ষপথের অর্ধ-প্রধান অক্ষ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "G"
+    name: "gravitational constant"
+    name_bn: "মহাকর্ষীয় ধ্রুবক"
+    unit: "N m²/kg²"
+    si_unit: "N m²/kg²"
+  - symbol: "M"
+    name: "mass of the central body"
+    name_bn: "কেন্দ্রীয় বস্তুর ভর"
+    unit: "kg"
+    si_unit: "kg"
+derivation: "Using the orbital speed v = 2πr/T in the centripetal–gravitational balance gives T² proportional to r³ with a constant depending only on the central mass."
+derivation_bn: "কক্ষীয় বেগ v = 2πr/T কে মহাকর্ষ-কেন্দ্রমুখী সমীকরণে বসালে T² ∝ r³ সম্পর্ক পাওয়া যায়, যেখানে ধ্রুবকটি কেবল কেন্দ্রীয় ভরের ওপর নির্ভরশীল।"
+derivation_steps:
+  - step_en: "Write the gravitational–centripetal balance for a circular orbit."
+    step_bn: "বৃত্তীয় কক্ষপথের জন্য মহাকর্ষ-কেন্দ্রমুখী ভারসাম্য লিখুন।"
+    latex: "\\frac{GMm}{r^2} = \\frac{mv^2}{r}"
+  - step_en: "Substitute the orbital speed v = 2πr/T."
+    step_bn: "কক্ষীয় বেগ v = 2πr/T প্রতিস্থাপন করুন।"
+    latex: "\\frac{GM}{r^2} = \\frac{4\\pi^2 r}{T^2}"
+  - step_en: "Rearrange to isolate T² and identify the proportionality."
+    step_bn: "পক্ষান্তর করে T²-এর রাশি ও r³-এর সমানুপাতিক সম্পর্ক পান।"
+    latex: "T^2 = \\frac{4\\pi^2}{GM}r^3 \\implies T^2 \\propto r^3"
+summary_en: "Compare the periods of planets, moons or satellites from their orbital radii."
+summary_bn: "গ্রহ, উপগ্রহ বা কৃত্রিম স্যাটেলাইটের কক্ষীয় ব্যাসার্ধ থেকে আবর্তনকাল নির্ণয়।"
+related: ["newtons-law-of-gravitation", "orbital-velocity-satellite"]
+tags: ["kepler", "orbital period", "gravitation", "astronomy"]
+---
+
+The dimensionless form $\dfrac{T_1^2}{T_2^2} = \dfrac{r_1^3}{r_2^3}$ lets you compare any two orbits around the same central body.

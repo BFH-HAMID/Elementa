@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "bulk-modulus"
+title_bn: "আয়তন গুণাঙ্ক"
+title_en: "Bulk modulus of a fluid or solid"
+subject: physics
+level: class-11-12
+chapter: "Elasticity"
+chapter_bn: "স্থিতিস্থাপকতা"
+latex: "K = -\\frac{\\Delta P}{\\Delta V/V} = -V\\frac{dP}{dV}"
+calculator: false
+variables:
+  - symbol: "K"
+    name: "bulk modulus"
+    name_bn: "আয়তন গুণাঙ্ক"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "ΔP"
+    name: "change in pressure"
+    name_bn: "চাপের পরিবর্তন"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "ΔV"
+    name: "change in volume"
+    name_bn: "আয়তনের পরিবর্তন"
+    unit: "m³"
+    si_unit: "m³"
+  - symbol: "V"
+    name: "original volume"
+    name_bn: "আদি আয়তন"
+    unit: "m³"
+    si_unit: "m³"
+derivation: "Volumetric strain is the fractional change in volume caused by a uniform pressure change. The bulk modulus is the ratio of the applied pressure change to the resulting volumetric strain, with a minus sign because volume falls as pressure rises."
+derivation_bn: "সকল দিকে সমান চাপ প্রয়োগে আয়তনের আপেক্ষিক পরিবর্তনকে আয়তন বিকৃতি বলে। চাপ বাড়লে আয়তন কমে, তাই চাপ-বৃদ্ধি ও আয়তন-বিকৃতির অনুপাতে ঋণাত্মক চিহ্ন যোগ করা হয়।"
+derivation_steps:
+  - step_en: "Define volume stress as the excess pressure ΔP applied uniformly."
+    step_bn: "সর্বদিকে সমানভাবে প্রযুক্ত অতিরিক্ত চাপ ΔP-কে আয়তন পীড়ন ধরুন।"
+    latex: "\\text{volume stress} = \\Delta P"
+  - step_en: "Define volume strain as the fractional change ΔV/V, negative for compression."
+    step_bn: "আয়তন বিকৃতিকে ΔV/V হিসেবে লিখুন; সংকোচনে এটি ঋণাত্মক।"
+    latex: "\\text{volume strain} = \\frac{\\Delta V}{V}"
+  - step_en: "Take the negative ratio so that the modulus itself is positive."
+    step_bn: "ঋণাত্মক অনুপাত নিন যাতে গুণাঙ্কের মান ধনাত্মক হয়।"
+    latex: "K = -\\frac{\\Delta P}{\\Delta V/V}"
+summary_en: "Measure a material’s resistance to uniform compression."
+summary_bn: "সর্বদিকে সমান চাপে বস্তুর আয়তন কমার প্রতিরোধ ক্ষমতা নির্ণয়।"
+related: ["youngs-modulus-equation", "shear-modulus", "compressibility-fluid"]
+tags: ["bulk modulus", "elasticity", "compression", "fluid"]
+---
+
+Compressibility is the reciprocal of the bulk modulus: $\beta = 1/K$. Water has a very large bulk modulus, which is why hydraulic systems use it.

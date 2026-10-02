@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "gravitational-potential-energy-general"
+title_bn: "সাধারণ মহাকর্ষীয় বিভবশক্তি"
+title_en: "General gravitational potential energy"
+subject: physics
+level: class-11-12
+chapter: "Gravitation"
+chapter_bn: "মহাকর্ষ"
+latex: "U = -\\frac{GMm}{r}"
+calculator: false
+variables:
+  - symbol: "U"
+    name: "gravitational potential energy"
+    name_bn: "মহাকর্ষীয় বিভবশক্তি"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "G"
+    name: "gravitational constant"
+    name_bn: "মহাকর্ষীয় ধ্রুবক"
+    unit: "N m²/kg²"
+    si_unit: "N m²/kg²"
+  - symbol: "M"
+    name: "source mass"
+    name_bn: "উৎস ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "m"
+    name: "test mass"
+    name_bn: "পরীক্ষাধীন ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "r"
+    name: "separation between centres"
+    name_bn: "কেন্দ্রের মধ্যবর্তী দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+derivation: "Integrating the gravitational force from infinity to separation r, with the zero of potential defined at infinite separation, yields a negative potential energy reflecting that gravity is attractive."
+derivation_bn: "মহাকর্ষীয় বলকে অসীম থেকে r দূরত্ব পর্যন্ত সমাকলন করে এবং অসীম দূরত্বে বিভবশক্তি শূন্য ধরে নিলে ঋণাত্মক মান পাওয়া যায়, যা নির্দেশ করে মহাকর্ষ বল আকর্ষণধর্মী।"
+derivation_steps:
+  - step_en: "Write the work done by an external agent in bringing mass m from infinity to r against the attractive force."
+    step_bn: "অসীম থেকে r পর্যন্ত ভর m আনতে বাহ্যিক কর্তৃপক্ষের কৃতকাজ লিখুন।"
+    latex: "U(r) = -\\int_{\\infty}^{r} \\vec{F}\\cdot d\\vec{r}' = -\\int_{\\infty}^{r}\\left(-\\frac{GMm}{r'^2}\\right)dr'"
+  - step_en: "Evaluate the integral of 1/r²."
+    step_bn: "1/r²-এর সমাকলন সমাধান করুন।"
+    latex: "U(r) = GMm\\int_{\\infty}^{r} \\frac{dr'}{r'^2} = GMm\\left[-\\frac{1}{r'}\\right]_{\\infty}^{r}"
+  - step_en: "Apply limits, noting that the term at infinity vanishes."
+    step_bn: "সীমা প্রয়োগ করুন; অসীমে পদটি শূন্য হয়।"
+    latex: "U(r) = -\\frac{GMm}{r}"
+summary_en: "Compute the binding energy of a satellite or planet in a gravitational field."
+summary_bn: "মহাকর্ষীয় ক্ষেত্রে উপগ্রহ বা গ্রহের বন্ধন শক্তি নির্ণয়।"
+related: ["gravitational-field-strength", "escape-velocity", "orbital-velocity-satellite"]
+tags: ["potential energy", "gravitation", "binding energy", "negative energy"]
+---
+
+The negative sign means the system is bound: energy must be supplied to separate the masses to infinity.

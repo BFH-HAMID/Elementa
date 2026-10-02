@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "particle-in-box-energy"
+title_bn: "একমাত্রিক বাক্সে কণার শক্তিস্তর"
+title_en: "Energy levels of a particle in a one-dimensional box"
+subject: physics
+level: honours
+chapter: "Quantum Mechanics"
+chapter_bn: "কোয়ান্টাম মেকানিক্স"
+latex: "E_n = \\frac{n^2 h^2}{8mL^2}, \\qquad \\psi_n = \\sqrt{\\frac{2}{L}}\\sin\\frac{n\\pi x}{L}"
+calculator: false
+variables:
+  - symbol: "E_n"
+    name: "energy of nth level"
+    name_bn: "n-তম স্তরের শক্তি"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "n"
+    name: "quantum number"
+    name_bn: "কোয়ান্টাম সংখ্যা"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "h"
+    name: "Planck constant"
+    name_bn: "প্ল্যাঙ্ক ধ্রুবক"
+    unit: "J s"
+    si_unit: "J s"
+  - symbol: "m"
+    name: "mass of the particle"
+    name_bn: "কণার ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "L"
+    name: "width of the box"
+    name_bn: "বাক্সের প্রস্থ"
+    unit: "m"
+    si_unit: "m"
+derivation: "Inside the box the potential is zero, so the time-independent Schrödinger equation reduces to ψ″ + k²ψ = 0 with boundary conditions ψ(0) = ψ(L) = 0. Only wavelengths fitting a whole number of half-waves survive, quantising k and hence the energy."
+derivation_bn: "বাক্সের ভেতরে বিভব শূন্য হলে কাল-নিরপেক্ষ শ্রোডিঙ্গার সমীকরণ ψ″ + k²ψ = 0-এ পরিণত হয় এবং সীমা শর্ত ψ(0) = ψ(L) = 0 প্রযোজ্য। কেবল পূর্ণসংখ্যক অর্ধ-তরঙ্গ মানানসই হওয়ায় k এবং ফলে শক্তি কোয়ান্টায়িত হয়।"
+derivation_steps:
+  - step_en: "For V = 0 inside the box, write the stationary Schrödinger equation."
+    step_bn: "বাক্সের ভেতরে V = 0 ধরে স্থির শ্রোডিঙ্গার সমীকরণ লিখুন।"
+    latex: "-\\frac{\\hbar^2}{2m}\\frac{d^2\\psi}{dx^2} = E\\psi \\implies \\frac{d^2\\psi}{dx^2} + k^2\\psi = 0, \\quad k^2 = \\frac{2mE}{\\hbar^2}"
+  - step_en: "Apply ψ(0) = 0 to select sin(kx), then ψ(L) = 0 to quantise k."
+    step_bn: "ψ(0) = 0 প্রয়োগে sin(kx) নির্বাচন করুন, তারপর ψ(L) = 0 দিয়ে k কোয়ান্টায়িত করুন।"
+    latex: "\\sin(kL) = 0 \\implies k = \\frac{n\\pi}{L}, \\quad n = 1,2,3,\\dots"
+  - step_en: "Substitute k into E = ħ²k²/2m and replace ħ by h/2π."
+    step_bn: "E = ħ²k²/2m-এ k বসান ও ħ কে h/2π দ্বারা প্রতিস্থাপন করুন।"
+    latex: "E_n = \\frac{\\hbar^2 n^2\\pi^2}{2mL^2} = \\frac{n^2 h^2}{8mL^2}"
+summary_en: "Derive quantised energy levels for the simplest bound quantum system."
+summary_bn: "সরলতম বদ্ধ কোয়ান্টাম সিস্টেমের কোয়ান্টায়িত শক্তিস্তর প্রতিপাদন।"
+related: ["schrodinger-equation", "de-broglie-wavelength", "heisenberg-uncertainty-principle"]
+tags: ["particle in a box", "quantum", "boundary condition", "honours"]
+---
+
+Zero-point energy $E_1 \neq 0$ shows a confined particle can never be completely at rest.

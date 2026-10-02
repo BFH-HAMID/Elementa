@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "third-equation-of-motion"
+title_bn: "গতির তৃতীয় সমীকরণ (বেগ-সরণ সম্পর্ক)"
+title_en: "Third equation of motion (velocity–displacement)"
+subject: physics
+level: class-9-10
+chapter: "Motion"
+chapter_bn: "গতি"
+latex: "v^2 = u^2 + 2as"
+calculator: false
+variables:
+  - symbol: "v"
+    name: "final velocity"
+    name_bn: "শেষ বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "u"
+    name: "initial velocity"
+    name_bn: "আদি বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "a"
+    name: "uniform acceleration"
+    name_bn: "সুষম ত্বরণ"
+    unit: "m/s²"
+    si_unit: "m/s²"
+  - symbol: "s"
+    name: "displacement"
+    name_bn: "সরণ"
+    unit: "m"
+    si_unit: "m"
+derivation: "Eliminating time t between the average-velocity displacement formula and the definition of acceleration produces a direct relation between velocities and displacement."
+derivation_bn: "সরণের গড় বেগের সমীকরণ এবং ত্বরণের সংজ্ঞা থেকে সময় t অপসারণ করলে বেগ ও সরণের মধ্যকার গতির তৃতীয় সমীকরণ প্রতিপাদিত হয়।"
+derivation_steps:
+  - step_en: "Express displacement using average velocity and time."
+    step_bn: "গড় বেগ ও সময়ের মাধ্যমে সরণ প্রকাশ করুন।"
+    latex: "s = \\left(\\frac{v + u}{2}\\right)t"
+  - step_en: "Substitute t = (v − u)/a from the first equation of motion."
+    step_bn: "প্রথম সমীকরণ হতে t = (v − u)/a মানটি সরণের সমীকরণে বসান।"
+    latex: "s = \\left(\\frac{v + u}{2}\\right)\\left(\\frac{v - u}{a}\\right) = \\frac{v^2 - u^2}{2a}"
+  - step_en: "Multiply by 2a and rearrange for v²."
+    step_bn: "আড়গুণন ও পক্ষান্তর করে v²-এর সমীকরণটি লিখুন:"
+    latex: "v^2 = u^2 + 2as"
+summary_en: "Link initial and final velocities to displacement without needing elapsed time."
+summary_bn: "সময় জানা না থাকলেও আদি বেগ, শেষ বেগ ও ত্বরণ থেকে সরণ বা বেগ নির্ণয়।"
+related: ["first-equation-of-motion", "second-equation-of-motion", "work-energy-theorem"]
+tags: ["kinematics", "suvat", "stopping distance", "velocity"]
+---
+
+Multiplying both sides by $\frac{1}{2}m$ turns this kinematic equation directly into the work–energy theorem $\frac{1}{2}mv^2 - \frac{1}{2}mu^2 = mas = Fs$.

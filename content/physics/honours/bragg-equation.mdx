@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "bragg-equation"
+title_bn: "ব্র্যাগের সমীকরণ"
+title_en: "Bragg’s law for X-ray diffraction"
+subject: physics
+level: honours
+chapter: "Solid State Physics"
+chapter_bn: "কঠিন অবস্থার পদার্থবিজ্ঞান"
+latex: "n\\lambda = 2d\\sin\\theta"
+calculator: false
+variables:
+  - symbol: "n"
+    name: "order of reflection"
+    name_bn: "প্রতিফলনের ক্রম"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "λ"
+    name: "X-ray wavelength"
+    name_bn: "এক্স-রশ্মির তরঙ্গদৈর্ঘ্য"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "d"
+    name: "interplanar spacing"
+    name_bn: "আন্তঃতল দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "θ"
+    name: "glancing (Bragg) angle"
+    name_bn: "আপতন কোণ (ব্র্যাগ কোণ)"
+    unit: "°"
+    si_unit: "rad"
+derivation: "Waves reflected from successive crystal planes travel an extra path of 2d sinθ. Constructive interference occurs when that extra path is an integer number of wavelengths."
+derivation_bn: "পরবর্তী স্ফটিক তল থেকে প্রতিফলিত তরঙ্গ অতিরিক্ত 2d sinθ পথ অতিক্রম করে। সেই অতিরিক্ত পথ পূর্ণসংখ্যক তরঙ্গদৈর্ঘ্যের সমান হলে গঠনমূলক ব্যতিচার ঘটে।"
+derivation_steps:
+  - step_en: "Find the extra path length between rays reflected from adjacent planes."
+    step_bn: "সন্নিহিত তল থেকে প্রতিফলিত রশ্মির অতিরিক্ত পথের দৈর্ঘ্য নির্ণয় করুন।"
+    latex: "\\Delta = 2d\\sin\\theta"
+  - step_en: "Impose the constructive interference condition Δ = nλ."
+    step_bn: "গঠনমূলক ব্যতিচারের শর্ত Δ = nλ আরোপ করুন।"
+    latex: "2d\\sin\\theta = n\\lambda"
+  - step_en: "Note that n is limited by sin θ ≤ 1, giving the maximum observable order."
+    step_bn: "sin θ ≤ 1 শর্ত থেকে সর্বোচ্চ পর্যবেক্ষণযোগ্য ক্রম নির্ণয় করুন।"
+    latex: "n \\leq \\frac{2d}{\\lambda}"
+summary_en: "Determine crystal lattice spacings from X-ray diffraction patterns."
+summary_bn: "এক্স-রশ্মির অপবর্তন নমুনা থেকে স্ফটিকের আন্তঃতল দূরত্ব নির্ণয়।"
+related: ["diffraction-grating-equation", "de-broglie-wavelength"]
+tags: ["bragg", "x-ray diffraction", "crystal lattice", "honours"]
+---
+
+Bragg’s law underpins protein crystallography: from diffraction spots one reconstructs atomic structures.

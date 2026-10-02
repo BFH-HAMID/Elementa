@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "force-current-carrying-conductor"
+title_bn: "প্রবাহবাহী পরিবাহীর ওপর চৌম্বক বল"
+title_en: "Force on a current-carrying conductor in a magnetic field"
+subject: physics
+level: class-11-12
+chapter: "Magnetism"
+chapter_bn: "চুম্বকত্ব"
+latex: "\\vec{F} = I\\vec{L}\\times\\vec{B}, \\qquad F = BIL\\sin\\theta"
+calculator: false
+variables:
+  - symbol: "F"
+    name: "magnetic force"
+    name_bn: "চৌম্বক বল"
+    unit: "N"
+    si_unit: "N"
+  - symbol: "I"
+    name: "current in the conductor"
+    name_bn: "পরিবাহীতে প্রবাহমাত্রা"
+    unit: "A"
+    si_unit: "A"
+  - symbol: "L"
+    name: "length of conductor in field"
+    name_bn: "ক্ষেত্রে অবস্থিত পরিবাহীর দৈর্ঘ্য"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "B"
+    name: "magnetic flux density"
+    name_bn: "চৌম্বক ফ্লাক্স ঘনত্ব"
+    unit: "T"
+    si_unit: "T"
+  - symbol: "θ"
+    name: "angle between wire and field"
+    name_bn: "তার ও ক্ষেত্রের মধ্যবর্তী কোণ"
+    unit: "°"
+    si_unit: "rad"
+derivation: "Each drifting charge q experiences the Lorentz force qv×B; with nAL such carriers in a length L, the total force is nAL(qv_d)B sinθ, which equals ILB sinθ using I = nAev_d."
+derivation_bn: "প্রতিটি জোয়ার চার্জ q-এর ওপর লরেন্টজ বল qv×B ক্রিয়া করে। L দৈর্ঘ্যে nAL সংখ্যক বাহক থাকায় মোট বল nAL(q v_d)B sinθ, যা I = nAev_d ব্যবহারে ILB sinθ-এর সমান।"
+derivation_steps:
+  - step_en: "Write the Lorentz force on a single moving charge carrier."
+    step_bn: "একটি চলমান আধান বাহকের ওপর লরেন্টজ বল লিখুন।"
+    latex: "\\vec{f} = q\\vec{v}_d\\times\\vec{B}"
+  - step_en: "Multiply by the number of carriers N = n A L inside the field region."
+    step_bn: "ক্ষেত্রের মধ্যে অবস্থিত বাহক সংখ্যা N = n A L দ্বারা গুণ করুন।"
+    latex: "F = (nAL)(q v_d B\\sin\\theta)"
+  - step_en: "Substitute I = n A q v_d to obtain the familiar conductor force law."
+    step_bn: "I = n A q v_d বসিয়ে পরিচিত পরিবাহী বলের সূত্র পান।"
+    latex: "\\vec{F} = I\\vec{L}\\times\\vec{B}"
+summary_en: "Calculate the force that drives electric motors and moving-coil meters."
+summary_bn: "বৈদ্যুতিক মোটর ও চল-কুণ্ডলী যন্ত্রের মূলনীতি চৌম্বক বল নির্ণয়।"
+related: ["lorentz-force", "force-between-parallel-conductors", "biot-savart-law"]
+tags: ["magnetic force", "motor effect", "lorentz", "fleming left hand"]
+---
+
+Fleming’s left-hand rule gives the direction: thuMb = Motion, First finger = Field, Second finger = Current.

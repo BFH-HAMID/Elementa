@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "second-equation-of-motion"
+title_bn: "গতির দ্বিতীয় সমীকরণ (সরণ-সময় সম্পর্ক)"
+title_en: "Second equation of motion (displacement–time)"
+subject: physics
+level: class-9-10
+chapter: "Motion"
+chapter_bn: "গতি"
+latex: "s = ut + \\frac{1}{2}at^2"
+calculator: false
+variables:
+  - symbol: "s"
+    name: "displacement"
+    name_bn: "সরণ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "u"
+    name: "initial velocity"
+    name_bn: "আদি বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "a"
+    name: "uniform acceleration"
+    name_bn: "সুষম ত্বরণ"
+    unit: "m/s²"
+    si_unit: "m/s²"
+  - symbol: "t"
+    name: "elapsed time"
+    name_bn: "সময়"
+    unit: "s"
+    si_unit: "s"
+derivation: "For uniform acceleration, average velocity equals the arithmetic mean of initial and final velocities. Substituting v = u + at into s = v_avg * t eliminates v."
+derivation_bn: "সুষম ত্বরণে গতিশীল বস্তুর গড় বেগ তার আদি ও শেষ বেগের গাণিতিক গড়ের সমান। সরণের সূত্রে v = u + at বসালে গতির দ্বিতীয় সমীকরণ পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write displacement s in terms of the arithmetic mean velocity for constant acceleration."
+    step_bn: "সুষম ত্বরণের ক্ষেত্রে গড় বেগ ও সময়ের গুণফল হিসেবে সরণ s লিখুন।"
+    latex: "s = \\left(\\frac{u + v}{2}\\right)t"
+  - step_en: "Substitute v = u + at from the first equation of motion."
+    step_bn: "গতির প্রথম সমীকরণ থেকে v = u + at মানটি বসান।"
+    latex: "s = \\left(\\frac{u + u + at}{2}\\right)t = \\left(\\frac{2u + at}{2}\\right)t"
+  - step_en: "Expand the terms to obtain the displacement–time relation."
+    step_bn: "পদগুলো আলাদা করে সরল করলে সরণ-সময় সমীকরণ পাওয়া যায়:"
+    latex: "s = ut + \\frac{1}{2}at^2"
+summary_en: "Calculate displacement from initial velocity, constant acceleration and time."
+summary_bn: "আদি বেগ, সুষম ত্বরণ এবং সময় থেকে বস্তুর সরণ নির্ণয়।"
+related: ["first-equation-of-motion", "third-equation-of-motion", "kinematics-formula-sheet"]
+tags: ["kinematics", "displacement", "suvat", "acceleration"]
+---
+
+Geometrically, $ut$ is the rectangular area and $\frac{1}{2}at^2$ is the triangular area under a velocity–time graph.

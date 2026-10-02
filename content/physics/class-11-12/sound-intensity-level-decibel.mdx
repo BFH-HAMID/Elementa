@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "sound-intensity-level-decibel"
+title_bn: "শব্দের তীব্রতা ও ডেসিবেল স্কেল"
+title_en: "Sound intensity level in decibels"
+subject: physics
+level: class-11-12
+chapter: "Waves"
+chapter_bn: "তরঙ্গ"
+latex: "\\beta = 10\\log_{10}\\frac{I}{I_0}\\ \\text{dB}, \\qquad I_0 = 10^{-12}\\ \\text{W m}^{-2}"
+calculator: false
+variables:
+  - symbol: "β"
+    name: "sound intensity level"
+    name_bn: "শব্দের তীব্রতা মাত্রা"
+    unit: "dB"
+    si_unit: "1"
+  - symbol: "I"
+    name: "sound intensity"
+    name_bn: "শব্দের তীব্রতা"
+    unit: "W/m²"
+    si_unit: "W/m²"
+  - symbol: "I_0"
+    name: "reference threshold intensity"
+    name_bn: "প্রসঙ্গ তীব্রতা (শ্রবণ সীমা)"
+    unit: "W/m²"
+    si_unit: "W/m²"
+derivation: "Human loudness perception is roughly logarithmic, so intensity is compared on a log scale. Using base-10 logs multiplied by 10 gives the bel, and one tenth of that is the decibel."
+derivation_bn: "মানুষের শ্রবণ অনুভূতি প্রায় লগারিদমীয়, তাই তীব্রতাকে লগ স্কেলে তুলনা করা হয়। ভিত্তি-১০ লগকে ১০ দিয়ে গুণ করলে বেল একক পাওয়া যায়, যার দশভাগের এক ভাগ হলো ডেসিবেল।"
+derivation_steps:
+  - step_en: "Define the logarithmic intensity level using the base-10 logarithm."
+    step_bn: "ভিত্তি-১০ লগারিদম ব্যবহার করে শব্দের তীব্রতা মাত্রার সংজ্ঞা দিন।"
+    latex: "\\beta = \\log_{10}\\frac{I}{I_0}\\ \\text{bel}"
+  - step_en: "Convert bels to decibels by multiplying by 10."
+    step_bn: "বেলকে ডেসিবেলে রূপান্তর করতে ১০ দ্বারা গুণ করুন।"
+    latex: "\\beta = 10\\log_{10}\\frac{I}{I_0}\\ \\text{dB}"
+  - step_en: "Use the standard threshold of hearing I_0 = 10⁻¹² W m⁻² at 1 kHz."
+    step_bn: "১ kHz-এ আদর্শ শ্রবণ সীমা I_0 = 10⁻¹² W m⁻² ব্যবহার করুন।"
+    latex: "I_0 = 10^{-12}\\ \\text{W m}^{-2}"
+summary_en: "Convert sound intensity in W/m² to the decibel scale used in acoustics."
+summary_bn: "W/m² এককের শব্দ তীব্রতাকে ব্যবহারিক ডেসিবেল স্কেলে রূপান্তর।"
+related: ["beats-frequency", "wave-speed", "echo-minimum-distance"]
+tags: ["decibel", "sound intensity", "logarithmic scale", "hearing"]
+---
+
+Because intensity follows the inverse-square law, doubling distance from a source lowers the level by about 6 dB.

@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "kinetic-viscosity"
+title_bn: "গতীয় সান্দ্রতা"
+title_en: "Kinematic viscosity of a fluid"
+subject: physics
+level: class-11-12
+chapter: "Viscosity and Flow"
+chapter_bn: "সান্দ্রতা ও প্রবাহ"
+latex: "\\nu = \\frac{\\eta}{\\rho}"
+calculator: false
+variables:
+  - symbol: "ν"
+    name: "kinematic viscosity"
+    name_bn: "গতীয় সান্দ্রতা"
+    unit: "m²/s"
+    si_unit: "m²/s"
+  - symbol: "η"
+    name: "dynamic viscosity"
+    name_bn: "গতীয় (ডাইনামিক) সান্দ্রতা"
+    unit: "Pa s"
+    si_unit: "Pa s"
+  - symbol: "ρ"
+    name: "fluid density"
+    name_bn: "প্রবাহীর ঘনত্ব"
+    unit: "kg/m³"
+    si_unit: "kg/m³"
+derivation: "In the equations of motion for fluids, viscosity enters divided by density because inertia also scales with density. This ratio is defined as kinematic viscosity."
+derivation_bn: "প্রবাহীর গতির সমীকরণে সান্দ্রতা এবং ঘনত্বের অনুপাত আকারে প্রবেশ করে, কারণ জড়তাও ঘনত্বের সাথে বাড়ে। এই অনুপাতটিকে গতীয় সান্দ্রতা বলে।"
+derivation_steps:
+  - step_en: "Write the dynamic viscosity η with its SI base-unit expansion."
+    step_bn: "গতীয় সান্দ্রতা η-কে মৌলিক SI এককে প্রকাশ করুন।"
+    latex: "[\\eta] = \\text{Pa s} = \\frac{\\text{kg}}{\\text{m s}}"
+  - step_en: "Divide by density ρ expressed in kg m⁻³."
+    step_bn: "ঘনত্ব ρ (kg m⁻³) দ্বারা ভাগ করুন।"
+    latex: "\\left[\\frac{\\eta}{\\rho}\\right] = \\frac{\\text{kg}}{\\text{m s}} \\times \\frac{\\text{m}^3}{\\text{kg}} = \\frac{\\text{m}^2}{\\text{s}}"
+  - step_en: "Identify the ratio as the kinematic viscosity ν, which diffuses momentum."
+    step_bn: "অনুপাতটিকে গতীয় সান্দ্রতা ν হিসেবে চিহ্নিত করুন; এটি ভরবেগের বিস্তার হার।"
+    latex: "\\nu = \\frac{\\eta}{\\rho}"
+summary_en: "Convert dynamic viscosity to the density-independent kinematic form."
+summary_bn: "গতীয় সান্দ্রতাকে ঘনত্বমুক্ত গতীয় সান্দ্রতায় রূপান্তর।"
+related: ["newtons-law-of-viscosity", "reynolds-number"]
+tags: ["kinematic viscosity", "fluid", "diffusivity", "reynolds"]
+---
+
+Kinematic viscosity has dimensions of area per time, so it behaves like a momentum diffusivity.

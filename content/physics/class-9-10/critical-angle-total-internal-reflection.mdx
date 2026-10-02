@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "critical-angle-total-internal-reflection"
+title_bn: "সংকট কোণ ও পূর্ণ অভ্যন্তরীণ প্রতিফলন"
+title_en: "Critical angle and total internal reflection"
+subject: physics
+level: class-9-10
+chapter: "Refraction of Light"
+chapter_bn: "আলোর প্রতিসরণ"
+latex: "\\sin C = \\frac{1}{n_{21}} = \\frac{n_2}{n_1}"
+calculator: false
+variables:
+  - symbol: "C"
+    name: "critical angle"
+    name_bn: "সংকট কোণ"
+    unit: "°"
+    si_unit: "rad"
+  - symbol: "n_1"
+    name: "index of denser medium"
+    name_bn: "ঘন মাধ্যমের প্রতিসরণাঙ্ক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "n_2"
+    name: "index of rarer medium"
+    name_bn: "হালকা মাধ্যমের প্রতিসরণাঙ্ক"
+    unit: "1"
+    si_unit: "1"
+derivation: "When light travels from a denser to a rarer medium, the refracted ray bends away from the normal. At the critical angle the refracted ray grazes the interface (r = 90°), and beyond it no refracted ray exists."
+derivation_bn: "ঘন মাধ্যম থেকে হালকা মাধ্যমে যাওয়ার সময় প্রতিসৃত রশ্মি অভিলম্ব থেকে দূরে সরে যায়। প্রতিসরণ কোণ ৯০° হলে আপতন কোণকে সংকট কোণ বলে এবং এর চেয়ে বড় কোণে আলো পুরোপুরি প্রতিফলিত হয়।"
+derivation_steps:
+  - step_en: "Apply Snell’s law for a ray going from the denser to the rarer medium."
+    step_bn: "ঘন থেকে হালকা মাধ্যমে যাওয়ার ক্ষেত্রে স্নেলের সূত্র প্রয়োগ করুন।"
+    latex: "n_1\\sin i = n_2\\sin r"
+  - step_en: "At the critical angle C, set the refraction angle r = 90°, so sin r = 1."
+    step_bn: "সংকট কোণে r = 90° বসান, অর্থাৎ sin r = 1।"
+    latex: "n_1\\sin C = n_2(1) \\implies \\sin C = \\frac{n_2}{n_1}"
+  - step_en: "If the second medium is air or vacuum (n_2 ≈ 1), express the result via the relative index."
+    step_bn: "দ্বিতীয় মাধ্যম বায়ু বা শূন্য (n_2 ≈ 1) হলে সরলীকৃত রূপটি পান।"
+    latex: "\\sin C = \\frac{1}{n}"
+summary_en: "Find the incidence angle beyond which light is totally internally reflected."
+summary_bn: "কোন আপতন কোণের চেয়ে বেশি হলে পূর্ণ অভ্যন্তরীণ প্রতিফলন ঘটবে তা নির্ণয়।"
+related: ["snells-law", "refractive-index-definition"]
+tags: ["critical angle", "total internal reflection", "fibre optics", "refraction"]
+---
+
+Optical fibres use total internal reflection: light stays trapped inside a high-index core clad in a lower-index material.

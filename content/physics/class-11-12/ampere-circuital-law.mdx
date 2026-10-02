@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "ampere-circuital-law"
+title_bn: "অ্যাম্পিয়ারের পরিপথ সূত্র"
+title_en: "Ampère’s circuital law"
+subject: physics
+level: class-11-12
+chapter: "Magnetism"
+chapter_bn: "চুম্বকত্ব"
+latex: "\\oint \\vec{B}\\cdot d\\vec{l} = \\mu_0 I_{\\text{enc}}"
+calculator: false
+variables:
+  - symbol: "B"
+    name: "magnetic flux density"
+    name_bn: "চৌম্বক ফ্লাক্স ঘনত্ব"
+    unit: "T"
+    si_unit: "T"
+  - symbol: "I_enc"
+    name: "current threading the loop"
+    name_bn: "পরিপথের মধ্য দিয়ে প্রবাহ"
+    unit: "A"
+    si_unit: "A"
+  - symbol: "μ_0"
+    name: "permeability of free space"
+    name_bn: "শূন্যস্থানের প্রবেশ্যতা"
+    unit: "H/m"
+    si_unit: "H/m"
+derivation: "Integrating the Biot–Savart field of a long straight wire around a circular path of radius r gives B·2πr = μ_0 I. Generalising, the line integral around any closed path equals μ_0 times the total current it encloses."
+derivation_bn: "দীর্ণ সরল তারের বিও-সাভার ক্ষেত্রকে r ব্যাসার্ধের বৃত্তীয় পথে সমাকলন করলে B·2πr = μ_0 I পাওয়া যায়। সাধারণীকরণ করে যেকোনো বদ্ধ পথের রেখা-সমাকলন আবদ্ধ প্রবাহের μ_0 গুণের সমান।"
+derivation_steps:
+  - step_en: "Take the field of a long straight wire B = μ_0 I/(2πr) around a circular Amperian loop."
+    step_bn: "দীর্ঘ সরল তারের ক্ষেত্র B = μ_0 I/(2πr) কে বৃত্তীয় অ্যাম্পেরীয় লুপে নিন।"
+    latex: "\\oint \\vec{B}\\cdot d\\vec{l} = \\frac{\\mu_0 I}{2\\pi r}\\cdot 2\\pi r = \\mu_0 I"
+  - step_en: "Observe the result is independent of the loop radius, suggesting a general law."
+    step_bn: "লক্ষ্য করুন ফলাফল লুপের ব্যাসার্ধের ওপর নির্ভরশীল নয়, যা একটি সাধারণ সূত্রের ইঙ্গিত দেয়।"
+    latex: "\\frac{1}{\\mu_0}\\oint \\vec{B}\\cdot d\\vec{l} = I"
+  - step_en: "Generalise to several conductors by summing only the enclosed currents."
+    step_bn: "একাধিক পরিবাহীর ক্ষেত্রে কেবল আবদ্ধ প্রবাহগুলো যোগ করে সাধারণীকরণ করুন।"
+    latex: "\\oint \\vec{B}\\cdot d\\vec{l} = \\mu_0 I_{\\text{enc}}"
+summary_en: "Find magnetic fields of highly symmetric current distributions."
+summary_bn: "প্রতিসম প্রবাহ বন্টনের চৌম্বক ক্ষেত্র সহজে নির্ণয়।"
+related: ["biot-savart-law", "force-between-parallel-conductors"]
+tags: ["ampere law", "magnetostatics", "symmetry", "maxwell"]
+---
+
+Inside a long solenoid this gives $B = \mu_0 n I$, where $n$ is the turn density.

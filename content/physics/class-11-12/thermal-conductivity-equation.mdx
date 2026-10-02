@@ -1,0 +1,61 @@
+---
+type: equation
+slug: "thermal-conductivity-equation"
+title_bn: "তাপ পরিবহনের সমীকরণ"
+title_en: "Rate of heat conduction through a slab"
+subject: physics
+level: class-11-12
+chapter: "Thermal Radiation"
+chapter_bn: "তাপীয় বিকিরণ"
+latex: "\\frac{Q}{t} = \\frac{kA(T_H - T_C)}{L}"
+calculator: false
+variables:
+  - symbol: "Q/t"
+    name: "rate of heat conduction"
+    name_bn: "তাপ পরিবহনের হার"
+    unit: "W"
+    si_unit: "W"
+  - symbol: "k"
+    name: "thermal conductivity"
+    name_bn: "তাপীয় পরিবাহিতা"
+    unit: "W/(m K)"
+    si_unit: "W/(m K)"
+  - symbol: "A"
+    name: "cross-sectional area"
+    name_bn: "প্রস্থচ্ছেদের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+  - symbol: "T_H"
+    name: "hot-face temperature"
+    name_bn: "উষ্ণ তলের তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "T_C"
+    name: "cold-face temperature"
+    name_bn: "শীতল তলের তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "L"
+    name: "thickness of the slab"
+    name_bn: "পাতের বেধ"
+    unit: "m"
+    si_unit: "m"
+derivation: "In steady state the conductive heat flux is proportional to the temperature gradient. Integrating the one-dimensional form across the slab converts the gradient into the ratio ΔT/L."
+derivation_bn: "স্থির অবস্থায় পরিবহনমূলক তাপ প্রবাহ তাপমাত্রা নতির সমানুপাতিক। এক-মাত্রিক রূপটিকে পাতের পুরুত্ব বরাবর সমাকলন করলে নতিটি ΔT/L-এ পরিণত হয়।"
+derivation_steps:
+  - step_en: "Write Fourier’s law of heat conduction as flux proportional to the temperature gradient."
+    step_bn: "ফুরিয়ের তাপ পরিবহন সূত্রে প্রবাহকে তাপমাত্রা নতির সমানুপাতিক লিখুন।"
+    latex: "\\frac{1}{A}\\frac{dQ}{dt} = -k\\frac{dT}{dx}"
+  - step_en: "For a uniform slab of thickness L in steady state, the gradient is constant: (T_C − T_H)/L."
+    step_bn: "স্থির অবস্থায় L পুরুত্বের পাতে নতি ধ্রুব: (T_C − T_H)/L।"
+    latex: "\\frac{dT}{dx} = \\frac{T_C - T_H}{L}"
+  - step_en: "Substitute and take the magnitude of the conduction rate."
+    step_bn: "মান বসিয়ে পরিবহন হারের ধনাত্মক মান নিন।"
+    latex: "\\frac{Q}{t} = \\frac{kA(T_H - T_C)}{L}"
+summary_en: "Calculate heat leaking through a wall, window or insulating layer."
+summary_bn: "দেয়াল, জানালা বা অন্তরক স্তর ভেদ করে তাপ ক্ষয়ের হার নির্ণয়।"
+related: ["newtons-law-of-cooling", "thermal-resistance-series"]
+tags: ["conduction", "fourier law", "thermal conductivity", "insulation"]
+---
+
+Thermal resistance is defined as $R_{\text{th}} = L/(kA)$, making the conduction rate $Q/t = \Delta T/R_{\text{th}}$.

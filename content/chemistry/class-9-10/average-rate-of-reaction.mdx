@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "average-rate-of-reaction"
+title_bn: "বিক্রিয়ার গড় হার"
+title_en: "Average rate of a chemical reaction"
+subject: chemistry
+level: class-9-10
+chapter: "Chemical Kinetics"
+chapter_bn: "রাসায়নিক গতিবিদ্যা"
+latex: "\\text{rate} = -\\frac{1}{\\nu_A}\\frac{\\Delta[A]}{\\Delta t} = \\frac{1}{\\nu_P}\\frac{\\Delta[P]}{\\Delta t}"
+calculator: false
+variables:
+  - symbol: "rate"
+    name: "average reaction rate"
+    name_bn: "বিক্রিয়ার গড় হার"
+    unit: "mol/(L s)"
+    si_unit: "mol/(m³ s)"
+  - symbol: "[A]"
+    name: "reactant concentration"
+    name_bn: "বিক্রিয়কের ঘনমাত্রা"
+    unit: "mol/L"
+    si_unit: "mol/m³"
+  - symbol: "ν"
+    name: "stoichiometric coefficient"
+    name_bn: "রসায়নমিতিক সহগ"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "Δt"
+    name: "time interval"
+    name_bn: "সময় ব্যবধান"
+    unit: "s"
+    si_unit: "s"
+derivation: "Reaction rate is the change in concentration per unit time, divided by the stoichiometric coefficient so that every species reports the same rate. The minus sign keeps reactant rates positive."
+derivation_bn: "বিক্রিয়ার হার হলো একক সময়ে ঘনমাত্রার পরিবর্তনকে রসায়নমিতিক সহগ দিয়ে ভাগ করা, যাতে সব প্রজাতি একই হার নির্দেশ করে। ঋণাত্মক চিহ্ন বিক্রিয়কের হারকে ধনাত্মক রাখে।"
+derivation_steps:
+  - step_en: "Write the raw rate of disappearance of a reactant."
+    step_bn: "বিক্রিয়কের অদৃশ্য হওয়ার সরল হার লিখুন।"
+    latex: "-\\frac{\\Delta[A]}{\\Delta t}"
+  - step_en: "Divide by the stoichiometric coefficient to normalise across species."
+    step_bn: "সব প্রজাতির জন্য স্বাভাবিক করতে রসায়নমিতিক সহগ দিয়ে ভাগ করুন।"
+    latex: "\\text{rate} = -\\frac{1}{\\nu_A}\\frac{\\Delta[A]}{\\Delta t}"
+  - step_en: "For a product, the same normalised expression has a positive sign."
+    step_bn: "উৎপাদের ক্ষেত্রে একই স্বাভাবিক রাশি ধনাত্মক হয়।"
+    latex: "\\text{rate} = +\\frac{1}{\\nu_P}\\frac{\\Delta[P]}{\\Delta t}"
+summary_en: "Track how fast reactants are consumed or products appear."
+summary_bn: "বিক্রিয়ক কত দ্রুত শেষ হচ্ছে বা উৎপাদ তৈরি হচ্ছে তা পরিমাপ।"
+related: ["rate-law", "chemical-kinetics-formula-sheet"]
+tags: ["reaction rate", "stoichiometry", "concentration change", "kinetics"]
+---
+
+The instantaneous rate is the limiting value as $\Delta t \to 0$, i.e. the slope of a concentration–time graph.

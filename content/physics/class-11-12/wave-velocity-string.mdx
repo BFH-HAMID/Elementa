@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "wave-velocity-string"
+title_bn: "টানা তারে তরঙ্গের বেগ"
+title_en: "Wave speed on a stretched string"
+subject: physics
+level: class-11-12
+chapter: "Waves"
+chapter_bn: "তরঙ্গ"
+latex: "v = \\sqrt{\\frac{T}{\\mu}}"
+calculator: false
+variables:
+  - symbol: "v"
+    name: "transverse wave speed"
+    name_bn: "অনুপ্রস্থ তরঙ্গের বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "T"
+    name: "tension in the string"
+    name_bn: "তারের টান"
+    unit: "N"
+    si_unit: "N"
+  - symbol: "μ"
+    name: "linear mass density"
+    name_bn: "রৈখিক ভর ঘনত্ব"
+    unit: "kg/m"
+    si_unit: "kg/m"
+derivation: "Applying Newton’s second law to a small string element curved by the tension at both ends gives a wave equation whose propagation speed is the square root of tension divided by linear density."
+derivation_bn: "তারের ক্ষুদ্র অংশের দুই প্রান্তে টানের লব্ধি লম্ব উপাংশ বিবেচনা করে নিউটনের দ্বিতীয় সূত্র প্রয়োগ করলে তরঙ্গ সমীকরণ পাওয়া যায়, যার বেগ হলো টান ও রৈখিক ঘনত্বের অনুপাতের বর্গমূল।"
+derivation_steps:
+  - step_en: "Consider a small element of length Δx with tension T and small end slopes."
+    step_bn: "Δx দৈর্ঘ্যের ক্ষুদ্র অংশের দুই প্রান্তে টান T ও ক্ষুদ্র নতি বিবেচনা করুন।"
+    latex: "F_y = T\\left[\\left(\\frac{\\partial y}{\\partial x}\\right)_{x+\\Delta x} - \\left(\\frac{\\partial y}{\\partial x}\\right)_{x}\\right]"
+  - step_en: "Use Newton’s second law with mass μΔx and take the limit Δx → 0."
+    step_bn: "ভর μΔx ব্যবহার করে নিউটনের দ্বিতীয় সূত্র প্রয়োগ ও Δx → 0 সীমা নিন।"
+    latex: "\\mu\\frac{\\partial^2 y}{\\partial t^2} = T\\frac{\\partial^2 y}{\\partial x^2}"
+  - step_en: "Compare with the standard wave equation ∂²y/∂t² = v²∂²y/∂x² to read off the speed."
+    step_bn: "আদর্শ তরঙ্গ সমীকরণের সাথে তুলনা করে বেগ নির্ণয় করুন।"
+    latex: "v = \\sqrt{\\frac{T}{\\mu}}"
+summary_en: "Predict the pitch of a stringed instrument from tension and thickness."
+summary_bn: "তারের টান ও রৈখিক ঘনত্ব থেকে তাতে সৃষ্ট তরঙ্গের বেগ নির্ণয়।"
+related: ["superposition-standing-wave", "fundamental-frequency-string", "wave-speed"]
+tags: ["string wave", "tension", "linear density", "musical instrument"]
+---
+
+Tightening a guitar string raises the tension T and hence the wave speed, which raises the pitch.

@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "maxwell-em-wave-speed"
+title_bn: "তড়িৎচুম্বকীয় তরঙ্গের বেগ"
+title_en: "Speed of electromagnetic waves from Maxwell’s equations"
+subject: physics
+level: honours
+chapter: "Electromagnetic Waves"
+chapter_bn: "তড়িৎচুম্বকীয় তরঙ্গ"
+latex: "c = \\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}} = \\frac{E_0}{B_0}"
+calculator: false
+variables:
+  - symbol: "c"
+    name: "speed of light in vacuum"
+    name_bn: "শূন্যে আলোর বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "μ_0"
+    name: "permeability of free space"
+    name_bn: "শূন্যস্থানের প্রবেশ্যতা"
+    unit: "H/m"
+    si_unit: "H/m"
+  - symbol: "ε_0"
+    name: "permittivity of free space"
+    name_bn: "শূন্যস্থানের ভেদনযোগ্যতা"
+    unit: "F/m"
+    si_unit: "F/m"
+  - symbol: "E_0"
+    name: "electric field amplitude"
+    name_bn: "তড়িৎ ক্ষেত্রের বিস্তার"
+    unit: "V/m"
+    si_unit: "V/m"
+  - symbol: "B_0"
+    name: "magnetic field amplitude"
+    name_bn: "চৌম্বক ক্ষেত্রের বিস্তার"
+    unit: "T"
+    si_unit: "T"
+derivation: "Taking the curl of Faraday’s law and substituting Ampère–Maxwell’s law produces a wave equation for E. Comparing it with the standard wave equation identifies the propagation speed as 1/√(μ_0ε_0)."
+derivation_bn: "ফ্যারাডের সূত্রের কার্ল নিয়ে অ্যাম্পিয়ার-ম্যাক্সওয়েল সূত্র বসালে E-এর জন্য তরঙ্গ সমীকরণ পাওয়া যায়। আদর্শ তরঙ্গ সমীকরণের সাথে তুলনা করে বিস্তার বেগ 1/√(μ_0ε_0) চিহ্নিত করা যায়।"
+derivation_steps:
+  - step_en: "Take the curl of ∇ × E = −∂B/∂t and use ∇ × B = μ_0ε_0 ∂E/∂t."
+    step_bn: "∇ × E = −∂B/∂t-এর কার্ল নিন এবং ∇ × B = μ_0ε_0 ∂E/∂t ব্যবহার করুন।"
+    latex: "\\nabla^2 \\vec{E} = \\mu_0\\varepsilon_0\\frac{\\partial^2 \\vec{E}}{\\partial t^2}"
+  - step_en: "Compare with the standard wave equation ∇²E = (1/v²) ∂²E/∂t²."
+    step_bn: "আদর্শ তরঙ্গ সমীকরণ ∇²E = (1/v²) ∂²E/∂t²-এর সাথে তুলনা করুন।"
+    latex: "v = \\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}"
+  - step_en: "Insert the measured constants to obtain c ≈ 3.00 × 10⁸ m/s, and note E_0 = cB_0."
+    step_bn: "পরিমিত ধ্রুবক বসিয়ে c ≈ ৩.০০ × 10⁸ m/s পান এবং E_0 = cB_0 লক্ষ্য করুন।"
+    latex: "c \\approx 2.998\\times 10^8\\ \\text{m s}^{-1}"
+summary_en: "Show that light is an electromagnetic wave travelling at c."
+summary_bn: "প্রমাণ করুন যে আলো একটি তড়িৎচুম্বকীয় তরঙ্গ যার বেগ c।"
+related: ["ampere-circuital-law", "motional-emf", "mass-energy-equivalence"]
+tags: ["maxwell", "electromagnetic wave", "speed of light", "honours"]
+---
+
+In a transparent medium the speed becomes $v = 1/\sqrt{\mu\varepsilon}$, which defines its refractive index.

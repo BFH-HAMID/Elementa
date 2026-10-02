@@ -1,0 +1,61 @@
+---
+type: equation
+slug: "isothermal-work"
+title_bn: "সমোষ্ণ প্রক্রিয়ায় কৃতকাজ"
+title_en: "Work done in an isothermal gas process"
+subject: physics
+level: class-11-12
+chapter: "Thermodynamics"
+chapter_bn: "তাপগতিবিদ্যা"
+latex: "W = nRT\\ln\\frac{V_2}{V_1} = P_1V_1\\ln\\frac{V_2}{V_1}"
+calculator: false
+variables:
+  - symbol: "W"
+    name: "work done by the gas"
+    name_bn: "গ্যাস কর্তৃক কৃতকাজ"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "n"
+    name: "amount of gas"
+    name_bn: "গ্যাসের মোল সংখ্যা"
+    unit: "mol"
+    si_unit: "mol"
+  - symbol: "R"
+    name: "molar gas constant"
+    name_bn: "মোলার গ্যাস ধ্রুবক"
+    unit: "J/(mol K)"
+    si_unit: "J/(mol K)"
+  - symbol: "T"
+    name: "constant absolute temperature"
+    name_bn: "ধ্রুব পরম তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "V_1"
+    name: "initial volume"
+    name_bn: "প্রাথমিক আয়তন"
+    unit: "m³"
+    si_unit: "m³"
+  - symbol: "V_2"
+    name: "final volume"
+    name_bn: "চূড়ান্ত আয়তন"
+    unit: "m³"
+    si_unit: "m³"
+derivation: "For an isothermal change, the ideal-gas law gives P = nRT/V. Integrating W = ∫P dV from V_1 to V_2 produces a natural logarithm of the volume ratio."
+derivation_bn: "সমোষ্ণ প্রক্রিয়ায় আদর্শ গ্যাস সূত্র থেকে P = nRT/V পাওয়া যায়। W = ∫P dV সমাকলন করলে আয়তনের অনুপাতের স্বাভাবিক লগারিদম পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Use the ideal-gas law to express the pressure as a function of volume."
+    step_bn: "আদর্শ গ্যাস সূত্র হতে চাপকে আয়তনের অপেক্ষক হিসেবে লিখুন।"
+    latex: "P = \\frac{nRT}{V}"
+  - step_en: "Set up the work integral between the two volumes."
+    step_bn: "দুই আয়তনের মধ্যে কাজের সমাকলন স্থাপন করুন।"
+    latex: "W = \\int_{V_1}^{V_2} P\\,dV = nRT\\int_{V_1}^{V_2}\\frac{dV}{V}"
+  - step_en: "Evaluate the integral to obtain the logarithmic result."
+    step_bn: "সমাকলন সমাধান করে লগারিদমীয় রূপটি পান।"
+    latex: "W = nRT\\ln\\frac{V_2}{V_1}"
+summary_en: "Calculate work for a slow, constant-temperature expansion or compression."
+summary_bn: "ধীর ও ধ্রুব তাপমাত্রায় গ্যাসের প্রসারণ বা সংকোচনে কৃতকাজ নির্ণয়।"
+related: ["first-law-thermodynamics", "adiabatic-relation", "ideal-gas-law"]
+tags: ["isothermal", "work", "logarithm", "ideal gas"]
+---
+
+Because $\Delta U = 0$ for an ideal gas at constant temperature, all the absorbed heat converts into work: $Q = W$.

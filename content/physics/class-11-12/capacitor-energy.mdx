@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "capacitor-energy"
+title_bn: "ধারকে সঞ্চিত শক্তি"
+title_en: "Energy stored in a charged capacitor"
+subject: physics
+level: class-11-12
+chapter: "Capacitance"
+chapter_bn: "ধারকত্ব"
+latex: "U = \\frac{1}{2}CV^2 = \\frac{Q^2}{2C} = \\frac{1}{2}QV"
+calculator: false
+variables:
+  - symbol: "U"
+    name: "stored electrostatic energy"
+    name_bn: "সঞ্চিত স্থির তড়িৎ শক্তি"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "C"
+    name: "capacitance"
+    name_bn: "ধারকত্ব"
+    unit: "F"
+    si_unit: "F"
+  - symbol: "V"
+    name: "voltage across plates"
+    name_bn: "পাতদ্বয়ের বিভব পার্থক্য"
+    unit: "V"
+    si_unit: "V"
+  - symbol: "Q"
+    name: "charge stored"
+    name_bn: "সঞ্চিত আধান"
+    unit: "C"
+    si_unit: "C"
+derivation: "Charging a capacitor requires moving charge against a rising potential V = q/C. Integrating the incremental work dW = (q/C) dq from 0 to Q gives the stored energy."
+derivation_bn: "ধারক চার্জ করতে হলে ক্রমবর্ধমান বিভব V = q/C-এর বিপরীতে আধান স্থানান্তর করতে হয়। ক্ষুদ্র কাজ dW = (q/C)dq কে ০ থেকে Q পর্যন্ত সমাকলন করলে সঞ্চিত শক্তি পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the incremental work needed to add charge dq when the plate charge is q."
+    step_bn: "পাতের আধান q থাকলে অতিরিক্ত dq আধান যোগ করতে ক্ষুদ্র কাজ লিখুন।"
+    latex: "dW = V\\,dq = \\frac{q}{C}\\,dq"
+  - step_en: "Integrate from q = 0 to q = Q."
+    step_bn: "q = 0 থেকে Q পর্যন্ত সমাকলন করুন।"
+    latex: "U = \\int_0^Q \\frac{q}{C}\\,dq = \\frac{Q^2}{2C}"
+  - step_en: "Use Q = CV to obtain the equivalent forms."
+    step_bn: "Q = CV ব্যবহার করে সমতুল্য রূপগুলো পান।"
+    latex: "U = \\frac{1}{2}CV^2 = \\frac{1}{2}QV"
+summary_en: "Find the energy held by a charged capacitor at a given voltage."
+summary_bn: "নির্দিষ্ট ভোল্টেজে আহিত ধারকে সঞ্চিত শক্তির পরিমাণ নির্ণয়।"
+related: ["capacitance-parallel-plate", "capacitors-series-parallel"]
+tags: ["capacitor energy", "electrostatics", "work integral"]
+---
+
+Half of the energy supplied by a battery is stored; the other half is dissipated as heat in the charging resistance.

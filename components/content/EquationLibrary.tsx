@@ -22,7 +22,7 @@ export function EquationLibrary({ equations }: { equations: EquationEntry[] }) {
   const [view, setView] = useState<'grid' | 'list'>('grid');
   const [sort, setSort] = useState<'az' | 'level'>('az');
   const chapters = useMemo(() => Array.from(new Set(equations.map((equation) => locale === 'bn' ? equation.chapter_bn ?? equation.chapter : equation.chapter))).sort((a, b) => a.localeCompare(b)), [equations, locale]);
-  const fuse = useMemo(() => new Fuse(equations, { keys: ['title_en', 'title_bn', 'chapter', 'chapter_bn', 'tags', 'summary_en', 'summary_bn', 'reference_formulas.label_en', 'reference_formulas.label_bn', 'reference_formulas.note_en', 'reference_formulas.note_bn'], threshold: 0.35 }), [equations]);
+  const fuse = useMemo(() => new Fuse(equations, { keys: ['title_en', 'title_bn', 'chapter', 'chapter_bn', 'tags', 'summary_en', 'summary_bn', 'derivation', 'derivation_bn', 'derivation_steps.step_en', 'derivation_steps.step_bn', 'reference_formulas.label_en', 'reference_formulas.label_bn', 'reference_formulas.note_en', 'reference_formulas.note_bn'], threshold: 0.35 }), [equations]);
   const filtered = useMemo(() => {
     let source = query.trim() ? fuse.search(query).map((result) => result.item) : equations;
     source = source.filter((equation) => subject === 'all' || equation.subject === subject).filter((equation) => level === 'all' || equation.level === level).filter((equation) => chapter === 'all' || (locale === 'bn' ? equation.chapter_bn ?? equation.chapter : equation.chapter) === chapter);

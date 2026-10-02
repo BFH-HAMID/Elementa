@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "escape-velocity"
+title_bn: "মুক্তি বেগ"
+title_en: "Escape velocity from a planet"
+subject: physics
+level: class-11-12
+chapter: "Gravitation"
+chapter_bn: "মহাকর্ষ"
+latex: "v_e = \\sqrt{\\frac{2GM}{R}} = \\sqrt{2gR}"
+calculator: false
+variables:
+  - symbol: "v_e"
+    name: "escape velocity"
+    name_bn: "মুক্তি বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "G"
+    name: "gravitational constant"
+    name_bn: "মহাকর্ষীয় ধ্রুবক"
+    unit: "N m²/kg²"
+    si_unit: "N m²/kg²"
+  - symbol: "M"
+    name: "planet mass"
+    name_bn: "গ্রহের ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "R"
+    name: "planet radius"
+    name_bn: "গ্রহের ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "g"
+    name: "surface gravity"
+    name_bn: "পৃষ্ঠের অভিকর্ষজ ত্বরণ"
+    unit: "m/s²"
+    si_unit: "m/s²"
+derivation: "By conservation of energy, an object just escapes when its initial kinetic energy exactly cancels the magnitude of the negative gravitational potential energy at the planet surface, leaving zero total energy at infinity."
+derivation_bn: "শক্তির সংরক্ষণ সূত্র অনুসারে বস্তুটি অসীমে শূন্য বেগে পৌঁছাবে যদি তার প্রাথমিক গতিশক্তি পৃষ্ঠের মহাকর্ষীয় বিভবশক্তির ঋণাত্মক মানকে পূরণ করে।"
+derivation_steps:
+  - step_en: "Set the total mechanical energy at the surface equal to zero (the value at infinity with zero speed)."
+    step_bn: "গ্রহপৃষ্ঠে মোট যান্ত্রিক শক্তিকে অসীমের শক্তির সমান (শূন্য) ধরুন।"
+    latex: "\\frac{1}{2}mv_e^2 - \\frac{GMm}{R} = 0"
+  - step_en: "Cancel m and solve for the escape speed."
+    step_bn: "ভর m বাতিল করে মুক্তি বেগের রাশি নির্ণয় করুন।"
+    latex: "v_e = \\sqrt{\\frac{2GM}{R}}"
+  - step_en: "Use g = GM/R² to express the result through surface gravity and radius."
+    step_bn: "g = GM/R² ব্যবহার করে পৃষ্ঠ-অভিকর্ষের মাধ্যমে প্রকাশ করুন।"
+    latex: "v_e = \\sqrt{2gR}"
+summary_en: "Find the minimum launch speed needed to leave a planet’s gravity permanently."
+summary_bn: "কোনো গ্রহের মহাকর্ষ অতিক্রম করতে প্রয়োজনীয় ন্যূনতম বেগ নির্ণয়।"
+related: ["gravitational-potential-energy-general", "orbital-velocity-satellite", "gravitational-field-strength"]
+tags: ["escape velocity", "gravitation", "space", "energy conservation"]
+---
+
+For Earth this gives about $11.2\ \text{km s}^{-1}$; the Moon’s value is only $2.4\ \text{km s}^{-1}$.

@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "speed-of-sound-temperature"
+title_bn: "তাপমাত্রার সাথে বায়ুতে শব্দের বেগ"
+title_en: "Speed of sound in air versus temperature"
+subject: physics
+level: class-9-10
+chapter: "Sound"
+chapter_bn: "শব্দ"
+latex: "v_t \\approx v_0 + 0.61\\,t"
+calculator: false
+variables:
+  - symbol: "v_t"
+    name: "speed at temperature t °C"
+    name_bn: "t °C তাপমাত্রায় বায়ুতে শব্দের বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "v_0"
+    name: "speed at 0 °C"
+    name_bn: "০ °C তাপমাত্রায় শব্দের বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "t"
+    name: "Celsius temperature"
+    name_bn: "সেলসিয়াস তাপমাত্রা"
+    unit: "°C"
+    si_unit: "K"
+derivation: "Sound speed in an ideal gas follows v ∝ √T. Converting Celsius to kelvin and applying a first-order binomial expansion for small t yields a near-linear increase of about 0.61 m/s per degree Celsius."
+derivation_bn: "আদর্শ গ্যাসে শব্দের বেগ পরম তাপমাত্রার বর্গমূলের সমানুপাতিক। সেলসিয়াসকে কেলভিনে রূপান্তর করে প্রথম-ক্রম বাইনোমিয়াল বিস্তৃতি প্রয়োগ করলে প্রতি ডিগ্রিতে প্রায় ০.৬১ m/s বৃদ্ধির রৈখিক সম্পর্ক পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the proportionality between sound speed and absolute temperature."
+    step_bn: "পরম তাপমাত্রার বর্গমূলের সাথে শব্দের বেগের সমানুপাতিক সম্পর্ক লিখুন।"
+    latex: "v_t = v_0\\sqrt{\\frac{T}{T_0}} = v_0\\sqrt{\\frac{273.15 + t}{273.15}}"
+  - step_en: "Factor out the constant and apply (1 + x)^{1/2} ≈ 1 + x/2 for small x."
+    step_bn: "(1 + x)^{1/2} ≈ 1 + x/2 আসন্ন মান ব্যবহার করে বিস্তৃত করুন।"
+    latex: "v_t \\approx v_0\\left(1 + \\frac{t}{2 \\times 273.15}\\right) = v_0 + v_0\\,\\frac{t}{546.3}"
+  - step_en: "Insert v_0 ≈ 332 m/s at 0 °C to obtain the practical coefficient 0.61 m/s per °C."
+    step_bn: "০ °C-এ v_0 ≈ 332 m/s বসিয়ে ব্যবহারিক রূপটি পান।"
+    latex: "v_t \\approx 332 + 0.61\\,t"
+summary_en: "Estimate how the speed of sound in air changes with air temperature."
+summary_bn: "বায়ুর তাপমাত্রা পরিবর্তনের সাথে শব্দের বেগের পরিবর্তন হিসাব।"
+related: ["echo-minimum-distance", "wave-speed"]
+tags: ["sound", "temperature", "speed of sound", "air"]
+---
+
+Humidity also raises the speed slightly because moist air is less dense than dry air at the same pressure.

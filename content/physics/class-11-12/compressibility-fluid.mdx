@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "compressibility-fluid"
+title_bn: "সংকোচনশীলতা"
+title_en: "Compressibility of a fluid"
+subject: physics
+level: class-11-12
+chapter: "Elasticity"
+chapter_bn: "স্থিতিস্থাপকতা"
+latex: "\\beta = \\frac{1}{K} = -\\frac{1}{V}\\frac{dV}{dP}"
+calculator: false
+variables:
+  - symbol: "β"
+    name: "coefficient of compressibility"
+    name_bn: "সংকোচন গুণাঙ্ক"
+    unit: "Pa⁻¹"
+    si_unit: "Pa⁻¹"
+  - symbol: "K"
+    name: "bulk modulus"
+    name_bn: "আয়তন গুণাঙ্ক"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "V"
+    name: "volume of fluid"
+    name_bn: "প্রবাহীর আয়তন"
+    unit: "m³"
+    si_unit: "m³"
+  - symbol: "P"
+    name: "applied pressure"
+    name_bn: "প্রযুক্ত চাপ"
+    unit: "Pa"
+    si_unit: "Pa"
+derivation: "Compressibility is defined as the fractional decrease in volume per unit increase in applied pressure; it is therefore the reciprocal of the bulk modulus."
+derivation_bn: "প্রবাহীর ওপর একক চাপ বৃদ্ধিতে আয়তনের আপেক্ষিক হ্রাসকে সংকোচনশীলতা বলে। এটি আয়তন গুণাঙ্কের ব্যস্তানুপাতিক।"
+derivation_steps:
+  - step_en: "Write the fractional volume decrease for a pressure increase dP."
+    step_bn: "চাপ বৃদ্ধি dP-এর জন্য আয়তনের আপেক্ষিক পরিবর্তন লিখুন।"
+    latex: "-\\frac{dV}{V} = \\beta\\, dP"
+  - step_en: "Solve for β by dividing by dP."
+    step_bn: "dP দ্বারা ভাগ করে β নির্ণয় করুন।"
+    latex: "\\beta = -\\frac{1}{V}\\frac{dV}{dP}"
+  - step_en: "Compare with the definition of bulk modulus to confirm β = 1/K."
+    step_bn: "আয়তন গুণাঙ্কের সংজ্ঞার সাথে তুলনা করে সম্পর্কটি নিশ্চিত করুন।"
+    latex: "\\beta = \\frac{1}{K}"
+summary_en: "Quantify how much a fluid volume shrinks under pressure."
+summary_bn: "চাপ প্রয়োগে প্রবাহীর আয়তন কতটা কমে তা নির্ণয়।"
+related: ["bulk-modulus", "pascal-hydraulic-lift"]
+tags: ["compressibility", "bulk modulus", "fluid", "hydraulics"]
+---
+
+Water’s tiny compressibility ($\sim 4.6 \times 10^{-10}\ \text{Pa}^{-1}$) is what makes hydraulic brakes feel firm.

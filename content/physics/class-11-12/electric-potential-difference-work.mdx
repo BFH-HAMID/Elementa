@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "electric-potential-difference-work"
+title_bn: "বিভব পার্থক্য ও কৃতকাজ"
+title_en: "Electric potential difference and work"
+subject: physics
+level: class-11-12
+chapter: "Electrostatics"
+chapter_bn: "স্থির তড়িৎ"
+latex: "V_B - V_A = \\frac{W_{AB}}{q_0} = -\\int_A^B \\vec{E}\\cdot d\\vec{l}"
+calculator: false
+variables:
+  - symbol: "ΔV"
+    name: "potential difference"
+    name_bn: "বিভব পার্থক্য"
+    unit: "V"
+    si_unit: "V"
+  - symbol: "W_AB"
+    name: "work done by external agent"
+    name_bn: "বাহ্যিক বলের কৃতকাজ"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "q_0"
+    name: "test charge"
+    name_bn: "পরীক্ষাধীন আধান"
+    unit: "C"
+    si_unit: "C"
+  - symbol: "E"
+    name: "electric field"
+    name_bn: "তড়িৎ ক্ষেত্রের প্রাবল্য"
+    unit: "N/C"
+    si_unit: "V/m"
+derivation: "Electrostatic force is conservative, so the work per unit charge in moving a test charge between two points is path independent. Defining potential energy per unit charge gives potential, whose gradient is the negative of the field."
+derivation_bn: "স্থির তড়িৎ বল রক্ষণশীল, তাই দুই বিন্দুর মধ্যে একক আধান স্থানান্তরে কৃতকাজ পথের ওপর নির্ভর করে না। একক আধানের বিভব শক্তিকে বিভব হিসেবে সংজ্ঞায়িত করলে এর নতি ক্ষেত্রের ঋণাত্মক মানের সমান।"
+derivation_steps:
+  - step_en: "Relate the change in potential energy to the work done against the electric force."
+    step_bn: "বিভব শক্তির পরিবর্তনকে তড়িৎ বলের বিপরীতে কৃতকাজের সাথে সম্পর্কিত করুন।"
+    latex: "\\Delta U = W_{AB} = q_0(V_B - V_A)"
+  - step_en: "Divide by q_0 to define the potential difference between A and B."
+    step_bn: "q_0 দ্বারা ভাগ করে বিভব পার্থক্যের সংজ্ঞা দিন।"
+    latex: "V_B - V_A = \\frac{W_{AB}}{q_0}"
+  - step_en: "Write the equivalent line-integral form using E = F/q_0."
+    step_bn: "E = F/q_0 ব্যবহার করে রেখা-সমাকলনের রূপটি লিখুন।"
+    latex: "V_B - V_A = -\\int_A^B \\vec{E}\\cdot d\\vec{l}"
+summary_en: "Compute voltage between two points from the electric field or work done."
+summary_bn: "তড়িৎ ক্ষেত্র বা কৃতকাজ থেকে দুই বিন্দুর মধ্যে বিভব পার্থক্য নির্ণয়।"
+related: ["electric-field-intensity", "capacitor-energy"]
+tags: ["potential difference", "voltage", "work", "conservative field"]
+---
+
+The electron-volt follows directly: an electron accelerated through $1\ \text{V}$ gains $1\ \text{eV} = 1.602 \times 10^{-19}\ \text{J}$.

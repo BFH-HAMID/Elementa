@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "excess-pressure-soap-bubble"
+title_bn: "সাবানের বুদবুদের অতিরিক্ত চাপ"
+title_en: "Excess pressure inside a soap bubble"
+subject: physics
+level: class-11-12
+chapter: "Surface Tension"
+chapter_bn: "পৃষ্ঠটান"
+latex: "\\Delta P_{\\text{bubble}} = \\frac{4T}{R}, \\qquad \\Delta P_{\\text{drop}} = \\frac{2T}{R}"
+calculator: false
+variables:
+  - symbol: "ΔP"
+    name: "excess internal pressure"
+    name_bn: "অভ্যন্তরীণ অতিরিক্ত চাপ"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "T"
+    name: "surface tension"
+    name_bn: "পৃষ্ঠটান"
+    unit: "N/m"
+    si_unit: "N/m"
+  - symbol: "R"
+    name: "radius of bubble or drop"
+    name_bn: "বুদবুদ বা ফোঁটার ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+derivation: "Cutting the bubble into hemispheres, the inward force from surface tension around the circular rim is balanced by the excess pressure acting over the circular cross-section. A soap film has two surfaces, doubling the result."
+derivation_bn: "বুদবুদকে দুই গোলার্ধে কল্পনা করলে বৃত্তাকার প্রান্ত বরাবর পৃষ্ঠটানের সংকোচন বল এবং অতিরিক্ত চাপের ঊর্ধ্বমুখী বল ভারসাম্য রক্ষা করে। সাবানের পর্দার দুইটি পৃষ্ঠ থাকায় ফলাফল দ্বিগুণ হয়।"
+derivation_steps:
+  - step_en: "Balance the pressure force on the circular cross-section against the surface tension force around the rim for one surface."
+    step_bn: "একটি পৃষ্ঠের জন্য বৃত্তাকার প্রস্থচ্ছেদের চাপজনিত বল ও প্রান্ত বরাবর পৃষ্ঠটানের বল সাম্য করুন।"
+    latex: "\\Delta P \\cdot \\pi R^2 = T \\cdot 2\\pi R \\implies \\Delta P = \\frac{2T}{R}"
+  - step_en: "A liquid drop has a single free surface, giving the drop result."
+    step_bn: "তরল ফোঁটার একটি মাত্র মুক্ত পৃষ্ঠ থাকে, ফলে এই রূপটি প্রযোজ্য।"
+    latex: "\\Delta P_{\\text{drop}} = \\frac{2T}{R}"
+  - step_en: "A soap bubble has an inner and an outer surface, so the tension force doubles."
+    step_bn: "সাবানের বুদবুদের ভেতরে ও বাইরে দুইটি পৃষ্ঠ থাকায় বল দ্বিগুণ হয়।"
+    latex: "\\Delta P_{\\text{bubble}} = \\frac{4T}{R}"
+summary_en: "Find why small bubbles and droplets hold higher internal pressure."
+summary_bn: "ছোট বুদবুদ বা ফোঁটার অভ্যন্তরে চাপ বেশি কেন হয় তা নির্ণয়।"
+related: ["surface-tension-force", "capillary-rise"]
+tags: ["excess pressure", "soap bubble", "surface tension", "laplace"]
+---
+
+Because $\Delta P \propto 1/R$, air flows from a smaller bubble into a larger one when they are connected.

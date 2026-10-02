@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "apparent-depth-refraction"
+title_bn: "প্রতিসরণের কারণে আপাত গভীরতা"
+title_en: "Apparent depth in a refracting medium"
+subject: physics
+level: class-9-10
+chapter: "Refraction of Light"
+chapter_bn: "আলোর প্রতিসরণ"
+latex: "d_{\\text{app}} = \\frac{d_{\\text{real}}}{n}"
+calculator: false
+variables:
+  - symbol: "d_app"
+    name: "apparent depth"
+    name_bn: "আপাত গভীরতা"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "d_real"
+    name: "real depth"
+    name_bn: "প্রকৃত গভীরতা"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "n"
+    name: "refractive index of the medium"
+    name_bn: "মাধ্যমের প্রতিসরণাঙ্ক"
+    unit: "1"
+    si_unit: "1"
+derivation: "For paraxial rays emerging from a point at the bottom of a slab, Snell’s law together with the small-angle approximation gives the ratio of real to apparent depth as the refractive index."
+derivation_bn: "পুকুরের তলদেশ থেকে নির্গত উপাক্ষীয় রশ্মির ক্ষেত্রে স্নেলের সূত্র এবং ক্ষুদ্র কোণের আসন্ন মান ব্যবহার করে প্রকৃত ও আপাত গভীরতার অনুপাত প্রতিসরণাঙ্কের সমান প্রমাণ করা যায়।"
+derivation_steps:
+  - step_en: "Consider a ray from the bottom Of point O at incidence angle i inside the liquid refracting at angle r in air."
+    step_bn: "তলদেশস্থ বিন্দু O থেকে আগত রশ্মি তরলে i কোণে এসে বায়ুতে r কোণে প্রতিসৃত হচ্ছে।"
+    latex: "n\\sin i = \\sin r"
+  - step_en: "For near-normal viewing, replace sines by tangents using the geometry of the two horizontal offsets."
+    step_bn: "প্রায় অভিলম্ব দর্শনে সাইন-এর পরিবর্তে ট্যানজেন্ট ব্যবহার করে ভূমির অনুপাত লিখুন।"
+    latex: "n\\tan i \\approx \\tan r \\implies n \\frac{x}{d_{\\text{real}}} = \\frac{x}{d_{\\text{app}}}"
+  - step_en: "Cancel the common horizontal offset x and solve for the apparent depth."
+    step_bn: "সাধারণ অনুভূমিক দূরত্ব x বাতিল করে আপাত গভীরতা নির্ণয় করুন।"
+    latex: "d_{\\text{app}} = \\frac{d_{\\text{real}}}{n}"
+summary_en: "Explain why objects under water appear shallower than they truly are."
+summary_bn: "পানির নিচের বস্তু কেন প্রকৃত অবস্থানের চেয়ে উপরে দেখায় তা ব্যাখ্যা করুন।"
+related: ["snells-law", "refractive-index-definition"]
+tags: ["apparent depth", "refraction", "real depth", "optics"]
+---
+
+The apparent upward shift equals $d_{\text{real}}\left(1 - \frac{1}{n}\right)$; for water this is about a quarter of the true depth.

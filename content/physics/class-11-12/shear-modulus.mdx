@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "shear-modulus"
+title_bn: "দৃঢ়তার গুণাঙ্ক"
+title_en: "Shear modulus (modulus of rigidity)"
+subject: physics
+level: class-11-12
+chapter: "Elasticity"
+chapter_bn: "স্থিতিস্থাপকতা"
+latex: "G = \\frac{\\text{shear stress}}{\\text{shear strain}} = \\frac{F/A}{\\tan\\theta} \\approx \\frac{FL}{A\\Delta x}"
+calculator: false
+variables:
+  - symbol: "G"
+    name: "shear modulus"
+    name_bn: "দৃঢ়তার গুণাঙ্ক"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "F"
+    name: "tangential shearing force"
+    name_bn: "স্পর্শকীয় বল"
+    unit: "N"
+    si_unit: "N"
+  - symbol: "A"
+    name: "area of the sheared face"
+    name_bn: "কর্তিত তলের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+  - symbol: "θ"
+    name: "angle of shear"
+    name_bn: "বিকৃতি কোণ"
+    unit: "°"
+    si_unit: "rad"
+  - symbol: "Δx"
+    name: "lateral displacement of top face"
+    name_bn: "উপরিতলের পার্শ্বীয় সরণ"
+    unit: "m"
+    si_unit: "m"
+derivation: "A tangential force applied to the top face of a block shifts it laterally while the base stays fixed. Shear strain is the resulting angular deformation tanθ ≈ Δx/L, and the ratio of shear stress to this strain is the shear modulus."
+derivation_bn: "ঘনকের উপরিতলে স্পর্শকীয় বল প্রয়োগ করলে তলটি পার্শ্বীয়ভাবে সরে। সৃষ্ট কৌণিক বিকৃতি tanθ ≈ Δx/L এবং কর্তন পীড়নের অনুপাতই দৃঢ়তার গুণাঙ্ক।"
+derivation_steps:
+  - step_en: "Write the tangential (shearing) stress as force per sheared area."
+    step_bn: "স্পর্শকীয় বলকে কর্তিত ক্ষেত্রফল দিয়ে ভাগ করুন।"
+    latex: "\\text{shear stress} = \\frac{F}{A}"
+  - step_en: "Express shear strain as the angular distortion, tanθ = Δx/L for small angles."
+    step_bn: "ক্ষুদ্র কোণের জন্য বিকৃতি কোণ tanθ = Δx/L হিসেবে লিখুন।"
+    latex: "\\text{shear strain} = \\tan\\theta \\approx \\theta \\approx \\frac{\\Delta x}{L}"
+  - step_en: "Take the ratio to define the shear (rigidity) modulus."
+    step_bn: "পীড়ন ও বিকৃতির অনুপাত থেকে দৃঢ়তার গুণাঙ্ক পান।"
+    latex: "G = \\frac{F/A}{\\Delta x/L} = \\frac{FL}{A\\Delta x}"
+summary_en: "Quantify a solid’s resistance to shape-changing shear stress."
+summary_bn: "আকৃতি পরিবর্তনকারী কর্তন পীড়নের বিরুদ্ধে কঠিন পদার্থের প্রতিরোধ পরিমাপ।"
+related: ["youngs-modulus-equation", "bulk-modulus"]
+tags: ["shear modulus", "rigidity", "elasticity", "stress"]
+---
+
+Liquids and gases cannot sustain static shear, so their shear modulus is effectively zero.

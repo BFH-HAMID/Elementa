@@ -13,6 +13,7 @@ import {
   type Subject,
   type Level
 } from './schemas';
+import { hasCalculatorModel } from './calculator-models';
 
 const contentRoot = path.join(process.cwd(), 'content');
 
@@ -38,26 +39,41 @@ function labelLevel(level: Level): string {
   })[level];
 }
 
+let equationCache: EquationEntry[] | null = null;
+let equationBySlugCache: Map<string, EquationEntry> | null = null;
+let experimentCache: ExperimentEntry[] | null = null;
+let experimentBySlugCache: Map<string, ExperimentEntry> | null = null;
+
 export function getEquationEntries(): EquationEntry[] {
-  return (['physics', 'chemistry'] as const)
+  if (equationCache) return equationCache;
+  equationCache = (['physics', 'chemistry'] as const)
     .flatMap((subject) => allMdx(subject))
     .map((filePath) => {
       const raw = fs.readFileSync(filePath, 'utf8');
       const parsed = matter(raw);
       if ((parsed.data.type ?? 'equation') !== 'equation') return null;
       const data = equationFrontmatterSchema.parse({ ...parsed.data, type: 'equation' });
-      return { ...data, body: parsed.content.trim(), filePath };
+      return {
+        ...data,
+        body: parsed.content.trim(),
+        filePath,
+        interactive: data.calculator || hasCalculatorModel(data.slug)
+      };
     })
     .filter((entry): entry is EquationEntry => entry !== null && entry.type === 'equation')
     .sort((a, b) => a.title_en.localeCompare(b.title_en));
+  equationBySlugCache = new Map(equationCache.map((entry) => [entry.slug, entry]));
+  return equationCache;
 }
 
 export function getEquationBySlug(slug: string): EquationEntry | undefined {
-  return getEquationEntries().find((entry) => entry.slug === slug);
+  if (!equationBySlugCache) getEquationEntries();
+  return equationBySlugCache?.get(slug);
 }
 
 export function getExperimentEntries(): ExperimentEntry[] {
-  return (['physics', 'chemistry'] as const)
+  if (experimentCache) return experimentCache;
+  experimentCache = (['physics', 'chemistry'] as const)
     .flatMap((subject) => allMdx(subject))
     .map((filePath) => {
       const raw = fs.readFileSync(filePath, 'utf8');
@@ -68,10 +84,13 @@ export function getExperimentEntries(): ExperimentEntry[] {
     })
     .filter((entry): entry is ExperimentEntry => entry !== null && entry.type === 'experiment')
     .sort((a, b) => a.title_en.localeCompare(b.title_en));
+  experimentBySlugCache = new Map(experimentCache.map((entry) => [entry.slug, entry]));
+  return experimentCache;
 }
 
 export function getExperimentBySlug(slug: string): ExperimentEntry | undefined {
-  return getExperimentEntries().find((entry) => entry.slug === slug);
+  if (!experimentBySlugCache) getExperimentEntries();
+  return experimentBySlugCache?.get(slug);
 }
 
 export function getQuizEntries(): Quiz[] {

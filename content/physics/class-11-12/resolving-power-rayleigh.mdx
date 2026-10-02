@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "resolving-power-rayleigh"
+title_bn: "রেলির বিভেদন ক্ষমতার মানদণ্ড"
+title_en: "Rayleigh criterion for optical resolution"
+subject: physics
+level: class-11-12
+chapter: "Wave Optics"
+chapter_bn: "তরঙ্গ আলোকবিজ্ঞান"
+latex: "\\theta_{\\min} = 1.22\\frac{\\lambda}{D}, \\qquad R = \\frac{\\lambda}{\\Delta\\lambda} = nN"
+calculator: false
+variables:
+  - symbol: "θ_min"
+    name: "minimum resolvable angle"
+    name_bn: "ন্যূনতম বিভেদনযোগ্য কোণ"
+    unit: "rad"
+    si_unit: "rad"
+  - symbol: "λ"
+    name: "wavelength of light"
+    name_bn: "আলোর তরঙ্গদৈর্ঘ্য"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "D"
+    name: "aperture diameter"
+    name_bn: "ছিদ্র বা লেন্সের ব্যাস"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "R"
+    name: "resolving power"
+    name_bn: "বিভেদন ক্ষমতা"
+    unit: "1"
+    si_unit: "1"
+derivation: "A circular aperture produces an Airy diffraction pattern whose first dark ring occurs at sinθ ≈ 1.22λ/D. Rayleigh’s criterion says two point sources are just resolved when one maximum falls on the other’s first minimum."
+derivation_bn: "বৃত্তাকার ছিদ্র একটি এয়ারি অপবর্তন নমুনা তৈরি করে যার প্রথম অন্ধকার বলয় sinθ ≈ 1.22λ/D-এ অবস্থিত। রেলির মানদণ্ড অনুযায়ী দুই বিন্দু উৎস তখনই বিভেদনযোগ্য যখন একটির চরম অন্যটির প্রথম অবমের ওপর পড়ে।"
+derivation_steps:
+  - step_en: "Locate the first minimum of the Airy pattern for a circular aperture."
+    step_bn: "বৃত্তাকার ছিদ্রের এয়ারি নমুনার প্রথম অবমের অবস্থান নির্ণয় করুন।"
+    latex: "\\sin\\theta \\approx 1.22\\frac{\\lambda}{D}"
+  - step_en: "For small angles state the Rayleigh criterion for just-resolved sources."
+    step_bn: "ক্ষুদ্র কোণে রেলির বিভেদন মানদণ্ড লিখুন।"
+    latex: "\\theta_{\\min} = 1.22\\frac{\\lambda}{D}"
+  - step_en: "For a grating, the resolving power equals the order times the number of illuminated slits."
+    step_bn: "গ্রেটিংয়ের বিভেদন ক্ষমতা ক্রম ও আলোকিত চির সংখ্যার গুণফলের সমান।"
+    latex: "R = \\frac{\\lambda}{\\Delta\\lambda} = nN"
+summary_en: "Explain why larger telescopes and microscopes resolve finer detail."
+summary_bn: "বড় টেলিস্কোপ ও মাইক্রোস্কোপ কেন সূক্ষ্ম বিবরণ দেখাতে পারে তা ব্যাখ্যা করুন।"
+related: ["diffraction-grating-equation", "young-double-slit-fringe-width"]
+tags: ["rayleigh criterion", "resolution", "airy disc", "telescope"]
+---
+
+Human eyes with $D \approx 3\ \text{mm}$ have a diffraction limit of roughly one arc-minute.

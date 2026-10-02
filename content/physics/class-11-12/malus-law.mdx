@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "malus-law"
+title_bn: "ম্যালাসের সূত্র"
+title_en: "Malus’s law for polarised light"
+subject: physics
+level: class-11-12
+chapter: "Wave Optics"
+chapter_bn: "তরঙ্গ আলোকবিজ্ঞান"
+latex: "I = I_0\\cos^2\\theta"
+calculator: false
+variables:
+  - symbol: "I"
+    name: "transmitted intensity"
+    name_bn: "নির্গত আলোর তীব্রতা"
+    unit: "W/m²"
+    si_unit: "W/m²"
+  - symbol: "I_0"
+    name: "incident polarised intensity"
+    name_bn: "আপতিত সমবর্তিত আলোর তীব্রতা"
+    unit: "W/m²"
+    si_unit: "W/m²"
+  - symbol: "θ"
+    name: "angle between polariser axes"
+    name_bn: "পোলারাইজার অক্ষের মধ্যবর্তী কোণ"
+    unit: "°"
+    si_unit: "rad"
+derivation: "Only the component of the electric field parallel to the analyser axis is transmitted, so E = E_0 cosθ. Since intensity is proportional to the square of the field amplitude, I = I_0 cos²θ."
+derivation_bn: "বিশ্লেষকের অক্ষের সমান্তরাল তড়িৎ ক্ষেত্রের উপাংশই কেবল প্রবেশ করতে পারে, তাই E = E_0 cosθ। তীব্রতা ক্ষেত্রের বিস্তারের বর্গের সমানুপাতিক হওয়ায় I = I_0 cos²θ।"
+derivation_steps:
+  - step_en: "Resolve the incident field amplitude along the analyser axis."
+    step_bn: "আপতিত ক্ষেত্রের বিস্তারকে বিশ্লেষকের অক্ষ বরাবর বিশ্লিষ্ট করুন।"
+    latex: "E = E_0\\cos\\theta"
+  - step_en: "Use the proportionality between intensity and squared field amplitude."
+    step_bn: "তীব্রতা ও ক্ষেত্রের বর্গের সমানুপাতিক সম্পর্ক ব্যবহার করুন।"
+    latex: "I \\propto E^2 \\implies \\frac{I}{I_0} = \\frac{E^2}{E_0^2}"
+  - step_en: "Substitute the resolved amplitude to obtain Malus’s law."
+    step_bn: "বিশ্লিষ্ট বিস্তার বসিয়ে ম্যালাসের সূত্র পান।"
+    latex: "I = I_0\\cos^2\\theta"
+summary_en: "Predict brightness through crossed polarisers and analysers."
+summary_bn: "ক্রস পোলারাইজারের মধ্য দিয়ে আলোর তীব্রতা হ্রাস নির্ণয়।"
+related: ["young-double-slit-fringe-width", "snells-law"]
+tags: ["malus law", "polarisation", "intensity", "analyser"]
+---
+
+At $\theta = 90^\circ$ the transmitted intensity is zero — the polarisers are "crossed".

@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "drift-velocity"
+title_bn: "জোয়ার বেগ"
+title_en: "Drift velocity of charge carriers"
+subject: physics
+level: class-11-12
+chapter: "Current Electricity"
+chapter_bn: "চল তড়িৎ"
+latex: "v_d = \\frac{I}{nAe} = \\frac{J}{ne}"
+calculator: false
+variables:
+  - symbol: "v_d"
+    name: "drift velocity"
+    name_bn: "জোয়ার বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "I"
+    name: "electric current"
+    name_bn: "তড়িৎ প্রবাহমাত্রা"
+    unit: "A"
+    si_unit: "A"
+  - symbol: "n"
+    name: "free-electron number density"
+    name_bn: "মুক্ত ইলেকট্রন সংখ্যা ঘনত্ব"
+    unit: "m⁻³"
+    si_unit: "m⁻³"
+  - symbol: "A"
+    name: "cross-sectional area"
+    name_bn: "প্রস্থচ্ছেদের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+  - symbol: "e"
+    name: "elementary charge"
+    name_bn: "মৌলিক আধান"
+    unit: "C"
+    si_unit: "C"
+derivation: "In time Δt the carriers that pass a cross-section lie within a distance v_dΔt, so the charge transferred is n A v_d Δt e. Dividing by Δt gives the current and hence the drift velocity."
+derivation_bn: "Δt সময়ে কোনো প্রস্থচ্ছেদ যে সব বাহক অতিক্রম করে তারা v_dΔt দূরত্বের মধ্যে অবস্থিত, তাই স্থানান্তরিত আধান n A v_d Δt e। সময় দিয়ে ভাগ করলে প্রবাহ ও জোয়ার বেগ পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Count the free electrons in a slab of length v_d Δt and area A."
+    step_bn: "v_d Δt দৈর্ঘ্য ও A ক্ষেত্রফলের স্তরে মুক্ত ইলেকট্রনের সংখ্যা গণনা করুন।"
+    latex: "N = n A v_d \\Delta t"
+  - step_en: "Multiply by e to get the transferred charge, then divide by Δt to get current."
+    step_bn: "e দ্বারা গুণ করে স্থানান্তরিত আধান, তারপর Δt দিয়ে ভাগ করে প্রবাহ পান।"
+    latex: "Q = n A v_d \\Delta t\\, e \\implies I = \\frac{Q}{\\Delta t} = n A e v_d"
+  - step_en: "Rearrange for v_d and express it via current density J = I/A."
+    step_bn: "v_d-এর জন্য পক্ষান্তর করুন এবং J = I/A দিয়ে প্রকাশ করুন।"
+    latex: "v_d = \\frac{I}{nAe} = \\frac{J}{ne}"
+summary_en: "Find how fast electrons creep through a conductor carrying current I."
+summary_bn: "প্রবাহ বহনকারী পরিবাহীতে ইলেকট্রনের গড় গতিবেগ নির্ণয়।"
+related: ["resistivity-formula", "ohms-law", "electric-charge-current"]
+tags: ["drift velocity", "current density", "electron", "conduction"]
+---
+
+Drift speeds are surprisingly slow — typically fractions of a millimetre per second — yet the signal travels near light speed.

@@ -1,0 +1,61 @@
+---
+type: equation
+slug: "elastic-collision-velocities"
+title_bn: "স্থিতিস্থাপক সংঘর্ষে শেষ বেগ"
+title_en: "Final velocities in a one-dimensional elastic collision"
+subject: physics
+level: class-9-10
+chapter: "Force"
+chapter_bn: "বল"
+latex: "v_1 = \\frac{m_1 - m_2}{m_1 + m_2}u_1 + \\frac{2m_2}{m_1 + m_2}u_2, \\qquad v_2 = \\frac{2m_1}{m_1 + m_2}u_1 + \\frac{m_2 - m_1}{m_1 + m_2}u_2"
+calculator: false
+variables:
+  - symbol: "m_1"
+    name: "mass of first body"
+    name_bn: "প্রথম বস্তুর ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "m_2"
+    name: "mass of second body"
+    name_bn: "দ্বিতীয় বস্তুর ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "u_1"
+    name: "initial velocity of first body"
+    name_bn: "প্রথম বস্তুর আদি বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "u_2"
+    name: "initial velocity of second body"
+    name_bn: "দ্বিতীয় বস্তুর আদি বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "v_1"
+    name: "final velocity of first body"
+    name_bn: "প্রথম বস্তুর শেষ বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "v_2"
+    name: "final velocity of second body"
+    name_bn: "দ্বিতীয় বস্তুর শেষ বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+derivation: "An elastic collision conserves both momentum and kinetic energy. Solving the two simultaneous conservation equations gives a neat shortcut: the relative speed of separation equals the relative speed of approach, which leads directly to the velocity formulas."
+derivation_bn: "স্থিতিস্থাপক সংঘর্ষে ভরবেগ ও গতিশক্তি উভয়ই সংরক্ষিত থাকে। দুই সংরক্ষণ সমীকরণ একসাথে সমাধান করলে একটি সুন্দর সহজ পথ পাওয়া যায়: বিচ্ছেদের আপেক্ষিক বেগ আগমনের আপেক্ষিক বেগের সমান।"
+derivation_steps:
+  - step_en: "Write conservation of linear momentum for the collision."
+    step_bn: "সংঘর্ষের জন্য রৈখিক ভরবেগের সংরক্ষণ লিখুন।"
+    latex: "m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2"
+  - step_en: "Write conservation of kinetic energy and factor the difference of squares."
+    step_bn: "গতিশক্তির সংরক্ষণ লিখে বর্গের পার্থক্য ফ্যাক্টর করুন।"
+    latex: "m_1(u_1^2 - v_1^2) = m_2(v_2^2 - u_2^2) \\implies m_1(u_1-v_1)(u_1+v_1) = m_2(v_2-u_2)(v_2+u_2)"
+  - step_en: "Divide by the momentum equation to get u_1 + v_1 = u_2 + v_2, then solve the pair of linear equations."
+    step_bn: "ভরবেগ সমীকরণ দিয়ে ভাগ করলে u_1 + v_1 = u_2 + v_2 পাওয়া যায়; এরপর দুই রৈখিক সমীকরণ সমাধান করুন।"
+    latex: "u_1 - u_2 = v_2 - v_1 \\implies v_1 = \\frac{m_1-m_2}{m_1+m_2}u_1 + \\frac{2m_2}{m_1+m_2}u_2"
+summary_en: "Predict post-collision speeds when kinetic energy is conserved."
+summary_bn: "গতিশক্তি সংরক্ষিত হলে সংঘর্ষের পরের বেগ নির্ণয়।"
+related: ["conservation-of-momentum", "linear-momentum", "kinetic-energy"]
+tags: ["elastic collision", "momentum conservation", "kinetic energy", "head-on"]
+---
+
+Equal masses simply exchange velocities; a light body bouncing off a heavy one reverses with nearly the same speed.

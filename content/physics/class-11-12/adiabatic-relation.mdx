@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "adiabatic-relation"
+title_bn: "রুদ্ধতাপ প্রক্রিয়ার সমীকরণ"
+title_en: "Adiabatic relation for an ideal gas"
+subject: physics
+level: class-11-12
+chapter: "Thermodynamics"
+chapter_bn: "তাপগতিবিদ্যা"
+latex: "PV^\\gamma = \\text{constant}, \\qquad \\gamma = \\frac{C_P}{C_V}"
+calculator: false
+variables:
+  - symbol: "P"
+    name: "gas pressure"
+    name_bn: "গ্যাসের চাপ"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "V"
+    name: "gas volume"
+    name_bn: "গ্যাসের আয়তন"
+    unit: "m³"
+    si_unit: "m³"
+  - symbol: "γ"
+    name: "adiabatic index"
+    name_bn: "রুদ্ধতাপ সূচক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "C_P"
+    name: "molar heat capacity at constant pressure"
+    name_bn: "স্থির চাপে মোলার তাপ ধারকতা"
+    unit: "J/(mol K)"
+    si_unit: "J/(mol K)"
+derivation: "For an adiabatic process Q = 0, so the first law gives dU = −P dV. Substituting dU = nC_V dT and P = nRT/V, then integrating with the identity C_P − C_V = R, yields PV^γ = constant."
+derivation_bn: "রুদ্ধতাপ প্রক্রিয়ায় Q = 0, তাই প্রথম সূত্র থেকে dU = −P dV। dU = nC_V dT ও P = nRT/V বসিয়ে এবং C_P − C_V = R ব্যবহার করে সমাকলন করলে PV^γ = ধ্রুব পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Set Q = 0 in the first law and substitute dU = nC_V dT and P = nRT/V."
+    step_bn: "প্রথম সূত্রে Q = 0 বসিয়ে dU ও P-এর রাশি প্রতিস্থাপন করুন।"
+    latex: "nC_V dT = -\\frac{nRT}{V}dV \\implies C_V\\frac{dT}{T} = -R\\frac{dV}{V}"
+  - step_en: "Replace R by C_P − C_V using Mayer’s relation."
+    step_bn: "মেয়ারের সম্পর্ক R = C_P − C_V ব্যবহার করুন।"
+    latex: "C_V\\frac{dT}{T} + (C_P - C_V)\\frac{dV}{V} = 0"
+  - step_en: "Divide by C_V, integrate, and convert back to P and V using the ideal-gas law."
+    step_bn: "C_V দিয়ে ভাগ করে সমাকলন করুন এবং আদর্শ গ্যাস সূত্র দিয়ে P, V-তে রূপান্তর করুন।"
+    latex: "\\ln T + (\\gamma - 1)\\ln V = \\text{constant} \\implies PV^\\gamma = \\text{constant}"
+summary_en: "Model rapid compression and expansion where no heat is exchanged."
+summary_bn: "তাপ বিনিময় না হওয়া দ্রুত সংকোচন বা প্রসারণের সম্পর্ক নির্ণয়।"
+related: ["first-law-thermodynamics", "isothermal-work", "carnot-engine-efficiency"]
+tags: ["adiabatic", "gamma", "poisson relation", "thermodynamics"]
+---
+
+For a diatomic gas like air, $\gamma \approx 1.4$; for a monatomic gas $\gamma \approx 5/3$.

@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "lorentz-force"
+title_bn: "লরেন্টজ বল"
+title_en: "Lorentz force on a moving charge"
+subject: physics
+level: class-11-12
+chapter: "Magnetism"
+chapter_bn: "চুম্বকত্ব"
+latex: "\\vec{F} = q(\\vec{E} + \\vec{v}\\times\\vec{B})"
+calculator: false
+variables:
+  - symbol: "F"
+    name: "total electromagnetic force"
+    name_bn: "তড়িৎচৌম্বক বল"
+    unit: "N"
+    si_unit: "N"
+  - symbol: "q"
+    name: "charge of the particle"
+    name_bn: "কণার আধান"
+    unit: "C"
+    si_unit: "C"
+  - symbol: "E"
+    name: "electric field"
+    name_bn: "তড়িৎ ক্ষেত্র"
+    unit: "N/C"
+    si_unit: "V/m"
+  - symbol: "v"
+    name: "velocity of the particle"
+    name_bn: "কণার বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "B"
+    name: "magnetic flux density"
+    name_bn: "চৌম্বক ফ্লাক্স ঘনত্ব"
+    unit: "T"
+    si_unit: "T"
+derivation: "The electric part follows from the definition of E as force per unit charge. The magnetic part is perpendicular to both velocity and field, does no work, and its magnitude qvB sinθ is confirmed by deflection experiments."
+derivation_bn: "তড়িৎ অংশটি একক আধানে বল হিসেবে E-এর সংজ্ঞা থেকে আসে। চৌম্বক অংশটি বেগ ও ক্ষেত্র উভয়ের লম্বে ক্রিয়া করে, কোনো কাজ করে না এবং এর মান qvB sinθ বিক্ষেপণ পরীক্ষায় নিশ্চিত হয়েছে।"
+derivation_steps:
+  - step_en: "Write the electric force using the definition of field strength."
+    step_bn: "ক্ষেত্র প্রাবল্যের সংজ্ঞা থেকে তড়িৎ বল লিখুন।"
+    latex: "\\vec{F}_E = q\\vec{E}"
+  - step_en: "Add the magnetic part, whose magnitude is qvB sinθ and direction is given by v × B."
+    step_bn: "চৌম্বক অংশ যোগ করুন যার মান qvB sinθ এবং দিক v × B দ্বারা নির্ধারিত।"
+    latex: "\\vec{F}_B = q\\,\\vec{v}\\times\\vec{B}"
+  - step_en: "Combine both contributions into the full Lorentz force law."
+    step_bn: "উভয় অবদান একত্রিত করে পূর্ণ লরেন্টজ বলের সূত্র পান।"
+    latex: "\\vec{F} = q(\\vec{E} + \\vec{v}\\times\\vec{B})"
+summary_en: "Predict the trajectory of charged particles in electric and magnetic fields."
+summary_bn: "তড়িৎ ও চৌম্বক ক্ষেত্রে আহিত কণার গতিপথ নির্ণয়।"
+related: ["force-current-carrying-conductor", "cyclotron-frequency"]
+tags: ["lorentz force", "charged particle", "cross product", "deflection"]
+---
+
+A purely magnetic field bends the path but cannot change a particle’s speed, since $\vec{v}\times\vec{B} \perp \vec{v}$.

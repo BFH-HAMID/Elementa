@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "orbital-velocity-satellite"
+title_bn: "উপগ্রহের কক্ষীয় বেগ"
+title_en: "Orbital velocity of a satellite"
+subject: physics
+level: class-11-12
+chapter: "Gravitation"
+chapter_bn: "মহাকর্ষ"
+latex: "v_o = \\sqrt{\\frac{GM}{r}} = \\sqrt{\\frac{GM}{R + h}}"
+calculator: false
+variables:
+  - symbol: "v_o"
+    name: "orbital speed"
+    name_bn: "কক্ষীয় বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "G"
+    name: "gravitational constant"
+    name_bn: "মহাকর্ষীয় ধ্রুবক"
+    unit: "N m²/kg²"
+    si_unit: "N m²/kg²"
+  - symbol: "M"
+    name: "central body mass"
+    name_bn: "কেন্দ্রীয় বস্তুর ভর"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "r"
+    name: "orbital radius from centre"
+    name_bn: "কেন্দ্র থেকে কক্ষপথের ব্যাসার্ধ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "h"
+    name: "height above surface"
+    name_bn: "পৃষ্ঠ থেকে উচ্চতা"
+    unit: "m"
+    si_unit: "m"
+derivation: "For a circular orbit the gravitational attraction supplies exactly the required centripetal force. Equating GMm/r² to mv²/r gives the orbital speed."
+derivation_bn: "বৃত্তীয় কক্ষপথে মহাকর্ষীয় আকর্ষণ বলই কেন্দ্রমুখী বলের ভূমিকা পালন করে। GMm/r² কে mv²/r-এর সমান ধরে কক্ষীয় বেগ নির্ণয় করা যায়।"
+derivation_steps:
+  - step_en: "Equate gravitational force to the centripetal force required for a circular orbit."
+    step_bn: "মহাকর্ষ বলকে কেন্দ্রমুখী বলের সমান ধরুন।"
+    latex: "\\frac{GMm}{r^2} = \\frac{mv_o^2}{r}"
+  - step_en: "Cancel m and one power of r, then take the square root."
+    step_bn: "m এবং r বাতিল করে বর্গমূল নিন।"
+    latex: "v_o = \\sqrt{\\frac{GM}{r}}"
+  - step_en: "Replace r by R + h for a satellite at altitude h and relate to escape velocity."
+    step_bn: "r = R + h বসান এবং মুক্তি বেগের সাথে সম্পর্ক দেখুন।"
+    latex: "v_o = \\sqrt{\\frac{GM}{R + h}} = \\frac{v_e}{\\sqrt{2}}"
+summary_en: "Calculate the speed a satellite needs to stay in a circular orbit."
+summary_bn: "নির্দিষ্ট উচ্চতায় বৃত্তাকার কক্ষপথে থাকতে উপগ্রহের প্রয়োজনীয় বেগ নির্ণয়।"
+related: ["newtons-law-of-gravitation", "escape-velocity", "keplers-third-law"]
+tags: ["orbital velocity", "satellite", "gravitation", "circular orbit"]
+---
+
+Low Earth orbit speed is about $7.9\ \text{km s}^{-1}$, giving a period of roughly 90 minutes.

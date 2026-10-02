@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "bernoulli-equation"
+title_bn: "বার্নোলির সমীকরণ"
+title_en: "Bernoulli’s equation for ideal fluid flow"
+subject: physics
+level: class-11-12
+chapter: "Fluid Dynamics"
+chapter_bn: "প্রবাহী গতিবিদ্যা"
+latex: "P + \\frac{1}{2}\\rho v^2 + \\rho g h = \\text{constant}"
+calculator: false
+variables:
+  - symbol: "P"
+    name: "static pressure"
+    name_bn: "স্থিতি চাপ"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "ρ"
+    name: "fluid density"
+    name_bn: "প্রবাহীর ঘনত্ব"
+    unit: "kg/m³"
+    si_unit: "kg/m³"
+  - symbol: "v"
+    name: "flow speed"
+    name_bn: "প্রবাহের বেগ"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "h"
+    name: "height above datum"
+    name_bn: "নির্দেশ তল থেকে উচ্চতা"
+    unit: "m"
+    si_unit: "m"
+derivation: "Applying the work–energy theorem to a streamline element of an inviscid, incompressible, steady flow converts pressure work into changes of kinetic and gravitational potential energy."
+derivation_bn: "অসান্দ্র, অসংকোচনীয় ও স্থির প্রবাহে একটি প্রবাহ নালিকার ওপর কার্য-শক্তি উপপাদ্য প্রয়োগ করলে চাপজনিত কাজ গতিশক্তি ও বিভবশক্তির পরিবর্তনে রূপান্তরিত হয়।"
+derivation_steps:
+  - step_en: "Net work done by pressure forces on a fluid element between sections 1 and 2 is W = P_1 A_1 Δx_1 − P_2 A_2 Δx_2."
+    step_bn: "চাপজনিত বল দ্বারা প্রবাহী উপাদানের ওপর কৃত নিট কাজ লিখুন।"
+    latex: "W = (P_1 - P_2)\\Delta V"
+  - step_en: "By the work–energy theorem, this work equals the change in kinetic plus potential energy."
+    step_bn: "কার্য-শক্তি উপপাদ্য অনুযায়ী এই কাজ গতিশক্তি ও বিভবশক্তির পরিবর্তনের সমান।"
+    latex: "(P_1 - P_2)\\Delta V = \\frac{1}{2}\\rho\\Delta V(v_2^2 - v_1^2) + \\rho g\\Delta V(h_2 - h_1)"
+  - step_en: "Divide by ΔV and regroup terms belonging to each section."
+    step_bn: "ΔV দিয়ে ভাগ করে প্রতিটি প্রস্থচ্ছেদের পদ একপাশে সাজান।"
+    latex: "P_1 + \\frac{1}{2}\\rho v_1^2 + \\rho g h_1 = P_2 + \\frac{1}{2}\\rho v_2^2 + \\rho g h_2"
+summary_en: "Trade pressure against speed and height along a streamline."
+summary_bn: "প্রবাহরেখা বরাবর চাপ, বেগ ও উচ্চতার পারস্পরিক বিনিময় নির্ণয়।"
+related: ["equation-of-continuity", "torricelli-theorem", "venturi-flow-meter"]
+tags: ["bernoulli", "fluid dynamics", "pressure", "energy conservation"]
+---
+
+Aircraft lift and the curve of a spinning football are both explained by this pressure–speed trade-off.

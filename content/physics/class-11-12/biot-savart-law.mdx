@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "biot-savart-law"
+title_bn: "বিও-সাভার সূত্র"
+title_en: "Biot–Savart law for magnetic field"
+subject: physics
+level: class-11-12
+chapter: "Magnetism"
+chapter_bn: "চুম্বকত্ব"
+latex: "d\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec{l}\\times\\hat{r}}{r^2}"
+calculator: false
+variables:
+  - symbol: "B"
+    name: "magnetic flux density"
+    name_bn: "চৌম্বক ফ্লাক্স ঘনত্ব"
+    unit: "T"
+    si_unit: "T"
+  - symbol: "μ_0"
+    name: "permeability of free space"
+    name_bn: "শূন্যস্থানের প্রবেশ্যতা"
+    unit: "H/m"
+    si_unit: "H/m"
+  - symbol: "I"
+    name: "current in the element"
+    name_bn: "উপাদানে প্রবাহমাত্রা"
+    unit: "A"
+    si_unit: "A"
+  - symbol: "dl"
+    name: "current-element length vector"
+    name_bn: "প্রবাহ উপাদানের দৈর্ঘ্য ভেক্টর"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "r"
+    name: "distance to the field point"
+    name_bn: "ক্ষেত্র বিন্দুর দূরত্ব"
+    unit: "m"
+    si_unit: "m"
+derivation: "Experimentally the field of a small current element falls as 1/r² and is perpendicular to both the element and the position vector, giving the cross-product form with μ_0/4π as the constant."
+derivation_bn: "পরীক্ষায় দেখা যায় ক্ষুদ্র প্রবাহ উপাদানের চৌম্বক ক্ষেত্র 1/r² হারে কমে এবং উপাদান ও অবস্থান ভেক্টর উভয়ের লম্ব দিকে ক্রিয়া করে, ফলে ক্রস-গুণজ রূপটির উদ্ভব হয়।"
+derivation_steps:
+  - step_en: "State the proportionality of the element’s field to current and geometry."
+    step_bn: "উপাদানের ক্ষেত্র প্রবাহ ও জ্যামিতির সমানুপাতিক লিখুন।"
+    latex: "dB \\propto \\frac{I\\,dl\\sin\\theta}{r^2}"
+  - step_en: "Write this in vector form using the cross product to encode direction."
+    step_bn: "দিক নির্দেশের জন্য ক্রস-গুণজ ব্যবহার করে ভেক্টর রূপ দিন।"
+    latex: "d\\vec{B} \\propto \\frac{I\\,d\\vec{l}\\times\\hat{r}}{r^2}"
+  - step_en: "Insert the SI constant μ_0/4π to complete the law."
+    step_bn: "SI ধ্রুবক μ_0/4π যোগ করে সূত্রটি সম্পূর্ণ করুন।"
+    latex: "d\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec{l}\\times\\hat{r}}{r^2}"
+summary_en: "Compute the magnetic field produced by any current-carrying wire."
+summary_bn: "যেকোনো প্রবাহবাহী তারের চারপাশে সৃষ্ট চৌম্বক ক্ষেত্র নির্ণয়।"
+related: ["force-current-carrying-conductor", "force-between-parallel-conductors", "ampere-circuital-law"]
+tags: ["biot savart", "magnetic field", "current element", "right hand rule"]
+---
+
+Integrating around a long straight wire recovers $B = \dfrac{\mu_0 I}{2\pi r}$; at the centre of a loop $B = \dfrac{\mu_0 I}{2R}$.

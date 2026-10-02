@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "newtons-law-of-viscosity"
+title_bn: "সান্দ্রতার নিউটনের সূত্র"
+title_en: "Newton’s law of viscous flow"
+subject: physics
+level: class-11-12
+chapter: "Viscosity and Flow"
+chapter_bn: "সান্দ্রতা ও প্রবাহ"
+latex: "F = \\eta A\\frac{dv}{dx}"
+calculator: false
+variables:
+  - symbol: "F"
+    name: "viscous drag force"
+    name_bn: "সান্দ্র বল"
+    unit: "N"
+    si_unit: "N"
+  - symbol: "η"
+    name: "coefficient of viscosity"
+    name_bn: "সান্দ্রতা সহগ"
+    unit: "Pa s"
+    si_unit: "Pa s"
+  - symbol: "A"
+    name: "area of the layer"
+    name_bn: "স্তরের ক্ষেত্রফল"
+    unit: "m²"
+    si_unit: "m²"
+  - symbol: "dv/dx"
+    name: "velocity gradient"
+    name_bn: "বেগ নতি"
+    unit: "s⁻¹"
+    si_unit: "s⁻¹"
+derivation: "For streamline flow of a Newtonian fluid, the tangential viscous force between adjacent layers is proportional to the contact area A and to the velocity gradient perpendicular to the flow."
+derivation_bn: "প্রবাহীর ধারারেখীয় প্রবাহে সন্নিহিত দুই স্তরের মধ্যে ক্রিয়াশীল সান্দ্র বল সংস্পর্শ ক্ষেত্রফল A এবং প্রবাহের লম্ব দিকে বেগ নতির সমানুপাতিক।"
+derivation_steps:
+  - step_en: "Postulate proportionality of viscous force to area and velocity gradient."
+    step_bn: "সান্দ্র বল ক্ষেত্রফল ও বেগ নতির সমানুপাতিক ধরুন।"
+    latex: "F \\propto A\\frac{dv}{dx}"
+  - step_en: "Introduce the coefficient of dynamic viscosity η as the constant."
+    step_bn: "সমানুপাতিক ধ্রুবক হিসেবে গতীয় সান্দ্রতা সহগ η বসান।"
+    latex: "F = \\eta A\\frac{dv}{dx}"
+  - step_en: "Divide by area to obtain the shear stress form used in fluid mechanics."
+    step_bn: "ক্ষেত্রফল দিয়ে ভাগ করে কর্তন পীড়নের রূপটি লিখুন।"
+    latex: "\\tau = \\eta\\frac{dv}{dx}"
+summary_en: "Compute internal friction between layers of a flowing fluid."
+summary_bn: "প্রবাহমান তরলের স্তরগুলোর মধ্যকার অভ্যন্তরীণ ঘর্ষণ বল নির্ণয়।"
+related: ["stokes-law-terminal-velocity", "poiseuilles-equation", "kinetic-viscosity"]
+tags: ["viscosity", "newtonian fluid", "shear stress", "laminar flow"]
+---
+
+Viscosity of liquids falls sharply with temperature, while that of gases increases with temperature.

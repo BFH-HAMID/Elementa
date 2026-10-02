@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "electric-field-intensity"
+title_bn: "তড়িৎ ক্ষেত্রের প্রাবল্য"
+title_en: "Electric field intensity of a point charge"
+subject: physics
+level: class-11-12
+chapter: "Electrostatics"
+chapter_bn: "স্থির তড়িৎ"
+latex: "\\vec{E} = \\frac{\\vec{F}}{q_0} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{Q}{r^2}\\hat{r}"
+calculator: false
+variables:
+  - symbol: "E"
+    name: "electric field intensity"
+    name_bn: "তড়িৎ ক্ষেত্রের প্রাবল্য"
+    unit: "N/C"
+    si_unit: "V/m"
+  - symbol: "F"
+    name: "force on a test charge"
+    name_bn: "পরীক্ষাধীন আধানের ওপর বল"
+    unit: "N"
+    si_unit: "N"
+  - symbol: "q_0"
+    name: "small positive test charge"
+    name_bn: "ক্ষুদ্র ধনাত্মক পরীক্ষা আধান"
+    unit: "C"
+    si_unit: "C"
+  - symbol: "Q"
+    name: "source charge"
+    name_bn: "উৎস আধান"
+    unit: "C"
+    si_unit: "C"
+derivation: "Electric field is defined as force per unit positive test charge. Substituting Coulomb’s force on the test charge and cancelling q_0 gives a field that depends only on the source charge and distance."
+derivation_bn: "একক ধনাত্মক পরীক্ষা আধানের ওপর ক্রিয়াশীল বলকে তড়িৎ ক্ষেত্রের প্রাবল্য বলে। পরীক্ষা আধানের ওপর কুলম্ব বল বসিয়ে q_0 বাতিল করলে ক্ষেত্রটি কেবল উৎস আধান ও দূরত্বের ওপর নির্ভর করে।"
+derivation_steps:
+  - step_en: "Define the field as force per unit positive test charge."
+    step_bn: "একক ধনাত্মক পরীক্ষা আধানে বল হিসেবে ক্ষেত্রের সংজ্ঞা দিন।"
+    latex: "\\vec{E} = \\frac{\\vec{F}}{q_0}"
+  - step_en: "Substitute the Coulomb force exerted by the source charge Q."
+    step_bn: "উৎস আধান Q কর্তৃক প্রযুক্ত কুলম্ব বল বসান।"
+    latex: "\\vec{E} = \\frac{1}{q_0}\\cdot\\frac{1}{4\\pi\\varepsilon_0}\\frac{Q q_0}{r^2}\\hat{r}"
+  - step_en: "Cancel q_0 to obtain the field of the point charge."
+    step_bn: "q_0 বাতিল করে বিন্দু আধানের ক্ষেত্র পান।"
+    latex: "\\vec{E} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{Q}{r^2}\\hat{r}"
+summary_en: "Find the electric field created by a charge distribution at a point."
+summary_bn: "কোনো বিন্দুতে আধান দ্বারা সৃষ্ট তড়িৎ ক্ষেত্রের প্রাবল্য নির্ণয়।"
+related: ["coulombs-law-equation", "gauss-law", "electric-potential-difference-work"]
+tags: ["electric field", "electrostatics", "test charge", "field line"]
+---
+
+Field lines point radially outward from a positive charge and inward toward a negative charge.

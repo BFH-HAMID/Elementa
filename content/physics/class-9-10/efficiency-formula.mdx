@@ -1,0 +1,53 @@
+---
+type: equation
+slug: "efficiency-formula"
+title_bn: "কর্মদক্ষতার সমীকরণ"
+title_en: "Mechanical efficiency of a system"
+subject: physics
+level: class-9-10
+chapter: "Work, Power and Energy"
+chapter_bn: "কাজ, ক্ষমতা ও শক্তি"
+latex: "\\eta = \\frac{E_{\\text{out}}}{E_{\\text{in}}} \\times 100\\% = \\frac{P_{\\text{out}}}{P_{\\text{in}}} \\times 100\\%"
+calculator: false
+variables:
+  - symbol: "η"
+    name: "efficiency"
+    name_bn: "কর্মদক্ষতা"
+    unit: "%"
+    si_unit: "1"
+  - symbol: "E_out"
+    name: "useful output energy"
+    name_bn: "লভ্য কার্যকর শক্তি"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "E_in"
+    name: "total input energy"
+    name_bn: "মোট প্রদত্ত শক্তি"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "P_out"
+    name: "useful output power"
+    name_bn: "কার্যকর ক্ষমতা"
+    unit: "W"
+    si_unit: "W"
+  - symbol: "P_in"
+    name: "input power"
+    name_bn: "প্রদত্ত ক্ষমতা"
+    unit: "W"
+    si_unit: "W"
+derivation: "By conservation of energy, total input energy equals useful output energy plus dissipated losses. Dividing both energies by elapsed time t shows that energy efficiency equals power efficiency."
+derivation_bn: "যন্ত্রে প্রদত্ত শক্তির কিছু অংশ ঘর্ষণ ও তাপে অপচয় হয়। লভ্য কার্যকর শক্তি ও মোট প্রদত্ত শক্তির অনুপাতকে শতকরায় প্রকাশ করলে কর্মদক্ষতা পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write total input energy as the sum of useful output energy and wasted energy."
+    step_bn: "প্রদত্ত শক্তিকে কার্যকর শক্তি ও অপচয়িত শক্তির সমষ্টি হিসেবে লিখুন।"
+    latex: "E_{\\text{in}} = E_{\\text{out}} + E_{\\text{loss}}"
+  - step_en: "Divide useful output by total input and divide numerator and denominator by time t."
+    step_bn: "কার্যকর ও প্রদত্ত শক্তির অনুপাতকে সময় t দিয়ে ভাগ করে ক্ষমতার অনুপাতে প্রকাশ করুন।"
+    latex: "\\eta = \\frac{E_{\\text{out}}}{E_{\\text{in}}} = \\frac{E_{\\text{out}}/t}{E_{\\text{in}}/t} = \\frac{P_{\\text{out}}}{P_{\\text{in}}}"
+summary_en: "Evaluate the fraction of input energy or power converted into useful work."
+summary_bn: "প্রদত্ত শক্তি বা ক্ষমতার কত শতাংশ কার্যকর কাজে রূপান্তরিত হয় তা নির্ণয়।"
+related: ["mechanical-power", "work-done", "carnot-engine-efficiency"]
+tags: ["efficiency", "power", "energy loss"]
+---
+
+Because real machines always experience friction or thermal dissipation, $E_{\text{loss}} > 0$ and practical efficiency is strictly less than $100\%$.

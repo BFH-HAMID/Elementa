@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "gauss-law"
+title_bn: "গাউসের সূত্র"
+title_en: "Gauss’s law for electric flux"
+subject: physics
+level: class-11-12
+chapter: "Electrostatics"
+chapter_bn: "স্থির তড়িৎ"
+latex: "\\oint_S \\vec{E}\\cdot d\\vec{A} = \\frac{Q_{\\text{enc}}}{\\varepsilon_0}"
+calculator: false
+variables:
+  - symbol: "Φ_E"
+    name: "net electric flux"
+    name_bn: "নিট তড়িৎ ফ্লাক্স"
+    unit: "N m²/C"
+    si_unit: "V m"
+  - symbol: "E"
+    name: "electric field"
+    name_bn: "তড়িৎ ক্ষেত্রের প্রাবল্য"
+    unit: "N/C"
+    si_unit: "V/m"
+  - symbol: "Q_enc"
+    name: "charge enclosed by surface S"
+    name_bn: "তল S দ্বারা আবদ্ধ মোট আধান"
+    unit: "C"
+    si_unit: "C"
+  - symbol: "ε_0"
+    name: "permittivity of free space"
+    name_bn: "শূন্যস্থানের ভেদনযোগ্যতা"
+    unit: "F/m"
+    si_unit: "F/m"
+derivation: "The flux from a point charge through any closed surface is q/ε_0 because the solid angle subtended by a closed surface is 4π. Superposition extends this to any charge distribution enclosed by the surface."
+derivation_bn: "বিন্দু আধান থেকে কোনো বদ্ধ তলের মধ্য দিয়ে মোট ফ্লাক্স q/ε_0, কারণ বদ্ধ তলের সলিড কোণ ৪π। উপরিপাতন নীতি দ্বারা যেকোনো আধান বন্টনের জন্য এই সূত্র বিস্তৃত করা যায়।"
+derivation_steps:
+  - step_en: "Write the flux of a single point charge q through a spherical surface of radius r."
+    step_bn: "r ব্যাসার্ধের গোলকীয় তলে বিন্দু আধান q-এর ফ্লাক্স লিখুন।"
+    latex: "\\Phi_E = E(4\\pi r^2) = \\frac{1}{4\\pi\\varepsilon_0}\\frac{q}{r^2}\\cdot 4\\pi r^2 = \\frac{q}{\\varepsilon_0}"
+  - step_en: "Argue by solid angle that the result is independent of the surface shape."
+    step_bn: "সলিড কোণের যুক্তিতে দেখান যে ফলাফল তলের আকৃতির ওপর নির্ভর করে না।"
+    latex: "\\Phi_E = \\frac{q}{4\\pi\\varepsilon_0}\\oint \\frac{\\cos\\theta\\,dA}{r^2} = \\frac{q}{\\varepsilon_0}"
+  - step_en: "Apply superposition: charges outside add zero net flux, so only enclosed charge matters."
+    step_bn: "উপরিপাতন প্রয়োগ করুন: বাইরের আধানের নিট ফ্লাক্স শূন্য, তাই কেবল আবদ্ধ আধান গণনীয়।"
+    latex: "\\oint_S \\vec{E}\\cdot d\\vec{A} = \\frac{Q_{\\text{enc}}}{\\varepsilon_0}"
+summary_en: "Relate the flux through a closed surface to the charge it encloses."
+summary_bn: "বদ্ধ তলের মধ্য দিয়ে তড়িৎ ফ্লাক্স ও এর অভ্যন্তরস্থ আধানের সম্পর্ক স্থাপন।"
+related: ["coulombs-law-equation", "electric-field-intensity"]
+tags: ["gauss law", "flux", "electrostatics", "maxwell"]
+---
+
+Gauss’s law is most powerful for highly symmetric charge distributions: spherical, cylindrical or planar.

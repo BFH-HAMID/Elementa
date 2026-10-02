@@ -1,0 +1,56 @@
+---
+type: equation
+slug: "kp-kc-relation"
+title_bn: "Kp ও Kc-এর সম্পর্ক"
+title_en: "Relation between Kp and Kc"
+subject: chemistry
+level: class-11-12
+chapter: "Chemical Equilibrium"
+chapter_bn: "রাসায়নিক সাম্যাবস্থা"
+latex: "K_p = K_c(RT)^{\\Delta n}, \\qquad \\Delta n = \\sum \\nu_{\\text{gas, products}} - \\sum \\nu_{\\text{gas, reactants}}"
+calculator: false
+variables:
+  - symbol: "K_p"
+    name: "equilibrium constant in pressure units"
+    name_bn: "চাপ এককে সাম্য ধ্রুবক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "K_c"
+    name: "equilibrium constant in concentration units"
+    name_bn: "ঘনমাত্রা এককে সাম্য ধ্রুবক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "Δn"
+    name: "change in gaseous mole number"
+    name_bn: "গ্যাসীয় মোল সংখ্যার পরিবর্তন"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "R"
+    name: "molar gas constant"
+    name_bn: "মোলার গ্যাস ধ্রুবক"
+    unit: "L atm/(mol K)"
+    si_unit: "J/(mol K)"
+  - symbol: "T"
+    name: "absolute temperature"
+    name_bn: "পরম তাপমাত্রা"
+    unit: "K"
+    si_unit: "K"
+derivation: "For an ideal gas the partial pressure is P_i = (n_i/V)RT = c_i RT. Substituting into the pressure-based equilibrium expression and collecting the RT factors yields the power Δn."
+derivation_bn: "আদর্শ গ্যাসের ক্ষেত্রে আংশিক চাপ P_i = (n_i/V)RT = c_i RT। চাপ-ভিত্তিক সাম্য রাশিতে বসিয়ে RT পদগুলো একত্রিত করলে Δn ঘাত পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write partial pressure in terms of molar concentration."
+    step_bn: "আংশিক চাপকে মোলার ঘনমাত্রার মাধ্যমে লিখুন।"
+    latex: "P_i = c_i RT"
+  - step_en: "Substitute into the K_p expression and separate the RT factors from the concentration ratios."
+    step_bn: "K_p রাশিতে বসিয়ে RT পদগুলো ঘনমাত্রার অনুপাত থেকে আলাদা করুন।"
+    latex: "K_p = \\prod_i (c_i RT)^{\\nu_i} = K_c (RT)^{\\sum \\nu_i}"
+  - step_en: "Restrict the sum to gaseous species, giving Δn."
+    step_bn: "যোগফল কেবল গ্যাসীয় প্রজাতিতে সীমিত করলে Δn পাওয়া যায়।"
+    latex: "K_p = K_c(RT)^{\\Delta n}"
+summary_en: "Convert between concentration-based and pressure-based equilibrium constants."
+summary_bn: "ঘনমাত্রা-ভিত্তিক ও চাপ-ভিত্তিক সাম্য ধ্রুবকের মধ্যে রূপান্তর।"
+related: ["equilibrium-constant", "equilibrium-acid-base-formula-sheet", "ideal-gas-law"]
+tags: ["Kp", "Kc", "equilibrium", "partial pressure"]
+---
+
+When $\Delta n = 0$ (equal gas moles on both sides), $K_p = K_c$ exactly.

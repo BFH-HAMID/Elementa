@@ -1,0 +1,46 @@
+---
+type: equation
+slug: "prism-minimum-deviation"
+title_bn: "প্রিজমের ন্যূনতম বিচ্যুতি"
+title_en: "Minimum deviation through a prism"
+subject: physics
+level: class-11-12
+chapter: "Optics"
+chapter_bn: "আলোকবিজ্ঞান"
+latex: "n = \\frac{\\sin\\frac{A + \\delta_m}{2}}{\\sin\\frac{A}{2}}"
+calculator: false
+variables:
+  - symbol: "n"
+    name: "refractive index of prism"
+    name_bn: "প্রিজমের প্রতিসরণাঙ্ক"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "A"
+    name: "refracting angle of prism"
+    name_bn: "প্রিজমের প্রতিসারক কোণ"
+    unit: "°"
+    si_unit: "rad"
+  - symbol: "δ_m"
+    name: "angle of minimum deviation"
+    name_bn: "ন্যূনতম বিচ্যুতি কোণ"
+    unit: "°"
+    si_unit: "rad"
+derivation: "At minimum deviation the ray passes symmetrically through the prism, so the internal refraction angles are both A/2 and the external angle i equals (A + δ_m)/2. Applying Snell’s law at the first face gives the index formula."
+derivation_bn: "ন্যূনতম বিচ্যুতিতে রশ্মি প্রতিসমভাবে প্রিজমের ভেতর দিয়ে যায়, তাই অভ্যন্তরীণ প্রতিসরণ কোণ দুটিই A/2 এবং বাহ্যিক কোণ i = (A + δ_m)/2। প্রথম তলে স্নেলের সূত্র প্রয়োগ করলে প্রতিসরণাঙ্কের সূত্র পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write the total deviation as δ = i + e − A for a prism of angle A."
+    step_bn: "A কোণের প্রিজমের জন্য মোট বিচ্যুতি δ = i + e − A লিখুন।"
+    latex: "A + \\delta = i + e"
+  - step_en: "At minimum deviation the path is symmetric: i = e and r_1 = r_2 = A/2."
+    step_bn: "ন্যূনতম বিচ্যুতিতে পথ প্রতিসম: i = e এবং r_1 = r_2 = A/2।"
+    latex: "r = \\frac{A}{2}, \\qquad i = \\frac{A + \\delta_m}{2}"
+  - step_en: "Apply Snell’s law at the first face, n = sin i / sin r."
+    step_bn: "প্রথম তলে স্নেলের সূত্র n = sin i / sin r প্রয়োগ করুন।"
+    latex: "n = \\frac{\\sin\\frac{A + \\delta_m}{2}}{\\sin\\frac{A}{2}}"
+summary_en: "Measure the refractive index of glass from prism geometry."
+summary_bn: "প্রিজমের জ্যামিতি ব্যবহার করে কাঁচের প্রতিসরণাঙ্ক পরিমাপ।"
+related: ["snells-law", "lens-makers-equation", "diffraction-grating-equation"]
+tags: ["prism", "minimum deviation", "refractive index", "spectrometer"]
+---
+
+For a thin prism with small angle A the deviation simplifies to $\delta \approx (n-1)A$.

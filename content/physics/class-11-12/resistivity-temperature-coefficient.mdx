@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "resistivity-temperature-coefficient"
+title_bn: "তাপমাত্রার সাথে রোধের পরিবর্তন"
+title_en: "Temperature dependence of resistance"
+subject: physics
+level: class-11-12
+chapter: "Current Electricity"
+chapter_bn: "চল তড়িৎ"
+latex: "R_T = R_0(1 + \\alpha\\Delta T), \\qquad \\rho_T = \\rho_0(1 + \\alpha\\Delta T)"
+calculator: false
+variables:
+  - symbol: "R_T"
+    name: "resistance at temperature T"
+    name_bn: "T তাপমাত্রায় রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "R_0"
+    name: "resistance at reference temperature"
+    name_bn: "প্রসঙ্গ তাপমাত্রায় রোধ"
+    unit: "Ω"
+    si_unit: "Ω"
+  - symbol: "α"
+    name: "temperature coefficient of resistance"
+    name_bn: "রোধের তাপমাত্রা সহগ"
+    unit: "K⁻¹"
+    si_unit: "K⁻¹"
+  - symbol: "ΔT"
+    name: "temperature rise"
+    name_bn: "তাপমাত্রা বৃদ্ধি"
+    unit: "K"
+    si_unit: "K"
+derivation: "Over a limited range the fractional change of resistance is proportional to the temperature change. Resistivity follows the same linear law because the geometry factor L/A is essentially unchanged for small expansions."
+derivation_bn: "সীমিত তাপমাত্রা পরিসরে রোধের আপেক্ষিক পরিবর্তন তাপমাত্রা পরিবর্তনের সমানুপাতিক। দৈর্ঘ্য ও ক্ষেত্রফলের পরিবর্তন নগণ্য হওয়ায় রোধাঙ্কও একই রৈখিক সূত্র মেনে চলে।"
+derivation_steps:
+  - step_en: "Write the proportionality between fractional resistance change and temperature rise."
+    step_bn: "রোধের আপেক্ষিক পরিবর্তন ও তাপমাত্রা বৃদ্ধির সমানুপাতিক সম্পর্ক লিখুন।"
+    latex: "\\frac{\\Delta R}{R_0} \\propto \\Delta T"
+  - step_en: "Introduce the temperature coefficient α."
+    step_bn: "রোধের তাপমাত্রা সহগ α যোগ করুন।"
+    latex: "\\Delta R = \\alpha R_0 \\Delta T \\implies R_T = R_0(1 + \\alpha\\Delta T)"
+  - step_en: "Use R = ρL/A with nearly constant geometry to obtain the resistivity form."
+    step_bn: "প্রায় ধ্রুব জ্যামিতিতে R = ρL/A ব্যবহার করে রোধাঙ্কের রূপ পান।"
+    latex: "\\rho_T = \\rho_0(1 + \\alpha\\Delta T)"
+summary_en: "Correct resistance readings for temperature changes in metals."
+summary_bn: "ধাতুর রোধের ওপর তাপমাত্রার প্রভাব ও সংশোধন নির্ণয়।"
+related: ["resistivity-formula", "ohms-law"]
+tags: ["temperature coefficient", "resistance", "conductor", "platinum thermometer"]
+---
+
+Metals have positive α; semiconductors and electrolytes usually have a negative coefficient.

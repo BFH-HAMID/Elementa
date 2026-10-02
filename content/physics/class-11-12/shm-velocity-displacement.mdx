@@ -1,0 +1,51 @@
+---
+type: equation
+slug: "shm-velocity-displacement"
+title_bn: "সরল ছন্দিত গতিতে বেগ ও সরণ"
+title_en: "SHM speed as a function of displacement"
+subject: physics
+level: class-11-12
+chapter: "Oscillations"
+chapter_bn: "দোলন"
+latex: "v = \\pm\\omega\\sqrt{A^2 - x^2}, \\qquad v_{\\max} = \\omega A"
+calculator: false
+variables:
+  - symbol: "v"
+    name: "instantaneous speed"
+    name_bn: "তাৎক্ষণিক দ্রুতি"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "A"
+    name: "amplitude of oscillation"
+    name_bn: "বিস্তার"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "x"
+    name: "displacement from centre"
+    name_bn: "সাম্যাবস্থান থেকে সরণ"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "ω"
+    name: "angular frequency"
+    name_bn: "কৌণিক কম্পাঙ্ক"
+    unit: "rad/s"
+    si_unit: "rad/s"
+derivation: "Total mechanical energy is conserved in SHM: the sum of kinetic and potential energy at displacement x equals the constant total energy ½kA². Solving for speed gives the square-root dependence."
+derivation_bn: "সরল ছন্দিত গতিতে মোট যান্ত্রিক শক্তি সংরক্ষিত থাকে। x সরণে গতিশক্তি ও বিভবশক্তির সমষ্টি ধ্রুব মোট শক্তি ½kA²-এর সমান। এখান থেকে বেগের বর্গমূল নির্ভরতা পাওয়া যায়।"
+derivation_steps:
+  - step_en: "Write conservation of total energy between an arbitrary point and the amplitude extreme."
+    step_bn: "যেকোনো বিন্দু ও প্রান্তবিন্দুর মধ্যে মোট শক্তির সংরক্ষণ লিখুন।"
+    latex: "\\frac{1}{2}mv^2 + \\frac{1}{2}kx^2 = \\frac{1}{2}kA^2"
+  - step_en: "Solve for v² and use ω² = k/m."
+    step_bn: "v²-এর জন্য সমাধান করুন এবং ω² = k/m ব্যবহার করুন।"
+    latex: "v^2 = \\frac{k}{m}(A^2 - x^2) = \\omega^2(A^2 - x^2)"
+  - step_en: "Take the square root; the maximum speed occurs at x = 0."
+    step_bn: "বর্গমূল নিন; x = 0-এ বেগ সর্বাধিক হয়।"
+    latex: "v = \\pm\\omega\\sqrt{A^2 - x^2}, \\qquad v_{\\max} = \\omega A"
+summary_en: "Find oscillator speed at any position along its path."
+summary_bn: "দোলকের পথের যেকোনো স্থানে তার বেগ ও সর্বোচ্চ বেগ নির্ণয়।"
+related: ["shm-acceleration-displacement", "shm-angular-frequency", "elastic-potential-energy"]
+tags: ["shm", "velocity", "amplitude", "energy conservation"]
+---
+
+At $x = A$ the speed is zero, and at $x = A/\sqrt{2}$ the kinetic and potential energies are equal.

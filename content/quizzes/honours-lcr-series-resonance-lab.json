@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "f₀=1/(2π√LC)=1/(2π√10⁻⁵)≈50.3 Hz.",
       "explanation_bn": "f₀=১/(২π√LC)=১/(২π√১০⁻⁵)≈৫০.৩ Hz।"
+    },
+    {
+      "q": "Why must the generator amplitude remain fixed while sweeping frequency?",
+      "q_bn": "কম্পাঙ্ক বদলানোর সময় উৎসের বিস্তার স্থির রাখতে হয় কেন?",
+      "options": [
+        "Resistance becomes negative",
+        "Otherwise current changes may reflect input voltage rather than circuit resonance",
+        "Resonance is impossible at constant amplitude",
+        "Capacitance vanishes at high frequency"
+      ],
+      "options_bn": [
+        "রোধ ঋণাত্মক হয়",
+        "নইলে প্রবাহের পরিবর্তন বর্তনীর অনুনাদ নয়, ইনপুট বিভবের কারণে হতে পারে",
+        "স্থির বিস্তারে অনুনাদ হয় না",
+        "বেশি কম্পাঙ্কে ধারকত্ব শূন্য"
+      ],
+      "answer": 1,
+      "explanation": "I=Vsource/Z. To infer the frequency dependence of Z and find half-power points, Vsource must be kept approximately constant.",
+      "explanation_bn": "I=Vsource/Z। Z-এর কম্পাঙ্কনির্ভরতা ও অর্ধক্ষমতার বিন্দু পেতে Vsource প্রায় স্থির রাখতে হয়।"
     }
   ]
 }

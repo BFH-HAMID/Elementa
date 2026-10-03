@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "A single-electron energy gain through 4.9 V is e×4.9 V=4.9 eV, ignoring corrections.",
       "explanation_bn": "একটি ইলেকট্রনের ৪.৯ V-এ শক্তি বৃদ্ধি e×৪.৯ V=৪.৯ eV; সংশোধন বাদে।"
+    },
+    {
+      "q": "Why use spacing between successive extrema instead of the voltage of the first maximum alone?",
+      "q_bn": "প্রথম চরম মানের বিভবের বদলে পরপর চরম মানের ব্যবধান কেন নেন?",
+      "options": [
+        "The first maximum has no electrons",
+        "Atomic excitation energy changes for every collision",
+        "It removes all effects of vapour temperature",
+        "Spacing reduces an approximately fixed contact-potential offset"
+      ],
+      "options_bn": [
+        "প্রথম চরম মানে ইলেকট্রন নেই",
+        "প্রতি সংঘর্ষে উত্তেজনা শক্তি বদলায়",
+        "বাষ্পের তাপের সব প্রভাব দূর করে",
+        "ব্যবধান নিলে প্রায় স্থির সংযোগ-বিভব বাদ যায়"
+      ],
+      "answer": 3,
+      "explanation": "Absolute peak position includes contact potentials and apparatus effects; differences across several peaks better approximate the repeated excitation energy eΔV.",
+      "explanation_bn": "চরম মানের নিরপেক্ষ অবস্থানে সংযোগ-বিভব ও যন্ত্রের প্রভাব থাকে; কয়েকটি পার্থক্য থেকে পুনরাবৃত্ত উত্তেজনা শক্তি eΔV ভালো পাওয়া যায়।"
     }
   ]
 }

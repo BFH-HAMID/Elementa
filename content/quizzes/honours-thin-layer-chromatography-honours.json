@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "Rf=2.4/6.0=0.40, with both distances measured from the same baseline.",
       "explanation_bn": "Rf=২.৪/৬.০=০.৪০; দুই দূরত্ব একই মূলরেখা থেকে মাপা।"
+    },
+    {
+      "q": "Why mark the solvent front immediately after removing a TLC plate?",
+      "q_bn": "TLC প্লেট তোলার পরই দ্রাবকসীমা চিহ্নিত করবেন কেন?",
+      "options": [
+        "Pencil marks always dissolve the plate",
+        "The solvent evaporates and the front becomes hard to locate",
+        "The front moves backward under gravity after drying",
+        "Rf becomes independent of front distance"
+      ],
+      "options_bn": [
+        "পেনসিলের দাগ সবসময় প্লেট গলায়",
+        "দ্রাবক উবে গেলে সীমা চেনা কঠিন হয়",
+        "শুকালে সীমা মহাকর্ষে পিছিয়ে যায়",
+        "Rf-এ দ্রাবকসীমার দূরত্ব লাগে না"
+      ],
+      "answer": 1,
+      "explanation": "Rf uses the distance from origin to the solvent front. Delay obscures that position and produces an incorrect denominator.",
+      "explanation_bn": "Rf-এ মূল থেকে দ্রাবকসীমার দূরত্ব লাগে। দেরিতে সেই স্থান অস্পষ্ট হয়ে হর ভুল হয়।"
     }
   ]
 }

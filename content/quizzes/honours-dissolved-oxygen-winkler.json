@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "One O₂ corresponds to four thiosulfate moles; 0.0040/4=0.0010 mol O₂.",
       "explanation_bn": "এক O₂-এ চার থায়োসালফেট; ০.০০৪০/৪=০.০০১০ mol O₂।"
+    },
+    {
+      "q": "Why must oxygen be fixed immediately after collecting water?",
+      "q_bn": "পানির নমুনা নেওয়ার সঙ্গে সঙ্গে অক্সিজেন fix করতে হয় কেন?",
+      "options": [
+        "Thiosulfate concentration becomes zero in the bottle",
+        "Dissolved oxygen can change through air exchange and biological activity",
+        "The water otherwise becomes pure oxygen",
+        "Delayed fixation makes the bottle larger"
+      ],
+      "options_bn": [
+        "বোতলে থায়োসালফেট শূন্য হয়",
+        "বায়ু বিনিময় ও জীবক্রিয়ায় দ্রবীভূত অক্সিজেন বদলায়",
+        "নইলে পানি বিশুদ্ধ অক্সিজেন হয়",
+        "দেরিতে বোতল বড় হয়"
+      ],
+      "answer": 1,
+      "explanation": "Bubbles, air exchange and microbial respiration/photosynthesis can change O₂ before titration. Immediate fixation preserves the sampling-time condition.",
+      "explanation_bn": "বুদ্‌বুদ, বায়ু বিনিময় ও অণুজীবের শ্বাস/আলোকসংশ্লেষে O₂ বদলাতে পারে। দ্রুত fix করলে নমুনা নেওয়ার সময়ের অবস্থা ধরে রাখা যায়।"
     }
   ]
 }

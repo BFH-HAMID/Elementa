@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "Mass ratio SO₄/BaSO₄=96.06/233.39; product with 0.23339 g is 0.09606 g.",
       "explanation_bn": "ভর অনুপাত SO₄/BaSO₄=৯৬.০৬/২৩৩.৩৯; ফলে ০.০৯৬০৬ g।"
+    },
+    {
+      "q": "Why is BaSO₄ digested before filtering?",
+      "q_bn": "ছাঁকার আগে BaSO₄ অধঃক্ষেপ কিছুক্ষণ রেখে দেওয়া হয় কেন?",
+      "options": [
+        "To dissolve all BaSO₄",
+        "To make barium harmless automatically",
+        "To grow larger, more filterable crystals and reduce adsorbed impurities",
+        "To turn sulfate into chloride"
+      ],
+      "options_bn": [
+        "সব BaSO₄ গলাতে",
+        "বেরিয়ামকে নিজে থেকে নিরাপদ করতে",
+        "বড় সহজে-ছাঁকা স্ফটিক পেতে ও উপরিভাগের অশুদ্ধি কমাতে",
+        "সালফেটকে ক্লোরাইড করতে"
+      ],
+      "answer": 2,
+      "explanation": "Careful precipitation and digestion improve crystal size and purity. Drying to constant mass then limits water-related mass error.",
+      "explanation_bn": "ধীরে অধঃক্ষেপ ও digestion-এ স্ফটিক বড় ও তুলনামূলক বিশুদ্ধ হয়। স্থির ভর পর্যন্ত শুকালে পানির কারণে ভর-ত্রুটি কমে।"
     }
   ]
 }

@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "slope=h/e, so h=e×slope≈(1.60×10⁻¹⁹)(4.14×10⁻¹⁵)=6.62×10⁻³⁴ J s.",
       "explanation_bn": "ঢাল=h/e; তাই h=e×ঢাল≈(১.৬০×১০⁻¹⁹)(৪.১৪×১০⁻¹⁵)=৬.৬২×১০⁻³⁴ J s।"
+    },
+    {
+      "q": "Does the intercept at Vs=0 directly give Planck's constant?",
+      "q_bn": "Vs=০-এ রেখার ছেদ কি সরাসরি প্ল্যাঙ্ক ধ্রুবক দেয়?",
+      "options": [
+        "No, both intercept and slope are always zero",
+        "Yes, only intensity determines h",
+        "No, slope gives h/e, while frequency intercept is φ/h",
+        "Yes, the intercept always equals h"
+      ],
+      "options_bn": [
+        "না, ছেদ-ঢাল উভয়ই শূন্য",
+        "হ্যাঁ, শুধু তীব্রতা h নির্ধারণ করে",
+        "না, ঢাল h/e, কম্পাঙ্ক অক্ষের ছেদ φ/h",
+        "হ্যাঁ, ছেদই সবসময় h"
+      ],
+      "answer": 2,
+      "explanation": "From eVs=hf−φ, Vs=(h/e)f−φ/e; the f-axis threshold is φ/h, and h is e times the slope.",
+      "explanation_bn": "eVs=hf−φ থেকে Vs=(h/e)f−φ/e; কম্পাঙ্ক অক্ষে প্রান্তিক φ/h, আর h=e×ঢাল।"
     }
   ]
 }

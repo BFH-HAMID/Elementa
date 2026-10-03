@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "HCl moles=2×0.100×0.01000=0.00200; divide by 0.02000 L to get 0.100 M.",
       "explanation_bn": "HCl-এর মোল=২×০.১০০×০.০১০০০=০.০০২০০; ০.০২০০০ L-এ ০.১০০ M।"
+    },
+    {
+      "q": "Why is the endpoint for complete carbonate neutralization different from the first phenolphthalein endpoint?",
+      "q_bn": "কার্বোনেটের সম্পূর্ণ নিরপেক্ষতার সীমা প্রথম phenolphthalein সীমা থেকে আলাদা কেন?",
+      "options": [
+        "Carbonate has only one neutralizable charge",
+        "Hydrochloric acid stops reacting above pH 7",
+        "The first step makes bicarbonate, which still consumes acid",
+        "The first step releases all chloride ions"
+      ],
+      "options_bn": [
+        "কার্বোনেটে একটিই নিরপেক্ষযোগ্য আধান",
+        "pH ৭-এর উপরে HCl আর বিক্রিয়া করে না",
+        "প্রথম ধাপে বাইকার্বোনেট হয়, যা আরও অম্ল গ্রহণ করে",
+        "প্রথম ধাপে সব ক্লোরাইড বের হয়"
+      ],
+      "answer": 2,
+      "explanation": "CO₃²− first accepts H+ to become HCO₃−; a second H+ converts HCO₃− to carbonic acid and CO₂. Complete neutralization therefore uses two acid equivalents.",
+      "explanation_bn": "CO₃²− প্রথমে H+ নিয়ে HCO₃− হয়; দ্বিতীয় H+-এ কার্বনিক অম্ল ও CO₂ হয়। তাই সম্পূর্ণ নিরপেক্ষতায় দুই অম্ল-সমতুল্য লাগে।"
     }
   ]
 }

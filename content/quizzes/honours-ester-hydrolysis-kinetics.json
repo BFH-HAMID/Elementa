@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "The integrated pseudo-first-order law is ln[(V∞−V₀)/(V∞−Vt)]=kt; the slope gives k.",
       "explanation_bn": "সমাকলিত ছদ্ম প্রথম-ক্রম সূত্র ln[(V∞−V₀)/(V∞−Vt)]=kt; ঢাল থেকে k।"
+    },
+    {
+      "q": "Why determine V∞ using a fully reacted aliquot rather than assume it?",
+      "q_bn": "V∞ অনুমান না করে সম্পূর্ণ বিক্রিয়ার নমুনা থেকে কেন মাপবেন?",
+      "options": [
+        "V∞ is always equal to V₀",
+        "V∞ removes the need to record time",
+        "Catalyst acid concentration is always zero",
+        "V∞ sets the remaining-ester estimate V∞−Vt"
+      ],
+      "options_bn": [
+        "V∞ সবসময় V₀-এর সমান",
+        "V∞ পেলে সময় মাপতে হয় না",
+        "অনুঘটক অম্ল সবসময় শূন্য",
+        "V∞−Vt অবশিষ্ট এস্টারের পরিমাণ নির্দেশ করে"
+      ],
+      "answer": 3,
+      "explanation": "The kinetic plot uses ln[(V∞−V₀)/(V∞−Vt)]. A wrong V∞ distorts every transformed value and can create a false linear trend.",
+      "explanation_bn": "গতির লেখচিত্র ln[(V∞−V₀)/(V∞−Vt)] ব্যবহার করে। ভুল V∞ সব রূপান্তরিত পাঠ ও রেখার ঢাল বিকৃত করে।"
     }
   ]
 }

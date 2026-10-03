@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "δ=FL³/(4Ybd³), so doubling L multiplies δ by 2³=8 within the small-deflection model.",
       "explanation_bn": "δ=FL³/(৪Ybd³); ছোট অবনমনের মডেলে L দ্বিগুণে δ আট গুণ।"
+    },
+    {
+      "q": "Why record beam thickness d more carefully than width b?",
+      "q_bn": "বিমের প্রস্থ b-এর চেয়ে পুরুত্ব d বেশি যত্নে মাপবেন কেন?",
+      "options": [
+        "Thickness is always equal to span",
+        "Only thickness sets the load",
+        "The formula contains d cubed",
+        "Width does not enter the formula"
+      ],
+      "options_bn": [
+        "পুরুত্ব সবসময় বিস্তারের সমান",
+        "শুধু পুরুত্বেই ভার নির্ধারিত",
+        "সূত্রে d-এর ঘন আছে",
+        "সূত্রে প্রস্থ নেই"
+      ],
+      "answer": 2,
+      "explanation": "Y=FL³/(4bd³δ). A small relative thickness error approximately triples its contribution to relative Y uncertainty; width enters only to first power.",
+      "explanation_bn": "Y=FL³/(4bd³δ)। পুরুত্বের সামান্য আপেক্ষিক ত্রুটি Y-তে প্রায় তিন গুণ প্রভাব ফেলে; প্রস্থ প্রথম ঘাতে আসে।"
     }
   ]
 }

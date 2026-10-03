@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "E=(RT/zF)ln(a₂/a₁). For ratio doubled, ΔE=(RT/zF)ln2, not twice the old E.",
       "explanation_bn": "E=(RT/zF)ln(a₂/a₁); অনুপাত দ্বিগুণে ΔE=(RT/zF)ln2, আগের E-এর দ্বিগুণ নয়।"
+    },
+    {
+      "q": "Why may measured concentration-cell emf differ from a calculation using concentration alone?",
+      "q_bn": "শুধু ঘনত্ব দিয়ে গণনা করা মান থেকে ঘনত্ব কোষের মাপা বিভব কেন ভিন্ন হতে পারে?",
+      "options": [
+        "Activity coefficients and liquid-junction potential",
+        "Both electrodes necessarily have different standard potentials",
+        "The Faraday constant is zero",
+        "Identical electrodes eliminate all real-world corrections"
+      ],
+      "options_bn": [
+        "সক্রিয়তা সহগ ও তরল-সংযোগ বিভব",
+        "দুই ইলেকট্রোডের মান বিভব অবশ্যই আলাদা",
+        "ফ্যারাডে ধ্রুবক শূন্য",
+        "একই ইলেকট্রোডে সব বাস্তব সংশোধন দূর হয়"
+      ],
+      "answer": 0,
+      "explanation": "Nernst law uses activities, not raw concentrations. A salt bridge can introduce junction potential, so record medium, temperature and these limitations.",
+      "explanation_bn": "নার্নস্ট সূত্রে ঘনত্ব নয়, সক্রিয়তা লাগে। লবণ সেতুতে সংযোগ বিভব থাকতে পারে; মাধ্যম, তাপ ও সীমা লিখুন।"
     }
   ]
 }

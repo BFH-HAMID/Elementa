@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "Ni fraction is 58.693/288.91, so 0.28891 g complex contains 0.058693 g Ni.",
       "explanation_bn": "Ni-এর ভরাংশ ৫৮.৬৯৩/২৮৮.৯১; তাই ০.২৮৮৯১ g জটিলে Ni ০.০৫৮৬৯৩ g।"
+    },
+    {
+      "q": "If Ni(DMG)₂ is weighed while still damp, what happens to the inferred nickel mass?",
+      "q_bn": "Ni(DMG)₂ ভেজা অবস্থায় ওজন করলে নির্ণীত নিকেলের ভর কী হবে?",
+      "options": [
+        "It is exactly unchanged",
+        "It is always zero",
+        "It becomes negative",
+        "It is overestimated"
+      ],
+      "options_bn": [
+        "একদম বদলাবে না",
+        "সবসময় শূন্য হবে",
+        "ঋণাত্মক হবে",
+        "বেশি দেখাবে"
+      ],
+      "answer": 3,
+      "explanation": "Residual liquid adds to the apparent precipitate mass, and m(Ni)=m(precipitate)×58.693/288.91 then scales upward. Dry to constant mass.",
+      "explanation_bn": "অবশিষ্ট তরল অধঃক্ষেপের আপাত ভর বাড়ায়; m(Ni)=m(অধঃক্ষেপ)×৫৮.৬৯৩/২৮৮.৯১-এ নিকেলের ফলও বাড়ে। স্থির ভর পর্যন্ত শুকান।"
     }
   ]
 }

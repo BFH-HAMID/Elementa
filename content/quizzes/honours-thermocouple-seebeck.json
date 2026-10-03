@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "S≈ΔE/ΔT=0.002 V/100 K=2×10⁻⁵ V/K=20 μV/K.",
       "explanation_bn": "S≈ΔE/ΔT=০.০০২ V/১০০ K=২×১০⁻⁵ V/K=২০ μV/K।"
+    },
+    {
+      "q": "Why must the reference junction temperature be measured or stabilized?",
+      "q_bn": "তুলনা সংযোগের তাপমাত্রা কেন মাপতে বা স্থির রাখতে হয়?",
+      "options": [
+        "Thermoelectric emf depends on the junction temperature difference",
+        "Only wire length sets emf",
+        "The cold junction has zero resistance by definition",
+        "Measuring it prevents heat transfer"
+      ],
+      "options_bn": [
+        "তাপবিভব দুই সংযোগের তাপমাত্রা-পার্থক্যের ওপর নির্ভর করে",
+        "শুধু তারের দৈর্ঘ্যে বিভব হয়",
+        "ঠান্ডা সংযোগের রোধ সংজ্ঞাতেই শূন্য",
+        "এটি মাপলে তাপ পরিবহন বন্ধ হয়"
+      ],
+      "answer": 0,
+      "explanation": "E≈SAB(Th−Tc). Unknown drift in Tc changes ΔT and corrupts the fitted Seebeck slope.",
+      "explanation_bn": "E≈SAB(Th−Tc)। Tc অজানাভাবে বদলালে ΔT ও নির্ণীত সিবেক ঢাল ভুল হয়।"
     }
   ]
 }

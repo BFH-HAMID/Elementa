@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "Ce⁴⁺:Fe²⁺=1:1; CFe=0.100×20.0/25.0=0.0800 M.",
       "explanation_bn": "Ce⁴⁺:Fe²⁺=১:১; CFe=০.১০০×২০.০/২৫.০=০.০৮০০ M।"
+    },
+    {
+      "q": "Why use smaller Ce⁴⁺ additions near the steep potential jump?",
+      "q_bn": "বিভব দ্রুত বদলানোর কাছে Ce⁴⁺ অল্প অল্প কেন যোগ করেন?",
+      "options": [
+        "To stop Ce⁴⁺ from oxidizing Fe²⁺",
+        "To make the electrode an insulator",
+        "To make the mole ratio 2:1",
+        "To locate the equivalence inflection more accurately"
+      ],
+      "options_bn": [
+        "Ce⁴⁺ যেন Fe²⁺ জারিত না করে",
+        "ইলেকট্রোডকে অন্তরক করতে",
+        "মোল অনুপাত ২:১ করতে",
+        "সাম্যবিন্দুর মোড় আরও নির্ভুল পেতে"
+      ],
+      "answer": 3,
+      "explanation": "Large steps can leap over the maximum ΔE/ΔV and shift the estimated equivalence; allow the electrode reading to stabilize after each addition.",
+      "explanation_bn": "বড় ধাপে ΔE/ΔV-এর সর্বোচ্চ অঞ্চল বাদ পড়ে সাম্যবিন্দু ভুল হয়; প্রতিটি সংযোজনে বিভব স্থির হতে দিন।"
     }
   ]
 }

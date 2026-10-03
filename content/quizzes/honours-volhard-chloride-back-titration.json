@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "Chloride consumed the difference: 0.0030−0.0010=0.0020 mol Ag+, so 0.0020 mol Cl−.",
       "explanation_bn": "Cl−, Ag+-এর পার্থক্য ০.০০৩০−০.০০১০=০.০০২০ mol গ্রহণ করেছে; তাই Cl− ০.০০২০ mol।"
+    },
+    {
+      "q": "Why might AgCl be separated before back-titrating residual silver with SCN−?",
+      "q_bn": "বাকি সিলভারকে SCN− দিয়ে মাপার আগে AgCl কেন আলাদা করতে হয়?",
+      "options": [
+        "SCN− cannot precipitate silver",
+        "SCN− can react with AgCl and bias the back-titre",
+        "AgCl produces additional chloride from water",
+        "Filtering changes the added silver moles"
+      ],
+      "options_bn": [
+        "SCN− সিলভার অধঃক্ষেপ করতে পারে না",
+        "SCN−, AgCl-এর সঙ্গে বিক্রিয়া করে বিপরীত পাঠ বদলাতে পারে",
+        "AgCl পানি থেকে ক্লোরাইড বানায়",
+        "ছাঁকায় দেওয়া সিলভারের মোল বাড়ে"
+      ],
+      "answer": 1,
+      "explanation": "AgSCN is less soluble than AgCl; contact with AgCl can consume thiocyanate beyond that needed for free Ag+, affecting calculated chloride.",
+      "explanation_bn": "AgSCN, AgCl-এর চেয়ে কম দ্রবণীয়; AgCl থাকলে মুক্ত Ag+ ছাড়াও SCN− খরচ হয়ে ক্লোরাইডের হিসাব বদলায়।"
     }
   ]
 }

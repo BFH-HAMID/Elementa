@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "For the same fixed product amount, mean rate≈amount/time, so 1/t doubles when t halves.",
       "explanation_bn": "একই নির্দিষ্ট উৎপাদে গড় হার≈পরিমাণ/সময়; t অর্ধেক হলে ১/t দ্বিগুণ।"
+    },
+    {
+      "q": "Why keep thiosulfate amount fixed when comparing clock times?",
+      "q_bn": "ঘড়ি পরীক্ষায় সময় তুলনায় থায়োসালফেটের পরিমাণ একই রাখেন কেন?",
+      "options": [
+        "It fixes the iodine amount needed for blue colour",
+        "It makes temperature irrelevant",
+        "It removes all reaction induction delays",
+        "It turns all reactions into zero order"
+      ],
+      "options_bn": [
+        "নীল রং দেখা দেওয়ার জন্য প্রয়োজনীয় আয়োডিনের পরিমাণ স্থির রাখে",
+        "তাপমাত্রার প্রভাব দূর করে",
+        "সব সূচনাবিলম্ব বাদ দেয়",
+        "সব বিক্রিয়াকে শূন্য-ক্রম করে"
+      ],
+      "answer": 0,
+      "explanation": "The colour appears after thiosulfate is consumed. Only a fixed threshold permits 1/t to act as a comparable rate proxy across mixtures.",
+      "explanation_bn": "থায়োসালফেট ফুরানোর পরে রং আসে। একই সীমা থাকলেই মিশ্রণভেদে ১/t-কে তুলনাযোগ্য হার ধরা যায়।"
     }
   ]
 }

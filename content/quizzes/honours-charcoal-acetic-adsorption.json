@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "x/m=(C₀−Ce)V/m=(0.10−0.06)×0.10/2=0.002 mol/g.",
       "explanation_bn": "x/m=(C₀−Ce)V/m=(০.১০−০.০৬)×০.১০/২=০.০০২ mol/g।"
+    },
+    {
+      "q": "Why should filtration occur only after sufficient adsorption-equilibration time?",
+      "q_bn": "যথেষ্ট শোষণ-সাম্যের পরেই ছাঁকা উচিত কেন?",
+      "options": [
+        "Ce measured too early does not represent equilibrium",
+        "The charcoal otherwise becomes soluble",
+        "All acid spontaneously disappears at equilibrium",
+        "Filtration creates acid molecules"
+      ],
+      "options_bn": [
+        "আগে মাপা Ce সাম্য ঘনত্ব নয়",
+        "নইলে কয়লা দ্রবীভূত হয়",
+        "সাম্যে সব অম্ল আপনা থেকে হারায়",
+        "ছাঁকায় অম্ল অণু তৈরি হয়"
+      ],
+      "answer": 0,
+      "explanation": "The fitted x/m versus Ce relation describes equilibrium uptake. A prematurely measured Ce varies with contact time and biases the Freundlich slope.",
+      "explanation_bn": "x/m বনাম Ce সম্পর্ক সাম্য শোষণের। আগে মাপা Ce সংস্পর্শ সময়ে বদলায় এবং Freundlich ঢাল ভুল করে।"
     }
   ]
 }

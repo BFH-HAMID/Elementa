@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "h=2γ/(ρgr) for cosθ≈1, so h is inversely proportional to r.",
       "explanation_bn": "cosθ≈১ হলে h=২γ/(ρgr); তাই h ব্যাসার্ধের ব্যস্তানুপাতিক।"
+    },
+    {
+      "q": "If the liquid does not completely wet glass, what additional measurement or parameter is needed?",
+      "q_bn": "তরল কাচ পুরো না ভেজালে অতিরিক্ত কী জানা দরকার?",
+      "options": [
+        "Contact angle θ",
+        "Only tube length",
+        "Only atmospheric pressure",
+        "Only liquid colour"
+      ],
+      "options_bn": [
+        "স্পর্শকোণ θ",
+        "শুধু নলের দৈর্ঘ্য",
+        "শুধু বায়ুচাপ",
+        "শুধু তরলের রং"
+      ],
+      "answer": 0,
+      "explanation": "Vertical surface-tension force is 2πrγcosθ, so γ=ρgrh/(2cosθ); setting cosθ=1 without wetting evidence biases γ.",
+      "explanation_bn": "পৃষ্ঠটানের উল্লম্ব বল ২πrγcosθ; তাই γ=ρgrh/(২cosθ)। ভেজার প্রমাণ ছাড়া cosθ=১ নিলে γ ভুল হয়।"
     }
   ]
 }

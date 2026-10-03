@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "Poiseuille flow has Q∝r⁴; 2⁴=16 if flow remains laminar.",
       "explanation_bn": "পয়জুই প্রবাহে Q∝r⁴; স্তরী প্রবাহ বজায় থাকলে ২⁴=১৬।"
+    },
+    {
+      "q": "Why is capillary-radius calibration especially critical?",
+      "q_bn": "কৈশিক ব্যাসার্ধের ক্রমাঙ্কন বিশেষ জরুরি কেন?",
+      "options": [
+        "Pressure head cannot be measured",
+        "Inferred viscosity contains r to the fourth power",
+        "Radius cancels from Poiseuille's law",
+        "Only tube colour affects viscosity"
+      ],
+      "options_bn": [
+        "চাপের উচ্চতা মাপা যায় না",
+        "নির্ণীত সান্দ্রতায় r-এর চতুর্থ ঘাত আছে",
+        "পয়জুই সূত্রে ব্যাসার্ধ বাদ যায়",
+        "শুধু নলের রং সান্দ্রতা বদলায়"
+      ],
+      "answer": 1,
+      "explanation": "η=πr⁴ΔP/(8LQ). A 1% radius bias contributes about 4% viscosity bias even before flow errors.",
+      "explanation_bn": "η=πr⁴ΔP/(৮LQ)। ব্যাসার্ধে ১% ভুলে প্রবাহের অন্য ত্রুটি ছাড়াই η-তে প্রায় ৪% ভুল হয়।"
     }
   ]
 }

@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "slope=4λR, so λ=8.0×10⁻⁷/(4×0.40)=5.0×10⁻⁷ m=500 nm.",
       "explanation_bn": "ঢাল=৪λR, তাই λ=৮.০×১০⁻⁷/(৪×০.৪০)=৫.০×১০⁻⁷ m=৫০০ nm।"
+    },
+    {
+      "q": "Why fit several Dm² values against ring order rather than rely on the central dark spot alone?",
+      "q_bn": "শুধু কেন্দ্রের অন্ধকার দাগ না নিয়ে কয়েকটি Dm² বনাম ক্রম কেন আঁকবেন?",
+      "options": [
+        "Ring order is always zero",
+        "Fitting replaces measuring the lens radius",
+        "The slope reduces contact-offset and single-reading errors",
+        "Only the central spot has nonzero wavelength"
+      ],
+      "options_bn": [
+        "বলয়ের ক্রম সবসময় শূন্য",
+        "ঢাল নিলে লেন্সের ব্যাসার্ধ মাপতে হয় না",
+        "ঢালে সংস্পর্শ ও একক পাঠের ত্রুটির প্রভাব কমে",
+        "শুধু কেন্দ্রেই তরঙ্গদৈর্ঘ্য থাকে"
+      ],
+      "answer": 2,
+      "explanation": "D_m² is approximately linear in m; a nonzero central-contact intercept can be diagnosed and slope=4λR yields wavelength.",
+      "explanation_bn": "D_m² প্রায় m-এর সঙ্গে সরলরৈখিক; কেন্দ্রে ফাঁক থাকলে ছেদ থেকে বোঝা যায়, আর ঢাল=৪λR থেকে তরঙ্গদৈর্ঘ্য মেলে।"
     }
   ]
 }

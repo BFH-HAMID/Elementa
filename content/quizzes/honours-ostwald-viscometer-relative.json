@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "For the same instrument and conditions, ηunknown/ηref≈ρunknown tunknown/(ρref tref)=2.",
       "explanation_bn": "একই যন্ত্রে ηunknown/ηref≈ρunknown tunknown/(ρref tref)=২।"
+    },
+    {
+      "q": "Why must bubbles be removed from an Ostwald viscometer?",
+      "q_bn": "অস্টওয়াল্ড সান্দ্রতামাপকে বুদ্‌বুদ কেন দূর করতে হয়?",
+      "options": [
+        "They guarantee laminar motion",
+        "They disrupt steady capillary flow and timing",
+        "They make all liquids identical",
+        "They make density exactly zero"
+      ],
+      "options_bn": [
+        "স্তরী প্রবাহ নিশ্চিত করে",
+        "বুদ্‌বুদ স্থির কৈশিক প্রবাহ ও সময় মাপা নষ্ট করে",
+        "সব তরলকে একই করে",
+        "ঘনত্ব শূন্য করে"
+      ],
+      "answer": 1,
+      "explanation": "The ratio η₁/η₂≈ρ₁t₁/(ρ₂t₂) assumes comparable uninterrupted flow through the same tube; trapped air changes the effective head and flow path.",
+      "explanation_bn": "η₁/η₂≈ρ₁t₁/(ρ₂t₂)-এ একই নলে বাধাহীন তুলনাযোগ্য প্রবাহ ধরা হয়; আটকে থাকা বায়ু চাপ ও পথ বদলায়।"
     }
   ]
 }

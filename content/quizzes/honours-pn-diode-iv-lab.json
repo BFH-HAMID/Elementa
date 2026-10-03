@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "The source voltage includes the series-resistor drop, so diode voltage must be measured directly.",
       "explanation_bn": "উৎস বিভবে সারি রোধের বিভবপতনও থাকে; তাই ডায়োডের দুই প্রান্তে সরাসরি মাপতে হবে।"
+    },
+    {
+      "q": "Why is reverse current normally measured before reaching breakdown in an ordinary P–N diode test?",
+      "q_bn": "সাধারণ P–N ডায়োডে breakdown-এর আগে বিপরীত প্রবাহ মাপা হয় কেন?",
+      "options": [
+        "All reverse voltages are harmless",
+        "A series resistor prevents any voltage across the diode",
+        "Breakdown is required to measure forward current",
+        "Beyond the rating large reverse current may damage the diode"
+      ],
+      "options_bn": [
+        "সব বিপরীত বিভব নিরাপদ",
+        "সারি রোধে ডায়োডে বিভবই থাকে না",
+        "সম্মুখ প্রবাহ মাপতে breakdown লাগে",
+        "অনুমোদিত সীমা পেরিয়ে বড় বিপরীত প্রবাহে ডায়োড নষ্ট হতে পারে"
+      ],
+      "answer": 3,
+      "explanation": "A normal diode is not designed as a voltage regulator. Respect rated reverse voltage and use current limiting; a Zener is a different rated device.",
+      "explanation_bn": "সাধারণ ডায়োড বিভব নিয়ন্ত্রণের জন্য তৈরি নয়। বিপরীত বিভবের সীমা ও প্রবাহ-সীমক মানুন; জেনার আলাদা অনুমোদিত উপাদান।"
     }
   ]
 }

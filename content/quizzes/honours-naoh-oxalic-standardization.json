@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "NaOH moles=2×0.0500×0.02000=0.00200 mol; divide by 0.02500 L to get 0.0800 M.",
       "explanation_bn": "NaOH-এর মোল=২×০.০৫০০×০.০২০০০=০.০০২০০; ০.০২৫০০ L দিয়ে ভাগে ০.০৮০০ M।"
+    },
+    {
+      "q": "Why should the exact oxalic-acid hydrate form be checked before weighing?",
+      "q_bn": "ওজনের আগে অক্সালিক অ্যাসিডের hydrate রূপ নিশ্চিত করতে হয় কেন?",
+      "options": [
+        "Water of crystallization makes acid non-acidic",
+        "Anhydrous acid and dihydrate have different molar masses",
+        "Hydration changes the NaOH reaction ratio from 2:1 to 1:1",
+        "The burette capacity depends on hydrate"
+      ],
+      "options_bn": [
+        "স্ফটিকজলে অম্লের অম্লত্ব থাকে না",
+        "অনাজল অম্ল ও ডাইহাইড্রেটের মোলার ভর আলাদা",
+        "hydrate থাকলে NaOH-এর অনুপাত ২:১ থেকে ১:১ হয়",
+        "বিউরেটের ধারণক্ষমতা hydrate-নির্ভর"
+      ],
+      "answer": 1,
+      "explanation": "Dihydrate has molar mass about 126.07 g/mol versus 90.03 g/mol for anhydrous acid. Using the wrong mass gives a wrong primary-standard concentration, though neutralization remains 2:1.",
+      "explanation_bn": "ডাইহাইড্রেটের মোলার ভর প্রায় ১২৬.০৭ g/mol, অনাজলের ৯০.০৩ g/mol। ভুল ভরে মান ঘনত্ব ভুল হয়, তবে নিরপেক্ষকরণ অনুপাত ২:১-ই থাকে।"
     }
   ]
 }

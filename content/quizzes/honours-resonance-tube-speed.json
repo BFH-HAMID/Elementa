@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "v=2f(L₂−L₁)=2×400×0.425=340 m/s.",
       "explanation_bn": "v=২f(L₂−L₁)=২×৪০০×০.৪২৫=৩৪০ m/s।"
+    },
+    {
+      "q": "Why use the difference between first and second resonant lengths?",
+      "q_bn": "প্রথম ও দ্বিতীয় অনুনাদ দৈর্ঘ্যের পার্থক্য কেন নেন?",
+      "options": [
+        "A nearly constant open-end correction cancels",
+        "Sound frequency becomes zero",
+        "The tube becomes open at both ends",
+        "Air temperature no longer matters"
+      ],
+      "options_bn": [
+        "খোলা প্রান্তের প্রায় স্থির সংশোধন বাদ যায়",
+        "শব্দের কম্পাঙ্ক শূন্য হয়",
+        "নল দুই দিকেই খোলা হয়",
+        "বায়ুর তাপমাত্রা আর প্রভাব ফেলে না"
+      ],
+      "answer": 0,
+      "explanation": "L₁+e≈λ/4 and L₂+e≈3λ/4, so subtraction yields L₂−L₁≈λ/2 without needing the same end correction e explicitly.",
+      "explanation_bn": "L₁+e≈λ/৪ ও L₂+e≈৩λ/৪; বিয়োগে একই প্রান্ত-সংশোধন e বাদ গিয়ে L₂−L₁≈λ/২।"
     }
   ]
 }

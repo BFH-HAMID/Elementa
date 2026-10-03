@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "In the measurement formula k≈mc d abs(dT/dt)/[A(T₁−T₂)], calculated k scales with measured d; in a real repeat other quantities would generally change.",
       "explanation_bn": "পরিমাপসূত্রে k≈mc d abs(dT/dt)/[A(T₁−T₂)]; অন্য পাঠ একই ধরলে k পুরুত্বের সমানুপাতিক, বাস্তবে অন্য পাঠও বদলায়।"
+    },
+    {
+      "q": "Why is the cooling slope determined as the disc crosses its steady-state temperature T₂?",
+      "q_bn": "শীতলনের ঢাল চাকতি T₂ পার হওয়ার সময় কেন নেওয়া হয়?",
+      "options": [
+        "To make sheet thickness vanish",
+        "Because cooling stops at T₂",
+        "To eliminate all contact resistance automatically",
+        "To match the heat-loss rate to the steady-state energy balance"
+      ],
+      "options_bn": [
+        "পাতের পুরুত্ব শূন্য করতে",
+        "T₂-এ শীতলন বন্ধ হয়",
+        "সব সংযোগ রোধ নিজে থেকে বাদ দিতে",
+        "স্থিত অবস্থার শক্তিসাম্যের সঙ্গে একই তাপমাত্রার তাপক্ষয় মেলাতে"
+      ],
+      "answer": 3,
+      "explanation": "The steady disc was losing heat at T₂. Cooling at another temperature has a different rate and cannot be inserted without correction.",
+      "explanation_bn": "স্থির অবস্থায় চাকতি T₂-এ তাপ হারাচ্ছিল। অন্য তাপমাত্রায় শীতলনের হার ভিন্ন; সংশোধন ছাড়া তা বসানো যায় না।"
     }
   ]
 }

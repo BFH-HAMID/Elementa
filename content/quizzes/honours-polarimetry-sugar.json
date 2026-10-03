@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "α=[α]λ,T l c; at fixed specific rotation and c, α∝l.",
       "explanation_bn": "α=[α]λ,T l c; আপেক্ষিক ঘূর্ণন ও c স্থির হলে α∝l।"
+    },
+    {
+      "q": "Can an unknown sugar concentration be inferred from a specific rotation measured at a different wavelength without correction?",
+      "q_bn": "অন্য তরঙ্গদৈর্ঘ্যে মাপা আপেক্ষিক ঘূর্ণন দিয়ে সংশোধন ছাড়া অজানা চিনির ঘনত্ব পাবেন?",
+      "options": [
+        "Changing wavelength makes rotation zero",
+        "No, specific rotation depends on wavelength and temperature",
+        "Yes, it is universal for all colours",
+        "Only tube length matters"
+      ],
+      "options_bn": [
+        "তরঙ্গদৈর্ঘ্য বদলালে ঘূর্ণন শূন্য",
+        "না, আপেক্ষিক ঘূর্ণন তরঙ্গদৈর্ঘ্য ও তাপমাত্রানির্ভর",
+        "হ্যাঁ, সব রঙে সর্বজনীন",
+        "শুধু নলের দৈর্ঘ্য গুরুত্বপূর্ণ"
+      ],
+      "answer": 1,
+      "explanation": "α=[α]λ,Tlc; match wavelength and temperature (and solvent convention) when comparing to a reference value.",
+      "explanation_bn": "α=[α]λ,Tlc; মানের সঙ্গে তুলনায় তরঙ্গদৈর্ঘ্য, তাপমাত্রা ও দ্রাবকের রীতি মিলতে হবে।"
     }
   ]
 }

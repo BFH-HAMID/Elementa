@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "mλ=d sinθ; with m=1, λ=2.0 μm×0.30=0.60 μm=600 nm.",
       "explanation_bn": "mλ=d sinθ; m=১ হলে λ=২.০ μm×০.৩০=০.৬০ μm=৬০০ nm।"
+    },
+    {
+      "q": "Why should grating lines per millimetre be inverted before calculating wavelength?",
+      "q_bn": "তরঙ্গদৈর্ঘ্য বের করার আগে প্রতি mm-এ রেখাসংখ্যার ব্যস্ত কেন নিতে হয়?",
+      "options": [
+        "The grating equation uses spacing d, not line density",
+        "The order m must be negative",
+        "The speed of light is in mm/s",
+        "Angles must be doubled twice"
+      ],
+      "options_bn": [
+        "গ্রেটিং সূত্রে রেখা-ঘনত্ব নয়, ব্যবধান d লাগে",
+        "ক্রম m ঋণাত্মক হতে হবে",
+        "আলোর বেগ mm/s-এ হয়",
+        "কোণ দুবার দ্বিগুণ করতে হয়"
+      ],
+      "answer": 0,
+      "explanation": "If line density is N lines/mm, d=(1/N) mm, then convert d to metres before using d sinθ=mλ.",
+      "explanation_bn": "প্রতি mm-এ Nটি রেখা হলে d=(১/N) mm; পরে d মিটারে নিয়ে d sinθ=mλ বসান।"
     }
   ]
 }

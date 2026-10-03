@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "At impending motion μs=tanθc=tan45°=1; this estimates maximum static friction.",
       "explanation_bn": "পিছলানোর প্রাক্কালে μs=tanθc=tan৪৫°=১; এটি সর্বোচ্চ স্থির ঘর্ষণ নির্দেশ করে।"
+    },
+    {
+      "q": "Why should the angle be recorded at first sustained motion, not after the block has sped up?",
+      "q_bn": "ব্লক দ্রুত চলার পরে নয়, প্রথম স্থায়ী পিছলানোর কোণ কেন মাপবেন?",
+      "options": [
+        "The threshold corresponds to maximum static friction",
+        "Fast motion measures the same static limit exactly",
+        "Motion removes the normal force",
+        "The angle is irrelevant once moving"
+      ],
+      "options_bn": [
+        "সীমাটি সর্বোচ্চ স্থির ঘর্ষণ নির্দেশ করে",
+        "দ্রুত গতিতেও একই স্থির সীমা নির্ভুল মাপে",
+        "গতিতে লম্ব প্রতিক্রিয়া চলে যায়",
+        "চলা শুরু হলে কোণ অপ্রাসঙ্গিক"
+      ],
+      "answer": 0,
+      "explanation": "At impending slip mg sinθ=μs mg cosθ. Once moving, kinetic friction may differ from maximum static friction.",
+      "explanation_bn": "পিছলানোর প্রাক্কালে mg sinθ=μs mg cosθ। চলতে শুরু করলে গতীয় ঘর্ষণ সর্বোচ্চ স্থির ঘর্ষণ থেকে ভিন্ন হতে পারে।"
     }
   ]
 }

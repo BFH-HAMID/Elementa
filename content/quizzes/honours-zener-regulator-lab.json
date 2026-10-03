@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "IR=(Vin−Vout)/Rs=6/300 A=0.020 A=20 mA; this splits into load and Zener currents.",
       "explanation_bn": "IR=(Vin−Vout)/Rs=৬/৩০০ A=০.০২০ A=২০ mA; এটি ভার ও জেনার প্রবাহে ভাগ হয়।"
+    },
+    {
+      "q": "When load current rises but input and Rs are fixed, what happens first to Zener current in regulation?",
+      "q_bn": "ইনপুট ও Rs স্থির রেখে ভারের প্রবাহ বাড়লে নিয়ন্ত্রণ অবস্থায় জেনার প্রবাহ প্রথমে কী হয়?",
+      "options": [
+        "It decreases",
+        "It increases without limit",
+        "It must equal the load current",
+        "It becomes negative immediately"
+      ],
+      "options_bn": [
+        "কমে",
+        "সীমাহীন বাড়ে",
+        "ভার প্রবাহের সমান হয়",
+        "সঙ্গে সঙ্গে ঋণাত্মক হয়"
+      ],
+      "answer": 0,
+      "explanation": "At approximately fixed Vout, series current (Vin−Vout)/Rs is nearly fixed and splits as Is=IL+Iz. Increasing IL reduces Iz until regulation fails.",
+      "explanation_bn": "Vout প্রায় স্থির হলে সারি প্রবাহ (Vin−Vout)/Rs প্রায় স্থির; Is=IL+Iz। IL বাড়লে Iz কমে, পরে নিয়ন্ত্রণ ভেঙে যেতে পারে।"
     }
   ]
 }

@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "n=sin[(60°+40°)/2]/sin(60°/2)=sin50°/sin30°≈1.53.",
       "explanation_bn": "n=sin[(৬০°+৪০°)/২]/sin(৬০°/২)=sin৫০°/sin৩০°≈১.৫৩।"
+    },
+    {
+      "q": "How do you recognize minimum deviation while rotating a prism?",
+      "q_bn": "প্রিজম ঘোরানোর সময় সর্বনিম্ন বিচ্যুতি কীভাবে চিনবেন?",
+      "options": [
+        "The apex angle becomes 90 degrees",
+        "The line disappears permanently",
+        "The refractive index becomes zero",
+        "The spectral image reverses its motion at a turning point"
+      ],
+      "options_bn": [
+        "শীর্ষকোণ ৯০° হয়",
+        "রেখা চিরতরে অদৃশ্য হয়",
+        "প্রতিসরাঙ্ক শূন্য হয়",
+        "বর্ণরেখার চলার দিক একটি turning point-এ বদলায়"
+      ],
+      "answer": 3,
+      "explanation": "At minimum deviation the path is symmetric and the emergent ray briefly stops moving in one direction before reversing.",
+      "explanation_bn": "সর্বনিম্ন বিচ্যুতিতে পথ সমমিত; নির্গত রশ্মি একদিকে চলা থামিয়ে বিপরীতদিকে ঘুরতে শুরু করে।"
     }
   ]
 }

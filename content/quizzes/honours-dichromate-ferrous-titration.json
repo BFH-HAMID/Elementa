@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "n(Fe²⁺)=6×0.0100×0.00500=0.000300 mol, based on the balanced acid reaction.",
       "explanation_bn": "অম্লীয় সুষম বিক্রিয়ায় n(Fe²⁺)=৬×০.০১০০×০.০০৫০০=০.০০০৩০০ mol।"
+    },
+    {
+      "q": "What should happen to Cr(VI)-containing leftovers after the experiment?",
+      "q_bn": "পরীক্ষার পর Cr(VI)-যুক্ত অবশিষ্টাংশ কী করবেন?",
+      "options": [
+        "Mix into ordinary paper waste",
+        "Collect in designated hazardous waste for supervised disposal",
+        "Pour directly into the sink",
+        "Evaporate openly in the classroom"
+      ],
+      "options_bn": [
+        "সাধারণ কাগজের বর্জ্যে মেশাবেন",
+        "তত্ত্বাবধানে নির্দিষ্ট বিপজ্জনক বর্জ্যে সংগ্রহ",
+        "সরাসরি বেসিনে ঢালবেন",
+        "শ্রেণিকক্ষে উন্মুক্তভাবে শুকাবেন"
+      ],
+      "answer": 1,
+      "explanation": "Hexavalent chromium is toxic and carcinogenic. Use the smallest instructed quantity, wear protection and follow the institution's hazardous-waste protocol.",
+      "explanation_bn": "ষড়যোজী ক্রোমিয়াম বিষাক্ত ও ক্যানসার-ঝুঁকিপূর্ণ। নির্দেশিত অল্প পরিমাণ, সুরক্ষা ও প্রতিষ্ঠানের বিপজ্জনক বর্জ্যবিধি মানুন।"
     }
   ]
 }

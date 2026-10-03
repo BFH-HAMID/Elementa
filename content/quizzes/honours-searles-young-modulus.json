@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "Y=4FL/(πd²ΔL), so a 2% diameter increase in the calculation produces approximately a 4% decrease in Y.",
       "explanation_bn": "Y=৪FL/(πd²ΔL); হিসাবে ব্যাস ২% বেশি নিলে Y আনুমানিক ৪% কম হয়।"
+    },
+    {
+      "q": "If a loading-unloading curve shows large permanent extension, should Y be obtained from those points?",
+      "q_bn": "ভার কমানোর পর তারে বড় স্থায়ী প্রসারণ থাকলে সেই পাঠ থেকে Y নেওয়া উচিত?",
+      "options": [
+        "Only if diameter is ignored",
+        "No, the elastic-region assumption has failed",
+        "Yes, plastic deformation is required",
+        "Yes, all extensions are reversible"
+      ],
+      "options_bn": [
+        "শুধু ব্যাস উপেক্ষা করলে",
+        "না, স্থিতিস্থাপক অঞ্চলের অনুমান ভেঙেছে",
+        "হ্যাঁ, স্থায়ী বিকৃতি জরুরি",
+        "হ্যাঁ, সব প্রসারণ প্রত্যাবর্তী"
+      ],
+      "answer": 1,
+      "explanation": "Y=FL/(AΔL) describes reversible elastic extension. Residual strain means the sample was overloaded or changed, so use elastic-range data only.",
+      "explanation_bn": "Y=FL/(AΔL) প্রত্যাবর্তী স্থিতিস্থাপক প্রসারণের জন্য। অবশিষ্ট বিকৃতিতে নমুনা বদলেছে; তাই শুধু স্থিতিস্থাপক সীমার পাঠ নিন।"
     }
   ]
 }

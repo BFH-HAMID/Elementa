@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "In the drop-count approximation γunknown/γref≈ρunknown nref/(ρref nunknown)=1/2.",
       "explanation_bn": "ফোঁটা-গণনা অনুমানে γunknown/γref≈ρunknown nref/(ρref nunknown)=১/২।"
+    },
+    {
+      "q": "What happens if drops are produced rapidly instead of slowly?",
+      "q_bn": "ফোঁটা ধীরে না পড়িয়ে দ্রুত ফেললে কী সমস্যা?",
+      "options": [
+        "Density becomes infinite",
+        "The same volume contains no liquid",
+        "Dynamic detachment biases the drop-count approximation",
+        "Surface tension becomes identically zero"
+      ],
+      "options_bn": [
+        "ঘনত্ব অসীম হয়",
+        "একই আয়তনে তরল থাকে না",
+        "গতিশীল বিচ্ছেদে ফোঁটা-গণনার অনুমান ভুল হয়",
+        "পৃষ্ঠটান শূন্য হয়"
+      ],
+      "answer": 2,
+      "explanation": "The approximate mass-at-detachment model presumes similar, near-quasistatic drop formation for both liquids. Fast flow changes detachment and drop size.",
+      "explanation_bn": "দুটি তরলে প্রায় স্থিরভাবে অনুরূপ ফোঁটা বিচ্ছেদ ধরা হয়। দ্রুত প্রবাহে বিচ্ছেদ ও ফোঁটার আকার বদলায়।"
     }
   ]
 }

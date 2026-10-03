@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "Ag++Cl−→AgCl is 1:1; n=0.0100×0.0100=1.00×10⁻⁴ mol.",
       "explanation_bn": "Ag++Cl−→AgCl অনুপাত ১:১; n=০.০১০০×০.০১০০=১.০০×১০⁻⁴ mol।"
+    },
+    {
+      "q": "Why should Mohr titration not be carried out in strongly acidic solution?",
+      "q_bn": "প্রবল অম্লীয় দ্রবণে মোহরের টাইট্রেশন করবেন না কেন?",
+      "options": [
+        "The chromate indicator equilibrium and endpoint precipitation are disturbed",
+        "AgCl becomes a gas",
+        "Chloride loses all electrons instantly",
+        "Burette volume becomes negative"
+      ],
+      "options_bn": [
+        "ক্রোমেট নির্দেশকের সাম্য ও সমাপ্তির অধঃক্ষেপ ব্যাহত হয়",
+        "AgCl গ্যাস হয়",
+        "ক্লোরাইড সঙ্গে সঙ্গে সব ইলেকট্রন হারায়",
+        "বিউরেটের আয়তন ঋণাত্মক হয়"
+      ],
+      "answer": 0,
+      "explanation": "Acid shifts chromate toward hydrogen chromate/dichromate, delaying the Ag₂CrO₄ brick-red endpoint. Use the method in its prescribed near-neutral pH range.",
+      "explanation_bn": "অম্লে ক্রোমেট hydrogen chromate/dichromate-এর দিকে সরে ইট-লাল Ag₂CrO₄ সমাপ্তি দেরি করে। নির্ধারিত প্রায় নিরপেক্ষ pH রাখুন।"
     }
   ]
 }

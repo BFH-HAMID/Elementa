@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "Stoichiometry is 1:1, so n=0.0100×0.0100=1.00×10⁻⁴ mol.",
       "explanation_bn": "মোল অনুপাত ১:১; তাই n=০.০১০০×০.০১০০=১.০০×১০⁻⁴ mol।"
+    },
+    {
+      "q": "Why might direct iodine titration overestimate vitamin C in a mixed juice?",
+      "q_bn": "মিশ্র ফলের রসে প্রত্যক্ষ আয়োডিন টাইট্রেশনে ভিটামিন C বেশি মনে হতে পারে কেন?",
+      "options": [
+        "Water itself always consumes all iodine",
+        "Starch forms vitamin C from sugar",
+        "The mole ratio changes with bottle size",
+        "Other reducing compounds also consume iodine"
+      ],
+      "options_bn": [
+        "পানিই সব আয়োডিন খরচ করে",
+        "শ্বেতসার চিনি থেকে ভিটামিন C বানায়",
+        "বোতলের আকারে মোল অনুপাত বদলায়",
+        "অন্য বিজারকও আয়োডিন খরচ করে"
+      ],
+      "answer": 3,
+      "explanation": "The 1:1 ascorbate–iodine calculation assumes no other reductants. Other antioxidants give additional iodine demand unless separately corrected.",
+      "explanation_bn": "১:১ অ্যাসকরবেট–আয়োডিন হিসাবে অন্য বিজারক নেই ধরা হয়। অন্য অ্যান্টিঅক্সিডেন্টও আয়োডিন গ্রহণ করলে সংশোধন ছাড়া ফল বেশি হবে।"
     }
   ]
 }

@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "2H₂O₂→2H₂O+O₂, hence n(O₂)=n(H₂O₂)/2=0.010 mol.",
       "explanation_bn": "২H₂O₂→২H₂O+O₂; তাই n(O₂)=n(H₂O₂)/২=০.০১০ mol।"
+    },
+    {
+      "q": "If the gas syringe leaks, how will measured O₂ volume compare with actual production?",
+      "q_bn": "গ্যাস সিরিঞ্জে ফুটো থাকলে মাপা O₂ আয়তন প্রকৃত উৎপাদের তুলনায় কেমন?",
+      "options": [
+        "Negative",
+        "Too low",
+        "Too high by exactly twofold",
+        "Always unchanged"
+      ],
+      "options_bn": [
+        "ঋণাত্মক হবে",
+        "কম হবে",
+        "ঠিক দ্বিগুণ বেশি হবে",
+        "সবসময় একই থাকবে"
+      ],
+      "answer": 1,
+      "explanation": "Escaping O₂ is not collected, so the observed volume underestimates product formation and corrupts rates derived from volume versus time.",
+      "explanation_bn": "বেরিয়ে যাওয়া O₂ ধরা পড়ে না; মাপা আয়তন প্রকৃত উৎপাদের কম হয় এবং সময়-আয়তন থেকে বের করা হারও ভুল হয়।"
     }
   ]
 }

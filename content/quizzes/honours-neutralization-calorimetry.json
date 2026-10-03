@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "The reaction released 2.85 kJ; ΔH≈−2.85/0.050=−57 kJ/mol if heat loss and cup capacity are negligible.",
       "explanation_bn": "বিক্রিয়া ২.৮৫ kJ ছেড়েছে; ক্ষতি ও পাত্রের তাপধারণ নগণ্য হলে ΔH≈−২.৮৫/০.০৫০=−৫৭ kJ/mol।"
+    },
+    {
+      "q": "Why is the heat absorbed by the calorimeter included along with solution heat?",
+      "q_bn": "দ্রবণের তাপের সঙ্গে ক্যালরিমিটারের শোষিত তাপ কেন ধরবেন?",
+      "options": [
+        "A warmed container has negative mass",
+        "Water cannot absorb heat",
+        "The container warms and absorbs part of the reaction heat",
+        "The container produces extra acid"
+      ],
+      "options_bn": [
+        "গরম পাত্রের ভর ঋণাত্মক",
+        "পানি তাপ শোষণ করতে পারে না",
+        "পাত্র গরম হয়ে বিক্রিয়ার তাপের অংশ শোষণ করে",
+        "পাত্র অতিরিক্ত অম্ল তৈরি করে"
+      ],
+      "answer": 2,
+      "explanation": "At approximately constant pressure, qreleased≈(msol c+Cc)ΔT plus environmental losses; ignoring Cc generally underestimates the reaction heat magnitude.",
+      "explanation_bn": "প্রায় স্থির চাপে qনিঃসৃত≈(msol c+Cc)ΔT এবং পরিবেশের ক্ষতি; Cc বাদ দিলে সাধারণত বিক্রিয়া তাপের মান কম আসে।"
     }
   ]
 }

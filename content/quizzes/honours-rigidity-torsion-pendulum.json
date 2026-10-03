@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "κ=πGr⁴/(2L), so 2⁴=16.",
       "explanation_bn": "κ=πGr⁴/(২L); তাই ২⁴=১৬।"
+    },
+    {
+      "q": "If the disc swings sideways as well as twisting, what is the best response?",
+      "q_bn": "চাকতি পাক দোলনের সঙ্গে পাশেও দুললে কী করবেন?",
+      "options": [
+        "Include sideways swings as more periods",
+        "Increase twist beyond elastic limit",
+        "Ignore the motion without recording it",
+        "Realign and repeat pure torsional oscillations"
+      ],
+      "options_bn": [
+        "পার্শ্বদোলনকে বাড়তি পর্যায়কাল ধরবেন",
+        "স্থিতিস্থাপক সীমার বাইরে পাকাবেন",
+        "না লিখেই গতি উপেক্ষা করবেন",
+        "সারিবদ্ধ করে শুধু পাক দোলনে আবার মাপবেন"
+      ],
+      "answer": 3,
+      "explanation": "T=2π√(I/κ) models torsional motion, not coupled lateral movement. Mixed modes bias the timed period and inferred modulus.",
+      "explanation_bn": "T=২π√(I/κ) শুধু পাক দোলনের মডেল; মিশ্র পার্শ্বদোলনে মাপা পর্যায়কাল ও গুণাঙ্ক ভুল হয়।"
     }
   ]
 }

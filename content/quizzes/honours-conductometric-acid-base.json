@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "At 1:1 equivalence Cacid Vacid=Cbase Vbase; 0.100×15.0/20.0=0.0750 M.",
       "explanation_bn": "১:১ সাম্যে Cacid Vacid=Cbase Vbase; ০.১০০×১৫.০/২০.০=০.০৭৫০ M।"
+    },
+    {
+      "q": "Why measure conductance beyond the equivalence point?",
+      "q_bn": "সাম্যবিন্দু পার হয়েও পরিবাহন কেন মাপেন?",
+      "options": [
+        "Only post-equivalence readings give original acid volume",
+        "It makes dilution correction unnecessary",
+        "Both descending and rising branches are needed for their intersection",
+        "After equivalence all conductance is zero"
+      ],
+      "options_bn": [
+        "শুধু পরের পাঠে প্রথম অম্লের আয়তন পাওয়া যায়",
+        "এতে পাতলা হওয়ার সংশোধন লাগে না",
+        "নিম্নমুখী ও ঊর্ধ্বমুখী দুই রেখার ছেদ দরকার",
+        "সমাপ্তির পরে পরিবাহন শূন্য"
+      ],
+      "answer": 2,
+      "explanation": "Before equivalence H+ replacement lowers conductance; excess OH− raises it afterwards. Their fitted intersection estimates the equivalence volume.",
+      "explanation_bn": "আগে H+ বদলায় বলে পরিবাহন কমে; পরে অতিরিক্ত OH−-এ বাড়ে। দুই রেখার ছেদ থেকে সাম্য আয়তন।"
     }
   ]
 }

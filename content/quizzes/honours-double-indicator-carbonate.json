@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "n(CO₃²−)=Cacid(M−P)=0.100×(0.0250−0.0150)=0.00100 mol; M is cumulative.",
       "explanation_bn": "n(CO₃²−)=Cacid(M−P)=০.১০০×(০.০২৫০−০.০১৫০)=০.০০১০০ mol; M মোট পাঠ।"
+    },
+    {
+      "q": "For a sample containing only NaOH and Na₂CO₃, what does M greater than 2P suggest?",
+      "q_bn": "শুধু NaOH ও Na₂CO₃ থাকার কথা হলে M>২P কী নির্দেশ করে?",
+      "options": [
+        "A required result for pure NaOH",
+        "Always exactly zero carbonate",
+        "A negative concentration is physically valid",
+        "Another component or a measurement/endpoint error"
+      ],
+      "options_bn": [
+        "বিশুদ্ধ NaOH-এর আবশ্যিক ফল",
+        "সবসময় কার্বোনেট শূন্য",
+        "ঋণাত্মক ঘনত্ব বাস্তবে গ্রহণযোগ্য",
+        "অন্য উপাদান বা পাঠ/সমাপ্তির ত্রুটি"
+      ],
+      "answer": 3,
+      "explanation": "n(OH−)=C(2P−M) would become negative. Since physical moles cannot be negative, the assumed two-component model or readings must be revisited.",
+      "explanation_bn": "n(OH−)=C(২P−M) ঋণাত্মক হবে। বাস্তবে মোল ঋণাত্মক হয় না; তাই দুই-উপাদান অনুমান বা পাঠ পুনর্বিবেচনা করুন।"
     }
   ]
 }

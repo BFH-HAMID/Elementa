@@ -46,6 +46,25 @@
       "answer": 1,
       "explanation": "λ=2L/n=1.20/3=0.40 m; driving frequency conversion must still be handled separately.",
       "explanation_bn": "λ=২L/n=১.২০/৩=০.৪০ m; চালক কম্পাঙ্কের রূপান্তর আলাদা বিবেচ্য।"
+    },
+    {
+      "q": "What must be stated before comparing drive frequency with f in v=fλ?",
+      "q_bn": "v=fλ-এ f-এর সঙ্গে চালক কম্পাঙ্ক তুলনার আগে কী বলতে হবে?",
+      "options": [
+        "Only the number of clamps",
+        "The vibrator's orientation and drive-to-string frequency relation",
+        "Only the string colour",
+        "Only room pressure"
+      ],
+      "options_bn": [
+        "শুধু আটকানোর সংখ্যা",
+        "কম্পকের বিন্যাস ও চালক-তার কম্পাঙ্কের সম্পর্ক",
+        "শুধু তারের রং",
+        "শুধু কক্ষের চাপ"
+      ],
+      "answer": 1,
+      "explanation": "Depending on transverse or longitudinal vibrator arrangement, the string can oscillate at the drive frequency or at a related frequency. Assuming equality without noting setup biases v.",
+      "explanation_bn": "কম্পকের আনুপ্রস্থ বা অনুদৈর্ঘ্য বিন্যাসে তারের কম্পাঙ্ক চালকের সমান বা সম্পর্কিত হতে পারে। বিন্যাস না লিখে সমান ধরলে v ভুল হয়।"
     }
   ]
 }

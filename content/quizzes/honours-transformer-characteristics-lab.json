@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "Vs/Vp=Ns/Np=100/200=1/2; hence Vs=6 V.",
       "explanation_bn": "Vs/Vp=Ns/Np=১০০/২০০=১/২; তাই Vs=৬ V।"
+    },
+    {
+      "q": "Why is VI not always equal to real input power in a transformer?",
+      "q_bn": "ট্রান্সফরমারে VI কি সবসময় প্রকৃত ইনপুট ক্ষমতা? কেন নয়?",
+      "options": [
+        "Transformers only use DC",
+        "Current is always zero at all loads",
+        "AC current may be phase-shifted; real power needs power factor",
+        "Voltage has no SI unit"
+      ],
+      "options_bn": [
+        "ট্রান্সফরমার শুধু DC-তে চলে",
+        "সব ভারে প্রবাহ শূন্য",
+        "AC প্রবাহের দশা সরে যেতে পারে; প্রকৃত ক্ষমতায় power factor লাগে",
+        "বিভবের SI একক নেই"
+      ],
+      "answer": 2,
+      "explanation": "For sinusoidal AC, real input power is Vrms Irms cosφ, not generally Vrms Irms; use a wattmeter or measured power factor.",
+      "explanation_bn": "সাইন-রূপ AC-তে প্রকৃত ক্ষমতা Vrms Irms cosφ, শুধু Vrms Irms নয়; wattmeter বা power factor নিন।"
     }
   ]
 }

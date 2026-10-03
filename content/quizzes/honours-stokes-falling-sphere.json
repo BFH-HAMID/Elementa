@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "Rearrange η=2r²(ρs−ρf)g/(9v): terminal v∝r² in the Stokes regime.",
       "explanation_bn": "η=২r²(ρs−ρf)g/(৯v) থেকে Stokes অঞ্চলে প্রান্তিক v∝r²।"
+    },
+    {
+      "q": "Why may the simple Stokes formula fail for a sphere in a narrow cylinder?",
+      "q_bn": "সরু নলে গোলকের জন্য সরল Stokes সূত্র কেন ভুল হতে পারে?",
+      "options": [
+        "Sphere density becomes zero",
+        "Terminal speed becomes infinite",
+        "Nearby walls alter fluid drag",
+        "Gravity vanishes inside glass"
+      ],
+      "options_bn": [
+        "গোলকের ঘনত্ব শূন্য হয়",
+        "প্রান্তিক বেগ অসীম হয়",
+        "পাশের দেয়াল তরলের বাধা বদলায়",
+        "কাচের মধ্যে মহাকর্ষ থাকে না"
+      ],
+      "answer": 2,
+      "explanation": "Stokes drag 6πηrv assumes an unbounded slow-flow fluid. Vessel walls increase drag, requiring a wall correction or a wider cylinder.",
+      "explanation_bn": "Stokes বাধা ৬πηrv অসীম বিস্তৃত ধীর তরলের জন্য। পাত্রের দেয়ালে বাধা বাড়ে; দেয়াল সংশোধন বা চওড়া পাত্র দরকার।"
     }
   ]
 }

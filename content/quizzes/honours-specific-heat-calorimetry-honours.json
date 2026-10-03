@@ -46,6 +46,25 @@
       "answer": 2,
       "explanation": "Energy conservation sets heat lost equal to heat gained when calorimeter heat is negligible.",
       "explanation_bn": "পাত্রের তাপধারণ নগণ্য হলে শক্তি সংরক্ষণে হারানো ও পাওয়া তাপ সমান।"
+    },
+    {
+      "q": "What sign should Ts−Tf have if a hot specimen cools into water?",
+      "q_bn": "গরম নমুনা পানিতে ঠান্ডা হলে Ts−Tf-এর চিহ্ন কী?",
+      "options": [
+        "Exactly zero",
+        "Undefined even after measurement",
+        "Positive",
+        "Negative"
+      ],
+      "options_bn": [
+        "ঠিক শূন্য",
+        "মাপার পরেও অনির্ধারিত",
+        "ধনাত্মক",
+        "ঋণাত্মক"
+      ],
+      "answer": 2,
+      "explanation": "A hot specimen starts above the equilibrium temperature (Ts>Tf), so its lost heat ms cs(Ts−Tf) has positive magnitude.",
+      "explanation_bn": "গরম নমুনার শুরুর তাপমাত্রা সাম্য তাপমাত্রার চেয়ে বেশি (Ts>Tf); তাই হারানো তাপের মান ms cs(Ts−Tf) ধনাত্মক।"
     }
   ]
 }

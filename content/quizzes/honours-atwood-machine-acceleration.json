@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "a=(m₁−m₂)g/(m₁+m₂)=(3−1)g/(3+1)=g/2.",
       "explanation_bn": "a=(m₁−m₂)g/(m₁+m₂)=(৩−১)g/(৩+১)=g/২।"
+    },
+    {
+      "q": "Why can observed acceleration be smaller than the ideal mass-only prediction?",
+      "q_bn": "মাপা ত্বরণ আদর্শ ভরভিত্তিক মানের চেয়ে কম কেন হতে পারে?",
+      "options": [
+        "Gravitational acceleration reverses",
+        "Both masses become equal automatically",
+        "A longer string removes all force",
+        "Pulley inertia and friction consume driving torque"
+      ],
+      "options_bn": [
+        "মহাকর্ষীয় ত্বরণ উল্টে যায়",
+        "দুটি ভর আপনা থেকে সমান হয়",
+        "লম্বা সুতোয় সব বল দূর হয়",
+        "পুলির জড়তা ও ঘর্ষণ চালক টর্কের অংশ নেয়"
+      ],
+      "answer": 3,
+      "explanation": "Ideal a=(m₁−m₂)g/(m₁+m₂) assumes massless frictionless pulley. Real pulley rotation adds effective inertia and bearings dissipate energy.",
+      "explanation_bn": "আদর্শ a=(m₁−m₂)g/(m₁+m₂)-এ ভরহীন ঘর্ষণমুক্ত পুলি ধরা হয়। বাস্তব পুলির জড়তা ও ঘর্ষণে ত্বরণ কমে।"
     }
   ]
 }

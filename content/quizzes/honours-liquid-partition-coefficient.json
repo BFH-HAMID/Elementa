@@ -46,6 +46,25 @@
       "answer": 3,
       "explanation": "Kd=Corganic/Caqueous=0.20/0.05=4; ionization would require a more careful model.",
       "explanation_bn": "Kd=Corganic/Caqueous=০.২০/০.০৫=৪; আয়নীভবনে আরও সতর্ক মডেল লাগে।"
+    },
+    {
+      "q": "Why might apparent Kd vary with concentration for an ionizable solute?",
+      "q_bn": "আয়নীভবনযোগ্য দ্রবের আপাত Kd ঘনত্বভেদে বদলাতে পারে কেন?",
+      "options": [
+        "Both solvents must be identical",
+        "Chemical potential stops existing",
+        "The separating funnel has no volume",
+        "Neutral and ionic forms partition differently"
+      ],
+      "options_bn": [
+        "দুটি দ্রাবক অবশ্যই এক",
+        "রাসায়নিক বিভব থাকে না",
+        "পৃথকীকরণ ফানেলের আয়তন নেই",
+        "নিরপেক্ষ ও আয়নিক রূপ ভিন্নভাবে বণ্টিত হয়"
+      ],
+      "answer": 3,
+      "explanation": "Kd=Corganic/Caqueous is constant for the same molecular form under defined conditions. Ionization or association changes the fraction of that form in each phase.",
+      "explanation_bn": "নির্দিষ্ট অবস্থায় একই আণবিক রূপে Kd=Corganic/Caqueous স্থির। আয়নীভবন বা সংযুক্তিতে দুই স্তরে সেই রূপের অংশ বদলায়।"
     }
   ]
 }

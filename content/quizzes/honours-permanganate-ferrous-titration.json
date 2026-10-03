@@ -46,6 +46,25 @@
       "answer": 0,
       "explanation": "n(Fe²⁺)=5×n(MnO₄−)=5×0.0200×0.01000=0.00100 mol.",
       "explanation_bn": "n(Fe²⁺)=৫×n(MnO₄−)=৫×০.০২০০×০.০১০০০=০.০০১০০ mol।"
+    },
+    {
+      "q": "Why is dilute H₂SO₄ preferred over HCl in the permanganate–Fe²⁺ titration?",
+      "q_bn": "পারম্যাঙ্গানেট–Fe²⁺ টাইট্রেশনে HCl-এর বদলে পাতলা H₂SO₄ কেন?",
+      "options": [
+        "Chloride can be oxidized, consuming permanganate",
+        "Sulfate is the indicator colour",
+        "HCl prevents Fe²⁺ from dissolving",
+        "Sulfuric acid has no hydrogen ions"
+      ],
+      "options_bn": [
+        "ক্লোরাইড জারিত হয়ে পারম্যাঙ্গানেট খরচ করতে পারে",
+        "সালফেটই নির্দেশকের রং",
+        "HCl-এ Fe²⁺ দ্রবীভূত হয় না",
+        "সালফিউরিক অম্লে H+ নেই"
+      ],
+      "answer": 0,
+      "explanation": "Permanganate is a strong oxidant in acid and can oxidize chloride under titration conditions, giving an excessive titre unrelated to Fe²⁺.",
+      "explanation_bn": "অম্লে পারম্যাঙ্গানেট শক্তিশালী জারক; ক্লোরাইড জারিত হলে Fe²⁺ ছাড়াও বিকারক খরচ হয়ে পাঠ বেশি হয়।"
     }
   ]
 }

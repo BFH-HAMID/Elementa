@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import type { VesselShape } from '@/engine/types';
+import type { Apparatus, VesselShape } from '@/engine/types';
 import { Beaker } from './Beaker';
 import { Burette } from './Burette';
 import { ConicalFlask } from './ConicalFlask';
@@ -37,6 +37,7 @@ export const vesselComponents: Record<VesselShape, VesselComponent> = {
   dish: EvaporatingDish as VesselComponent
 };
 
-export function VesselFor(shape: VesselShape): VesselComponent {
-  return vesselComponents[shape] ?? (TestTube as VesselComponent);
+/** Tools and heat sources have shapes of their own; anything that is not glassware falls back to a tube. */
+export function VesselFor(shape: Apparatus['shape'] | VesselShape): VesselComponent {
+  return vesselComponents[shape as VesselShape] ?? (TestTube as VesselComponent);
 }

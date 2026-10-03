@@ -88,6 +88,43 @@ for (const simulation of phetBySlug.values()) {
     tags: ['PhET', 'HTML5', ...simulation.subjects]
   });
 }
+// The Elementa Chemistry Lab lives in /data, not in MDX, so it is indexed from JSON.
+const labExperiments = JSON.parse(fs.readFileSync(path.join(root, 'data', 'experiments.json'), 'utf8')).experiments;
+records.push({
+  slug: 'elementa-chemistry-lab',
+  kind: 'lab',
+  subject: 'chemistry',
+  title_en: 'Elementa Chemistry Lab',
+  title_bn: 'এলিমেন্টা কেমিস্ট্রি ল্যাব',
+  description_en: 'Virtual chemistry bench: drag chemicals into glassware, heat them, watch reactions, pH and indicators.',
+  description_bn: 'ভার্চুয়াল কেমিস্ট্রি বেঞ্চ: রাসায়নিক টেনে পাত্রে দিন, গরম করুন, বিক্রিয়া, pH ও নির্দেশকের রঙ দেখুন।',
+  href: '/lab/chemistry',
+  tags: ['virtual lab', 'drag and drop', 'reactions', 'pH']
+});
+records.push({
+  slug: 'lab-guided-experiments',
+  kind: 'lab',
+  subject: 'chemistry',
+  title_en: 'Guided chemistry experiments',
+  title_bn: 'গাইডেড কেমিস্ট্রি পরীক্ষা',
+  description_en: `${labExperiments.length} walkthroughs that set the virtual bench up for you and tick each step off.`,
+  description_bn: `${labExperiments.length}টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে।`,
+  href: '/lab/experiments',
+  tags: ['experiments', 'guided']
+});
+for (const experiment of labExperiments) {
+  records.push({
+    slug: `lab-${experiment.slug}`,
+    kind: 'lab',
+    subject: 'chemistry',
+    title_en: experiment.title_en,
+    title_bn: experiment.title_bn,
+    description_en: experiment.aim_en,
+    description_bn: experiment.aim_bn,
+    href: `/lab/experiments/${experiment.slug}`,
+    tags: ['lab', experiment.level, ...experiment.tags]
+  });
+}
 fs.mkdirSync(path.dirname(output), { recursive: true });
 fs.writeFileSync(output, JSON.stringify(records, null, 2));
 console.log(`Built ${records.length} search records → ${path.relative(root, output)}`);

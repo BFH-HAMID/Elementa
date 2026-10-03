@@ -104,7 +104,7 @@ const en = {
   'equation.copy': 'Copy equation',
 
   'ph.title': 'pH meter',
-  'ph.empty': '—',
+  'ph.empty': 'Pour an acid, a base or water into a vessel to read its pH.',
   'ph.acidic': 'Acidic',
   'ph.neutral': 'Neutral',
   'ph.alkaline': 'Alkaline',
@@ -279,7 +279,7 @@ const bn: Record<keyof typeof en, string> = {
   'equation.copy': 'সমীকরণ কপি করুন',
 
   'ph.title': 'pH মিটার',
-  'ph.empty': '—',
+  'ph.empty': 'পাত্রে অ্যাসিড, ক্ষার বা পানি ঢাললে pH দেখা যাবে।',
   'ph.acidic': 'অম্লীয়',
   'ph.neutral': 'প্রশম',
   'ph.alkaline': 'ক্ষারীয়',

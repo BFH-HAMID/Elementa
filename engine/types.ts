@@ -10,6 +10,9 @@ export type Locale = 'bn' | 'en';
 
 export type HazardLevel = 'none' | 'caution' | 'danger';
 
+/** Hazard pictogram wording for a chemical on the shelf (GHS-style). */
+export type ChemicalHazard = 'none' | 'irritant' | 'corrosive' | 'toxic' | 'flammable' | 'oxidiser' | 'dangerous';
+
 export type ChemicalCategory =
   | 'acid'
   | 'base'
@@ -41,7 +44,7 @@ export type Chemical = {
   opacity: number;
   molarMass: number;
   shelf: boolean;
-  hazard: HazardLevel;
+  hazard: ChemicalHazard;
   soluble: boolean;
   precipitate: boolean;
   amphoteric?: boolean;
@@ -235,7 +238,7 @@ export type LogTone = 'info' | 'reaction' | 'warning' | 'danger' | 'success';
 export type LogEntry = {
   id: string;
   at: number;
-  kind: 'observation' | 'safety' | 'system' | 'equation' | 'heat';
+  kind: 'observation' | 'safety' | 'system' | 'equation' | 'heat' | 'spark';
   tone: LogTone;
   reactionId: string | null;
   vesselId: string | null;

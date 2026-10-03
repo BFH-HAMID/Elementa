@@ -110,6 +110,7 @@ export type LabStore = {
   addChemical: (vesselId: string, chemicalId: string, amount?: number) => void;
   removePortion: (vesselId: string, chemicalId: string) => void;
   emptyVessel: (vesselId: string) => void;
+  stir: (vesselId: string) => void;
   setHeating: (vesselId: string, heating: boolean) => void;
   toggleBurner: () => void;
   setBurnerIntensity: (intensity: number) => void;
@@ -508,6 +509,35 @@ export const useLabStore = create<LabStore>()((set, get) => {
         };
       }),
 
+    /** A spatula stirs: settled solid clouds the liquid again, then settles once more. */
+    stir: (vesselId) =>
+      commit((state) => {
+        const vessel = state.vessels.find((item) => item.id === vesselId);
+        if (!vessel) return {};
+        const hasSolid = vessel.sediment.length > 0;
+        const vessels = state.vessels.map((item) =>
+          item.id === vesselId ? { ...item, turbidity: hasSolid ? Math.min(1, item.turbidity + 0.55) : Math.max(0, item.turbidity - 0.2) } : item
+        );
+        return {
+          vessels,
+          log: log(
+            {
+              kind: 'system',
+              tone: 'info',
+              reactionId: null,
+              vesselId,
+              text_en: hasSolid
+                ? 'Stirred with a spatula — the settled solid clouds the liquid, then settles again.'
+                : 'Stirred with a spatula — the mixture is even.',
+              text_bn: hasSolid
+                ? 'স্প্যাচুলা দিয়ে নাড়া হলো — তলানি ভেসে তরল ঘোলা হলো, আবার জমে যাবে।'
+                : 'স্প্যাচুলা দিয়ে নাড়া হলো — মিশ্রণ এখন সমসত্ত্ব।'
+            },
+            state
+          )
+        };
+      }),
+
     setHeating: (vesselId, heating) => {
       const state = get();
       const vessel = state.vessels.find((item) => item.id === vesselId);
@@ -605,7 +635,7 @@ export const useLabStore = create<LabStore>()((set, get) => {
         const sparkLog: LogEntry = {
           id: nextId('log'),
           at: Date.now(),
-          kind: 'system',
+          kind: 'spark',
           tone: 'info',
           reactionId: null,
           vesselId,

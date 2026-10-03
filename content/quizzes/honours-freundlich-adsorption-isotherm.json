@@ -1,0 +1,32 @@
+{
+  "slug": "honours-freundlich-adsorption-isotherm",
+  "title_bn": "ফ্রয়েন্ডলিচ শোষণ সমোষ্ণ রেখা — ধারণা যাচাই",
+  "title_en": "Freundlich adsorption isotherm — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "In log(x/m)=logK+(1/n)logCe, what is the slope against logCe?",
+      "q_bn": "log(x/m)=logK+(১/n)logCe রেখায় logCe-এর বিপরীতে ঢাল কত?",
+      "options": [
+        "1/n",
+        "n",
+        "K",
+        "Zero always"
+      ],
+      "options_bn": [
+        "১/n",
+        "n",
+        "K",
+        "সবসময় শূন্য"
+      ],
+      "answer": 0,
+      "explanation": "The linearized empirical Freundlich relation has slope 1/n over its fitted concentration range; it is not a universal monolayer law.",
+      "explanation_bn": "রৈখিক Freundlich সম্পর্কে সীমিত ঘনত্ব পরিসরে ঢাল ১/n; এটি সর্বজনীন একস্তর সূত্র নয়।"
+    }
+  ]
+}

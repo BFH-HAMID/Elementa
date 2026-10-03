@@ -1,0 +1,32 @@
+{
+  "slug": "honours-hydrogen-energy-levels-bohr",
+  "title_bn": "হাইড্রোজেন পরমাণুর শক্তিস্তর — ধারণা যাচাই",
+  "title_en": "Energy levels of the hydrogen atom — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "If hydrogen's ground-state energy is −13.6 eV, what is E₂ in the Bohr model?",
+      "q_bn": "হাইড্রোজেনের ভূমিস্তর −১৩.৬ eV হলে বোর মডেলে E₂ কত?",
+      "options": [
+        "+3.4 eV",
+        "−3.4 eV",
+        "−27.2 eV",
+        "−6.8 eV"
+      ],
+      "options_bn": [
+        "+৩.৪ eV",
+        "−৩.৪ eV",
+        "−২৭.২ eV",
+        "−৬.৮ eV"
+      ],
+      "answer": 1,
+      "explanation": "Eₙ=−13.6/n² eV, giving −13.6/4=−3.4 eV for n=2.",
+      "explanation_bn": "Eₙ=−১৩.৬/n² eV; n=২-এ −১৩.৬/৪=−৩.৪ eV।"
+    }
+  ]
+}

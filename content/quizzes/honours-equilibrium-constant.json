@@ -1,0 +1,32 @@
+{
+  "slug": "honours-equilibrium-constant",
+  "title_bn": "সাম্য ধ্রুবক — ধারণা যাচাই",
+  "title_en": "Equilibrium constant — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "At equilibrium, what is ΔᵣG for the reaction as written?",
+      "q_bn": "বর্ণিত বিক্রিয়া সাম্যে থাকলে ΔᵣG কত?",
+      "options": [
+        "Equal to RT",
+        "Zero",
+        "Always positive",
+        "Always negative"
+      ],
+      "options_bn": [
+        "RT-এর সমান",
+        "শূন্য",
+        "সবসময় ধনাত্মক",
+        "সবসময় ঋণাত্মক"
+      ],
+      "answer": 1,
+      "explanation": "Equilibrium means Q=K and ΔᵣG=ΔᵣG°+RT lnK=0. Thermodynamic K uses dimensionless activities.",
+      "explanation_bn": "সাম্যে Q=K, ফলে ΔᵣG=ΔᵣG°+RT lnK=০। প্রকৃত K মাত্রাহীন সক্রিয়তায় লেখা।"
+    }
+  ]
+}

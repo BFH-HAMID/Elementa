@@ -1,0 +1,32 @@
+{
+  "slug": "honours-schrodinger-equation",
+  "title_bn": "শ্রোডিঙ্গার সমীকরণ — ধারণা যাচাই",
+  "title_en": "Time-independent Schrödinger equation — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "When can Ψ(r,t)=ψ(r)e^(−iEt/ħ) describe a stationary state?",
+      "q_bn": "Ψ(r,t)=ψ(r)e^(−iEt/ħ) কখন স্থির অবস্থা বর্ণনা করে?",
+      "options": [
+        "Only when E=0",
+        "Only for a classical trajectory",
+        "For a time-independent Hamiltonian energy eigenstate",
+        "For arbitrary time-changing potential"
+      ],
+      "options_bn": [
+        "শুধু E=০ হলে",
+        "শুধু ধ্রুপদি গতিপথে",
+        "সময়-স্বাধীন হ্যামিল্টনীয়ের শক্তি-স্বকীয় অবস্থায়",
+        "যেকোনো সময়-বদলানো বিভবে"
+      ],
+      "answer": 2,
+      "explanation": "Separation gives Ĥψ=Eψ when the potential has no explicit time dependence; boundary conditions select allowed energies.",
+      "explanation_bn": "বিভব সময়ে স্পষ্টভাবে না বদলালে পৃথকীকরণে Ĥψ=Eψ; সীমানা-শর্ত অনুমোদিত শক্তি নির্ধারণ করে।"
+    }
+  ]
+}

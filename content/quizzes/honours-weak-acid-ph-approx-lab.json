@@ -1,0 +1,32 @@
+{
+  "slug": "honours-weak-acid-ph-approx-lab",
+  "title_bn": "দুর্বল অম্লের বিয়োজন ও pH পরিমাপ — ধারণা যাচাই",
+  "title_en": "Weak-acid dissociation and pH measurement — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "If pH meter calibration drifts, which reported quantity is most directly affected?",
+      "q_bn": "pH মিটারের ক্রমাঙ্কন বদলালে কোন নির্ণীত মান সরাসরি প্রভাবিত?",
+      "options": [
+        "Estimated hydrogen-ion activity and inferred Ka",
+        "Weighed mass only",
+        "Glassware volume only",
+        "Molar mass of the acid"
+      ],
+      "options_bn": [
+        "হাইড্রোজেন সক্রিয়তা ও তা থেকে নির্ণীত Ka",
+        "শুধু ওজন করা ভর",
+        "শুধু কাচপাত্রের আয়তন",
+        "অম্লের মোলার ভর"
+      ],
+      "answer": 0,
+      "explanation": "The measured pH determines the estimated H+ activity. An offset propagates exponentially into inferred [H+] and then into Ka.",
+      "explanation_bn": "মাপা pH থেকে H+ সক্রিয়তা অনুমান হয়; বিভব-পাঠে offset থাকলে [H+] এবং সেখান থেকে Ka-তে সূচকীয় ত্রুটি হয়।"
+    }
+  ]
+}

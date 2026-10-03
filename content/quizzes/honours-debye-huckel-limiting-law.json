@@ -1,0 +1,32 @@
+{
+  "slug": "honours-debye-huckel-limiting-law",
+  "title_bn": "ডিবাই-হাকেল সীমা সূত্র — ধারণা যাচাই",
+  "title_en": "Debye–Hückel limiting law — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "What regime supports the Debye–Hückel limiting law?",
+      "q_bn": "ডিবাই–হুকেল সীমা সূত্র কোন অবস্থায় প্রযোজ্য?",
+      "options": [
+        "Very dilute electrolyte solutions",
+        "Any concentrated salt melt",
+        "Pure ideal gas only",
+        "Only solid crystals"
+      ],
+      "options_bn": [
+        "অতি বিরল ইলেকট্রোলাইট দ্রবণ",
+        "যেকোনো ঘন গলিত লবণ",
+        "শুধু বিশুদ্ধ আদর্শ গ্যাস",
+        "শুধু কঠিন স্ফটিক"
+      ],
+      "answer": 0,
+      "explanation": "The limiting expression for log activity coefficient scales with √I only as ionic strength I tends toward zero.",
+      "explanation_bn": "আয়নিক শক্তি I শূন্যের কাছে গেলে log সক্রিয়তা সহগের সীমা সূত্র √I-র সঙ্গে সম্পর্কিত।"
+    }
+  ]
+}

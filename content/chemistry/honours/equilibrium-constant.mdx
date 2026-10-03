@@ -7,12 +7,12 @@ subject: chemistry
 level: honours
 chapter: Chemical equilibrium
 chapter_bn: রাসায়নিক সাম্য
-latex: 'K_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}'
+latex: 'K = \\frac{a_C^c a_D^d}{a_A^a a_B^b}'
 calculator: false
 variables:
-  - symbol: Kc
-    name: concentration equilibrium constant
-    name_bn: concentration equilibrium constant
+  - symbol: K
+    name: dimensionless thermodynamic equilibrium constant
+    name_bn: মাত্রাহীন তাপগতীয় সাম্য ধ্রুবক
     unit: '1'
     si_unit: '1'
   - symbol: A
@@ -37,10 +37,29 @@ variables:
     si_unit: '1'
 derivation: At equilibrium, forward and reverse processes continue but their macroscopic rates balance. The constant depends on temperature and the balanced reaction stoichiometry.
 derivation_bn: সাম্যে forward ও reverse process চলতে থাকে, কিন্তু macrosopic rate balance করে। ধ্রুবক তাপমাত্রা ও balanced reaction-এর stoichiometry-র উপর নির্ভর করে।
+derivation_steps:
+  - step_en: "Write the reaction Gibbs energy as a stoichiometric sum of chemical potentials for aA+bB ⇌ cC+dD."
+    step_bn: "aA+bB ⇌ cC+dD বিক্রিয়ায় স্টইকিওমেট্রিক রাসায়নিক বিভবের যোগফল লিখুন।"
+    latex: "\\Delta_r G=\\sum_i\\nu_i\\mu_i"
+  - step_en: "Substitute μᵢ=μᵢ°+RT ln aᵢ and collect the activity quotient Q."
+    step_bn: "μᵢ=μᵢ°+RT ln aᵢ বসিয়ে সক্রিয়তার অনুপাত Q সাজান।"
+    latex: "\\Delta_r G=\\Delta_rG^\\circ+RT\\ln Q"
+  - step_en: "At equilibrium set ΔᵣG=0 and Q=K; rearrange the activity quotient."
+    step_bn: "সাম্যে ΔᵣG=০ ও Q=K ধরে সক্রিয়তার অনুপাত সাজান।"
+    latex: "K = \\frac{a_C^c a_D^d}{a_A^a a_B^b}"
 summary_en: Read equilibrium composition as a ratio of activities.
 summary_bn: activity-এর অনুপাত দিয়ে সাম্য সংযোজন পড়ুন।
 related: [nernst-equation, rate-law]
 tags: [equilibrium, honours]
+experiment: "iron-thiocyanate-equilibrium-lab"
 ---
 
-Activities make the thermodynamic statement precise. Concentrations are a useful introductory approximation for dilute solutions.
+Activities make thermodynamic K dimensionless. The commonly written Kc=[C]^c[D]^d/([A]^a[B]^b) is a concentration approximation with convention-dependent units unless concentrations are normalized by a standard concentration.
+
+সক্রিয়তা দিয়ে প্রকৃত K মাত্রাহীন হয়। প্রচলিত Kc ঘনত্ব দিয়ে আনুমানিক লেখা হয়; মান ঘনত্বে ভাগ না করলে তার একক বিক্রিয়ার সহগের ওপর নির্ভর করতে পারে।
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+Spectrophotometric FeSCN²⁺ concentration and mass balance yield a conditional concentration equilibrium constant.
+
+FeSCN²⁺-এর শোষণ ও ভর-সাম্যে শর্তাধীন ঘনত্বভিত্তিক সাম্য ধ্রুবক মেলে।

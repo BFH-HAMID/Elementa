@@ -1,0 +1,32 @@
+{
+  "slug": "honours-hall-effect-lab",
+  "title_bn": "হল প্রভাব দিয়ে বাহকের ঘনত্ব নির্ণয় — ধারণা যাচাই",
+  "title_en": "Hall effect and carrier concentration — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "Why reverse the field when measuring Hall voltage?",
+      "q_bn": "হল বিভব মাপায় ক্ষেত্রের দিক উল্টানো হয় কেন?",
+      "options": [
+        "To remove the carrier charge",
+        "To make field zero in both trials",
+        "To reject a fixed contact-voltage offset",
+        "To double sample thickness"
+      ],
+      "options_bn": [
+        "বাহকের আধান দূর করতে",
+        "দুই পাঠে ক্ষেত্র শূন্য করতে",
+        "স্থির সংযোগজনিত বিভব বাদ দিতে",
+        "নমুনার পুরুত্ব দ্বিগুণ করতে"
+      ],
+      "answer": 2,
+      "explanation": "The Hall signal changes sign with B while a fixed geometric offset is approximately even, so half the difference isolates the Hall contribution.",
+      "explanation_bn": "B উল্টালে হল বিভবের চিহ্ন বদলায়, স্থির সংযোগ-offset মোটামুটি বদলায় না; পার্থক্যের অর্ধেক হল উপাংশ দেয়।"
+    }
+  ]
+}

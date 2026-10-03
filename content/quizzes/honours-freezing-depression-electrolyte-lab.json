@@ -1,0 +1,32 @@
+{
+  "slug": "honours-freezing-depression-electrolyte-lab",
+  "title_bn": "হিমাঙ্ক হ্রাসে মোলার ভর ও ভান্ট হফ গুণক — ধারণা যাচাই",
+  "title_en": "Cryoscopic molar-mass and van't Hoff-factor measurement — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "Why not use the lowest supercooled temperature as the freezing point?",
+      "q_bn": "অতিশীতল অবস্থার সর্বনিম্ন তাপমাত্রা হিমাঙ্ক ধরা উচিত নয় কেন?",
+      "options": [
+        "It equals boiling point",
+        "It is independent of solvent",
+        "It is a transient non-equilibrium dip",
+        "It is always above the true plateau"
+      ],
+      "options_bn": [
+        "এটি স্ফুটনাঙ্কের সমান",
+        "এটি দ্রাবকনিরপেক্ষ",
+        "এটি সাম্যবিহীন ক্ষণস্থায়ী তাপমাত্রা-পতন",
+        "এটি সবসময় প্রকৃত plateau-এর উপরে"
+      ],
+      "answer": 2,
+      "explanation": "After nucleation, latent heat raises temperature toward the freezing plateau; ΔTf should compare reproducible equilibrium plateaus.",
+      "explanation_bn": "স্ফটিক শুরু হলে সুপ্ততাপে তাপমাত্রা স্থিতিশীল হিমাঙ্কের দিকে ফেরে; ΔTf-এ পুনরাবৃত্ত স্থির অংশ তুলনা করতে হয়।"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-langmuir-adsorption-isotherm",
+  "title_bn": "ল্যাংমুয়ার শোষণ সমোষ্ণ রেখা — ধারণা যাচাই",
+  "title_en": "Langmuir adsorption isotherm — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "At KP=1 in Langmuir's monolayer model, surface coverage is?",
+      "q_bn": "ল্যাংমুইরের একস্তর মডেলে KP=১ হলে পৃষ্ঠঢাকা কত?",
+      "options": [
+        "Zero",
+        "Two",
+        "One half",
+        "One"
+      ],
+      "options_bn": [
+        "শূন্য",
+        "দুই",
+        "অর্ধেক",
+        "এক"
+      ],
+      "answer": 2,
+      "explanation": "θ=KP/(1+KP)=1/2. Independent equivalent sites and negligible lateral interactions are assumed.",
+      "explanation_bn": "θ=KP/(১+KP)=১/২; সমতুল্য স্বাধীন আসন ও পার্শ্বিক মিথস্ক্রিয়া নগণ্য ধরা হয়।"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-iron-thiocyanate-equilibrium-lab",
+  "title_bn": "Fe³⁺–SCN⁻ সাম্যধ্রুবক স্পেকট্রোফটোমিটারে নির্ণয় — ধারণা যাচাই",
+  "title_en": "Fe(III)–thiocyanate equilibrium by spectrophotometry — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "Why use excess Fe³⁺ for the calibration standards?",
+      "q_bn": "ক্রমাঙ্কন মান দ্রবণে Fe³⁺ অতিরিক্ত কেন রাখা হয়?",
+      "options": [
+        "To prevent all visible absorbance",
+        "To make the cuvette longer",
+        "To remove the need for a blank",
+        "To make added SCN− approximately equal to formed FeSCN²⁺"
+      ],
+      "options_bn": [
+        "সব দৃশ্যমান শোষণ ঠেকাতে",
+        "কুভেট লম্বা করতে",
+        "blank-এর প্রয়োজন দূর করতে",
+        "যোগ করা SCN−-কে উৎপন্ন FeSCN²⁺-এর আনুমানিক সমান করতে"
+      ],
+      "answer": 3,
+      "explanation": "A large Fe³⁺ excess shifts complexation toward product, enabling an approximate known-complex calibration; the approximation still needs scrutiny.",
+      "explanation_bn": "বেশি Fe³⁺ জটিল আয়ন গঠনের দিকে সাম্য সরায়, ফলে আনুমানিক জানা ঘনত্বের ক্রমাঙ্কন মেলে; অনুমান যাচাইও জরুরি।"
+    }
+  ]
+}

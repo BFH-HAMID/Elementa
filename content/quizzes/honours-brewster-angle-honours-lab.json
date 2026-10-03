@@ -1,0 +1,32 @@
+{
+  "slug": "honours-brewster-angle-honours-lab",
+  "title_bn": "ব্রুস্টার কোণে মেরুকরণ — ধারণা যাচাই",
+  "title_en": "Polarization at Brewster angle — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "Which reflected polarization ideally vanishes at Brewster incidence?",
+      "q_bn": "ব্রুস্টার কোণে কোন প্রতিফলিত মেরুকরণ আদর্শভাবে শূন্য?",
+      "options": [
+        "Unpolarized beam regardless of medium",
+        "p-polarized component",
+        "s-polarized component",
+        "Both at all angles"
+      ],
+      "options_bn": [
+        "মাধ্যম নির্বিশেষে অমেরুকৃত রশ্মি",
+        "p-মেরুকৃত উপাংশ",
+        "s-মেরুকৃত উপাংশ",
+        "সব কোণে উভয়ই"
+      ],
+      "answer": 1,
+      "explanation": "For transparent dielectric interfaces, the p-reflection coefficient goes to zero at θB while s-reflection generally remains.",
+      "explanation_bn": "স্বচ্ছ ডাইইলেকট্রিকে θB-তে p-প্রতিফলন শূন্য হলেও s-প্রতিফলন সাধারণত থাকে।"
+    }
+  ]
+}

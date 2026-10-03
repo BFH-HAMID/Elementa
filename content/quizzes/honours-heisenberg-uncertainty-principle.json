@@ -1,0 +1,32 @@
+{
+  "slug": "honours-heisenberg-uncertainty-principle",
+  "title_bn": "হাইজেনবার্গের অনিশ্চয়তা নীতি — ধারণা যাচাই",
+  "title_en": "Heisenberg uncertainty principle — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "What is the lower bound on ΔxΔp for a quantum state?",
+      "q_bn": "কোয়ান্টাম অবস্থায় ΔxΔp-এর নিম্নসীমা কত?",
+      "options": [
+        "ħ/2",
+        "0 always",
+        "2ħ",
+        "ħ²"
+      ],
+      "options_bn": [
+        "ħ/২",
+        "সবসময় ০",
+        "২ħ",
+        "ħ²"
+      ],
+      "answer": 0,
+      "explanation": "The standard-deviation form is ΔxΔp≥ħ/2; it does not merely describe poor measuring equipment.",
+      "explanation_bn": "প্রমিত বিচ্যুতির রূপে ΔxΔp≥ħ/২; এটি শুধু যন্ত্রের দুর্বলতা নয়।"
+    }
+  ]
+}

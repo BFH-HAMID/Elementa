@@ -24,6 +24,8 @@
 
 PhysChem Lab is a free, bilingual (Bangla + English) physics and chemistry learning platform for Bangladesh. It combines original equation notes, practical experiment guides, short quizzes and interactive browser simulations for NCTB Classes 6–12 through an introductory National University Honours level.
 
+It also ships the **Elementa Chemistry Lab** — a drag-and-drop virtual wet lab in the header: pour acids, bases, salts and metals into SVG glassware, heat them on a Bunsen burner, spark a gas jar, electrolyse water, read the pH and indicator colours, and follow 11 guided walkthroughs that tick themselves off. It is data-driven (109 chemicals, 15 pieces of apparatus, 119 reaction rules in JSON), needs no backend, and its chemistry engine is pure TypeScript covered by 106 Vitest tests. See [`CHEMISTRY_LAB_GUIDE.md`](CHEMISTRY_LAB_GUIDE.md).
+
 > **বাংলায়:** সূত্র শুধু মুখস্থ নয় — পরিবর্তন করুন, পর্যবেক্ষণ করুন, এবং নিজের ব্যাখ্যা তৈরি করুন।
 
 ## Visual tour
@@ -51,6 +53,7 @@ The README uses self-hosted SVG artwork so the project page has a visual identit
 - 16 original interactive Canvas 2D simulations for projectile motion, vector addition, spring oscillations, fluid flow, Wheatstone bridges, Young's double slit, a pendulum, circuits, wave interference, Newton's second law, optics, titration, pH, ideal gases and reaction kinetics.
 - An embedded, searchable PhET HTML5 library with 67 Physics and 35 Chemistry subject entries (81 unique simulations); official `/latest/` builds are loaded only on each detail page, with direct-open fallback and attribution.
 - A dynamically loaded 3Dmol.js molecule viewer for water, methane and benzene, plus an optional React Three Fiber optics field preview.
+- The Elementa Chemistry Lab at `/lab/chemistry`: a bilingual drag-and-drop bench with SVG glassware, live liquid levels and colours, bubbling/precipitate/smoke/flame effects, heating and boiling, a pH + indicator model, a balanced-equation box, a bilingual observation notebook, a safety layer and 11 guided experiments with auto-checked steps and quizzes.
 - KaTeX equations, MDX rendering, Zod frontmatter validation, Fuse.js search and a Ctrl/Cmd+K command palette.
 - Recharts live graphs, CSV data export, screenshot download and fullscreen simulation mode.
 - Local-only bookmarks, recently viewed items, quiz score history, progress, theme and language preferences with Zustand.
@@ -74,21 +77,27 @@ Before opening a pull request, run the same checks used by deployment:
 ```bash
 npm run typecheck
 npm run lint
+npm test          # 106 Vitest tests: chemistry engine + bench store
 npm run build
 npm start
 ```
 
-The `prebuild` script creates `public/search-index.json` from MDX frontmatter, the practical-topic catalog and the simulation registry. The build is otherwise fully static.
+The `prebuild` script creates `public/search-index.json` from MDX frontmatter, the practical-topic catalog, the simulation registry and the Chemistry Lab experiments. The build is otherwise fully static.
 
 ## Project map
 
 ```text
 app/[locale]       Static App Router pages and locale layouts
+app/[locale]/lab   Elementa Chemistry Lab: bench and guided-experiment pages
 components/        UI, layout, content and simulation building blocks
+components/lab/    Chemistry Lab bench, shelf, SVG apparatus and notebooks
 content/           MDX equation/experiment guides, JSON practical index and quizzes
+data/              Chemistry Lab content: elements, chemicals, apparatus, reactions, experiments
+engine/            Pure chemistry engine (reactions, pH, heat, colour, step checks) + Vitest tests
 lib/               Schemas, content loader, calculations, constants and store
 messages/          next-intl Bangla and English messages
 simulations/       One discoverable folder per simulation
+store/             Chemistry Lab Zustand store (bench, burner, history, localStorage)
 public/             PWA assets, animated README artwork and social artwork
 .github/workflows/  Typecheck, lint and production build verification
 ```
@@ -228,6 +237,28 @@ Create `content/quizzes/my-quiz.json` following this shape:
 ```
 
 `answer` is a zero-based option index. Zod validates the shape at build time. The quiz runner gives instant feedback, optional timer mode, retry-wrong behaviour and local score history.
+
+## Elementa Chemistry Lab
+
+The lab lives behind the header button **Chemistry Lab / কেমিস্ট্রি ল্যাব** and at `/bn|/en/lab/chemistry`.
+Everything it knows is content, not code:
+
+| File | Holds |
+| --- | --- |
+| `data/chemicals.json` | 109 chemicals (54 on the shelf): acids, bases, salts, metals, gases, indicators, solvents |
+| `data/apparatus.json` | 15 items: test tube, beaker, conical flask, measuring cylinder, burette, gas jar, evaporating dish, Bunsen burner, tripod stand, thermometer, dropper, spatula, delivery tube, test tube holder, electrolysis cell |
+| `data/reactions.json` | 119 reaction rules with stoichiometry, triggers, effects, bilingual equations and observations |
+| `data/experiments.json` | 11 guided experiments with bench setups, auto-checked steps, safety notes and quizzes |
+| `data/elements.json` | All 118 elements as a bilingual reference drawer |
+
+The engine in `engine/` is pure TypeScript with no React and no clock of its own, so it is fully
+unit tested (`npm test`): reaction selection and chaining, mole/volume conversion, the pH and
+indicator model, the heat and boiling model, colour mixing and guided-step checking.
+
+To add chemistry you only edit JSON — a new reaction, a new guided experiment or a new chemical
+never needs a component change. [`CHEMISTRY_LAB_GUIDE.md`](CHEMISTRY_LAB_GUIDE.md) documents every
+field, the scoring rules that decide which reaction wins, the drop semantics of each piece of
+apparatus and the safety policy the lab follows.
 
 ## GitHub push
 

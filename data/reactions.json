@@ -1,0 +1,6345 @@
+{
+  "count": 119,
+  "version": 1,
+  "reactions": [
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "HCl",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NaCl",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#e7f2fb",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 18,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "class-9-10",
+        "titration"
+      ],
+      "id": "hcl-naoh",
+      "equation": "HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)",
+      "equation_bn": "HCl(দ্রব) + NaOH(দ্রব) → NaCl(দ্রব) + H₂O(ত)",
+      "observation_en": "The mixture warms up and the acid is neutralised. The solution ends up as salty water.",
+      "observation_bn": "মিশ্রণটি উষ্ণ হয় এবং অ্যাসিড প্রশমিত হয়। শেষে দ্রবণটি লবণাক্ত পানিতে পরিণত হয়।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "HCl",
+          "coefficient": 1
+        },
+        {
+          "id": "KOH",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "KCl",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#e7f2fb",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 17,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "hcl-koh",
+      "equation": "HCl(aq) + KOH(aq) → KCl(aq) + H₂O(l)",
+      "equation_bn": "HCl(দ্রব) + KOH(দ্রব) → KCl(দ্রব) + H₂O(ত)",
+      "observation_en": "Heat is released as the strong acid and strong base neutralise.",
+      "observation_bn": "তীব্র অ্যাসিড ও তীব্র ক্ষার প্রশমিত হওয়ার সময় তাপ নির্গত হয়।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Na2SO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#e9f3fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 26,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "h2so4-naoh",
+      "equation": "H₂SO₄(aq) + 2NaOH(aq) → Na₂SO₄(aq) + 2H₂O(l)",
+      "equation_bn": "H₂SO₄(দ্রব) + 2NaOH(দ্রব) → Na₂SO₄(দ্রব) + 2H₂O(ত)",
+      "observation_en": "Strongly exothermic — the flask gets noticeably hot.",
+      "observation_bn": "প্রবলভাবে তাপোৎপাদী — ফ্লাস্ক স্পষ্টভাবে গরম হয়ে যায়।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        },
+        {
+          "id": "Ca(OH)2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CaSO4",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f2f6f8",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "CaSO4",
+          "color": "#f4f7f9",
+          "density": 0.5
+        },
+        "smoke": null,
+        "deltaT": 20,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "h2so4-caoh2",
+      "equation": "H₂SO₄(aq) + Ca(OH)₂(aq) → CaSO₄(s) + 2H₂O(l)",
+      "equation_bn": "H₂SO₄(দ্রব) + Ca(OH)₂(দ্রব) → CaSO₄(কঠি) + 2H₂O(ত)",
+      "observation_en": "A thin white cloud of calcium sulphate forms as the acid is neutralised.",
+      "observation_bn": "অ্যাসিড প্রশমিত হওয়ার সময় ক্যালসিয়াম সালফেটের পাতলা সাদা ঝোলা তৈরি হয়।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "HNO3",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NaNO3",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#e8f2f9",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 17,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "hno3-naoh",
+      "equation": "HNO₃(aq) + NaOH(aq) → NaNO₃(aq) + H₂O(l)",
+      "equation_bn": "HNO₃(দ্রব) + NaOH(দ্রব) → NaNO₃(দ্রব) + H₂O(ত)",
+      "observation_en": "The yellow tint of the acid fades as a neutral nitrate solution forms.",
+      "observation_bn": "অ্যাসিডের হলুদ আভা মিলিয়ে যায় এবং প্রশম নাইট্রেট দ্রবণ তৈরি হয়।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "HNO3",
+          "coefficient": 1
+        },
+        {
+          "id": "KOH",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "KNO3",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#e8f2f9",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 16,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "hno3-koh",
+      "equation": "HNO₃(aq) + KOH(aq) → KNO₃(aq) + H₂O(l)",
+      "equation_bn": "HNO₃(দ্রব) + KOH(দ্রব) → KNO₃(দ্রব) + H₂O(ত)",
+      "observation_en": "Neutralisation with heat given out.",
+      "observation_bn": "তাপসহ প্রশমন বিক্রিয়া ঘটে।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "CH3COOH",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CH3COONa",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eaf3f8",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 12,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "ch3cooh-naoh",
+      "equation": "CH₃COOH(aq) + NaOH(aq) → CH₃COONa(aq) + H₂O(l)",
+      "equation_bn": "CH₃COOH(দ্রব) + NaOH(দ্রব) → CH₃COONa(দ্রব) + H₂O(ত)",
+      "observation_en": "Weak acid with strong base — gentle warming, pH ends slightly above 7.",
+      "observation_bn": "দুর্বল অ্যাসিড ও তীব্র ক্ষার — মৃদু উষ্ণতা, শেষে pH ৭-এর সামান্য উপরে।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "CH3COOH",
+          "coefficient": 1
+        },
+        {
+          "id": "NH4OH",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CH3COONH4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#edf5f7",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 4,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "ch3cooh-nh4oh",
+      "equation": "CH₃COOH(aq) + NH₄OH(aq) → CH₃COONH₄(aq) + H₂O(l)",
+      "equation_bn": "CH₃COOH(দ্রব) + NH₄OH(দ্রব) → CH₃COONH₄(দ্রব) + H₂O(ত)",
+      "observation_en": "Weak acid + weak base: almost no temperature change.",
+      "observation_bn": "দুর্বল অ্যাসিড + দুর্বল ক্ষার: তাপমাত্রার পরিবর্তন প্রায় নেই।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "HCl",
+          "coefficient": 1
+        },
+        {
+          "id": "NH4OH",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NH4Cl",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eaf2f8",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 15,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "hcl-nh4oh",
+      "equation": "HCl(aq) + NH₄OH(aq) → NH₄Cl(aq) + H₂O(l)",
+      "equation_bn": "HCl(দ্রব) + NH₄OH(দ্রব) → NH₄Cl(দ্রব) + H₂O(ত)",
+      "observation_en": "The pungent ammonia smell disappears as ammonium chloride forms.",
+      "observation_bn": "অ্যামোনিয়ার ঝাঁজালো গন্ধ মিলিয়ে যায় এবং অ্যামোনিয়াম ক্লোরাইড তৈরি হয়।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "HCl",
+          "coefficient": 2
+        },
+        {
+          "id": "Ca(OH)2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CaCl2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eaf3f8",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 16,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "hcl-caoh2",
+      "equation": "2HCl(aq) + Ca(OH)₂(aq) → CaCl₂(aq) + 2H₂O(l)",
+      "equation_bn": "2HCl(দ্রব) + Ca(OH)₂(দ্রব) → CaCl₂(দ্রব) + 2H₂O(ত)",
+      "observation_en": "Milky limewater clears as it is neutralised.",
+      "observation_bn": "ঘোলা চুনের পানি প্রশমিত হয়ে স্বচ্ছ হয়ে যায়।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "H3PO4",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 3
+        }
+      ],
+      "products": [
+        {
+          "id": "Na3PO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 3,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#e9f2f8",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 20,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "h3po4-naoh",
+      "equation": "H₃PO₄(aq) + 3NaOH(aq) → Na₃PO₄(aq) + 3H₂O(l)",
+      "equation_bn": "H₃PO₄(দ্রব) + 3NaOH(দ্রব) → Na₃PO₄(দ্রব) + 3H₂O(ত)",
+      "observation_en": "A tribasic acid needs three equivalents of base.",
+      "observation_bn": "তিন-ক্ষারক অ্যাসিডের জন্য তিন সমতুল্য ক্ষার লাগে।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        },
+        {
+          "id": "Ba(OH)2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "BaSO4",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f4f7f9",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "BaSO4",
+          "color": "#fbfcfd",
+          "density": 0.9
+        },
+        "smoke": null,
+        "deltaT": 24,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "h2so4-baoh2",
+      "equation": "H₂SO₄(aq) + Ba(OH)₂(aq) → BaSO₄(s)↓ + 2H₂O(l)",
+      "equation_bn": "H₂SO₄(দ্রব) + Ba(OH)₂(দ্রব) → BaSO₄(কঠি)↓ + 2H₂O(ত)",
+      "observation_en": "Neutralisation plus a heavy white precipitate — the solution loses its conductivity.",
+      "observation_bn": "প্রশমনের সঙ্গে ভারী সাদা অধঃক্ষেপ — দ্রবণের পরিবাহিত্ব কমে যায়।"
+    },
+    {
+      "category": "neutralisation",
+      "reactants": [
+        {
+          "id": "HCl",
+          "coefficient": 2
+        },
+        {
+          "id": "Mg(OH)2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "MgCl2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eaf3f8",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 14,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": true
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "hcl-mgoh2",
+      "equation": "2HCl(aq) + Mg(OH)₂(s) → MgCl₂(aq) + 2H₂O(l)",
+      "equation_bn": "2HCl(দ্রব) + Mg(OH)₂(কঠি) → MgCl₂(দ্রব) + 2H₂O(ত)",
+      "observation_en": "The white milk of magnesia dissolves as the acid attacks it.",
+      "observation_bn": "অ্যাসিডের আক্রমণে সাদা মিল্ক অব ম্যাগনেসিয়া দ্রবীভূত হয়।"
+    },
+    {
+      "category": "acid-metal",
+      "reactants": [
+        {
+          "id": "Zn",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "ZnCl2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": "H2",
+        "gasRate": 0.7,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 22,
+        "flame": null,
+        "glow": false,
+        "sound": "hiss",
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [
+        "class-9-10",
+        "gas-preparation"
+      ],
+      "id": "zn-hcl",
+      "equation": "Zn(s) + 2HCl(aq) → ZnCl₂(aq) + H₂(g)↑",
+      "equation_bn": "Zn(কঠি) + 2HCl(দ্রব) → ZnCl₂(দ্রব) + H₂(গ্যা)↑",
+      "observation_en": "Steady stream of bubbles; the zinc slowly disappears and the tube warms.",
+      "observation_bn": "অবিরাম বুদবুদ উঠতে থাকে; জিঙ্ক ধীরে ধীরে মিলিয়ে যায় এবং নল উষ্ণ হয়।",
+      "hazard_en": "Hydrogen is flammable — keep away from naked flame.",
+      "hazard_bn": "হাইড্রোজেন দাহ্য — খোলা শিখা থেকে দূরে রাখুন।"
+    },
+    {
+      "category": "acid-metal",
+      "reactants": [
+        {
+          "id": "Mg",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "MgCl2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eff6fa",
+        "gas": "H2",
+        "gasRate": 1,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 40,
+        "flame": null,
+        "glow": false,
+        "sound": "hiss",
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 2,
+      "tags": [],
+      "id": "mg-hcl",
+      "equation": "Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g)↑",
+      "equation_bn": "Mg(কঠি) + 2HCl(দ্রব) → MgCl₂(দ্রব) + H₂(গ্যা)↑",
+      "observation_en": "Violent fizzing, lots of heat, the ribbon is consumed in seconds.",
+      "observation_bn": "প্রচণ্ড বুদবুদ, অধিক তাপ, কয়েক সেকেন্ডেই ফিতা শেষ হয়ে যায়।",
+      "hazard_en": "Very exothermic — the tube can become too hot to hold.",
+      "hazard_bn": "অত্যন্ত তাপোৎপাদী — নল ধরা অসম্ভব হয়ে উঠতে পারে।"
+    },
+    {
+      "category": "acid-metal",
+      "reactants": [
+        {
+          "id": "Fe",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "FeCl2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#b9d0b9",
+        "gas": "H2",
+        "gasRate": 0.35,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 12,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "fe-hcl",
+      "equation": "Fe(s) + 2HCl(aq) → FeCl₂(aq) + H₂(g)↑",
+      "equation_bn": "Fe(কঠি) + 2HCl(দ্রব) → FeCl₂(দ্রব) + H₂(গ্যা)↑",
+      "observation_en": "Slow bubbling; the liquid turns pale green from Fe²⁺ ions.",
+      "observation_bn": "ধীরে বুদবুদ ওঠে; Fe²⁺ আয়নে দ্রবণ হালকা সবুজ হয়।"
+    },
+    {
+      "category": "acid-metal",
+      "reactants": [
+        {
+          "id": "Al",
+          "coefficient": 2
+        },
+        {
+          "id": "HCl",
+          "coefficient": 6
+        }
+      ],
+      "products": [
+        {
+          "id": "AlCl3",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 3,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": "H2",
+        "gasRate": 0.55,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 30,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "al-hcl",
+      "equation": "2Al(s) + 6HCl(aq) → 2AlCl₃(aq) + 3H₂(g)↑",
+      "equation_bn": "2Al(কঠি) + 6HCl(দ্রব) → 2AlCl₃(দ্রব) + 3H₂(গ্যা)↑",
+      "observation_en": "Starts slowly while the oxide layer dissolves, then bubbles vigorously.",
+      "observation_bn": "অক্সাইড স্তর দ্রবীভূত হওয়ায় শুরুতে ধীর, পরে তীব্রভাবে বুদবুদ ওঠে।"
+    },
+    {
+      "category": "acid-metal",
+      "reactants": [
+        {
+          "id": "Zn",
+          "coefficient": 1
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "ZnSO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": "H2",
+        "gasRate": 0.65,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 20,
+        "flame": null,
+        "glow": false,
+        "sound": "hiss",
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "gas-preparation"
+      ],
+      "id": "zn-h2so4",
+      "equation": "Zn(s) + H₂SO₄(aq) → ZnSO₄(aq) + H₂(g)↑",
+      "equation_bn": "Zn(কঠি) + H₂SO₄(দ্রব) → ZnSO₄(দ্রব) + H₂(গ্যা)↑",
+      "observation_en": "The standard laboratory preparation of hydrogen.",
+      "observation_bn": "পরীক্ষাগারে হাইড্রোজেন তৈরির আদর্শ পদ্ধতি।"
+    },
+    {
+      "category": "acid-metal",
+      "reactants": [
+        {
+          "id": "Mg",
+          "coefficient": 1
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "MgSO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eff6fa",
+        "gas": "H2",
+        "gasRate": 0.9,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 35,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "mg-h2so4",
+      "equation": "Mg(s) + H₂SO₄(aq) → MgSO₄(aq) + H₂(g)↑",
+      "equation_bn": "Mg(কঠি) + H₂SO₄(দ্রব) → MgSO₄(দ্রব) + H₂(গ্যা)↑",
+      "observation_en": "Rapid fizzing and heat.",
+      "observation_bn": "দ্রুত বুদবুদ ও তাপ উৎপন্ন হয়।"
+    },
+    {
+      "category": "acid-metal",
+      "reactants": [
+        {
+          "id": "Fe",
+          "coefficient": 1
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "FeSO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#9fc9ae",
+        "gas": "H2",
+        "gasRate": 0.3,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 10,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "fe-h2so4",
+      "equation": "Fe(s) + H₂SO₄(aq) → FeSO₄(aq) + H₂(g)↑",
+      "equation_bn": "Fe(কঠি) + H₂SO₄(দ্রব) → FeSO₄(দ্রব) + H₂(গ্যা)↑",
+      "observation_en": "Slow reaction giving a pale green iron(II) sulphate solution.",
+      "observation_bn": "ধীর বিক্রিয়ায় হালকা সবুজ আয়রন(II) সালফেট দ্রবণ তৈরি হয়।"
+    },
+    {
+      "category": "acid-metal",
+      "reactants": [
+        {
+          "id": "Zn",
+          "coefficient": 1
+        },
+        {
+          "id": "CH3COOH",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Zn(CH3COO)2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f1f7f9",
+        "gas": "H2",
+        "gasRate": 0.25,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 6,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "zn-ch3cooh",
+      "equation": "Zn(s) + 2CH₃COOH(aq) → (CH₃COO)₂Zn(aq) + H₂(g)↑",
+      "equation_bn": "Zn(কঠি) + 2CH₃COOH(দ্রব) → (CH₃COO)₂Zn(দ্রব) + H₂(গ্যা)↑",
+      "observation_en": "Only a few bubbles — a weak acid reacts far more slowly.",
+      "observation_bn": "খুব কম বুদবুদ — দুর্বল অ্যাসিড অনেক ধীরে বিক্রিয়া করে।"
+    },
+    {
+      "category": "acid-metal",
+      "reactants": [
+        {
+          "id": "Mg",
+          "coefficient": 1
+        },
+        {
+          "id": "CH3COOH",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Mg(CH3COO)2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f1f7f9",
+        "gas": "H2",
+        "gasRate": 0.4,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 8,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "mg-ch3cooh",
+      "equation": "Mg(s) + 2CH₃COOH(aq) → (CH₃COO)₂Mg(aq) + H₂(g)↑",
+      "equation_bn": "Mg(কঠি) + 2CH₃COOH(দ্রব) → (CH₃COO)₂Mg(দ্রব) + H₂(গ্যা)↑",
+      "observation_en": "Gentle bubbling with a weak organic acid.",
+      "observation_bn": "দুর্বল জৈব অ্যাসিডের সঙ্গে মৃদু বুদবুদ ওঠে।"
+    },
+    {
+      "category": "acid-metal",
+      "reactants": [
+        {
+          "id": "Na",
+          "coefficient": 2
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "NaOH",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eaf3fb",
+        "gas": "H2",
+        "gasRate": 1,
+        "precipitate": null,
+        "smoke": {
+          "color": "#e8e8e8",
+          "density": 0.6
+        },
+        "deltaT": 90,
+        "flame": {
+          "color": "#ffcf4d",
+          "label_en": "Golden sodium flame",
+          "label_bn": "সোনালি সোডিয়াম শিখা"
+        },
+        "glow": true,
+        "sound": "boom",
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 5,
+      "tags": [
+        "class-9-10"
+      ],
+      "id": "na-h2o",
+      "equation": "2Na(s) + 2H₂O(l) → 2NaOH(aq) + H₂(g)↑",
+      "equation_bn": "2Na(কঠি) + 2H₂O(ত) → 2NaOH(দ্রব) + H₂(গ্যা)↑",
+      "observation_en": "The metal darts across the surface, hisses, and can ignite its own hydrogen.",
+      "observation_bn": "ধাতুটি পানির পৃষ্ঠে ছোটাছুটি করে, হিসহিস শব্দ তোলে এবং নিজের হাইড্রোজেনেই জ্বলে উঠতে পারে।",
+      "hazard_en": "Extremely violent. Never touch sodium with bare hands — this simulation stays at a safe distance.",
+      "hazard_bn": "অত্যন্ত বিপজ্জনক। খালি হাতে সোডিয়াম কখনো ছোঁবেন না — এই সিমুলেশন নিরাপদ দূরত্ব রাখে।"
+    },
+    {
+      "category": "redox",
+      "reactants": [
+        {
+          "id": "Cu",
+          "coefficient": 1
+        },
+        {
+          "id": "HNO3",
+          "coefficient": 4
+        }
+      ],
+      "products": [
+        {
+          "id": "Cu(NO3)2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "NO2",
+          "coefficient": 2,
+          "state": "g"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#3f8fd0",
+        "gas": "NO2",
+        "gasRate": 0.9,
+        "precipitate": null,
+        "smoke": {
+          "color": "#b4622a",
+          "density": 0.8
+        },
+        "deltaT": 30,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 3,
+      "tags": [],
+      "id": "cu-hno3",
+      "equation": "Cu(s) + 4HNO₃(aq) → Cu(NO₃)₂(aq) + 2NO₂(g)↑ + 2H₂O(l)",
+      "equation_bn": "Cu(কঠি) + 4HNO₃(দ্রব) → Cu(NO₃)₂(দ্রব) + 2NO₂(গ্যা)↑ + 2H₂O(ত)",
+      "observation_en": "Dense brown fumes pour out and the solution turns clear blue.",
+      "observation_bn": "ঘন বাদামি ধোঁয়া বেরিয়ে আসে এবং দ্রবণ স্বচ্ছ নীল হয়ে যায়।",
+      "hazard_en": "NO₂ is a toxic gas. Real work needs a fume cupboard — this lab only shows the colour.",
+      "hazard_bn": "NO₂ বিষাক্ত গ্যাস। বাস্তবে ফিউম কাপবোর্ড লাগে — এই ল্যাব শুধু রঙ দেখায়।"
+    },
+    {
+      "category": "redox",
+      "reactants": [
+        {
+          "id": "Zn",
+          "coefficient": 4
+        },
+        {
+          "id": "HNO3",
+          "coefficient": 10
+        }
+      ],
+      "products": [
+        {
+          "id": "Zn(NO3)2",
+          "coefficient": 4,
+          "state": "aq"
+        },
+        {
+          "id": "NO",
+          "coefficient": 1,
+          "state": "g"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 5,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": "NO",
+        "gasRate": 0.6,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 25,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 1,
+      "tags": [],
+      "id": "zn-hno3",
+      "equation": "4Zn(s) + 10HNO₃(aq) → 4Zn(NO₃)₂(aq) + NO(g)↑ + 5H₂O(l)",
+      "equation_bn": "4Zn(কঠি) + 10HNO₃(দ্রব) → 4Zn(NO₃)₂(দ্রব) + NO(গ্যা)↑ + 5H₂O(ত)",
+      "observation_en": "Colourless NO escapes and browns the moment it meets air.",
+      "observation_bn": "বর্ণহীন NO বেরিয়ে বাতাসের সংস্পর্শেই বাদামি হয়ে যায়।",
+      "hazard_en": "Nitrogen oxides are toxic.",
+      "hazard_bn": "নাইট্রোজেন অক্সাইড বিষাক্ত।"
+    },
+    {
+      "category": "redox",
+      "reactants": [
+        {
+          "id": "Al",
+          "coefficient": 2
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 2
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "NaAlO2",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 3,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef4f9",
+        "gas": "H2",
+        "gasRate": 0.8,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 35,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "al-naoh",
+      "equation": "2Al(s) + 2NaOH(aq) + 2H₂O(l) → 2NaAlO₂(aq) + 3H₂(g)↑",
+      "equation_bn": "2Al(কঠি) + 2NaOH(দ্রব) + 2H₂O(ত) → 2NaAlO₂(দ্রব) + 3H₂(গ্যা)↑",
+      "observation_en": "Amphoteric aluminium dissolves in alkali and releases hydrogen.",
+      "observation_bn": "উভধর্মী অ্যালুমিনিয়াম ক্ষারে দ্রবীভূত হয়ে হাইড্রোজেন ছাড়ে।"
+    },
+    {
+      "category": "acid-carbonate",
+      "reactants": [
+        {
+          "id": "CaCO3",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "CaCl2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        },
+        {
+          "id": "CO2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": "CO2",
+        "gasRate": 0.95,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 8,
+        "flame": null,
+        "glow": false,
+        "sound": "fizz",
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "class-9-10",
+        "gas-preparation"
+      ],
+      "id": "caco3-hcl",
+      "equation": "CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g)↑",
+      "equation_bn": "CaCO₃(কঠি) + 2HCl(দ্রব) → CaCl₂(দ্রব) + H₂O(ত) + CO₂(গ্যা)↑",
+      "observation_en": "Marble chips fizz hard; the gas turns limewater milky.",
+      "observation_bn": "মার্বেল চিপস জোরে ফোঁস করে; গ্যাসটি চুনের পানি ঘোলা করে।"
+    },
+    {
+      "category": "acid-carbonate",
+      "reactants": [
+        {
+          "id": "Na2CO3",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "NaCl",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        },
+        {
+          "id": "CO2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": "CO2",
+        "gasRate": 0.9,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 6,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "na2co3-hcl",
+      "equation": "Na₂CO₃(aq) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + CO₂(g)↑",
+      "equation_bn": "Na₂CO₃(দ্রব) + 2HCl(দ্রব) → 2NaCl(দ্রব) + H₂O(ত) + CO₂(গ্যা)↑",
+      "observation_en": "Brisk effervescence of carbon dioxide.",
+      "observation_bn": "কার্বন ডাই-অক্সাইডের সজীব স্ফুরণ।"
+    },
+    {
+      "category": "acid-carbonate",
+      "reactants": [
+        {
+          "id": "NaHCO3",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NaCl",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        },
+        {
+          "id": "CO2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eff6fa",
+        "gas": "CO2",
+        "gasRate": 1,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": -2,
+        "flame": null,
+        "glow": false,
+        "sound": "fizz",
+        "dissolve": true
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "nahco3-hcl",
+      "equation": "NaHCO₃(s) + HCl(aq) → NaCl(aq) + H₂O(l) + CO₂(g)↑",
+      "equation_bn": "NaHCO₃(কঠি) + HCl(দ্রব) → NaCl(দ্রব) + H₂O(ত) + CO₂(গ্যা)↑",
+      "observation_en": "Instant froth — and the mixture feels slightly cold (endothermic).",
+      "observation_bn": "তাৎক্ষণিক ফেনা — এবং মিশ্রণটি সামান্য ঠান্ডা লাগে (তাপহারী)।"
+    },
+    {
+      "category": "acid-carbonate",
+      "reactants": [
+        {
+          "id": "Na2CO3",
+          "coefficient": 1
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "Na2SO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        },
+        {
+          "id": "CO2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": "CO2",
+        "gasRate": 0.85,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 10,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "na2co3-h2so4",
+      "equation": "Na₂CO₃(aq) + H₂SO₄(aq) → Na₂SO₄(aq) + H₂O(l) + CO₂(g)↑",
+      "equation_bn": "Na₂CO₃(দ্রব) + H₂SO₄(দ্রব) → Na₂SO₄(দ্রব) + H₂O(ত) + CO₂(গ্যা)↑",
+      "observation_en": "Bubbling as carbonate is destroyed by the acid.",
+      "observation_bn": "অ্যাসিডে কার্বনেট ধ্বংস হওয়ায় বুদবুদ ওঠে।"
+    },
+    {
+      "category": "acid-carbonate",
+      "reactants": [
+        {
+          "id": "CaCO3",
+          "coefficient": 1
+        },
+        {
+          "id": "CH3COOH",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Ca(CH3COO)2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        },
+        {
+          "id": "CO2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f2f7f8",
+        "gas": "CO2",
+        "gasRate": 0.4,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 3,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "caco3-ch3cooh",
+      "equation": "CaCO₃(s) + 2CH₃COOH(aq) → (CH₃COO)₂Ca(aq) + H₂O(l) + CO₂(g)↑",
+      "equation_bn": "CaCO₃(কঠি) + 2CH₃COOH(দ্রব) → (CH₃COO)₂Ca(দ্রব) + H₂O(ত) + CO₂(গ্যা)↑",
+      "observation_en": "Slow steady fizz — the kitchen version of the same reaction (vinegar + chalk).",
+      "observation_bn": "ধীর কিন্তু অবিরত ফোঁস — একই বিক্রিয়ার রান্নাঘর সংস্করণ (ভিনেগার + চক)।"
+    },
+    {
+      "category": "acid-carbonate",
+      "reactants": [
+        {
+          "id": "NaHCO3",
+          "coefficient": 1
+        },
+        {
+          "id": "CH3COOH",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CH3COONa",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        },
+        {
+          "id": "CO2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": "CO2",
+        "gasRate": 0.95,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": -1,
+        "flame": null,
+        "glow": false,
+        "sound": "fizz",
+        "dissolve": true
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "nahco3-ch3cooh",
+      "equation": "NaHCO₃(s) + CH₃COOH(aq) → CH₃COONa(aq) + H₂O(l) + CO₂(g)↑",
+      "equation_bn": "NaHCO₃(কঠি) + CH₃COOH(দ্রব) → CH₃COONa(দ্রব) + H₂O(ত) + CO₂(গ্যা)↑",
+      "observation_en": "The classic \"volcano\" fizz.",
+      "observation_bn": "বিখ্যাত \"আগ্নেয়গিরি\" ফোঁস।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "Na2CO3",
+          "coefficient": 1
+        },
+        {
+          "id": "Ca(OH)2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CaCO3",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 2,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f3f7f8",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "CaCO3",
+          "color": "#f6f7f4",
+          "density": 0.8
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "na2co3-caoh2",
+      "equation": "Na₂CO₃(aq) + Ca(OH)₂(aq) → CaCO₃(s)↓ + 2NaOH(aq)",
+      "equation_bn": "Na₂CO₃(দ্রব) + Ca(OH)₂(দ্রব) → CaCO₃(কঠি)↓ + 2NaOH(দ্রব)",
+      "observation_en": "A white chalky precipitate settles; the liquid above is caustic.",
+      "observation_bn": "সাদা চকের মতো অধঃক্ষেপ জমে; উপরের তরলটি কষাক্তিযুক্ত।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "AgNO3",
+          "coefficient": 1
+        },
+        {
+          "id": "NaCl",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "AgCl",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "NaNO3",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f5f8fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "AgCl",
+          "color": "#f7f8f9",
+          "density": 0.95
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "class-9-10"
+      ],
+      "id": "agno3-nacl",
+      "equation": "AgNO₃(aq) + NaCl(aq) → AgCl(s)↓ + NaNO₃(aq)",
+      "equation_bn": "AgNO₃(দ্রব) + NaCl(দ্রব) → AgCl(কঠি)↓ + NaNO₃(দ্রব)",
+      "observation_en": "A thick white curdy precipitate appears at once — the chloride test.",
+      "observation_bn": "সাথে সাথে ঘন সাদা ছানার মতো অধঃক্ষেপ পড়ে — এটিই ক্লোরাইড শনাক্তকরণ।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "AgNO3",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "AgCl",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "HNO3",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f5f8fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "AgCl",
+          "color": "#f7f8f9",
+          "density": 0.95
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "agno3-hcl",
+      "equation": "AgNO₃(aq) + HCl(aq) → AgCl(s)↓ + HNO₃(aq)",
+      "equation_bn": "AgNO₃(দ্রব) + HCl(দ্রব) → AgCl(কঠি)↓ + HNO₃(দ্রব)",
+      "observation_en": "White AgCl clouds the solution and the liquid stays acidic.",
+      "observation_bn": "সাদা AgCl দ্রবণকে ঘোলা করে এবং তরলটি অম্লীয়ই থাকে।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "BaCl2",
+          "coefficient": 1
+        },
+        {
+          "id": "Na2SO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "BaSO4",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "NaCl",
+          "coefficient": 2,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f6f9fb",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "BaSO4",
+          "color": "#fbfcfd",
+          "density": 0.95
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "class-9-10"
+      ],
+      "id": "bacl2-na2so4",
+      "equation": "BaCl₂(aq) + Na₂SO₄(aq) → BaSO₄(s)↓ + 2NaCl(aq)",
+      "equation_bn": "BaCl₂(দ্রব) + Na₂SO₄(দ্রব) → BaSO₄(কঠি)↓ + 2NaCl(দ্রব)",
+      "observation_en": "Fine white precipitate insoluble in dilute acid — the sulphate test.",
+      "observation_bn": "লঘু অ্যাসিডেও অদ্রবণীয় সূক্ষ্ম সাদা অধঃক্ষেপ — এটিই সালফেট শনাক্তকরণ।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "BaCl2",
+          "coefficient": 1
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "BaSO4",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "HCl",
+          "coefficient": 2,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f6f9fb",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "BaSO4",
+          "color": "#fbfcfd",
+          "density": 0.95
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "bacl2-h2so4",
+      "equation": "BaCl₂(aq) + H₂SO₄(aq) → BaSO₄(s)↓ + 2HCl(aq)",
+      "equation_bn": "BaCl₂(দ্রব) + H₂SO₄(দ্রব) → BaSO₄(কঠি)↓ + 2HCl(দ্রব)",
+      "observation_en": "Heavy white solid settles quickly.",
+      "observation_bn": "ভারী সাদা কঠিন পদার্থ দ্রুত তলায় জমে।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "Pb(NO3)2",
+          "coefficient": 1
+        },
+        {
+          "id": "KI",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "PbI2",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "KNO3",
+          "coefficient": 2,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f6c81f",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "PbI2",
+          "color": "#f6c81f",
+          "density": 0.95
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "pbno32-ki",
+      "equation": "Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s)↓ + 2KNO₃(aq)",
+      "equation_bn": "Pb(NO₃)₂(দ্রব) + 2KI(দ্রব) → PbI₂(কঠি)↓ + 2KNO₃(দ্রব)",
+      "observation_en": "A brilliant golden-yellow \"golden rain\" of lead iodide.",
+      "observation_bn": "উজ্জ্বল সোনালি হলুদ \"গোল্ডেন রেইন\" — লেড আয়োডাইড।",
+      "hazard_en": "Lead salts are toxic — dispose of them properly.",
+      "hazard_bn": "সীসার লবণ বিষাক্ত — সঠিকভাবে নিষ্কাশন করুন।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "CuSO4",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Cu(OH)2",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "Na2SO4",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#7fc0ee",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Cu(OH)2",
+          "color": "#4a9fe0",
+          "density": 0.9
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "cuso4-naoh",
+      "equation": "CuSO₄(aq) + 2NaOH(aq) → Cu(OH)₂(s)↓ + Na₂SO₄(aq)",
+      "equation_bn": "CuSO₄(দ্রব) + 2NaOH(দ্রব) → Cu(OH)₂(কঠি)↓ + Na₂SO₄(দ্রব)",
+      "observation_en": "Pale blue gelatinous precipitate of copper hydroxide.",
+      "observation_bn": "কপার হাইড্রোক্সাইডের হালকা নীল আঠালো অধঃক্ষেপ।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "FeCl3",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 3
+        }
+      ],
+      "products": [
+        {
+          "id": "Fe(OH)3",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "NaCl",
+          "coefficient": 3,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#a34a1f",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Fe(OH)3",
+          "color": "#a34a1f",
+          "density": 0.9
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "fecl3-naoh",
+      "equation": "FeCl₃(aq) + 3NaOH(aq) → Fe(OH)₃(s)↓ + 3NaCl(aq)",
+      "equation_bn": "FeCl₃(দ্রব) + 3NaOH(দ্রব) → Fe(OH)₃(কঠি)↓ + 3NaCl(দ্রব)",
+      "observation_en": "Rust-brown precipitate of iron(III) hydroxide.",
+      "observation_bn": "আয়রন(III) হাইড্রোক্সাইডের মরচে-বাদামি অধঃক্ষেপ।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "FeSO4",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Fe(OH)2",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "Na2SO4",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#6fae7a",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Fe(OH)2",
+          "color": "#6fae7a",
+          "density": 0.85
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "feso4-naoh",
+      "equation": "FeSO₄(aq) + 2NaOH(aq) → Fe(OH)₂(s)↓ + Na₂SO₄(aq)",
+      "equation_bn": "FeSO₄(দ্রব) + 2NaOH(দ্রব) → Fe(OH)₂(কঠি)↓ + Na₂SO₄(দ্রব)",
+      "observation_en": "Dirty green precipitate that slowly browns as air oxidises it.",
+      "observation_bn": "ঘোলা সবুজ অধঃক্ষেপ যা বাতাসের অক্সিজেনে ধীরে ধীরে বাদামি হয়।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "MgSO4",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Mg(OH)2",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "Na2SO4",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f2f6f8",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Mg(OH)2",
+          "color": "#f2f5f8",
+          "density": 0.8
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "mgso4-naoh",
+      "equation": "MgSO₄(aq) + 2NaOH(aq) → Mg(OH)₂(s)↓ + Na₂SO₄(aq)",
+      "equation_bn": "MgSO₄(দ্রব) + 2NaOH(দ্রব) → Mg(OH)₂(কঠি)↓ + Na₂SO₄(দ্রব)",
+      "observation_en": "White milky precipitate of magnesium hydroxide.",
+      "observation_bn": "ম্যাগনেসিয়াম হাইড্রোক্সাইডের সাদা ঘোলা অধঃক্ষেপ।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "ZnSO4",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Zn(OH)2",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "Na2SO4",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f3f7f9",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Zn(OH)2",
+          "color": "#f5f8fa",
+          "density": 0.8
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "znso4-naoh",
+      "equation": "ZnSO₄(aq) + 2NaOH(aq) → Zn(OH)₂(s)↓ + Na₂SO₄(aq)",
+      "equation_bn": "ZnSO₄(দ্রব) + 2NaOH(দ্রব) → Zn(OH)₂(কঠি)↓ + Na₂SO₄(দ্রব)",
+      "observation_en": "White precipitate — it redissolves if you add excess NaOH (amphoteric).",
+      "observation_bn": "সাদা অধঃক্ষেপ — অতিরিক্ত NaOH দিলে তা আবার দ্রবীভূত হয় (উভধর্মী)।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "CaCl2",
+          "coefficient": 1
+        },
+        {
+          "id": "Na2CO3",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CaCO3",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "NaCl",
+          "coefficient": 2,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f4f7f8",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "CaCO3",
+          "color": "#f6f7f4",
+          "density": 0.85
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "cacl2-na2co3",
+      "equation": "CaCl₂(aq) + Na₂CO₃(aq) → CaCO₃(s)↓ + 2NaCl(aq)",
+      "equation_bn": "CaCl₂(দ্রব) + Na₂CO₃(দ্রব) → CaCO₃(কঠি)↓ + 2NaCl(দ্রব)",
+      "observation_en": "Chalk-white calcium carbonate drops out of solution.",
+      "observation_bn": "চক-সাদা ক্যালসিয়াম কার্বনেট দ্রবণ থেকে জমে পড়ে।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "BaCl2",
+          "coefficient": 1
+        },
+        {
+          "id": "Na2CO3",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "BaCO3",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "NaCl",
+          "coefficient": 2,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f5f8fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "BaCO3",
+          "color": "#fbfcfd",
+          "density": 0.9
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "bacl2-na2co3",
+      "equation": "BaCl₂(aq) + Na₂CO₃(aq) → BaCO₃(s)↓ + 2NaCl(aq)",
+      "equation_bn": "BaCl₂(দ্রব) + Na₂CO₃(দ্রব) → BaCO₃(কঠি)↓ + 2NaCl(দ্রব)",
+      "observation_en": "White precipitate that dissolves again in dilute HCl with fizzing.",
+      "observation_bn": "সাদা অধঃক্ষেপ যা লঘু HCl-এ ফোঁস করে আবার দ্রবীভূত হয়।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "Pb(NO3)2",
+          "coefficient": 1
+        },
+        {
+          "id": "NaCl",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "PbCl2",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "NaNO3",
+          "coefficient": 2,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f6f9fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "PbCl2",
+          "color": "#f8fafb",
+          "density": 0.9
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "pbno32-nacl",
+      "equation": "Pb(NO₃)₂(aq) + 2NaCl(aq) → PbCl₂(s)↓ + 2NaNO₃(aq)",
+      "equation_bn": "Pb(NO₃)₂(দ্রব) + 2NaCl(দ্রব) → PbCl₂(কঠি)↓ + 2NaNO₃(দ্রব)",
+      "observation_en": "White needles of lead chloride; they dissolve in hot water.",
+      "observation_bn": "লেড ক্লোরাইডের সাদা সুঁচালো কেলাস; গরম পানিতে দ্রবীভূত হয়।",
+      "hazard_en": "Lead compounds are toxic.",
+      "hazard_bn": "সীসার যৌগ বিষাক্ত।"
+    },
+    {
+      "category": "precipitation",
+      "reactants": [
+        {
+          "id": "AgNO3",
+          "coefficient": 2
+        },
+        {
+          "id": "BaCl2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "AgCl",
+          "coefficient": 2,
+          "state": "s"
+        },
+        {
+          "id": "Ba(NO3)2",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f5f8fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "AgCl",
+          "color": "#f7f8f9",
+          "density": 0.95
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "agno3-bacl2",
+      "equation": "2AgNO₃(aq) + BaCl₂(aq) → 2AgCl(s)↓ + Ba(NO₃)₂(aq)",
+      "equation_bn": "2AgNO₃(দ্রব) + BaCl₂(দ্রব) → 2AgCl(কঠি)↓ + Ba(NO₃)₂(দ্রব)",
+      "observation_en": "White silver chloride again — any soluble chloride gives this.",
+      "observation_bn": "আবারও সাদা সিলভার ক্লোরাইড — যেকোনো দ্রবণীয় ক্লোরাইডেই এটি হয়।"
+    },
+    {
+      "category": "displacement",
+      "reactants": [
+        {
+          "id": "Fe",
+          "coefficient": 1
+        },
+        {
+          "id": "CuSO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "FeSO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "Cu",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#9fc9ae",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Cu",
+          "color": "#c8763c",
+          "density": 0.7
+        },
+        "smoke": null,
+        "deltaT": 12,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "class-9-10"
+      ],
+      "id": "fe-cuso4",
+      "equation": "Fe(s) + CuSO₄(aq) → FeSO₄(aq) + Cu(s)",
+      "equation_bn": "Fe(কঠি) + CuSO₄(দ্রব) → FeSO₄(দ্রব) + Cu(কঠি)",
+      "observation_en": "Blue colour fades to pale green and a reddish copper coat forms on the iron.",
+      "observation_bn": "নীল রঙ ফ্যাকাশে সবুজে বদলায় এবং লোহার গায়ে লালচে কপারের প্রলেপ পড়ে।"
+    },
+    {
+      "category": "displacement",
+      "reactants": [
+        {
+          "id": "Zn",
+          "coefficient": 1
+        },
+        {
+          "id": "CuSO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "ZnSO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "Cu",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Cu",
+          "color": "#c8763c",
+          "density": 0.8
+        },
+        "smoke": null,
+        "deltaT": 25,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "zn-cuso4",
+      "equation": "Zn(s) + CuSO₄(aq) → ZnSO₄(aq) + Cu(s)",
+      "equation_bn": "Zn(কঠি) + CuSO₄(দ্রব) → ZnSO₄(দ্রব) + Cu(কঠি)",
+      "observation_en": "The blue drains away; the tube warms and copper collects at the bottom.",
+      "observation_bn": "নীল রঙ মিলিয়ে যায়; নল উষ্ণ হয় এবং তলায় কপার জমে।"
+    },
+    {
+      "category": "displacement",
+      "reactants": [
+        {
+          "id": "Mg",
+          "coefficient": 1
+        },
+        {
+          "id": "CuSO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "MgSO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "Cu",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eff6fa",
+        "gas": "H2",
+        "gasRate": 0.2,
+        "precipitate": {
+          "id": "Cu",
+          "color": "#c8763c",
+          "density": 0.8
+        },
+        "smoke": null,
+        "deltaT": 45,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 2,
+      "tags": [],
+      "id": "mg-cuso4",
+      "equation": "Mg(s) + CuSO₄(aq) → MgSO₄(aq) + Cu(s)",
+      "equation_bn": "Mg(কঠি) + CuSO₄(দ্রব) → MgSO₄(দ্রব) + Cu(কঠি)",
+      "observation_en": "Very vigorous — heat, dark copper and a few bubbles from the acidic solution.",
+      "observation_bn": "অত্যন্ত তীব্র — তাপ, কালচে কপার এবং অম্লীয় দ্রবণ থেকে কিছু বুদবুদ।"
+    },
+    {
+      "category": "displacement",
+      "reactants": [
+        {
+          "id": "Al",
+          "coefficient": 2
+        },
+        {
+          "id": "CuSO4",
+          "coefficient": 3
+        }
+      ],
+      "products": [
+        {
+          "id": "Al2(SO4)3",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "Cu",
+          "coefficient": 3,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Cu",
+          "color": "#c8763c",
+          "density": 0.75
+        },
+        "smoke": null,
+        "deltaT": 30,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "al-cuso4",
+      "equation": "2Al(s) + 3CuSO₄(aq) → Al₂(SO₄)₃(aq) + 3Cu(s)",
+      "equation_bn": "2Al(কঠি) + 3CuSO₄(দ্রব) → Al₂(SO₄)₃(দ্রব) + 3Cu(কঠি)",
+      "observation_en": "After the oxide layer breaks, aluminium strips copper from solution.",
+      "observation_bn": "অক্সাইড স্তর ভাঙার পর অ্যালুমিনিয়াম দ্রবণ থেকে কপার ছিনিয়ে নেয়।"
+    },
+    {
+      "category": "displacement",
+      "reactants": [
+        {
+          "id": "Cu",
+          "coefficient": 1
+        },
+        {
+          "id": "AgNO3",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Cu(NO3)2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "Ag",
+          "coefficient": 2,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#3f8fd0",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Ag",
+          "color": "#d9dee3",
+          "density": 0.6
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "cu-agno3",
+      "equation": "Cu(s) + 2AgNO₃(aq) → Cu(NO₃)₂(aq) + 2Ag(s)",
+      "equation_bn": "Cu(কঠি) + 2AgNO₃(দ্রব) → Cu(NO₃)₂(দ্রব) + 2Ag(কঠি)",
+      "observation_en": "Silver crystals grow on the copper and the solution turns blue.",
+      "observation_bn": "কপারের গায়ে রূপার কেলাস জন্মায় এবং দ্রবণ নীল হয়ে যায়।"
+    },
+    {
+      "category": "displacement",
+      "reactants": [
+        {
+          "id": "Fe",
+          "coefficient": 1
+        },
+        {
+          "id": "AgNO3",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Fe(NO3)2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "Ag",
+          "coefficient": 2,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#9dbf9d",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Ag",
+          "color": "#d9dee3",
+          "density": 0.6
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "fe-agno3",
+      "equation": "Fe(s) + 2AgNO₃(aq) → Fe(NO₃)₂(aq) + 2Ag(s)",
+      "equation_bn": "Fe(কঠি) + 2AgNO₃(দ্রব) → Fe(NO₃)₂(দ্রব) + 2Ag(কঠি)",
+      "observation_en": "Iron pushes silver out; a grey metallic coat appears.",
+      "observation_bn": "আয়রন রূপাকে ঠেলে বের করে দেয়; ধূসর ধাতব প্রলেপ দেখা যায়।"
+    },
+    {
+      "category": "displacement",
+      "reactants": [
+        {
+          "id": "Zn",
+          "coefficient": 1
+        },
+        {
+          "id": "FeSO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "ZnSO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "Fe",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Fe",
+          "color": "#8b8f96",
+          "density": 0.6
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "zn-feso4",
+      "equation": "Zn(s) + FeSO₄(aq) → ZnSO₄(aq) + Fe(s)",
+      "equation_bn": "Zn(কঠি) + FeSO₄(দ্রব) → ZnSO₄(দ্রব) + Fe(কঠি)",
+      "observation_en": "Pale green fades to colourless; grey iron deposits.",
+      "observation_bn": "হালকা সবুজ রঙ ফ্যাকাশে হয়ে বর্ণহীন হয়; ধূসর আয়রন জমে।"
+    },
+    {
+      "category": "displacement",
+      "reactants": [
+        {
+          "id": "Mg",
+          "coefficient": 1
+        },
+        {
+          "id": "FeSO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "MgSO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "Fe",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eff6fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Fe",
+          "color": "#8b8f96",
+          "density": 0.6
+        },
+        "smoke": null,
+        "deltaT": 20,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "mg-feso4",
+      "equation": "Mg(s) + FeSO₄(aq) → MgSO₄(aq) + Fe(s)",
+      "equation_bn": "Mg(কঠি) + FeSO₄(দ্রব) → MgSO₄(দ্রব) + Fe(কঠি)",
+      "observation_en": "Magnesium displaces iron with a burst of heat.",
+      "observation_bn": "ম্যাগনেসিয়াম তাপসহ আয়রনকে প্রতিস্থাপন করে।"
+    },
+    {
+      "category": "displacement",
+      "reactants": [
+        {
+          "id": "Zn",
+          "coefficient": 1
+        },
+        {
+          "id": "Pb(NO3)2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "Zn(NO3)2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "Pb",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef5fa",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Pb",
+          "color": "#7d8590",
+          "density": 0.7
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "zn-pbno32",
+      "equation": "Zn(s) + Pb(NO₃)₂(aq) → Zn(NO₃)₂(aq) + Pb(s)",
+      "equation_bn": "Zn(কঠি) + Pb(NO₃)₂(দ্রব) → Zn(NO₃)₂(দ্রব) + Pb(কঠি)",
+      "observation_en": "Dark lead crystals (\"lead tree\") grow on the zinc.",
+      "observation_bn": "জিঙ্কের গায়ে কালচে লেড কেলাস (\"লেড ট্রি\") জন্মায়।"
+    },
+    {
+      "category": "no-reaction",
+      "reactants": [
+        {
+          "id": "Cu",
+          "coefficient": 1
+        },
+        {
+          "id": "ZnSO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "cu-znso4",
+      "equation": "Cu(s) + ZnSO₄(aq) → no reaction",
+      "equation_bn": "Cu(কঠি) + ZnSO₄(দ্রব) → কোনো বিক্রিয়া নেই",
+      "observation_en": "No visible change: copper is less reactive than zinc, so it cannot displace it.",
+      "observation_bn": "কোনো দৃশ্যমান পরিবর্তন নেই: কপার জিঙ্কের চেয়ে কম সক্রিয়, তাই একে প্রতিস্থাপন করতে পারে না।"
+    },
+    {
+      "category": "no-reaction",
+      "reactants": [
+        {
+          "id": "Cu",
+          "coefficient": 1
+        },
+        {
+          "id": "FeSO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "cu-feso4",
+      "equation": "Cu(s) + FeSO₄(aq) → no reaction",
+      "equation_bn": "Cu(কঠি) + FeSO₄(দ্রব) → কোনো বিক্রিয়া নেই",
+      "observation_en": "The blue-green solution stays unchanged — copper sits below iron in the series.",
+      "observation_bn": "নীলচে-সবুজ দ্রবণ অপরিবর্তিত থাকে — সক্রিয়তা সিরিজে কপার আয়রনের নিচে।"
+    },
+    {
+      "category": "no-reaction",
+      "reactants": [
+        {
+          "id": "Cu",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "cu-hcl",
+      "equation": "Cu(s) + HCl(aq) → no reaction",
+      "equation_bn": "Cu(কঠি) + HCl(দ্রব) → কোনো বিক্রিয়া নেই",
+      "observation_en": "No bubbles: copper is below hydrogen in the reactivity series.",
+      "observation_bn": "কোনো বুদবুদ নেই: সক্রিয়তা সিরিজে কপার হাইড্রোজেনের নিচে।"
+    },
+    {
+      "category": "decomposition",
+      "reactants": [
+        {
+          "id": "CaCO3",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CaO",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "CO2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 600,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f7f6f1",
+        "gas": "CO2",
+        "gasRate": 0.6,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": -5,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "caco3-heat",
+      "equation": "CaCO₃(s) →[Δ] CaO(s) + CO₂(g)↑",
+      "equation_bn": "CaCO₃(কঠি) →[তাপ] CaO(কঠি) + CO₂(গ্যা)↑",
+      "observation_en": "Chalk breaks down into quicklime and carbon dioxide at very high temperature.",
+      "observation_bn": "অতি উচ্চ তাপমাত্রায় চক ভেঙে কুইকলাইম ও কার্বন ডাই-অক্সাইড হয়।"
+    },
+    {
+      "category": "decomposition",
+      "reactants": [
+        {
+          "id": "NaHCO3",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Na2CO3",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        },
+        {
+          "id": "CO2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 80,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": "CO2",
+        "gasRate": 0.5,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "nahco3-heat",
+      "equation": "2NaHCO₃(s) →[Δ] Na₂CO₃(s) + H₂O(l) + CO₂(g)↑",
+      "equation_bn": "2NaHCO₃(কঠি) →[তাপ] Na₂CO₃(কঠি) + H₂O(ত) + CO₂(গ্যা)↑",
+      "observation_en": "Baking soda gives off CO₂ once it is hot enough.",
+      "observation_bn": "যথেষ্ট গরম হলে বেকিং সোডা CO₂ ছাড়ে।"
+    },
+    {
+      "category": "decomposition",
+      "reactants": [
+        {
+          "id": "NH4Cl",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NH3",
+          "coefficient": 1,
+          "state": "g"
+        },
+        {
+          "id": "HCl",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 120,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": "NH3",
+        "gasRate": 0.5,
+        "precipitate": null,
+        "smoke": {
+          "color": "#f2f2f2",
+          "density": 0.7
+        },
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "nh4cl-heat",
+      "equation": "NH₄Cl(s) →[Δ] NH₃(g)↑ + HCl(g)↑",
+      "equation_bn": "NH₄Cl(কঠি) →[তাপ] NH₃(গ্যা)↑ + HCl(গ্যা)↑",
+      "observation_en": "The solid seems to vanish and re-form on cooler glass — sublimation.",
+      "observation_bn": "কঠিনটি যেন মিলিয়ে গিয়ে ঠান্ডা কাচে আবার জমে — এটিই ঊর্ধ্বপাতন।"
+    },
+    {
+      "category": "decomposition",
+      "reactants": [
+        {
+          "id": "KMnO4",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "K2MnO4",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "MnO2",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "O2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 200,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#2f7a4a",
+        "gas": "O2",
+        "gasRate": 0.7,
+        "precipitate": {
+          "id": "MnO2",
+          "color": "#3a3a3f",
+          "density": 0.7
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "kmno4-heat",
+      "equation": "2KMnO₄(s) →[Δ] K₂MnO₄(s) + MnO₂(s) + O₂(g)↑",
+      "equation_bn": "2KMnO₄(কঠি) →[তাপ] K₂MnO₄(কঠি) + MnO₂(কঠি) + O₂(গ্যা)↑",
+      "observation_en": "Purple fades to green-brown and oxygen relights a glowing splint.",
+      "observation_bn": "বেগুনি রঙ সবুজ-বাদামি হয় এবং অক্সিজেন ধূমায়িত কাঠি পুনরায় জ্বালিয়ে তোলে।"
+    },
+    {
+      "category": "decomposition",
+      "reactants": [
+        {
+          "id": "Cu(OH)2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CuO",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 80,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#2b2b30",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "CuO",
+          "color": "#2b2b30",
+          "density": 0.9
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "cuoh2-heat",
+      "equation": "Cu(OH)₂(s) →[Δ] CuO(s) + H₂O(l)",
+      "equation_bn": "Cu(OH)₂(কঠি) →[তাপ] CuO(কঠি) + H₂O(ত)",
+      "observation_en": "The blue precipitate blackens as it loses water.",
+      "observation_bn": "পানি হারানোর কারণে নীল অধঃক্ষেপ কালো হয়ে যায়।"
+    },
+    {
+      "category": "decomposition",
+      "reactants": [
+        {
+          "id": "Na2CO3",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 400,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "na2co3-heat",
+      "equation": "Na₂CO₃(s) →[Δ] no decomposition (stable)",
+      "equation_bn": "Na₂CO₃(কঠি) →[তাপ] বিয়োজন হয় না (স্থিতিশীল)",
+      "observation_en": "Sodium carbonate is thermally stable — nothing happens below its melting point.",
+      "observation_bn": "সোডিয়াম কার্বনেট তাপে স্থিতিশীল — গলনাঙ্কের নিচে কিছুই হয় না।"
+    },
+    {
+      "category": "combination",
+      "reactants": [
+        {
+          "id": "CaO",
+          "coefficient": 1
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "Ca(OH)2",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#e9f1f6",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#f0f0f0",
+          "density": 0.5
+        },
+        "deltaT": 55,
+        "flame": null,
+        "glow": false,
+        "sound": "hiss",
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "cao-h2o",
+      "equation": "CaO(s) + H₂O(l) → Ca(OH)₂(aq)",
+      "equation_bn": "CaO(কঠি) + H₂O(ত) → Ca(OH)₂(দ্রব)",
+      "observation_en": "Slaking of lime: hissing, steam and a lot of heat.",
+      "observation_bn": "চুন স্লেকিং: হিসহিস শব্দ, বাষ্প এবং প্রচুর তাপ।"
+    },
+    {
+      "category": "combustion",
+      "reactants": [
+        {
+          "id": "H2",
+          "coefficient": 2
+        },
+        {
+          "id": "O2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": true,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#f2f2f2",
+          "density": 0.4
+        },
+        "deltaT": 120,
+        "flame": {
+          "color": "#ffd27a",
+          "label_en": "Flash",
+          "label_bn": "ঝলক"
+        },
+        "glow": true,
+        "sound": "boom",
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 6,
+      "tags": [],
+      "id": "h2-o2-spark",
+      "equation": "2H₂(g) + O₂(g) →[spark] 2H₂O(l)",
+      "equation_bn": "2H₂(গ্যা) + O₂(গ্যা) →[স্ফুলিঙ্গ] 2H₂O(ত)",
+      "observation_en": "A sharp \"pop\" — hydrogen burns in oxygen to make water.",
+      "observation_bn": "তীক্ষ্ণ \"পট\" শব্দ — অক্সিজেনে হাইড্রোজেন পুড়ে পানি তৈরি করে।",
+      "hazard_en": "Explosive mixture. Real labs only ever test a tiny amount at a distance.",
+      "hazard_bn": "বিস্ফোরক মিশ্রণ। বাস্তব ল্যাবে দূর থেকে সামান্য পরিমাণই পরীক্ষা করা হয়।"
+    },
+    {
+      "category": "combustion",
+      "reactants": [
+        {
+          "id": "Mg",
+          "coefficient": 2
+        },
+        {
+          "id": "O2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "MgO",
+          "coefficient": 2,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 300,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#fdfdfb",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#ffffff",
+          "density": 0.6
+        },
+        "deltaT": 150,
+        "flame": {
+          "color": "#ffffff",
+          "label_en": "Dazzling white",
+          "label_bn": "চোখ ধাঁধানো সাদা"
+        },
+        "glow": true,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 4,
+      "tags": [],
+      "id": "mg-o2-heat",
+      "equation": "2Mg(s) + O₂(g) →[Δ] 2MgO(s)",
+      "equation_bn": "2Mg(কঠি) + O₂(গ্যা) →[তাপ] 2MgO(কঠি)",
+      "observation_en": "A blinding white flame leaves a white ash of magnesium oxide.",
+      "observation_bn": "চোখ ধাঁধানো সাদা শিখার পরে ম্যাগনেসিয়াম অক্সাইডের সাদা ছাই থাকে।",
+      "hazard_en": "Never look straight at burning magnesium — it damages the eyes.",
+      "hazard_bn": "জ্বলন্ত ম্যাগনেসিয়ামের দিকে সরাসরি তাকাবেন না — চোখের ক্ষতি হয়।"
+    },
+    {
+      "category": "combustion",
+      "reactants": [
+        {
+          "id": "Cu",
+          "coefficient": 2
+        },
+        {
+          "id": "O2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CuO",
+          "coefficient": 2,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 250,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#2b2b30",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "CuO",
+          "color": "#2b2b30",
+          "density": 0.8
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "cu-o2-heat",
+      "equation": "2Cu(s) + O₂(g) →[Δ] 2CuO(s)",
+      "equation_bn": "2Cu(কঠি) + O₂(গ্যা) →[তাপ] 2CuO(কঠি)",
+      "observation_en": "The shiny copper surface blackens as copper(II) oxide forms.",
+      "observation_bn": "কপার(II) অক্সাইড তৈরি হওয়ায় চকচকে কপারের পৃষ্ঠ কালো হয়ে যায়।"
+    },
+    {
+      "category": "combustion",
+      "reactants": [
+        {
+          "id": "CH4",
+          "coefficient": 1
+        },
+        {
+          "id": "O2",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "CO2",
+          "coefficient": 1,
+          "state": "g"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 250,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 140,
+        "flame": {
+          "color": "#4a86ff",
+          "label_en": "Pale blue flame",
+          "label_bn": "হালকা নীল শিখা"
+        },
+        "glow": true,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "ch4-o2-heat",
+      "equation": "CH₄(g) + 2O₂(g) →[Δ] CO₂(g) + 2H₂O(l)",
+      "equation_bn": "CH₄(গ্যা) + 2O₂(গ্যা) →[তাপ] CO₂(গ্যা) + 2H₂O(ত)",
+      "observation_en": "Methane burns with a clean pale-blue flame.",
+      "observation_bn": "মিথেন পরিষ্কার হালকা নীল শিখায় জ্বলে।"
+    },
+    {
+      "category": "combustion",
+      "reactants": [
+        {
+          "id": "ethanol",
+          "coefficient": 1
+        },
+        {
+          "id": "O2",
+          "coefficient": 3
+        }
+      ],
+      "products": [
+        {
+          "id": "CO2",
+          "coefficient": 2,
+          "state": "g"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 3,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 200,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 100,
+        "flame": {
+          "color": "#5aa0ff",
+          "label_en": "Blue flame",
+          "label_bn": "নীল শিখা"
+        },
+        "glow": true,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 1,
+      "tags": [],
+      "id": "ethanol-o2-heat",
+      "equation": "C₂H₅OH(l) + 3O₂(g) →[Δ] 2CO₂(g) + 3H₂O(l)",
+      "equation_bn": "C₂H₅OH(ত) + 3O₂(গ্যা) →[তাপ] 2CO₂(গ্যা) + 3H₂O(ত)",
+      "observation_en": "Alcohol burns with a nearly invisible blue flame.",
+      "observation_bn": "অ্যালকোহল প্রায় অদৃশ্য নীল শিখায় জ্বলে।",
+      "hazard_en": "Highly flammable — an alcohol fire spreads before you notice it.",
+      "hazard_bn": "অত্যন্ত দাহ্য — বুঝে ওঠার আগেই অ্যালকোহলের আগুন ছড়িয়ে পড়ে।"
+    },
+    {
+      "category": "combustion",
+      "reactants": [
+        {
+          "id": "thinner",
+          "coefficient": 1
+        },
+        {
+          "id": "O2",
+          "coefficient": 4
+        }
+      ],
+      "products": [
+        {
+          "id": "CO2",
+          "coefficient": 3,
+          "state": "g"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 3,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 150,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#4a4a4a",
+          "density": 0.8
+        },
+        "deltaT": 130,
+        "flame": {
+          "color": "#ffb03a",
+          "label_en": "Sooty orange flame",
+          "label_bn": "কালচে কমলা শিখা"
+        },
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 6,
+      "tags": [],
+      "id": "thinner-flame",
+      "equation": "C₃H₆O(l) + 4O₂(g) →[Δ] 3CO₂(g) + 3H₂O(l)",
+      "equation_bn": "C₃H₆O(ত) + 4O₂(গ্যা) →[তাপ] 3CO₂(গ্যা) + 3H₂O(ত)",
+      "observation_en": "Thinner flares with a sooty flame and black smoke.",
+      "observation_bn": "থিনার কালো ধোঁয়াসহ ঝলকে ওঠে।",
+      "hazard_en": "Solvent fires cannot be put out with water. This simulation never shows how to make them.",
+      "hazard_bn": "দ্রাবকের আগুন পানি দিয়ে নেভানো যায় না। এই সিমুলেশন কখনো তা তৈরির পদ্ধতি দেখায় না।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "CO2",
+          "coefficient": 1
+        },
+        {
+          "id": "Ca(OH)2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CaCO3",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f2f6f7",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "CaCO3",
+          "color": "#f6f7f4",
+          "density": 0.6
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "class-9-10"
+      ],
+      "id": "co2-caoh2",
+      "equation": "CO₂(g) + Ca(OH)₂(aq) → CaCO₃(s)↓ + H₂O(l)",
+      "equation_bn": "CO₂(গ্যা) + Ca(OH)₂(দ্রব) → CaCO₃(কঠি)↓ + H₂O(ত)",
+      "observation_en": "Limewater turns milky — the standard test for carbon dioxide.",
+      "observation_bn": "চুনের পানি ঘোলা হয়ে যায় — কার্বন ডাই-অক্সাইড শনাক্তকরণের আদর্শ পরীক্ষা।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "CO2",
+          "coefficient": 2
+        },
+        {
+          "id": "Ca(OH)2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "Ca(HCO3)2",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eaf2f7",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": true
+      },
+      "hazard": "none",
+      "priority": 0,
+      "tags": [],
+      "id": "co2-excess-caoh2",
+      "equation": "CaCO₃(s) + CO₂(g) + H₂O(l) → Ca(HCO₃)₂(aq)",
+      "equation_bn": "CaCO₃(কঠি) + CO₂(গ্যা) + H₂O(ত) → Ca(HCO₃)₂(দ্রব)",
+      "observation_en": "Passing CO₂ for longer clears the milkiness again.",
+      "observation_bn": "বেশি সময় CO₂ চালনা করলে ঘোলা ভাব আবার কেটে যায়।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "NH3",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NH4Cl",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f6f8f9",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#f5f5f5",
+          "density": 0.9
+        },
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "nh3-hcl",
+      "equation": "NH₃(g) + HCl(g) → NH₄Cl(s)",
+      "equation_bn": "NH₃(গ্যা) + HCl(গ্যা) → NH₄Cl(কঠি)",
+      "observation_en": "Dense white smoke of ammonium chloride fills the tube.",
+      "observation_bn": "অ্যামোনিয়াম ক্লোরাইডের ঘন সাদা ধোঁয়ায় নল ভরে যায়।"
+    },
+    {
+      "category": "solution",
+      "reactants": [
+        {
+          "id": "NH3",
+          "coefficient": 1
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NH4OH",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f2f7fb",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 3,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "nh3-h2o",
+      "equation": "NH₃(g) + H₂O(l) ⇌ NH₄OH(aq)",
+      "equation_bn": "NH₃(গ্যা) + H₂O(ত) ⇌ NH₄OH(দ্রব)",
+      "observation_en": "Ammonia dissolves to give an alkaline solution that turns red litmus blue.",
+      "observation_bn": "অ্যামোনিয়া দ্রবীভূত হয়ে ক্ষারীয় দ্রবণ দেয় যা লাল লিটমাসকে নীল করে।"
+    },
+    {
+      "category": "solution",
+      "reactants": [
+        {
+          "id": "CO2",
+          "coefficient": 1
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "H2CO3",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef4f9",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": -1,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "co2-h2o",
+      "equation": "CO₂(g) + H₂O(l) ⇌ H₂CO₃(aq)",
+      "equation_bn": "CO₂(গ্যা) + H₂O(ত) ⇌ H₂CO₃(দ্রব)",
+      "observation_en": "Carbon dioxide makes water weakly acidic — blue litmus turns red.",
+      "observation_bn": "কার্বন ডাই-অক্সাইড পানিকে দুর্বল অম্লীয় করে — নীল লিটমাস লাল হয়।"
+    },
+    {
+      "category": "solution",
+      "reactants": [
+        {
+          "id": "SO2",
+          "coefficient": 1
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "H2SO3",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f2f6f6",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": -1,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "so2-h2o",
+      "equation": "SO₂(g) + H₂O(l) ⇌ H₂SO₃(aq)",
+      "equation_bn": "SO₂(গ্যা) + H₂O(ত) ⇌ H₂SO₃(দ্রব)",
+      "observation_en": "Sulphur dioxide dissolves into a weakly acidic, choking solution.",
+      "observation_bn": "সালফার ডাই-অক্সাইড দ্রবীভূত হয়ে দুর্বল অম্লীয় ও শ্বাসরোধী দ্রবণ তৈরি করে।"
+    },
+    {
+      "category": "combustion",
+      "reactants": [
+        {
+          "id": "Cl2",
+          "coefficient": 1
+        },
+        {
+          "id": "H2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "HCl",
+          "coefficient": 2,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": true
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 60,
+        "flame": null,
+        "glow": true,
+        "sound": "boom",
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 1,
+      "tags": [],
+      "id": "cl2-h2-light",
+      "equation": "H₂(g) + Cl₂(g) →[light] 2HCl(g)",
+      "equation_bn": "H₂(গ্যা) + Cl₂(গ্যা) →[আলো] 2HCl(গ্যা)",
+      "observation_en": "Sunlight sets off a chain reaction — the mixture explodes.",
+      "observation_bn": "সূর্যালোকে চেইন বিক্রিয়া শুরু হয় — মিশ্রণটি বিস্ফোরিত হয়।",
+      "hazard_en": "Explosive and toxic. Shown as a warning only.",
+      "hazard_bn": "বিস্ফোরক ও বিষাক্ত। শুধু সতর্কবার্তা হিসেবে দেখানো হয়েছে।"
+    },
+    {
+      "category": "redox",
+      "reactants": [
+        {
+          "id": "KMnO4",
+          "coefficient": 2
+        },
+        {
+          "id": "HCl",
+          "coefficient": 16
+        }
+      ],
+      "products": [
+        {
+          "id": "KCl",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "MnCl2",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "Cl2",
+          "coefficient": 5,
+          "state": "g"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 8,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#e8c0c8",
+        "gas": "Cl2",
+        "gasRate": 0.9,
+        "precipitate": null,
+        "smoke": {
+          "color": "#cfe06a",
+          "density": 0.7
+        },
+        "deltaT": 20,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 3,
+      "tags": [],
+      "id": "kmno4-hcl",
+      "equation": "2KMnO₄ + 16HCl → 2KCl + 2MnCl₂ + 5Cl₂(g)↑ + 8H₂O",
+      "equation_bn": "2KMnO₄ + 16HCl → 2KCl + 2MnCl₂ + 5Cl₂(গ্যা)↑ + 8H₂O",
+      "observation_en": "Purple fades to pale pink and green-yellow chlorine gas escapes.",
+      "observation_bn": "বেগুনি রঙ ফ্যাকাশে গোলাপি হয় এবং সবুজ-হলুদ ক্লোরিন গ্যাস বেরিয়ে আসে।",
+      "hazard_en": "Chlorine is a poisonous gas. Watch the animation, never the real fumes.",
+      "hazard_bn": "ক্লোরিন বিষাক্ত গ্যাস। অ্যানিমেশন দেখুন, বাস্তব ধোঁয়া নয়।"
+    },
+    {
+      "category": "redox",
+      "reactants": [
+        {
+          "id": "KMnO4",
+          "coefficient": 2
+        },
+        {
+          "id": "FeSO4",
+          "coefficient": 10
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 8
+        }
+      ],
+      "products": [
+        {
+          "id": "K2SO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "MnSO4",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "Fe2(SO4)3",
+          "coefficient": 5,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 8,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#d8b06a",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 5,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "kmno4-feso4",
+      "equation": "2KMnO₄ + 10FeSO₄ + 8H₂SO₄ → K₂SO₄ + 2MnSO₄ + 5Fe₂(SO₄)₃ + 8H₂O",
+      "equation_bn": "2KMnO₄ + 10FeSO₄ + 8H₂SO₄ → K₂SO₄ + 2MnSO₄ + 5Fe₂(SO₄)₃ + 8H₂O",
+      "observation_en": "The purple permanganate decolourises; iron(II) is oxidised to iron(III) (yellow-brown).",
+      "observation_bn": "বেগুনি পারম্যাঙ্গানেটের রঙ মিলিয়ে যায়; আয়রন(II) জারিত হয়ে আয়রন(III)-এ (হলুদ-বাদামি) পরিণত হয়।"
+    },
+    {
+      "category": "redox",
+      "reactants": [
+        {
+          "id": "K2Cr2O7",
+          "coefficient": 1
+        },
+        {
+          "id": "FeSO4",
+          "coefficient": 6
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 7
+        }
+      ],
+      "products": [
+        {
+          "id": "Cr2(SO4)3",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "K2SO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "Fe2(SO4)3",
+          "coefficient": 3,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 7,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#3f8f5a",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 4,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "k2cr2o7-feso4",
+      "equation": "K₂Cr₂O₇ + 6FeSO₄ + 7H₂SO₄ → Cr₂(SO₄)₃ + K₂SO₄ + 3Fe₂(SO₄)₃ + 7H₂O",
+      "equation_bn": "K₂Cr₂O₇ + 6FeSO₄ + 7H₂SO₄ → Cr₂(SO₄)₃ + K₂SO₄ + 3Fe₂(SO₄)₃ + 7H₂O",
+      "observation_en": "Orange dichromate turns green as chromium(VI) is reduced to chromium(III).",
+      "observation_bn": "ক্রোমিয়াম(VI) বিজারিত হয়ে ক্রোমিয়াম(III) হওয়ায় কমলা ডাইক্রোমেট সবুজ হয়ে যায়।"
+    },
+    {
+      "category": "redox",
+      "reactants": [
+        {
+          "id": "FeCl3",
+          "coefficient": 2
+        },
+        {
+          "id": "KI",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "FeCl2",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "KCl",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "I2",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#6b3f8a",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 2,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "fecl3-ki",
+      "equation": "2FeCl₃(aq) + 2KI(aq) → 2FeCl₂(aq) + 2KCl(aq) + I₂(s)",
+      "equation_bn": "2FeCl₃(দ্রব) + 2KI(দ্রব) → 2FeCl₂(দ্রব) + 2KCl(দ্রব) + I₂(কঠি)",
+      "observation_en": "The mixture darkens as iodine is liberated.",
+      "observation_bn": "আয়োডিন মুক্ত হওয়ায় মিশ্রণের রঙ গাঢ় হয়।"
+    },
+    {
+      "category": "redox",
+      "reactants": [
+        {
+          "id": "Cu",
+          "coefficient": 1
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "CuSO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "SO2",
+          "coefficient": 1,
+          "state": "g"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 150,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#2f7fd6",
+        "gas": "SO2",
+        "gasRate": 0.7,
+        "precipitate": null,
+        "smoke": {
+          "color": "#e8e8e0",
+          "density": 0.5
+        },
+        "deltaT": 15,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 1,
+      "tags": [],
+      "id": "cu-h2so4-conc",
+      "equation": "Cu(s) + 2H₂SO₄(conc) →[Δ] CuSO₄(aq) + SO₂(g)↑ + 2H₂O(l)",
+      "equation_bn": "Cu(কঠি) + 2H₂SO₄(গাঢ়) →[তাপ] CuSO₄(দ্রব) + SO₂(গ্যা)↑ + 2H₂O(ত)",
+      "observation_en": "Only hot concentrated acid attacks copper — choking SO₂ is released.",
+      "observation_bn": "শুধু গরম গাঢ় অ্যাসিডই কপারকে আক্রমণ করে — শ্বাসরোধী SO₂ নির্গত হয়।",
+      "hazard_en": "Hot concentrated sulphuric acid causes severe burns.",
+      "hazard_bn": "গরম গাঢ় সালফিউরিক অ্যাসিড মারাত্মক দগ্ধ করে।"
+    },
+    {
+      "category": "gas-preparation",
+      "reactants": [
+        {
+          "id": "NaCl",
+          "coefficient": 1
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NaHSO4",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "HCl",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 100,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": "HCl",
+        "gasRate": 0.6,
+        "precipitate": null,
+        "smoke": {
+          "color": "#f0f0f0",
+          "density": 0.6
+        },
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "nacl-h2so4",
+      "equation": "NaCl(s) + H₂SO₄(conc) →[Δ] NaHSO₄(s) + HCl(g)↑",
+      "equation_bn": "NaCl(কঠি) + H₂SO₄(গাঢ়) →[তাপ] NaHSO₄(কঠি) + HCl(গ্যা)↑",
+      "observation_en": "Steamy white fumes of hydrogen chloride appear.",
+      "observation_bn": "হাইড্রোজেন ক্লোরাইডের সাদা বাষ্পপূর্ণ ধোঁয়া দেখা যায়।"
+    },
+    {
+      "category": "electrolysis",
+      "reactants": [
+        {
+          "id": "H2O",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "H2",
+          "coefficient": 2,
+          "state": "g"
+        },
+        {
+          "id": "O2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": true,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": "H2",
+        "gasRate": 0.8,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 3,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "class-9-10"
+      ],
+      "id": "h2o-electrolysis",
+      "equation": "2H₂O(l) →[electricity] 2H₂(g)↑ + O₂(g)↑",
+      "equation_bn": "2H₂O(ত) →[বিদ্যুৎ] 2H₂(গ্যা)↑ + O₂(গ্যা)↑",
+      "observation_en": "Bubbles rise at both electrodes — twice as much hydrogen as oxygen.",
+      "observation_bn": "দুই তড়িৎদ্বারেই বুদবুদ ওঠে — অক্সিজেনের দ্বিগুণ হাইড্রোজেন।"
+    },
+    {
+      "category": "electrolysis",
+      "reactants": [
+        {
+          "id": "NaCl",
+          "coefficient": 2
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "NaOH",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "H2",
+          "coefficient": 1,
+          "state": "g"
+        },
+        {
+          "id": "Cl2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": true,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#e9f3ea",
+        "gas": "Cl2",
+        "gasRate": 0.7,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 4,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "nacl-electrolysis",
+      "equation": "2NaCl(aq) + 2H₂O(l) →[electricity] 2NaOH(aq) + H₂(g)↑ + Cl₂(g)↑",
+      "equation_bn": "2NaCl(দ্রব) + 2H₂O(ত) →[বিদ্যুৎ] 2NaOH(দ্রব) + H₂(গ্যা)↑ + Cl₂(গ্যা)↑",
+      "observation_en": "Chlorine at the anode, hydrogen at the cathode, and the liquid turns alkaline.",
+      "observation_bn": "অ্যানোডে ক্লোরিন, ক্যাথোডে হাইড্রোজেন এবং তরলটি ক্ষারীয় হয়ে যায়।"
+    },
+    {
+      "category": "complex",
+      "reactants": [
+        {
+          "id": "CuSO4",
+          "coefficient": 1
+        },
+        {
+          "id": "NH4OH",
+          "coefficient": 4
+        }
+      ],
+      "products": [
+        {
+          "id": "Cu(NH3)4SO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 4,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#1b4fd0",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": true
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "cuso4-nh4oh",
+      "equation": "CuSO₄(aq) + 4NH₄OH(aq) → [Cu(NH₃)₄]SO₄(aq) + 4H₂O(l)",
+      "equation_bn": "CuSO₄(দ্রব) + 4NH₄OH(দ্রব) → [Cu(NH₃)₄]SO₄(দ্রব) + 4H₂O(ত)",
+      "observation_en": "The blue precipitate redissolves into a deep inky-blue complex.",
+      "observation_bn": "নীল অধঃক্ষেপ আবার দ্রবীভূত হয়ে গাঢ় কালচে-নীল জটিল যৌগ তৈরি করে।"
+    },
+    {
+      "category": "complex",
+      "reactants": [
+        {
+          "id": "AgCl",
+          "coefficient": 1
+        },
+        {
+          "id": "NH4OH",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Ag(NH3)2Cl",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef4f9",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": true
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "agcl-nh4oh",
+      "equation": "AgCl(s) + 2NH₄OH(aq) → [Ag(NH₃)₂]Cl(aq) + 2H₂O(l)",
+      "equation_bn": "AgCl(কঠি) + 2NH₄OH(দ্রব) → [Ag(NH₃)₂]Cl(দ্রব) + 2H₂O(ত)",
+      "observation_en": "The white precipitate dissolves in excess ammonia — confirming AgCl.",
+      "observation_bn": "অতিরিক্ত অ্যামোনিয়ায় সাদা অধঃক্ষেপ দ্রবীভূত হয় — এতে AgCl নিশ্চিত হয়।"
+    },
+    {
+      "category": "complex",
+      "reactants": [
+        {
+          "id": "Zn(OH)2",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Na2ZnO2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef4f9",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": true
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "znoh2-naoh",
+      "equation": "Zn(OH)₂(s) + 2NaOH(aq) → Na₂ZnO₂(aq) + 2H₂O(l)",
+      "equation_bn": "Zn(OH)₂(কঠি) + 2NaOH(দ্রব) → Na₂ZnO₂(দ্রব) + 2H₂O(ত)",
+      "observation_en": "Amphoteric zinc hydroxide dissolves in excess alkali.",
+      "observation_bn": "উভধর্মী জিঙ্ক হাইড্রোক্সাইড অতিরিক্ত ক্ষারে দ্রবীভূত হয়।"
+    },
+    {
+      "category": "complex",
+      "reactants": [
+        {
+          "id": "Al(OH)3",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NaAlO2",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#eef4f9",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": true
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "aloh3-naoh",
+      "equation": "Al(OH)₃(s) + NaOH(aq) → NaAlO₂(aq) + 2H₂O(l)",
+      "equation_bn": "Al(OH)₃(কঠি) + NaOH(দ্রব) → NaAlO₂(দ্রব) + 2H₂O(ত)",
+      "observation_en": "Aluminium hydroxide also dissolves in excess base.",
+      "observation_bn": "অ্যালুমিনিয়াম হাইড্রোক্সাইডও অতিরিক্ত ক্ষারে দ্রবীভূত হয়।"
+    },
+    {
+      "category": "flame-test",
+      "reactants": [
+        {
+          "id": "NaCl",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 120,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": {
+          "color": "#ffcf4d",
+          "label_en": "Golden yellow",
+          "label_bn": "সোনালি হলুদ"
+        },
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "flame-test"
+      ],
+      "id": "flame-na",
+      "equation": "Na⁺ → golden-yellow flame",
+      "equation_bn": "Na⁺ → সোনালি হলুদ শিখা",
+      "observation_en": "Sodium burns with an intense golden-yellow flame.",
+      "observation_bn": "সোডিয়াম তীব্র সোনালি হলুদ শিখায় জ্বলে।"
+    },
+    {
+      "category": "flame-test",
+      "reactants": [
+        {
+          "id": "KCl",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 120,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": {
+          "color": "#c07cff",
+          "label_en": "Lilac",
+          "label_bn": "হালকা বেগুনি"
+        },
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "flame-test"
+      ],
+      "id": "flame-k",
+      "equation": "K⁺ → lilac flame",
+      "equation_bn": "K⁺ → হালকা বেগুনি শিখা",
+      "observation_en": "Potassium gives a pale lilac flame, often masked by sodium.",
+      "observation_bn": "পটাশিয়াম হালকা বেগুনি শিখা দেয়, যা প্রায়ই সোডিয়ামে ঢাকা পড়ে।"
+    },
+    {
+      "category": "flame-test",
+      "reactants": [
+        {
+          "id": "KOH",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 120,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": {
+          "color": "#c07cff",
+          "label_en": "Lilac",
+          "label_bn": "হালকা বেগুনি"
+        },
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "flame-test"
+      ],
+      "id": "flame-koh",
+      "equation": "K⁺ → lilac flame",
+      "equation_bn": "K⁺ → হালকা বেগুনি শিখা",
+      "observation_en": "Lilac flame from potassium ions.",
+      "observation_bn": "পটাশিয়াম আয়ন থেকে বেগুনি শিখা।"
+    },
+    {
+      "category": "flame-test",
+      "reactants": [
+        {
+          "id": "CaCl2",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 120,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": {
+          "color": "#e2603f",
+          "label_en": "Brick red",
+          "label_bn": "ইট-লাল"
+        },
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "flame-test"
+      ],
+      "id": "flame-ca",
+      "equation": "Ca²⁺ → brick-red flame",
+      "equation_bn": "Ca²⁺ → ইট-লাল শিখা",
+      "observation_en": "Calcium colours the flame brick red.",
+      "observation_bn": "ক্যালসিয়াম শিখাকে ইট-লাল রঙ দেয়।"
+    },
+    {
+      "category": "flame-test",
+      "reactants": [
+        {
+          "id": "CuSO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 120,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": {
+          "color": "#4fd0a0",
+          "label_en": "Blue-green",
+          "label_bn": "নীলচে-সবুজ"
+        },
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "flame-test"
+      ],
+      "id": "flame-cu",
+      "equation": "Cu²⁺ → blue-green flame",
+      "equation_bn": "Cu²⁺ → নীলচে-সবুজ শিখা",
+      "observation_en": "Copper burns blue-green.",
+      "observation_bn": "কপার নীলচে-সবুজ শিখায় জ্বলে।"
+    },
+    {
+      "category": "flame-test",
+      "reactants": [
+        {
+          "id": "BaCl2",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 120,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": {
+          "color": "#9fe06a",
+          "label_en": "Apple green",
+          "label_bn": "সবুজ-আপেল"
+        },
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [
+        "flame-test"
+      ],
+      "id": "flame-ba",
+      "equation": "Ba²⁺ → apple-green flame",
+      "equation_bn": "Ba²⁺ → সবুজ-আপেল শিখা",
+      "observation_en": "Barium gives an apple-green flame.",
+      "observation_bn": "বেরিয়াম সবুজ-আপেল রঙের শিখা দেয়।"
+    },
+    {
+      "category": "safety",
+      "reactants": [
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "H2SO4",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#f2f2f2",
+          "density": 0.4
+        },
+        "deltaT": 25,
+        "flame": null,
+        "glow": false,
+        "sound": "hiss",
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 4,
+      "tags": [],
+      "id": "acid-water-warning",
+      "equation": "H₂SO₄ + H₂O → dilute acid (always add acid to water)",
+      "equation_bn": "H₂SO₄ + H₂O → লঘু অ্যাসিড (সবসময় পানিতে অ্যাসিড ঢালুন)",
+      "observation_en": "Dilution releases a lot of heat. Water into acid would spatter.",
+      "observation_bn": "লঘুকরণে প্রচুর তাপ নির্গত হয়। অ্যাসিডে পানি ঢাললে তা ছিটকে পড়ত।",
+      "hazard_en": "Never pour water into concentrated acid. Add acid slowly into water while stirring.",
+      "hazard_bn": "কখনো গাঢ় অ্যাসিডে পানি ঢালবেন না। নাড়তে নাড়তে ধীরে ধীরে পানিতে অ্যাসিড ঢালুন।"
+    },
+    {
+      "category": "safety",
+      "reactants": [
+        {
+          "id": "HNO3",
+          "coefficient": 1
+        },
+        {
+          "id": "ethanol",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#b4622a",
+          "density": 0.6
+        },
+        "deltaT": 40,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 8,
+      "tags": [],
+      "id": "hno3-ethanol",
+      "equation": "oxidiser + fuel → uncontrolled reaction",
+      "equation_bn": "জারক + জ্বালানি → অনিয়ন্ত্রিত বিক্রিয়া",
+      "observation_en": "A strong oxidiser mixed with a flammable solvent — the simulation stops here.",
+      "observation_bn": "তীব্র জারক ও দাহ্য দ্রাবকের মিশ্রণ — সিমুলেশন এখানেই থেমে যায়।",
+      "hazard_en": "This combination is unpredictable and can ignite. No procedure is shown on purpose.",
+      "hazard_bn": "এই মিশ্রণ অপ্রত্যাশিত এবং জ্বলে উঠতে পারে। ইচ্ছাকৃতভাবে কোনো পদ্ধতি দেখানো হয়নি।"
+    },
+    {
+      "category": "safety",
+      "reactants": [
+        {
+          "id": "KMnO4",
+          "coefficient": 1
+        },
+        {
+          "id": "ethanol",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CH3COOH",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "MnO2",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#3a3a3f",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#cfcfcf",
+          "density": 0.5
+        },
+        "deltaT": 35,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 7,
+      "tags": [],
+      "id": "kmno4-ethanol",
+      "equation": "oxidiser + alcohol → vigorous oxidation",
+      "equation_bn": "জারক + অ্যালকোহল → তীব্র জারণ",
+      "observation_en": "The purple colour disappears as the alcohol is oxidised — the mixture gets hot.",
+      "observation_bn": "অ্যালকোহল জারিত হওয়ার সময় বেগুনি রঙ মিলিয়ে যায় — মিশ্রণ গরম হয়ে ওঠে।",
+      "hazard_en": "Can flare up without warning. Observe in simulation only.",
+      "hazard_bn": "বিনা নোটিশে জ্বলে উঠতে পারে। শুধু সিমুলেশনে পর্যবেক্ষণ করুন।"
+    },
+    {
+      "category": "safety",
+      "reactants": [
+        {
+          "id": "Na",
+          "coefficient": 2
+        },
+        {
+          "id": "Cl2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NaCl",
+          "coefficient": 2,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#f5f5f5",
+          "density": 0.8
+        },
+        "deltaT": 160,
+        "flame": {
+          "color": "#ffd27a",
+          "label_en": "Bright yellow",
+          "label_bn": "উজ্জ্বল হলুদ"
+        },
+        "glow": true,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "danger",
+      "priority": 7,
+      "tags": [],
+      "id": "na-cl2",
+      "equation": "2Na(s) + Cl₂(g) → 2NaCl(s)",
+      "equation_bn": "2Na(কঠি) + Cl₂(গ্যা) → 2NaCl(কঠি)",
+      "observation_en": "Sodium burns violently in chlorine, leaving white salt.",
+      "observation_bn": "ক্লোরিনে সোডিয়াম প্রচণ্ডভাবে জ্বলে সাদা লবণ তৈরি করে।",
+      "hazard_en": "Toxic gas plus reactive metal. Demonstration only.",
+      "hazard_bn": "বিষাক্ত গ্যাস ও সক্রিয় ধাতু। শুধু প্রদর্শনী।"
+    },
+    {
+      "category": "safety",
+      "reactants": [
+        {
+          "id": "H2SO4",
+          "coefficient": 1
+        },
+        {
+          "id": "NaOH",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "NaHSO4",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#f2f2f2",
+          "density": 0.3
+        },
+        "deltaT": 30,
+        "flame": null,
+        "glow": false,
+        "sound": "hiss",
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 0,
+      "tags": [],
+      "id": "h2so4-naoh-conc",
+      "equation": "H₂SO₄ + NaOH → NaHSO₄ + H₂O (acid in excess)",
+      "equation_bn": "H₂SO₄ + NaOH → NaHSO₄ + H₂O (অ্যাসিড বেশি)",
+      "observation_en": "Partial neutralisation with the mixture boiling hot — spitting is likely.",
+      "observation_bn": "আংশিক প্রশমন ঘটে এবং মিশ্রণ ফুটন্ত গরম হয় — ছিটকে পড়ার সম্ভাবনা থাকে।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "O2",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 200,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": {
+          "color": "#ffb03a",
+          "label_en": "Splint relights",
+          "label_bn": "কাঠি আবার জ্বলে"
+        },
+        "glow": true,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "gas-test"
+      ],
+      "id": "o2-glowing-splint",
+      "equation": "O₂(g) + glowing splint → flame",
+      "equation_bn": "O₂(গ্যা) + ধূমায়িত কাঠি → শিখা",
+      "observation_en": "A glowing splint bursts back into flame in oxygen.",
+      "observation_bn": "অক্সিজেনে ধূমায়িত কাঠি দপ করে আবার জ্বলে ওঠে।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "H2",
+          "coefficient": 1
+        },
+        {
+          "id": "O2",
+          "coefficient": 0.5
+        }
+      ],
+      "products": [
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": true,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 40,
+        "flame": null,
+        "glow": true,
+        "sound": "pop",
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 5,
+      "tags": [
+        "gas-test"
+      ],
+      "id": "h2-pop-test",
+      "equation": "2H₂ + O₂ → 2H₂O (pop test)",
+      "equation_bn": "2H₂ + O₂ → 2H₂O (পট পরীক্ষা)",
+      "observation_en": "A lighted splint gives the characteristic squeaky \"pop\".",
+      "observation_bn": "জ্বলন্ত কাঠিতে বৈশিষ্ট্যসূচক \"পট\" শব্দ হয়।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "CO2",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 200,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "gas-test"
+      ],
+      "id": "co2-extinguish",
+      "equation": "CO₂(g) + flame → flame goes out",
+      "equation_bn": "CO₂(গ্যা) + শিখা → শিখা নির্বাপিত",
+      "observation_en": "Carbon dioxide does not support burning, so the flame dies.",
+      "observation_bn": "কার্বন ডাই-অক্সাইড দহনে সহায়তা করে না, তাই শিখা নিভে যায়।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "N2",
+          "coefficient": 1
+        },
+        {
+          "id": "H2",
+          "coefficient": 3
+        }
+      ],
+      "products": [
+        {
+          "id": "NH3",
+          "coefficient": 2,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 450,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f1f8f4",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 10,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 0,
+      "tags": [],
+      "id": "n2-inert",
+      "equation": "N₂(g) + 3H₂(g) ⇌[450 °C, catalyst] 2NH₃(g)",
+      "equation_bn": "N₂(গ্যা) + 3H₂(গ্যা) ⇌[৪৫০ °সে, প্রভাবক] 2NH₃(গ্যা)",
+      "observation_en": "The Haber process needs high pressure and an iron catalyst — only a trace forms here.",
+      "observation_bn": "হেবার পদ্ধতিতে উচ্চ চাপ ও আয়রন প্রভাবক লাগে — এখানে সামান্যই তৈরি হয়।"
+    },
+    {
+      "category": "no-reaction",
+      "reactants": [
+        {
+          "id": "He",
+          "coefficient": 1
+        },
+        {
+          "id": "O2",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "noble-no-reaction",
+      "equation": "He + O₂ → no reaction",
+      "equation_bn": "He + O₂ → কোনো বিক্রিয়া নেই",
+      "observation_en": "Noble gases have full outer shells — nothing happens.",
+      "observation_bn": "নিষ্ক্রিয় গ্যাসের বাহ্যিক কক্ষক পূর্ণ — তাই কিছুই হয় না।"
+    },
+    {
+      "category": "no-reaction",
+      "reactants": [
+        {
+          "id": "Ar",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "ar-hcl-no-reaction",
+      "equation": "Ar + HCl → no reaction",
+      "equation_bn": "Ar + HCl → কোনো বিক্রিয়া নেই",
+      "observation_en": "Argon ignores the acid completely.",
+      "observation_bn": "আর্গন অ্যাসিডকে সম্পূর্ণ উপেক্ষা করে।"
+    },
+    {
+      "category": "no-reaction",
+      "reactants": [
+        {
+          "id": "Ne",
+          "coefficient": 1
+        },
+        {
+          "id": "O2",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "ne-o2-no-reaction",
+      "equation": "Ne + O₂ → no reaction",
+      "equation_bn": "Ne + O₂ → কোনো বিক্রিয়া নেই",
+      "observation_en": "Neon is inert — it only glows in a discharge tube.",
+      "observation_bn": "নিয়ন নিষ্ক্রিয় — শুধু ডিসচার্জ টিউবে আভা দেয়।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "Ne",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": true,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": {
+          "color": "#ff5a2a",
+          "label_en": "Red-orange glow",
+          "label_bn": "লাল-কমলা আভা"
+        },
+        "glow": true,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "noble-glow",
+      "equation": "Ne(g) →[discharge] red-orange glow",
+      "equation_bn": "Ne(গ্যা) →[ডিসচার্জ] লাল-কমলা আভা",
+      "observation_en": "An electric discharge makes neon glow red-orange — the neon sign.",
+      "observation_bn": "বৈদ্যুতিক ডিসচার্জে নিয়ন লাল-কমলা আভা দেয় — নিয়ন সাইন।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "Ar",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": true,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": {
+          "color": "#c07cff",
+          "label_en": "Lilac glow",
+          "label_bn": "বেগুনি আভা"
+        },
+        "glow": true,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "ar-glow",
+      "equation": "Ar(g) →[discharge] lilac glow",
+      "equation_bn": "Ar(গ্যা) →[ডিসচার্জ] বেগুনি আভা",
+      "observation_en": "Argon glows lilac in a discharge tube.",
+      "observation_bn": "ডিসচার্জ টিউবে আর্গন বেগুনি আভা দেয়।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "He",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": true,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": {
+          "color": "#ffb3d1",
+          "label_en": "Pink glow",
+          "label_bn": "গোলাপি আভা"
+        },
+        "glow": true,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "he-glow",
+      "equation": "He(g) →[discharge] pink glow",
+      "equation_bn": "He(গ্যা) →[ডিসচার্জ] গোলাপি আভা",
+      "observation_en": "Helium glows pink.",
+      "observation_bn": "হিলিয়াম গোলাপি আভা দেয়।"
+    },
+    {
+      "category": "solution",
+      "reactants": [
+        {
+          "id": "Cl2",
+          "coefficient": 1
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "HCl",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "HClO",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#e6eec4",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 1,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 1,
+      "tags": [],
+      "id": "cl2-h2o",
+      "equation": "Cl₂(g) + H₂O(l) ⇌ HCl(aq) + HClO(aq)",
+      "equation_bn": "Cl₂(গ্যা) + H₂O(ত) ⇌ HCl(দ্রব) + HClO(দ্রব)",
+      "observation_en": "Chlorine water: pale green, acidic, and a bleaching agent.",
+      "observation_bn": "ক্লোরিন পানি: হালকা সবুজ, অম্লীয় এবং ব্লিচিং ক্ষমতাসম্পন্ন।"
+    },
+    {
+      "category": "redox",
+      "reactants": [
+        {
+          "id": "KMnO4",
+          "coefficient": 2
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 3
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": "#8a3fb0",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 3,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "kmno4-h2o2-free",
+      "equation": "2KMnO₄ + 3H₂SO₄ → K₂SO₄ + 2MnSO₄ + 3H₂O + 5[O]",
+      "equation_bn": "2KMnO₄ + 3H₂SO₄ → K₂SO₄ + 2MnSO₄ + 3H₂O + 5[O]",
+      "observation_en": "Acidified permanganate is a powerful oxidising solution, ready for a titration.",
+      "observation_bn": "অ্যাসিডীয় পারম্যাঙ্গানেট একটি শক্তিশালী জারক দ্রবণ, টাইট্রেশনের জন্য প্রস্তুত।"
+    },
+    {
+      "category": "solution",
+      "reactants": [
+        {
+          "id": "NaOH",
+          "coefficient": 1
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 6,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 0,
+      "tags": [],
+      "id": "naoh-h2o-dilute",
+      "equation": "NaOH(s) →[H₂O] Na⁺(aq) + OH⁻(aq)",
+      "equation_bn": "NaOH(কঠি) →[H₂O] Na⁺(দ্রব) + OH⁻(দ্রব)",
+      "observation_en": "Dissolving alkali warms the water slightly; the solution stays alkaline.",
+      "observation_bn": "ক্ষার দ্রবীভূত হলে পানি সামান্য উষ্ণ হয়; দ্রবণ ক্ষারীয়ই থাকে।"
+    },
+    {
+      "category": "gas-test",
+      "reactants": [
+        {
+          "id": "Ca(OH)2",
+          "coefficient": 1
+        },
+        {
+          "id": "SO2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CaSO3",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f2f6f7",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "CaSO3",
+          "color": "#f4f6f6",
+          "density": 0.6
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "caoh2-co2-milk",
+      "equation": "Ca(OH)₂(aq) + SO₂(g) → CaSO₃(s)↓ + H₂O(l)",
+      "equation_bn": "Ca(OH)₂(দ্রব) + SO₂(গ্যা) → CaSO₃(কঠি)↓ + H₂O(ত)",
+      "observation_en": "Limewater also turns milky with sulphur dioxide.",
+      "observation_bn": "সালফার ডাই-অক্সাইডেও চুনের পানি ঘোলা হয়।"
+    },
+    {
+      "category": "oxidation",
+      "reactants": [
+        {
+          "id": "Fe",
+          "coefficient": 4
+        },
+        {
+          "id": "O2",
+          "coefficient": 3
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Fe2O3",
+          "coefficient": 2,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#8f3d20",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": {
+          "id": "Fe2O3",
+          "color": "#8f3d20",
+          "density": 0.5
+        },
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 0,
+      "tags": [],
+      "id": "fe-rust",
+      "equation": "4Fe(s) + 3O₂(g) + 2H₂O(l) → 2Fe₂O₃·H₂O(s) (rust)",
+      "equation_bn": "4Fe(কঠি) + 3O₂(গ্যা) + 2H₂O(ত) → 2Fe₂O₃·H₂O(কঠি) (মরচে)",
+      "observation_en": "Iron slowly rusts where air and water meet.",
+      "observation_bn": "বাতাস ও পানির সংস্পর্শে আয়রন ধীরে ধীরে মরচে ধরে।"
+    },
+    {
+      "category": "physical",
+      "reactants": [
+        {
+          "id": "H2O",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 100,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#eef4f8",
+          "density": 0.5
+        },
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "heating"
+      ],
+      "id": "h2o-boil",
+      "equation": "H₂O(l) →[100 °C] H₂O(g)",
+      "equation_bn": "H₂O(ত) →[১০০ °সে] H₂O(গ্যা)",
+      "observation_en": "Water boils at 100 °C and turns into steam — a physical change.",
+      "observation_bn": "১০০ °সে তাপমাত্রায় পানি ফুটে বাষ্পে পরিণত হয় — এটি ভৌত পরিবর্তন।"
+    },
+    {
+      "category": "physical",
+      "reactants": [
+        {
+          "id": "CuSO4",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 100,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": "#cfe0ee",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#eef4f8",
+          "density": 0.4
+        },
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [],
+      "id": "cuso4-crystal-heat",
+      "equation": "CuSO₄·5H₂O(s) →[Δ] CuSO₄(s) + 5H₂O(g)↑",
+      "equation_bn": "CuSO₄·5H₂O(কঠি) →[তাপ] CuSO₄(কঠি) + 5H₂O(গ্যা)↑",
+      "observation_en": "Heating drives off water of crystallisation — blue fades to white.",
+      "observation_bn": "তাপ দিলে কেলাস পানি বেরিয়ে যায় — নীল রঙ সাদা হয়ে আসে।"
+    }
+  ]
+}

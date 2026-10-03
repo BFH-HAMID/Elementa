@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
-import { BookOpen, FlaskConical, Home, Menu, X, Atom, Bookmark, Sparkles, ChevronDown } from 'lucide-react';
+import { BookOpen, FlaskConical, Home, Menu, X, Atom, Bookmark, Sparkles, ChevronDown, Beaker } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { CommandPalette } from './CommandPalette';
 import { LangSwitch } from './LangSwitch';
@@ -76,9 +76,11 @@ export function Navbar() {
               {subjectLinks.map(({ key, href, icon: Icon }) => <Link key={key} role="menuitem" href={hrefFor(href)} onClick={() => setSubjectsOpen(false)} className="flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-bold text-[var(--muted)] transition hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]"><Icon size={17} className={key === 'physics' ? 'text-physics-600' : 'text-chemistry-600'} />{common(key)}</Link>)}
             </div>}
           </div>
+          <Link href={hrefFor('/lab/chemistry')} aria-current={isActive('/lab') ? 'page' : undefined} className={cn('ml-1 flex items-center gap-1.5 rounded-lg bg-chemistry-600 px-3 py-2 text-sm font-black text-white shadow-sm transition hover:bg-chemistry-700 dark:bg-chemistry-600 dark:hover:bg-chemistry-500', isActive('/lab') && 'ring-2 ring-chemistry-300 dark:ring-chemistry-700')}><Beaker size={15} />{t('chemistryLab')}</Link>
         </nav>
         <div className="flex items-center gap-1">
           <CommandPalette />
+          <Link href={hrefFor('/lab/chemistry')} className="btn-ghost min-h-9 rounded-lg p-2 text-chemistry-600 dark:text-chemistry-200 lg:hidden" aria-label={t('chemistryLab')}><Beaker size={17} /></Link>
           <Link href={hrefFor('/bookmarks')} className="btn-ghost min-h-9 rounded-lg p-2" aria-label={t('bookmarks')}><Bookmark size={17} /></Link>
           <LangSwitch /><ThemeToggle />
           <button type="button" className="btn-ghost min-h-9 rounded-lg p-2 lg:hidden" onClick={() => setMobileOpen((value) => !value)} aria-label={mobileOpen ? 'Close menu' : 'Open menu'} aria-expanded={mobileOpen}>{mobileOpen ? <X size={20} /> : <Menu size={20} />}</button>
@@ -87,6 +89,7 @@ export function Navbar() {
       {mobileOpen && <nav className="border-t border-[var(--line)] bg-[var(--surface)] lg:hidden" aria-label="Mobile navigation">
         <div className="page-shell grid max-h-[calc(100dvh-4rem)] grid-cols-2 gap-2 overflow-y-auto py-3 sm:grid-cols-4">
           {links.map(({ key, href, icon: Icon }) => { const active = isActive(href); return <Link key={key} href={hrefFor(href)} onClick={() => setMobileOpen(false)} aria-current={active ? 'page' : undefined} className={cn('flex items-center gap-2 rounded-xl p-3 text-sm font-bold transition', active ? 'bg-physics-50 text-physics-700 dark:bg-physics-900/60 dark:text-physics-100' : 'text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]')}><Icon size={17} />{t(key)}</Link>; })}
+          <Link href={hrefFor('/lab/chemistry')} onClick={() => setMobileOpen(false)} aria-current={isActive('/lab') ? 'page' : undefined} className={cn('col-span-2 flex items-center gap-2 rounded-xl p-3 text-sm font-black text-white transition sm:col-span-4', isActive('/lab') ? 'bg-chemistry-700' : 'bg-chemistry-600 hover:bg-chemistry-700')}><Beaker size={17} />{t('chemistryLab')}</Link>
           <Link href={hrefFor('/constants')} onClick={() => setMobileOpen(false)} className={cn('flex items-center gap-2 rounded-xl p-3 text-sm font-bold transition', pathname.startsWith(hrefFor('/constants')) ? 'bg-physics-50 text-physics-700 dark:bg-physics-900/60 dark:text-physics-100' : 'text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]')}><Atom size={17} />{t('constants')}</Link>
           {subjectLinks.map(({ key, href, icon: Icon }) => { const active = pathname === hrefFor(href); return <Link key={key} href={hrefFor(href)} onClick={() => setMobileOpen(false)} aria-current={active ? 'page' : undefined} className={cn('flex items-center gap-2 rounded-xl p-3 text-sm font-bold transition', active ? 'bg-physics-50 text-physics-700 dark:bg-physics-900/60 dark:text-physics-100' : 'text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]')}><Icon size={17} />{common(key)}</Link>; })}
         </div>

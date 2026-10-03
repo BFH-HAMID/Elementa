@@ -6,7 +6,10 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './lib/**/*.{js,ts,jsx,tsx,mdx}',
-    './simulations/**/*.{js,ts,jsx,tsx,mdx}'
+    './simulations/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/lab/**/*.{js,ts,jsx,tsx}',
+    './engine/**/*.{js,ts,jsx,tsx}',
+    './store/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     container: {
@@ -81,13 +84,53 @@ const config: Config = {
         },
         shimmer: {
           '100%': { transform: 'translateX(100%)' }
+        },
+        // ── Elementa Chemistry Lab effect loops ──────────────────────────────
+        bubbleRise: {
+          '0%': { transform: 'translateY(0) scale(0.55)', opacity: '0' },
+          '15%': { opacity: '0.85' },
+          '100%': { transform: 'translateY(-100%) scale(1)', opacity: '0' }
+        },
+        smokeRise: {
+          '0%': { transform: 'translate3d(0, 6px, 0) scale(0.5)', opacity: '0' },
+          '25%': { opacity: '0.55' },
+          '100%': { transform: 'translate3d(10px, -70px, 0) scale(2.1)', opacity: '0' }
+        },
+        settle: {
+          '0%': { transform: 'translateY(-14px)', opacity: '0.9' },
+          '100%': { transform: 'translateY(0)', opacity: '1' }
+        },
+        flicker: {
+          '0%, 100%': { transform: 'scaleY(1) scaleX(1)', opacity: '0.95' },
+          '35%': { transform: 'scaleY(1.14) scaleX(0.93)', opacity: '1' },
+          '70%': { transform: 'scaleY(0.92) scaleX(1.06)', opacity: '0.88' }
+        },
+        hazardPulse: {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(232, 121, 91, 0.55)' },
+          '50%': { boxShadow: '0 0 0 14px rgba(232, 121, 91, 0)' }
+        },
+        flashOut: {
+          '0%': { opacity: '0.95' },
+          '100%': { opacity: '0' }
+        },
+        pourStream: {
+          '0%': { transform: 'scaleY(0)', opacity: '0' },
+          '20%': { transform: 'scaleY(1)', opacity: '1' },
+          '100%': { transform: 'scaleY(1)', opacity: '0' }
         }
       },
       animation: {
         drift: 'drift 12s ease-in-out infinite',
         'drift-slow': 'drift 18s ease-in-out infinite reverse',
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
-        shimmer: 'shimmer 2s infinite'
+        shimmer: 'shimmer 2s infinite',
+        'bubble-rise': 'bubbleRise var(--bubble-duration, 2.2s) linear infinite',
+        'smoke-rise': 'smokeRise var(--smoke-duration, 3.4s) ease-out infinite',
+        settle: 'settle 1.6s ease-out forwards',
+        flicker: 'flicker 0.45s ease-in-out infinite',
+        'hazard-pulse': 'hazardPulse 1.4s ease-out infinite',
+        'flash-out': 'flashOut 0.9s ease-out forwards',
+        'pour-stream': 'pourStream 0.9s ease-out forwards'
       }
     }
   },

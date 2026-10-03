@@ -1,0 +1,70 @@
+{
+  "slug": "honours-acid-dissociation-ratio",
+  "title_en": "Acid dissociation and conjugate-base ratio — concept check",
+  "title_bn": "অম্লের বিয়োজন অনুপাত — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At pH=pKa, ratio base/acid?",
+      "q_bn": "pH=pKa হলে ক্ষার/অম্ল অনুপাত?",
+      "options": [
+        "1",
+        "10",
+        "0.1",
+        "0"
+      ],
+      "options_bn": [
+        "1",
+        "10",
+        "0.1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "10⁰=1.",
+      "explanation_bn": "১০⁰=১।"
+    },
+    {
+      "q": "If pH exceeds pKa by 1, [A−]/[HA]?",
+      "q_bn": "pH, pKa-এর চেয়ে ১ বেশি হলে [A−]/[HA] কত?",
+      "options": [
+        "10",
+        "1",
+        "0.1",
+        "100"
+      ],
+      "options_bn": [
+        "10",
+        "1",
+        "0.1",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "Use pH=pK_a+\\log_{10}([A^-]/[HA]). When pH exceeds pKa by one, base-to-acid ratio is 10:1.",
+      "explanation_bn": "pH=pK_a+\\log_{10}([A^-]/[HA]) ব্যবহার করুন। pH, pKa-এর চেয়ে ১ বেশি হলে ক্ষার:অম্ল অনুপাত ১০:১।"
+    },
+    {
+      "q": "At high ionic strength, should raw concentrations replace activities without correction?",
+      "q_bn": "উচ্চ আয়নিক শক্তিতে সংশোধন ছাড়া সক্রিয়তার বদলে ঘনত্ব নেওয়া যায়?",
+      "options": [
+        "No",
+        "Yes, exactly",
+        "Only for proteins",
+        "Only at pH 7"
+      ],
+      "options_bn": [
+        "No",
+        "Yes, exactly",
+        "Only for proteins",
+        "Only at pH 7"
+      ],
+      "answer": 0,
+      "explanation": "Dilute buffer approximation; at high ionic strength use activities, not raw concentrations.",
+      "explanation_bn": "বিরল বাফারে অনুমান; উচ্চ আয়নিক শক্তিতে ঘনত্ব নয়, সক্রিয়তা নিন।"
+    }
+  ]
+}

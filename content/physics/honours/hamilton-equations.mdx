@@ -1,0 +1,64 @@
+---
+type: "equation"
+slug: "hamilton-equations"
+title_bn: "হ্যামিল্টনের সমীকরণ"
+title_en: "Hamilton’s canonical equations"
+subject: "physics"
+level: "honours"
+chapter: "Analytical Mechanics"
+chapter_bn: "Analytical Mechanics"
+latex: "\\dot q=\\frac{\\partial H}{\\partial p},\\quad\\dot p=-\\frac{\\partial H}{\\partial q}"
+calculator: false
+variables:
+  - symbol: "q"
+    name: "generalized coordinate"
+    name_bn: "generalized coordinate"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "p"
+    name: "conjugate momentum"
+    name_bn: "conjugate momentum"
+    unit: "kg m/s"
+    si_unit: "kg m/s"
+  - symbol: "H"
+    name: "Hamiltonian"
+    name_bn: "Hamiltonian"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "t"
+    name: "time"
+    name_bn: "time"
+    unit: "s"
+    si_unit: "s"
+derivation: "Define conjugate momentum and Legendre-transform the regular Lagrangian. Differentiate H and use the Euler–Lagrange equation to cancel the velocity term. Equate coefficients of independent dq and dp."
+derivation_bn: "সংযুগী ভরবেগ সংজ্ঞায়িত করে নিয়মিত ল্যাগ্রাঞ্জীয়ের লেজান্দ্র রূপান্তর করুন। H অন্তরক করে অয়লার–ল্যাগ্রাঞ্জ সমীকরণ দিয়ে বেগ-পদ বাদ দিন। স্বাধীন dq ও dp-এর সহগ তুলনা করুন।"
+derivation_steps:
+  - step_en: "Define conjugate momentum and Legendre-transform the regular Lagrangian."
+    step_bn: "সংযুগী ভরবেগ সংজ্ঞায়িত করে নিয়মিত ল্যাগ্রাঞ্জীয়ের লেজান্দ্র রূপান্তর করুন।"
+    latex: "p=\\partial L/\\partial\\dot q,\\quad H=p\\dot q-L"
+  - step_en: "Differentiate H and use the Euler–Lagrange equation to cancel the velocity term."
+    step_bn: "H অন্তরক করে অয়লার–ল্যাগ্রাঞ্জ সমীকরণ দিয়ে বেগ-পদ বাদ দিন।"
+    latex: "dH=\\dot q\\,dp-\\dot p\\,dq-\\partial_tL\\,dt"
+  - step_en: "Equate coefficients of independent dq and dp."
+    step_bn: "স্বাধীন dq ও dp-এর সহগ তুলনা করুন।"
+    latex: "\\dot q=\\frac{\\partial H}{\\partial p},\\quad\\dot p=-\\frac{\\partial H}{\\partial q}"
+summary_en: "For a free mass in a spring, H=p²/(2m)+kq²/2. Thus q̇=p/m and ṗ=−kq, so mq̈=−kq."
+summary_bn: " প্রথম-ক্রমের দুটি সমীকরণ একই দোলন দেয়।"
+tags:
+  - "honours"
+  - "analytical mechanics"
+---
+
+### প্রয়োগ / Worked example
+
+For a free mass in a spring, H=p²/(2m)+kq²/2. Thus q̇=p/m and ṗ=−kq, so mq̈=−kq. বাংলায়: প্রথম-ক্রমের দুটি সমীকরণ একই দোলন দেয়।
+
+### সীমাবদ্ধতা / Assumptions
+
+The Legendre transformation requires invertible p(q̇); constrained or singular Lagrangians require extra treatment. H need not equal total energy when coordinates or potentials depend explicitly on time.
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+No direct lab for this theoretical relation is supplied. Apply the stated assumptions to a worked calculation and compare measurable predictions only when the appropriate apparatus is available.
+
+এই তাত্ত্বিক সম্পর্কের সরাসরি ল্যাব এখানে নেই। শর্ত মেনে উদাহরণ হিসাব করুন; উপযুক্ত যন্ত্র থাকলেই মাপযোগ্য পূর্বাভাস তুলনা করুন।

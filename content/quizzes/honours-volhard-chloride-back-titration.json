@@ -1,0 +1,70 @@
+{
+  "slug": "honours-volhard-chloride-back-titration",
+  "title_en": "Volhard back-titration of chloride — lab viva",
+  "title_bn": "ভলহার্ডের পদ্ধতিতে ক্লোরাইডের বিপরীত টাইট্রেশন — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Is Volhard chloride analysis a direct or back-titration?",
+      "q_bn": "ক্লোরাইডের ভলহার্ড পদ্ধতি প্রত্যক্ষ না বিপরীত টাইট্রেশন?",
+      "options": [
+        "Back-titration of leftover silver.",
+        "Direct titration of chloride by acid",
+        "Only a gravimetric method",
+        "No titration"
+      ],
+      "options_bn": [
+        "বাকি সিলভারের বিপরীত টাইট্রেশন।",
+        "Direct titration of chloride by acid",
+        "Only a gravimetric method",
+        "No titration"
+      ],
+      "answer": 0,
+      "explanation": "Back-titration of leftover silver. Add known excess AgNO₃ to precipitate chloride; back-titrate leftover Ag+ with SCN−: Ag++SCN−→AgSCN(s). Ferric indicator signals excess SCN− red; prevent AgCl from reacting with SCN− by filtration or validated procedure.",
+      "explanation_bn": "বাকি সিলভারের বিপরীত টাইট্রেশন। জানা অতিরিক্ত AgNO₃ দিয়ে Cl− অধঃক্ষেপ করে বাকি Ag+ কে SCN− দিয়ে মাপুন: Ag++SCN−→AgSCN। Fe³⁺ নির্দেশকে বাড়তি SCN− লাল; AgCl-এর সঙ্গে SCN− বিক্রিয়া ঠেকাতে ছাঁকা বা অনুমোদিত পদ্ধতি নিন।"
+    },
+    {
+      "q": "0.0030 mol Ag+ was added and 0.0010 mol remained for SCN− back-titration. Chloride moles?",
+      "q_bn": "০.০০৩০ mol Ag+ যোগ করে অবশিষ্ট ০.০০১০ mol SCN− দিয়ে মাপলে Cl− কত মোল?",
+      "options": [
+        "0.0030 mol",
+        "0.0020 mol",
+        "0.0040 mol",
+        "0.0010 mol"
+      ],
+      "options_bn": [
+        "০.০০৩০ mol",
+        "০.০০২০ mol",
+        "০.০০৪০ mol",
+        "০.০০১০ mol"
+      ],
+      "answer": 1,
+      "explanation": "Chloride consumed the difference: 0.0030−0.0010=0.0020 mol Ag+, so 0.0020 mol Cl−.",
+      "explanation_bn": "Cl−, Ag+-এর পার্থক্য ০.০০৩০−০.০০১০=০.০০২০ mol গ্রহণ করেছে; তাই Cl− ০.০০২০ mol।"
+    },
+    {
+      "q": "Why might AgCl be separated before back-titrating residual silver with SCN−?",
+      "q_bn": "বাকি সিলভারকে SCN− দিয়ে মাপার আগে AgCl কেন আলাদা করতে হয়?",
+      "options": [
+        "SCN− cannot precipitate silver",
+        "SCN− can react with AgCl and bias the back-titre",
+        "AgCl produces additional chloride from water",
+        "Filtering changes the added silver moles"
+      ],
+      "options_bn": [
+        "SCN− সিলভার অধঃক্ষেপ করতে পারে না",
+        "SCN−, AgCl-এর সঙ্গে বিক্রিয়া করে বিপরীত পাঠ বদলাতে পারে",
+        "AgCl পানি থেকে ক্লোরাইড বানায়",
+        "ছাঁকায় দেওয়া সিলভারের মোল বাড়ে"
+      ],
+      "answer": 1,
+      "explanation": "AgSCN is less soluble than AgCl; contact with AgCl can consume thiocyanate beyond that needed for free Ag+, affecting calculated chloride.",
+      "explanation_bn": "AgSCN, AgCl-এর চেয়ে কম দ্রবণীয়; AgCl থাকলে মুক্ত Ag+ ছাড়াও SCN− খরচ হয়ে ক্লোরাইডের হিসাব বদলায়।"
+    }
+  ]
+}

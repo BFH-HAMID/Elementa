@@ -1,0 +1,70 @@
+{
+  "slug": "honours-ester-hydrolysis-kinetics",
+  "title_en": "Acid-catalysed ester hydrolysis kinetics — lab viva",
+  "title_bn": "অম্ল-অনুঘটিত এস্টার হাইড্রোলাইসিসের গতিবিদ্যা — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why is the reaction called pseudo-first-order?",
+      "q_bn": "বিক্রিয়াকে ছদ্ম প্রথম-ক্রম কেন বলি?",
+      "options": [
+        "Water is in such excess that its concentration is effectively constant.",
+        "Because no water participates",
+        "Because ester concentration is constant",
+        "Because catalyst is consumed"
+      ],
+      "options_bn": [
+        "পানি এত বেশি যে তার ঘনত্ব প্রায় স্থির।",
+        "Because no water participates",
+        "Because ester concentration is constant",
+        "Because catalyst is consumed"
+      ],
+      "answer": 0,
+      "explanation": "Water is in such excess that its concentration is effectively constant. With water in large excess and constant acid catalyst, ester decay can be pseudo-first-order: ln[(V∞−V₀)/(V∞−Vt)]=kt when titration volume reflects produced acid.",
+      "explanation_bn": "পানি এত বেশি যে তার ঘনত্ব প্রায় স্থির। পানি অনেক বেশি ও অম্ল অনুঘটক স্থির হলে এস্টারের ক্ষয় ছদ্ম প্রথম-ক্রম: উৎপন্ন অম্লের টাইট্রেশন আয়তনে ln[(V∞−V₀)/(V∞−Vt)]=kt।"
+    },
+    {
+      "q": "Which graph is linear for pseudo-first-order ester hydrolysis with valid V∞?",
+      "q_bn": "সঠিক V∞ নিয়ে ছদ্ম প্রথম-ক্রম এস্টার হাইড্রোলাইসিসে কোন লেখচিত্র সরলরেখা?",
+      "options": [
+        "Vt² against t",
+        "1/t against Vt always",
+        "Temperature against time always",
+        "ln[(V∞−V₀)/(V∞−Vt)] against t"
+      ],
+      "options_bn": [
+        "Vt² বনাম t",
+        "সবসময় ১/t বনাম Vt",
+        "সবসময় তাপমাত্রা বনাম সময়",
+        "ln[(V∞−V₀)/(V∞−Vt)] বনাম t"
+      ],
+      "answer": 3,
+      "explanation": "The integrated pseudo-first-order law is ln[(V∞−V₀)/(V∞−Vt)]=kt; the slope gives k.",
+      "explanation_bn": "সমাকলিত ছদ্ম প্রথম-ক্রম সূত্র ln[(V∞−V₀)/(V∞−Vt)]=kt; ঢাল থেকে k।"
+    },
+    {
+      "q": "Why determine V∞ using a fully reacted aliquot rather than assume it?",
+      "q_bn": "V∞ অনুমান না করে সম্পূর্ণ বিক্রিয়ার নমুনা থেকে কেন মাপবেন?",
+      "options": [
+        "V∞ is always equal to V₀",
+        "V∞ removes the need to record time",
+        "Catalyst acid concentration is always zero",
+        "V∞ sets the remaining-ester estimate V∞−Vt"
+      ],
+      "options_bn": [
+        "V∞ সবসময় V₀-এর সমান",
+        "V∞ পেলে সময় মাপতে হয় না",
+        "অনুঘটক অম্ল সবসময় শূন্য",
+        "V∞−Vt অবশিষ্ট এস্টারের পরিমাণ নির্দেশ করে"
+      ],
+      "answer": 3,
+      "explanation": "The kinetic plot uses ln[(V∞−V₀)/(V∞−Vt)]. A wrong V∞ distorts every transformed value and can create a false linear trend.",
+      "explanation_bn": "গতির লেখচিত্র ln[(V∞−V₀)/(V∞−Vt)] ব্যবহার করে। ভুল V∞ সব রূপান্তরিত পাঠ ও রেখার ঢাল বিকৃত করে।"
+    }
+  ]
+}

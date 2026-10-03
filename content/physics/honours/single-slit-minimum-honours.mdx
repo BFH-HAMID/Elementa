@@ -1,0 +1,72 @@
+---
+type: "equation"
+slug: "single-slit-minimum-honours"
+title_bn: "একক চিরের অন্ধকার ঝালর"
+title_en: "Single-slit diffraction minima"
+subject: "physics"
+level: "honours"
+chapter: "Honours Physics"
+chapter_bn: "স্নাতক পদার্থবিজ্ঞান"
+latex: "a\\sin\\theta=m\\lambda"
+calculator: false
+variables:
+  - symbol: "a"
+    name: "slit width"
+    name_bn: "slit width"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "θ"
+    name: "diffraction angle"
+    name_bn: "diffraction angle"
+    unit: "rad"
+    si_unit: "rad"
+  - symbol: "m"
+    name: "minimum order"
+    name_bn: "minimum order"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "λ"
+    name: "wavelength"
+    name_bn: "wavelength"
+    unit: "m"
+    si_unit: "m"
+derivation: "Sum coherent contributions across a uniformly illuminated aperture of width a. E(\\theta)\\propto\\int_{-a/2}^{a/2}e^{ikx\\sin\\theta}dx\\propto\\frac{\\sin(\\pi a\\sin\\theta/\\lambda)}{\\pi a\\sin\\theta/\\lambda} Substitute the preceding result and identify the requested relation."
+derivation_bn: "a প্রস্থের সমানভাবে আলোকিত চিরের অংশগুলোর বিস্তার যোগ করুন। E(\\theta)\\propto\\int_{-a/2}^{a/2}e^{ikx\\sin\\theta}dx\\propto\\frac{\\sin(\\pi a\\sin\\theta/\\lambda)}{\\pi a\\sin\\theta/\\lambda} আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation_steps:
+  - step_en: "Sum coherent contributions across a uniformly illuminated aperture of width a."
+    step_bn: "a প্রস্থের সমানভাবে আলোকিত চিরের অংশগুলোর বিস্তার যোগ করুন।"
+    latex: "E(\\theta)\\propto\\int_{-a/2}^{a/2}e^{ikx\\sin\\theta}dx\\propto\\frac{\\sin(\\pi a\\sin\\theta/\\lambda)}{\\pi a\\sin\\theta/\\lambda}"
+  - step_en: "Substitute the preceding result and identify the requested relation."
+    step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+    latex: "a\\sin\\theta=m\\lambda"
+summary_en: "For λ=500 nm and a=0.10 mm, the first minimum is near θ=0.005 rad."
+summary_bn: "λ=৫০০ nm ও a=০.১০ mm-এ প্রথম অন্ধকার প্রায় θ=০.০০৫ rad।"
+tags:
+  - "honours"
+  - "physics"
+  - "derivation"
+---
+
+### প্রতিপাদনের ব্যাখ্যা / Derivation
+
+Sum coherent contributions across a uniformly illuminated aperture of width a. `E(\theta)\propto\int_{-a/2}^{a/2}e^{ikx\sin\theta}dx\propto\frac{\sin(\pi a\sin\theta/\lambda)}{\pi a\sin\theta/\lambda}` Substitute the preceding result and identify the requested relation.
+
+a প্রস্থের সমানভাবে আলোকিত চিরের অংশগুলোর বিস্তার যোগ করুন। `E(\theta)\propto\int_{-a/2}^{a/2}e^{ikx\sin\theta}dx\propto\frac{\sin(\pi a\sin\theta/\lambda)}{\pi a\sin\theta/\lambda}` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
+
+### সমাধানসহ উদাহরণ / Worked application
+
+For λ=500 nm and a=0.10 mm, the first minimum is near θ=0.005 rad.
+
+λ=৫০০ nm ও a=০.১০ mm-এ প্রথম অন্ধকার প্রায় θ=০.০০৫ rad।
+
+### সীমা ও সতর্কতা / Assumptions
+
+Fraunhofer far field, uniform illumination, m nonzero integer; m=0 is the central maximum.
+
+দূরক্ষেত্র ও সুষম আলোকন; m অশূন্য পূর্ণসংখ্যা, m=০ কেন্দ্রীয় উজ্জ্বল অংশ।
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+No direct lab for this theoretical relation is supplied. Apply the stated assumptions to a worked calculation and compare measurable predictions only when the appropriate apparatus is available.
+
+এই তাত্ত্বিক সম্পর্কের সরাসরি ল্যাব এখানে নেই। শর্ত মেনে উদাহরণ হিসাব করুন; উপযুক্ত যন্ত্র থাকলেই মাপযোগ্য পূর্বাভাস তুলনা করুন।

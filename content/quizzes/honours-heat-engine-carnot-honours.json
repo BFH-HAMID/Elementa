@@ -1,0 +1,70 @@
+{
+  "slug": "honours-heat-engine-carnot-honours",
+  "title_en": "Carnot heat-engine efficiency — concept check",
+  "title_bn": "কার্নো ইঞ্জিনের সর্বোচ্চ দক্ষতা — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For Th=600 K and Tc=300 K maximum η is?",
+      "q_bn": "Th=৬০০ K ও Tc=৩০০ K হলে সর্বোচ্চ η কত?",
+      "options": [
+        "50%",
+        "25%",
+        "100%",
+        "0%"
+      ],
+      "options_bn": [
+        "50%",
+        "25%",
+        "100%",
+        "0%"
+      ],
+      "answer": 0,
+      "explanation": "1−300/600=0.5.",
+      "explanation_bn": "১−৩০০/৬০০=০.৫।"
+    },
+    {
+      "q": "For Th=900 K and Tc=300 K, maximum efficiency?",
+      "q_bn": "Th=৯০০ K ও Tc=৩০০ K হলে সর্বোচ্চ দক্ষতা?",
+      "options": [
+        "66.7%",
+        "33.3%",
+        "50%",
+        "100%"
+      ],
+      "options_bn": [
+        "66.7%",
+        "33.3%",
+        "50%",
+        "100%"
+      ],
+      "answer": 0,
+      "explanation": "Use Q_c/T_c=Q_h/T_h;\\quad\\eta=(Q_h-Q_c)/Q_h. Th=600 K and Tc=300 K yield η=0.50, not 100%.",
+      "explanation_bn": "Q_c/T_c=Q_h/T_h;\\quad\\eta=(Q_h-Q_c)/Q_h ব্যবহার করুন। Th=৬০০ K ও Tc=৩০০ K হলে দক্ষতা ০.৫০, ১০০% নয়।"
+    },
+    {
+      "q": "Which temperature scale is required in Carnot's ratio?",
+      "q_bn": "কার্নোর অনুপাতে কোন তাপমাত্রার স্কেল নিতে হবে?",
+      "options": [
+        "Kelvin",
+        "Celsius",
+        "Fahrenheit",
+        "Any scale without conversion"
+      ],
+      "options_bn": [
+        "Kelvin",
+        "Celsius",
+        "Fahrenheit",
+        "Any scale without conversion"
+      ],
+      "answer": 0,
+      "explanation": "Reversible upper bound between two reservoirs; temperatures in kelvin and actual engines are less efficient.",
+      "explanation_bn": "দুটি তাপাধারে প্রত্যাবর্তী ঊর্ধ্বসীমা; কেলভিন ব্যবহার করুন, বাস্তবে দক্ষতা কম।"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "honours-neutralization-calorimetry",
+  "title_en": "Enthalpy of strong acid–base neutralization — lab viva",
+  "title_bn": "শক্ত অম্ল-ক্ষারের নিরপেক্ষকরণ এনথ্যালপি — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why is ΔH negative for exothermic neutralization?",
+      "q_bn": "তাপোৎপাদী নিরপেক্ষকরণে ΔH ঋণাত্মক কেন?",
+      "options": [
+        "The reaction releases heat to the solution.",
+        "Because water mass is negative",
+        "Because temperature drops",
+        "Because acid has no heat capacity"
+      ],
+      "options_bn": [
+        "বিক্রিয়া দ্রবণে তাপ ছাড়ে।",
+        "Because water mass is negative",
+        "Because temperature drops",
+        "Because acid has no heat capacity"
+      ],
+      "answer": 0,
+      "explanation": "The reaction releases heat to the solution. For dilute strong acid and base, H++OH−→H₂O; at roughly constant pressure, qsolution≈(msol c+Cc)ΔT and ΔHneutralization≈−qsolution/nwater formed.",
+      "explanation_bn": "বিক্রিয়া দ্রবণে তাপ ছাড়ে। বিরল শক্ত অম্ল-ক্ষারে H++OH−→H₂O; প্রায় স্থির চাপে qsolution≈(msol c+Cc)ΔT ও ΔHনিরপেক্ষকরণ≈−qsolution/উৎপন্ন পানির মোল।"
+    },
+    {
+      "q": "If 0.050 mol water forms and the solution gains 2.85 kJ, reaction enthalpy per mole water is?",
+      "q_bn": "০.০৫০ mol পানি তৈরি হয়ে দ্রবণ ২.৮৫ kJ তাপ পেলে প্রতি মোল পানিতে বিক্রিয়া এনথ্যালপি?",
+      "options": [
+        "−2.85 kJ/mol",
+        "−142.5 kJ/mol",
+        "−57 kJ/mol",
+        "+57 kJ/mol"
+      ],
+      "options_bn": [
+        "−২.৮৫ kJ/mol",
+        "−১৪২.৫ kJ/mol",
+        "−৫৭ kJ/mol",
+        "+৫৭ kJ/mol"
+      ],
+      "answer": 2,
+      "explanation": "The reaction released 2.85 kJ; ΔH≈−2.85/0.050=−57 kJ/mol if heat loss and cup capacity are negligible.",
+      "explanation_bn": "বিক্রিয়া ২.৮৫ kJ ছেড়েছে; ক্ষতি ও পাত্রের তাপধারণ নগণ্য হলে ΔH≈−২.৮৫/০.০৫০=−৫৭ kJ/mol।"
+    },
+    {
+      "q": "Why is the heat absorbed by the calorimeter included along with solution heat?",
+      "q_bn": "দ্রবণের তাপের সঙ্গে ক্যালরিমিটারের শোষিত তাপ কেন ধরবেন?",
+      "options": [
+        "A warmed container has negative mass",
+        "Water cannot absorb heat",
+        "The container warms and absorbs part of the reaction heat",
+        "The container produces extra acid"
+      ],
+      "options_bn": [
+        "গরম পাত্রের ভর ঋণাত্মক",
+        "পানি তাপ শোষণ করতে পারে না",
+        "পাত্র গরম হয়ে বিক্রিয়ার তাপের অংশ শোষণ করে",
+        "পাত্র অতিরিক্ত অম্ল তৈরি করে"
+      ],
+      "answer": 2,
+      "explanation": "At approximately constant pressure, qreleased≈(msol c+Cc)ΔT plus environmental losses; ignoring Cc generally underestimates the reaction heat magnitude.",
+      "explanation_bn": "প্রায় স্থির চাপে qনিঃসৃত≈(msol c+Cc)ΔT এবং পরিবেশের ক্ষতি; Cc বাদ দিলে সাধারণত বিক্রিয়া তাপের মান কম আসে।"
+    }
+  ]
+}

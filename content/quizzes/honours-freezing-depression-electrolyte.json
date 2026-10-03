@@ -1,0 +1,70 @@
+{
+  "slug": "honours-freezing-depression-electrolyte",
+  "title_en": "Electrolyte freezing-point depression — concept check",
+  "title_bn": "তড়িৎবিশ্লেষ্যের হিমাঙ্ক হ্রাস — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If ideal i doubles, ΔTf does what?",
+      "q_bn": "আদর্শ i দ্বিগুণ হলে ΔTf কত?",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Unchanged",
+        "Zero"
+      ],
+      "options_bn": [
+        "Doubles",
+        "Halves",
+        "Unchanged",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "ΔTf is proportional to i at fixed m.",
+      "explanation_bn": "m স্থির থাকলে ΔTf, i-এর সমানুপাতিক।"
+    },
+    {
+      "q": "For i=2, Kf=1.86 K kg/mol and m=0.10 mol/kg, ΔTf?",
+      "q_bn": "i=২, Kf=১.৮৬ K kg/mol, m=০.১০ mol/kg হলে ΔTf?",
+      "options": [
+        "0.372 K",
+        "0.186 K",
+        "3.72 K",
+        "1.86 K"
+      ],
+      "options_bn": [
+        "0.372 K",
+        "0.186 K",
+        "3.72 K",
+        "1.86 K"
+      ],
+      "answer": 0,
+      "explanation": "Use \\Delta T_f=K_fm_{particles};\\quad m_{particles}=im. For ideal NaCl with i≈2 and Kf=1.86 K kg/mol at m=0.10 mol/kg, ΔTf≈0.372 K.",
+      "explanation_bn": "\\Delta T_f=K_fm_{particles};\\quad m_{particles}=im ব্যবহার করুন। আদর্শ NaCl-এ i≈২, Kf=১.৮৬ ও m=০.১০ হলে ΔTf≈০.৩৭২ K।"
+    },
+    {
+      "q": "Can real NaCl always be assigned i=2 at every concentration?",
+      "q_bn": "বাস্তব NaCl-এ সব ঘনত্বে কি i=২ ধরা যায়?",
+      "options": [
+        "No, interactions change effective i",
+        "Yes, without exception",
+        "Only at saturation",
+        "Only at zero kelvin"
+      ],
+      "options_bn": [
+        "No, interactions change effective i",
+        "Yes, without exception",
+        "Only at saturation",
+        "Only at zero kelvin"
+      ],
+      "answer": 0,
+      "explanation": "Dilute solution and approximately constant i; association or incomplete dissociation alters i.",
+      "explanation_bn": "বিরল দ্রবণ ও প্রায় স্থির i; সংযুক্তি বা অসম্পূর্ণ বিয়োজনে i বদলায়।"
+    }
+  ]
+}

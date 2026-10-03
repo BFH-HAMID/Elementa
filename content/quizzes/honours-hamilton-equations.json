@@ -1,0 +1,32 @@
+{
+  "slug": "honours-hamilton-equations",
+  "title_en": "Hamilton’s canonical equations — check your understanding",
+  "title_bn": "হ্যামিল্টনের সমীকরণ — অনুশীলন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Analytical Mechanics",
+  "chapter_bn": "Analytical Mechanics",
+  "description_en": "Concept check with an explained answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For H=p²/2m+kq²/2, what is ṗ?",
+      "q_bn": "H=p²/2m+kq²/2 হলে ṗ কত?",
+      "options": [
+        "−kq",
+        "kq",
+        "p/m",
+        "0"
+      ],
+      "options_bn": [
+        "−kq",
+        "kq",
+        "p/m",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "ṗ=−∂H/∂q=−kq.",
+      "explanation_bn": "ṗ=−∂H/∂q=−kq."
+    }
+  ]
+}

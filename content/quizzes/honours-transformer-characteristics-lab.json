@@ -1,0 +1,70 @@
+{
+  "slug": "honours-transformer-characteristics-lab",
+  "title_en": "Transformer voltage ratio and efficiency — lab viva",
+  "title_bn": "ট্রান্সফরমারের বিভব অনুপাত ও দক্ষতা — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Can transformer efficiency exceed 100%?",
+      "q_bn": "ট্রান্সফরমারের দক্ষতা ১০০% ছাড়াতে পারে?",
+      "options": [
+        "No, energy losses make it lower.",
+        "Yes for an ideal transformer",
+        "Only with DC",
+        "Only at no load"
+      ],
+      "options_bn": [
+        "না; শক্তিক্ষয়ে তা কমে।",
+        "Yes for an ideal transformer",
+        "Only with DC",
+        "Only at no load"
+      ],
+      "answer": 0,
+      "explanation": "No, energy losses make it lower. In an ideal AC transformer Vs/Vp=Ns/Np; real efficiency η=Ps/Pp is below 1 due to copper and core losses. Never use DC as the normal primary supply.",
+      "explanation_bn": "না; শক্তিক্ষয়ে তা কমে। আদর্শ AC ট্রান্সফরমারে Vs/Vp=Ns/Np; বাস্তবে তামা ও কোর ক্ষতিতে η=Ps/Pp<১। প্রাইমারিতে স্বাভাবিক উৎস হিসেবে DC নয়।"
+    },
+    {
+      "q": "For an ideal transformer with Np=200 and Ns=100, if Vp=12 V AC, Vs is?",
+      "q_bn": "আদর্শ ট্রান্সফরমারে Np=২০০, Ns=১০০ ও Vp=১২ V AC হলে Vs কত?",
+      "options": [
+        "12 V",
+        "3 V",
+        "6 V",
+        "24 V"
+      ],
+      "options_bn": [
+        "১২ V",
+        "৩ V",
+        "৬ V",
+        "২৪ V"
+      ],
+      "answer": 2,
+      "explanation": "Vs/Vp=Ns/Np=100/200=1/2; hence Vs=6 V.",
+      "explanation_bn": "Vs/Vp=Ns/Np=১০০/২০০=১/২; তাই Vs=৬ V।"
+    },
+    {
+      "q": "Why is VI not always equal to real input power in a transformer?",
+      "q_bn": "ট্রান্সফরমারে VI কি সবসময় প্রকৃত ইনপুট ক্ষমতা? কেন নয়?",
+      "options": [
+        "Transformers only use DC",
+        "Current is always zero at all loads",
+        "AC current may be phase-shifted; real power needs power factor",
+        "Voltage has no SI unit"
+      ],
+      "options_bn": [
+        "ট্রান্সফরমার শুধু DC-তে চলে",
+        "সব ভারে প্রবাহ শূন্য",
+        "AC প্রবাহের দশা সরে যেতে পারে; প্রকৃত ক্ষমতায় power factor লাগে",
+        "বিভবের SI একক নেই"
+      ],
+      "answer": 2,
+      "explanation": "For sinusoidal AC, real input power is Vrms Irms cosφ, not generally Vrms Irms; use a wattmeter or measured power factor.",
+      "explanation_bn": "সাইন-রূপ AC-তে প্রকৃত ক্ষমতা Vrms Irms cosφ, শুধু Vrms Irms নয়; wattmeter বা power factor নিন।"
+    }
+  ]
+}

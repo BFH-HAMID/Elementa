@@ -1,0 +1,66 @@
+---
+type: equation
+slug: gibbs-duhem-equation
+title_bn: গিবস–ডুহেম সমীকরণ
+title_en: Gibbs–Duhem equation
+subject: chemistry
+level: honours
+chapter: Chemical Thermodynamics
+chapter_bn: রাসায়নিক তাপগতিবিদ্যা
+latex: "\\sum_i n_i d\\mu_i=-S\\,dT+V\\,dP"
+calculator: false
+variables:
+  - symbol: n_i
+    name: amount of component i
+    name_bn: i উপাদানের পদার্থের পরিমাণ
+    unit: mol
+    si_unit: mol
+  - symbol: μ_i
+    name: chemical potential of component i
+    name_bn: i উপাদানের রাসায়নিক বিভব
+    unit: J/mol
+    si_unit: J/mol
+  - symbol: S
+    name: entropy
+    name_bn: এনট্রপি
+    unit: J/K
+    si_unit: J/K
+  - symbol: T
+    name: absolute temperature
+    name_bn: পরম তাপমাত্রা
+    unit: K
+    si_unit: K
+  - symbol: V
+    name: volume
+    name_bn: আয়তন
+    unit: m³
+    si_unit: m³
+  - symbol: P
+    name: pressure
+    name_bn: চাপ
+    unit: Pa
+    si_unit: Pa
+derivation: "For a homogeneous equilibrium phase, G=Σnᵢμᵢ by extensivity. Differentiate this identity and compare with the fundamental differential dG=−S dT+V dP+Σμᵢdnᵢ."
+derivation_bn: "সমসত্ত্ব সাম্যাবস্থার দশায় ব্যাপকতা থেকে G=Σnᵢμᵢ। এই পরিচয়কে অন্তরক করে dG=−S dT+V dP+Σμᵢdnᵢ-এর সঙ্গে তুলনা করলে ফলটি মেলে।"
+derivation_steps:
+  - step_en: "Apply Euler's theorem to extensive Gibbs energy at fixed T and P."
+    step_bn: "স্থির T ও P-তে ব্যাপক গিবস শক্তিতে অয়লারের উপপাদ্য প্রয়োগ করুন।"
+    latex: "G=\\sum_i n_i\\mu_i"
+  - step_en: "Differentiate the Euler identity."
+    step_bn: "অয়লার পরিচয়টি অন্তরক করুন।"
+    latex: "dG=\\sum_i\\mu_i dn_i+\\sum_i n_i d\\mu_i"
+  - step_en: "Compare with the fundamental differential and cancel matching composition terms."
+    step_bn: "মৌলিক অন্তরকের সঙ্গে তুলনা করে সমান গঠন-পদ বাদ দিন।"
+    latex: "\\sum_i n_i d\\mu_i=-S\\,dT+V\\,dP"
+summary_en: "Chemical potentials of mixture components cannot change independently."
+summary_bn: "মিশ্রণের উপাদানগুলোর রাসায়নিক বিভব স্বাধীনভাবে পরিবর্তন করতে পারে না।"
+tags: [honours, mixtures, chemical potential]
+---
+
+At fixed temperature and pressure, `Σnᵢdμᵢ=0`; for a binary mixture `x₁dμ₁+x₂dμ₂=0`. অর্থাৎ একটি উপাদানের রাসায়নিক বিভব বদলালে অন্যটির পরিবর্তন সীমাবদ্ধ হয়। This assumes a single homogeneous equilibrium phase; do not apply it across two phases as though they were one mixture.
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+No direct lab for this theoretical relation is supplied. Apply the stated assumptions to a worked calculation and compare measurable predictions only when the appropriate apparatus is available.
+
+এই তাত্ত্বিক সম্পর্কের সরাসরি ল্যাব এখানে নেই। শর্ত মেনে উদাহরণ হিসাব করুন; উপযুক্ত যন্ত্র থাকলেই মাপযোগ্য পূর্বাভাস তুলনা করুন।

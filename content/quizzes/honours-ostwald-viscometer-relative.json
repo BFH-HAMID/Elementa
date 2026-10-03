@@ -1,0 +1,70 @@
+{
+  "slug": "honours-ostwald-viscometer-relative",
+  "title_en": "Relative viscosity with Ostwald viscometer — lab viva",
+  "title_bn": "অস্টওয়াল্ড সান্দ্রতামাপকে আপেক্ষিক সান্দ্রতা — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why keep temperature the same for both liquids?",
+      "q_bn": "দুই তরলের তাপমাত্রা এক রাখতে হয় কেন?",
+      "options": [
+        "Viscosity depends strongly on temperature.",
+        "To keep mass exactly equal",
+        "Because density becomes zero",
+        "Because the viscometer measures heat"
+      ],
+      "options_bn": [
+        "সান্দ্রতা তাপমাত্রার সঙ্গে অনেক বদলায়।",
+        "To keep mass exactly equal",
+        "Because density becomes zero",
+        "Because the viscometer measures heat"
+      ],
+      "answer": 0,
+      "explanation": "Viscosity depends strongly on temperature. For the same capillary and fixed volume in laminar flow, η₁/η₂≈ρ₁t₁/(ρ₂t₂), assuming comparable pressure-head geometry and negligible kinetic-energy correction.",
+      "explanation_bn": "সান্দ্রতা তাপমাত্রার সঙ্গে অনেক বদলায়। একই নল ও নির্দিষ্ট আয়তনে স্তরী প্রবাহে η₁/η₂≈ρ₁t₁/(ρ₂t₂), যদি চাপের জ্যামিতি একই ও গতিশক্তি সংশোধন নগণ্য হয়।"
+    },
+    {
+      "q": "If two liquids have the same density but the unknown's flow time is twice reference time, viscosity ratio ηunknown/ηref is?",
+      "q_bn": "দুই তরলের ঘনত্ব সমান কিন্তু অজানার প্রবাহসময় দ্বিগুণ হলে ηunknown/ηref কত?",
+      "options": [
+        "1",
+        "2",
+        "1/2",
+        "4"
+      ],
+      "options_bn": [
+        "১",
+        "২",
+        "১/২",
+        "৪"
+      ],
+      "answer": 1,
+      "explanation": "For the same instrument and conditions, ηunknown/ηref≈ρunknown tunknown/(ρref tref)=2.",
+      "explanation_bn": "একই যন্ত্রে ηunknown/ηref≈ρunknown tunknown/(ρref tref)=২।"
+    },
+    {
+      "q": "Why must bubbles be removed from an Ostwald viscometer?",
+      "q_bn": "অস্টওয়াল্ড সান্দ্রতামাপকে বুদ্‌বুদ কেন দূর করতে হয়?",
+      "options": [
+        "They guarantee laminar motion",
+        "They disrupt steady capillary flow and timing",
+        "They make all liquids identical",
+        "They make density exactly zero"
+      ],
+      "options_bn": [
+        "স্তরী প্রবাহ নিশ্চিত করে",
+        "বুদ্‌বুদ স্থির কৈশিক প্রবাহ ও সময় মাপা নষ্ট করে",
+        "সব তরলকে একই করে",
+        "ঘনত্ব শূন্য করে"
+      ],
+      "answer": 1,
+      "explanation": "The ratio η₁/η₂≈ρ₁t₁/(ρ₂t₂) assumes comparable uninterrupted flow through the same tube; trapped air changes the effective head and flow path.",
+      "explanation_bn": "η₁/η₂≈ρ₁t₁/(ρ₂t₂)-এ একই নলে বাধাহীন তুলনাযোগ্য প্রবাহ ধরা হয়; আটকে থাকা বায়ু চাপ ও পথ বদলায়।"
+    }
+  ]
+}

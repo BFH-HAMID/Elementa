@@ -1,0 +1,32 @@
+{
+  "slug": "honours-faradays-law",
+  "title_bn": "ফ্যারাডের তড়িৎ বিশ্লেষণ সূত্র — ধারণা যাচাই",
+  "title_en": "Faraday's law of electrolysis — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "If current efficiency is 50%, how does actual deposit mass compare with ideal m=QM/(nF)?",
+      "q_bn": "প্রবাহ দক্ষতা ৫০% হলে প্রকৃত জমা ভর আদর্শ m=QM/(nF)-এর তুলনায় কত?",
+      "options": [
+        "Double",
+        "Equal",
+        "Fourfold",
+        "Half"
+      ],
+      "options_bn": [
+        "দ্বিগুণ",
+        "সমান",
+        "চার গুণ",
+        "অর্ধেক"
+      ],
+      "answer": 3,
+      "explanation": "Only half the passed charge contributes to the desired deposit, so mactual≈0.5QM/(nF).",
+      "explanation_bn": "চলতি চার্জের অর্ধেক কাঙ্ক্ষিত সঞ্চয়ে লাগে; তাই mপ্রকৃত≈০.৫QM/(nF)।"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "honours-pseudo-first-order-rate",
+  "title_en": "Pseudo-first-order rate law — concept check",
+  "title_bn": "ছদ্ম প্রথম-ক্রম হার — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If excess [B]₀ doubles, k′?",
+      "q_bn": "অতিরিক্ত [B]₀ দ্বিগুণ হলে k′?",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Unchanged",
+        "Squares"
+      ],
+      "options_bn": [
+        "Doubles",
+        "Halves",
+        "Unchanged",
+        "Squares"
+      ],
+      "answer": 0,
+      "explanation": "k′=k[B]₀.",
+      "explanation_bn": "k′=k[B]₀।"
+    },
+    {
+      "q": "If [B]₀ is doubled in r=k[A][B], apparent k′ becomes?",
+      "q_bn": "r=k[A][B]-এ [B]₀ দ্বিগুণ হলে আপাত k′?",
+      "options": [
+        "Double",
+        "Half",
+        "Four times",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Double",
+        "Half",
+        "Four times",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Use [B]\\approx[B]_0\\gg[A]_0. If [B]₀ doubles while k stays fixed, the apparent first-order constant doubles.",
+      "explanation_bn": "[B]\\approx[B]_0\\gg[A]_0 ব্যবহার করুন। k স্থির রেখে [B]₀ দ্বিগুণ হলে আপাত প্রথম-ক্রম ধ্রুবক দ্বিগুণ।"
+    },
+    {
+      "q": "Why can [B] be treated as constant?",
+      "q_bn": "[B]-কে স্থির ধরা যায় কেন?",
+      "options": [
+        "B is in large excess",
+        "B is absent",
+        "A and B start equal",
+        "All rate laws are first order"
+      ],
+      "options_bn": [
+        "B is in large excess",
+        "B is absent",
+        "A and B start equal",
+        "All rate laws are first order"
+      ],
+      "answer": 0,
+      "explanation": "B remains effectively constant due to large excess; a first-order-looking plot does not prove a unimolecular mechanism.",
+      "explanation_bn": "অতিরিক্ত B প্রায় অপরিবর্তিত; প্রথম-ক্রম রেখা মানেই এক-অণু প্রক্রিয়া নয়।"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-rydberg-equation-hydrogen",
+  "title_bn": "রিডবার্গ সমীকরণ — ধারণা যাচাই",
+  "title_en": "Rydberg equation for hydrogen spectra — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "For a Balmer line, what is the lower principal quantum number n₁?",
+      "q_bn": "বালমার রেখায় নিম্ন প্রধান কোয়ান্টাম সংখ্যা n₁ কত?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "options_bn": [
+        "২",
+        "১",
+        "৩",
+        "০"
+      ],
+      "answer": 0,
+      "explanation": "Balmer emissions terminate on n₁=2; higher levels n₂>2 produce different visible/near-UV lines.",
+      "explanation_bn": "বালমার নির্গমন n₁=২ স্তরে শেষ হয়; n₂>২ থেকে দৃশ্যমান/নিকট UV রেখা মেলে।"
+    }
+  ]
+}

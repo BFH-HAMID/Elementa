@@ -1,0 +1,70 @@
+{
+  "slug": "honours-young-fringe-width-honours",
+  "title_en": "Young interference fringe spacing — concept check",
+  "title_bn": "ইয়ং পরীক্ষায় ঝালর প্রস্থ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If slit separation doubles, fringe width becomes?",
+      "q_bn": "চিরের ব্যবধান দ্বিগুণ হলে ঝালর-প্রস্থ কত?",
+      "options": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "β is inversely proportional to d.",
+      "explanation_bn": "β, d-এর ব্যস্তানুপাতিক।"
+    },
+    {
+      "q": "For λ=500 nm, D=2 m, d=0.5 mm, fringe width?",
+      "q_bn": "λ=৫০০ nm, D=২ m ও d=০.৫ mm হলে ঝালর-প্রস্থ?",
+      "options": [
+        "2 mm",
+        "0.2 mm",
+        "20 mm",
+        "1 mm"
+      ],
+      "options_bn": [
+        "2 mm",
+        "0.2 mm",
+        "20 mm",
+        "1 mm"
+      ],
+      "answer": 0,
+      "explanation": "Use dy_n/D=n\\lambda;\\quad y_{n+1}-y_n=\\lambda D/d. λ=500 nm, D=2 m, d=0.5 mm give β=2 mm.",
+      "explanation_bn": "dy_n/D=n\\lambda;\\quad y_{n+1}-y_n=\\lambda D/d ব্যবহার করুন। λ=৫০০ nm, D=২ m, d=০.৫ mm হলে β=২ mm।"
+    },
+    {
+      "q": "Which condition helps give nearly equally spaced fringes?",
+      "q_bn": "প্রায় সমান ব্যবধানে ঝালর পেতে কোন শর্ত সাহায্য করে?",
+      "options": [
+        "Small angle and D much greater than d",
+        "D smaller than d",
+        "Incoherent sources",
+        "A wide range of wavelengths"
+      ],
+      "options_bn": [
+        "Small angle and D much greater than d",
+        "D smaller than d",
+        "Incoherent sources",
+        "A wide range of wavelengths"
+      ],
+      "answer": 0,
+      "explanation": "Coherent monochromatic light, small angle and D≫d; finite slit width changes visibility.",
+      "explanation_bn": "সুসঙ্গত একরঙা আলো, ক্ষুদ্র কোণ ও D≫d; চিরের প্রস্থে দৃশ্যমানতা বদলায়।"
+    }
+  ]
+}

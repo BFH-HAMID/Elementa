@@ -1,0 +1,32 @@
+{
+  "slug": "honours-relativistic-length-contraction",
+  "title_bn": "আপেক্ষিক দৈর্ঘ্য সংকোচন — ধারণা যাচাই",
+  "title_en": "Relativistic length contraction — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "Which length is the proper length in Lorentz contraction?",
+      "q_bn": "লরেঞ্জ সংকোচনে প্রকৃত দৈর্ঘ্য কোনটি?",
+      "options": [
+        "Length measured in the object's rest frame",
+        "Length measured only by a moving observer",
+        "Length measured at zero temperature",
+        "Every object's diameter in any frame"
+      ],
+      "options_bn": [
+        "বস্তুর স্থির কাঠামোয় মাপা দৈর্ঘ্য",
+        "শুধু চলমান পর্যবেক্ষকের দৈর্ঘ্য",
+        "শূন্য তাপে মাপা দৈর্ঘ্য",
+        "সব কাঠামোয় যেকোনো ব্যাস"
+      ],
+      "answer": 0,
+      "explanation": "Proper length L₀ is measured when the object is at rest; its length parallel to relative motion is L=L₀/γ.",
+      "explanation_bn": "বস্তু যে কাঠামোতে স্থির সেখানে L₀; আপেক্ষিক গতির সমান্তরাল দৈর্ঘ্য L=L₀/γ।"
+    }
+  ]
+}

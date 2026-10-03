@@ -1,0 +1,32 @@
+{
+  "slug": "honours-relativistic-time-dilation",
+  "title_bn": "আপেক্ষিক সময় প্রসারণ — ধারণা যাচাই",
+  "title_en": "Relativistic time dilation — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "A moving clock has proper interval 1 s and γ=2. What interval does an inertial observer measure?",
+      "q_bn": "ঘড়ির নিজস্ব সময় ১ s ও γ=২ হলে স্থির জড় পর্যবেক্ষক কত সময় মাপেন?",
+      "options": [
+        "4 s",
+        "2 s",
+        "0.5 s",
+        "1 s"
+      ],
+      "options_bn": [
+        "৪ s",
+        "২ s",
+        "০.৫ s",
+        "১ s"
+      ],
+      "answer": 1,
+      "explanation": "Δt=γΔτ=2×1 s=2 s; the proper interval is measured with the clock at rest.",
+      "explanation_bn": "Δt=γΔτ=২×১ s=২ s; নিজস্ব সময় ঘড়ির স্থির কাঠামোতে মাপা।"
+    }
+  ]
+}

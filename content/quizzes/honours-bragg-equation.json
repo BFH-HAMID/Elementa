@@ -1,0 +1,32 @@
+{
+  "slug": "honours-bragg-equation",
+  "title_bn": "ব্র্যাগের সমীকরণ — ধারণা যাচাই",
+  "title_en": "Bragg’s law for X-ray diffraction — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "A reflection of order n=1 occurs at θ=30° with d=0.20 nm. Wavelength?",
+      "q_bn": "d=০.২০ nm ও θ=৩০°-এ প্রথম ক্রমের প্রতিফলনে তরঙ্গদৈর্ঘ্য কত?",
+      "options": [
+        "0.80 nm",
+        "0.20 nm",
+        "0.10 nm",
+        "0.40 nm"
+      ],
+      "options_bn": [
+        "০.৮০ nm",
+        "০.২০ nm",
+        "০.১০ nm",
+        "০.৪০ nm"
+      ],
+      "answer": 1,
+      "explanation": "nλ=2d sinθ; λ=2×0.20×0.5=0.20 nm. The angle is measured to the crystal planes.",
+      "explanation_bn": "nλ=২d sinθ; λ=২×০.২০×০.৫=০.২০ nm। কোণটি স্ফটিকতলের সঙ্গে মাপা।"
+    }
+  ]
+}

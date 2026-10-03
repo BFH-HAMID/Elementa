@@ -1,0 +1,69 @@
+---
+type: "experiment"
+slug: "pn-diode-iv-lab"
+title_bn: "P–N ডায়োডের প্রবাহ–বিভব বৈশিষ্ট্য"
+title_en: "P–N diode current–voltage characteristics"
+subject: "physics"
+level: "honours"
+aim: "Determine or verify: P–N diode current–voltage characteristics. Record observations and compare against the stated model."
+aim_bn: "উদ্দেশ্য: P–N ডায়োডের প্রবাহ–বিভব বৈশিষ্ট্য; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।"
+apparatus:
+  - "diode"
+  - "protected DC source"
+  - "series resistor"
+  - "multimeters"
+apparatus_bn:
+  - "ডায়োড"
+  - "সুরক্ষিত DC উৎস"
+  - "সারি রোধ"
+  - "বহুমাপক"
+theory: "Forward bias lowers the junction barrier and current rises nonlinearly; reverse current is small before breakdown. A series resistor limits current; the ideal diode equation is I≈Is(exp[V/(nVT)]−1)."
+theory_bn: "সম্মুখ বিভবে বাধা কমে প্রবাহ অরৈখিকভাবে বাড়ে; বিপরীত বিভবে breakdown-এর আগে প্রবাহ কম। সারি রোধ প্রবাহ সীমিত করে; আদর্শ মডেলে I≈Is(exp[V/(nVT)]−১)।"
+procedure:
+  - "Check the equipment calibration and record units, zero readings and ambient conditions before starting."
+  - "Step supply voltage in both polarities below component ratings; record the diode voltage and current (not just supply voltage)."
+  - "Repeat at least three independent trials, preserve raw readings, compute the result with units and compare the observed trend against the stated model."
+procedure_bn:
+  - "শুরুর আগে যন্ত্রের ক্রমাঙ্কন দেখে একক, শূন্য পাঠ ও পরিবেশের অবস্থা লিখুন।"
+  - "উপাদানের সীমার নিচে দুই মেরুতে উৎস বিভব ধাপে বদলান; শুধু উৎস নয়, ডায়োডের নিজস্ব বিভব ও প্রবাহ লিখুন।"
+  - "অন্তত তিনটি স্বাধীন পাঠ নিন, কাঁচা পাঠ রাখুন, এককসহ ফল বের করে বর্ণিত মডেলের সঙ্গে প্রবণতা তুলনা করুন।"
+observation_table:
+  headers:
+    - "bias direction"
+    - "diode V (V)"
+    - "current I (mA)"
+    - "resistor value (Ω)"
+    - "temperature (°C)"
+  rows:
+    - ["record", "record", "record", "record", "record"]
+    - ["record", "record", "record", "record", "record"]
+    - ["record", "record", "record", "record", "record"]
+calculation: "Plot I against diode V separately for forward and reverse bias; estimate dynamic resistance ΔV/ΔI in a stated region."
+calculation_bn: "সম্মুখ ও বিপরীত বিভবে I বনাম ডায়োড V আঁকুন; নির্দিষ্ট অঞ্চলে গতীয় রোধ ΔV/ΔI বের করুন।"
+precautions:
+  - "Always use a current-limiting resistor and respect reverse voltage rating."
+precautions_bn:
+  - "অবশ্যই প্রবাহ-সীমক রোধ নিন এবং বিপরীত বিভবের সীমা মানুন।"
+sources_of_error:
+  - "Temperature drift, wrong polarity, ignoring series resistor and meter resolution affect the curve."
+sources_of_error_bn:
+  - "তাপমাত্রা, ভুল মেরু, সারি রোধ উপেক্ষা ও মিটারের সীমায় রেখা বদলায়।"
+viva:
+  - q: "Why is a series resistor required?"
+    a: "To prevent excessive forward current."
+    q_bn: "সারি রোধ কেন লাগে?"
+    a_bn: "অতিরিক্ত সম্মুখ প্রবাহ ঠেকাতে।"
+  - q: "Why is reverse current normally measured before reaching breakdown in an ordinary P–N diode test?"
+    a: "A normal diode is not designed as a voltage regulator. Respect rated reverse voltage and use current limiting; a Zener is a different rated device."
+    q_bn: "সাধারণ P–N ডায়োডে breakdown-এর আগে বিপরীত প্রবাহ মাপা হয় কেন?"
+    a_bn: "সাধারণ ডায়োড বিভব নিয়ন্ত্রণের জন্য তৈরি নয়। বিপরীত বিভবের সীমা ও প্রবাহ-সীমক মানুন; জেনার আলাদা অনুমোদিত উপাদান।"
+tags:
+  - "honours"
+  - "physics"
+  - "laboratory"
+  - "supervised practical"
+---
+
+**Report / প্রতিবেদন:** Preserve raw readings, graph where specified, state the model assumptions, final value, units and likely systematic error. Never invent data.
+
+**ব্যবহারিক সতর্কতা:** শিক্ষকের তত্ত্বাবধান ও প্রতিষ্ঠানের রাসায়নিক/বৈদ্যুতিক বর্জ্যবিধি মেনে চলুন।

@@ -1,0 +1,70 @@
+{
+  "slug": "honours-sulfate-gravimetry-baso4",
+  "title_en": "Gravimetric sulfate as BaSO₄ — lab viva",
+  "title_bn": "BaSO₄ অধঃক্ষেপে সালফেটের ভর নির্ণয় — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why dry to constant mass?",
+      "q_bn": "স্থির ভর পর্যন্ত শুকাই কেন?",
+      "options": [
+        "Remaining water otherwise inflates the precipitate mass.",
+        "To change sulfate into chloride",
+        "To double the sample",
+        "To reduce all barium"
+      ],
+      "options_bn": [
+        "অবশিষ্ট পানি অধঃক্ষেপের মাপা ভর বাড়ায়।",
+        "To change sulfate into chloride",
+        "To double the sample",
+        "To reduce all barium"
+      ],
+      "answer": 0,
+      "explanation": "Remaining water otherwise inflates the precipitate mass. SO₄²−+Ba²+→BaSO₄(s); one mole precipitate represents one mole sulfate. Digest to larger crystals, filter, wash, dry to constant mass.",
+      "explanation_bn": "অবশিষ্ট পানি অধঃক্ষেপের মাপা ভর বাড়ায়। SO₄²−+Ba²+→BaSO₄(s); এক মোল অধঃক্ষেপ এক মোল সালফেট। বড় স্ফটিক পেতে digestions করে ছেঁকে, ধুয়ে স্থির ভর পর্যন্ত শুকান।"
+    },
+    {
+      "q": "If dry BaSO₄ weighs 0.23339 g, approximate sulfate mass is?",
+      "q_bn": "শুকনো BaSO₄-এর ভর ০.২৩৩৩৯ g হলে সালফেটের ভর প্রায়?",
+      "options": [
+        "0.13733 g",
+        "0.46678 g",
+        "0.09606 g",
+        "0.23339 g"
+      ],
+      "options_bn": [
+        "০.১৩৭৩৩ g",
+        "০.৪৬৬৭৮ g",
+        "০.০৯৬০৬ g",
+        "০.২৩৩৩৯ g"
+      ],
+      "answer": 2,
+      "explanation": "Mass ratio SO₄/BaSO₄=96.06/233.39; product with 0.23339 g is 0.09606 g.",
+      "explanation_bn": "ভর অনুপাত SO₄/BaSO₄=৯৬.০৬/২৩৩.৩৯; ফলে ০.০৯৬০৬ g।"
+    },
+    {
+      "q": "Why is BaSO₄ digested before filtering?",
+      "q_bn": "ছাঁকার আগে BaSO₄ অধঃক্ষেপ কিছুক্ষণ রেখে দেওয়া হয় কেন?",
+      "options": [
+        "To dissolve all BaSO₄",
+        "To make barium harmless automatically",
+        "To grow larger, more filterable crystals and reduce adsorbed impurities",
+        "To turn sulfate into chloride"
+      ],
+      "options_bn": [
+        "সব BaSO₄ গলাতে",
+        "বেরিয়ামকে নিজে থেকে নিরাপদ করতে",
+        "বড় সহজে-ছাঁকা স্ফটিক পেতে ও উপরিভাগের অশুদ্ধি কমাতে",
+        "সালফেটকে ক্লোরাইড করতে"
+      ],
+      "answer": 2,
+      "explanation": "Careful precipitation and digestion improve crystal size and purity. Drying to constant mass then limits water-related mass error.",
+      "explanation_bn": "ধীরে অধঃক্ষেপ ও digestion-এ স্ফটিক বড় ও তুলনামূলক বিশুদ্ধ হয়। স্থির ভর পর্যন্ত শুকালে পানির কারণে ভর-ত্রুটি কমে।"
+    }
+  ]
+}

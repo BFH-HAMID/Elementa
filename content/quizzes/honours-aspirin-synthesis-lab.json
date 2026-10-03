@@ -1,0 +1,32 @@
+{
+  "slug": "honours-aspirin-synthesis-lab",
+  "title_bn": "অ্যাসপিরিন সংশ্লেষণ ও বিশুদ্ধতা পরীক্ষা — ধারণা যাচাই",
+  "title_en": "Synthesis and purity check of aspirin — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "Why must aspirin crystals be dry before reporting percentage yield?",
+      "q_bn": "শতকরা উৎপাদ লেখার আগে অ্যাসপিরিন স্ফটিক শুকাতে হয় কেন?",
+      "options": [
+        "Water doubles the stoichiometric ratio",
+        "Aspirin has no mass when wet",
+        "Drying creates salicylic acid",
+        "Residual liquid inflates measured product mass"
+      ],
+      "options_bn": [
+        "পানি স্টইকিওমেট্রিক অনুপাত দ্বিগুণ করে",
+        "ভেজা অ্যাসপিরিনের ভর থাকে না",
+        "শুকালে স্যালিসিলিক অ্যাসিড তৈরি হয়",
+        "অবশিষ্ট তরল উৎপাদের মাপা ভর বাড়ায়"
+      ],
+      "answer": 3,
+      "explanation": "Percentage yield uses actual dry product mass divided by theoretical mass. Wet crystals can show an impossible apparent yield over 100%.",
+      "explanation_bn": "শতকরা উৎপাদে প্রকৃত শুকনো ভরকে তাত্ত্বিক ভরে ভাগ করা হয়; ভেজা স্ফটিকে আপাত উৎপাদ ১০০%-এর বেশি হতে পারে।"
+    }
+  ]
+}

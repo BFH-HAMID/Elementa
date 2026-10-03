@@ -1,0 +1,73 @@
+---
+type: "equation"
+slug: "quality-factor-oscillator"
+title_bn: "দোলকের গুণাঙ্ক"
+title_en: "Quality factor of weakly damped oscillator"
+subject: "physics"
+level: "honours"
+chapter: "Honours Physics"
+chapter_bn: "স্নাতক পদার্থবিজ্ঞান"
+latex: "Q=\\frac{m\\omega_0}{b}"
+calculator: false
+variables:
+  - symbol: "Q"
+    name: "quality factor"
+    name_bn: "quality factor"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "m"
+    name: "mass"
+    name_bn: "mass"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "ω₀"
+    name: "natural angular frequency"
+    name_bn: "natural angular frequency"
+    unit: "rad/s"
+    si_unit: "rad/s"
+  - symbol: "b"
+    name: "viscous damping coefficient"
+    name_bn: "viscous damping coefficient"
+    unit: "kg/s"
+    si_unit: "kg/s"
+derivation: "Use the amplitude envelope e^(−bt/2m); energy scales as amplitude squared. E(t)=E_0e^{-bt/m};\\quad Q=2\\pi\\frac{E}{\\Delta E_{\\rm cycle}} Substitute the preceding result and identify the requested relation."
+derivation_bn: "বিস্তার e^(−bt/2m); শক্তি বিস্তারের বর্গের সমানুপাতিক। E(t)=E_0e^{-bt/m};\\quad Q=2\\pi\\frac{E}{\\Delta E_{\\rm cycle}} আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation_steps:
+  - step_en: "Use the amplitude envelope e^(−bt/2m); energy scales as amplitude squared."
+    step_bn: "বিস্তার e^(−bt/2m); শক্তি বিস্তারের বর্গের সমানুপাতিক।"
+    latex: "E(t)=E_0e^{-bt/m};\\quad Q=2\\pi\\frac{E}{\\Delta E_{\\rm cycle}}"
+  - step_en: "Substitute the preceding result and identify the requested relation."
+    step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+    latex: "Q=\\frac{m\\omega_0}{b}"
+summary_en: "m=1 kg, ω₀=10 rad/s and b=0.5 kg/s give Q≈20."
+summary_bn: "m=১ kg, ω₀=১০ rad/s ও b=০.৫ kg/s হলে Q≈২০।"
+tags:
+  - "honours"
+  - "physics"
+  - "derivation"
+experiment: "lcr-series-resonance-lab"
+---
+
+### প্রতিপাদনের ব্যাখ্যা / Derivation
+
+Use the amplitude envelope e^(−bt/2m); energy scales as amplitude squared. `E(t)=E_0e^{-bt/m};\quad Q=2\pi\frac{E}{\Delta E_{\rm cycle}}` Substitute the preceding result and identify the requested relation.
+
+বিস্তার e^(−bt/2m); শক্তি বিস্তারের বর্গের সমানুপাতিক। `E(t)=E_0e^{-bt/m};\quad Q=2\pi\frac{E}{\Delta E_{\rm cycle}}` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
+
+### সমাধানসহ উদাহরণ / Worked application
+
+m=1 kg, ω₀=10 rad/s and b=0.5 kg/s give Q≈20.
+
+m=১ kg, ω₀=১০ rad/s ও b=০.৫ kg/s হলে Q≈২০।
+
+### সীমা ও সতর্কতা / Assumptions
+
+Weak linear damping b≪mω₀; different textbooks define damping rate γ differently.
+
+দুর্বল রৈখিক ক্ষয় b≪mω₀; γ-এর সংজ্ঞা বইভেদে আলাদা হতে পারে।
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+Determine electrical Q from resonance frequency divided by bandwidth; this is analogous to mechanical oscillator damping.
+
+অনুনাদ কম্পাঙ্ক/ব্যান্ডউইডথ থেকে বৈদ্যুতিক Q নিন; এটি যান্ত্রিক দোলকের ক্ষয়ের অনুরূপ।

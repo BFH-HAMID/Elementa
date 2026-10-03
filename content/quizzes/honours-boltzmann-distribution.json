@@ -1,0 +1,32 @@
+{
+  "slug": "honours-boltzmann-distribution",
+  "title_bn": "বোলটজমান বন্টন — ধারণা যাচাই",
+  "title_en": "Boltzmann distribution of energies — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "For two nondegenerate levels separated by ΔE>0, which population ratio is expected at equilibrium?",
+      "q_bn": "ΔE>০ ব্যবধানের দুটি অধঃপতনহীন স্তরে সাম্যে জনসংখ্যার অনুপাত?",
+      "options": [
+        "e^(+ΔE/kBT)",
+        "Always 1",
+        "−ΔE/kBT",
+        "Nhigh/Nlow=e^(−ΔE/kBT)"
+      ],
+      "options_bn": [
+        "e^(+ΔE/kBT)",
+        "সবসময় ১",
+        "−ΔE/kBT",
+        "Nউচ্চ/Nনিম্ন=e^(−ΔE/kBT)"
+      ],
+      "answer": 3,
+      "explanation": "Boltzmann weights decrease exponentially with energy; degeneracy factors must be included if levels have different degeneracies.",
+      "explanation_bn": "উচ্চ শক্তিতে বোল্টজমান ওজন সূচকীয়ভাবে কমে; অধঃপতন ভিন্ন হলে তার গুণক লাগবে।"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-stefan-boltzmann-verification-lab",
+  "title_en": "Stefan–Boltzmann law verification — practice",
+  "title_bn": "স্টেফান–বোল্টজমান সূত্র যাচাই — অনুশীলন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours theory and practical",
+  "chapter_bn": "স্নাতক তত্ত্ব ও ব্যবহারিক",
+  "description_en": "A conceptual question with worked answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Which horizontal axis linearizes net radiative power?",
+      "q_bn": "নিট বিকিরণক্ষমতার লেখচিত্রে কোন অনুভূমিক অক্ষ রৈখিক?",
+      "options": [
+        "T⁴−T₀⁴",
+        "T−T₀",
+        "T²",
+        "VI"
+      ],
+      "options_bn": [
+        "T⁴−T₀⁴",
+        "T−T₀",
+        "T²",
+        "VI"
+      ],
+      "answer": 0,
+      "explanation": "P_rad=εσA(T⁴−T₀⁴).",
+      "explanation_bn": "P_rad=εσA(T⁴−T₀⁴)।"
+    }
+  ]
+}

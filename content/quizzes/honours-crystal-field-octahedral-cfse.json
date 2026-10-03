@@ -1,0 +1,70 @@
+{
+  "slug": "honours-crystal-field-octahedral-cfse",
+  "title_en": "Octahedral crystal-field stabilization — concept check",
+  "title_bn": "অষ্টতলক জটিলে CFSE — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For t2g³ eg⁰, CFSE is?",
+      "q_bn": "t2g³ eg⁰-এ CFSE কত?",
+      "options": [
+        "−1.2Δo",
+        "+1.2Δo",
+        "0",
+        "−0.4Δo"
+      ],
+      "options_bn": [
+        "−1.2Δo",
+        "+1.2Δo",
+        "0",
+        "−0.4Δo"
+      ],
+      "answer": 0,
+      "explanation": "Three electrons each contribute −0.4Δo.",
+      "explanation_bn": "তিন ইলেকট্রন প্রতি −০.৪Δo দেয়।"
+    },
+    {
+      "q": "For octahedral t₂g³eg⁰, CFSE before pairing correction?",
+      "q_bn": "অষ্টতলক t₂g³eg⁰-এ pairing সংশোধনের আগে CFSE?",
+      "options": [
+        "−1.2Δo",
+        "+1.2Δo",
+        "−0.4Δo",
+        "0"
+      ],
+      "options_bn": [
+        "−1.2Δo",
+        "+1.2Δo",
+        "−0.4Δo",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Use 3(-0.4\\Delta_o)+2(0.6\\Delta_o)=0\\quad\\text{(barycentre)}. For t2g³ eg⁰, CFSE=−1.2Δo before any pairing correction.",
+      "explanation_bn": "3(-0.4\\Delta_o)+2(0.6\\Delta_o)=0\\quad\\text{(barycentre)} ব্যবহার করুন। t2g³ eg⁰-তে জোড়া শক্তির সংশোধনের আগে CFSE=−১.২Δo।"
+    },
+    {
+      "q": "What must be considered separately when comparing high-spin and low-spin complexes?",
+      "q_bn": "উচ্চ ও নিম্ন স্পিন জটিল তুলনায় কোনটি আলাদা ধরতে হবে?",
+      "options": [
+        "Electron-pairing energy",
+        "Only sample mass",
+        "Only atmospheric pressure",
+        "Only colour wavelength"
+      ],
+      "options_bn": [
+        "Electron-pairing energy",
+        "Only sample mass",
+        "Only atmospheric pressure",
+        "Only colour wavelength"
+      ],
+      "answer": 0,
+      "explanation": "Simple octahedral crystal-field model; account separately for pairing and covalency when comparing spin states.",
+      "explanation_bn": "সরল অষ্টতলক crystal-field মডেল; স্পিন তুলনায় pairing ও সমযোজিতা আলাদা নিন।"
+    }
+  ]
+}

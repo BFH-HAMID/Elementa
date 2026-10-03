@@ -1,0 +1,70 @@
+{
+  "slug": "honours-katers-pendulum-gravity",
+  "title_en": "Kater reversible pendulum for g — lab viva",
+  "title_bn": "কেটারের প্রত্যাবর্তী দোলক দিয়ে g — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "When is pivot separation the effective length?",
+      "q_bn": "কখন স্থিতিবিন্দুর ব্যবধান কার্যকর দৈর্ঘ্য?",
+      "options": [
+        "When both pivot periods are equal.",
+        "When the amplitudes are equal",
+        "At any arbitrary mass position",
+        "When the pendulum is stationary"
+      ],
+      "options_bn": [
+        "দুই স্থিতিবিন্দুতে পর্যায়কাল সমান হলে।",
+        "When the amplitudes are equal",
+        "At any arbitrary mass position",
+        "When the pendulum is stationary"
+      ],
+      "answer": 0,
+      "explanation": "When both pivot periods are equal. When the two pivot periods agree, effective length equals pivot separation L; g=4π²L/T² for small swings.",
+      "explanation_bn": "দুই স্থিতিবিন্দুতে পর্যায়কাল সমান হলে। দুই স্থিতিবিন্দুতে পর্যায়কাল সমান হলে কার্যকর দৈর্ঘ্য তাদের ব্যবধান L; ক্ষুদ্র দোলনে g=৪π²L/T²।"
+    },
+    {
+      "q": "For equal pivot periods, if L=1.00 m and T=2.00 s, what is g approximately?",
+      "q_bn": "দুই অবস্থায় পর্যায়কাল সমান; L=১.০০ m ও T=২.০০ s হলে g প্রায় কত?",
+      "options": [
+        "9.87 m/s²",
+        "4.93 m/s²",
+        "19.74 m/s²",
+        "1.00 m/s²"
+      ],
+      "options_bn": [
+        "৯.৮৭ m/s²",
+        "৪.৯৩ m/s²",
+        "১৯.৭৪ m/s²",
+        "১.০০ m/s²"
+      ],
+      "answer": 0,
+      "explanation": "g=4π²L/T²=4π²×1/4≈9.87 m/s²; small-amplitude and equal-period conditions matter.",
+      "explanation_bn": "g=৪π²L/T²=৪π²×১/৪≈৯.৮৭ m/s²; ক্ষুদ্র দোলন ও সমান পর্যায়কাল জরুরি।"
+    },
+    {
+      "q": "Why time many oscillations instead of one?",
+      "q_bn": "একটির বদলে অনেক দোলনের সময় কেন মাপা হয়?",
+      "options": [
+        "To reduce relative timing uncertainty",
+        "To change gravitational acceleration",
+        "To eliminate all amplitude effects",
+        "To increase pivot separation"
+      ],
+      "options_bn": [
+        "সময় মাপার আপেক্ষিক অনিশ্চয়তা কমাতে",
+        "মহাকর্ষীয় ত্বরণ বদলাতে",
+        "বিস্তারের সব প্রভাব দূর করতে",
+        "দুই স্থিতিবিন্দুর দূরত্ব বাড়াতে"
+      ],
+      "answer": 0,
+      "explanation": "Period is total time divided by number of swings; a similar start-stop error is a smaller fraction of the longer interval. Small-angle and equal-period checks remain necessary.",
+      "explanation_bn": "পর্যায়কাল মোট সময়কে দোলনসংখ্যা দিয়ে ভাগ করে পাওয়া যায়; দীর্ঘ সময়ে একই শুরু-শেষের ত্রুটির আপেক্ষিক প্রভাব কমে। ক্ষুদ্র কোণ ও দুই পর্যায়কালের মিলও যাচাই করতে হবে।"
+    }
+  ]
+}

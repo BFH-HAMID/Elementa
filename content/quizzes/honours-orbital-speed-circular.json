@@ -1,0 +1,70 @@
+{
+  "slug": "honours-orbital-speed-circular",
+  "title_en": "Circular orbital speed — concept check",
+  "title_bn": "বৃত্তীয় কক্ষপথের বেগ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At four times the radius, speed is?",
+      "q_bn": "চার গুণ ব্যাসার্ধে বেগ কত?",
+      "options": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "v scales as 1/√r.",
+      "explanation_bn": "v, ১/√r-এর সমানুপাতিক।"
+    },
+    {
+      "q": "At 4 times the radius around the same M, circular orbital speed becomes?",
+      "q_bn": "একই M-এর চারপাশে ৪ গুণ ব্যাসার্ধে বৃত্তীয় কক্ষপথের বেগ?",
+      "options": [
+        "One half",
+        "One quarter",
+        "Twice",
+        "Four times"
+      ],
+      "options_bn": [
+        "One half",
+        "One quarter",
+        "Twice",
+        "Four times"
+      ],
+      "answer": 0,
+      "explanation": "Use GMm/r^2=mv^2/r. At 4 times the orbital radius speed becomes half for the same central mass.",
+      "explanation_bn": "GMm/r^2=mv^2/r ব্যবহার করুন। একই কেন্দ্রভরে কক্ষপথের ব্যাসার্ধ ৪ গুণ হলে বেগ অর্ধেক হয়।"
+    },
+    {
+      "q": "Is v=√(GM/r) applicable to arbitrary elliptical orbits at any point?",
+      "q_bn": "v=√(GM/r) কি যেকোনো উপবৃত্তাকার কক্ষপথের যেকোনো বিন্দুতে চলে?",
+      "options": [
+        "No, it assumes a circular orbit",
+        "Yes, always",
+        "Only at periapsis",
+        "Only for massless satellites"
+      ],
+      "options_bn": [
+        "No, it assumes a circular orbit",
+        "Yes, always",
+        "Only at periapsis",
+        "Only for massless satellites"
+      ],
+      "answer": 0,
+      "explanation": "Circular orbit about a dominant spherical mass; elliptical orbits have variable speed.",
+      "explanation_bn": "প্রধান গোলীয় ভরের চারপাশে বৃত্তীয় কক্ষপথ; উপবৃত্তে বেগ বদলায়।"
+    }
+  ]
+}

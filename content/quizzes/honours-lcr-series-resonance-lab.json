@@ -1,0 +1,70 @@
+{
+  "slug": "honours-lcr-series-resonance-lab",
+  "title_en": "Series LCR resonance and bandwidth — lab viva",
+  "title_bn": "সারি LCR অনুনাদ ও ব্যান্ডউইডথ — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "At resonance, which two reactances cancel?",
+      "q_bn": "অনুনাদে কোন দুই প্রতিঘাত বাতিল হয়?",
+      "options": [
+        "Inductive and capacitive reactances.",
+        "Resistance and voltage",
+        "Two identical resistors",
+        "Frequency and current"
+      ],
+      "options_bn": [
+        "আবেশী ও ধারকীয় প্রতিঘাত।",
+        "Resistance and voltage",
+        "Two identical resistors",
+        "Frequency and current"
+      ],
+      "answer": 0,
+      "explanation": "Inductive and capacitive reactances. The impedance magnitude Z=√[R²+(ωL−1/ωC)²] is smallest at ω₀=1/√(LC). At half-power current Imax/√2, bandwidth Δω≈R/L for an ideal series circuit.",
+      "explanation_bn": "আবেশী ও ধারকীয় প্রতিঘাত। প্রতিবন্ধক Z=√[R²+(ωL−১/ωC)²] সর্বনিম্ন হয় ω₀=১/√(LC)-এ। অর্ধক্ষমতায় প্রবাহ Imax/√২; আদর্শ সারি বর্তনীতে Δω≈R/L।"
+    },
+    {
+      "q": "If L=0.10 H and C=100 μF, resonance frequency is closest to?",
+      "q_bn": "L=০.১০ H ও C=১০০ μF হলে অনুনাদ কম্পাঙ্ক প্রায়?",
+      "options": [
+        "1000 Hz",
+        "50 Hz",
+        "5 Hz",
+        "500 Hz"
+      ],
+      "options_bn": [
+        "১০০০ Hz",
+        "৫০ Hz",
+        "৫ Hz",
+        "৫০০ Hz"
+      ],
+      "answer": 1,
+      "explanation": "f₀=1/(2π√LC)=1/(2π√10⁻⁵)≈50.3 Hz.",
+      "explanation_bn": "f₀=১/(২π√LC)=১/(২π√১০⁻⁵)≈৫০.৩ Hz।"
+    },
+    {
+      "q": "Why must the generator amplitude remain fixed while sweeping frequency?",
+      "q_bn": "কম্পাঙ্ক বদলানোর সময় উৎসের বিস্তার স্থির রাখতে হয় কেন?",
+      "options": [
+        "Resistance becomes negative",
+        "Otherwise current changes may reflect input voltage rather than circuit resonance",
+        "Resonance is impossible at constant amplitude",
+        "Capacitance vanishes at high frequency"
+      ],
+      "options_bn": [
+        "রোধ ঋণাত্মক হয়",
+        "নইলে প্রবাহের পরিবর্তন বর্তনীর অনুনাদ নয়, ইনপুট বিভবের কারণে হতে পারে",
+        "স্থির বিস্তারে অনুনাদ হয় না",
+        "বেশি কম্পাঙ্কে ধারকত্ব শূন্য"
+      ],
+      "answer": 1,
+      "explanation": "I=Vsource/Z. To infer the frequency dependence of Z and find half-power points, Vsource must be kept approximately constant.",
+      "explanation_bn": "I=Vsource/Z। Z-এর কম্পাঙ্কনির্ভরতা ও অর্ধক্ষমতার বিন্দু পেতে Vsource প্রায় স্থির রাখতে হয়।"
+    }
+  ]
+}

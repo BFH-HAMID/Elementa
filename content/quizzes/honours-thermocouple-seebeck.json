@@ -1,0 +1,70 @@
+{
+  "slug": "honours-thermocouple-seebeck",
+  "title_en": "Thermocouple Seebeck coefficient — lab viva",
+  "title_bn": "তাপযুগলে সিবেক সহগ — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Is the measured Seebeck coefficient absolute or relative for a pair?",
+      "q_bn": "দুটি পদার্থে মাপা সিবেক সহগ পরম না আপেক্ষিক?",
+      "options": [
+        "Relative to the other thermocouple material.",
+        "Absolute for each wire directly",
+        "Always zero",
+        "Independent of junction temperatures"
+      ],
+      "options_bn": [
+        "অন্য তাপযুগল পদার্থের সাপেক্ষে আপেক্ষিক।",
+        "Absolute for each wire directly",
+        "Always zero",
+        "Independent of junction temperatures"
+      ],
+      "answer": 0,
+      "explanation": "Relative to the other thermocouple material. For a small temperature difference, open-circuit thermoelectric emf E≈SAB(Th−Tc), where SAB is the relative Seebeck coefficient of the material pair.",
+      "explanation_bn": "অন্য তাপযুগল পদার্থের সাপেক্ষে আপেক্ষিক। ক্ষুদ্র তাপমাত্রা পার্থক্যে খোলা বর্তনীর বিভব E≈SAB(Th−Tc), যেখানে SAB দুটি পদার্থের আপেক্ষিক সিবেক সহগ।"
+    },
+    {
+      "q": "An emf change of 2.0 mV accompanies a 100 K junction difference. Relative Seebeck coefficient?",
+      "q_bn": "সংযোগদ্বয়ের ১০০ K পার্থক্যে বিভব ২.০ mV হলে আপেক্ষিক সিবেক সহগ?",
+      "options": [
+        "20 μV/K",
+        "2 μV/K",
+        "200 μV/K",
+        "0.02 μV/K"
+      ],
+      "options_bn": [
+        "২০ μV/K",
+        "২ μV/K",
+        "২০০ μV/K",
+        "০.০২ μV/K"
+      ],
+      "answer": 0,
+      "explanation": "S≈ΔE/ΔT=0.002 V/100 K=2×10⁻⁵ V/K=20 μV/K.",
+      "explanation_bn": "S≈ΔE/ΔT=০.০০২ V/১০০ K=২×১০⁻⁵ V/K=২০ μV/K।"
+    },
+    {
+      "q": "Why must the reference junction temperature be measured or stabilized?",
+      "q_bn": "তুলনা সংযোগের তাপমাত্রা কেন মাপতে বা স্থির রাখতে হয়?",
+      "options": [
+        "Thermoelectric emf depends on the junction temperature difference",
+        "Only wire length sets emf",
+        "The cold junction has zero resistance by definition",
+        "Measuring it prevents heat transfer"
+      ],
+      "options_bn": [
+        "তাপবিভব দুই সংযোগের তাপমাত্রা-পার্থক্যের ওপর নির্ভর করে",
+        "শুধু তারের দৈর্ঘ্যে বিভব হয়",
+        "ঠান্ডা সংযোগের রোধ সংজ্ঞাতেই শূন্য",
+        "এটি মাপলে তাপ পরিবহন বন্ধ হয়"
+      ],
+      "answer": 0,
+      "explanation": "E≈SAB(Th−Tc). Unknown drift in Tc changes ΔT and corrupts the fitted Seebeck slope.",
+      "explanation_bn": "E≈SAB(Th−Tc)। Tc অজানাভাবে বদলালে ΔT ও নির্ণীত সিবেক ঢাল ভুল হয়।"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "honours-prism-minimum-deviation",
+  "title_en": "Prism refractive index by spectrometer — lab viva",
+  "title_bn": "বর্ণালিবীক্ষকে প্রিজমের প্রতিসরাঙ্ক — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What special condition holds at minimum deviation?",
+      "q_bn": "সর্বনিম্ন বিচ্যুতিতে কোন বিশেষ শর্ত?",
+      "options": [
+        "Incident and emergent paths are symmetric.",
+        "Light stops inside prism",
+        "Angle of refraction is zero",
+        "Apex angle becomes zero"
+      ],
+      "options_bn": [
+        "আপতিত ও নির্গত পথ সমমিত।",
+        "Light stops inside prism",
+        "Angle of refraction is zero",
+        "Apex angle becomes zero"
+      ],
+      "answer": 0,
+      "explanation": "Incident and emergent paths are symmetric. At minimum deviation δm in air, light travels symmetrically in a prism of apex angle A, so n=sin[(A+δm)/2]/sin(A/2).",
+      "explanation_bn": "আপতিত ও নির্গত পথ সমমিত। বাতাসে সর্বনিম্ন বিচ্যুতি δm-এ A শীর্ষকোণের প্রিজমে পথ সমমিত; তাই n=sin[(A+δm)/২]/sin(A/২)।"
+    },
+    {
+      "q": "For prism A=60° and δm=40°, what is n approximately?",
+      "q_bn": "প্রিজমে A=৬০° ও δm=৪০° হলে n প্রায় কত?",
+      "options": [
+        "1.00",
+        "2.00",
+        "0.77",
+        "1.53"
+      ],
+      "options_bn": [
+        "১.০০",
+        "২.০০",
+        "০.৭৭",
+        "১.৫৩"
+      ],
+      "answer": 3,
+      "explanation": "n=sin[(60°+40°)/2]/sin(60°/2)=sin50°/sin30°≈1.53.",
+      "explanation_bn": "n=sin[(৬০°+৪০°)/২]/sin(৬০°/২)=sin৫০°/sin৩০°≈১.৫৩।"
+    },
+    {
+      "q": "How do you recognize minimum deviation while rotating a prism?",
+      "q_bn": "প্রিজম ঘোরানোর সময় সর্বনিম্ন বিচ্যুতি কীভাবে চিনবেন?",
+      "options": [
+        "The apex angle becomes 90 degrees",
+        "The line disappears permanently",
+        "The refractive index becomes zero",
+        "The spectral image reverses its motion at a turning point"
+      ],
+      "options_bn": [
+        "শীর্ষকোণ ৯০° হয়",
+        "রেখা চিরতরে অদৃশ্য হয়",
+        "প্রতিসরাঙ্ক শূন্য হয়",
+        "বর্ণরেখার চলার দিক একটি turning point-এ বদলায়"
+      ],
+      "answer": 3,
+      "explanation": "At minimum deviation the path is symmetric and the emergent ray briefly stops moving in one direction before reversing.",
+      "explanation_bn": "সর্বনিম্ন বিচ্যুতিতে পথ সমমিত; নির্গত রশ্মি একদিকে চলা থামিয়ে বিপরীতদিকে ঘুরতে শুরু করে।"
+    }
+  ]
+}

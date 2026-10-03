@@ -1,0 +1,70 @@
+{
+  "slug": "honours-osmotic-pressure-electrolyte",
+  "title_en": "Osmotic pressure of dilute electrolyte — concept check",
+  "title_bn": "তড়িৎবিশ্লেষ্যের অভিস্রবণ চাপ — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At fixed C and T, doubling i makes π?",
+      "q_bn": "C ও T স্থির রেখে i দ্বিগুণ হলে π?",
+      "options": [
+        "Double",
+        "Half",
+        "Zero",
+        "Same"
+      ],
+      "options_bn": [
+        "Double",
+        "Half",
+        "Zero",
+        "Same"
+      ],
+      "answer": 0,
+      "explanation": "π scales with effective particle concentration.",
+      "explanation_bn": "π কার্যকর কণাঘনত্বের সমানুপাতিক।"
+    },
+    {
+      "q": "At equal C and T, ideal CaCl₂ with i≈3 versus nonelectrolyte has pressure ratio?",
+      "q_bn": "একই C ও T-তে i≈৩ আদর্শ CaCl₂ ও অবিয়োজিত দ্রবের চাপের অনুপাত?",
+      "options": [
+        "3:1",
+        "1:3",
+        "1:1",
+        "9:1"
+      ],
+      "options_bn": [
+        "3:1",
+        "1:3",
+        "1:1",
+        "9:1"
+      ],
+      "answer": 0,
+      "explanation": "Use \\pi=RTC_{particles};\\quad C_{particles}=iC. At same concentration and temperature, ideal CaCl₂ (i≈3) exerts thrice the pressure of a nondissociating solute.",
+      "explanation_bn": "\\pi=RTC_{particles};\\quad C_{particles}=iC ব্যবহার করুন। একই T ও ঘনত্বে আদর্শ CaCl₂ (i≈৩) অবিয়োজিত দ্রবের তিন গুণ চাপ দেয়।"
+    },
+    {
+      "q": "To obtain π in Pa using R in J/(mol K), C must be in?",
+      "q_bn": "R-এর একক J/(mol K) হলে π Pa পেতে C-এর একক?",
+      "options": [
+        "mol/m³",
+        "mol/L without conversion",
+        "g/L",
+        "kg/m³"
+      ],
+      "options_bn": [
+        "mol/m³",
+        "mol/L without conversion",
+        "g/L",
+        "kg/m³"
+      ],
+      "answer": 0,
+      "explanation": "Dilute ideal solution, membrane passes solvent but rejects all solute; C in SI mol/m³ for pascals.",
+      "explanation_bn": "বিরল আদর্শ দ্রবণ; ঝিল্লি দ্রাবক পার করে কিন্তু দ্রব নয়; Pa পেতে C-এর একক mol/m³।"
+    }
+  ]
+}

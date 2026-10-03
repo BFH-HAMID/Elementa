@@ -1,0 +1,70 @@
+{
+  "slug": "honours-mohr-chloride-titration",
+  "title_en": "Mohr argentometric chloride titration — lab viva",
+  "title_bn": "মোহরের পদ্ধতিতে ক্লোরাইড নির্ণয় — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What colour signals the Mohr endpoint?",
+      "q_bn": "মোহরের সমাপ্তিতে কী রং দেখা যায়?",
+      "options": [
+        "Persistent brick red.",
+        "Deep blue",
+        "Bright green",
+        "Colourless always"
+      ],
+      "options_bn": [
+        "স্থায়ী ইট-লাল।",
+        "Deep blue",
+        "Bright green",
+        "Colourless always"
+      ],
+      "answer": 0,
+      "explanation": "Persistent brick red. Ag+ first precipitates Cl− as AgCl. After equivalence, excess Ag+ produces brick-red Ag₂CrO₄ with chromate indicator. Maintain near-neutral pH.",
+      "explanation_bn": "স্থায়ী ইট-লাল। Ag+ আগে Cl−-কে AgCl হিসেবে অধঃক্ষেপ করে। সমাপ্তির পর অতিরিক্ত Ag+ ক্রোমেট নির্দেশকে ইট-লাল Ag₂CrO₄ দেয়। pH প্রায় নিরপেক্ষ রাখুন।"
+    },
+    {
+      "q": "After blank correction, 10.0 mL of 0.0100 M AgNO₃ reacts with how many moles Cl−?",
+      "q_bn": "blank বাদে ০.০১০০ M AgNO₃-এর ১০.০ mL-এ Cl− কত মোল?",
+      "options": [
+        "1.00×10⁻⁴ mol",
+        "2.00×10⁻⁴ mol",
+        "1.00×10⁻³ mol",
+        "1.00×10⁻⁵ mol"
+      ],
+      "options_bn": [
+        "১.০০×১০⁻⁴ mol",
+        "২.০০×১০⁻⁴ mol",
+        "১.০০×১০⁻³ mol",
+        "১.০০×১০⁻⁵ mol"
+      ],
+      "answer": 0,
+      "explanation": "Ag++Cl−→AgCl is 1:1; n=0.0100×0.0100=1.00×10⁻⁴ mol.",
+      "explanation_bn": "Ag++Cl−→AgCl অনুপাত ১:১; n=০.০১০০×০.০১০০=১.০০×১০⁻⁴ mol।"
+    },
+    {
+      "q": "Why should Mohr titration not be carried out in strongly acidic solution?",
+      "q_bn": "প্রবল অম্লীয় দ্রবণে মোহরের টাইট্রেশন করবেন না কেন?",
+      "options": [
+        "The chromate indicator equilibrium and endpoint precipitation are disturbed",
+        "AgCl becomes a gas",
+        "Chloride loses all electrons instantly",
+        "Burette volume becomes negative"
+      ],
+      "options_bn": [
+        "ক্রোমেট নির্দেশকের সাম্য ও সমাপ্তির অধঃক্ষেপ ব্যাহত হয়",
+        "AgCl গ্যাস হয়",
+        "ক্লোরাইড সঙ্গে সঙ্গে সব ইলেকট্রন হারায়",
+        "বিউরেটের আয়তন ঋণাত্মক হয়"
+      ],
+      "answer": 0,
+      "explanation": "Acid shifts chromate toward hydrogen chromate/dichromate, delaying the Ag₂CrO₄ brick-red endpoint. Use the method in its prescribed near-neutral pH range.",
+      "explanation_bn": "অম্লে ক্রোমেট hydrogen chromate/dichromate-এর দিকে সরে ইট-লাল Ag₂CrO₄ সমাপ্তি দেরি করে। নির্ধারিত প্রায় নিরপেক্ষ pH রাখুন।"
+    }
+  ]
+}

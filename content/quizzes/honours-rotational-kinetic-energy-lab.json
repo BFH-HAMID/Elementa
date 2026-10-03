@@ -1,0 +1,32 @@
+{
+  "slug": "honours-rotational-kinetic-energy-lab",
+  "title_bn": "ফ্লাইহুইলের জড়তার ভ্রামক ও ঘূর্ণনশক্তি — ধারণা যাচাই",
+  "title_en": "Flywheel moment of inertia and rotational energy — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "If string slip occurs on the flywheel axle, is v=rω still valid?",
+      "q_bn": "ফ্লাইহুইলের অক্ষে সুতো পিছলালে v=rω কি প্রযোজ্য?",
+      "options": [
+        "Always, by definition of radius",
+        "No, the no-slip link between linear and angular motion fails",
+        "Yes, slip improves the equality",
+        "Only when mass is zero"
+      ],
+      "options_bn": [
+        "সবসময়, ব্যাসার্ধের সংজ্ঞায়",
+        "না, সরল ও কৌণিক গতির পিছলনহীন সম্পর্ক ভাঙে",
+        "হ্যাঁ, পিছলন সম্পর্ক ভালো করে",
+        "শুধু ভর শূন্য হলে"
+      ],
+      "answer": 1,
+      "explanation": "The ideal inertia derivation assumes falling mass displacement follows axle rotation. Slip invalidates v=rω and a=rα, biasing I.",
+      "explanation_bn": "আদর্শ জড়তার প্রতিপাদনে পতনশীল ভরের সরণ অক্ষের ঘূর্ণনের সঙ্গে বাঁধা। পিছলনে v=rω ও a=rα চলে না; I ভুল হয়।"
+    }
+  ]
+}

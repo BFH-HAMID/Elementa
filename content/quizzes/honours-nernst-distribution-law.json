@@ -1,0 +1,32 @@
+{
+  "slug": "honours-nernst-distribution-law",
+  "title_bn": "নার্নস্টের বন্টন সূত্র — ধারণা যাচাই",
+  "title_en": "Nernst distribution (partition) law — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "Why can a partition coefficient appear concentration dependent for an acid distributed between solvents?",
+      "q_bn": "দুটি দ্রাবকে অম্ল বণ্টনে আপাত সহগ ঘনত্বনির্ভর কেন হতে পারে?",
+      "options": [
+        "Both solvents become identical",
+        "All concentrations vanish at equilibrium",
+        "Temperature has no effect on equilibrium",
+        "Ionization or association changes the fraction of the same molecular form"
+      ],
+      "options_bn": [
+        "দুটি দ্রাবক একই হয়ে যায়",
+        "সাম্যে সব ঘনত্ব শূন্য",
+        "তাপমাত্রায় সাম্য বদলায় না",
+        "আয়নীভবন বা সংযুক্তিতে একই আণবিক রূপের অংশ বদলায়"
+      ],
+      "answer": 3,
+      "explanation": "Nernst distribution compares the same chemical species in both phases at constant T; additional equilibria require a modified mass balance.",
+      "explanation_bn": "স্থির তাপে একই রাসায়নিক রূপের দুই স্তরের বণ্টন তুলনা করতে হয়; অন্য সাম্য থাকলে ভর-সাম্য সংশোধন লাগে।"
+    }
+  ]
+}

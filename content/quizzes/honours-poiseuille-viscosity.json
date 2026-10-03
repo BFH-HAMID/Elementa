@@ -1,0 +1,70 @@
+{
+  "slug": "honours-poiseuille-viscosity",
+  "title_en": "Viscosity by Poiseuille flow — lab viva",
+  "title_bn": "পয়জুই প্রবাহে সান্দ্রতা — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why must flow remain laminar?",
+      "q_bn": "প্রবাহ স্তরী থাকা জরুরি কেন?",
+      "options": [
+        "Poiseuille's rate relation is derived for laminar flow.",
+        "Because turbulence has zero viscosity",
+        "Because radius cancels out",
+        "Because temperature cannot change"
+      ],
+      "options_bn": [
+        "পয়জুইর হারসূত্র স্তরী প্রবাহের জন্য প্রতিপাদিত।",
+        "Because turbulence has zero viscosity",
+        "Because radius cancels out",
+        "Because temperature cannot change"
+      ],
+      "answer": 0,
+      "explanation": "Poiseuille's rate relation is derived for laminar flow. For steady laminar flow through a long narrow tube, volume rate Q=πr⁴ΔP/(8ηL); obtain η from measured Q and pressure head ΔP≈ρgh.",
+      "explanation_bn": "পয়জুইর হারসূত্র স্তরী প্রবাহের জন্য প্রতিপাদিত। দীর্ঘ সরু নলে স্থির স্তরী প্রবাহে Q=πr⁴ΔP/(৮ηL); মাপা Q ও চাপের উচ্চতা ΔP≈ρgh থেকে η বের করুন।"
+    },
+    {
+      "q": "At the same pressure head and viscosity, doubling capillary radius ideally changes flow rate by what factor?",
+      "q_bn": "একই চাপ ও সান্দ্রতায় নলের ব্যাসার্ধ দ্বিগুণ হলে আদর্শ প্রবাহহার কত গুণ?",
+      "options": [
+        "Eight",
+        "Sixteen",
+        "Four",
+        "Two"
+      ],
+      "options_bn": [
+        "আট",
+        "ষোলো",
+        "চার",
+        "দুই"
+      ],
+      "answer": 1,
+      "explanation": "Poiseuille flow has Q∝r⁴; 2⁴=16 if flow remains laminar.",
+      "explanation_bn": "পয়জুই প্রবাহে Q∝r⁴; স্তরী প্রবাহ বজায় থাকলে ২⁴=১৬।"
+    },
+    {
+      "q": "Why is capillary-radius calibration especially critical?",
+      "q_bn": "কৈশিক ব্যাসার্ধের ক্রমাঙ্কন বিশেষ জরুরি কেন?",
+      "options": [
+        "Pressure head cannot be measured",
+        "Inferred viscosity contains r to the fourth power",
+        "Radius cancels from Poiseuille's law",
+        "Only tube colour affects viscosity"
+      ],
+      "options_bn": [
+        "চাপের উচ্চতা মাপা যায় না",
+        "নির্ণীত সান্দ্রতায় r-এর চতুর্থ ঘাত আছে",
+        "পয়জুই সূত্রে ব্যাসার্ধ বাদ যায়",
+        "শুধু নলের রং সান্দ্রতা বদলায়"
+      ],
+      "answer": 1,
+      "explanation": "η=πr⁴ΔP/(8LQ). A 1% radius bias contributes about 4% viscosity bias even before flow errors.",
+      "explanation_bn": "η=πr⁴ΔP/(৮LQ)। ব্যাসার্ধে ১% ভুলে প্রবাহের অন্য ত্রুটি ছাড়াই η-তে প্রায় ৪% ভুল হয়।"
+    }
+  ]
+}

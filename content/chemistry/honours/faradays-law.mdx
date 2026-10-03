@@ -37,6 +37,16 @@ variables:
     si_unit: C/mol
 derivation: Charge supplies electrons to reduce or oxidise ions. Dividing by n gives moles of ions, then multiplying by molar mass gives deposited mass.
 derivation_bn: চার্জ আয়নকে reduction বা oxidation-এ অংশ নিতে ইলেকট্রন দেয়। n দিয়ে ভাগ করলে আয়নের মোল, তারপর molar mass দিয়ে গুণ করলে সঞ্চিত ভর পাওয়া যায়।
+derivation_steps:
+  - step_en: "A passed charge Q represents Q/F moles of transferred electrons."
+    step_bn: "Q চার্জে স্থানান্তরিত ইলেকট্রনের মোল Q/F।"
+    latex: "n_e=Q/F"
+  - step_en: "Each deposited ion uses n electrons, so divide the electron amount by n."
+    step_bn: "প্রতি সঞ্চিত আয়নে n ইলেকট্রন লাগলে ইলেকট্রনের মোলকে n দিয়ে ভাগ করুন।"
+    latex: "n_{\\mathrm{deposit}}=Q/(nF)"
+  - step_en: "Multiply deposited moles by molar mass M, assuming unit current efficiency."
+    step_bn: "প্রবাহ দক্ষতা ১০০% ধরে সঞ্চিত মোলকে M মোলার ভর দিয়ে গুণ করুন।"
+    latex: "m = \\frac{Q M}{nF}"
 summary_en: Relate electric charge to the mass deposited in electrolysis.
 summary_bn: তড়িৎ বিশ্লেষণে চার্জ ও সঞ্চিত ভরের সম্পর্ক।
 related: [nernst-equation]
@@ -44,3 +54,9 @@ tags: [electrolysis, charge, honours]
 ---
 
 Faraday's law is a bookkeeping relation for ideal current efficiency. Side reactions can make an experimental deposit smaller than the predicted value.
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+Electrolytic plating with weighed electrodes and measured charge could test deposited mass; follow metal-waste safety rules.
+
+ইলেকট্রোডের ভর ও মোট চার্জ মেপে তড়িৎ প্রলেপে সঞ্চিত ভর যাচাই করা যায়; ধাতব বর্জ্যবিধি মানুন।

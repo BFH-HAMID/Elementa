@@ -1,0 +1,32 @@
+{
+  "slug": "honours-michelson-interferometer-lab",
+  "title_bn": "মাইকেলসন ব্যতিচারক দিয়ে আলোর তরঙ্গদৈর্ঘ্য — ধারণা যাচাই",
+  "title_en": "Michelson interferometer wavelength measurement — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "If a mirror moves 0.10 mm while 400 fringes cross, wavelength is?",
+      "q_bn": "দর্পণ ০.১০ mm সরলে ৪০০ ঝালর গেলে তরঙ্গদৈর্ঘ্য কত?",
+      "options": [
+        "250 nm",
+        "1000 nm",
+        "400 nm",
+        "500 nm"
+      ],
+      "options_bn": [
+        "২৫০ nm",
+        "১০০০ nm",
+        "৪০০ nm",
+        "৫০০ nm"
+      ],
+      "answer": 3,
+      "explanation": "The optical path changes by 2Δx, so λ=2×0.10 mm/400=0.0005 mm=500 nm.",
+      "explanation_bn": "আলোকপথ ২Δx বদলায়; তাই λ=২×০.১০ mm/৪০০=০.০০০৫ mm=৫০০ nm।"
+    }
+  ]
+}

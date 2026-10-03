@@ -1,0 +1,60 @@
+---
+type: "equation"
+slug: "gibbs-phase-rule"
+title_bn: "গিবসের দশা সূত্র"
+title_en: "Gibbs phase rule"
+subject: "chemistry"
+level: "honours"
+chapter: "Phase Equilibria"
+chapter_bn: "Phase Equilibria"
+latex: "F=C-P+2"
+calculator: false
+variables:
+  - symbol: "F"
+    name: "intensive degrees of freedom"
+    name_bn: "intensive degrees of freedom"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "C"
+    name: "independent components"
+    name_bn: "independent components"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "P"
+    name: "number of phases"
+    name_bn: "number of phases"
+    unit: "1"
+    si_unit: "1"
+derivation: "Choose temperature and pressure plus C−1 independent compositions in each of P phases. At equilibrium, match the chemical potential of every component across all phases. Subtract independent constraints from the count of variables."
+derivation_bn: "প্রতিটি P দশায় তাপমাত্রা, চাপ ও C−১টি স্বাধীন গঠন চলক নিন। সাম্যে প্রতিটি উপাদানের রাসায়নিক বিভব সব দশায় সমান করুন। চলকসংখ্যা থেকে স্বাধীন শর্তসংখ্যা বিয়োগ করুন।"
+derivation_steps:
+  - step_en: "Choose temperature and pressure plus C−1 independent compositions in each of P phases."
+    step_bn: "প্রতিটি P দশায় তাপমাত্রা, চাপ ও C−১টি স্বাধীন গঠন চলক নিন।"
+    latex: "N=2+P(C-1)"
+  - step_en: "At equilibrium, match the chemical potential of every component across all phases."
+    step_bn: "সাম্যে প্রতিটি উপাদানের রাসায়নিক বিভব সব দশায় সমান করুন।"
+    latex: "N_{constraints}=C(P-1)"
+  - step_en: "Subtract independent constraints from the count of variables."
+    step_bn: "চলকসংখ্যা থেকে স্বাধীন শর্তসংখ্যা বিয়োগ করুন।"
+    latex: "F=C-P+2"
+summary_en: "For pure water at its triple point C=1 and P=3, so F=0: temperature and pressure cannot independently vary while three phases coexist."
+summary_bn: " এক-উপাদান তিন-দশায় স্বাধীনতা শূন্য।"
+tags:
+  - "honours"
+  - "phase equilibria"
+experiment: "freezing-depression-electrolyte-lab"
+---
+
+### Worked example / প্রয়োগ
+
+For pure water at its triple point C=1 and P=3, so F=0: temperature and pressure cannot independently vary while three phases coexist. বাংলা: এক-উপাদান তিন-দশায় স্বাধীনতা শূন্য।
+
+### Assumptions / সীমা
+
+Assumes equilibrium, independent constraints and nonreacting components. For a reacting system use the number of independent components after accounting for independent reactions; at fixed pressure the reduced rule is F=C−P+1.
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+A cooling plateau demonstrates phase coexistence, but a full phase-rule test needs controlled independent variables and phase counts.
+
+শীতলনের স্থির অংশে দশার সহাবস্থান দেখা যায়; পূর্ণ দশা সূত্র যাচাইয়ে স্বাধীন চলক ও দশা-সংখ্যা লাগবে।

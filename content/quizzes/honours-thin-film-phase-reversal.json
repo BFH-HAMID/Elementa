@@ -1,0 +1,70 @@
+{
+  "slug": "honours-thin-film-phase-reversal",
+  "title_en": "Thin-film reflected interference — concept check",
+  "title_bn": "পাতলা স্তরে প্রতিফলিত ব্যতিচার — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Does the reflection phase shift matter?",
+      "q_bn": "প্রতিফলনে দশা-বিপর্যয় কি গুরুত্বপূর্ণ?",
+      "options": [
+        "Yes",
+        "No",
+        "Only for sound",
+        "Only at normal incidence"
+      ],
+      "options_bn": [
+        "Yes",
+        "No",
+        "Only for sound",
+        "Only at normal incidence"
+      ],
+      "answer": 0,
+      "explanation": "A π reversal switches bright and dark conditions.",
+      "explanation_bn": "π বিপর্যয়ে উজ্জ্বল ও অন্ধকার শর্ত পাল্টায়।"
+    },
+    {
+      "q": "For λ₀=600 nm and n=1.5 at normal incidence, quarter-wave thickness?",
+      "q_bn": "λ₀=৬০০ nm ও n=১.৫ হলে লম্ব আপতনে চতুর্থাংশ-তরঙ্গ পুরুত্ব?",
+      "options": [
+        "100 nm",
+        "400 nm",
+        "600 nm",
+        "50 nm"
+      ],
+      "options_bn": [
+        "100 nm",
+        "400 nm",
+        "600 nm",
+        "50 nm"
+      ],
+      "answer": 0,
+      "explanation": "Use \\Delta_{opt}=2nt\\cos\\theta_t. At normal incidence and m=0, t=λ₀/(4n); for 600 nm and n=1.5, t=100 nm.",
+      "explanation_bn": "\\Delta_{opt}=2nt\\cos\\theta_t ব্যবহার করুন। লম্ব আপতনে m=০ হলে t=λ₀/(৪n); ৬০০ nm ও n=১.৫-এ t=১০০ nm।"
+    },
+    {
+      "q": "For the displayed bright-reflection condition, how many relative π phase reversals are assumed?",
+      "q_bn": "দেখানো প্রতিফলিত উজ্জ্বল শর্তে আপেক্ষিক π দশা-বিপর্যয় কয়টি?",
+      "options": [
+        "One",
+        "Zero",
+        "Two",
+        "Three"
+      ],
+      "options_bn": [
+        "One",
+        "Zero",
+        "Two",
+        "Three"
+      ],
+      "answer": 0,
+      "explanation": "Constructive reflected light here assumes exactly one π phase reversal between the two rays; with zero or two reversals the bright condition is 2nt cosθ=mλ₀ instead.",
+      "explanation_bn": "এখানে প্রতিফলনে উজ্জ্বল শর্তটি দুই রশ্মির মধ্যে ঠিক একটি π দশা-বিপর্যয় ধরে; শূন্য বা দুটি বিপর্যয় হলে উজ্জ্বল শর্ত ২nt cosθ=mλ₀।"
+    }
+  ]
+}

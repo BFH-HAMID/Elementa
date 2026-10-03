@@ -1,0 +1,70 @@
+{
+  "slug": "honours-franck-hertz-mercury",
+  "title_en": "Franck–Hertz excitation voltage — lab viva",
+  "title_bn": "ফ্রাঙ্ক–হার্টজ উত্তেজনা বিভব — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What does the spacing of adjacent current extrema estimate?",
+      "q_bn": "পরপর প্রবাহের চরম মানের ব্যবধান কী নির্ণয় করে?",
+      "options": [
+        "An atomic excitation voltage.",
+        "The electron rest mass",
+        "Only the tube radius",
+        "Zero kinetic energy"
+      ],
+      "options_bn": [
+        "পরমাণুর উত্তেজনা বিভব।",
+        "The electron rest mass",
+        "Only the tube radius",
+        "Zero kinetic energy"
+      ],
+      "answer": 0,
+      "explanation": "An atomic excitation voltage. Electrons accelerated through a vapour undergo inelastic collisions above an excitation energy ΔE≈eΔV. Successive current maxima/minima spacings approximate the excitation voltage, after contact-potential effects.",
+      "explanation_bn": "পরমাণুর উত্তেজনা বিভব। বাষ্পে ত্বরিত ইলেকট্রন ΔE≈eΔV শক্তিতে অস্থিতিস্থাপক সংঘর্ষ করে। প্রবাহের পরপর সর্বোচ্চ/সর্বনিম্নের বিভব-ব্যবধান সংযোগ-বিভব সংশোধনের পর উত্তেজনা বিভব দেয়।"
+    },
+    {
+      "q": "Successive current extrema are separated by 4.9 V. Estimated atomic excitation energy?",
+      "q_bn": "পরপর প্রবাহ চরম মানের বিভব পার্থক্য ৪.৯ V হলে উত্তেজনা শক্তি?",
+      "options": [
+        "9.8 eV",
+        "0.49 eV",
+        "4.9 J",
+        "4.9 eV"
+      ],
+      "options_bn": [
+        "৯.৮ eV",
+        "০.৪৯ eV",
+        "৪.৯ J",
+        "৪.৯ eV"
+      ],
+      "answer": 3,
+      "explanation": "A single-electron energy gain through 4.9 V is e×4.9 V=4.9 eV, ignoring corrections.",
+      "explanation_bn": "একটি ইলেকট্রনের ৪.৯ V-এ শক্তি বৃদ্ধি e×৪.৯ V=৪.৯ eV; সংশোধন বাদে।"
+    },
+    {
+      "q": "Why use spacing between successive extrema instead of the voltage of the first maximum alone?",
+      "q_bn": "প্রথম চরম মানের বিভবের বদলে পরপর চরম মানের ব্যবধান কেন নেন?",
+      "options": [
+        "The first maximum has no electrons",
+        "Atomic excitation energy changes for every collision",
+        "It removes all effects of vapour temperature",
+        "Spacing reduces an approximately fixed contact-potential offset"
+      ],
+      "options_bn": [
+        "প্রথম চরম মানে ইলেকট্রন নেই",
+        "প্রতি সংঘর্ষে উত্তেজনা শক্তি বদলায়",
+        "বাষ্পের তাপের সব প্রভাব দূর করে",
+        "ব্যবধান নিলে প্রায় স্থির সংযোগ-বিভব বাদ যায়"
+      ],
+      "answer": 3,
+      "explanation": "Absolute peak position includes contact potentials and apparatus effects; differences across several peaks better approximate the repeated excitation energy eΔV.",
+      "explanation_bn": "চরম মানের নিরপেক্ষ অবস্থানে সংযোগ-বিভব ও যন্ত্রের প্রভাব থাকে; কয়েকটি পার্থক্য থেকে পুনরাবৃত্ত উত্তেজনা শক্তি eΔV ভালো পাওয়া যায়।"
+    }
+  ]
+}

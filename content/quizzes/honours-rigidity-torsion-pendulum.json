@@ -1,0 +1,70 @@
+{
+  "slug": "honours-rigidity-torsion-pendulum",
+  "title_en": "Rigidity modulus by torsion pendulum — lab viva",
+  "title_bn": "পাক দোলকে দৃঢ়তা গুণাঙ্ক — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why is accurate wire radius essential?",
+      "q_bn": "তারের ব্যাসার্ধ নির্ভুল মাপা জরুরি কেন?",
+      "options": [
+        "The inferred G depends on r to the fourth power.",
+        "Because κ ignores r",
+        "Because T is proportional to r",
+        "Because the wire has no mass"
+      ],
+      "options_bn": [
+        "নির্ণীত G, r-এর চতুর্থ ঘাতের ওপর নির্ভর করে।",
+        "Because κ ignores r",
+        "Because T is proportional to r",
+        "Because the wire has no mass"
+      ],
+      "answer": 0,
+      "explanation": "The inferred G depends on r to the fourth power. For a long circular wire of length L and radius r, torsion constant κ=πGr⁴/(2L). With attached inertia I, T=2π√(I/κ).",
+      "explanation_bn": "নির্ণীত G, r-এর চতুর্থ ঘাতের ওপর নির্ভর করে। L দৈর্ঘ্য ও r ব্যাসার্ধের বৃত্তাকার তারে পাক ধ্রুবক κ=πGr⁴/(২L)। যুক্ত জড়তার ভ্রামক I হলে T=২π√(I/κ)।"
+    },
+    {
+      "q": "If wire radius doubles with G and L unchanged, torsion constant changes how?",
+      "q_bn": "G ও L একই রেখে তারের ব্যাসার্ধ দ্বিগুণ করলে পাক ধ্রুবক কত গুণ?",
+      "options": [
+        "Two times",
+        "Four times",
+        "Half",
+        "Sixteen times"
+      ],
+      "options_bn": [
+        "দুই গুণ",
+        "চার গুণ",
+        "অর্ধেক",
+        "ষোলো গুণ"
+      ],
+      "answer": 3,
+      "explanation": "κ=πGr⁴/(2L), so 2⁴=16.",
+      "explanation_bn": "κ=πGr⁴/(২L); তাই ২⁴=১৬।"
+    },
+    {
+      "q": "If the disc swings sideways as well as twisting, what is the best response?",
+      "q_bn": "চাকতি পাক দোলনের সঙ্গে পাশেও দুললে কী করবেন?",
+      "options": [
+        "Include sideways swings as more periods",
+        "Increase twist beyond elastic limit",
+        "Ignore the motion without recording it",
+        "Realign and repeat pure torsional oscillations"
+      ],
+      "options_bn": [
+        "পার্শ্বদোলনকে বাড়তি পর্যায়কাল ধরবেন",
+        "স্থিতিস্থাপক সীমার বাইরে পাকাবেন",
+        "না লিখেই গতি উপেক্ষা করবেন",
+        "সারিবদ্ধ করে শুধু পাক দোলনে আবার মাপবেন"
+      ],
+      "answer": 3,
+      "explanation": "T=2π√(I/κ) models torsional motion, not coupled lateral movement. Mixed modes bias the timed period and inferred modulus.",
+      "explanation_bn": "T=২π√(I/κ) শুধু পাক দোলনের মডেল; মিশ্র পার্শ্বদোলনে মাপা পর্যায়কাল ও গুণাঙ্ক ভুল হয়।"
+    }
+  ]
+}

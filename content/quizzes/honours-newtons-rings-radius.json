@@ -1,0 +1,70 @@
+{
+  "slug": "honours-newtons-rings-radius",
+  "title_en": "Newton rings for wavelength — lab viva",
+  "title_bn": "নিউটনের বলয় থেকে তরঙ্গদৈর্ঘ্য — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why measure diameter on both sides of the centre?",
+      "q_bn": "কেন্দ্রের উভয় পাশে ব্যাস কেন মাপি?",
+      "options": [
+        "To reduce centre-position and microscope zero errors.",
+        "To double wavelength",
+        "Because rings are elliptical by definition",
+        "To avoid measuring curvature"
+      ],
+      "options_bn": [
+        "কেন্দ্রের অবস্থান ও অণুবীক্ষণের শূন্য ত্রুটি কমাতে।",
+        "To double wavelength",
+        "Because rings are elliptical by definition",
+        "To avoid measuring curvature"
+      ],
+      "answer": 0,
+      "explanation": "To reduce centre-position and microscope zero errors. For reflected light with one phase reversal and near-normal incidence, dark-ring diameter satisfies Dm²=4mλR; differences eliminate the central-contact offset: Dm+p²−Dm²=4pλR.",
+      "explanation_bn": "কেন্দ্রের অবস্থান ও অণুবীক্ষণের শূন্য ত্রুটি কমাতে। এক দশা-বিপর্যয়সহ প্রায় লম্ব আপতনে প্রতিফলিত অন্ধকার বলয়ের ব্যাস Dm²=৪mλR; পার্থক্য নিলে কেন্দ্রের সংস্পর্শ ত্রুটি কমে: Dm+p²−Dm²=৪pλR।"
+    },
+    {
+      "q": "If slope of Dm² versus order m is 8.0×10⁻⁷ m² and lens radius R=0.40 m, wavelength is?",
+      "q_bn": "Dm² বনাম m-এর ঢাল ৮.০×১০⁻⁷ m² ও R=০.৪০ m হলে তরঙ্গদৈর্ঘ্য কত?",
+      "options": [
+        "800 nm",
+        "2 μm",
+        "500 nm",
+        "200 nm"
+      ],
+      "options_bn": [
+        "৮০০ nm",
+        "২ μm",
+        "৫০০ nm",
+        "২০০ nm"
+      ],
+      "answer": 2,
+      "explanation": "slope=4λR, so λ=8.0×10⁻⁷/(4×0.40)=5.0×10⁻⁷ m=500 nm.",
+      "explanation_bn": "ঢাল=৪λR, তাই λ=৮.০×১০⁻⁷/(৪×০.৪০)=৫.০×১০⁻⁷ m=৫০০ nm।"
+    },
+    {
+      "q": "Why fit several Dm² values against ring order rather than rely on the central dark spot alone?",
+      "q_bn": "শুধু কেন্দ্রের অন্ধকার দাগ না নিয়ে কয়েকটি Dm² বনাম ক্রম কেন আঁকবেন?",
+      "options": [
+        "Ring order is always zero",
+        "Fitting replaces measuring the lens radius",
+        "The slope reduces contact-offset and single-reading errors",
+        "Only the central spot has nonzero wavelength"
+      ],
+      "options_bn": [
+        "বলয়ের ক্রম সবসময় শূন্য",
+        "ঢাল নিলে লেন্সের ব্যাসার্ধ মাপতে হয় না",
+        "ঢালে সংস্পর্শ ও একক পাঠের ত্রুটির প্রভাব কমে",
+        "শুধু কেন্দ্রেই তরঙ্গদৈর্ঘ্য থাকে"
+      ],
+      "answer": 2,
+      "explanation": "D_m² is approximately linear in m; a nonzero central-contact intercept can be diagnosed and slope=4λR yields wavelength.",
+      "explanation_bn": "D_m² প্রায় m-এর সঙ্গে সরলরৈখিক; কেন্দ্রে ফাঁক থাকলে ছেদ থেকে বোঝা যায়, আর ঢাল=৪λR থেকে তরঙ্গদৈর্ঘ্য মেলে।"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "honours-angular-impulse",
+  "title_en": "Angular impulse and torque — concept check",
+  "title_bn": "কৌণিক ঘাত — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Zero net external torque implies what?",
+      "q_bn": "মোট বহিঃস্থ টর্ক শূন্য হলে কী সংরক্ষিত?",
+      "options": [
+        "Angular momentum",
+        "Angular speed always",
+        "Kinetic energy always",
+        "Torque"
+      ],
+      "options_bn": [
+        "Angular momentum",
+        "Angular speed always",
+        "Kinetic energy always",
+        "Torque"
+      ],
+      "answer": 0,
+      "explanation": "Integrate dL/dt=0.",
+      "explanation_bn": "dL/dt=০ সমাকলন করুন।"
+    },
+    {
+      "q": "A constant torque of 2 N m acts for 3 s. ΔL?",
+      "q_bn": "২ N m ধ্রুব টর্ক ৩ s কাজ করলে ΔL কত?",
+      "options": [
+        "6 kg m²/s",
+        "2 kg m²/s",
+        "3 kg m²/s",
+        "12 kg m²/s"
+      ],
+      "options_bn": [
+        "6 kg m²/s",
+        "2 kg m²/s",
+        "3 kg m²/s",
+        "12 kg m²/s"
+      ],
+      "answer": 0,
+      "explanation": "Use \\frac{d}{dt}(\\mathbf r\\times\\mathbf p)=\\mathbf v\\times\\mathbf p+\\mathbf r\\times\\mathbf F=\\mathbf r\\times\\mathbf F. A constant 2 N m torque acting 3 s changes angular momentum by 6 kg m²/s.",
+      "explanation_bn": "\\frac{d}{dt}(\\mathbf r\\times\\mathbf p)=\\mathbf v\\times\\mathbf p+\\mathbf r\\times\\mathbf F=\\mathbf r\\times\\mathbf F ব্যবহার করুন। ২ N m ধ্রুব টর্ক ৩ s কাজ করলে কৌণিক ভরবেগ ৬ kg m²/s বদলায়।"
+    },
+    {
+      "q": "For a particle, about which origin does dL/dt equal torque without fictitious corrections?",
+      "q_bn": "কণার ক্ষেত্রে কোন মূলবিন্দুতে dL/dt সংশোধন ছাড়া টর্কের সমান?",
+      "options": [
+        "A fixed inertial origin",
+        "Any accelerating origin",
+        "Only the centre of Earth",
+        "An origin moving in a circle"
+      ],
+      "options_bn": [
+        "A fixed inertial origin",
+        "Any accelerating origin",
+        "Only the centre of Earth",
+        "An origin moving in a circle"
+      ],
+      "answer": 0,
+      "explanation": "Sum external torques for a many-particle system; choose one inertial origin throughout.",
+      "explanation_bn": "বহুকণার ক্ষেত্রে বহিঃস্থ টর্ক যোগ করুন; একই জড় মূলবিন্দু রাখুন।"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "honours-dalton-partial-pressure-honours",
+  "title_en": "Dalton partial-pressure law — concept check",
+  "title_bn": "ডাল্টনের আংশিক চাপ — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "20 kPa plus 30 kPa partial pressures make total?",
+      "q_bn": "২০ ও ৩০ kPa আংশিক চাপ মিলে মোট?",
+      "options": [
+        "50 kPa",
+        "10 kPa",
+        "600 kPa",
+        "1.5 kPa"
+      ],
+      "options_bn": [
+        "50 kPa",
+        "10 kPa",
+        "600 kPa",
+        "1.5 kPa"
+      ],
+      "answer": 0,
+      "explanation": "Add the partial pressures.",
+      "explanation_bn": "আংশিক চাপ যোগ করুন।"
+    },
+    {
+      "q": "Partial pressures 45 and 25 kPa give total?",
+      "q_bn": "আংশিক চাপ ৪৫ ও ২৫ kPa হলে মোট চাপ?",
+      "options": [
+        "70 kPa",
+        "20 kPa",
+        "1125 kPa",
+        "1.8 kPa"
+      ],
+      "options_bn": [
+        "70 kPa",
+        "20 kPa",
+        "1125 kPa",
+        "1.8 kPa"
+      ],
+      "answer": 0,
+      "explanation": "Use P_i=n_iRT/V;\\quad P=(\\sum_i n_i)RT/V. Two ideal gases at 20 and 30 kPa contribute 50 kPa total.",
+      "explanation_bn": "P_i=n_iRT/V;\\quad P=(\\sum_i n_i)RT/V ব্যবহার করুন। দুটি আদর্শ গ্যাসের ২০ ও ৩০ kPa মিলে মোট ৫০ kPa।"
+    },
+    {
+      "q": "Dalton's simple additivity is exact under which gas model?",
+      "q_bn": "ডাল্টনের সাধারণ যোগফল কোন গ্যাস মডেলে যথার্থ?",
+      "options": [
+        "Ideal noninteracting gas mixture",
+        "Strongly interacting dense mixture",
+        "Condensing gas",
+        "Liquid mixture"
+      ],
+      "options_bn": [
+        "Ideal noninteracting gas mixture",
+        "Strongly interacting dense mixture",
+        "Condensing gas",
+        "Liquid mixture"
+      ],
+      "answer": 0,
+      "explanation": "Ideal-gas approximation at shared T and V; strong interactions cause nonideal departures.",
+      "explanation_bn": "একই T ও V-তে আদর্শ গ্যাসের অনুমান; প্রবল আন্তঃক্রিয়ায় বিচ্যুতি হয়।"
+    }
+  ]
+}

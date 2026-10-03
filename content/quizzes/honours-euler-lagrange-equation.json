@@ -1,0 +1,32 @@
+{
+  "slug": "honours-euler-lagrange-equation",
+  "title_bn": "অয়লার–ল্যাগ্রাঞ্জ সমীকরণ — ধারণা যাচাই",
+  "title_en": "Euler–Lagrange equation — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "For L=½m q̇²−½kq², what equation follows?",
+      "q_bn": "L=½m q̇²−½kq² হলে কোন গতিসমীকরণ মেলে?",
+      "options": [
+        "mq̈−kq=0",
+        "q̈=0",
+        "mq̇+kq=0",
+        "mq̈+kq=0"
+      ],
+      "options_bn": [
+        "mq̈−kq=০",
+        "q̈=০",
+        "mq̇+kq=০",
+        "mq̈+kq=০"
+      ],
+      "answer": 3,
+      "explanation": "∂L/∂q=−kq and d(∂L/∂q̇)/dt=mq̈. Euler–Lagrange gives mq̈=−kq.",
+      "explanation_bn": "∂L/∂q=−kq ও d(∂L/∂q̇)/dt=mq̈; তাই mq̈=−kq।"
+    }
+  ]
+}

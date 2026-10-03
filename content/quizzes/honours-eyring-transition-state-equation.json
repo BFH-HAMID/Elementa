@@ -1,0 +1,32 @@
+{
+  "slug": "honours-eyring-transition-state-equation",
+  "title_bn": "আইরিং-এর অন্তর্বর্তী অবস্থা সমীকরণ — ধারণা যাচাই",
+  "title_en": "Eyring transition-state rate equation — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "In transition-state theory, which factor has units of inverse time in k≈(kBT/h)exp(−ΔG‡/RT)?",
+      "q_bn": "পরিবর্তন-অবস্থা তত্ত্বে k≈(kBT/h)exp(−ΔG‡/RT)-এ কোন গুণকের একক সময়ের ব্যস্ত?",
+      "options": [
+        "ΔG‡/RT",
+        "Equilibrium activity",
+        "kBT/h",
+        "exp(−ΔG‡/RT)"
+      ],
+      "options_bn": [
+        "ΔG‡/RT",
+        "সাম্য সক্রিয়তা",
+        "kBT/h",
+        "exp(−ΔG‡/RT)"
+      ],
+      "answer": 2,
+      "explanation": "kBT/h has dimensions s⁻¹; the exponent and its exponential are dimensionless. The expression needs transition-state assumptions.",
+      "explanation_bn": "kBT/h-এর একক s⁻¹; সূচক ও সূচকীয় রাশি মাত্রাহীন। পরিবর্তন-অবস্থার অনুমান দরকার।"
+    }
+  ]
+}

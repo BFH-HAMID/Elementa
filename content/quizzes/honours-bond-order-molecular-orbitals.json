@@ -1,0 +1,32 @@
+{
+  "slug": "honours-bond-order-molecular-orbitals",
+  "title_en": "Molecular orbital bond order — practice",
+  "title_bn": "আণবিক অরবিটালে বন্ধনক্রম — অনুশীলন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours theory and practical",
+  "chapter_bn": "স্নাতক তত্ত্ব ও ব্যবহারিক",
+  "description_en": "A conceptual question with worked answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If Nb=8 and Na=4, what is BO?",
+      "q_bn": "Nb=৮ ও Na=৪ হলে বন্ধনক্রম কত?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "12"
+      ],
+      "options_bn": [
+        "2",
+        "4",
+        "6",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "(8−4)/2=2.",
+      "explanation_bn": "(৮−৪)/২=২।"
+    }
+  ]
+}

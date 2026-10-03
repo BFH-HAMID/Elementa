@@ -1,0 +1,32 @@
+{
+  "slug": "honours-conductance-cell-constant-lab",
+  "title_bn": "পরিবাহিতা কোষধ্রুবকের ক্রমাঙ্কন — ধারণা যাচাই",
+  "title_en": "Calibration of conductivity-cell constant — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "With calibrated Kcell=100 m⁻¹ and unknown G=0.005 S, conductivity is?",
+      "q_bn": "Kcell=১০০ m⁻¹ ও অজানার G=০.০০৫ S হলে পরিবাহিতা কত?",
+      "options": [
+        "0.00005 S/m",
+        "0.5 S/m",
+        "5 S/m",
+        "20 S/m"
+      ],
+      "options_bn": [
+        "০.০০০০৫ S/m",
+        "০.৫ S/m",
+        "৫ S/m",
+        "২০ S/m"
+      ],
+      "answer": 1,
+      "explanation": "κ=G Kcell=0.005×100=0.5 S/m at the calibration temperature.",
+      "explanation_bn": "ক্রমাঙ্কন তাপমাত্রায় κ=G Kcell=০.০০৫×১০০=০.৫ S/m।"
+    }
+  ]
+}

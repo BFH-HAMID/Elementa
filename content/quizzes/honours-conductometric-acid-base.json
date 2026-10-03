@@ -1,0 +1,70 @@
+{
+  "slug": "honours-conductometric-acid-base",
+  "title_en": "Conductometric strong acid–strong base titration — lab viva",
+  "title_bn": "পরিবাহিতা দিয়ে শক্ত অম্ল-ক্ষার টাইট্রেশন — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why does conductivity rise past equivalence?",
+      "q_bn": "সমাপ্তির পরে পরিবাহিতা কেন বাড়ে?",
+      "options": [
+        "Excess mobile OH− ions enter the solution.",
+        "Because no ions remain",
+        "Because H+ concentration increases",
+        "Because water freezes"
+      ],
+      "options_bn": [
+        "অতিরিক্ত গতিশীল OH− আয়ন দ্রবণে আসে।",
+        "Because no ions remain",
+        "Because H+ concentration increases",
+        "Because water freezes"
+      ],
+      "answer": 0,
+      "explanation": "Excess mobile OH− ions enter the solution. As NaOH neutralizes HCl, highly mobile H+ is replaced by Na+, decreasing conductance; after equivalence excess OH− increases it. Intersect straight-line portions after dilution correction.",
+      "explanation_bn": "অতিরিক্ত গতিশীল OH− আয়ন দ্রবণে আসে। NaOH দিয়ে HCl নিরপেক্ষতায় দ্রুতগামী H+ এর বদলে Na+ আসায় পরিবাহন কমে; সমাপ্তির পরে অতিরিক্ত OH−-এ বাড়ে। পাতলা হওয়া সংশোধন করে রেখাদ্বয়ের ছেদ নিন।"
+    },
+    {
+      "q": "20.0 mL HCl reaches equivalence with 15.0 mL of 0.100 M NaOH. HCl molarity?",
+      "q_bn": "২০.০ mL HCl-এ ০.১০০ M NaOH ১৫.০ mL-তে সাম্যবিন্দু হলে HCl-এর মোলারিটি?",
+      "options": [
+        "0.150 M",
+        "0.0500 M",
+        "0.0750 M",
+        "0.100 M"
+      ],
+      "options_bn": [
+        "০.১৫০ M",
+        "০.০৫০০ M",
+        "০.০৭৫০ M",
+        "০.১০০ M"
+      ],
+      "answer": 2,
+      "explanation": "At 1:1 equivalence Cacid Vacid=Cbase Vbase; 0.100×15.0/20.0=0.0750 M.",
+      "explanation_bn": "১:১ সাম্যে Cacid Vacid=Cbase Vbase; ০.১০০×১৫.০/২০.০=০.০৭৫০ M।"
+    },
+    {
+      "q": "Why measure conductance beyond the equivalence point?",
+      "q_bn": "সাম্যবিন্দু পার হয়েও পরিবাহন কেন মাপেন?",
+      "options": [
+        "Only post-equivalence readings give original acid volume",
+        "It makes dilution correction unnecessary",
+        "Both descending and rising branches are needed for their intersection",
+        "After equivalence all conductance is zero"
+      ],
+      "options_bn": [
+        "শুধু পরের পাঠে প্রথম অম্লের আয়তন পাওয়া যায়",
+        "এতে পাতলা হওয়ার সংশোধন লাগে না",
+        "নিম্নমুখী ও ঊর্ধ্বমুখী দুই রেখার ছেদ দরকার",
+        "সমাপ্তির পরে পরিবাহন শূন্য"
+      ],
+      "answer": 2,
+      "explanation": "Before equivalence H+ replacement lowers conductance; excess OH− raises it afterwards. Their fitted intersection estimates the equivalence volume.",
+      "explanation_bn": "আগে H+ বদলায় বলে পরিবাহন কমে; পরে অতিরিক্ত OH−-এ বাড়ে। দুই রেখার ছেদ থেকে সাম্য আয়তন।"
+    }
+  ]
+}

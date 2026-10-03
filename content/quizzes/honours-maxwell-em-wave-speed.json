@@ -1,0 +1,32 @@
+{
+  "slug": "honours-maxwell-em-wave-speed",
+  "title_bn": "তড়িৎচুম্বকীয় তরঙ্গের বেগ — ধারণা যাচাই",
+  "title_en": "Speed of electromagnetic waves from Maxwell’s equations — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "What determines electromagnetic-wave speed in vacuum?",
+      "q_bn": "শূন্যস্থানে তড়িৎচুম্বকীয় তরঙ্গের বেগ কী নির্ধারণ করে?",
+      "options": [
+        "μ₀/ε₀",
+        "Zero",
+        "1/√(μ₀ε₀)",
+        "√(μ₀ε₀)"
+      ],
+      "options_bn": [
+        "μ₀/ε₀",
+        "শূন্য",
+        "১/√(μ₀ε₀)",
+        "√(μ₀ε₀)"
+      ],
+      "answer": 2,
+      "explanation": "Combining vacuum Maxwell equations yields a wave equation with c²=1/(μ₀ε₀).",
+      "explanation_bn": "শূন্যস্থানে ম্যাক্সওয়েলের সমীকরণে তরঙ্গ সমীকরণ থেকে c²=১/(μ₀ε₀)।"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "honours-permanganate-ferrous-titration",
+  "title_en": "Permanganate estimation of Fe²⁺ — lab viva",
+  "title_bn": "পারম্যাঙ্গানেটে Fe²⁺ নির্ণয় — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "How many Fe²⁺ ions react per MnO₄− in acid?",
+      "q_bn": "অম্লে প্রতি MnO₄−-এ কত Fe²⁺ বিক্রিয়া করে?",
+      "options": [
+        "Five.",
+        "One",
+        "Two",
+        "Eight"
+      ],
+      "options_bn": [
+        "পাঁচ।",
+        "One",
+        "Two",
+        "Eight"
+      ],
+      "answer": 0,
+      "explanation": "Five. In sulfuric acid, MnO₄−+5Fe²⁺+8H+→Mn²⁺+5Fe³⁺+4H₂O. A persistent pale pink tint marks a slight excess permanganate.",
+      "explanation_bn": "পাঁচ। সালফিউরিক অম্লে MnO₄−+৫Fe²⁺+৮H+→Mn²⁺+৫Fe³⁺+৪H₂O; স্থায়ী হালকা গোলাপি মানে সামান্য অতিরিক্ত পারম্যাঙ্গানেট।"
+    },
+    {
+      "q": "10.00 mL of 0.0200 M KMnO₄ reacts with how many moles of Fe²⁺ in acid?",
+      "q_bn": "অম্লে ০.০২০০ M KMnO₄-এর ১০.০০ mL-এ কত মোল Fe²⁺ বিক্রিয়া করে?",
+      "options": [
+        "0.00100 mol",
+        "0.000200 mol",
+        "0.00200 mol",
+        "0.00500 mol"
+      ],
+      "options_bn": [
+        "০.০০১০০ mol",
+        "০.০০০২০০ mol",
+        "০.০০২০০ mol",
+        "০.০০৫০০ mol"
+      ],
+      "answer": 0,
+      "explanation": "n(Fe²⁺)=5×n(MnO₄−)=5×0.0200×0.01000=0.00100 mol.",
+      "explanation_bn": "n(Fe²⁺)=৫×n(MnO₄−)=৫×০.০২০০×০.০১০০০=০.০০১০০ mol।"
+    },
+    {
+      "q": "Why is dilute H₂SO₄ preferred over HCl in the permanganate–Fe²⁺ titration?",
+      "q_bn": "পারম্যাঙ্গানেট–Fe²⁺ টাইট্রেশনে HCl-এর বদলে পাতলা H₂SO₄ কেন?",
+      "options": [
+        "Chloride can be oxidized, consuming permanganate",
+        "Sulfate is the indicator colour",
+        "HCl prevents Fe²⁺ from dissolving",
+        "Sulfuric acid has no hydrogen ions"
+      ],
+      "options_bn": [
+        "ক্লোরাইড জারিত হয়ে পারম্যাঙ্গানেট খরচ করতে পারে",
+        "সালফেটই নির্দেশকের রং",
+        "HCl-এ Fe²⁺ দ্রবীভূত হয় না",
+        "সালফিউরিক অম্লে H+ নেই"
+      ],
+      "answer": 0,
+      "explanation": "Permanganate is a strong oxidant in acid and can oxidize chloride under titration conditions, giving an excessive titre unrelated to Fe²⁺.",
+      "explanation_bn": "অম্লে পারম্যাঙ্গানেট শক্তিশালী জারক; ক্লোরাইড জারিত হলে Fe²⁺ ছাড়াও বিকারক খরচ হয়ে পাঠ বেশি হয়।"
+    }
+  ]
+}

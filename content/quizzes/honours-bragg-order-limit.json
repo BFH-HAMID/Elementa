@@ -1,0 +1,70 @@
+{
+  "slug": "honours-bragg-order-limit",
+  "title_en": "Maximum Bragg reflection order — concept check",
+  "title_bn": "ব্র্যাগ প্রতিফলনের সর্বোচ্চ ক্রম — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If 2d/λ=2.4, largest possible order is?",
+      "q_bn": "২d/λ=২.৪ হলে সর্বোচ্চ ক্রম কত?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "2.4"
+      ],
+      "options_bn": [
+        "2",
+        "3",
+        "1",
+        "2.4"
+      ],
+      "answer": 0,
+      "explanation": "Reflection order is integer and sinθ≤1.",
+      "explanation_bn": "ক্রম পূর্ণসংখ্যা এবং sinθ≤১।"
+    },
+    {
+      "q": "If 2d/λ=3.7, maximum integer Bragg order?",
+      "q_bn": "২d/λ=৩.৭ হলে সর্বোচ্চ পূর্ণসংখ্যা ব্র্যাগ ক্রম?",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "options_bn": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Use n\\lambda=2d\\sin\\theta;\\quad\\sin\\theta\\leq1. For 2d/λ=2.4, highest possible integer order is 2.",
+      "explanation_bn": "n\\lambda=2d\\sin\\theta;\\quad\\sin\\theta\\leq1 ব্যবহার করুন। ২d/λ=২.৪ হলে সর্বোচ্চ পূর্ণসংখ্যা ক্রম ২।"
+    },
+    {
+      "q": "Are all geometrically allowed orders necessarily observed?",
+      "q_bn": "সব জ্যামিতিকভাবে অনুমোদিত ক্রম কি অবশ্যই দেখা যায়?",
+      "options": [
+        "No, structure-factor extinction may suppress them",
+        "Yes, with equal brightness",
+        "Only even ones",
+        "Only the highest one"
+      ],
+      "options_bn": [
+        "No, structure-factor extinction may suppress them",
+        "Yes, with equal brightness",
+        "Only even ones",
+        "Only the highest one"
+      ],
+      "answer": 0,
+      "explanation": "Geometric upper bound only; structure-factor extinction and intensity can hide allowed orders.",
+      "explanation_bn": "এটি শুধু জ্যামিতিক সীমা; গঠনগত বিলুপ্তি ও তীব্রতায় অনুমোদিত ক্রম অদৃশ্য হতে পারে।"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "honours-inclined-plane-friction",
+  "title_en": "Coefficient of static friction on incline — lab viva",
+  "title_bn": "ঢালু তলে স্থির ঘর্ষণ গুণাঙ্ক — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Does critical-angle method measure static or kinetic friction?",
+      "q_bn": "সংকট কোণ পদ্ধতিতে স্থির না গতীয় ঘর্ষণ মাপা হয়?",
+      "options": [
+        "Maximum static friction.",
+        "Only kinetic friction",
+        "Neither",
+        "Only rolling friction"
+      ],
+      "options_bn": [
+        "সর্বোচ্চ স্থির ঘর্ষণ।",
+        "Only kinetic friction",
+        "Neither",
+        "Only rolling friction"
+      ],
+      "answer": 0,
+      "explanation": "Maximum static friction. At impending slide, downhill mg sinθ is balanced by maximum static friction μs mg cosθ, so μs=tanθc.",
+      "explanation_bn": "সর্বোচ্চ স্থির ঘর্ষণ। সবে পিছলানোর সময় ঢাল বরাবর mg sinθ ও সর্বোচ্চ স্থির ঘর্ষণ μs mg cosθ সমান; তাই μs=tanθc।"
+    },
+    {
+      "q": "A block starts to slide at θc=45°. What is μs approximately?",
+      "q_bn": "θc=৪৫°-এ ব্লক পিছলানো শুরু করলে μs প্রায় কত?",
+      "options": [
+        "1",
+        "0.5",
+        "0",
+        "2"
+      ],
+      "options_bn": [
+        "১",
+        "০.৫",
+        "০",
+        "২"
+      ],
+      "answer": 0,
+      "explanation": "At impending motion μs=tanθc=tan45°=1; this estimates maximum static friction.",
+      "explanation_bn": "পিছলানোর প্রাক্কালে μs=tanθc=tan৪৫°=১; এটি সর্বোচ্চ স্থির ঘর্ষণ নির্দেশ করে।"
+    },
+    {
+      "q": "Why should the angle be recorded at first sustained motion, not after the block has sped up?",
+      "q_bn": "ব্লক দ্রুত চলার পরে নয়, প্রথম স্থায়ী পিছলানোর কোণ কেন মাপবেন?",
+      "options": [
+        "The threshold corresponds to maximum static friction",
+        "Fast motion measures the same static limit exactly",
+        "Motion removes the normal force",
+        "The angle is irrelevant once moving"
+      ],
+      "options_bn": [
+        "সীমাটি সর্বোচ্চ স্থির ঘর্ষণ নির্দেশ করে",
+        "দ্রুত গতিতেও একই স্থির সীমা নির্ভুল মাপে",
+        "গতিতে লম্ব প্রতিক্রিয়া চলে যায়",
+        "চলা শুরু হলে কোণ অপ্রাসঙ্গিক"
+      ],
+      "answer": 0,
+      "explanation": "At impending slip mg sinθ=μs mg cosθ. Once moving, kinetic friction may differ from maximum static friction.",
+      "explanation_bn": "পিছলানোর প্রাক্কালে mg sinθ=μs mg cosθ। চলতে শুরু করলে গতীয় ঘর্ষণ সর্বোচ্চ স্থির ঘর্ষণ থেকে ভিন্ন হতে পারে।"
+    }
+  ]
+}

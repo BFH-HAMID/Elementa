@@ -93,17 +93,25 @@ export function getExperimentBySlug(slug: string): ExperimentEntry | undefined {
   return experimentBySlugCache?.get(slug);
 }
 
+let quizCache: Quiz[] | null = null;
+let quizBySlugCache: Map<string, Quiz> | null = null;
+
 export function getQuizEntries(): Quiz[] {
+  if (quizCache) return quizCache;
   const directory = path.join(contentRoot, 'quizzes');
-  if (!fs.existsSync(directory)) return [];
-  return fs.readdirSync(directory)
-    .filter((file) => file.endsWith('.json'))
-    .map((file) => quizSchema.parse(JSON.parse(fs.readFileSync(path.join(directory, file), 'utf8'))))
-    .sort((a, b) => a.title_en.localeCompare(b.title_en));
+  quizCache = fs.existsSync(directory)
+    ? fs.readdirSync(directory)
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => quizSchema.parse(JSON.parse(fs.readFileSync(path.join(directory, file), 'utf8'))))
+      .sort((a, b) => a.title_en.localeCompare(b.title_en))
+    : [];
+  quizBySlugCache = new Map(quizCache.map((quiz) => [quiz.slug, quiz]));
+  return quizCache;
 }
 
 export function getQuizBySlug(slug: string): Quiz | undefined {
-  return getQuizEntries().find((quiz) => quiz.slug === slug);
+  if (!quizBySlugCache) getQuizEntries();
+  return quizBySlugCache?.get(slug);
 }
 
 export function getSearchRecords(): SearchRecord[] {

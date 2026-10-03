@@ -1,0 +1,32 @@
+{
+  "slug": "honours-iron-thiocyanate",
+  "title_en": "Iron–thiocyanate equilibrium",
+  "title_bn": "লোহা–থায়োসায়ানেট সাম্য",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Lab concept check with explanation.",
+  "description_bn": "ব্যাখ্যাসহ ব্যবহারিক ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "If the complex concentration is x, what is free SCN⁻ when its initial concentration is S₀?",
+      "q_bn": "জটিল আয়নের ঘনত্ব x এবং SCN⁻-এর প্রাথমিক ঘনত্ব S₀ হলে মুক্ত SCN⁻ কত?",
+      "options": [
+        "S₀−x",
+        "S₀+x",
+        "x/S₀",
+        "x"
+      ],
+      "options_bn": [
+        "S₀−x",
+        "S₀+x",
+        "x/S₀",
+        "x"
+      ],
+      "answer": 0,
+      "explanation": "One SCN⁻ is used per FeSCN²⁺ formed, so subtract x.",
+      "explanation_bn": "প্রতিটি FeSCN²⁺ গঠনে একটি SCN⁻ ব্যবহৃত হয়, তাই x বিয়োগ।"
+    }
+  ]
+}

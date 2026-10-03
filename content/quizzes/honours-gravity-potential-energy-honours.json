@@ -1,0 +1,70 @@
+{
+  "slug": "honours-gravity-potential-energy-honours",
+  "title_en": "Gravitational potential energy outside a sphere — concept check",
+  "title_bn": "মহাকর্ষীয় বিভব শক্তি — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Why is U negative with zero at infinity?",
+      "q_bn": "অসীমে শূন্য ধরলে U ঋণাত্মক কেন?",
+      "options": [
+        "Attractive binding",
+        "Repulsive binding",
+        "Negative mass",
+        "Zero gravity"
+      ],
+      "options_bn": [
+        "Attractive binding",
+        "Repulsive binding",
+        "Negative mass",
+        "Zero gravity"
+      ],
+      "answer": 0,
+      "explanation": "Work is needed to remove a bound test mass to infinity.",
+      "explanation_bn": "আবদ্ধ ভরকে অসীমে সরাতে কাজ লাগে।"
+    },
+    {
+      "q": "How much energy is required to move m from R to 2R around mass M?",
+      "q_bn": "M-এর চারপাশে m-কে R থেকে ২R-এ নিতে কত শক্তি লাগে?",
+      "options": [
+        "GMm/(2R)",
+        "GMm/R",
+        "2GMm/R",
+        "Zero"
+      ],
+      "options_bn": [
+        "GMm/(2R)",
+        "GMm/R",
+        "2GMm/R",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "Use U(r)-U(\\infty)=-\\int_\\infty^r(-GMm/r'^2)\\,dr'. Moving from r=R to 2R requires positive work GMm/(2R).",
+      "explanation_bn": "U(r)-U(\\infty)=-\\int_\\infty^r(-GMm/r'^2)\\,dr' ব্যবহার করুন। R থেকে ২R-এ নিতে ধনাত্মক কাজ GMm/(২R) লাগে।"
+    },
+    {
+      "q": "Where is potential energy defined as zero in U=−GMm/r?",
+      "q_bn": "U=−GMm/r-এ বিভবশক্তির শূন্য কোথায়?",
+      "options": [
+        "At infinity",
+        "At r=R",
+        "At r=0",
+        "At 2R"
+      ],
+      "options_bn": [
+        "At infinity",
+        "At r=R",
+        "At r=0",
+        "At 2R"
+      ],
+      "answer": 0,
+      "explanation": "Valid outside a spherically symmetric source or point mass; ignore other gravitating bodies.",
+      "explanation_bn": "গোলীয় প্রতিসম উৎসের বাইরে বা বিন্দুভরে প্রযোজ্য; অন্য উৎস উপেক্ষিত।"
+    }
+  ]
+}

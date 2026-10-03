@@ -1,0 +1,70 @@
+{
+  "slug": "honours-beam-bending-modulus",
+  "title_en": "Young modulus by central beam bending — lab viva",
+  "title_bn": "কেন্দ্রীয় ভারে বিম বাঁকিয়ে ইয়ং গুণাঙ্ক — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Which beam dimension is cubed in the denominator?",
+      "q_bn": "হরে বিমের কোন মাত্রার ঘন আছে?",
+      "options": [
+        "Its depth d.",
+        "Its width b",
+        "Its span L only",
+        "Its mass"
+      ],
+      "options_bn": [
+        "পুরুত্ব d।",
+        "Its width b",
+        "Its span L only",
+        "Its mass"
+      ],
+      "answer": 0,
+      "explanation": "Its depth d. A simply supported rectangular beam with central load F has centre deflection δ=FL³/(48YI), I=bd³/12; hence Y=FL³/(4bd³δ).",
+      "explanation_bn": "পুরুত্ব d। দুই প্রান্তে ঠেস-দেওয়া আয়তাকার বিমের মাঝে F ভারে δ=FL³/(৪৮YI), I=bd³/১২; তাই Y=FL³/(৪bd³δ)।"
+    },
+    {
+      "q": "For the same force and beam dimensions except span L doubled, central deflection changes by what factor?",
+      "q_bn": "বল ও বাকি মাত্রা একই রেখে বিমের বিস্তার L দ্বিগুণ করলে মাঝের অবনমন কত গুণ?",
+      "options": [
+        "Four",
+        "One half",
+        "Eight",
+        "Two"
+      ],
+      "options_bn": [
+        "চার গুণ",
+        "অর্ধেক",
+        "আট গুণ",
+        "দুই গুণ"
+      ],
+      "answer": 2,
+      "explanation": "δ=FL³/(4Ybd³), so doubling L multiplies δ by 2³=8 within the small-deflection model.",
+      "explanation_bn": "δ=FL³/(৪Ybd³); ছোট অবনমনের মডেলে L দ্বিগুণে δ আট গুণ।"
+    },
+    {
+      "q": "Why record beam thickness d more carefully than width b?",
+      "q_bn": "বিমের প্রস্থ b-এর চেয়ে পুরুত্ব d বেশি যত্নে মাপবেন কেন?",
+      "options": [
+        "Thickness is always equal to span",
+        "Only thickness sets the load",
+        "The formula contains d cubed",
+        "Width does not enter the formula"
+      ],
+      "options_bn": [
+        "পুরুত্ব সবসময় বিস্তারের সমান",
+        "শুধু পুরুত্বেই ভার নির্ধারিত",
+        "সূত্রে d-এর ঘন আছে",
+        "সূত্রে প্রস্থ নেই"
+      ],
+      "answer": 2,
+      "explanation": "Y=FL³/(4bd³δ). A small relative thickness error approximately triples its contribution to relative Y uncertainty; width enters only to first power.",
+      "explanation_bn": "Y=FL³/(4bd³δ)। পুরুত্বের সামান্য আপেক্ষিক ত্রুটি Y-তে প্রায় তিন গুণ প্রভাব ফেলে; প্রস্থ প্রথম ঘাতে আসে।"
+    }
+  ]
+}

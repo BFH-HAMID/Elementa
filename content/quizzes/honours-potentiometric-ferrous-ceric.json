@@ -1,0 +1,70 @@
+{
+  "slug": "honours-potentiometric-ferrous-ceric",
+  "title_en": "Potentiometric Fe²⁺–Ce⁴⁺ titration — lab viva",
+  "title_bn": "বিভবমিতিতে Fe²⁺–Ce⁴⁺ টাইট্রেশন — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What is Fe²⁺ to Ce⁴⁺ mole ratio?",
+      "q_bn": "Fe²⁺ ও Ce⁴⁺-এর মোল অনুপাত?",
+      "options": [
+        "One to one.",
+        "Two to one",
+        "One to two",
+        "One to four"
+      ],
+      "options_bn": [
+        "এক-এক।",
+        "Two to one",
+        "One to two",
+        "One to four"
+      ],
+      "answer": 0,
+      "explanation": "One to one. Ce⁴⁺+Fe²⁺→Ce³⁺+Fe³⁺ (1:1). A platinum indicator electrode responds to solution redox potential; equivalence lies near steepest potential change versus titrant volume.",
+      "explanation_bn": "এক-এক। Ce⁴⁺+Fe²⁺→Ce³⁺+Fe³⁺ (১:১)। প্লাটিনাম নির্দেশক ইলেকট্রোড দ্রবণের redox বিভব জানায়; বিভব বনাম আয়তনের সবচেয়ে খাড়া পরিবর্তনের কাছে সমাপ্তি।"
+    },
+    {
+      "q": "25.0 mL Fe²⁺ needs 20.0 mL of 0.100 M Ce⁴⁺. Fe²⁺ concentration?",
+      "q_bn": "২৫.০ mL Fe²⁺-এ ০.১০০ M Ce⁴⁺ ২০.০ mL লাগলে Fe²⁺ ঘনত্ব?",
+      "options": [
+        "0.125 M",
+        "0.100 M",
+        "0.200 M",
+        "0.0800 M"
+      ],
+      "options_bn": [
+        "০.১২৫ M",
+        "০.১০০ M",
+        "০.২০০ M",
+        "০.০৮০০ M"
+      ],
+      "answer": 3,
+      "explanation": "Ce⁴⁺:Fe²⁺=1:1; CFe=0.100×20.0/25.0=0.0800 M.",
+      "explanation_bn": "Ce⁴⁺:Fe²⁺=১:১; CFe=০.১০০×২০.০/২৫.০=০.০৮০০ M।"
+    },
+    {
+      "q": "Why use smaller Ce⁴⁺ additions near the steep potential jump?",
+      "q_bn": "বিভব দ্রুত বদলানোর কাছে Ce⁴⁺ অল্প অল্প কেন যোগ করেন?",
+      "options": [
+        "To stop Ce⁴⁺ from oxidizing Fe²⁺",
+        "To make the electrode an insulator",
+        "To make the mole ratio 2:1",
+        "To locate the equivalence inflection more accurately"
+      ],
+      "options_bn": [
+        "Ce⁴⁺ যেন Fe²⁺ জারিত না করে",
+        "ইলেকট্রোডকে অন্তরক করতে",
+        "মোল অনুপাত ২:১ করতে",
+        "সাম্যবিন্দুর মোড় আরও নির্ভুল পেতে"
+      ],
+      "answer": 3,
+      "explanation": "Large steps can leap over the maximum ΔE/ΔV and shift the estimated equivalence; allow the electrode reading to stabilize after each addition.",
+      "explanation_bn": "বড় ধাপে ΔE/ΔV-এর সর্বোচ্চ অঞ্চল বাদ পড়ে সাম্যবিন্দু ভুল হয়; প্রতিটি সংযোজনে বিভব স্থির হতে দিন।"
+    }
+  ]
+}

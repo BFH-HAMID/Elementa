@@ -1,0 +1,60 @@
+---
+type: "equation"
+slug: "fourier-heat-conduction"
+title_bn: "ফুরিয়ের তাপ-পরিবহন সূত্র"
+title_en: "Fourier’s law of heat conduction"
+subject: "physics"
+level: "honours"
+chapter: "Thermal Physics"
+chapter_bn: "Thermal Physics"
+latex: "\\mathbf j_Q=-\\kappa\\nabla T"
+calculator: false
+variables:
+  - symbol: "j_Q"
+    name: "heat flux"
+    name_bn: "heat flux"
+    unit: "W/m²"
+    si_unit: "W/m²"
+  - symbol: "κ"
+    name: "thermal conductivity"
+    name_bn: "thermal conductivity"
+    unit: "W/(m K)"
+    si_unit: "W/(m K)"
+  - symbol: "T"
+    name: "temperature"
+    name_bn: "temperature"
+    unit: "K"
+    si_unit: "K"
+derivation: "Observe that in an isotropic medium heat flux is directed down the temperature gradient. Define thermal conductivity as the proportionality constant in the local linear constitutive relation. For a uniform slab integrate the constant one-dimensional gradient."
+derivation_bn: "সমদিকী মাধ্যমে তাপপ্রবাহ তাপমাত্রার নতির বিপরীত দিকে যায়। স্থানীয় রৈখিক গঠনগত সম্পর্কে সমানুপাতিক ধ্রুবককে তাপ-পরিবাহিতা ধরুন। সুষম পাতের জন্য স্থির একমাত্রিক নতি সমাকলন করুন।"
+derivation_steps:
+  - step_en: "Observe that in an isotropic medium heat flux is directed down the temperature gradient."
+    step_bn: "সমদিকী মাধ্যমে তাপপ্রবাহ তাপমাত্রার নতির বিপরীত দিকে যায়।"
+    latex: "\\mathbf j_Q\\parallel-\\nabla T"
+  - step_en: "Define thermal conductivity as the proportionality constant in the local linear constitutive relation."
+    step_bn: "স্থানীয় রৈখিক গঠনগত সম্পর্কে সমানুপাতিক ধ্রুবককে তাপ-পরিবাহিতা ধরুন।"
+    latex: "\\mathbf j_Q=-\\kappa\\nabla T"
+  - step_en: "For a uniform slab integrate the constant one-dimensional gradient."
+    step_bn: "সুষম পাতের জন্য স্থির একমাত্রিক নতি সমাকলন করুন।"
+    latex: "\\dot Q=\\kappa A(T_h-T_c)/L"
+summary_en: "A 0.10 m slab with κ=0.50 W/(m K), area 2 m² and ΔT=20 K transfers 200 W in steady state."
+summary_bn: " 0.50×2×20/0.10=200 W।"
+tags:
+  - "honours"
+  - "thermal physics"
+experiment: "lees-disc-conductivity"
+---
+
+### প্রয়োগ / Worked example
+
+A 0.10 m slab with κ=0.50 W/(m K), area 2 m² and ΔT=20 K transfers 200 W in steady state. বাংলায়: 0.50×2×20/0.10=200 W।
+
+### সীমাবদ্ধতা / Assumptions
+
+The relation is phenomenological; use tensor conductivity in anisotropic solids. The slab formula assumes steady one-dimensional flow, constant κ and negligible contact losses.
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+Lee’s disc uses steady heat flow through a thin sheet to estimate thermal conductivity with cooling corrections.
+
+লির চাকতিতে পাতলা পাতের স্থির তাপপ্রবাহ ও শীতলন সংশোধনে তাপ-পরিবাহিতা নির্ণয় হয়।

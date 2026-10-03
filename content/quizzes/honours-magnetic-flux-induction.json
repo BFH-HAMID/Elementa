@@ -1,0 +1,70 @@
+{
+  "slug": "honours-magnetic-flux-induction",
+  "title_en": "Induced emf in N-turn coil — concept check",
+  "title_bn": "চৌম্বক ফ্লাক্সে আবিষ্ট বিভব — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If N doubles with the same flux change rate, emf magnitude?",
+      "q_bn": "একই ফ্লাক্স পরিবর্তনে N দ্বিগুণ হলে বিভবের মান?",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Zero",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Doubles",
+        "Halves",
+        "Zero",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Flux linkage is NΦB.",
+      "explanation_bn": "ফ্লাক্স-সংযোগ NΦB।"
+    },
+    {
+      "q": "For 10 turns, flux per turn drops 0.02 Wb in 1 s. Emf magnitude?",
+      "q_bn": "১০ পাকে প্রতি পাকের ফ্লাক্স ১ s-এ ০.০২ Wb কমলে আবিষ্ট বিভব?",
+      "options": [
+        "0.2 V",
+        "0.02 V",
+        "2 V",
+        "20 V"
+      ],
+      "options_bn": [
+        "0.2 V",
+        "0.02 V",
+        "2 V",
+        "20 V"
+      ],
+      "answer": 0,
+      "explanation": "Use \\Lambda=N\\Phi_B;\\quad\\mathcal E=-d\\Lambda/dt. A 10-turn coil with flux per turn falling by 0.02 Wb in 1 s has emf magnitude 0.2 V.",
+      "explanation_bn": "\\Lambda=N\\Phi_B;\\quad\\mathcal E=-d\\Lambda/dt ব্যবহার করুন। ১০ পাক কুণ্ডলীতে প্রতি পাকে ফ্লাক্স ১ s-এ ০.০২ Wb কমলে বিভবের মান ০.২ V।"
+    },
+    {
+      "q": "What does the minus sign in Faraday's law represent?",
+      "q_bn": "ফ্যারাডের সূত্রে ঋণ চিহ্ন কী নির্দেশ করে?",
+      "options": [
+        "Lenz's opposing direction",
+        "Negative energy",
+        "A negative turn count",
+        "No actual emf"
+      ],
+      "options_bn": [
+        "Lenz's opposing direction",
+        "Negative energy",
+        "A negative turn count",
+        "No actual emf"
+      ],
+      "answer": 0,
+      "explanation": "Same flux through each tightly coupled turn; minus sign expresses Lenz's law and orientation convention.",
+      "explanation_bn": "সব পাকে একই ফ্লাক্স; ঋণ চিহ্ন লেঞ্জের সূত্র ও অভিমুখ রীতি নির্দেশ করে।"
+    }
+  ]
+}

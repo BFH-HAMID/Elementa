@@ -1,0 +1,32 @@
+{
+  "slug": "honours-cubic-interplanar-spacing",
+  "title_en": "Cubic crystal interplanar spacing — check your understanding",
+  "title_bn": "ঘন স্ফটিকের আন্তঃতল ব্যবধান — অনুশীলন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Solid State Chemistry",
+  "chapter_bn": "Solid State Chemistry",
+  "description_en": "Concept check with an explained answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For a cubic crystal, d₁₀₀ equals which value?",
+      "q_bn": "ঘন স্ফটিকে d₁₀₀ কত?",
+      "options": [
+        "a",
+        "a/2",
+        "a/√2",
+        "a/√3"
+      ],
+      "options_bn": [
+        "a",
+        "a/2",
+        "a/√2",
+        "a/√3"
+      ],
+      "answer": 0,
+      "explanation": "√(1²+0²+0²)=1.",
+      "explanation_bn": "√(1²+0²+0²)=1."
+    }
+  ]
+}

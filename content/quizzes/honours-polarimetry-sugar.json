@@ -1,0 +1,70 @@
+{
+  "slug": "honours-polarimetry-sugar",
+  "title_en": "Specific rotation of sugar solution — lab viva",
+  "title_bn": "চিনির দ্রবণের আপেক্ষিক আলোক ঘূর্ণন — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Which two conditions must be quoted with specific rotation?",
+      "q_bn": "আপেক্ষিক ঘূর্ণনের সঙ্গে কোন দুটি শর্ত লিখতে হয়?",
+      "options": [
+        "Wavelength and temperature.",
+        "Only room colour",
+        "Only mass and pressure",
+        "Only sample age"
+      ],
+      "options_bn": [
+        "তরঙ্গদৈর্ঘ্য ও তাপমাত্রা।",
+        "Only room colour",
+        "Only mass and pressure",
+        "Only sample age"
+      ],
+      "answer": 0,
+      "explanation": "Wavelength and temperature. For an optically active solution, observed rotation α=[α]λ,T l c with path length l in dm and concentration c in g/mL under a stated convention.",
+      "explanation_bn": "তরঙ্গদৈর্ঘ্য ও তাপমাত্রা। আলোকসক্রিয় দ্রবণে পর্যবেক্ষিত ঘূর্ণন α=[α]λ,T l c; প্রচলিত রীতিতে l dm ও c g/mL, তরঙ্গদৈর্ঘ্য-তাপমাত্রা উল্লেখ জরুরি।"
+    },
+    {
+      "q": "If path length doubles at fixed sugar concentration and conditions, observed rotation becomes?",
+      "q_bn": "চিনির ঘনত্ব ও অন্য শর্ত একই রেখে আলোর পথ দ্বিগুণ হলে ঘূর্ণন কত?",
+      "options": [
+        "Zero",
+        "Double",
+        "Half",
+        "Four times"
+      ],
+      "options_bn": [
+        "শূন্য",
+        "দ্বিগুণ",
+        "অর্ধেক",
+        "চার গুণ"
+      ],
+      "answer": 1,
+      "explanation": "α=[α]λ,T l c; at fixed specific rotation and c, α∝l.",
+      "explanation_bn": "α=[α]λ,T l c; আপেক্ষিক ঘূর্ণন ও c স্থির হলে α∝l।"
+    },
+    {
+      "q": "Can an unknown sugar concentration be inferred from a specific rotation measured at a different wavelength without correction?",
+      "q_bn": "অন্য তরঙ্গদৈর্ঘ্যে মাপা আপেক্ষিক ঘূর্ণন দিয়ে সংশোধন ছাড়া অজানা চিনির ঘনত্ব পাবেন?",
+      "options": [
+        "Changing wavelength makes rotation zero",
+        "No, specific rotation depends on wavelength and temperature",
+        "Yes, it is universal for all colours",
+        "Only tube length matters"
+      ],
+      "options_bn": [
+        "তরঙ্গদৈর্ঘ্য বদলালে ঘূর্ণন শূন্য",
+        "না, আপেক্ষিক ঘূর্ণন তরঙ্গদৈর্ঘ্য ও তাপমাত্রানির্ভর",
+        "হ্যাঁ, সব রঙে সর্বজনীন",
+        "শুধু নলের দৈর্ঘ্য গুরুত্বপূর্ণ"
+      ],
+      "answer": 1,
+      "explanation": "α=[α]λ,Tlc; match wavelength and temperature (and solvent convention) when comparing to a reference value.",
+      "explanation_bn": "α=[α]λ,Tlc; মানের সঙ্গে তুলনায় তরঙ্গদৈর্ঘ্য, তাপমাত্রা ও দ্রাবকের রীতি মিলতে হবে।"
+    }
+  ]
+}

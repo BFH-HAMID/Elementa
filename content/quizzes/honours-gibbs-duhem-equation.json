@@ -1,0 +1,32 @@
+{
+  "slug": "honours-gibbs-duhem-equation",
+  "title_bn": "গিবস–ডুহেম সমীকরণ — ধারণা যাচাই",
+  "title_en": "Gibbs–Duhem equation — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "At fixed T and P in a binary homogeneous mixture, which differential identity holds?",
+      "q_bn": "স্থির T ও P-তে দ্বি-উপাদান সমসত্ত্ব মিশ্রণে কোন অন্তরক সম্পর্ক?",
+      "options": [
+        "dT=dP=1",
+        "x₁dμ₁+x₂dμ₂=0",
+        "dμ₁=dμ₂=0 always",
+        "μ₁+μ₂=0"
+      ],
+      "options_bn": [
+        "dT=dP=১",
+        "x₁dμ₁+x₂dμ₂=০",
+        "dμ₁=dμ₂ সবসময় ০",
+        "μ₁+μ₂=০"
+      ],
+      "answer": 1,
+      "explanation": "At fixed T and P, Gibbs–Duhem gives Σnᵢdμᵢ=0; dividing by total moles yields Σxᵢdμᵢ=0.",
+      "explanation_bn": "স্থির T ও P-তে Σnᵢdμᵢ=০; মোট মোল দিয়ে ভাগে Σxᵢdμᵢ=০।"
+    }
+  ]
+}

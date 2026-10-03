@@ -1,0 +1,32 @@
+{
+  "slug": "honours-bohr-quantization-angular-momentum",
+  "title_bn": "বোরের কৌণিক ভরবেগের কোয়ান্টায়ন — ধারণা যাচাই",
+  "title_en": "Bohr quantisation of angular momentum — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "What is Bohr's allowed orbital angular momentum for principal number n?",
+      "q_bn": "বোরের n প্রধান সংখ্যায় অনুমোদিত কৌণিক ভরবেগ কত?",
+      "options": [
+        "nħ",
+        "ħ/n",
+        "n²ħ",
+        "Zero for every n"
+      ],
+      "options_bn": [
+        "nħ",
+        "ħ/n",
+        "n²ħ",
+        "সব n-এ শূন্য"
+      ],
+      "answer": 0,
+      "explanation": "Bohr postulated mvr=nħ for permitted circular orbits; this is a historical model, superseded by quantum orbital theory.",
+      "explanation_bn": "বোর অনুমোদিত বৃত্তীয় কক্ষপথে mvr=nħ ধরেন; এটি ঐতিহাসিক মডেল, আধুনিক কোয়ান্টাম তত্ত্বে সংশোধিত।"
+    }
+  ]
+}

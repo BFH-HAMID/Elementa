@@ -1,0 +1,32 @@
+{
+  "slug": "honours-particle-in-box-energy",
+  "title_bn": "একমাত্রিক বাক্সে কণার শক্তিস্তর — ধারণা যাচাই",
+  "title_en": "Energy levels of a particle in a one-dimensional box — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "If one-dimensional box length doubles, ground-state energy becomes?",
+      "q_bn": "একমাত্রিক বাক্সের দৈর্ঘ্য দ্বিগুণ হলে ভূমিস্তরের শক্তি কত হয়?",
+      "options": [
+        "One half",
+        "Double",
+        "Fourfold",
+        "One quarter"
+      ],
+      "options_bn": [
+        "অর্ধেক",
+        "দ্বিগুণ",
+        "চার গুণ",
+        "এক চতুর্থাংশ"
+      ],
+      "answer": 3,
+      "explanation": "E₁=h²/(8mL²); the inverse-square dependence gives E₁/4 for length 2L.",
+      "explanation_bn": "E₁=h²/(৮mL²); দৈর্ঘ্য ২L হলে বিপরীত-বর্গ নিয়মে E₁/৪।"
+    }
+  ]
+}

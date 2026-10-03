@@ -1,0 +1,70 @@
+{
+  "slug": "honours-second-order-half-life",
+  "title_en": "Second-order half-life — concept check",
+  "title_bn": "দ্বিতীয়-ক্রম বিক্রিয়ার অর্ধায়ু — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If initial concentration doubles, half-life becomes?",
+      "q_bn": "প্রাথমিক ঘনত্ব দ্বিগুণ হলে অর্ধায়ু?",
+      "options": [
+        "Half",
+        "Double",
+        "Four times",
+        "Same"
+      ],
+      "options_bn": [
+        "Half",
+        "Double",
+        "Four times",
+        "Same"
+      ],
+      "answer": 0,
+      "explanation": "Inverse dependence on initial concentration.",
+      "explanation_bn": "প্রাথমিক ঘনত্বের ব্যস্তানুপাতিক।"
+    },
+    {
+      "q": "For k=0.1 L/(mol s) and [A]₀=1 mol/L, half-life?",
+      "q_bn": "k=০.১ L/(mol s) ও [A]₀=১ mol/L হলে অর্ধায়ু?",
+      "options": [
+        "10 s",
+        "0.1 s",
+        "1 s",
+        "100 s"
+      ],
+      "options_bn": [
+        "10 s",
+        "0.1 s",
+        "1 s",
+        "100 s"
+      ],
+      "answer": 0,
+      "explanation": "Use 1/[A]-1/[A]_0=kt;\\quad[A](t_{1/2})=[A]_0/2. If k=0.1 L/(mol s) and [A]₀=1 mol/L, t½=10 s (consistent units).",
+      "explanation_bn": "1/[A]-1/[A]_0=kt;\\quad[A](t_{1/2})=[A]_0/2 ব্যবহার করুন। k=০.১ L/(mol s) ও [A]₀=১ mol/L হলে t½=১০ s (সঙ্গত এককে)।"
+    },
+    {
+      "q": "For what differential law is t½=1/(k[A]₀) derived?",
+      "q_bn": "t½=১/(k[A]₀) কোন অন্তরক হারসূত্র থেকে আসে?",
+      "options": [
+        "−d[A]/dt=k[A]²",
+        "−d[A]/dt=k[A]",
+        "−d[A]/dt=k",
+        "−d[A]/dt=k/[A]"
+      ],
+      "options_bn": [
+        "−d[A]/dt=k[A]²",
+        "−d[A]/dt=k[A]",
+        "−d[A]/dt=k",
+        "−d[A]/dt=k/[A]"
+      ],
+      "answer": 0,
+      "explanation": "Specifically rate law k[A]², not every overall second-order reaction.",
+      "explanation_bn": "বিশেষভাবে হার k[A]²; সব মোট দ্বিতীয়-ক্রম বিক্রিয়ায় একই নয়।"
+    }
+  ]
+}

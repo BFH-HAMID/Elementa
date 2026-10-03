@@ -1,0 +1,78 @@
+---
+type: "equation"
+slug: "damped-amplitude"
+title_bn: "ক্ষয়মান দোলনের বিস্তার"
+title_en: "Envelope of a damped oscillator"
+subject: "physics"
+level: "honours"
+chapter: "Honours Physics"
+chapter_bn: "স্নাতক পদার্থবিজ্ঞান"
+latex: "A(t)=A_0e^{-bt/(2m)}"
+calculator: false
+variables:
+  - symbol: "A"
+    name: "amplitude"
+    name_bn: "amplitude"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "A_0"
+    name: "initial amplitude"
+    name_bn: "initial amplitude"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "b"
+    name: "viscous damping coefficient"
+    name_bn: "viscous damping coefficient"
+    unit: "kg/s"
+    si_unit: "kg/s"
+  - symbol: "m"
+    name: "mass"
+    name_bn: "mass"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "t"
+    name: "time"
+    name_bn: "time"
+    unit: "s"
+    si_unit: "s"
+derivation: "Solve m ẍ+b ẋ+kx=0 using an exponential trial solution. r_{\\pm}=-b/(2m)\\pm i\\sqrt{k/m-b^2/(4m^2)} Substitute the preceding result and identify the requested relation."
+derivation_bn: "m ẍ+b ẋ+kx=০-এ সূচকীয় সমাধান বসান। r_{\\pm}=-b/(2m)\\pm i\\sqrt{k/m-b^2/(4m^2)} আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation_steps:
+  - step_en: "Solve m ẍ+b ẋ+kx=0 using an exponential trial solution."
+    step_bn: "m ẍ+b ẋ+kx=০-এ সূচকীয় সমাধান বসান।"
+    latex: "r_{\\pm}=-b/(2m)\\pm i\\sqrt{k/m-b^2/(4m^2)}"
+  - step_en: "Substitute the preceding result and identify the requested relation."
+    step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+    latex: "A(t)=A_0e^{-bt/(2m)}"
+summary_en: "After t=2m/b, envelope is A₀/e."
+summary_bn: "t=২m/b পরে বিস্তার A₀/e হয়।"
+tags:
+  - "honours"
+  - "physics"
+  - "derivation"
+experiment: "rigidity-torsion-pendulum"
+---
+
+### প্রতিপাদনের ব্যাখ্যা / Derivation
+
+Solve m ẍ+b ẋ+kx=0 using an exponential trial solution. `r_{\pm}=-b/(2m)\pm i\sqrt{k/m-b^2/(4m^2)}` Substitute the preceding result and identify the requested relation.
+
+m ẍ+b ẋ+kx=০-এ সূচকীয় সমাধান বসান। `r_{\pm}=-b/(2m)\pm i\sqrt{k/m-b^2/(4m^2)}` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
+
+### সমাধানসহ উদাহরণ / Worked application
+
+After t=2m/b, envelope is A₀/e.
+
+t=২m/b পরে বিস্তার A₀/e হয়।
+
+### সীমা ও সতর্কতা / Assumptions
+
+Underdamped regime b²&lt;4mk with constant linear damping; overdamping has no oscillatory amplitude envelope.
+
+b²&lt;৪mk এবং ধ্রুব রৈখিক damping; অতিক্ষয়ে দোলনের বিস্তার-আবরণ নেই।
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+Record peak amplitudes over successive torsional cycles; the standard period measurement alone does not establish an exponential envelope.
+
+পাক দোলনের পরপর সর্বোচ্চ বিস্তার লিখুন; শুধু পর্যায়কাল মাপলে সূচকীয় ক্ষয় প্রমাণ হয় না।

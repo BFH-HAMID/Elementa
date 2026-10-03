@@ -1,0 +1,70 @@
+{
+  "slug": "honours-specific-heat-calorimetry-honours",
+  "title_en": "Specific heat by mixing calorimetry — lab viva",
+  "title_bn": "মিশ্রণ ক্যালরিমিটিতে আপেক্ষিক তাপ — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What assumption underlies heat lost equals heat gained?",
+      "q_bn": "হারানো তাপ = পাওয়া তাপ ধরতে কী অনুমান?",
+      "options": [
+        "Negligible exchange with surroundings.",
+        "No water in the calorimeter",
+        "No temperature difference",
+        "Zero specimen mass"
+      ],
+      "options_bn": [
+        "পরিবেশের সঙ্গে তাপ বিনিময় নগণ্য।",
+        "No water in the calorimeter",
+        "No temperature difference",
+        "Zero specimen mass"
+      ],
+      "answer": 0,
+      "explanation": "Negligible exchange with surroundings. In an insulated mixing experiment, heat lost by hot specimen equals heat gained by water and calorimeter: ms cs(Ts−Tf)=(mw cw+Cc)(Tf−Tw).",
+      "explanation_bn": "পরিবেশের সঙ্গে তাপ বিনিময় নগণ্য। তাপরোধী মিশ্রণে গরম নমুনার হারানো তাপ = জল ও পাত্রের প্রাপ্ত তাপ: ms cs(Ts−Tf)=(mw cw+Cc)(Tf−Tw)।"
+    },
+    {
+      "q": "In ideal insulated mixing, if the water gains 100 J, how much heat did the hot sample lose?",
+      "q_bn": "আদর্শ তাপরোধী মিশ্রণে পানি ১০০ J তাপ পেলে গরম নমুনা কত তাপ হারায়?",
+      "options": [
+        "200 J",
+        "0 J",
+        "100 J",
+        "50 J"
+      ],
+      "options_bn": [
+        "২০০ J",
+        "০ J",
+        "১০০ J",
+        "৫০ J"
+      ],
+      "answer": 2,
+      "explanation": "Energy conservation sets heat lost equal to heat gained when calorimeter heat is negligible.",
+      "explanation_bn": "পাত্রের তাপধারণ নগণ্য হলে শক্তি সংরক্ষণে হারানো ও পাওয়া তাপ সমান।"
+    },
+    {
+      "q": "What sign should Ts−Tf have if a hot specimen cools into water?",
+      "q_bn": "গরম নমুনা পানিতে ঠান্ডা হলে Ts−Tf-এর চিহ্ন কী?",
+      "options": [
+        "Exactly zero",
+        "Undefined even after measurement",
+        "Positive",
+        "Negative"
+      ],
+      "options_bn": [
+        "ঠিক শূন্য",
+        "মাপার পরেও অনির্ধারিত",
+        "ধনাত্মক",
+        "ঋণাত্মক"
+      ],
+      "answer": 2,
+      "explanation": "A hot specimen starts above the equilibrium temperature (Ts>Tf), so its lost heat ms cs(Ts−Tf) has positive magnitude.",
+      "explanation_bn": "গরম নমুনার শুরুর তাপমাত্রা সাম্য তাপমাত্রার চেয়ে বেশি (Ts>Tf); তাই হারানো তাপের মান ms cs(Ts−Tf) ধনাত্মক।"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-beer-transmittance-lab",
+  "title_bn": "বিয়ার–ল্যাম্বার্ট শোষণ ও সঞ্চারণ ক্রমাঙ্কন — ধারণা যাচাই",
+  "title_en": "Beer–Lambert absorbance and transmittance calibration — concept check",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "For transmittance T=0.01, absorbance A is?",
+      "q_bn": "সঞ্চারণ T=০.০১ হলে শোষণ A কত?",
+      "options": [
+        "2",
+        "1",
+        "0.01",
+        "100"
+      ],
+      "options_bn": [
+        "২",
+        "১",
+        "০.০১",
+        "১০০"
+      ],
+      "answer": 0,
+      "explanation": "A=−log₁₀T=−log₁₀(0.01)=2; use fractional rather than percentage transmittance.",
+      "explanation_bn": "A=−log₁₀T=−log₁₀(০.০১)=২; শতাংশ নয়, ভগ্নাংশ বসান।"
+    }
+  ]
+}

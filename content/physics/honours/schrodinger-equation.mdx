@@ -37,6 +37,16 @@ variables:
     si_unit: J
 derivation: The time-independent equation is an energy balance for a stationary quantum state. Its wavefunction carries probability information, while the Hamiltonian operator encodes kinetic and potential energy.
 derivation_bn: time-independent equation একটি stationary quantum state-এর energy balance। wavefunction probability information বহন করে এবং Hamiltonian operator kinetic ও potential energy প্রকাশ করে।
+derivation_steps:
+  - step_en: "For a time-independent potential, separate a stationary state of the time-dependent equation into spatial and temporal parts."
+    step_bn: "সময়-স্বাধীন বিভবে সময়নির্ভর সমীকরণের স্থির অবস্থাকে স্থানিক ও কালিক অংশে পৃথক করুন।"
+    latex: "\\Psi(\\mathbf r,t)=\\psi(\\mathbf r)e^{-iEt/\\hbar}"
+  - step_en: "Insert the separated state into iħ∂Ψ/∂t=ĤΨ to obtain the energy eigenvalue equation."
+    step_bn: "পৃথক করা অবস্থা iħ∂Ψ/∂t=ĤΨ-তে বসিয়ে শক্তির eigenvalue সমীকরণ নিন।"
+    latex: "\\hat H\\psi=E\\psi"
+  - step_en: "For a nonrelativistic particle in scalar potential V, substitute the kinetic operator −ħ²∇²/(2m)."
+    step_bn: "V বিভবে অনাপেক্ষিক কণার জন্য গতিশক্তি অপারেটর −ħ²∇²/(২m) বসান।"
+    latex: "-\\frac{\\hbar^2}{2m}\\nabla^2\\psi + V\\psi = E\\psi"
 summary_en: Meet the wave equation that turns allowed quantum states into an eigenvalue problem.
 summary_bn: allowed quantum state-কে eigenvalue problem-এ রূপ দেওয়া wave equation-এর পরিচয়।
 related: [nernst-equation, simple-harmonic-motion]
@@ -44,3 +54,9 @@ tags: [quantum, honours, wavefunction]
 ---
 
 This is an Honours-level entry point rather than a numerical solver. Boundary conditions and a specified potential are required before a particular state can be calculated.
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+Spectral line energies test predictions for a specified potential and boundary conditions, not the equation without a model.
+
+নির্দিষ্ট বিভব ও সীমানা-শর্তের বর্ণালীর শক্তিস্তর দিয়ে পূর্বাভাস যাচাই হয়; মডেল ছাড়া সমীকরণ একা নয়।

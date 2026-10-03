@@ -1,0 +1,70 @@
+{
+  "slug": "honours-beer-transmittance",
+  "title_en": "Absorbance and transmittance — concept check",
+  "title_bn": "শোষণ ও সঞ্চারণ সম্পর্ক — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If 10% of light transmits, A=?",
+      "q_bn": "১০% আলো পার হলে A কত?",
+      "options": [
+        "1",
+        "0.1",
+        "10",
+        "2"
+      ],
+      "options_bn": [
+        "1",
+        "0.1",
+        "10",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "T=0.10 and −log10(0.10)=1.",
+      "explanation_bn": "T=০.১০, −log10(০.১০)=১।"
+    },
+    {
+      "q": "If transmittance fraction is 0.10, absorbance?",
+      "q_bn": "সঞ্চারণ ভগ্নাংশ ০.১০ হলে শোষণ A?",
+      "options": [
+        "1",
+        "0.1",
+        "10",
+        "−1"
+      ],
+      "options_bn": [
+        "1",
+        "0.1",
+        "10",
+        "−1"
+      ],
+      "answer": 0,
+      "explanation": "Use T=I/I_0;\\quad A=\\log_{10}(I_0/I). For T=0.10, absorbance A=1.",
+      "explanation_bn": "T=I/I_0;\\quad A=\\log_{10}(I_0/I) ব্যবহার করুন। T=০.১০ হলে শোষণ A=১।"
+    },
+    {
+      "q": "Is T=10 a valid transmittance fraction for passive sample?",
+      "q_bn": "নিষ্ক্রিয় নমুনায় T=১০ কি বৈধ সঞ্চারণ ভগ্নাংশ?",
+      "options": [
+        "No, use 0 to 1 and convert percent",
+        "Yes, 10 means 10%",
+        "Yes, because T is in kelvin",
+        "Only at pH 10"
+      ],
+      "options_bn": [
+        "No, use 0 to 1 and convert percent",
+        "Yes, 10 means 10%",
+        "Yes, because T is in kelvin",
+        "Only at pH 10"
+      ],
+      "answer": 0,
+      "explanation": "Blank-corrected intensities, negligible scattering and stray light; T is fraction, not percent.",
+      "explanation_bn": "blank-সংশোধিত তীব্রতা; বিচ্ছুরণ ও stray light উপেক্ষণীয়; T ভগ্নাংশ, শতাংশ নয়।"
+    }
+  ]
+}

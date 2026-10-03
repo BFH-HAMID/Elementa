@@ -1,0 +1,73 @@
+---
+type: "equation"
+slug: "acid-dissociation-ratio"
+title_bn: "অম্লের বিয়োজন অনুপাত"
+title_en: "Acid dissociation and conjugate-base ratio"
+subject: "chemistry"
+level: "honours"
+chapter: "Honours Chemistry"
+chapter_bn: "স্নাতক রসায়ন"
+latex: "\\frac{[A^-]}{[HA]}=10^{pH-pK_a}"
+calculator: false
+variables:
+  - symbol: "A_minus"
+    name: "conjugate-base concentration"
+    name_bn: "conjugate-base concentration"
+    unit: "mol/L"
+    si_unit: "mol/L"
+  - symbol: "HA"
+    name: "weak acid concentration"
+    name_bn: "weak acid concentration"
+    unit: "mol/L"
+    si_unit: "mol/L"
+  - symbol: "pH"
+    name: "hydrogen ion pH"
+    name_bn: "hydrogen ion pH"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "pKa"
+    name: "acid strength exponent"
+    name_bn: "acid strength exponent"
+    unit: "1"
+    si_unit: "1"
+derivation: "Start from Ka=aH aA/aHA and approximate activities by concentrations under fixed ionic conditions. pH=pK_a+\\log_{10}([A^-]/[HA]) Substitute the preceding result and identify the requested relation."
+derivation_bn: "Ka=aH aA/aHA থেকে স্থির আয়নিক অবস্থায় সক্রিয়তার স্থলে ঘনত্বের অনুমান নিন। pH=pK_a+\\log_{10}([A^-]/[HA]) আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation_steps:
+  - step_en: "Start from Ka=aH aA/aHA and approximate activities by concentrations under fixed ionic conditions."
+    step_bn: "Ka=aH aA/aHA থেকে স্থির আয়নিক অবস্থায় সক্রিয়তার স্থলে ঘনত্বের অনুমান নিন।"
+    latex: "pH=pK_a+\\log_{10}([A^-]/[HA])"
+  - step_en: "Substitute the preceding result and identify the requested relation."
+    step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+    latex: "\\frac{[A^-]}{[HA]}=10^{pH-pK_a}"
+summary_en: "When pH exceeds pKa by one, base-to-acid ratio is 10:1."
+summary_bn: "pH, pKa-এর চেয়ে ১ বেশি হলে ক্ষার:অম্ল অনুপাত ১০:১।"
+tags:
+  - "honours"
+  - "chemistry"
+  - "derivation"
+experiment: "weak-acid-ph-approx-lab"
+---
+
+### প্রতিপাদনের ব্যাখ্যা / Derivation
+
+Start from Ka=aH aA/aHA and approximate activities by concentrations under fixed ionic conditions. `pH=pK_a+\log_{10}([A^-]/[HA])` Substitute the preceding result and identify the requested relation.
+
+Ka=aH aA/aHA থেকে স্থির আয়নিক অবস্থায় সক্রিয়তার স্থলে ঘনত্বের অনুমান নিন। `pH=pK_a+\log_{10}([A^-]/[HA])` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
+
+### সমাধানসহ উদাহরণ / Worked application
+
+When pH exceeds pKa by one, base-to-acid ratio is 10:1.
+
+pH, pKa-এর চেয়ে ১ বেশি হলে ক্ষার:অম্ল অনুপাত ১০:১।
+
+### সীমা ও সতর্কতা / Assumptions
+
+Dilute buffer approximation; at high ionic strength use activities, not raw concentrations.
+
+বিরল বাফারে অনুমান; উচ্চ আয়নিক শক্তিতে ঘনত্ব নয়, সক্রিয়তা নিন।
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+Use a calibrated pH meter on dilute solutions; concentration ratios need a mass balance or buffer composition, not pH alone.
+
+বিরল দ্রবণে ক্রমাঙ্কিত pH মিটার নিন; শুধু pH নয়, ঘনত্ব অনুপাতের জন্য ভর-সাম্য বা বাফার গঠন চাই।

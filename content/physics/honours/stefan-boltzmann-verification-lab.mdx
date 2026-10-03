@@ -1,0 +1,76 @@
+---
+type: "experiment"
+slug: "stefan-boltzmann-verification-lab"
+title_bn: "স্টেফান–বোল্টজমান সূত্র যাচাই"
+title_en: "Stefan–Boltzmann law verification"
+subject: "physics"
+level: "honours"
+aim: "Test whether net radiative power depends approximately on T⁴−T₀⁴ using a calibrated thermal radiator."
+aim_bn: "ক্রমাঙ্কিত তাপীয় বিকিরকে নিট বিকিরণক্ষমতা T⁴−T₀⁴-এর সমানুপাতিক কি না যাচাই।"
+apparatus:
+  - "Calibrated radiation apparatus with temperature sensor"
+  - "Electrical power supply and voltmeter/ammeter"
+  - "Ambient thermometer"
+  - "Heat shield"
+apparatus_bn:
+  - "তাপমাত্রা সেন্সরসহ ক্রমাঙ্কিত বিকিরণযন্ত্র"
+  - "বিদ্যুৎ উৎস ও ভোল্টমিটার/অ্যামিটার"
+  - "কক্ষতাপমাপক"
+  - "তাপরোধী আড়াল"
+theory: "For a grey surface of area A and approximately constant emissivity ε, net radiative power is εσA(T⁴−T₀⁴). Heater input VI is not purely radiative: conduction and convection must be measured, reduced, or subtracted using the apparatus calibration. Temperatures must be in kelvin."
+theory_bn: "A ক্ষেত্রফল ও প্রায় স্থির নিঃসরণ ক্ষমতা ε-এর ধূসর পৃষ্ঠে নিট বিকিরণ εσA(T⁴−T₀⁴)। হিটারের VI পুরোটাই বিকিরণ নয়: পরিবহন ও পরিচলন যন্ত্রের ক্রমাঙ্কন দিয়ে সংশোধন বা কমাতে হবে। তাপমাত্রা কেলভিনে নিতে হবে।"
+procedure:
+  - "Check apparatus calibration and note room temperature T₀; fit a heat shield without blocking sensor view."
+  - "Raise heater power in small increments and wait for steady temperature at each setting."
+  - "Record T, voltage and current; obtain radiative power from a calibrated sensor or subtract independently estimated non-radiative losses."
+  - "Plot corrected net power against T⁴−T₀⁴ and fit a line; report slope and uncertainty."
+procedure_bn:
+  - "যন্ত্রের ক্রমাঙ্কন যাচাই ও কক্ষতাপ T₀ লিখুন; সেন্সরের দৃশ্যপথ না ঢেকে আড়াল বসান।"
+  - "হিটারের ক্ষমতা ধাপে বাড়িয়ে প্রতিবার স্থির তাপমাত্রা পর্যন্ত অপেক্ষা করুন।"
+  - "T, বিভব ও প্রবাহ লিখে ক্রমাঙ্কিত সেন্সর থেকে বিকিরণক্ষমতা নিন অথবা পৃথকভাবে মাপা অবিকিরণ ক্ষতি বাদ দিন।"
+  - "সংশোধিত নিট ক্ষমতা বনাম T⁴−T₀⁴ লেখচিত্রে সরলরেখা বসিয়ে ঢাল ও অনিশ্চয়তা লিখুন।"
+observation_table:
+  headers:
+    - "T (K)"
+    - "T₀ (K)"
+    - "V (V)"
+    - "I (A)"
+    - "P_radiative (W)"
+    - "T⁴−T₀⁴ (K⁴)"
+  rows:
+    - ["record", "record", "record", "record", "record", "record"]
+    - ["record", "record", "record", "record", "record", "record"]
+calculation: "Slope m=P_rad/(T⁴−T₀⁴) for a fit through the origin has units W/K⁴; σ=m/(εA) only if ε and A are independently known. A nonzero intercept may indicate background offsets."
+calculation_bn: "মূলবিন্দু দিয়ে অঙ্কিত রেখার ঢাল m=P_rad/(T⁴−T₀⁴), একক W/K⁴; ε ও A পৃথকভাবে জানা থাকলেই σ=m/(εA)। শূন্য নয় এমন ছেদ background offset নির্দেশ করতে পারে।"
+precautions:
+  - "Do not touch hot surfaces; switch off supply before changing connections."
+  - "Do not equate VI with radiation without accounting for other losses."
+  - "Use absolute temperatures and wait for thermal equilibrium."
+precautions_bn:
+  - "গরম পৃষ্ঠ স্পর্শ করবেন না; সংযোগ বদলের আগে বিদ্যুৎ বন্ধ করুন।"
+  - "অন্য ক্ষতি না হিসাব করে VI-কে বিকিরণ ধরবেন না।"
+  - "পরম তাপমাত্রা ব্যবহার করে তাপীয় সাম্যের অপেক্ষা করুন।"
+sources_of_error:
+  - "Unmeasured convection or conduction"
+  - "Temperature sensor lag"
+  - "Emissivity changing with temperature"
+sources_of_error_bn:
+  - "অমাপা পরিচলন বা পরিবহন"
+  - "সেন্সরের সময়-বিলম্ব"
+  - "তাপমাত্রায় নিঃসরণ ক্ষমতা বদল"
+viva:
+  - q: "Why subtract ambient radiation?"
+    a: "The surroundings radiate toward the specimen, so the net transfer is proportional to T⁴−T₀⁴."
+    q_bn: "পারিপার্শ্বিক বিকিরণ কেন বাদ দিতে হয়?"
+    a_bn: "চারপাশও নমুনায় বিকিরণ করে; নিট প্রবাহ T⁴−T₀⁴-এর সমানুপাতিক।"
+  - q: "Can electrical input always be used as emitted power?"
+    a: "No; conduction and convection also remove energy."
+    q_bn: "বিদ্যুৎ ইনপুট কি সবসময় নিঃসৃত বিকিরণ?"
+    a_bn: "না; পরিবহন ও পরিচলনেও শক্তি যায়।"
+tags:
+  - "honours"
+  - "lab"
+  - "physics"
+---
+
+**Interpretation / ব্যাখ্যা:** A straight line tests the power-four model within the measured range, not by itself the universal numerical value of σ. সরলরেখা চতুর্থ-ঘাত সম্পর্ক সমর্থন করে; শুধু তা দিয়ে σ-এর সার্বজনীন মান প্রতিষ্ঠিত হয় না।

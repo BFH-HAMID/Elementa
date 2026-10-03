@@ -1,0 +1,64 @@
+---
+type: "equation"
+slug: "poynting-vector"
+title_bn: "পয়েন্টিং ভেক্টর"
+title_en: "Poynting vector and electromagnetic energy flux"
+subject: "physics"
+level: "honours"
+chapter: "Electromagnetism"
+chapter_bn: "Electromagnetism"
+latex: "\\mathbf S=\\frac{1}{\\mu_0}\\mathbf E\\times\\mathbf B"
+calculator: false
+variables:
+  - symbol: "S"
+    name: "energy flux density"
+    name_bn: "energy flux density"
+    unit: "W/m²"
+    si_unit: "W/m²"
+  - symbol: "E"
+    name: "electric field"
+    name_bn: "electric field"
+    unit: "V/m"
+    si_unit: "V/m"
+  - symbol: "B"
+    name: "magnetic flux density"
+    name_bn: "magnetic flux density"
+    unit: "T"
+    si_unit: "T"
+  - symbol: "μ₀"
+    name: "vacuum permeability"
+    name_bn: "vacuum permeability"
+    unit: "H/m"
+    si_unit: "H/m"
+derivation: "Dot Maxwell–Ampère with E and Faraday with B/μ₀; use the vector identity for divergence of E×B. Regroup the time derivatives into the vacuum field energy density and isolate the remaining flux term. Identify the electromagnetic energy flux."
+derivation_bn: "ম্যাক্সওয়েল–অ্যাম্পিয়ার সমীকরণকে E দিয়ে এবং ফ্যারাডের সমীকরণকে B/μ₀ দিয়ে গুণ করে E×B-এর ডাইভারজেন্স পরিচয় ব্যবহার করুন। সময়-অন্তরকগুলোকে শূন্যস্থানের ক্ষেত্রশক্তির ঘনত্বে সাজিয়ে অবশিষ্ট প্রবাহ-পদ আলাদা করুন। তড়িৎচুম্বকীয় শক্তিপ্রবাহ শনাক্ত করুন।"
+derivation_steps:
+  - step_en: "Dot Maxwell–Ampère with E and Faraday with B/μ₀; use the vector identity for divergence of E×B."
+    step_bn: "ম্যাক্সওয়েল–অ্যাম্পিয়ার সমীকরণকে E দিয়ে এবং ফ্যারাডের সমীকরণকে B/μ₀ দিয়ে গুণ করে E×B-এর ডাইভারজেন্স পরিচয় ব্যবহার করুন।"
+    latex: "\\nabla\\cdot(\\mathbf E\\times\\mathbf B)=\\mathbf B\\cdot(\\nabla\\times\\mathbf E)-\\mathbf E\\cdot(\\nabla\\times\\mathbf B)"
+  - step_en: "Regroup the time derivatives into the vacuum field energy density and isolate the remaining flux term."
+    step_bn: "সময়-অন্তরকগুলোকে শূন্যস্থানের ক্ষেত্রশক্তির ঘনত্বে সাজিয়ে অবশিষ্ট প্রবাহ-পদ আলাদা করুন।"
+    latex: "\\partial_t u+\\nabla\\cdot\\mathbf S=-\\mathbf J\\cdot\\mathbf E,\\quad u=\\tfrac12(\\varepsilon_0E^2+B^2/\\mu_0)"
+  - step_en: "Identify the electromagnetic energy flux."
+    step_bn: "তড়িৎচুম্বকীয় শক্তিপ্রবাহ শনাক্ত করুন।"
+    latex: "\\mathbf S=\\frac{1}{\\mu_0}\\mathbf E\\times\\mathbf B"
+summary_en: "For a plane vacuum wave B=E/c, instantaneous flux is E²/(μ₀c); a sinusoid with peak E₀ has average intensity E₀²/(2μ₀c)."
+summary_bn: " গড় নিতে sin²-এর গড় ১/২ ব্যবহার করুন।"
+tags:
+  - "honours"
+  - "electromagnetism"
+---
+
+### Worked example / প্রয়োগ
+
+For a plane vacuum wave B=E/c, instantaneous flux is E²/(μ₀c); a sinusoid with peak E₀ has average intensity E₀²/(2μ₀c). বাংলা: গড় নিতে sin²-এর গড় ১/২ ব্যবহার করুন।
+
+### Assumptions / সীমা
+
+The stated form is for vacuum; energy flux in material media requires care about constitutive relations, and instantaneous S can vary with position and time.
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+No direct lab for this theoretical relation is supplied. Apply the stated assumptions to a worked calculation and compare measurable predictions only when the appropriate apparatus is available.
+
+এই তাত্ত্বিক সম্পর্কের সরাসরি ল্যাব এখানে নেই। শর্ত মেনে উদাহরণ হিসাব করুন; উপযুক্ত যন্ত্র থাকলেই মাপযোগ্য পূর্বাভাস তুলনা করুন।

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-wave-energy-string-lab",
+  "title_bn": "সনোমিটারে আনুপ্রস্থ তরঙ্গবেগ যাচাই — ধারণা যাচাই",
+  "title_en": "Sonometer test of transverse-wave speed — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "Why measure string mass per unit length independently?",
+      "q_bn": "তারের একক দৈর্ঘ্যের ভর স্বাধীনভাবে কেন মাপি?",
+      "options": [
+        "To change the frequency generator",
+        "To force the string to have no nodes",
+        "To compare observed (2Lf)² with tension divided by μ",
+        "To remove gravitational acceleration"
+      ],
+      "options_bn": [
+        "কম্পাঙ্ক উৎস বদলাতে",
+        "তারে কোনো নিস্পন্দ বিন্দু না রাখতে",
+        "মাপা (২Lf)²-কে টান/μ-এর সঙ্গে তুলতে",
+        "মহাকর্ষীয় ত্বরণ বাদ দিতে"
+      ],
+      "answer": 2,
+      "explanation": "From v=2Lf and v²=𝒯/μ, testing the relation requires an independent μ rather than fitting it from the same speed data.",
+      "explanation_bn": "v=২Lf ও v²=𝒯/μ যাচাইয়ে বেগের একই পাঠ থেকে μ না বের করে স্বাধীনভাবে মাপা দরকার।"
+    }
+  ]
+}

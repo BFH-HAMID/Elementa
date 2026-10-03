@@ -10,7 +10,8 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "check:models": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-calculator-models.mjs",
-    "prebuild": "node scripts/build-search-index.mjs"
+    "prebuild": "node scripts/build-search-index.mjs",
+    "check:honours": "node scripts/audit-honours-content.mjs"
   },
   "dependencies": {
     "@react-three/drei": "9.108.3",

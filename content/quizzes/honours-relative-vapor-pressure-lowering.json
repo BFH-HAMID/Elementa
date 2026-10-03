@@ -1,0 +1,70 @@
+{
+  "slug": "honours-relative-vapor-pressure-lowering",
+  "title_en": "Relative vapour-pressure lowering — concept check",
+  "title_bn": "বাষ্পচাপের আপেক্ষিক হ্রাস — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For xB=0.10, relative lowering is?",
+      "q_bn": "xB=০.১০ হলে আপেক্ষিক হ্রাস?",
+      "options": [
+        "0.10",
+        "0.90",
+        "10",
+        "0"
+      ],
+      "options_bn": [
+        "0.10",
+        "0.90",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Directly equals solute mole fraction.",
+      "explanation_bn": "এটি দ্রবের মোলভাগের সমান।"
+    },
+    {
+      "q": "An ideal nonvolatile-solute mole fraction of 0.10 gives relative vapour-pressure lowering?",
+      "q_bn": "আদর্শ অনুদ্বায়ী দ্রবের মোলভাগ ০.১০ হলে আপেক্ষিক বাষ্পচাপ হ্রাস?",
+      "options": [
+        "0.10",
+        "0.90",
+        "10",
+        "1.10"
+      ],
+      "options_bn": [
+        "0.10",
+        "0.90",
+        "10",
+        "1.10"
+      ],
+      "answer": 0,
+      "explanation": "Use P=x_A P^\\circ;\\quad x_A=1-x_B. A 0.10 solute mole fraction ideally reduces vapour pressure by 10%.",
+      "explanation_bn": "P=x_A P^\\circ;\\quad x_A=1-x_B ব্যবহার করুন। দ্রবের মোলভাগ ০.১০ হলে আদর্শভাবে বাষ্পচাপ ১০% কমে।"
+    },
+    {
+      "q": "Does the simple relation hold for a volatile solute without correction?",
+      "q_bn": "দ্রব উদ্বায়ী হলে সহজ সম্পর্কটি কি সংশোধন ছাড়া চলে?",
+      "options": [
+        "No",
+        "Yes, always",
+        "Only at high pressure",
+        "Only when solute fraction is one"
+      ],
+      "options_bn": [
+        "No",
+        "Yes, always",
+        "Only at high pressure",
+        "Only when solute fraction is one"
+      ],
+      "answer": 0,
+      "explanation": "Ideal solution and nonvolatile solute; deviations arise from different intermolecular interactions.",
+      "explanation_bn": "আদর্শ দ্রবণ ও অনুদ্বায়ী দ্রব; ভিন্ন আন্তঃআণবিক আকর্ষণে বিচ্যুতি হয়।"
+    }
+  ]
+}

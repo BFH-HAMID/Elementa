@@ -1,0 +1,70 @@
+{
+  "slug": "honours-liquid-partition-coefficient",
+  "title_en": "Partition coefficient between immiscible solvents — lab viva",
+  "title_bn": "অমিশ্রণীয় দ্রাবকে বণ্টন সহগ — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "At equilibrium, must both layer concentrations be equal?",
+      "q_bn": "সাম্যে দুই স্তরের ঘনত্ব কি সমান হতে হবে?",
+      "options": [
+        "No, their chemical potentials are equal, not necessarily concentrations.",
+        "Yes, always",
+        "Only if layers are coloured",
+        "Because total volume is fixed"
+      ],
+      "options_bn": [
+        "না; রাসায়নিক বিভব সমান হয়, ঘনত্ব অবশ্যই নয়।",
+        "Yes, always",
+        "Only if layers are coloured",
+        "Because total volume is fixed"
+      ],
+      "answer": 0,
+      "explanation": "No, their chemical potentials are equal, not necessarily concentrations. For the same molecular form of solute at equilibrium, Kd=Corganic/Caqueous at fixed temperature. Ionization or association makes the apparent concentration ratio composition-dependent.",
+      "explanation_bn": "না; রাসায়নিক বিভব সমান হয়, ঘনত্ব অবশ্যই নয়। সাম্যে একই আণবিক রূপে নির্দিষ্ট তাপে Kd=Corganic/Caqueous। আয়নীভবন বা সংযুক্তিতে আপাত ঘনত্ব-অনুপাত গঠনের ওপর নির্ভর করে।"
+    },
+    {
+      "q": "At equilibrium, Corganic=0.20 M and Caqueous=0.05 M for the same neutral solute. Kd?",
+      "q_bn": "সাম্যে একই নিরপেক্ষ দ্রবের Corganic=০.২০ M ও Caqueous=০.০৫ M হলে Kd কত?",
+      "options": [
+        "0.25",
+        "0.15",
+        "1",
+        "4"
+      ],
+      "options_bn": [
+        "০.২৫",
+        "০.১৫",
+        "১",
+        "৪"
+      ],
+      "answer": 3,
+      "explanation": "Kd=Corganic/Caqueous=0.20/0.05=4; ionization would require a more careful model.",
+      "explanation_bn": "Kd=Corganic/Caqueous=০.২০/০.০৫=৪; আয়নীভবনে আরও সতর্ক মডেল লাগে।"
+    },
+    {
+      "q": "Why might apparent Kd vary with concentration for an ionizable solute?",
+      "q_bn": "আয়নীভবনযোগ্য দ্রবের আপাত Kd ঘনত্বভেদে বদলাতে পারে কেন?",
+      "options": [
+        "Both solvents must be identical",
+        "Chemical potential stops existing",
+        "The separating funnel has no volume",
+        "Neutral and ionic forms partition differently"
+      ],
+      "options_bn": [
+        "দুটি দ্রাবক অবশ্যই এক",
+        "রাসায়নিক বিভব থাকে না",
+        "পৃথকীকরণ ফানেলের আয়তন নেই",
+        "নিরপেক্ষ ও আয়নিক রূপ ভিন্নভাবে বণ্টিত হয়"
+      ],
+      "answer": 3,
+      "explanation": "Kd=Corganic/Caqueous is constant for the same molecular form under defined conditions. Ionization or association changes the fraction of that form in each phase.",
+      "explanation_bn": "নির্দিষ্ট অবস্থায় একই আণবিক রূপে Kd=Corganic/Caqueous স্থির। আয়নীভবন বা সংযুক্তিতে দুই স্তরে সেই রূপের অংশ বদলায়।"
+    }
+  ]
+}

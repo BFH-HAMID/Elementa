@@ -1,0 +1,70 @@
+{
+  "slug": "honours-physics-mechanics-lab",
+  "title_en": "Honours physics equations and practicals",
+  "title_bn": "স্নাতক পদার্থবিজ্ঞান: সমীকরণ ও ব্যবহারিক",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Analytical mechanics and Hall effect",
+  "chapter_bn": "স্নাতক সমীকরণ ও ব্যবহারিক",
+  "description_en": "Conceptual and numerical checks with explained answers.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত ও সংখ্যাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For L=T−V=½m q̇²−½kq², which equation follows?",
+      "q_bn": "L=T−V=½m q̇²−½kq² হলে কোন সমীকরণ পাওয়া যায়?",
+      "options": [
+        "mq̈+kq=0",
+        "mq̈−kq=0",
+        "q̈=0",
+        "mq̇+kq=0"
+      ],
+      "options_bn": [
+        "mq̈+kq=0",
+        "mq̈−kq=0",
+        "q̈=0",
+        "mq̇+kq=0"
+      ],
+      "answer": 0,
+      "explanation": "∂L/∂q=−kq and d(∂L/∂q̇)/dt=mq̈.",
+      "explanation_bn": "∂L/∂q=−kq এবং d(∂L/∂q̇)/dt=mq̈।"
+    },
+    {
+      "q": "At fixed I, what is the slope of Hall voltage versus B in the one-carrier model?",
+      "q_bn": "স্থির I-তে এক-বাহক মডেলে B-এর বিপরীতে হল বিভবের ঢাল কত?",
+      "options": [
+        "R_H I/t",
+        "R_H t/I",
+        "It/R_H",
+        "zero"
+      ],
+      "options_bn": [
+        "R_H I/t",
+        "R_H t/I",
+        "It/R_H",
+        "zero"
+      ],
+      "answer": 0,
+      "explanation": "V_H=R_H IB/t, so the slope is R_H I/t.",
+      "explanation_bn": "V_H=R_H IB/t, তাই ঢাল R_H I/t।"
+    },
+    {
+      "q": "Why reverse B during Hall voltage measurement?",
+      "q_bn": "হল বিভব মাপার সময় B উল্টানো হয় কেন?",
+      "options": [
+        "Reject fixed contact offset",
+        "Increase sample thickness",
+        "Change carrier charge",
+        "Remove all thermal noise"
+      ],
+      "options_bn": [
+        "Reject fixed contact offset",
+        "Increase sample thickness",
+        "Change carrier charge",
+        "Remove all thermal noise"
+      ],
+      "answer": 0,
+      "explanation": "The odd-in-B Hall voltage changes sign; a fixed offset does not.",
+      "explanation_bn": "B-এর চিহ্নে নির্ভরশীল হল বিভব বদলায়; স্থির offset বদলায় না।"
+    }
+  ]
+}

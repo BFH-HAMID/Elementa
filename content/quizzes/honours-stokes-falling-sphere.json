@@ -1,0 +1,70 @@
+{
+  "slug": "honours-stokes-falling-sphere",
+  "title_en": "Viscosity from falling-ball terminal speed — lab viva",
+  "title_bn": "পতনশীল গোলকে সান্দ্রতা — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why start timing below the liquid surface?",
+      "q_bn": "তরলের পৃষ্ঠের নিচ থেকে সময় মাপা হয় কেন?",
+      "options": [
+        "To allow the sphere to reach terminal speed.",
+        "To remove buoyancy",
+        "To double gravitational acceleration",
+        "To prevent all fluid flow"
+      ],
+      "options_bn": [
+        "গোলককে প্রান্তিক বেগ পেতে সময় দিতে।",
+        "To remove buoyancy",
+        "To double gravitational acceleration",
+        "To prevent all fluid flow"
+      ],
+      "answer": 0,
+      "explanation": "To allow the sphere to reach terminal speed. At slow terminal motion, buoyancy-corrected weight (4/3)πr³(ρs−ρf)g equals Stokes drag 6πηrv, giving η=2r²(ρs−ρf)g/(9v).",
+      "explanation_bn": "গোলককে প্রান্তিক বেগ পেতে সময় দিতে। ধীর প্রান্তিক গতিতে ঊর্ধ্বমুখী বল বাদে ওজন (৪/৩)πr³(ρs−ρf)g ও Stokes ঘর্ষণ ৬πηrv সমান; η=২r²(ρs−ρf)g/(৯v)।"
+    },
+    {
+      "q": "At fixed densities and viscosity, doubling sphere radius changes ideal terminal speed by what factor?",
+      "q_bn": "ঘনত্ব ও সান্দ্রতা একই রেখে গোলকের ব্যাসার্ধ দ্বিগুণ করলে আদর্শ প্রান্তিক বেগ কত গুণ?",
+      "options": [
+        "Eight",
+        "One half",
+        "Four",
+        "Two"
+      ],
+      "options_bn": [
+        "আট",
+        "অর্ধেক",
+        "চার",
+        "দুই"
+      ],
+      "answer": 2,
+      "explanation": "Rearrange η=2r²(ρs−ρf)g/(9v): terminal v∝r² in the Stokes regime.",
+      "explanation_bn": "η=২r²(ρs−ρf)g/(৯v) থেকে Stokes অঞ্চলে প্রান্তিক v∝r²।"
+    },
+    {
+      "q": "Why may the simple Stokes formula fail for a sphere in a narrow cylinder?",
+      "q_bn": "সরু নলে গোলকের জন্য সরল Stokes সূত্র কেন ভুল হতে পারে?",
+      "options": [
+        "Sphere density becomes zero",
+        "Terminal speed becomes infinite",
+        "Nearby walls alter fluid drag",
+        "Gravity vanishes inside glass"
+      ],
+      "options_bn": [
+        "গোলকের ঘনত্ব শূন্য হয়",
+        "প্রান্তিক বেগ অসীম হয়",
+        "পাশের দেয়াল তরলের বাধা বদলায়",
+        "কাচের মধ্যে মহাকর্ষ থাকে না"
+      ],
+      "answer": 2,
+      "explanation": "Stokes drag 6πηrv assumes an unbounded slow-flow fluid. Vessel walls increase drag, requiring a wall correction or a wider cylinder.",
+      "explanation_bn": "Stokes বাধা ৬πηrv অসীম বিস্তৃত ধীর তরলের জন্য। পাত্রের দেয়ালে বাধা বাড়ে; দেয়াল সংশোধন বা চওড়া পাত্র দরকার।"
+    }
+  ]
+}

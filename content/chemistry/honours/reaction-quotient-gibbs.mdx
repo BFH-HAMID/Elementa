@@ -1,0 +1,78 @@
+---
+type: "equation"
+slug: "reaction-quotient-gibbs"
+title_bn: "বিক্রিয়া ভাগফল ও গিবস শক্তি"
+title_en: "Reaction Gibbs energy and quotient"
+subject: "chemistry"
+level: "honours"
+chapter: "Honours Chemistry"
+chapter_bn: "স্নাতক রসায়ন"
+latex: "\\Delta_rG=\\Delta_rG^\\circ+RT\\ln Q"
+calculator: false
+variables:
+  - symbol: "ΔrG"
+    name: "reaction Gibbs energy"
+    name_bn: "reaction Gibbs energy"
+    unit: "J/mol"
+    si_unit: "J/mol"
+  - symbol: "ΔrG°"
+    name: "standard reaction Gibbs energy"
+    name_bn: "standard reaction Gibbs energy"
+    unit: "J/mol"
+    si_unit: "J/mol"
+  - symbol: "R"
+    name: "gas constant"
+    name_bn: "gas constant"
+    unit: "J/(mol K)"
+    si_unit: "J/(mol K)"
+  - symbol: "T"
+    name: "absolute temperature"
+    name_bn: "absolute temperature"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "Q"
+    name: "dimensionless activity quotient"
+    name_bn: "dimensionless activity quotient"
+    unit: "1"
+    si_unit: "1"
+derivation: "Write each chemical potential as μi=μi°+RT ln ai and sum with stoichiometric coefficients. \\Delta_rG=\\sum_i\\nu_i\\mu_i;\\quad Q=\\prod_i a_i^{\\nu_i} Substitute the preceding result and identify the requested relation."
+derivation_bn: "প্রতিটি রাসায়নিক বিভব μi=μi°+RT ln ai লিখে বিক্রিয়ার সহগসহ যোগ করুন। \\Delta_rG=\\sum_i\\nu_i\\mu_i;\\quad Q=\\prod_i a_i^{\\nu_i} আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation_steps:
+  - step_en: "Write each chemical potential as μi=μi°+RT ln ai and sum with stoichiometric coefficients."
+    step_bn: "প্রতিটি রাসায়নিক বিভব μi=μi°+RT ln ai লিখে বিক্রিয়ার সহগসহ যোগ করুন।"
+    latex: "\\Delta_rG=\\sum_i\\nu_i\\mu_i;\\quad Q=\\prod_i a_i^{\\nu_i}"
+  - step_en: "Substitute the preceding result and identify the requested relation."
+    step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+    latex: "\\Delta_rG=\\Delta_rG^\\circ+RT\\ln Q"
+summary_en: "At equilibrium ΔrG=0, giving ΔrG°=−RT ln K."
+summary_bn: "সাম্যে ΔrG=০; ফলে ΔrG°=−RT ln K।"
+tags:
+  - "honours"
+  - "chemistry"
+  - "derivation"
+experiment: "iron-thiocyanate-equilibrium-lab"
+---
+
+### প্রতিপাদনের ব্যাখ্যা / Derivation
+
+Write each chemical potential as μi=μi°+RT ln ai and sum with stoichiometric coefficients. `\Delta_rG=\sum_i\nu_i\mu_i;\quad Q=\prod_i a_i^{\nu_i}` Substitute the preceding result and identify the requested relation.
+
+প্রতিটি রাসায়নিক বিভব μi=μi°+RT ln ai লিখে বিক্রিয়ার সহগসহ যোগ করুন। `\Delta_rG=\sum_i\nu_i\mu_i;\quad Q=\prod_i a_i^{\nu_i}` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
+
+### সমাধানসহ উদাহরণ / Worked application
+
+At equilibrium ΔrG=0, giving ΔrG°=−RT ln K.
+
+সাম্যে ΔrG=০; ফলে ΔrG°=−RT ln K।
+
+### সীমা ও সতর্কতা / Assumptions
+
+Activities are dimensionless relative to standards; Q must not be a logarithm of dimensional concentrations.
+
+সক্রিয়তা মান অবস্থার তুলনায় মাত্রাহীন; মাত্রাযুক্ত ঘনত্বের লগারিদম নেবেন না।
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+Measure a conditional K from equilibrium compositions; transient reaction quotient Q requires non-equilibrium samples.
+
+সাম্য গঠনে শর্তাধীন K মাপা যায়; সাম্যের বাইরের Q পেতে অসম্য নমুনা লাগবে।

@@ -1,0 +1,70 @@
+{
+  "slug": "honours-photoelectric-planck-honours",
+  "title_en": "Photoelectric stopping potential for Planck constant — lab viva",
+  "title_bn": "আলোকতড়িৎ নিবৃত্তি বিভব থেকে প্ল্যাঙ্ক ধ্রুবক — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What does the slope of Vs versus f yield?",
+      "q_bn": "Vs বনাম f-এর ঢাল কী দেয়?",
+      "options": [
+        "h/e.",
+        "φ/e",
+        "eh",
+        "1/h"
+      ],
+      "options_bn": [
+        "h/e।",
+        "φ/e",
+        "eh",
+        "1/h"
+      ],
+      "answer": 0,
+      "explanation": "h/e. For a given photocathode eVs=hf−φ; a plot of stopping potential Vs versus frequency f has slope h/e and threshold intercept φ/h.",
+      "explanation_bn": "h/e। নির্দিষ্ট আলোকক্যাথোডে eVs=hf−φ; Vs বনাম f-এর ঢাল h/e এবং প্রান্তিক কম্পাঙ্ক φ/h।"
+    },
+    {
+      "q": "If Vs versus f has slope 4.14×10⁻¹⁵ V s, approximately what is h? Use e=1.60×10⁻¹⁹ C.",
+      "q_bn": "Vs বনাম f-এর ঢাল ৪.১৪×১০⁻¹⁵ V s এবং e=১.৬০×১০⁻¹⁹ C হলে h প্রায় কত?",
+      "options": [
+        "4.14×10⁻¹⁵ J s",
+        "1.60×10⁻¹⁹ J s",
+        "6.62×10⁻³⁴ J s",
+        "2.59×10⁴ J s"
+      ],
+      "options_bn": [
+        "৪.১৪×১০⁻¹⁵ J s",
+        "১.৬০×১০⁻¹⁹ J s",
+        "৬.৬২×১০⁻³⁴ J s",
+        "২.৫৯×১০⁴ J s"
+      ],
+      "answer": 2,
+      "explanation": "slope=h/e, so h=e×slope≈(1.60×10⁻¹⁹)(4.14×10⁻¹⁵)=6.62×10⁻³⁴ J s.",
+      "explanation_bn": "ঢাল=h/e; তাই h=e×ঢাল≈(১.৬০×১০⁻¹⁹)(৪.১৪×১০⁻¹⁵)=৬.৬২×১০⁻³⁴ J s।"
+    },
+    {
+      "q": "Does the intercept at Vs=0 directly give Planck's constant?",
+      "q_bn": "Vs=০-এ রেখার ছেদ কি সরাসরি প্ল্যাঙ্ক ধ্রুবক দেয়?",
+      "options": [
+        "No, both intercept and slope are always zero",
+        "Yes, only intensity determines h",
+        "No, slope gives h/e, while frequency intercept is φ/h",
+        "Yes, the intercept always equals h"
+      ],
+      "options_bn": [
+        "না, ছেদ-ঢাল উভয়ই শূন্য",
+        "হ্যাঁ, শুধু তীব্রতা h নির্ধারণ করে",
+        "না, ঢাল h/e, কম্পাঙ্ক অক্ষের ছেদ φ/h",
+        "হ্যাঁ, ছেদই সবসময় h"
+      ],
+      "answer": 2,
+      "explanation": "From eVs=hf−φ, Vs=(h/e)f−φ/e; the f-axis threshold is φ/h, and h is e times the slope.",
+      "explanation_bn": "eVs=hf−φ থেকে Vs=(h/e)f−φ/e; কম্পাঙ্ক অক্ষে প্রান্তিক φ/h, আর h=e×ঢাল।"
+    }
+  ]
+}

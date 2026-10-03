@@ -8,7 +8,7 @@ import { Calculator } from '@/components/content/Calculator';
 import { MdxArticle } from '@/components/content/MdxArticle';
 import { Tex } from '@/components/content/Tex';
 import { ViewTracker } from '@/components/content/ViewTracker';
-import { formatLevel, getEquationBySlug, getEquationEntries, getExperimentBySlug } from '@/lib/content';
+import { formatLevel, getEquationBySlug, getEquationEntries, getExperimentBySlug, getQuizBySlug } from '@/lib/content';
 import { getSimulationMeta } from '@/lib/simulations';
 import { isLocale, locales, type Locale } from '@/i18n/routing';
 import { titleFor } from '@/lib/utils';
@@ -37,8 +37,9 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
   const related = equation.related.map((slug) => getEquationBySlug(slug)).filter((item) => item !== undefined).slice(0, 3);
   const simulation = equation.simulation ? getSimulationMeta(equation.simulation) : undefined;
   const experiment = equation.experiment ? getExperimentBySlug(equation.experiment) : undefined;
+  const quiz = getQuizBySlug(`honours-${equation.slug}`);
   const hasCalculator = equation.interactive;
-  const hasSidebar = hasCalculator || Boolean(simulation) || Boolean(experiment);
+  const hasSidebar = hasCalculator || Boolean(simulation) || Boolean(experiment) || Boolean(quiz);
 
   return (
     <section className="page-shell section-space">
@@ -113,6 +114,13 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
                   </span>
                   <ChevronRight size={18} className="text-chemistry-600 transition group-hover:translate-x-1" />
                 </div>
+              </Link>
+            )}
+            {quiz && (
+              <Link href={`/${locale}/quiz/${quiz.slug}`} className="group block rounded-2xl border border-[var(--line)] bg-[var(--surface-soft)] p-4 transition hover:-translate-y-0.5">
+                <span className="block text-xs font-black uppercase tracking-widest text-physics-600 dark:text-physics-200">{locale === 'bn' ? 'অনুশীলন করুন' : 'Practice this topic'}</span>
+                <span className="mt-1 block font-extrabold">{locale === 'bn' ? quiz.title_bn : quiz.title_en}</span>
+                <span className="mt-1 block text-sm muted">{quiz.questions.length} {locale === 'bn' ? 'টি ব্যাখ্যাসহ প্রশ্ন' : 'explained questions'}</span>
               </Link>
             )}
             {experiment && (

@@ -1,0 +1,69 @@
+---
+type: "equation"
+slug: "fermi-dirac-occupation"
+title_bn: "ফার্মি–ডিরাক দখল সম্ভাবনা"
+title_en: "Fermi–Dirac occupation"
+subject: "physics"
+level: "honours"
+chapter: "Quantum Statistical Physics"
+chapter_bn: "Quantum Statistical Physics"
+latex: "f(E)=\\frac{1}{e^{(E-\\mu)/(k_BT)}+1}"
+calculator: false
+variables:
+  - symbol: "f"
+    name: "occupation probability"
+    name_bn: "occupation probability"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "E"
+    name: "single-particle energy"
+    name_bn: "single-particle energy"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "μ"
+    name: "chemical potential"
+    name_bn: "chemical potential"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "k_B"
+    name: "Boltzmann constant"
+    name_bn: "Boltzmann constant"
+    unit: "J/K"
+    si_unit: "J/K"
+  - symbol: "T"
+    name: "absolute temperature"
+    name_bn: "absolute temperature"
+    unit: "K"
+    si_unit: "K"
+derivation: "For one fermionic state, allow occupation n=0 or 1 only and assign grand-canonical weights. Normalize the two weights and compute the mean occupation. Multiply numerator and denominator by exp[(E−μ)/(kBT)]."
+derivation_bn: "এক ফার্মিয়নিক অবস্থায় Pauli নীতি মেনে n=০ বা ১ নিয়ে grand-canonical ওজন দিন। দুটি ওজন স্বাভাবিকীকরণ করে গড় দখল বের করুন। লব ও হরকে exp[(E−μ)/(kBT)] দিয়ে গুণ করুন।"
+derivation_steps:
+  - step_en: "For one fermionic state, allow occupation n=0 or 1 only and assign grand-canonical weights."
+    step_bn: "এক ফার্মিয়নিক অবস্থায় Pauli নীতি মেনে n=০ বা ১ নিয়ে grand-canonical ওজন দিন।"
+    latex: "w_n=e^{-n(E-\\mu)/(k_BT)},\\quad n\\in\\{0,1\\}"
+  - step_en: "Normalize the two weights and compute the mean occupation."
+    step_bn: "দুটি ওজন স্বাভাবিকীকরণ করে গড় দখল বের করুন।"
+    latex: "\\langle n\\rangle=\\frac{e^{-(E-\\mu)/(k_BT)}}{1+e^{-(E-\\mu)/(k_BT)}}"
+  - step_en: "Multiply numerator and denominator by exp[(E−μ)/(kBT)]."
+    step_bn: "লব ও হরকে exp[(E−μ)/(kBT)] দিয়ে গুণ করুন।"
+    latex: "f(E)=\\frac{1}{e^{(E-\\mu)/(k_BT)}+1}"
+summary_en: "At E=μ and T>0, f=1/2. At T→0, f approaches a step: 1 below μ and 0 above it."
+summary_bn: " একই একক-কণা অবস্থায় দুইটি অভিন্ন ফার্মিয়ন থাকতে পারে না।"
+tags:
+  - "honours"
+  - "quantum statistical physics"
+---
+
+### Worked example / প্রয়োগ
+
+At E=μ and T>0, f=1/2. At T→0, f approaches a step: 1 below μ and 0 above it. বাংলা: একই একক-কণা অবস্থায় দুইটি অভিন্ন ফার্মিয়ন থাকতে পারে না।
+
+### Assumptions / সীমা
+
+Applies to noninteracting or quasiparticle fermionic states in thermal equilibrium; f is occupation of one state, not density of states. At T=0 the value exactly at E=μ is a limiting convention.
+
+### Experimental context / পরীক্ষাগত সংযোগ
+
+Occupation statistics are inferred from calibrated electronic or spectroscopic measurements; a classroom voltmeter cannot count single-state occupancies.
+
+ক্রমাঙ্কিত বৈদ্যুতিক বা বর্ণালী পরিমাপ থেকে দখল-পরিসংখ্যান অনুমান হয়; সাধারণ ভোল্টমিটারে একক অবস্থার দখল গোনা যায় না।

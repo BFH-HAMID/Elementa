@@ -1,0 +1,70 @@
+{
+  "slug": "honours-rc-discharge-honours",
+  "title_en": "RC capacitor discharge — concept check",
+  "title_bn": "RC বর্তনীর নিঃসরণ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At t=RC, voltage is closest to?",
+      "q_bn": "t=RC-এ বিভব প্রায় কত?",
+      "options": [
+        "0.37V₀",
+        "0.50V₀",
+        "0",
+        "V₀"
+      ],
+      "options_bn": [
+        "0.37V₀",
+        "0.50V₀",
+        "0",
+        "V₀"
+      ],
+      "answer": 0,
+      "explanation": "e^(−1)≈0.368.",
+      "explanation_bn": "e^(−১)≈০.৩৬৮।"
+    },
+    {
+      "q": "At one time constant RC, Vc/V₀ approximately?",
+      "q_bn": "এক সময় ধ্রুবক RC পরে Vc/V₀ প্রায়?",
+      "options": [
+        "0.368",
+        "0.632",
+        "0.5",
+        "1"
+      ],
+      "options_bn": [
+        "0.368",
+        "0.632",
+        "0.5",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Use R\\,dq/dt+q/C=0;\\quad q(0)=CV_0. At t=RC, voltage is V₀/e≈0.368 V₀.",
+      "explanation_bn": "R\\,dq/dt+q/C=0;\\quad q(0)=CV_0 ব্যবহার করুন। t=RC-এ বিভব V₀/e≈০.৩৬৮V₀।"
+    },
+    {
+      "q": "What can invalidate ideal RC exponential decay?",
+      "q_bn": "আদর্শ RC সূচকীয় নিঃসরণ কোন কারণে ভুল হতে পারে?",
+      "options": [
+        "Capacitor leakage",
+        "Constant ideal R",
+        "Constant ideal C",
+        "A high-impedance voltmeter"
+      ],
+      "options_bn": [
+        "Capacitor leakage",
+        "Constant ideal R",
+        "Constant ideal C",
+        "A high-impedance voltmeter"
+      ],
+      "answer": 0,
+      "explanation": "Ideal constant R and C without leakage or inductance; measure voltage with a high-impedance meter.",
+      "explanation_bn": "আদর্শ ধ্রুব R ও C, leakage বা আবেশ নেই; উচ্চ প্রতিবন্ধক ভোল্টমিটার লাগবে।"
+    }
+  ]
+}

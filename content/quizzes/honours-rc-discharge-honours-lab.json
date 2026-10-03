@@ -1,0 +1,32 @@
+{
+  "slug": "honours-rc-discharge-honours-lab",
+  "title_bn": "RC নিঃসরণের সময় ধ্রুবক ব্যবহারিক — ধারণা যাচাই",
+  "title_en": "RC discharge time-constant practical — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "What fraction of initial capacitor voltage remains at t=RC?",
+      "q_bn": "t=RC-এ ধারকের প্রাথমিক বিভবের কত অংশ থাকে?",
+      "options": [
+        "1/e",
+        "1/2",
+        "1",
+        "0"
+      ],
+      "options_bn": [
+        "১/e",
+        "১/২",
+        "১",
+        "০"
+      ],
+      "answer": 0,
+      "explanation": "V(t)=V₀ exp(−t/RC); at t=RC this is V₀/e≈0.368V₀.",
+      "explanation_bn": "V(t)=V₀ exp(−t/RC); t=RC-এ V₀/e≈০.৩৬৮V₀।"
+    }
+  ]
+}

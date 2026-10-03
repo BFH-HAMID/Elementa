@@ -1,0 +1,70 @@
+{
+  "slug": "honours-rotational-spectra-level",
+  "title_en": "Rigid-rotor rotational levels — concept check",
+  "title_bn": "দৃঢ় ঘূর্ণকের শক্তি — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For J=1, E/(hcB) equals?",
+      "q_bn": "J=১ হলে E/(hcB) কত?",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "options_bn": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "J(J+1)=1×2=2.",
+      "explanation_bn": "J(J+১)=১×২=২।"
+    },
+    {
+      "q": "For J=2, E/(hcB) is?",
+      "q_bn": "J=২ হলে E/(hcB) কত?",
+      "options": [
+        "6",
+        "2",
+        "4",
+        "3"
+      ],
+      "options_bn": [
+        "6",
+        "2",
+        "4",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "Use E_J=\\hbar^2J(J+1)/(2I);\\quad B=h/(8\\pi^2Ic). J=0 has zero rotational energy; J=1 has 2hcB.",
+      "explanation_bn": "E_J=\\hbar^2J(J+1)/(2I);\\quad B=h/(8\\pi^2Ic) ব্যবহার করুন। J=০-এ ঘূর্ণনশক্তি শূন্য; J=১-এ ২hcB।"
+    },
+    {
+      "q": "If B is expressed in cm⁻¹, which c unit keeps hcB an energy?",
+      "q_bn": "B-এর একক cm⁻¹ হলে hcB শক্তি পেতে c-এর একক?",
+      "options": [
+        "cm/s",
+        "m/s without conversion",
+        "km/h",
+        "cm²/s"
+      ],
+      "options_bn": [
+        "cm/s",
+        "m/s without conversion",
+        "km/h",
+        "cm²/s"
+      ],
+      "answer": 0,
+      "explanation": "B in cm⁻¹ requires c in cm/s; rigid rotor ignores centrifugal distortion and vibration–rotation coupling.",
+      "explanation_bn": "B cm⁻¹ হলে c cm/s; দৃঢ় ঘূর্ণকে বিকৃতি ও কম্পন–ঘূর্ণন সংযোগ উপেক্ষিত।"
+    }
+  ]
+}

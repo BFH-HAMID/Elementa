@@ -1,0 +1,32 @@
+{
+  "slug": "honours-compton-effect-wavelength-shift",
+  "title_bn": "কম্পটন বিচ্যুতির তরঙ্গদৈর্ঘ্য পরিবর্তন — ধারণা যাচাই",
+  "title_en": "Compton scattering wavelength shift — concept check",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "Equation or lab concept with explained answer.",
+  "description_bn": "ব্যাখ্যাসহ সমীকরণ বা ব্যবহারিক ধারণা।",
+  "questions": [
+    {
+      "q": "At scattering angle θ=0°, the Compton wavelength shift is?",
+      "q_bn": "বিচ্ছুরণ কোণ θ=০° হলে কম্পটন তরঙ্গদৈর্ঘ্যের পরিবর্তন কত?",
+      "options": [
+        "2h/(mc)",
+        "Infinite",
+        "Zero",
+        "h/(mc)"
+      ],
+      "options_bn": [
+        "2h/(mc)",
+        "অসীম",
+        "শূন্য",
+        "h/(mc)"
+      ],
+      "answer": 2,
+      "explanation": "Δλ=h(1−cosθ)/(mc); cos0°=1, so Δλ=0.",
+      "explanation_bn": "Δλ=h(১−cosθ)/(mc); cos০°=১, তাই Δλ=০।"
+    }
+  ]
+}

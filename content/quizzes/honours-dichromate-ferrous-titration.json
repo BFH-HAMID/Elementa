@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Six. Cr₂O₇²−+6Fe²⁺+14H+→2Cr³⁺+6Fe³⁺+7H₂O. An approved redox indicator indicates the equivalence endpoint.",
       "explanation_bn": "ছয়। Cr₂O₇²−+৬Fe²⁺+১৪H+→২Cr³⁺+৬Fe³⁺+৭H₂O। অনুমোদিত জারণ-বিজারণ নির্দেশকে সমাপ্তি ধরা হয়।"
+    },
+    {
+      "q": "5.00 mL of 0.0100 M dichromate corresponds to how many moles of Fe²⁺?",
+      "q_bn": "০.০১০০ M ডাইক্রোমেট ৫.০০ mL-এ Fe²⁺ কত মোল?",
+      "options": [
+        "0.00300 mol",
+        "0.000300 mol",
+        "0.0000500 mol",
+        "0.000100 mol"
+      ],
+      "options_bn": [
+        "০.০০৩০০ mol",
+        "০.০০০৩০০ mol",
+        "০.০০০০৫০০ mol",
+        "০.০০০১০০ mol"
+      ],
+      "answer": 1,
+      "explanation": "n(Fe²⁺)=6×0.0100×0.00500=0.000300 mol, based on the balanced acid reaction.",
+      "explanation_bn": "অম্লীয় সুষম বিক্রিয়ায় n(Fe²⁺)=৬×০.০১০০×০.০০৫০০=০.০০০৩০০ mol।"
     }
   ]
 }

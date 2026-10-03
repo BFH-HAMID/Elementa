@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Incident and emergent paths are symmetric. At minimum deviation δm in air, light travels symmetrically in a prism of apex angle A, so n=sin[(A+δm)/2]/sin(A/2).",
       "explanation_bn": "আপতিত ও নির্গত পথ সমমিত। বাতাসে সর্বনিম্ন বিচ্যুতি δm-এ A শীর্ষকোণের প্রিজমে পথ সমমিত; তাই n=sin[(A+δm)/২]/sin(A/২)।"
+    },
+    {
+      "q": "For prism A=60° and δm=40°, what is n approximately?",
+      "q_bn": "প্রিজমে A=৬০° ও δm=৪০° হলে n প্রায় কত?",
+      "options": [
+        "1.00",
+        "2.00",
+        "0.77",
+        "1.53"
+      ],
+      "options_bn": [
+        "১.০০",
+        "২.০০",
+        "০.৭৭",
+        "১.৫৩"
+      ],
+      "answer": 3,
+      "explanation": "n=sin[(60°+40°)/2]/sin(60°/2)=sin50°/sin30°≈1.53.",
+      "explanation_bn": "n=sin[(৬০°+৪০°)/২]/sin(৬০°/২)=sin৫০°/sin৩০°≈১.৫৩।"
     }
   ]
 }

@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Inductive and capacitive reactances. The impedance magnitude Z=√[R²+(ωL−1/ωC)²] is smallest at ω₀=1/√(LC). At half-power current Imax/√2, bandwidth Δω≈R/L for an ideal series circuit.",
       "explanation_bn": "আবেশী ও ধারকীয় প্রতিঘাত। প্রতিবন্ধক Z=√[R²+(ωL−১/ωC)²] সর্বনিম্ন হয় ω₀=১/√(LC)-এ। অর্ধক্ষমতায় প্রবাহ Imax/√২; আদর্শ সারি বর্তনীতে Δω≈R/L।"
+    },
+    {
+      "q": "If L=0.10 H and C=100 μF, resonance frequency is closest to?",
+      "q_bn": "L=০.১০ H ও C=১০০ μF হলে অনুনাদ কম্পাঙ্ক প্রায়?",
+      "options": [
+        "1000 Hz",
+        "50 Hz",
+        "5 Hz",
+        "500 Hz"
+      ],
+      "options_bn": [
+        "১০০০ Hz",
+        "৫০ Hz",
+        "৫ Hz",
+        "৫০০ Hz"
+      ],
+      "answer": 1,
+      "explanation": "f₀=1/(2π√LC)=1/(2π√10⁻⁵)≈50.3 Hz.",
+      "explanation_bn": "f₀=১/(২π√LC)=১/(২π√১০⁻⁵)≈৫০.৩ Hz।"
     }
   ]
 }

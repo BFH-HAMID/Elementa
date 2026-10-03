@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Half a wavelength. For a closed air column consecutive resonances satisfy L₂−L₁≈λ/2; thus v=2f(L₂−L₁). Their difference cancels a nearly constant end correction.",
       "explanation_bn": "অর্ধেক তরঙ্গদৈর্ঘ্য। এক প্রান্ত বন্ধ বায়ুস্তম্ভে পরপর অনুনাদে L₂−L₁≈λ/২; তাই v=২f(L₂−L₁)। পার্থক্য নিলে প্রায় স্থির প্রান্ত-সংশোধন বাদ যায়।"
+    },
+    {
+      "q": "For f=400 Hz and successive resonances differing by 0.425 m, sound speed is?",
+      "q_bn": "f=৪০০ Hz ও পরপর অনুনাদের দৈর্ঘ্যের পার্থক্য ০.৪২৫ m হলে শব্দের বেগ?",
+      "options": [
+        "340 m/s",
+        "170 m/s",
+        "680 m/s",
+        "400 m/s"
+      ],
+      "options_bn": [
+        "৩৪০ m/s",
+        "১৭০ m/s",
+        "৬৮০ m/s",
+        "৪০০ m/s"
+      ],
+      "answer": 0,
+      "explanation": "v=2f(L₂−L₁)=2×400×0.425=340 m/s.",
+      "explanation_bn": "v=২f(L₂−L₁)=২×৪০০×০.৪২৫=৩৪০ m/s।"
     }
   ]
 }

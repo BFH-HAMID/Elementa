@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "No, the spot cannot travel beyond the solvent front. On a TLC plate, Rf=(distance travelled by spot centre)/(distance travelled by solvent front), measured from the same pencil origin; for the same system Rf depends on adsorption and mobile-phase composition.",
       "explanation_bn": "না; দাগ দ্রাবকের সামনের সীমা পেরোতে পারে না। TLC প্লেটে Rf=দাগের কেন্দ্রের অতিক্রান্ত দূরত্ব/দ্রাবকের সামনের অতিক্রান্ত দূরত্ব, একই পেনসিল মূল থেকে; Rf শোষণ ও সচল দশার গঠনের ওপর নির্ভর করে।"
+    },
+    {
+      "q": "A spot moves 2.4 cm and the solvent front moves 6.0 cm from the origin. Rf?",
+      "q_bn": "মূল থেকে দাগ ২.৪ cm ও দ্রাবকসীমা ৬.০ cm গেলে Rf কত?",
+      "options": [
+        "3.60",
+        "0.40",
+        "2.50",
+        "0.24"
+      ],
+      "options_bn": [
+        "৩.৬০",
+        "০.৪০",
+        "২.৫০",
+        "০.২৪"
+      ],
+      "answer": 1,
+      "explanation": "Rf=2.4/6.0=0.40, with both distances measured from the same baseline.",
+      "explanation_bn": "Rf=২.৪/৬.০=০.৪০; দুই দূরত্ব একই মূলরেখা থেকে মাপা।"
     }
   ]
 }

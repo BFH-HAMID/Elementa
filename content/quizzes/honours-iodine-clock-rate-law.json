@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "When the iodine threshold amount is constant across trials. A fixed small amount of thiosulfate consumes produced iodine until exhausted; blue starch colour appears after fixed iodine amount forms. At fixed threshold, approximate initial rate is proportional to 1/t, provided mixing and induction effects are controlled.",
       "explanation_bn": "সব পরীক্ষায় আয়োডিন সীমার পরিমাণ স্থির থাকলে। অল্প নির্দিষ্ট থায়োসালফেট উৎপন্ন আয়োডিন খরচ করে; তা ফুরালে শ্বেতসার নীল হয়। স্থির আয়োডিন-সীমায় প্রাথমিক হার প্রায় ১/t, যদি মেশানো ও বিলম্ব নিয়ন্ত্রিত হয়।"
+    },
+    {
+      "q": "At fixed iodine threshold, if clock time halves, the approximate relative initial rate becomes?",
+      "q_bn": "আয়োডিন সীমা একই রেখে নীল রং আসার সময় অর্ধেক হলে আনুমানিক প্রাথমিক হার কত?",
+      "options": [
+        "Twice",
+        "Half",
+        "Four times",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "দ্বিগুণ",
+        "অর্ধেক",
+        "চার গুণ",
+        "অপরিবর্তিত"
+      ],
+      "answer": 0,
+      "explanation": "For the same fixed product amount, mean rate≈amount/time, so 1/t doubles when t halves.",
+      "explanation_bn": "একই নির্দিষ্ট উৎপাদে গড় হার≈পরিমাণ/সময়; t অর্ধেক হলে ১/t দ্বিগুণ।"
     }
   ]
 }

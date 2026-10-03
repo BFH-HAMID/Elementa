@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "To prevent contamination from giving a false colour. Excited atoms emit characteristic visible wavelengths during relaxation. Sodium gives intense yellow, potassium lilac (view through cobalt glass when sodium contamination is present). Flame colour is a preliminary test, not proof of purity.",
       "explanation_bn": "দূষণে ভুল রং দেখা আটকাতে। উত্তেজিত পরমাণু ফেরার সময় নির্দিষ্ট দৃশ্যমান তরঙ্গদৈর্ঘ্য দেয়। সোডিয়ামে তীব্র হলুদ, পটাশিয়ামে ফিকে বেগুনি (সোডিয়াম থাকলে cobalt glass দিয়ে)। শিখার রং প্রাথমিক পরীক্ষা, বিশুদ্ধতার প্রমাণ নয়।"
+    },
+    {
+      "q": "A strong yellow flame masks a faint lilac flame. Which contaminant is most likely?",
+      "q_bn": "তীব্র হলুদ শিখায় ফিকে বেগুনি ঢাকা পড়লে সম্ভাব্য দূষক কোনটি?",
+      "options": [
+        "Sodium",
+        "Potassium",
+        "Calcium",
+        "No cation at all"
+      ],
+      "options_bn": [
+        "সোডিয়াম",
+        "পটাশিয়াম",
+        "ক্যালসিয়াম",
+        "কোনো ধনায়ন নয়"
+      ],
+      "answer": 0,
+      "explanation": "Sodium emission is intensely yellow and can obscure potassium's lilac colour; clean the loop and use a suitable filter.",
+      "explanation_bn": "সোডিয়ামের তীব্র হলুদ পটাশিয়ামের ফিকে বেগুনি ঢেকে দেয়; তার পরিষ্কার ও উপযুক্ত ফিল্টার নিন।"
     }
   ]
 }

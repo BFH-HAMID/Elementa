@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Viscosity depends strongly on temperature. For the same capillary and fixed volume in laminar flow, η₁/η₂≈ρ₁t₁/(ρ₂t₂), assuming comparable pressure-head geometry and negligible kinetic-energy correction.",
       "explanation_bn": "সান্দ্রতা তাপমাত্রার সঙ্গে অনেক বদলায়। একই নল ও নির্দিষ্ট আয়তনে স্তরী প্রবাহে η₁/η₂≈ρ₁t₁/(ρ₂t₂), যদি চাপের জ্যামিতি একই ও গতিশক্তি সংশোধন নগণ্য হয়।"
+    },
+    {
+      "q": "If two liquids have the same density but the unknown's flow time is twice reference time, viscosity ratio ηunknown/ηref is?",
+      "q_bn": "দুই তরলের ঘনত্ব সমান কিন্তু অজানার প্রবাহসময় দ্বিগুণ হলে ηunknown/ηref কত?",
+      "options": [
+        "1",
+        "2",
+        "1/2",
+        "4"
+      ],
+      "options_bn": [
+        "১",
+        "২",
+        "১/২",
+        "৪"
+      ],
+      "answer": 1,
+      "explanation": "For the same instrument and conditions, ηunknown/ηref≈ρunknown tunknown/(ρref tref)=2.",
+      "explanation_bn": "একই যন্ত্রে ηunknown/ηref≈ρunknown tunknown/(ρref tref)=২।"
     }
   ]
 }

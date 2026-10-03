@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Two. For anhydrous H₂C₂O₄, H₂C₂O₄+2NaOH→Na₂C₂O₄+2H₂O. If using dihydrate, molar mass is 126.07 g/mol, not 90.03 g/mol; use the correct reagent label.",
       "explanation_bn": "দুই। অনাজল অক্সালিক অ্যাসিডে H₂C₂O₄+২NaOH→Na₂C₂O₄+২H₂O। ডাইহাইড্রেট হলে মোলার ভর ১২৬.০৭ g/mol, ৯০.০৩ নয়; বোতলের লেবেল দেখুন।"
+    },
+    {
+      "q": "20.00 mL of 0.0500 M oxalic acid needs 25.00 mL NaOH. What is NaOH molarity?",
+      "q_bn": "০.০৫০০ M অক্সালিক অ্যাসিড ২০.০০ mL-এ NaOH ২৫.০০ mL লাগলে তার মোলারিটি?",
+      "options": [
+        "0.1600 M",
+        "0.0800 M",
+        "0.0400 M",
+        "0.1000 M"
+      ],
+      "options_bn": [
+        "০.১৬০০ M",
+        "০.০৮০০ M",
+        "০.০৪০০ M",
+        "০.১০০০ M"
+      ],
+      "answer": 1,
+      "explanation": "NaOH moles=2×0.0500×0.02000=0.00200 mol; divide by 0.02500 L to get 0.0800 M.",
+      "explanation_bn": "NaOH-এর মোল=২×০.০৫০০×০.০২০০০=০.০০২০০; ০.০২৫০০ L দিয়ে ভাগে ০.০৮০০ M।"
     }
   ]
 }

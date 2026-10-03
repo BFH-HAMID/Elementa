@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Persistent brick red. Ag+ first precipitates Cl− as AgCl. After equivalence, excess Ag+ produces brick-red Ag₂CrO₄ with chromate indicator. Maintain near-neutral pH.",
       "explanation_bn": "স্থায়ী ইট-লাল। Ag+ আগে Cl−-কে AgCl হিসেবে অধঃক্ষেপ করে। সমাপ্তির পর অতিরিক্ত Ag+ ক্রোমেট নির্দেশকে ইট-লাল Ag₂CrO₄ দেয়। pH প্রায় নিরপেক্ষ রাখুন।"
+    },
+    {
+      "q": "After blank correction, 10.0 mL of 0.0100 M AgNO₃ reacts with how many moles Cl−?",
+      "q_bn": "blank বাদে ০.০১০০ M AgNO₃-এর ১০.০ mL-এ Cl− কত মোল?",
+      "options": [
+        "1.00×10⁻⁴ mol",
+        "2.00×10⁻⁴ mol",
+        "1.00×10⁻³ mol",
+        "1.00×10⁻⁵ mol"
+      ],
+      "options_bn": [
+        "১.০০×১০⁻⁴ mol",
+        "২.০০×১০⁻⁴ mol",
+        "১.০০×১০⁻³ mol",
+        "১.০০×১০⁻⁵ mol"
+      ],
+      "answer": 0,
+      "explanation": "Ag++Cl−→AgCl is 1:1; n=0.0100×0.0100=1.00×10⁻⁴ mol.",
+      "explanation_bn": "Ag++Cl−→AgCl অনুপাত ১:১; n=০.০১০০×০.০১০০=১.০০×১০⁻⁴ mol।"
     }
   ]
 }

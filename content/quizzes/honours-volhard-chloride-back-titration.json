@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Back-titration of leftover silver. Add known excess AgNO₃ to precipitate chloride; back-titrate leftover Ag+ with SCN−: Ag++SCN−→AgSCN(s). Ferric indicator signals excess SCN− red; prevent AgCl from reacting with SCN− by filtration or validated procedure.",
       "explanation_bn": "বাকি সিলভারের বিপরীত টাইট্রেশন। জানা অতিরিক্ত AgNO₃ দিয়ে Cl− অধঃক্ষেপ করে বাকি Ag+ কে SCN− দিয়ে মাপুন: Ag++SCN−→AgSCN। Fe³⁺ নির্দেশকে বাড়তি SCN− লাল; AgCl-এর সঙ্গে SCN− বিক্রিয়া ঠেকাতে ছাঁকা বা অনুমোদিত পদ্ধতি নিন।"
+    },
+    {
+      "q": "0.0030 mol Ag+ was added and 0.0010 mol remained for SCN− back-titration. Chloride moles?",
+      "q_bn": "০.০০৩০ mol Ag+ যোগ করে অবশিষ্ট ০.০০১০ mol SCN− দিয়ে মাপলে Cl− কত মোল?",
+      "options": [
+        "0.0030 mol",
+        "0.0020 mol",
+        "0.0040 mol",
+        "0.0010 mol"
+      ],
+      "options_bn": [
+        "০.০০৩০ mol",
+        "০.০০২০ mol",
+        "০.০০৪০ mol",
+        "০.০০১০ mol"
+      ],
+      "answer": 1,
+      "explanation": "Chloride consumed the difference: 0.0030−0.0010=0.0020 mol Ag+, so 0.0020 mol Cl−.",
+      "explanation_bn": "Cl−, Ag+-এর পার্থক্য ০.০০৩০−০.০০১০=০.০০২০ mol গ্রহণ করেছে; তাই Cl− ০.০০২০ mol।"
     }
   ]
 }

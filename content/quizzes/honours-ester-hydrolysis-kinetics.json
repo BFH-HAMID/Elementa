@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Water is in such excess that its concentration is effectively constant. With water in large excess and constant acid catalyst, ester decay can be pseudo-first-order: ln[(V∞−V₀)/(V∞−Vt)]=kt when titration volume reflects produced acid.",
       "explanation_bn": "পানি এত বেশি যে তার ঘনত্ব প্রায় স্থির। পানি অনেক বেশি ও অম্ল অনুঘটক স্থির হলে এস্টারের ক্ষয় ছদ্ম প্রথম-ক্রম: উৎপন্ন অম্লের টাইট্রেশন আয়তনে ln[(V∞−V₀)/(V∞−Vt)]=kt।"
+    },
+    {
+      "q": "Which graph is linear for pseudo-first-order ester hydrolysis with valid V∞?",
+      "q_bn": "সঠিক V∞ নিয়ে ছদ্ম প্রথম-ক্রম এস্টার হাইড্রোলাইসিসে কোন লেখচিত্র সরলরেখা?",
+      "options": [
+        "Vt² against t",
+        "1/t against Vt always",
+        "Temperature against time always",
+        "ln[(V∞−V₀)/(V∞−Vt)] against t"
+      ],
+      "options_bn": [
+        "Vt² বনাম t",
+        "সবসময় ১/t বনাম Vt",
+        "সবসময় তাপমাত্রা বনাম সময়",
+        "ln[(V∞−V₀)/(V∞−Vt)] বনাম t"
+      ],
+      "answer": 3,
+      "explanation": "The integrated pseudo-first-order law is ln[(V∞−V₀)/(V∞−Vt)]=kt; the slope gives k.",
+      "explanation_bn": "সমাকলিত ছদ্ম প্রথম-ক্রম সূত্র ln[(V∞−V₀)/(V∞−Vt)]=kt; ঢাল থেকে k।"
     }
   ]
 }

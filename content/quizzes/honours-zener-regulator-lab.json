@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Iz can fall below regulation range. A reverse-biased Zener near its rated breakdown maintains approximately Vz across a load if series resistor Rs limits current: Iz=(Vin−Vz)/Rs−IL. Ensure Iz remains within the safe range.",
       "explanation_bn": "Iz নিয়ন্ত্রণসীমার নিচে নামতে পারে। উল্টো বিভবে অনুমোদিত breakdown-এর কাছে জেনার ভারের ওপর প্রায় Vz রাখে; Rs প্রবাহ সীমিত করে: Iz=(Vin−Vz)/Rs−IL। Iz নিরাপদ সীমায় রাখুন।"
+    },
+    {
+      "q": "If Vin=12 V, Vout=6 V and Rs=300 Ω, supply current through Rs is?",
+      "q_bn": "Vin=১২ V, Vout=৬ V ও Rs=৩০০ Ω হলে Rs দিয়ে প্রবাহ কত?",
+      "options": [
+        "20 mA",
+        "40 mA",
+        "2 mA",
+        "300 mA"
+      ],
+      "options_bn": [
+        "২০ mA",
+        "৪০ mA",
+        "২ mA",
+        "৩০০ mA"
+      ],
+      "answer": 0,
+      "explanation": "IR=(Vin−Vout)/Rs=6/300 A=0.020 A=20 mA; this splits into load and Zener currents.",
+      "explanation_bn": "IR=(Vin−Vout)/Rs=৬/৩০০ A=০.০২০ A=২০ mA; এটি ভার ও জেনার প্রবাহে ভাগ হয়।"
     }
   ]
 }

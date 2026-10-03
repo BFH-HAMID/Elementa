@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "It matches the disc temperature in the steady-state balance. At steady state heat through a thin poor-conductor sample balances disc cooling at its lower-face temperature: kA(T₁−T₂)/d≈mc abs(dT/dt) cool at T₂ (with apparatus corrections).",
       "explanation_bn": "এটি স্থির-অবস্থার সাম্যে চাকতির তাপমাত্রার সমান। স্থির অবস্থায় পাতলা কুপরিবাহীর তাপপ্রবাহ নিম্ন চাকতির একই তাপমাত্রায় শীতলন হারের সমান: kA(T₁−T₂)/d≈mc abs(dT/dt) (যন্ত্রভেদে সংশোধন)।"
+    },
+    {
+      "q": "If a test sheet thickness doubles while all other steady-state quantities stay the same, computed k changes how?",
+      "q_bn": "অন্য সব স্থির পাঠ একই রেখে পাতের পুরুত্ব দ্বিগুণ হলে গণনাকৃত k কী হবে?",
+      "options": [
+        "Halves",
+        "Fourfold",
+        "Unchanged",
+        "Doubles"
+      ],
+      "options_bn": [
+        "অর্ধেক",
+        "চার গুণ",
+        "অপরিবর্তিত",
+        "দ্বিগুণ"
+      ],
+      "answer": 3,
+      "explanation": "In the measurement formula k≈mc d abs(dT/dt)/[A(T₁−T₂)], calculated k scales with measured d; in a real repeat other quantities would generally change.",
+      "explanation_bn": "পরিমাপসূত্রে k≈mc d abs(dT/dt)/[A(T₁−T₂)]; অন্য পাঠ একই ধরলে k পুরুত্বের সমানুপাতিক, বাস্তবে অন্য পাঠও বদলায়।"
     }
   ]
 }

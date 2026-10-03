@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Zero. For ideal pulley and cord, two masses m₁>m₂ have a=(m₁−m₂)g/(m₁+m₂) from coupled Newton equations; pulley inertia reduces measured a.",
       "explanation_bn": "শূন্য। আদর্শ পুলি ও সুতোয় m₁>m₂ হলে যুগ্ম নিউটন সমীকরণে a=(m₁−m₂)g/(m₁+m₂); পুলির জড়তায় মাপা a কমে।"
+    },
+    {
+      "q": "In the ideal model, m₁=3 kg and m₂=1 kg. What is acceleration?",
+      "q_bn": "আদর্শ মডেলে m₁=৩ kg ও m₂=১ kg; ত্বরণ কত?",
+      "options": [
+        "g/4",
+        "g",
+        "2g",
+        "g/2"
+      ],
+      "options_bn": [
+        "g/৪",
+        "g",
+        "২g",
+        "g/২"
+      ],
+      "answer": 3,
+      "explanation": "a=(m₁−m₂)g/(m₁+m₂)=(3−1)g/(3+1)=g/2.",
+      "explanation_bn": "a=(m₁−m₂)g/(m₁+m₂)=(৩−১)g/(৩+১)=g/২।"
     }
   ]
 }

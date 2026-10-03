@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Five. In sulfuric acid, MnO₄−+5Fe²⁺+8H+→Mn²⁺+5Fe³⁺+4H₂O. A persistent pale pink tint marks a slight excess permanganate.",
       "explanation_bn": "পাঁচ। সালফিউরিক অম্লে MnO₄−+৫Fe²⁺+৮H+→Mn²⁺+৫Fe³⁺+৪H₂O; স্থায়ী হালকা গোলাপি মানে সামান্য অতিরিক্ত পারম্যাঙ্গানেট।"
+    },
+    {
+      "q": "10.00 mL of 0.0200 M KMnO₄ reacts with how many moles of Fe²⁺ in acid?",
+      "q_bn": "অম্লে ০.০২০০ M KMnO₄-এর ১০.০০ mL-এ কত মোল Fe²⁺ বিক্রিয়া করে?",
+      "options": [
+        "0.00100 mol",
+        "0.000200 mol",
+        "0.00200 mol",
+        "0.00500 mol"
+      ],
+      "options_bn": [
+        "০.০০১০০ mol",
+        "০.০০০২০০ mol",
+        "০.০০২০০ mol",
+        "০.০০৫০০ mol"
+      ],
+      "answer": 0,
+      "explanation": "n(Fe²⁺)=5×n(MnO₄−)=5×0.0200×0.01000=0.00100 mol.",
+      "explanation_bn": "n(Fe²⁺)=৫×n(MnO₄−)=৫×০.০২০০×০.০১০০০=০.০০১০০ mol।"
     }
   ]
 }

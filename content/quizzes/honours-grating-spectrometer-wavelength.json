@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "It increases until no order is possible. At normal incidence the principal maximum obeys d sinθ=mλ, where d is grating spacing and m an integer order. Symmetric left/right angles help establish the normal.",
       "explanation_bn": "আর কোনো ক্রম সম্ভব না হওয়া পর্যন্ত বাড়ে। লম্ব আপতনে মুখ্য উজ্জ্বলতার শর্ত d sinθ=mλ; d গ্রেটিং ব্যবধান, m পূর্ণসংখ্যা। বাম-ডান সমমিত কোণ দিয়ে লম্ব নির্ণয় সহজ হয়।"
+    },
+    {
+      "q": "A grating has d=2.0 μm; first order occurs at sinθ=0.30. Wavelength?",
+      "q_bn": "গ্রেটিংয়ে d=২.০ μm; প্রথম ক্রমে sinθ=০.৩০ হলে তরঙ্গদৈর্ঘ্য কত?",
+      "options": [
+        "600 nm",
+        "300 nm",
+        "1200 nm",
+        "60 nm"
+      ],
+      "options_bn": [
+        "৬০০ nm",
+        "৩০০ nm",
+        "১২০০ nm",
+        "৬০ nm"
+      ],
+      "answer": 0,
+      "explanation": "mλ=d sinθ; with m=1, λ=2.0 μm×0.30=0.60 μm=600 nm.",
+      "explanation_bn": "mλ=d sinθ; m=১ হলে λ=২.০ μm×০.৩০=০.৬০ μm=৬০০ nm।"
     }
   ]
 }

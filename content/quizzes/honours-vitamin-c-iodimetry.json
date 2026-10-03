@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "One to one. Ascorbic acid reduces iodine to iodide in a 1:1 molar reaction. Excess iodine forms a blue complex with starch, indicating the endpoint.",
       "explanation_bn": "এক-এক। অ্যাসকরবিক অ্যাসিড আয়োডিনকে ১:১ মোল অনুপাতে আয়োডাইডে বিজারিত করে। অতিরিক্ত আয়োডিন শ্বেতসারে নীল রং দিয়ে সমাপ্তি জানায়।"
+    },
+    {
+      "q": "If 10.0 mL of 0.0100 M I₂ is consumed, how many moles of ascorbic acid are present in the aliquot?",
+      "q_bn": "০.০১০০ M I₂ ১০.০ mL ব্যবহৃত হলে নমুনা অংশে অ্যাসকরবিক অ্যাসিড কত মোল?",
+      "options": [
+        "2.00×10⁻⁴ mol",
+        "1.00×10⁻³ mol",
+        "5.00×10⁻⁵ mol",
+        "1.00×10⁻⁴ mol"
+      ],
+      "options_bn": [
+        "২.০০×১০⁻⁴ mol",
+        "১.০০×১০⁻³ mol",
+        "৫.০০×১০⁻⁵ mol",
+        "১.০০×১০⁻⁴ mol"
+      ],
+      "answer": 3,
+      "explanation": "Stoichiometry is 1:1, so n=0.0100×0.0100=1.00×10⁻⁴ mol.",
+      "explanation_bn": "মোল অনুপাত ১:১; তাই n=০.০১০০×০.০১০০=১.০০×১০⁻⁴ mol।"
     }
   ]
 }

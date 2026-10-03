@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "2L/n. A string of length L with n loops has λ=2L/n; wave speed fλ=√(𝒯/μ). State whether driving frequency matches string frequency or is twice it in the chosen vibrator arrangement.",
       "explanation_bn": "২L/n। L দৈর্ঘ্যের তারে nটি লুপ হলে λ=২L/n; তরঙ্গবেগ fλ=√(𝒯/μ)। ব্যবহৃত কম্পক বিন্যাসে চালক কম্পাঙ্ক তারের সমান না দ্বিগুণ তা লিখুন।"
+    },
+    {
+      "q": "A string has L=0.60 m and n=3 loops. What is its standing-wave wavelength?",
+      "q_bn": "তারটির L=০.৬০ m ও n=৩টি লুপ হলে স্থির তরঙ্গের তরঙ্গদৈর্ঘ্য কত?",
+      "options": [
+        "1.20 m",
+        "0.40 m",
+        "0.20 m",
+        "0.60 m"
+      ],
+      "options_bn": [
+        "১.২০ m",
+        "০.৪০ m",
+        "০.২০ m",
+        "০.৬০ m"
+      ],
+      "answer": 1,
+      "explanation": "λ=2L/n=1.20/3=0.40 m; driving frequency conversion must still be handled separately.",
+      "explanation_bn": "λ=২L/n=১.২০/৩=০.৪০ m; চালক কম্পাঙ্কের রূপান্তর আলাদা বিবেচ্য।"
     }
   ]
 }

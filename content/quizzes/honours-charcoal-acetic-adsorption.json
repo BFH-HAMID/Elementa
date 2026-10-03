@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Adsorption removes solute from the liquid phase. At equilibrium the adsorbed amount per mass is x/m=(C₀−Ce)V/m. A Freundlich fit ln(x/m)=lnK+(1/n)lnCe is empirical over a limited concentration range.",
       "explanation_bn": "শোষণে তরল থেকে দ্রব কমে যায়। সাম্যে প্রতি ভরের শোষিত পরিমাণ x/m=(C₀−Ce)V/m। Freundlich রেখা ln(x/m)=lnK+(১/n)lnCe সীমিত ঘনত্বে পরীক্ষালব্ধ।"
+    },
+    {
+      "q": "C₀=0.10 M, Ce=0.06 M, V=0.10 L and charcoal mass=2 g. Adsorbed amount per gram?",
+      "q_bn": "C₀=০.১০ M, Ce=০.০৬ M, V=০.১০ L ও কয়লা ২ g হলে প্রতি g-এ শোষিত পরিমাণ?",
+      "options": [
+        "0.002 mol/g",
+        "0.004 mol/g",
+        "0.020 mol/g",
+        "0.080 mol/g"
+      ],
+      "options_bn": [
+        "০.০০২ mol/g",
+        "০.০০৪ mol/g",
+        "০.০২০ mol/g",
+        "০.০৮০ mol/g"
+      ],
+      "answer": 0,
+      "explanation": "x/m=(C₀−Ce)V/m=(0.10−0.06)×0.10/2=0.002 mol/g.",
+      "explanation_bn": "x/m=(C₀−Ce)V/m=(০.১০−০.০৬)×০.১০/২=০.০০২ mol/g।"
     }
   ]
 }

@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "The inferred G depends on r to the fourth power. For a long circular wire of length L and radius r, torsion constant κ=πGr⁴/(2L). With attached inertia I, T=2π√(I/κ).",
       "explanation_bn": "নির্ণীত G, r-এর চতুর্থ ঘাতের ওপর নির্ভর করে। L দৈর্ঘ্য ও r ব্যাসার্ধের বৃত্তাকার তারে পাক ধ্রুবক κ=πGr⁴/(২L)। যুক্ত জড়তার ভ্রামক I হলে T=২π√(I/κ)।"
+    },
+    {
+      "q": "If wire radius doubles with G and L unchanged, torsion constant changes how?",
+      "q_bn": "G ও L একই রেখে তারের ব্যাসার্ধ দ্বিগুণ করলে পাক ধ্রুবক কত গুণ?",
+      "options": [
+        "Two times",
+        "Four times",
+        "Half",
+        "Sixteen times"
+      ],
+      "options_bn": [
+        "দুই গুণ",
+        "চার গুণ",
+        "অর্ধেক",
+        "ষোলো গুণ"
+      ],
+      "answer": 3,
+      "explanation": "κ=πGr⁴/(2L), so 2⁴=16.",
+      "explanation_bn": "κ=πGr⁴/(২L); তাই ২⁴=১৬।"
     }
   ]
 }

@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Excess mobile OH− ions enter the solution. As NaOH neutralizes HCl, highly mobile H+ is replaced by Na+, decreasing conductance; after equivalence excess OH− increases it. Intersect straight-line portions after dilution correction.",
       "explanation_bn": "অতিরিক্ত গতিশীল OH− আয়ন দ্রবণে আসে। NaOH দিয়ে HCl নিরপেক্ষতায় দ্রুতগামী H+ এর বদলে Na+ আসায় পরিবাহন কমে; সমাপ্তির পরে অতিরিক্ত OH−-এ বাড়ে। পাতলা হওয়া সংশোধন করে রেখাদ্বয়ের ছেদ নিন।"
+    },
+    {
+      "q": "20.0 mL HCl reaches equivalence with 15.0 mL of 0.100 M NaOH. HCl molarity?",
+      "q_bn": "২০.০ mL HCl-এ ০.১০০ M NaOH ১৫.০ mL-তে সাম্যবিন্দু হলে HCl-এর মোলারিটি?",
+      "options": [
+        "0.150 M",
+        "0.0500 M",
+        "0.0750 M",
+        "0.100 M"
+      ],
+      "options_bn": [
+        "০.১৫০ M",
+        "০.০৫০০ M",
+        "০.০৭৫০ M",
+        "০.১০০ M"
+      ],
+      "answer": 2,
+      "explanation": "At 1:1 equivalence Cacid Vacid=Cbase Vbase; 0.100×15.0/20.0=0.0750 M.",
+      "explanation_bn": "১:১ সাম্যে Cacid Vacid=Cbase Vbase; ০.১০০×১৫.০/২০.০=০.০৭৫০ M।"
     }
   ]
 }

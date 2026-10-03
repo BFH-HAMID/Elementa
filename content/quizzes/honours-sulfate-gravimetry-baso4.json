@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Remaining water otherwise inflates the precipitate mass. SO₄²−+Ba²+→BaSO₄(s); one mole precipitate represents one mole sulfate. Digest to larger crystals, filter, wash, dry to constant mass.",
       "explanation_bn": "অবশিষ্ট পানি অধঃক্ষেপের মাপা ভর বাড়ায়। SO₄²−+Ba²+→BaSO₄(s); এক মোল অধঃক্ষেপ এক মোল সালফেট। বড় স্ফটিক পেতে digestions করে ছেঁকে, ধুয়ে স্থির ভর পর্যন্ত শুকান।"
+    },
+    {
+      "q": "If dry BaSO₄ weighs 0.23339 g, approximate sulfate mass is?",
+      "q_bn": "শুকনো BaSO₄-এর ভর ০.২৩৩৩৯ g হলে সালফেটের ভর প্রায়?",
+      "options": [
+        "0.13733 g",
+        "0.46678 g",
+        "0.09606 g",
+        "0.23339 g"
+      ],
+      "options_bn": [
+        "০.১৩৭৩৩ g",
+        "০.৪৬৬৭৮ g",
+        "০.০৯৬০৬ g",
+        "০.২৩৩৩৯ g"
+      ],
+      "answer": 2,
+      "explanation": "Mass ratio SO₄/BaSO₄=96.06/233.39; product with 0.23339 g is 0.09606 g.",
+      "explanation_bn": "ভর অনুপাত SO₄/BaSO₄=৯৬.০৬/২৩৩.৩৯; ফলে ০.০৯৬০৬ g।"
     }
   ]
 }

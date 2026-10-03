@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "The container also absorbs heat. Electrical input VIt heats water and calorimeter: VIt≈(mw cw+Cc)ΔT plus losses. The historical mechanical equivalent J connects calories to joules; in SI compare energies directly.",
       "explanation_bn": "পাত্রটিও তাপ শোষণ করে। বৈদ্যুতিক VIt জল ও ক্যালরিমিটার গরম করে: VIt≈(mw cw+Cc)ΔT এবং ক্ষতি। পুরোনো J ক্যালরি থেকে জুলে রূপান্তর করে; SI-তে সরাসরি শক্তি তুলনা করুন।"
+    },
+    {
+      "q": "A heater draws 2 A at 5 V for 60 s. What is supplied electrical energy?",
+      "q_bn": "হিটারে ৫ V-এ ২ A প্রবাহ ৬০ s থাকলে কত বৈদ্যুতিক শক্তি সরবরাহ হয়?",
+      "options": [
+        "1200 J",
+        "600 J",
+        "150 J",
+        "10 J"
+      ],
+      "options_bn": [
+        "১২০০ J",
+        "৬০০ J",
+        "১৫০ J",
+        "১০ J"
+      ],
+      "answer": 1,
+      "explanation": "E=VIt=5×2×60=600 J; actual heat retained may be lower due to losses.",
+      "explanation_bn": "E=VIt=৫×২×৬০=৬০০ J; ক্ষতিতে ধরে রাখা তাপ কম হতে পারে।"
     }
   ]
 }

@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Carbonate consumes two protons per ion in complete neutralization. Na₂CO₃+2HCl→2NaCl+CO₂+H₂O; use a suitable methyl-orange-type endpoint for complete neutralization.",
       "explanation_bn": "সম্পূর্ণ নিরপেক্ষতায় প্রতি কার্বোনেট আয়নে দুটি প্রোটন লাগে। Na₂CO₃+২HCl→২NaCl+CO₂+H₂O; সম্পূর্ণ নিরপেক্ষতায় উপযুক্ত methyl orange নির্দেশক নিন।"
+    },
+    {
+      "q": "10.00 mL of 0.100 M Na₂CO₃ is fully neutralized by 20.00 mL HCl. HCl molarity?",
+      "q_bn": "০.১০০ M Na₂CO₃-এর ১০.০০ mL সম্পূর্ণ নিরপেক্ষ করতে ২০.০০ mL HCl লাগলে তার মোলারিটি?",
+      "options": [
+        "0.200 M",
+        "0.010 M",
+        "0.100 M",
+        "0.050 M"
+      ],
+      "options_bn": [
+        "০.২০০ M",
+        "০.০১০ M",
+        "০.১০০ M",
+        "০.০৫০ M"
+      ],
+      "answer": 2,
+      "explanation": "HCl moles=2×0.100×0.01000=0.00200; divide by 0.02000 L to get 0.100 M.",
+      "explanation_bn": "HCl-এর মোল=২×০.১০০×০.০১০০০=০.০০২০০; ০.০২০০০ L-এ ০.১০০ M।"
     }
   ]
 }

@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Smaller. For the same stalagmometer volume and tip, surface tension approximately follows γ₁/γ₂≈ρ₁n₂/(ρ₂n₁), where n is drops for that volume; drop correction and wetting may matter.",
       "explanation_bn": "কম। একই স্ট্যালাগমোমিটারের আয়তন ও মুখে পৃষ্ঠটান আনুমানিক γ₁/γ₂≈ρ₁n₂/(ρ₂n₁), n হলো ওই আয়তনের ফোঁটার সংখ্যা; ফোঁটার সংশোধন ও ভেজা প্রভাব থাকতে পারে।"
+    },
+    {
+      "q": "For equal densities and fixed measured volume, if unknown gives twice as many drops as reference, γunknown/γref is approximately?",
+      "q_bn": "সমান ঘনত্ব ও নির্দিষ্ট আয়তনে অজানার ফোঁটা সংখ্যা তুলনার দ্বিগুণ হলে γunknown/γref প্রায় কত?",
+      "options": [
+        "4",
+        "1",
+        "1/2",
+        "2"
+      ],
+      "options_bn": [
+        "৪",
+        "১",
+        "১/২",
+        "২"
+      ],
+      "answer": 2,
+      "explanation": "In the drop-count approximation γunknown/γref≈ρunknown nref/(ρref nunknown)=1/2.",
+      "explanation_bn": "ফোঁটা-গণনা অনুমানে γunknown/γref≈ρunknown nref/(ρref nunknown)=১/২।"
     }
   ]
 }

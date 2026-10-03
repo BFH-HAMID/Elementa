@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "When both pivot periods are equal. When the two pivot periods agree, effective length equals pivot separation L; g=4π²L/T² for small swings.",
       "explanation_bn": "দুই স্থিতিবিন্দুতে পর্যায়কাল সমান হলে। দুই স্থিতিবিন্দুতে পর্যায়কাল সমান হলে কার্যকর দৈর্ঘ্য তাদের ব্যবধান L; ক্ষুদ্র দোলনে g=৪π²L/T²।"
+    },
+    {
+      "q": "For equal pivot periods, if L=1.00 m and T=2.00 s, what is g approximately?",
+      "q_bn": "দুই অবস্থায় পর্যায়কাল সমান; L=১.০০ m ও T=২.০০ s হলে g প্রায় কত?",
+      "options": [
+        "9.87 m/s²",
+        "4.93 m/s²",
+        "19.74 m/s²",
+        "1.00 m/s²"
+      ],
+      "options_bn": [
+        "৯.৮৭ m/s²",
+        "৪.৯৩ m/s²",
+        "১৯.৭৪ m/s²",
+        "১.০০ m/s²"
+      ],
+      "answer": 0,
+      "explanation": "g=4π²L/T²=4π²×1/4≈9.87 m/s²; small-amplitude and equal-period conditions matter.",
+      "explanation_bn": "g=৪π²L/T²=৪π²×১/৪≈৯.৮৭ m/s²; ক্ষুদ্র দোলন ও সমান পর্যায়কাল জরুরি।"
     }
   ]
 }

@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Carbonate present in the sample. With standard acid, phenolphthalein endpoint volume P neutralizes OH− and converts CO₃²− to HCO₃−; total methyl-orange volume M additionally neutralizes HCO₃−. Thus n(CO₃²−)=Cacid(M−P) and n(OH−)=Cacid(2P−M).",
       "explanation_bn": "নমুনার কার্বোনেট। মান অম্লে ফেনলফথ্যালিন পাঠ P-তে OH− নিরপেক্ষ ও CO₃²− থেকে HCO₃− হয়; মোট methyl-orange পাঠ M-তে HCO₃−-ও নিরপেক্ষ। তাই n(CO₃²−)=Cacid(M−P), n(OH−)=Cacid(২P−M)।"
+    },
+    {
+      "q": "For 0.100 M acid, P=15.0 mL and total M=25.0 mL. How many moles of carbonate are in the aliquot?",
+      "q_bn": "০.১০০ M অম্লে P=১৫.০ mL ও মোট M=২৫.০ mL হলে নমুনায় কার্বোনেট কত মোল?",
+      "options": [
+        "0.00250 mol",
+        "0.00150 mol",
+        "0.00400 mol",
+        "0.00100 mol"
+      ],
+      "options_bn": [
+        "০.০০২৫০ mol",
+        "০.০০১৫০ mol",
+        "০.০০৪০০ mol",
+        "০.০০১০০ mol"
+      ],
+      "answer": 3,
+      "explanation": "n(CO₃²−)=Cacid(M−P)=0.100×(0.0250−0.0150)=0.00100 mol; M is cumulative.",
+      "explanation_bn": "n(CO₃²−)=Cacid(M−P)=০.১০০×(০.০২৫০−০.০১৫০)=০.০০১০০ mol; M মোট পাঠ।"
     }
   ]
 }

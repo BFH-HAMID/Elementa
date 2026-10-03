@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "To allow the sphere to reach terminal speed. At slow terminal motion, buoyancy-corrected weight (4/3)πr³(ρs−ρf)g equals Stokes drag 6πηrv, giving η=2r²(ρs−ρf)g/(9v).",
       "explanation_bn": "গোলককে প্রান্তিক বেগ পেতে সময় দিতে। ধীর প্রান্তিক গতিতে ঊর্ধ্বমুখী বল বাদে ওজন (৪/৩)πr³(ρs−ρf)g ও Stokes ঘর্ষণ ৬πηrv সমান; η=২r²(ρs−ρf)g/(৯v)।"
+    },
+    {
+      "q": "At fixed densities and viscosity, doubling sphere radius changes ideal terminal speed by what factor?",
+      "q_bn": "ঘনত্ব ও সান্দ্রতা একই রেখে গোলকের ব্যাসার্ধ দ্বিগুণ করলে আদর্শ প্রান্তিক বেগ কত গুণ?",
+      "options": [
+        "Eight",
+        "One half",
+        "Four",
+        "Two"
+      ],
+      "options_bn": [
+        "আট",
+        "অর্ধেক",
+        "চার",
+        "দুই"
+      ],
+      "answer": 2,
+      "explanation": "Rearrange η=2r²(ρs−ρf)g/(9v): terminal v∝r² in the Stokes regime.",
+      "explanation_bn": "η=২r²(ρs−ρf)g/(৯v) থেকে Stokes অঞ্চলে প্রান্তিক v∝r²।"
     }
   ]
 }

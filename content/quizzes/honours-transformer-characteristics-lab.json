@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "No, energy losses make it lower. In an ideal AC transformer Vs/Vp=Ns/Np; real efficiency η=Ps/Pp is below 1 due to copper and core losses. Never use DC as the normal primary supply.",
       "explanation_bn": "না; শক্তিক্ষয়ে তা কমে। আদর্শ AC ট্রান্সফরমারে Vs/Vp=Ns/Np; বাস্তবে তামা ও কোর ক্ষতিতে η=Ps/Pp<১। প্রাইমারিতে স্বাভাবিক উৎস হিসেবে DC নয়।"
+    },
+    {
+      "q": "For an ideal transformer with Np=200 and Ns=100, if Vp=12 V AC, Vs is?",
+      "q_bn": "আদর্শ ট্রান্সফরমারে Np=২০০, Ns=১০০ ও Vp=১২ V AC হলে Vs কত?",
+      "options": [
+        "12 V",
+        "3 V",
+        "6 V",
+        "24 V"
+      ],
+      "options_bn": [
+        "১২ V",
+        "৩ V",
+        "৬ V",
+        "২৪ V"
+      ],
+      "answer": 2,
+      "explanation": "Vs/Vp=Ns/Np=100/200=1/2; hence Vs=6 V.",
+      "explanation_bn": "Vs/Vp=Ns/Np=১০০/২০০=১/২; তাই Vs=৬ V।"
     }
   ]
 }

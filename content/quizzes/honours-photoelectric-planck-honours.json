@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "h/e. For a given photocathode eVs=hf−φ; a plot of stopping potential Vs versus frequency f has slope h/e and threshold intercept φ/h.",
       "explanation_bn": "h/e। নির্দিষ্ট আলোকক্যাথোডে eVs=hf−φ; Vs বনাম f-এর ঢাল h/e এবং প্রান্তিক কম্পাঙ্ক φ/h।"
+    },
+    {
+      "q": "If Vs versus f has slope 4.14×10⁻¹⁵ V s, approximately what is h? Use e=1.60×10⁻¹⁹ C.",
+      "q_bn": "Vs বনাম f-এর ঢাল ৪.১৪×১০⁻¹⁵ V s এবং e=১.৬০×১০⁻¹⁹ C হলে h প্রায় কত?",
+      "options": [
+        "4.14×10⁻¹⁵ J s",
+        "1.60×10⁻¹⁹ J s",
+        "6.62×10⁻³⁴ J s",
+        "2.59×10⁴ J s"
+      ],
+      "options_bn": [
+        "৪.১৪×১০⁻¹⁵ J s",
+        "১.৬০×১০⁻¹⁹ J s",
+        "৬.৬২×১০⁻³⁴ J s",
+        "২.৫৯×১০⁴ J s"
+      ],
+      "answer": 2,
+      "explanation": "slope=h/e, so h=e×slope≈(1.60×10⁻¹⁹)(4.14×10⁻¹⁵)=6.62×10⁻³⁴ J s.",
+      "explanation_bn": "ঢাল=h/e; তাই h=e×ঢাল≈(১.৬০×১০⁻¹⁹)(৪.১৪×১০⁻¹⁵)=৬.৬২×১০⁻³⁴ J s।"
     }
   ]
 }

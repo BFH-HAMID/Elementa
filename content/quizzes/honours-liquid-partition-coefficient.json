@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "No, their chemical potentials are equal, not necessarily concentrations. For the same molecular form of solute at equilibrium, Kd=Corganic/Caqueous at fixed temperature. Ionization or association makes the apparent concentration ratio composition-dependent.",
       "explanation_bn": "না; রাসায়নিক বিভব সমান হয়, ঘনত্ব অবশ্যই নয়। সাম্যে একই আণবিক রূপে নির্দিষ্ট তাপে Kd=Corganic/Caqueous। আয়নীভবন বা সংযুক্তিতে আপাত ঘনত্ব-অনুপাত গঠনের ওপর নির্ভর করে।"
+    },
+    {
+      "q": "At equilibrium, Corganic=0.20 M and Caqueous=0.05 M for the same neutral solute. Kd?",
+      "q_bn": "সাম্যে একই নিরপেক্ষ দ্রবের Corganic=০.২০ M ও Caqueous=০.০৫ M হলে Kd কত?",
+      "options": [
+        "0.25",
+        "0.15",
+        "1",
+        "4"
+      ],
+      "options_bn": [
+        "০.২৫",
+        "০.১৫",
+        "১",
+        "৪"
+      ],
+      "answer": 3,
+      "explanation": "Kd=Corganic/Caqueous=0.20/0.05=4; ionization would require a more careful model.",
+      "explanation_bn": "Kd=Corganic/Caqueous=০.২০/০.০৫=৪; আয়নীভবনে আরও সতর্ক মডেল লাগে।"
     }
   ]
 }

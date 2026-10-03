@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Four. Dissolved O₂ oxidizes Mn(II) in alkaline medium; after acidification the oxidized manganese liberates iodine from iodide. One O₂ corresponds to four thiosulfate ions in the overall stoichiometry.",
       "explanation_bn": "চার। দ্রবীভূত O₂ ক্ষারীয় মাধ্যমে Mn(II) জারিত করে; অম্লে তা আয়োডাইড থেকে আয়োডিন ছাড়ে। মোট বিক্রিয়ায় এক O₂-এর জন্য চার থায়োসালফেট আয়ন লাগে।"
+    },
+    {
+      "q": "At complete Winkler stoichiometry, 0.0040 mol thiosulfate corresponds to how many moles O₂?",
+      "q_bn": "উইংকলারের মোট অনুপাতে ০.০০৪০ mol থায়োসালফেটে O₂ কত মোল?",
+      "options": [
+        "0.0020 mol",
+        "0.0010 mol",
+        "0.0040 mol",
+        "0.0160 mol"
+      ],
+      "options_bn": [
+        "০.০০২০ mol",
+        "০.০০১০ mol",
+        "০.০০৪০ mol",
+        "০.০১৬০ mol"
+      ],
+      "answer": 1,
+      "explanation": "One O₂ corresponds to four thiosulfate moles; 0.0040/4=0.0010 mol O₂.",
+      "explanation_bn": "এক O₂-এ চার থায়োসালফেট; ০.০০৪০/৪=০.০০১০ mol O₂।"
     }
   ]
 }

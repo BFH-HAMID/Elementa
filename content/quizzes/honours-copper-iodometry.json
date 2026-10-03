@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "One to one. 2Cu²⁺+4I−→2CuI(s)+I₂; I₂+2S₂O₃²−→2I−+S₄O₆²−. Overall moles Cu²⁺ equal moles thiosulfate at completion.",
       "explanation_bn": "এক-এক। ২Cu²⁺+৪I−→২CuI(s)+I₂; I₂+২S₂O₃²−→২I−+S₄O₆²−। শেষে Cu²⁺-এর মোল থায়োসালফেটের মোলের সমান।"
+    },
+    {
+      "q": "A copper sample consumes 12.0 mL of 0.100 M thiosulfate. Cu²⁺ amount?",
+      "q_bn": "তামার নমুনায় ০.১০০ M থায়োসালফেট ১২.০ mL লাগলে Cu²⁺ কত মোল?",
+      "options": [
+        "0.000600 mol",
+        "0.0120 mol",
+        "0.00120 mol",
+        "0.00240 mol"
+      ],
+      "options_bn": [
+        "০.০০০৬০০ mol",
+        "০.০১২০ mol",
+        "০.০০১২০ mol",
+        "০.০০২৪০ mol"
+      ],
+      "answer": 2,
+      "explanation": "Overall Cu²⁺:thiosulfate=1:1; n=0.100×0.0120=0.00120 mol.",
+      "explanation_bn": "মোট Cu²⁺:থায়োসালফেট=১:১; n=০.১০০×০.০১২০=০.০০১২০ mol।"
     }
   ]
 }

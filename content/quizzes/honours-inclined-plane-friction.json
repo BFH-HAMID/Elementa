@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Maximum static friction. At impending slide, downhill mg sinθ is balanced by maximum static friction μs mg cosθ, so μs=tanθc.",
       "explanation_bn": "সর্বোচ্চ স্থির ঘর্ষণ। সবে পিছলানোর সময় ঢাল বরাবর mg sinθ ও সর্বোচ্চ স্থির ঘর্ষণ μs mg cosθ সমান; তাই μs=tanθc।"
+    },
+    {
+      "q": "A block starts to slide at θc=45°. What is μs approximately?",
+      "q_bn": "θc=৪৫°-এ ব্লক পিছলানো শুরু করলে μs প্রায় কত?",
+      "options": [
+        "1",
+        "0.5",
+        "0",
+        "2"
+      ],
+      "options_bn": [
+        "১",
+        "০.৫",
+        "০",
+        "২"
+      ],
+      "answer": 0,
+      "explanation": "At impending motion μs=tanθc=tan45°=1; this estimates maximum static friction.",
+      "explanation_bn": "পিছলানোর প্রাক্কালে μs=tanθc=tan৪৫°=১; এটি সর্বোচ্চ স্থির ঘর্ষণ নির্দেশ করে।"
     }
   ]
 }

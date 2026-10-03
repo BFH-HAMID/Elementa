@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "One to one. Ce⁴⁺+Fe²⁺→Ce³⁺+Fe³⁺ (1:1). A platinum indicator electrode responds to solution redox potential; equivalence lies near steepest potential change versus titrant volume.",
       "explanation_bn": "এক-এক। Ce⁴⁺+Fe²⁺→Ce³⁺+Fe³⁺ (১:১)। প্লাটিনাম নির্দেশক ইলেকট্রোড দ্রবণের redox বিভব জানায়; বিভব বনাম আয়তনের সবচেয়ে খাড়া পরিবর্তনের কাছে সমাপ্তি।"
+    },
+    {
+      "q": "25.0 mL Fe²⁺ needs 20.0 mL of 0.100 M Ce⁴⁺. Fe²⁺ concentration?",
+      "q_bn": "২৫.০ mL Fe²⁺-এ ০.১০০ M Ce⁴⁺ ২০.০ mL লাগলে Fe²⁺ ঘনত্ব?",
+      "options": [
+        "0.125 M",
+        "0.100 M",
+        "0.200 M",
+        "0.0800 M"
+      ],
+      "options_bn": [
+        "০.১২৫ M",
+        "০.১০০ M",
+        "০.২০০ M",
+        "০.০৮০০ M"
+      ],
+      "answer": 3,
+      "explanation": "Ce⁴⁺:Fe²⁺=1:1; CFe=0.100×20.0/25.0=0.0800 M.",
+      "explanation_bn": "Ce⁴⁺:Fe²⁺=১:১; CFe=০.১০০×২০.০/২৫.০=০.০৮০০ M।"
     }
   ]
 }

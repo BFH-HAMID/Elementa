@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Two. 2H₂O₂→2H₂O+O₂. Under controlled catalyst and temperature, use O₂ evolved or residual peroxide titration to assess a rate law; apparent first-order behaviour must be tested, not presumed.",
       "explanation_bn": "দুই। ২H₂O₂→২H₂O+O₂। নিয়ন্ত্রিত অনুঘটক-তাপে উৎপন্ন O₂ বা অবশিষ্ট পারঅক্সাইড মেপে হারসূত্র যাচাই; প্রথম-ক্রম আগে থেকে ধরে নেবেন না।"
+    },
+    {
+      "q": "From 0.020 mol H₂O₂ completely decomposed, how much O₂ forms?",
+      "q_bn": "০.০২০ mol H₂O₂ সম্পূর্ণ বিয়োজিত হলে O₂ কত মোল?",
+      "options": [
+        "0.005 mol",
+        "0.010 mol",
+        "0.020 mol",
+        "0.040 mol"
+      ],
+      "options_bn": [
+        "০.০০৫ mol",
+        "০.০১০ mol",
+        "০.০২০ mol",
+        "০.০৪০ mol"
+      ],
+      "answer": 1,
+      "explanation": "2H₂O₂→2H₂O+O₂, hence n(O₂)=n(H₂O₂)/2=0.010 mol.",
+      "explanation_bn": "২H₂O₂→২H₂O+O₂; তাই n(O₂)=n(H₂O₂)/২=০.০১০ mol।"
     }
   ]
 }

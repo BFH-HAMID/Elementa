@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Its depth d. A simply supported rectangular beam with central load F has centre deflection δ=FL³/(48YI), I=bd³/12; hence Y=FL³/(4bd³δ).",
       "explanation_bn": "পুরুত্ব d। দুই প্রান্তে ঠেস-দেওয়া আয়তাকার বিমের মাঝে F ভারে δ=FL³/(৪৮YI), I=bd³/১২; তাই Y=FL³/(৪bd³δ)।"
+    },
+    {
+      "q": "For the same force and beam dimensions except span L doubled, central deflection changes by what factor?",
+      "q_bn": "বল ও বাকি মাত্রা একই রেখে বিমের বিস্তার L দ্বিগুণ করলে মাঝের অবনমন কত গুণ?",
+      "options": [
+        "Four",
+        "One half",
+        "Eight",
+        "Two"
+      ],
+      "options_bn": [
+        "চার গুণ",
+        "অর্ধেক",
+        "আট গুণ",
+        "দুই গুণ"
+      ],
+      "answer": 2,
+      "explanation": "δ=FL³/(4Ybd³), so doubling L multiplies δ by 2³=8 within the small-deflection model.",
+      "explanation_bn": "δ=FL³/(৪Ybd³); ছোট অবনমনের মডেলে L দ্বিগুণে δ আট গুণ।"
     }
   ]
 }

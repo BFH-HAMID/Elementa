@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Poiseuille's rate relation is derived for laminar flow. For steady laminar flow through a long narrow tube, volume rate Q=πr⁴ΔP/(8ηL); obtain η from measured Q and pressure head ΔP≈ρgh.",
       "explanation_bn": "পয়জুইর হারসূত্র স্তরী প্রবাহের জন্য প্রতিপাদিত। দীর্ঘ সরু নলে স্থির স্তরী প্রবাহে Q=πr⁴ΔP/(৮ηL); মাপা Q ও চাপের উচ্চতা ΔP≈ρgh থেকে η বের করুন।"
+    },
+    {
+      "q": "At the same pressure head and viscosity, doubling capillary radius ideally changes flow rate by what factor?",
+      "q_bn": "একই চাপ ও সান্দ্রতায় নলের ব্যাসার্ধ দ্বিগুণ হলে আদর্শ প্রবাহহার কত গুণ?",
+      "options": [
+        "Eight",
+        "Sixteen",
+        "Four",
+        "Two"
+      ],
+      "options_bn": [
+        "আট",
+        "ষোলো",
+        "চার",
+        "দুই"
+      ],
+      "answer": 1,
+      "explanation": "Poiseuille flow has Q∝r⁴; 2⁴=16 if flow remains laminar.",
+      "explanation_bn": "পয়জুই প্রবাহে Q∝r⁴; স্তরী প্রবাহ বজায় থাকলে ২⁴=১৬।"
     }
   ]
 }

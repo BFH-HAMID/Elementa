@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "Because cross-sectional area depends on the squared diameter and the wire may vary. For a uniform wire in its elastic region, Y=FL/(AΔL), A=πd²/4. A reference wire compensates support movement.",
       "explanation_bn": "ক্ষেত্রফল ব্যাসের বর্গের ওপর নির্ভর করে এবং তার অসম হতে পারে। স্থিতিস্থাপক সীমায় সুষম তারে Y=FL/(AΔL), A=πd²/৪। তুলনামূলক তার অবলম্বনের নড়াচড়া সংশোধন করে।"
+    },
+    {
+      "q": "If wire diameter is overestimated by 2%, approximately how is calculated Y biased?",
+      "q_bn": "তারের ব্যাস ২% বেশি মাপলে গণনাকৃত Y প্রায় কীভাবে বদলায়?",
+      "options": [
+        "No change",
+        "About 4% too low",
+        "About 4% too high",
+        "About 2% too high"
+      ],
+      "options_bn": [
+        "পরিবর্তন নেই",
+        "প্রায় ৪% কম",
+        "প্রায় ৪% বেশি",
+        "প্রায় ২% বেশি"
+      ],
+      "answer": 1,
+      "explanation": "Y=4FL/(πd²ΔL), so a 2% diameter increase in the calculation produces approximately a 4% decrease in Y.",
+      "explanation_bn": "Y=৪FL/(πd²ΔL); হিসাবে ব্যাস ২% বেশি নিলে Y আনুমানিক ৪% কম হয়।"
     }
   ]
 }

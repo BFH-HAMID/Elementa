@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "To prevent excessive forward current. Forward bias lowers the junction barrier and current rises nonlinearly; reverse current is small before breakdown. A series resistor limits current; the ideal diode equation is I≈Is(exp[V/(nVT)]−1).",
       "explanation_bn": "অতিরিক্ত সম্মুখ প্রবাহ ঠেকাতে। সম্মুখ বিভবে বাধা কমে প্রবাহ অরৈখিকভাবে বাড়ে; বিপরীত বিভবে breakdown-এর আগে প্রবাহ কম। সারি রোধ প্রবাহ সীমিত করে; আদর্শ মডেলে I≈Is(exp[V/(nVT)]−১)।"
+    },
+    {
+      "q": "Which measured voltage belongs on the horizontal axis of a diode I–V curve?",
+      "q_bn": "ডায়োডের I–V রেখায় অনুভূমিক অক্ষে কোন বিভব মাপা উচিত?",
+      "options": [
+        "Only the power-supply setting",
+        "Across the ammeter",
+        "Across the series resistor only",
+        "Across the diode itself"
+      ],
+      "options_bn": [
+        "শুধু উৎসের সেটিং",
+        "অ্যামিটারের বিভব",
+        "শুধু সারি রোধের বিভব",
+        "ডায়োডের দুই প্রান্তের বিভব"
+      ],
+      "answer": 3,
+      "explanation": "The source voltage includes the series-resistor drop, so diode voltage must be measured directly.",
+      "explanation_bn": "উৎস বিভবে সারি রোধের বিভবপতনও থাকে; তাই ডায়োডের দুই প্রান্তে সরাসরি মাপতে হবে।"
     }
   ]
 }

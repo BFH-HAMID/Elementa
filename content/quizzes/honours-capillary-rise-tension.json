@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "One. For a clean circular capillary, vertical surface force 2πrγcosθ balances liquid-column weight πr²hρg; γ=ρgrh/(2cosθ) (meniscus correction may be needed).",
       "explanation_bn": "এক। পরিষ্কার বৃত্তাকার নলে ২πrγcosθ বল ও πr²hρg তরলস্তম্ভের ওজন সমান; γ=ρgrh/(২cosθ) (meniscus সংশোধন লাগতে পারে)।"
+    },
+    {
+      "q": "For the same liquid and complete wetting, if capillary radius doubles, rise height becomes approximately?",
+      "q_bn": "একই তরল ও সম্পূর্ণ ভেজায় কৈশিক নলের ব্যাসার্ধ দ্বিগুণ হলে উত্থান কত?",
+      "options": [
+        "Half",
+        "Double",
+        "Fourfold",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "অর্ধেক",
+        "দ্বিগুণ",
+        "চার গুণ",
+        "অপরিবর্তিত"
+      ],
+      "answer": 0,
+      "explanation": "h=2γ/(ρgr) for cosθ≈1, so h is inversely proportional to r.",
+      "explanation_bn": "cosθ≈১ হলে h=২γ/(ρgr); তাই h ব্যাসার্ধের ব্যস্তানুপাতিক।"
     }
   ]
 }

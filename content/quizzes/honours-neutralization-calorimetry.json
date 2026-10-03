@@ -27,6 +27,25 @@
       "answer": 0,
       "explanation": "The reaction releases heat to the solution. For dilute strong acid and base, H++OH−→H₂O; at roughly constant pressure, qsolution≈(msol c+Cc)ΔT and ΔHneutralization≈−qsolution/nwater formed.",
       "explanation_bn": "বিক্রিয়া দ্রবণে তাপ ছাড়ে। বিরল শক্ত অম্ল-ক্ষারে H++OH−→H₂O; প্রায় স্থির চাপে qsolution≈(msol c+Cc)ΔT ও ΔHনিরপেক্ষকরণ≈−qsolution/উৎপন্ন পানির মোল।"
+    },
+    {
+      "q": "If 0.050 mol water forms and the solution gains 2.85 kJ, reaction enthalpy per mole water is?",
+      "q_bn": "০.০৫০ mol পানি তৈরি হয়ে দ্রবণ ২.৮৫ kJ তাপ পেলে প্রতি মোল পানিতে বিক্রিয়া এনথ্যালপি?",
+      "options": [
+        "−2.85 kJ/mol",
+        "−142.5 kJ/mol",
+        "−57 kJ/mol",
+        "+57 kJ/mol"
+      ],
+      "options_bn": [
+        "−২.৮৫ kJ/mol",
+        "−১৪২.৫ kJ/mol",
+        "−৫৭ kJ/mol",
+        "+৫৭ kJ/mol"
+      ],
+      "answer": 2,
+      "explanation": "The reaction released 2.85 kJ; ΔH≈−2.85/0.050=−57 kJ/mol if heat loss and cup capacity are negligible.",
+      "explanation_bn": "বিক্রিয়া ২.৮৫ kJ ছেড়েছে; ক্ষতি ও পাত্রের তাপধারণ নগণ্য হলে ΔH≈−২.৮৫/০.০৫০=−৫৭ kJ/mol।"
     }
   ]
 }

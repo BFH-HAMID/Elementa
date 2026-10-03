@@ -6,7 +6,10 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './lib/**/*.{js,ts,jsx,tsx,mdx}',
-    './simulations/**/*.{js,ts,jsx,tsx,mdx}'
+    './simulations/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/lab/**/*.{js,ts,jsx,tsx}',
+    './engine/**/*.{js,ts,jsx,tsx}',
+    './store/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     container: {
@@ -81,13 +84,20 @@ const config: Config = {
         },
         shimmer: {
           '100%': { transform: 'translateX(100%)' }
+        },
+        // ── Elementa Chemistry Lab: the flame loop (other effects use framer-motion) ──
+        flicker: {
+          '0%, 100%': { transform: 'scaleY(1) scaleX(1)', opacity: '0.95' },
+          '35%': { transform: 'scaleY(1.14) scaleX(0.93)', opacity: '1' },
+          '70%': { transform: 'scaleY(0.92) scaleX(1.06)', opacity: '0.88' }
         }
       },
       animation: {
         drift: 'drift 12s ease-in-out infinite',
         'drift-slow': 'drift 18s ease-in-out infinite reverse',
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
-        shimmer: 'shimmer 2s infinite'
+        shimmer: 'shimmer 2s infinite',
+        flicker: 'flicker 0.45s ease-in-out infinite'
       }
     }
   },

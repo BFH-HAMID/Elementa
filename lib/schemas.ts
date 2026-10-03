@@ -130,7 +130,7 @@ export type ExperimentEntry = ExperimentFrontmatter & {
 
 export type SearchRecord = {
   slug: string;
-  kind: 'equation' | 'experiment' | 'simulation';
+  kind: 'equation' | 'experiment' | 'simulation' | 'lab';
   subject: Subject;
   title_en: string;
   title_bn: string;

@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 export type ThemeMode = 'light' | 'dark' | 'system';
-export type RecentItem = { slug: string; kind: 'equation' | 'experiment' | 'simulation' | 'quiz'; href: string; title: string; viewedAt: number };
+export type RecentItem = { slug: string; kind: 'equation' | 'experiment' | 'simulation' | 'quiz' | 'lab'; href: string; title: string; viewedAt: number };
 export type ScoreRecord = { quiz: string; score: number; total: number; at: number };
 
 type LabState = {

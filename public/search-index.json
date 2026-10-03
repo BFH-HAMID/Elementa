@@ -6942,5 +6942,204 @@
       "HTML5",
       "chemistry"
     ]
+  },
+  {
+    "slug": "elementa-chemistry-lab",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Elementa Chemistry Lab",
+    "title_bn": "এলিমেন্টা কেমিস্ট্রি ল্যাব",
+    "description_en": "Virtual chemistry bench: drag chemicals into glassware, heat them, watch reactions, pH and indicators.",
+    "description_bn": "ভার্চুয়াল কেমিস্ট্রি বেঞ্চ: রাসায়নিক টেনে পাত্রে দিন, গরম করুন, বিক্রিয়া, pH ও নির্দেশকের রঙ দেখুন।",
+    "href": "/lab/chemistry",
+    "tags": [
+      "virtual lab",
+      "drag and drop",
+      "reactions",
+      "pH"
+    ]
+  },
+  {
+    "slug": "lab-guided-experiments",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Guided chemistry experiments",
+    "title_bn": "গাইডেড কেমিস্ট্রি পরীক্ষা",
+    "description_en": "11 walkthroughs that set the virtual bench up for you and tick each step off.",
+    "description_bn": "11টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে।",
+    "href": "/lab/experiments",
+    "tags": [
+      "experiments",
+      "guided"
+    ]
+  },
+  {
+    "slug": "lab-litmus-test",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Litmus and indicator test",
+    "title_bn": "লিটমাস ও সূচক পরীক্ষা",
+    "description_en": "Identify an acid, a base and a neutral liquid with four indicators.",
+    "description_bn": "চারটি সূচক দিয়ে অ্যাসিড, ক্ষার ও প্রশম তরল শনাক্ত করা।",
+    "href": "/lab/experiments/litmus-test",
+    "tags": [
+      "lab",
+      "class-6-8",
+      "indicator",
+      "ph"
+    ]
+  },
+  {
+    "slug": "lab-acid-base-neutralisation",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Acid–base neutralisation",
+    "title_bn": "অ্যাসিড–ক্ষার প্রশমন",
+    "description_en": "Show that an acid and a base cancel each other and release heat.",
+    "description_bn": "দেখানো যে অ্যাসিড ও ক্ষার পরস্পরকে নাকচ করে এবং তাপ ছাড়ে।",
+    "href": "/lab/experiments/acid-base-neutralisation",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "neutralisation",
+      "ph"
+    ]
+  },
+  {
+    "slug": "lab-titration-burette",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Titration with a burette",
+    "title_bn": "বিউরেট দিয়ে টাইট্রেশন",
+    "description_en": "Find the equivalence point of a strong acid–strong base titration.",
+    "description_bn": "তীব্র অ্যাসিড–তীব্র ক্ষার টাইট্রেশনের তুল্যতা বিন্দু নির্ণয় করা।",
+    "href": "/lab/experiments/titration-burette",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "titration",
+      "ph"
+    ]
+  },
+  {
+    "slug": "lab-flame-test",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Flame test for metal ions",
+    "title_bn": "ধাতব আয়নের শিখা পরীক্ষা",
+    "description_en": "Identify metal ions from the colour they give to a flame.",
+    "description_bn": "শিখার রঙ দেখে ধাতব আয়ন শনাক্ত করা।",
+    "href": "/lab/experiments/flame-test",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "flame-test",
+      "heating"
+    ]
+  },
+  {
+    "slug": "lab-prepare-hydrogen",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Preparation of hydrogen gas",
+    "title_bn": "হাইড্রোজেন গ্যাস প্রস্তুতি",
+    "description_en": "Generate hydrogen from zinc and dilute acid and confirm it with the pop test.",
+    "description_bn": "জিঙ্ক ও লঘু অ্যাসিড থেকে হাইড্রোজেন তৈরি করে পট পরীক্ষায় নিশ্চিত হওয়া।",
+    "href": "/lab/experiments/prepare-hydrogen",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "gas-preparation"
+    ]
+  },
+  {
+    "slug": "lab-prepare-co2",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Preparation of carbon dioxide",
+    "title_bn": "কার্বন ডাই-অক্সাইড প্রস্তুতি",
+    "description_en": "Make CO₂ from marble chips and acid, then prove it with limewater.",
+    "description_bn": "মার্বেল চিপস ও অ্যাসিড থেকে CO₂ তৈরি করে চুনের পানি দিয়ে প্রমাণ করা।",
+    "href": "/lab/experiments/prepare-co2",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "gas-preparation"
+    ]
+  },
+  {
+    "slug": "lab-precipitate-agcl",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Precipitation of silver chloride",
+    "title_bn": "সিলভার ক্লোরাইডের অধঃক্ষেপণ",
+    "description_en": "Test for chloride ions with silver nitrate.",
+    "description_bn": "সিলভার নাইট্রেট দিয়ে ক্লোরাইড আয়ন শনাক্ত করা।",
+    "href": "/lab/experiments/precipitate-agcl",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "precipitation"
+    ]
+  },
+  {
+    "slug": "lab-precipitate-baso4",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Precipitation of barium sulphate",
+    "title_bn": "বেরিয়াম সালফেটের অধঃক্ষেপণ",
+    "description_en": "Test for sulphate ions with barium chloride.",
+    "description_bn": "বেরিয়াম ক্লোরাইড দিয়ে সালফেট আয়ন শনাক্ত করা।",
+    "href": "/lab/experiments/precipitate-baso4",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "precipitation"
+    ]
+  },
+  {
+    "slug": "lab-metal-displacement",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Metal displacement series",
+    "title_bn": "ধাতুর প্রতিস্থাপন সিরিজ",
+    "description_en": "Compare the reactivity of iron, zinc, copper and magnesium.",
+    "description_bn": "আয়রন, জিঙ্ক, কপার ও ম্যাগনেসিয়ামের সক্রিয়তা তুলনা করা।",
+    "href": "/lab/experiments/metal-displacement",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "displacement"
+    ]
+  },
+  {
+    "slug": "lab-electrolysis-water",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Electrolysis of water",
+    "title_bn": "পানির তড়িৎ বিশ্লেষণ",
+    "description_en": "Split water into hydrogen and oxygen with an electric current.",
+    "description_bn": "বৈদ্যুতিক প্রবাহে পানিকে হাইড্রোজেন ও অক্সিজেনে ভাঙা।",
+    "href": "/lab/experiments/electrolysis-water",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "electrolysis"
+    ]
+  },
+  {
+    "slug": "lab-heat-and-boiling",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Heating, boiling and thermal decomposition",
+    "title_bn": "তাপ, স্ফুটন ও তাপীয় বিয়োজন",
+    "description_en": "See how temperature changes drive physical and chemical change.",
+    "description_bn": "তাপমাত্রার পরিবর্তন কীভাবে ভৌত ও রাসায়নিক পরিবর্তন ঘটায় তা দেখা।",
+    "href": "/lab/experiments/heat-and-boiling",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "heating"
+    ]
   }
 ]

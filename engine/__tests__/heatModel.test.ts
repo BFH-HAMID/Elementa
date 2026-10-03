@@ -3,6 +3,7 @@ import {
   AMBIENT_C,
   BURNER_POWER_W,
   applyDeltaT,
+  DRY_MAX_C,
   boilingPointFor,
   describeHeat,
   heatColour,
@@ -50,6 +51,25 @@ describe('stepHeat', () => {
   it('never boils the vessel dry below zero', () => {
     const result = stepHeat({ temperatureC: 100, volumeMl: 0.4, heating: true, dtSeconds: 60, boilingPointC: 100 });
     expect(result.volumeMl).toBeGreaterThanOrEqual(0);
+  });
+
+  it('drives a dry vessel past the boiling point of water', () => {
+    const result = stepHeat({ temperatureC: 25, volumeMl: 0, heating: true, intensity: 0.8, dtSeconds: 60, boilingPointC: 100 });
+    expect(result.temperatureC).toBeGreaterThan(120);
+    expect(result.boiling).toBe(false);
+    expect(result.boiledOffMl).toBe(0);
+    expect(result.steam).toBe(false);
+  });
+
+  it('stops a dry vessel at the flame ceiling', () => {
+    const result = stepHeat({ temperatureC: DRY_MAX_C - 5, volumeMl: 0, heating: true, intensity: 1, dtSeconds: 300 });
+    expect(result.temperatureC).toBeLessThanOrEqual(DRY_MAX_C);
+  });
+
+  it('keeps a wet vessel at its boiling point', () => {
+    const result = stepHeat({ temperatureC: 99, volumeMl: 40, heating: true, dtSeconds: 30, boilingPointC: 100 });
+    expect(result.temperatureC).toBeCloseTo(100, 5);
+    expect(result.boiling).toBe(true);
   });
 
   it('respects glassware that cannot be heated', () => {

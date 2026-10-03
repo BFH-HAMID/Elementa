@@ -388,6 +388,15 @@ nature pill, `[H⁺]`, pOH, and every indicator currently in the selected vessel
 | `LATENT_HEAT` | 2260 J g⁻¹ | Boiling removes liquid (and can dry a vessel out). |
 | `COOLING_K` | 0.006 | Newton cooling toward ambient. Lower values let the bench reach a boil. |
 | `GLASS_MASS_G` | 12 | The glassware absorbs some heat. |
+| `SPECIFIC_HEAT_DRY` | 0.9 J g⁻¹ K⁻¹ | Glass and a dry solid heat much faster than water. |
+| `DRY_MAX_C` | 700 | Ceiling for a vessel with no liquid left in it. |
+
+A vessel that still holds **liquid** is clamped at its boiling point (`boilingPointFor`), because
+that is what a real beaker does. A **dry** vessel — a solid on its own, or a solution that has
+boiled away — keeps climbing toward the flame temperature, which is what lets thermal
+decomposition (NH₄Cl 120 °C, KMnO₄ 200 °C, Cu in air 250 °C, Mg in air 300 °C, CaCO₃ 600 °C) and
+the flame tests (120 °C) actually fire. In practice: to see a flame test for a salt in solution,
+heat it until the water boils off and the dry residue glows.
 
 `boilingPointFor()` raises the boiling point with dissolved solute (capped at 112 °C), `stepHeat()`
 returns the new temperature plus how much boiled away, and `heatColour()` / `describeHeat()` give
@@ -410,6 +419,10 @@ npm run typecheck
 npm run lint
 npm run build
 ```
+
+`store/__tests__/labStore.test.ts` drives the bench the way the UI does — pour, mix, heat, boil,
+spark, collect gas, stir, undo/redo, save/load, load a walkthrough — so a change in the engine
+that breaks the bench shows up in `npm test` (106 tests in total).
 
 The lab adds three dev dependencies only — `@dnd-kit/core`, `@dnd-kit/utilities` (drag and drop,
 touch included) and `vitest` (engine tests). Framer Motion and Zustand were already in the
@@ -473,5 +486,6 @@ gains the lab entries automatically through `scripts/build-search-index.mjs`.
 | Gas appears but the vessel does not fill | Gas volume is capped by headspace: `capacityMl − liquid − sediment`. Collect it with the delivery tube into a gas jar. |
 | A precipitate floats in the liquid | The product chemical needs `"precipitate": true` (metals sink automatically). |
 | The indicator colour looks wrong | Check `acidity` on the acid/base and the bands in `engine/phCalc.ts`; universal indicator interpolates between stops, the other three snap to bands. |
+| A flame test or decomposition never fires | The chemical is still dissolved: a wet vessel is clamped at its boiling point. Boil the liquid off (or start from the dry solid) and the temperature climbs past `minTempC`. |
 | A guided step will not tick | Compare the check against the bench: `vessel` is a zero-based station index, `reactionFired` needs the exact reaction id. `checkHint()` under the step says what the lab wants. |
 | The bench resets when you navigate away | In-memory by design. Use **Save lab** (or ⌘/Ctrl+S) to keep it in `localStorage`, then **Load lab**. |

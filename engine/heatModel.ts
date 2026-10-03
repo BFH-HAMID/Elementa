@@ -17,6 +17,14 @@ export const COOLING_K = 0.006;
 /** Extra thermal mass of the glassware, expressed as grams of water equivalent. */
 export const GLASS_MASS_G = 12;
 
+/**
+ * Glass and a dry solid heat up far faster than water does, and with nothing to boil away a
+ * strong burner can drive them well past 100 °C — which is what thermal decomposition and the
+ * flame tests need. `SPECIFIC_HEAT_DRY` and `DRY_MAX_C` model that.
+ */
+export const SPECIFIC_HEAT_DRY = 0.9;
+export const DRY_MAX_C = 700;
+
 export type HeatStepInput = {
   temperatureC: number;
   volumeMl: number;
@@ -84,17 +92,22 @@ export function stepHeat(input: HeatStepInput): HeatStepResult {
 
   const powerW = BURNER_POWER_W * clamp01(intensity);
   const energyJ = powerW * dtSeconds;
-  const gainC = energyJ / (massG * SPECIFIC_HEAT);
+  const dry = volumeMl <= 0;
+  const specificHeat = dry ? SPECIFIC_HEAT_DRY : SPECIFIC_HEAT;
+  const gainC = energyJ / (massG * specificHeat);
   const lossC = (temperatureC - ambientC) * COOLING_K * dtSeconds;
   let next = temperatureC + gainC - lossC;
 
   let boiledOffMl = 0;
-  const boiling = next >= boilingPointC;
+  // Only a liquid can boil: a dry vessel keeps climbing toward the flame temperature.
+  const boiling = !dry && next >= boilingPointC;
   if (boiling) {
     // Energy above the boiling point goes into latent heat instead of temperature.
-    const overshootJ = (next - boilingPointC) * massG * SPECIFIC_HEAT;
+    const overshootJ = (next - boilingPointC) * massG * specificHeat;
     boiledOffMl = Math.min(volumeMl, overshootJ / LATENT_HEAT);
     next = boilingPointC;
+  } else if (dry) {
+    next = Math.min(next, DRY_MAX_C);
   }
 
   return {
@@ -102,7 +115,7 @@ export function stepHeat(input: HeatStepInput): HeatStepResult {
     volumeMl: round2(Math.max(0, volumeMl - boiledOffMl)),
     boiledOffMl: round2(boiledOffMl),
     boiling,
-    steam: boiling || next > boilingPointC - 3,
+    steam: boiling || (!dry && next > boilingPointC - 3),
     powerW: round1(powerW)
   };
 }

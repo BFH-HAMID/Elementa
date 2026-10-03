@@ -24,7 +24,7 @@
 
 PhysChem Lab is a free, bilingual (Bangla + English) physics and chemistry learning platform for Bangladesh. It combines original equation notes, practical experiment guides, short quizzes and interactive browser simulations for NCTB Classes 6–12 through an introductory National University Honours level.
 
-It also ships the **Elementa Chemistry Lab** — a drag-and-drop virtual wet lab in the header: pour acids, bases, salts and metals into SVG glassware, heat them on a Bunsen burner, spark a gas jar, electrolyse water, read the pH and indicator colours, and follow 11 guided walkthroughs that tick themselves off. It is data-driven (109 chemicals, 15 pieces of apparatus, 119 reaction rules in JSON), needs no backend, and its chemistry engine is pure TypeScript covered by 85 Vitest unit tests. See [`CHEMISTRY_LAB_GUIDE.md`](CHEMISTRY_LAB_GUIDE.md).
+It also ships the **Elementa Chemistry Lab** — a drag-and-drop virtual wet lab in the header: pour acids, bases, salts and metals into SVG glassware, heat them on a Bunsen burner, spark a gas jar, electrolyse water, read the pH and indicator colours, and follow 11 guided walkthroughs that tick themselves off. It is data-driven (109 chemicals, 15 pieces of apparatus, 119 reaction rules in JSON), needs no backend, and its chemistry engine is pure TypeScript covered by 106 Vitest tests. See [`CHEMISTRY_LAB_GUIDE.md`](CHEMISTRY_LAB_GUIDE.md).
 
 > **বাংলায়:** সূত্র শুধু মুখস্থ নয় — পরিবর্তন করুন, পর্যবেক্ষণ করুন, এবং নিজের ব্যাখ্যা তৈরি করুন।
 
@@ -77,7 +77,7 @@ Before opening a pull request, run the same checks used by deployment:
 ```bash
 npm run typecheck
 npm run lint
-npm test          # Vitest unit tests for the Chemistry Lab engine
+npm test          # 106 Vitest tests: chemistry engine + bench store
 npm run build
 npm start
 ```

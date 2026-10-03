@@ -1,0 +1,32 @@
+{
+  "slug": "honours-franck-hertz-mercury",
+  "title_en": "Franck–Hertz excitation voltage — lab viva",
+  "title_bn": "ফ্রাঙ্ক–হার্টজ উত্তেজনা বিভব — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What does the spacing of adjacent current extrema estimate?",
+      "q_bn": "পরপর প্রবাহের চরম মানের ব্যবধান কী নির্ণয় করে?",
+      "options": [
+        "An atomic excitation voltage.",
+        "The electron rest mass",
+        "Only the tube radius",
+        "Zero kinetic energy"
+      ],
+      "options_bn": [
+        "পরমাণুর উত্তেজনা বিভব।",
+        "The electron rest mass",
+        "Only the tube radius",
+        "Zero kinetic energy"
+      ],
+      "answer": 0,
+      "explanation": "An atomic excitation voltage. Electrons accelerated through a vapour undergo inelastic collisions above an excitation energy ΔE≈eΔV. Successive current maxima/minima spacings approximate the excitation voltage, after contact-potential effects.",
+      "explanation_bn": "পরমাণুর উত্তেজনা বিভব। বাষ্পে ত্বরিত ইলেকট্রন ΔE≈eΔV শক্তিতে অস্থিতিস্থাপক সংঘর্ষ করে। প্রবাহের পরপর সর্বোচ্চ/সর্বনিম্নের বিভব-ব্যবধান সংযোগ-বিভব সংশোধনের পর উত্তেজনা বিভব দেয়।"
+    }
+  ]
+}

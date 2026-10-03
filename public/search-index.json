@@ -1958,6 +1958,28 @@
     "tags": []
   },
   {
+    "slug": "atwood-machine-acceleration",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Atwood machine acceleration",
+    "title_bn": "অ্যাটউড যন্ত্রে ত্বরণ",
+    "description_en": "Determine or verify: Atwood machine acceleration. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: অ্যাটউড যন্ত্রে ত্বরণ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/atwood-machine-acceleration",
+    "tags": []
+  },
+  {
+    "slug": "beam-bending-modulus",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Young modulus by central beam bending",
+    "title_bn": "কেন্দ্রীয় ভারে বিম বাঁকিয়ে ইয়ং গুণাঙ্ক",
+    "description_en": "Determine or verify: Young modulus by central beam bending. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: কেন্দ্রীয় ভারে বিম বাঁকিয়ে ইয়ং গুণাঙ্ক; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/beam-bending-modulus",
+    "tags": []
+  },
+  {
     "slug": "blackbody-photon-energy",
     "kind": "equation",
     "subject": "physics",
@@ -2021,6 +2043,17 @@
     "description_en": "From air to glass n₂=1.5, θB≈56.3°.",
     "description_bn": "বাতাস থেকে n₂=১.৫ কাচে θB≈৫৬.৩°।",
     "href": "/equations/brewster-angle-honours",
+    "tags": []
+  },
+  {
+    "slug": "capillary-rise-tension",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Surface tension from capillary rise",
+    "title_bn": "কৈশিক উত্থানে পৃষ্ঠটান",
+    "description_en": "Determine or verify: Surface tension from capillary rise. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: কৈশিক উত্থানে পৃষ্ঠটান; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/capillary-rise-tension",
     "tags": []
   },
   {
@@ -2112,6 +2145,28 @@
     "tags": []
   },
   {
+    "slug": "franck-hertz-mercury",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Franck–Hertz excitation voltage",
+    "title_bn": "ফ্রাঙ্ক–হার্টজ উত্তেজনা বিভব",
+    "description_en": "Determine or verify: Franck–Hertz excitation voltage. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: ফ্রাঙ্ক–হার্টজ উত্তেজনা বিভব; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/franck-hertz-mercury",
+    "tags": []
+  },
+  {
+    "slug": "grating-spectrometer-wavelength",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Diffraction grating wavelength by spectrometer",
+    "title_bn": "বর্ণালিবীক্ষকে গ্রেটিং দিয়ে তরঙ্গদৈর্ঘ্য",
+    "description_en": "Determine or verify: Diffraction grating wavelength by spectrometer. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: বর্ণালিবীক্ষকে গ্রেটিং দিয়ে তরঙ্গদৈর্ঘ্য; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/grating-spectrometer-wavelength",
+    "tags": []
+  },
+  {
     "slug": "gravity-potential-energy-honours",
     "kind": "equation",
     "subject": "physics",
@@ -2178,6 +2233,17 @@
     "tags": []
   },
   {
+    "slug": "inclined-plane-friction",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Coefficient of static friction on incline",
+    "title_bn": "ঢালু তলে স্থির ঘর্ষণ গুণাঙ্ক",
+    "description_en": "Determine or verify: Coefficient of static friction on incline. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: ঢালু তলে স্থির ঘর্ষণ গুণাঙ্ক; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/inclined-plane-friction",
+    "tags": []
+  },
+  {
     "slug": "inductor-energy-honours",
     "kind": "equation",
     "subject": "physics",
@@ -2186,6 +2252,50 @@
     "description_en": "L=2 H and I=3 A give U=9 J.",
     "description_bn": "L=২ H ও I=৩ A হলে U=৯ J।",
     "href": "/equations/inductor-energy-honours",
+    "tags": []
+  },
+  {
+    "slug": "joules-heat-equivalent",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Joule electrical heating equivalent",
+    "title_bn": "জুলের বৈদ্যুতিক তাপ সমতুল্য",
+    "description_en": "Determine or verify: Joule electrical heating equivalent. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: জুলের বৈদ্যুতিক তাপ সমতুল্য; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/joules-heat-equivalent",
+    "tags": []
+  },
+  {
+    "slug": "katers-pendulum-gravity",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Kater reversible pendulum for g",
+    "title_bn": "কেটারের প্রত্যাবর্তী দোলক দিয়ে g",
+    "description_en": "Determine or verify: Kater reversible pendulum for g. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: কেটারের প্রত্যাবর্তী দোলক দিয়ে g; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/katers-pendulum-gravity",
+    "tags": []
+  },
+  {
+    "slug": "lcr-series-resonance-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Series LCR resonance and bandwidth",
+    "title_bn": "সারি LCR অনুনাদ ও ব্যান্ডউইডথ",
+    "description_en": "Determine or verify: Series LCR resonance and bandwidth. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: সারি LCR অনুনাদ ও ব্যান্ডউইডথ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/lcr-series-resonance-lab",
+    "tags": []
+  },
+  {
+    "slug": "lees-disc-conductivity",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Lee disc thermal conductivity",
+    "title_bn": "লির চাকতিতে তাপ-পরিবাহিতা",
+    "description_en": "Determine or verify: Lee disc thermal conductivity. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: লির চাকতিতে তাপ-পরিবাহিতা; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/lees-disc-conductivity",
     "tags": []
   },
   {
@@ -2244,6 +2354,17 @@
     "tags": []
   },
   {
+    "slug": "meldes-string-frequency",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Melde standing-wave experiment",
+    "title_bn": "মেল্ডের স্থির তরঙ্গ পরীক্ষা",
+    "description_en": "Determine or verify: Melde standing-wave experiment. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: মেল্ডের স্থির তরঙ্গ পরীক্ষা; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/meldes-string-frequency",
+    "tags": []
+  },
+  {
     "slug": "michelson-interferometer-lab",
     "kind": "experiment",
     "subject": "physics",
@@ -2252,6 +2373,17 @@
     "description_en": "Determine the wavelength of monochromatic light by counting fringes while moving one mirror.",
     "description_bn": "একটি দর্পণ সরিয়ে ঝালর গুনে একরঙা আলোর তরঙ্গদৈর্ঘ্য নির্ণয়।",
     "href": "/experiments/michelson-interferometer-lab",
+    "tags": []
+  },
+  {
+    "slug": "newtons-rings-radius",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Newton rings for wavelength",
+    "title_bn": "নিউটনের বলয় থেকে তরঙ্গদৈর্ঘ্য",
+    "description_en": "Determine or verify: Newton rings for wavelength. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: নিউটনের বলয় থেকে তরঙ্গদৈর্ঘ্য; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/newtons-rings-radius",
     "tags": []
   },
   {
@@ -2277,6 +2409,50 @@
     "tags": []
   },
   {
+    "slug": "photoelectric-planck-honours",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Photoelectric stopping potential for Planck constant",
+    "title_bn": "আলোকতড়িৎ নিবৃত্তি বিভব থেকে প্ল্যাঙ্ক ধ্রুবক",
+    "description_en": "Determine or verify: Photoelectric stopping potential for Planck constant. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: আলোকতড়িৎ নিবৃত্তি বিভব থেকে প্ল্যাঙ্ক ধ্রুবক; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/photoelectric-planck-honours",
+    "tags": []
+  },
+  {
+    "slug": "pn-diode-iv-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "P–N diode current–voltage characteristics",
+    "title_bn": "P–N ডায়োডের প্রবাহ–বিভব বৈশিষ্ট্য",
+    "description_en": "Determine or verify: P–N diode current–voltage characteristics. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: P–N ডায়োডের প্রবাহ–বিভব বৈশিষ্ট্য; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/pn-diode-iv-lab",
+    "tags": []
+  },
+  {
+    "slug": "poiseuille-viscosity",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Viscosity by Poiseuille flow",
+    "title_bn": "পয়জুই প্রবাহে সান্দ্রতা",
+    "description_en": "Determine or verify: Viscosity by Poiseuille flow. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: পয়জুই প্রবাহে সান্দ্রতা; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/poiseuille-viscosity",
+    "tags": []
+  },
+  {
+    "slug": "polarimetry-sugar",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Specific rotation of sugar solution",
+    "title_bn": "চিনির দ্রবণের আপেক্ষিক আলোক ঘূর্ণন",
+    "description_en": "Determine or verify: Specific rotation of sugar solution. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: চিনির দ্রবণের আপেক্ষিক আলোক ঘূর্ণন; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/polarimetry-sugar",
+    "tags": []
+  },
+  {
     "slug": "poynting-vector",
     "kind": "equation",
     "subject": "physics",
@@ -2285,6 +2461,17 @@
     "description_en": "For a plane vacuum wave B=E/c, instantaneous flux is E²/(μ₀c); a sinusoid with peak E₀ has average intensity E₀²/(2μ₀c).",
     "description_bn": " গড় নিতে sin²-এর গড় ১/২ ব্যবহার করুন।",
     "href": "/equations/poynting-vector",
+    "tags": []
+  },
+  {
+    "slug": "prism-minimum-deviation",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Prism refractive index by spectrometer",
+    "title_bn": "বর্ণালিবীক্ষকে প্রিজমের প্রতিসরাঙ্ক",
+    "description_en": "Determine or verify: Prism refractive index by spectrometer. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: বর্ণালিবীক্ষকে প্রিজমের প্রতিসরাঙ্ক; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/prism-minimum-deviation",
     "tags": []
   },
   {
@@ -2365,6 +2552,28 @@
     "tags": []
   },
   {
+    "slug": "resonance-tube-speed",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Sound speed from resonance tube",
+    "title_bn": "অনুনাদ নলে শব্দের বেগ",
+    "description_en": "Determine or verify: Sound speed from resonance tube. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: অনুনাদ নলে শব্দের বেগ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/resonance-tube-speed",
+    "tags": []
+  },
+  {
+    "slug": "rigidity-torsion-pendulum",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Rigidity modulus by torsion pendulum",
+    "title_bn": "পাক দোলকে দৃঢ়তা গুণাঙ্ক",
+    "description_en": "Determine or verify: Rigidity modulus by torsion pendulum. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: পাক দোলকে দৃঢ়তা গুণাঙ্ক; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/rigidity-torsion-pendulum",
+    "tags": []
+  },
+  {
     "slug": "rotational-kinetic-energy-lab",
     "kind": "experiment",
     "subject": "physics",
@@ -2398,6 +2607,17 @@
     "tags": []
   },
   {
+    "slug": "searles-young-modulus",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Young modulus by Searle's apparatus",
+    "title_bn": "সিয়ার্লের যন্ত্রে ইয়ং গুণাঙ্ক",
+    "description_en": "Determine or verify: Young modulus by Searle's apparatus. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: সিয়ার্লের যন্ত্রে ইয়ং গুণাঙ্ক; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/searles-young-modulus",
+    "tags": []
+  },
+  {
     "slug": "shm-energy",
     "kind": "equation",
     "subject": "physics",
@@ -2420,6 +2640,17 @@
     "tags": []
   },
   {
+    "slug": "specific-heat-calorimetry-honours",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Specific heat by mixing calorimetry",
+    "title_bn": "মিশ্রণ ক্যালরিমিটিতে আপেক্ষিক তাপ",
+    "description_en": "Determine or verify: Specific heat by mixing calorimetry. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: মিশ্রণ ক্যালরিমিটিতে আপেক্ষিক তাপ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/specific-heat-calorimetry-honours",
+    "tags": []
+  },
+  {
     "slug": "stefan-boltzmann-verification-lab",
     "kind": "experiment",
     "subject": "physics",
@@ -2431,6 +2662,28 @@
     "tags": []
   },
   {
+    "slug": "stokes-falling-sphere",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Viscosity from falling-ball terminal speed",
+    "title_bn": "পতনশীল গোলকে সান্দ্রতা",
+    "description_en": "Determine or verify: Viscosity from falling-ball terminal speed. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: পতনশীল গোলকে সান্দ্রতা; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/stokes-falling-sphere",
+    "tags": []
+  },
+  {
+    "slug": "thermocouple-seebeck",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Thermocouple Seebeck coefficient",
+    "title_bn": "তাপযুগলে সিবেক সহগ",
+    "description_en": "Determine or verify: Thermocouple Seebeck coefficient. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: তাপযুগলে সিবেক সহগ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/thermocouple-seebeck",
+    "tags": []
+  },
+  {
     "slug": "thin-film-phase-reversal",
     "kind": "equation",
     "subject": "physics",
@@ -2439,6 +2692,17 @@
     "description_en": "At normal incidence and m=0, t=λ₀/(4n); for 600 nm and n=1.5, t=100 nm.",
     "description_bn": "লম্ব আপতনে m=০ হলে t=λ₀/(৪n); ৬০০ nm ও n=১.৫-এ t=১০০ nm।",
     "href": "/equations/thin-film-phase-reversal",
+    "tags": []
+  },
+  {
+    "slug": "transformer-characteristics-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Transformer voltage ratio and efficiency",
+    "title_bn": "ট্রান্সফরমারের বিভব অনুপাত ও দক্ষতা",
+    "description_en": "Determine or verify: Transformer voltage ratio and efficiency. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: ট্রান্সফরমারের বিভব অনুপাত ও দক্ষতা; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/transformer-characteristics-lab",
     "tags": []
   },
   {
@@ -2483,6 +2747,17 @@
     "description_en": "λ=500 nm, D=2 m, d=0.5 mm give β=2 mm.",
     "description_bn": "λ=৫০০ nm, D=২ m, d=০.৫ mm হলে β=২ mm।",
     "href": "/equations/young-fringe-width-honours",
+    "tags": []
+  },
+  {
+    "slug": "zener-regulator-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Zener diode voltage regulation",
+    "title_bn": "জেনার ডায়োডের বিভব নিয়ন্ত্রণ",
+    "description_en": "Determine or verify: Zener diode voltage regulation. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: জেনার ডায়োডের বিভব নিয়ন্ত্রণ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/zener-regulator-lab",
     "tags": []
   },
   {
@@ -3278,6 +3553,17 @@
     "tags": []
   },
   {
+    "slug": "charcoal-acetic-adsorption",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Acetic acid adsorption on charcoal",
+    "title_bn": "কাঠকয়লায় অ্যাসিটিক অ্যাসিড শোষণ",
+    "description_en": "Determine or verify: Acetic acid adsorption on charcoal. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: কাঠকয়লায় অ্যাসিটিক অ্যাসিড শোষণ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/charcoal-acetic-adsorption",
+    "tags": []
+  },
+  {
     "slug": "common-ion-solubility",
     "kind": "equation",
     "subject": "chemistry",
@@ -3308,6 +3594,28 @@
     "description_en": "For G=0.01 S and calibrated l/A=100 m⁻¹, κ=1 S/m.",
     "description_bn": "G=০.০১ S ও ক্রমাঙ্কিত l/A=১০০ m⁻¹ হলে κ=১ S/m।",
     "href": "/equations/conductance-cell-constant",
+    "tags": []
+  },
+  {
+    "slug": "conductometric-acid-base",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Conductometric strong acid–strong base titration",
+    "title_bn": "পরিবাহিতা দিয়ে শক্ত অম্ল-ক্ষার টাইট্রেশন",
+    "description_en": "Determine or verify: Conductometric strong acid–strong base titration. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: পরিবাহিতা দিয়ে শক্ত অম্ল-ক্ষার টাইট্রেশন; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/conductometric-acid-base",
+    "tags": []
+  },
+  {
+    "slug": "copper-iodometry",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Iodometric copper(II) estimation",
+    "title_bn": "আয়োডোমেট্রিতে Cu²⁺ নির্ণয়",
+    "description_en": "Determine or verify: Iodometric copper(II) estimation. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: আয়োডোমেট্রিতে Cu²⁺ নির্ণয়; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/copper-iodometry",
     "tags": []
   },
   {
@@ -3355,6 +3663,39 @@
     "tags": []
   },
   {
+    "slug": "dichromate-ferrous-titration",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Dichromate titration of ferrous iron",
+    "title_bn": "ডাইক্রোমেটে ফেরাস লোহা নির্ণয়",
+    "description_en": "Determine or verify: Dichromate titration of ferrous iron. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: ডাইক্রোমেটে ফেরাস লোহা নির্ণয়; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/dichromate-ferrous-titration",
+    "tags": []
+  },
+  {
+    "slug": "dissolved-oxygen-winkler",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Dissolved oxygen by Winkler iodometry",
+    "title_bn": "উইংকলার পদ্ধতিতে দ্রবীভূত অক্সিজেন",
+    "description_en": "Determine or verify: Dissolved oxygen by Winkler iodometry. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: উইংকলার পদ্ধতিতে দ্রবীভূত অক্সিজেন; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/dissolved-oxygen-winkler",
+    "tags": []
+  },
+  {
+    "slug": "double-indicator-carbonate",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Double-indicator NaOH and carbonate analysis",
+    "title_bn": "দ্বি-নির্দেশকে NaOH ও কার্বোনেট নির্ণয়",
+    "description_en": "Determine or verify: Double-indicator NaOH and carbonate analysis. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: দ্বি-নির্দেশকে NaOH ও কার্বোনেট নির্ণয়; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/double-indicator-carbonate",
+    "tags": []
+  },
+  {
     "slug": "edta-water-hardness-lab",
     "kind": "experiment",
     "subject": "chemistry",
@@ -3377,6 +3718,17 @@
     "tags": []
   },
   {
+    "slug": "ester-hydrolysis-kinetics",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Acid-catalysed ester hydrolysis kinetics",
+    "title_bn": "অম্ল-অনুঘটিত এস্টার হাইড্রোলাইসিসের গতিবিদ্যা",
+    "description_en": "Determine or verify: Acid-catalysed ester hydrolysis kinetics. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: অম্ল-অনুঘটিত এস্টার হাইড্রোলাইসিসের গতিবিদ্যা; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/ester-hydrolysis-kinetics",
+    "tags": []
+  },
+  {
     "slug": "eyring-transition-state-equation",
     "kind": "equation",
     "subject": "chemistry",
@@ -3396,6 +3748,17 @@
     "description_en": "Relate electric charge to the mass deposited in electrolysis.",
     "description_bn": "তড়িৎ বিশ্লেষণে চার্জ ও সঞ্চিত ভরের সম্পর্ক।",
     "href": "/equations/faradays-law",
+    "tags": []
+  },
+  {
+    "slug": "flame-test-cations",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Cation identification by flame test",
+    "title_bn": "শিখা পরীক্ষায় ধনায়ন শনাক্ত",
+    "description_en": "Determine or verify: Cation identification by flame test. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: শিখা পরীক্ষায় ধনায়ন শনাক্ত; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/flame-test-cations",
     "tags": []
   },
   {
@@ -3465,6 +3828,39 @@
     "tags": []
   },
   {
+    "slug": "hcl-sodium-carbonate-standardization",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Standardize HCl with sodium carbonate",
+    "title_bn": "সোডিয়াম কার্বোনেট দিয়ে HCl প্রমাণীকরণ",
+    "description_en": "Determine or verify: Standardize HCl with sodium carbonate. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: সোডিয়াম কার্বোনেট দিয়ে HCl প্রমাণীকরণ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/hcl-sodium-carbonate-standardization",
+    "tags": []
+  },
+  {
+    "slug": "hydrogen-peroxide-decomposition",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Hydrogen peroxide decomposition kinetics",
+    "title_bn": "হাইড্রোজেন পারঅক্সাইড বিয়োজনের গতি",
+    "description_en": "Determine or verify: Hydrogen peroxide decomposition kinetics. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: হাইড্রোজেন পারঅক্সাইড বিয়োজনের গতি; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/hydrogen-peroxide-decomposition",
+    "tags": []
+  },
+  {
+    "slug": "iodine-clock-rate-law",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Iodine clock kinetics",
+    "title_bn": "আয়োডিন ঘড়ি বিক্রিয়ার গতিবিদ্যা",
+    "description_en": "Determine or verify: Iodine clock kinetics. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: আয়োডিন ঘড়ি বিক্রিয়ার গতিবিদ্যা; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/iodine-clock-rate-law",
+    "tags": []
+  },
+  {
     "slug": "iron-thiocyanate-equilibrium-lab",
     "kind": "experiment",
     "subject": "chemistry",
@@ -3509,6 +3905,17 @@
     "tags": []
   },
   {
+    "slug": "liquid-partition-coefficient",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Partition coefficient between immiscible solvents",
+    "title_bn": "অমিশ্রণীয় দ্রাবকে বণ্টন সহগ",
+    "description_en": "Determine or verify: Partition coefficient between immiscible solvents. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: অমিশ্রণীয় দ্রাবকে বণ্টন সহগ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/liquid-partition-coefficient",
+    "tags": []
+  },
+  {
     "slug": "michaelis-menten-equation",
     "kind": "equation",
     "subject": "chemistry",
@@ -3517,6 +3924,39 @@
     "description_en": "At [S]=K_m, v₀=Vmax/2. For [S]=3K_m, v₀=0.75Vmax.",
     "description_bn": " সাবস্ট্রেট বাড়লে হার সম্পৃক্ত মানের দিকে যায়।",
     "href": "/equations/michaelis-menten-equation",
+    "tags": []
+  },
+  {
+    "slug": "mohr-chloride-titration",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Mohr argentometric chloride titration",
+    "title_bn": "মোহরের পদ্ধতিতে ক্লোরাইড নির্ণয়",
+    "description_en": "Determine or verify: Mohr argentometric chloride titration. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: মোহরের পদ্ধতিতে ক্লোরাইড নির্ণয়; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/mohr-chloride-titration",
+    "tags": []
+  },
+  {
+    "slug": "naoh-oxalic-standardization",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Standardize NaOH with oxalic acid",
+    "title_bn": "অক্সালিক অ্যাসিড দিয়ে NaOH প্রমাণীকরণ",
+    "description_en": "Determine or verify: Standardize NaOH with oxalic acid. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: অক্সালিক অ্যাসিড দিয়ে NaOH প্রমাণীকরণ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/naoh-oxalic-standardization",
+    "tags": []
+  },
+  {
+    "slug": "nernst-cell-concentration",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Nernst equation by concentration cell",
+    "title_bn": "ঘনত্ব কোষে নার্নস্ট সমীকরণ যাচাই",
+    "description_en": "Determine or verify: Nernst equation by concentration cell. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: ঘনত্ব কোষে নার্নস্ট সমীকরণ যাচাই; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/nernst-cell-concentration",
     "tags": []
   },
   {
@@ -3531,6 +3971,28 @@
     "tags": []
   },
   {
+    "slug": "neutralization-calorimetry",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Enthalpy of strong acid–base neutralization",
+    "title_bn": "শক্ত অম্ল-ক্ষারের নিরপেক্ষকরণ এনথ্যালপি",
+    "description_en": "Determine or verify: Enthalpy of strong acid–base neutralization. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: শক্ত অম্ল-ক্ষারের নিরপেক্ষকরণ এনথ্যালপি; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/neutralization-calorimetry",
+    "tags": []
+  },
+  {
+    "slug": "nickel-dmg-gravimetry",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Nickel gravimetry with dimethylglyoxime",
+    "title_bn": "ডাইমিথাইলগ্লাইঅক্সিমে নিকেল নির্ণয়",
+    "description_en": "Determine or verify: Nickel gravimetry with dimethylglyoxime. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: ডাইমিথাইলগ্লাইঅক্সিমে নিকেল নির্ণয়; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/nickel-dmg-gravimetry",
+    "tags": []
+  },
+  {
     "slug": "osmotic-pressure-electrolyte",
     "kind": "equation",
     "subject": "chemistry",
@@ -3542,6 +4004,17 @@
     "tags": []
   },
   {
+    "slug": "ostwald-viscometer-relative",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Relative viscosity with Ostwald viscometer",
+    "title_bn": "অস্টওয়াল্ড সান্দ্রতামাপকে আপেক্ষিক সান্দ্রতা",
+    "description_en": "Determine or verify: Relative viscosity with Ostwald viscometer. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: অস্টওয়াল্ড সান্দ্রতামাপকে আপেক্ষিক সান্দ্রতা; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/ostwald-viscometer-relative",
+    "tags": []
+  },
+  {
     "slug": "partition-function",
     "kind": "equation",
     "subject": "chemistry",
@@ -3550,6 +4023,28 @@
     "description_en": "For two nondegenerate levels 0 and Δ, q=1+e^(−Δ/kBT). The excited-state probability is e^(−Δ/kBT)/q.",
     "description_bn": " তাপমাত্রা বাড়লে উত্তেজিত অবস্থার সম্ভাবনা বাড়ে।",
     "href": "/equations/partition-function",
+    "tags": []
+  },
+  {
+    "slug": "permanganate-ferrous-titration",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Permanganate estimation of Fe²⁺",
+    "title_bn": "পারম্যাঙ্গানেটে Fe²⁺ নির্ণয়",
+    "description_en": "Determine or verify: Permanganate estimation of Fe²⁺. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: পারম্যাঙ্গানেটে Fe²⁺ নির্ণয়; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/permanganate-ferrous-titration",
+    "tags": []
+  },
+  {
+    "slug": "potentiometric-ferrous-ceric",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Potentiometric Fe²⁺–Ce⁴⁺ titration",
+    "title_bn": "বিভবমিতিতে Fe²⁺–Ce⁴⁺ টাইট্রেশন",
+    "description_en": "Determine or verify: Potentiometric Fe²⁺–Ce⁴⁺ titration. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: বিভবমিতিতে Fe²⁺–Ce⁴⁺ টাইট্রেশন; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/potentiometric-ferrous-ceric",
     "tags": []
   },
   {
@@ -3663,6 +4158,39 @@
     "tags": []
   },
   {
+    "slug": "stalagmometer-surface-tension",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Relative surface tension by drop count",
+    "title_bn": "ফোঁটা গুনে আপেক্ষিক পৃষ্ঠটান",
+    "description_en": "Determine or verify: Relative surface tension by drop count. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: ফোঁটা গুনে আপেক্ষিক পৃষ্ঠটান; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/stalagmometer-surface-tension",
+    "tags": []
+  },
+  {
+    "slug": "sulfate-gravimetry-baso4",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Gravimetric sulfate as BaSO₄",
+    "title_bn": "BaSO₄ অধঃক্ষেপে সালফেটের ভর নির্ণয়",
+    "description_en": "Determine or verify: Gravimetric sulfate as BaSO₄. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: BaSO₄ অধঃক্ষেপে সালফেটের ভর নির্ণয়; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/sulfate-gravimetry-baso4",
+    "tags": []
+  },
+  {
+    "slug": "thin-layer-chromatography-honours",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Thin-layer chromatography and Rf",
+    "title_bn": "পাতলা-স্তর ক্রোমাটোগ্রাফি ও Rf",
+    "description_en": "Determine or verify: Thin-layer chromatography and Rf. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: পাতলা-স্তর ক্রোমাটোগ্রাফি ও Rf; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/thin-layer-chromatography-honours",
+    "tags": []
+  },
+  {
     "slug": "vanthoff-equilibrium-temperature",
     "kind": "equation",
     "subject": "chemistry",
@@ -3682,6 +4210,28 @@
     "description_en": "If hν=0.20 eV, ground-state energy is 0.10 eV.",
     "description_bn": "hν=০.২০ eV হলে ভূমিস্তরের শক্তি ০.১০ eV।",
     "href": "/equations/vibrational-zero-point",
+    "tags": []
+  },
+  {
+    "slug": "vitamin-c-iodimetry",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Vitamin C by direct iodimetry",
+    "title_bn": "প্রত্যক্ষ আয়োডিমেট্রিতে ভিটামিন C",
+    "description_en": "Determine or verify: Vitamin C by direct iodimetry. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: প্রত্যক্ষ আয়োডিমেট্রিতে ভিটামিন C; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/vitamin-c-iodimetry",
+    "tags": []
+  },
+  {
+    "slug": "volhard-chloride-back-titration",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Volhard back-titration of chloride",
+    "title_bn": "ভলহার্ডের পদ্ধতিতে ক্লোরাইডের বিপরীত টাইট্রেশন",
+    "description_en": "Determine or verify: Volhard back-titration of chloride. Record observations and compare against the stated model.",
+    "description_bn": "উদ্দেশ্য: ভলহার্ডের পদ্ধতিতে ক্লোরাইডের বিপরীত টাইট্রেশন; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।",
+    "href": "/experiments/volhard-chloride-back-titration",
     "tags": []
   },
   {

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-zener-regulator-lab",
+  "title_en": "Zener diode voltage regulation — lab viva",
+  "title_bn": "জেনার ডায়োডের বিভব নিয়ন্ত্রণ — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What happens if the load draws too much current?",
+      "q_bn": "ভার অতিরিক্ত প্রবাহ নিলে কী হয়?",
+      "options": [
+        "Iz can fall below regulation range.",
+        "Zener power always becomes zero",
+        "Output voltage always increases",
+        "Rs becomes superconducting"
+      ],
+      "options_bn": [
+        "Iz নিয়ন্ত্রণসীমার নিচে নামতে পারে।",
+        "Zener power always becomes zero",
+        "Output voltage always increases",
+        "Rs becomes superconducting"
+      ],
+      "answer": 0,
+      "explanation": "Iz can fall below regulation range. A reverse-biased Zener near its rated breakdown maintains approximately Vz across a load if series resistor Rs limits current: Iz=(Vin−Vz)/Rs−IL. Ensure Iz remains within the safe range.",
+      "explanation_bn": "Iz নিয়ন্ত্রণসীমার নিচে নামতে পারে। উল্টো বিভবে অনুমোদিত breakdown-এর কাছে জেনার ভারের ওপর প্রায় Vz রাখে; Rs প্রবাহ সীমিত করে: Iz=(Vin−Vz)/Rs−IL। Iz নিরাপদ সীমায় রাখুন।"
+    }
+  ]
+}

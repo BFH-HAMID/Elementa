@@ -1,0 +1,32 @@
+{
+  "slug": "honours-volhard-chloride-back-titration",
+  "title_en": "Volhard back-titration of chloride — lab viva",
+  "title_bn": "ভলহার্ডের পদ্ধতিতে ক্লোরাইডের বিপরীত টাইট্রেশন — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Is Volhard chloride analysis a direct or back-titration?",
+      "q_bn": "ক্লোরাইডের ভলহার্ড পদ্ধতি প্রত্যক্ষ না বিপরীত টাইট্রেশন?",
+      "options": [
+        "Back-titration of leftover silver.",
+        "Direct titration of chloride by acid",
+        "Only a gravimetric method",
+        "No titration"
+      ],
+      "options_bn": [
+        "বাকি সিলভারের বিপরীত টাইট্রেশন।",
+        "Direct titration of chloride by acid",
+        "Only a gravimetric method",
+        "No titration"
+      ],
+      "answer": 0,
+      "explanation": "Back-titration of leftover silver. Add known excess AgNO₃ to precipitate chloride; back-titrate leftover Ag+ with SCN−: Ag++SCN−→AgSCN(s). Ferric indicator signals excess SCN− red; prevent AgCl from reacting with SCN− by filtration or validated procedure.",
+      "explanation_bn": "বাকি সিলভারের বিপরীত টাইট্রেশন। জানা অতিরিক্ত AgNO₃ দিয়ে Cl− অধঃক্ষেপ করে বাকি Ag+ কে SCN− দিয়ে মাপুন: Ag++SCN−→AgSCN। Fe³⁺ নির্দেশকে বাড়তি SCN− লাল; AgCl-এর সঙ্গে SCN− বিক্রিয়া ঠেকাতে ছাঁকা বা অনুমোদিত পদ্ধতি নিন।"
+    }
+  ]
+}

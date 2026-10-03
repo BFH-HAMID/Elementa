@@ -1,0 +1,32 @@
+{
+  "slug": "honours-lees-disc-conductivity",
+  "title_en": "Lee disc thermal conductivity — lab viva",
+  "title_bn": "লির চাকতিতে তাপ-পরিবাহিতা — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why determine cooling rate near T₂?",
+      "q_bn": "T₂-এর কাছে শীতলন হার কেন মাপি?",
+      "options": [
+        "It matches the disc temperature in the steady-state balance.",
+        "Because cooling is always zero there",
+        "Because the sheet has no thickness",
+        "Because steam pressure vanishes"
+      ],
+      "options_bn": [
+        "এটি স্থির-অবস্থার সাম্যে চাকতির তাপমাত্রার সমান।",
+        "Because cooling is always zero there",
+        "Because the sheet has no thickness",
+        "Because steam pressure vanishes"
+      ],
+      "answer": 0,
+      "explanation": "It matches the disc temperature in the steady-state balance. At steady state heat through a thin poor-conductor sample balances disc cooling at its lower-face temperature: kA(T₁−T₂)/d≈mc abs(dT/dt) cool at T₂ (with apparatus corrections).",
+      "explanation_bn": "এটি স্থির-অবস্থার সাম্যে চাকতির তাপমাত্রার সমান। স্থির অবস্থায় পাতলা কুপরিবাহীর তাপপ্রবাহ নিম্ন চাকতির একই তাপমাত্রায় শীতলন হারের সমান: kA(T₁−T₂)/d≈mc abs(dT/dt) (যন্ত্রভেদে সংশোধন)।"
+    }
+  ]
+}

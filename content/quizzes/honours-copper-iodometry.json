@@ -1,0 +1,32 @@
+{
+  "slug": "honours-copper-iodometry",
+  "title_en": "Iodometric copper(II) estimation — lab viva",
+  "title_bn": "আয়োডোমেট্রিতে Cu²⁺ নির্ণয় — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What is the net mole ratio of Cu²⁺ to thiosulfate?",
+      "q_bn": "Cu²⁺ ও থায়োসালফেটের মোট মোল অনুপাত?",
+      "options": [
+        "One to one.",
+        "Two to one",
+        "One to two",
+        "Four to one"
+      ],
+      "options_bn": [
+        "এক-এক।",
+        "Two to one",
+        "One to two",
+        "Four to one"
+      ],
+      "answer": 0,
+      "explanation": "One to one. 2Cu²⁺+4I−→2CuI(s)+I₂; I₂+2S₂O₃²−→2I−+S₄O₆²−. Overall moles Cu²⁺ equal moles thiosulfate at completion.",
+      "explanation_bn": "এক-এক। ২Cu²⁺+৪I−→২CuI(s)+I₂; I₂+২S₂O₃²−→২I−+S₄O₆²−। শেষে Cu²⁺-এর মোল থায়োসালফেটের মোলের সমান।"
+    }
+  ]
+}

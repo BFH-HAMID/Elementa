@@ -1,0 +1,32 @@
+{
+  "slug": "honours-poiseuille-viscosity",
+  "title_en": "Viscosity by Poiseuille flow — lab viva",
+  "title_bn": "পয়জুই প্রবাহে সান্দ্রতা — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why must flow remain laminar?",
+      "q_bn": "প্রবাহ স্তরী থাকা জরুরি কেন?",
+      "options": [
+        "Poiseuille's rate relation is derived for laminar flow.",
+        "Because turbulence has zero viscosity",
+        "Because radius cancels out",
+        "Because temperature cannot change"
+      ],
+      "options_bn": [
+        "পয়জুইর হারসূত্র স্তরী প্রবাহের জন্য প্রতিপাদিত।",
+        "Because turbulence has zero viscosity",
+        "Because radius cancels out",
+        "Because temperature cannot change"
+      ],
+      "answer": 0,
+      "explanation": "Poiseuille's rate relation is derived for laminar flow. For steady laminar flow through a long narrow tube, volume rate Q=πr⁴ΔP/(8ηL); obtain η from measured Q and pressure head ΔP≈ρgh.",
+      "explanation_bn": "পয়জুইর হারসূত্র স্তরী প্রবাহের জন্য প্রতিপাদিত। দীর্ঘ সরু নলে স্থির স্তরী প্রবাহে Q=πr⁴ΔP/(৮ηL); মাপা Q ও চাপের উচ্চতা ΔP≈ρgh থেকে η বের করুন।"
+    }
+  ]
+}

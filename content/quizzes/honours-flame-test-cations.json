@@ -1,0 +1,32 @@
+{
+  "slug": "honours-flame-test-cations",
+  "title_en": "Cation identification by flame test — lab viva",
+  "title_bn": "শিখা পরীক্ষায় ধনায়ন শনাক্ত — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why clean the loop before each salt?",
+      "q_bn": "প্রতি লবণের আগে তার পরিষ্কার কেন?",
+      "options": [
+        "To prevent contamination from giving a false colour.",
+        "To increase wire mass",
+        "To change sodium into potassium",
+        "To cool the burner"
+      ],
+      "options_bn": [
+        "দূষণে ভুল রং দেখা আটকাতে।",
+        "To increase wire mass",
+        "To change sodium into potassium",
+        "To cool the burner"
+      ],
+      "answer": 0,
+      "explanation": "To prevent contamination from giving a false colour. Excited atoms emit characteristic visible wavelengths during relaxation. Sodium gives intense yellow, potassium lilac (view through cobalt glass when sodium contamination is present). Flame colour is a preliminary test, not proof of purity.",
+      "explanation_bn": "দূষণে ভুল রং দেখা আটকাতে। উত্তেজিত পরমাণু ফেরার সময় নির্দিষ্ট দৃশ্যমান তরঙ্গদৈর্ঘ্য দেয়। সোডিয়ামে তীব্র হলুদ, পটাশিয়ামে ফিকে বেগুনি (সোডিয়াম থাকলে cobalt glass দিয়ে)। শিখার রং প্রাথমিক পরীক্ষা, বিশুদ্ধতার প্রমাণ নয়।"
+    }
+  ]
+}

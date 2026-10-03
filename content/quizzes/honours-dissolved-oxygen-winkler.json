@@ -1,0 +1,32 @@
+{
+  "slug": "honours-dissolved-oxygen-winkler",
+  "title_en": "Dissolved oxygen by Winkler iodometry — lab viva",
+  "title_bn": "উইংকলার পদ্ধতিতে দ্রবীভূত অক্সিজেন — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "How many thiosulfate moles correspond to one O₂ mole?",
+      "q_bn": "এক মোল O₂-এ কত মোল থায়োসালফেট লাগে?",
+      "options": [
+        "Four.",
+        "One",
+        "Two",
+        "Eight"
+      ],
+      "options_bn": [
+        "চার।",
+        "One",
+        "Two",
+        "Eight"
+      ],
+      "answer": 0,
+      "explanation": "Four. Dissolved O₂ oxidizes Mn(II) in alkaline medium; after acidification the oxidized manganese liberates iodine from iodide. One O₂ corresponds to four thiosulfate ions in the overall stoichiometry.",
+      "explanation_bn": "চার। দ্রবীভূত O₂ ক্ষারীয় মাধ্যমে Mn(II) জারিত করে; অম্লে তা আয়োডাইড থেকে আয়োডিন ছাড়ে। মোট বিক্রিয়ায় এক O₂-এর জন্য চার থায়োসালফেট আয়ন লাগে।"
+    }
+  ]
+}

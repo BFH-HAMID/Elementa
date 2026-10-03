@@ -1,0 +1,32 @@
+{
+  "slug": "honours-mohr-chloride-titration",
+  "title_en": "Mohr argentometric chloride titration — lab viva",
+  "title_bn": "মোহরের পদ্ধতিতে ক্লোরাইড নির্ণয় — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What colour signals the Mohr endpoint?",
+      "q_bn": "মোহরের সমাপ্তিতে কী রং দেখা যায়?",
+      "options": [
+        "Persistent brick red.",
+        "Deep blue",
+        "Bright green",
+        "Colourless always"
+      ],
+      "options_bn": [
+        "স্থায়ী ইট-লাল।",
+        "Deep blue",
+        "Bright green",
+        "Colourless always"
+      ],
+      "answer": 0,
+      "explanation": "Persistent brick red. Ag+ first precipitates Cl− as AgCl. After equivalence, excess Ag+ produces brick-red Ag₂CrO₄ with chromate indicator. Maintain near-neutral pH.",
+      "explanation_bn": "স্থায়ী ইট-লাল। Ag+ আগে Cl−-কে AgCl হিসেবে অধঃক্ষেপ করে। সমাপ্তির পর অতিরিক্ত Ag+ ক্রোমেট নির্দেশকে ইট-লাল Ag₂CrO₄ দেয়। pH প্রায় নিরপেক্ষ রাখুন।"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-transformer-characteristics-lab",
+  "title_en": "Transformer voltage ratio and efficiency — lab viva",
+  "title_bn": "ট্রান্সফরমারের বিভব অনুপাত ও দক্ষতা — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Can transformer efficiency exceed 100%?",
+      "q_bn": "ট্রান্সফরমারের দক্ষতা ১০০% ছাড়াতে পারে?",
+      "options": [
+        "No, energy losses make it lower.",
+        "Yes for an ideal transformer",
+        "Only with DC",
+        "Only at no load"
+      ],
+      "options_bn": [
+        "না; শক্তিক্ষয়ে তা কমে।",
+        "Yes for an ideal transformer",
+        "Only with DC",
+        "Only at no load"
+      ],
+      "answer": 0,
+      "explanation": "No, energy losses make it lower. In an ideal AC transformer Vs/Vp=Ns/Np; real efficiency η=Ps/Pp is below 1 due to copper and core losses. Never use DC as the normal primary supply.",
+      "explanation_bn": "না; শক্তিক্ষয়ে তা কমে। আদর্শ AC ট্রান্সফরমারে Vs/Vp=Ns/Np; বাস্তবে তামা ও কোর ক্ষতিতে η=Ps/Pp<১। প্রাইমারিতে স্বাভাবিক উৎস হিসেবে DC নয়।"
+    }
+  ]
+}

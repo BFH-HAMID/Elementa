@@ -1,0 +1,32 @@
+{
+  "slug": "honours-nernst-cell-concentration",
+  "title_en": "Nernst equation by concentration cell — lab viva",
+  "title_bn": "ঘনত্ব কোষে নার্নস্ট সমীকরণ যাচাই — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why does E° cancel for identical electrodes?",
+      "q_bn": "একই ইলেকট্রোডে E° বাদ যায় কেন?",
+      "options": [
+        "Both half cells share the same standard reduction potential.",
+        "Because concentration is zero",
+        "Because F is zero",
+        "Because salt bridge has no ions"
+      ],
+      "options_bn": [
+        "দুই অর্ধকোষে একই মান বিজারণ বিভব।",
+        "Because concentration is zero",
+        "Because F is zero",
+        "Because salt bridge has no ions"
+      ],
+      "answer": 0,
+      "explanation": "Both half cells share the same standard reduction potential. For a reversible M / Mᶻ⁺(a₁) // Mᶻ⁺(a₂) / M concentration cell with a₂>a₁, emf magnitude E=(RT/zF)ln(a₂/a₁); standard potential cancels. Use activities for precision.",
+      "explanation_bn": "দুই অর্ধকোষে একই মান বিজারণ বিভব। প্রত্যাবর্তী একই ধাতুর ঘনত্ব কোষে a₂>a₁ হলে বিভবের মান E=(RT/zF)ln(a₂/a₁); মান বিভব বাদ যায়। নির্ভুলতায় সক্রিয়তা নিন।"
+    }
+  ]
+}

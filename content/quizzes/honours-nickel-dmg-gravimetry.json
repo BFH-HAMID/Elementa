@@ -1,0 +1,32 @@
+{
+  "slug": "honours-nickel-dmg-gravimetry",
+  "title_en": "Nickel gravimetry with dimethylglyoxime — lab viva",
+  "title_bn": "ডাইমিথাইলগ্লাইঅক্সিমে নিকেল নির্ণয় — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What is the Ni to Ni(DMG)₂ mole ratio?",
+      "q_bn": "Ni ও Ni(DMG)₂-এর মোল অনুপাত?",
+      "options": [
+        "One to one.",
+        "One to two",
+        "Two to one",
+        "Four to one"
+      ],
+      "options_bn": [
+        "এক-এক।",
+        "One to two",
+        "Two to one",
+        "Four to one"
+      ],
+      "answer": 0,
+      "explanation": "One to one. Ni²+ forms red Ni(DMG)₂ precipitate in appropriately buffered ammonia medium. One mole Ni corresponds to one mole Ni(DMG)₂ (molar mass approximately 288.91 g/mol).",
+      "explanation_bn": "এক-এক। উপযুক্ত অ্যামোনিয়া বাফারে Ni²+ লাল Ni(DMG)₂ অধঃক্ষেপ দেয়। এক মোল Ni থেকে এক মোল Ni(DMG)₂ (মোলার ভর প্রায় ২৮৮.৯১ g/mol)।"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-beam-bending-modulus",
+  "title_en": "Young modulus by central beam bending — lab viva",
+  "title_bn": "কেন্দ্রীয় ভারে বিম বাঁকিয়ে ইয়ং গুণাঙ্ক — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Which beam dimension is cubed in the denominator?",
+      "q_bn": "হরে বিমের কোন মাত্রার ঘন আছে?",
+      "options": [
+        "Its depth d.",
+        "Its width b",
+        "Its span L only",
+        "Its mass"
+      ],
+      "options_bn": [
+        "পুরুত্ব d।",
+        "Its width b",
+        "Its span L only",
+        "Its mass"
+      ],
+      "answer": 0,
+      "explanation": "Its depth d. A simply supported rectangular beam with central load F has centre deflection δ=FL³/(48YI), I=bd³/12; hence Y=FL³/(4bd³δ).",
+      "explanation_bn": "পুরুত্ব d। দুই প্রান্তে ঠেস-দেওয়া আয়তাকার বিমের মাঝে F ভারে δ=FL³/(৪৮YI), I=bd³/১২; তাই Y=FL³/(৪bd³δ)।"
+    }
+  ]
+}

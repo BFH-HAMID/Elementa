@@ -1,0 +1,32 @@
+{
+  "slug": "honours-naoh-oxalic-standardization",
+  "title_en": "Standardize NaOH with oxalic acid — lab viva",
+  "title_bn": "অক্সালিক অ্যাসিড দিয়ে NaOH প্রমাণীকরণ — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "How many moles of NaOH neutralize one mole of oxalic acid?",
+      "q_bn": "এক মোল অক্সালিক অ্যাসিডে কত মোল NaOH লাগে?",
+      "options": [
+        "Two.",
+        "One",
+        "Three",
+        "Half"
+      ],
+      "options_bn": [
+        "দুই।",
+        "One",
+        "Three",
+        "Half"
+      ],
+      "answer": 0,
+      "explanation": "Two. For anhydrous H₂C₂O₄, H₂C₂O₄+2NaOH→Na₂C₂O₄+2H₂O. If using dihydrate, molar mass is 126.07 g/mol, not 90.03 g/mol; use the correct reagent label.",
+      "explanation_bn": "দুই। অনাজল অক্সালিক অ্যাসিডে H₂C₂O₄+২NaOH→Na₂C₂O₄+২H₂O। ডাইহাইড্রেট হলে মোলার ভর ১২৬.০৭ g/mol, ৯০.০৩ নয়; বোতলের লেবেল দেখুন।"
+    }
+  ]
+}

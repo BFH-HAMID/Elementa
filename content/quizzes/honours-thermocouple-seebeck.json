@@ -1,0 +1,32 @@
+{
+  "slug": "honours-thermocouple-seebeck",
+  "title_en": "Thermocouple Seebeck coefficient — lab viva",
+  "title_bn": "তাপযুগলে সিবেক সহগ — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Is the measured Seebeck coefficient absolute or relative for a pair?",
+      "q_bn": "দুটি পদার্থে মাপা সিবেক সহগ পরম না আপেক্ষিক?",
+      "options": [
+        "Relative to the other thermocouple material.",
+        "Absolute for each wire directly",
+        "Always zero",
+        "Independent of junction temperatures"
+      ],
+      "options_bn": [
+        "অন্য তাপযুগল পদার্থের সাপেক্ষে আপেক্ষিক।",
+        "Absolute for each wire directly",
+        "Always zero",
+        "Independent of junction temperatures"
+      ],
+      "answer": 0,
+      "explanation": "Relative to the other thermocouple material. For a small temperature difference, open-circuit thermoelectric emf E≈SAB(Th−Tc), where SAB is the relative Seebeck coefficient of the material pair.",
+      "explanation_bn": "অন্য তাপযুগল পদার্থের সাপেক্ষে আপেক্ষিক। ক্ষুদ্র তাপমাত্রা পার্থক্যে খোলা বর্তনীর বিভব E≈SAB(Th−Tc), যেখানে SAB দুটি পদার্থের আপেক্ষিক সিবেক সহগ।"
+    }
+  ]
+}

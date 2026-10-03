@@ -1,0 +1,32 @@
+{
+  "slug": "honours-iodine-clock-rate-law",
+  "title_en": "Iodine clock kinetics — lab viva",
+  "title_bn": "আয়োডিন ঘড়ি বিক্রিয়ার গতিবিদ্যা — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "When is 1/t a fair proxy for initial rate?",
+      "q_bn": "কখন ১/t-কে প্রাথমিক হারের আনুমানিক মান ধরা যায়?",
+      "options": [
+        "When the iodine threshold amount is constant across trials.",
+        "When total volume doubles each time",
+        "When thiosulfate varies freely",
+        "When temperature is random"
+      ],
+      "options_bn": [
+        "সব পরীক্ষায় আয়োডিন সীমার পরিমাণ স্থির থাকলে।",
+        "When total volume doubles each time",
+        "When thiosulfate varies freely",
+        "When temperature is random"
+      ],
+      "answer": 0,
+      "explanation": "When the iodine threshold amount is constant across trials. A fixed small amount of thiosulfate consumes produced iodine until exhausted; blue starch colour appears after fixed iodine amount forms. At fixed threshold, approximate initial rate is proportional to 1/t, provided mixing and induction effects are controlled.",
+      "explanation_bn": "সব পরীক্ষায় আয়োডিন সীমার পরিমাণ স্থির থাকলে। অল্প নির্দিষ্ট থায়োসালফেট উৎপন্ন আয়োডিন খরচ করে; তা ফুরালে শ্বেতসার নীল হয়। স্থির আয়োডিন-সীমায় প্রাথমিক হার প্রায় ১/t, যদি মেশানো ও বিলম্ব নিয়ন্ত্রিত হয়।"
+    }
+  ]
+}

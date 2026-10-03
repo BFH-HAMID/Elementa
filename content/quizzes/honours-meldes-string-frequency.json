@@ -1,0 +1,32 @@
+{
+  "slug": "honours-meldes-string-frequency",
+  "title_en": "Melde standing-wave experiment — lab viva",
+  "title_bn": "মেল্ডের স্থির তরঙ্গ পরীক্ষা — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What is wavelength for n loops over length L?",
+      "q_bn": "L দৈর্ঘ্যে nটি লুপ হলে তরঙ্গদৈর্ঘ্য কত?",
+      "options": [
+        "2L/n.",
+        "L/n",
+        "4L/n",
+        "nL/2"
+      ],
+      "options_bn": [
+        "২L/n।",
+        "L/n",
+        "4L/n",
+        "nL/2"
+      ],
+      "answer": 0,
+      "explanation": "2L/n. A string of length L with n loops has λ=2L/n; wave speed fλ=√(𝒯/μ). State whether driving frequency matches string frequency or is twice it in the chosen vibrator arrangement.",
+      "explanation_bn": "২L/n। L দৈর্ঘ্যের তারে nটি লুপ হলে λ=২L/n; তরঙ্গবেগ fλ=√(𝒯/μ)। ব্যবহৃত কম্পক বিন্যাসে চালক কম্পাঙ্ক তারের সমান না দ্বিগুণ তা লিখুন।"
+    }
+  ]
+}

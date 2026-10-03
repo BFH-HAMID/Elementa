@@ -1,0 +1,32 @@
+{
+  "slug": "honours-stalagmometer-surface-tension",
+  "title_en": "Relative surface tension by drop count — lab viva",
+  "title_bn": "ফোঁটা গুনে আপেক্ষিক পৃষ্ঠটান — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "At fixed volume, more drops generally imply what about average drop mass?",
+      "q_bn": "একই আয়তনে ফোঁটা বেশি হলে গড় ফোঁটার ভর কী হয়?",
+      "options": [
+        "Smaller.",
+        "Larger",
+        "Unchanged without exception",
+        "Negative"
+      ],
+      "options_bn": [
+        "কম।",
+        "Larger",
+        "Unchanged without exception",
+        "Negative"
+      ],
+      "answer": 0,
+      "explanation": "Smaller. For the same stalagmometer volume and tip, surface tension approximately follows γ₁/γ₂≈ρ₁n₂/(ρ₂n₁), where n is drops for that volume; drop correction and wetting may matter.",
+      "explanation_bn": "কম। একই স্ট্যালাগমোমিটারের আয়তন ও মুখে পৃষ্ঠটান আনুমানিক γ₁/γ₂≈ρ₁n₂/(ρ₂n₁), n হলো ওই আয়তনের ফোঁটার সংখ্যা; ফোঁটার সংশোধন ও ভেজা প্রভাব থাকতে পারে।"
+    }
+  ]
+}

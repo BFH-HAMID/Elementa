@@ -1,0 +1,32 @@
+{
+  "slug": "honours-sulfate-gravimetry-baso4",
+  "title_en": "Gravimetric sulfate as BaSO₄ — lab viva",
+  "title_bn": "BaSO₄ অধঃক্ষেপে সালফেটের ভর নির্ণয় — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why dry to constant mass?",
+      "q_bn": "স্থির ভর পর্যন্ত শুকাই কেন?",
+      "options": [
+        "Remaining water otherwise inflates the precipitate mass.",
+        "To change sulfate into chloride",
+        "To double the sample",
+        "To reduce all barium"
+      ],
+      "options_bn": [
+        "অবশিষ্ট পানি অধঃক্ষেপের মাপা ভর বাড়ায়।",
+        "To change sulfate into chloride",
+        "To double the sample",
+        "To reduce all barium"
+      ],
+      "answer": 0,
+      "explanation": "Remaining water otherwise inflates the precipitate mass. SO₄²−+Ba²+→BaSO₄(s); one mole precipitate represents one mole sulfate. Digest to larger crystals, filter, wash, dry to constant mass.",
+      "explanation_bn": "অবশিষ্ট পানি অধঃক্ষেপের মাপা ভর বাড়ায়। SO₄²−+Ba²+→BaSO₄(s); এক মোল অধঃক্ষেপ এক মোল সালফেট। বড় স্ফটিক পেতে digestions করে ছেঁকে, ধুয়ে স্থির ভর পর্যন্ত শুকান।"
+    }
+  ]
+}

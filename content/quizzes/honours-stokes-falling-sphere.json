@@ -1,0 +1,32 @@
+{
+  "slug": "honours-stokes-falling-sphere",
+  "title_en": "Viscosity from falling-ball terminal speed — lab viva",
+  "title_bn": "পতনশীল গোলকে সান্দ্রতা — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why start timing below the liquid surface?",
+      "q_bn": "তরলের পৃষ্ঠের নিচ থেকে সময় মাপা হয় কেন?",
+      "options": [
+        "To allow the sphere to reach terminal speed.",
+        "To remove buoyancy",
+        "To double gravitational acceleration",
+        "To prevent all fluid flow"
+      ],
+      "options_bn": [
+        "গোলককে প্রান্তিক বেগ পেতে সময় দিতে।",
+        "To remove buoyancy",
+        "To double gravitational acceleration",
+        "To prevent all fluid flow"
+      ],
+      "answer": 0,
+      "explanation": "To allow the sphere to reach terminal speed. At slow terminal motion, buoyancy-corrected weight (4/3)πr³(ρs−ρf)g equals Stokes drag 6πηrv, giving η=2r²(ρs−ρf)g/(9v).",
+      "explanation_bn": "গোলককে প্রান্তিক বেগ পেতে সময় দিতে। ধীর প্রান্তিক গতিতে ঊর্ধ্বমুখী বল বাদে ওজন (৪/৩)πr³(ρs−ρf)g ও Stokes ঘর্ষণ ৬πηrv সমান; η=২r²(ρs−ρf)g/(৯v)।"
+    }
+  ]
+}

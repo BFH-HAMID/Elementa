@@ -1,0 +1,32 @@
+{
+  "slug": "honours-liquid-partition-coefficient",
+  "title_en": "Partition coefficient between immiscible solvents — lab viva",
+  "title_bn": "অমিশ্রণীয় দ্রাবকে বণ্টন সহগ — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "At equilibrium, must both layer concentrations be equal?",
+      "q_bn": "সাম্যে দুই স্তরের ঘনত্ব কি সমান হতে হবে?",
+      "options": [
+        "No, their chemical potentials are equal, not necessarily concentrations.",
+        "Yes, always",
+        "Only if layers are coloured",
+        "Because total volume is fixed"
+      ],
+      "options_bn": [
+        "না; রাসায়নিক বিভব সমান হয়, ঘনত্ব অবশ্যই নয়।",
+        "Yes, always",
+        "Only if layers are coloured",
+        "Because total volume is fixed"
+      ],
+      "answer": 0,
+      "explanation": "No, their chemical potentials are equal, not necessarily concentrations. For the same molecular form of solute at equilibrium, Kd=Corganic/Caqueous at fixed temperature. Ionization or association makes the apparent concentration ratio composition-dependent.",
+      "explanation_bn": "না; রাসায়নিক বিভব সমান হয়, ঘনত্ব অবশ্যই নয়। সাম্যে একই আণবিক রূপে নির্দিষ্ট তাপে Kd=Corganic/Caqueous। আয়নীভবন বা সংযুক্তিতে আপাত ঘনত্ব-অনুপাত গঠনের ওপর নির্ভর করে।"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-polarimetry-sugar",
+  "title_en": "Specific rotation of sugar solution — lab viva",
+  "title_bn": "চিনির দ্রবণের আপেক্ষিক আলোক ঘূর্ণন — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Which two conditions must be quoted with specific rotation?",
+      "q_bn": "আপেক্ষিক ঘূর্ণনের সঙ্গে কোন দুটি শর্ত লিখতে হয়?",
+      "options": [
+        "Wavelength and temperature.",
+        "Only room colour",
+        "Only mass and pressure",
+        "Only sample age"
+      ],
+      "options_bn": [
+        "তরঙ্গদৈর্ঘ্য ও তাপমাত্রা।",
+        "Only room colour",
+        "Only mass and pressure",
+        "Only sample age"
+      ],
+      "answer": 0,
+      "explanation": "Wavelength and temperature. For an optically active solution, observed rotation α=[α]λ,T l c with path length l in dm and concentration c in g/mL under a stated convention.",
+      "explanation_bn": "তরঙ্গদৈর্ঘ্য ও তাপমাত্রা। আলোকসক্রিয় দ্রবণে পর্যবেক্ষিত ঘূর্ণন α=[α]λ,T l c; প্রচলিত রীতিতে l dm ও c g/mL, তরঙ্গদৈর্ঘ্য-তাপমাত্রা উল্লেখ জরুরি।"
+    }
+  ]
+}

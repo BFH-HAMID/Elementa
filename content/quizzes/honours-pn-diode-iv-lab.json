@@ -1,0 +1,32 @@
+{
+  "slug": "honours-pn-diode-iv-lab",
+  "title_en": "P–N diode current–voltage characteristics — lab viva",
+  "title_bn": "P–N ডায়োডের প্রবাহ–বিভব বৈশিষ্ট্য — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why is a series resistor required?",
+      "q_bn": "সারি রোধ কেন লাগে?",
+      "options": [
+        "To prevent excessive forward current.",
+        "To create a magnetic field",
+        "To make reverse breakdown mandatory",
+        "To remove junction voltage"
+      ],
+      "options_bn": [
+        "অতিরিক্ত সম্মুখ প্রবাহ ঠেকাতে।",
+        "To create a magnetic field",
+        "To make reverse breakdown mandatory",
+        "To remove junction voltage"
+      ],
+      "answer": 0,
+      "explanation": "To prevent excessive forward current. Forward bias lowers the junction barrier and current rises nonlinearly; reverse current is small before breakdown. A series resistor limits current; the ideal diode equation is I≈Is(exp[V/(nVT)]−1).",
+      "explanation_bn": "অতিরিক্ত সম্মুখ প্রবাহ ঠেকাতে। সম্মুখ বিভবে বাধা কমে প্রবাহ অরৈখিকভাবে বাড়ে; বিপরীত বিভবে breakdown-এর আগে প্রবাহ কম। সারি রোধ প্রবাহ সীমিত করে; আদর্শ মডেলে I≈Is(exp[V/(nVT)]−১)।"
+    }
+  ]
+}

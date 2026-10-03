@@ -1,0 +1,32 @@
+{
+  "slug": "honours-searles-young-modulus",
+  "title_en": "Young modulus by Searle's apparatus — lab viva",
+  "title_bn": "সিয়ার্লের যন্ত্রে ইয়ং গুণাঙ্ক — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why measure diameter at several locations?",
+      "q_bn": "বিভিন্ন স্থানে ব্যাস কেন মাপি?",
+      "options": [
+        "Because cross-sectional area depends on the squared diameter and the wire may vary.",
+        "Because length is irrelevant",
+        "To increase applied force",
+        "To determine gravitational acceleration"
+      ],
+      "options_bn": [
+        "ক্ষেত্রফল ব্যাসের বর্গের ওপর নির্ভর করে এবং তার অসম হতে পারে।",
+        "Because length is irrelevant",
+        "To increase applied force",
+        "To determine gravitational acceleration"
+      ],
+      "answer": 0,
+      "explanation": "Because cross-sectional area depends on the squared diameter and the wire may vary. For a uniform wire in its elastic region, Y=FL/(AΔL), A=πd²/4. A reference wire compensates support movement.",
+      "explanation_bn": "ক্ষেত্রফল ব্যাসের বর্গের ওপর নির্ভর করে এবং তার অসম হতে পারে। স্থিতিস্থাপক সীমায় সুষম তারে Y=FL/(AΔL), A=πd²/৪। তুলনামূলক তার অবলম্বনের নড়াচড়া সংশোধন করে।"
+    }
+  ]
+}

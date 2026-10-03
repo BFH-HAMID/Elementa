@@ -1,0 +1,32 @@
+{
+  "slug": "honours-potentiometric-ferrous-ceric",
+  "title_en": "Potentiometric Fe²⁺–Ce⁴⁺ titration — lab viva",
+  "title_bn": "বিভবমিতিতে Fe²⁺–Ce⁴⁺ টাইট্রেশন — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What is Fe²⁺ to Ce⁴⁺ mole ratio?",
+      "q_bn": "Fe²⁺ ও Ce⁴⁺-এর মোল অনুপাত?",
+      "options": [
+        "One to one.",
+        "Two to one",
+        "One to two",
+        "One to four"
+      ],
+      "options_bn": [
+        "এক-এক।",
+        "Two to one",
+        "One to two",
+        "One to four"
+      ],
+      "answer": 0,
+      "explanation": "One to one. Ce⁴⁺+Fe²⁺→Ce³⁺+Fe³⁺ (1:1). A platinum indicator electrode responds to solution redox potential; equivalence lies near steepest potential change versus titrant volume.",
+      "explanation_bn": "এক-এক। Ce⁴⁺+Fe²⁺→Ce³⁺+Fe³⁺ (১:১)। প্লাটিনাম নির্দেশক ইলেকট্রোড দ্রবণের redox বিভব জানায়; বিভব বনাম আয়তনের সবচেয়ে খাড়া পরিবর্তনের কাছে সমাপ্তি।"
+    }
+  ]
+}

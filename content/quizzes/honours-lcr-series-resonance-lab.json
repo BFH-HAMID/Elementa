@@ -1,0 +1,32 @@
+{
+  "slug": "honours-lcr-series-resonance-lab",
+  "title_en": "Series LCR resonance and bandwidth — lab viva",
+  "title_bn": "সারি LCR অনুনাদ ও ব্যান্ডউইডথ — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "At resonance, which two reactances cancel?",
+      "q_bn": "অনুনাদে কোন দুই প্রতিঘাত বাতিল হয়?",
+      "options": [
+        "Inductive and capacitive reactances.",
+        "Resistance and voltage",
+        "Two identical resistors",
+        "Frequency and current"
+      ],
+      "options_bn": [
+        "আবেশী ও ধারকীয় প্রতিঘাত।",
+        "Resistance and voltage",
+        "Two identical resistors",
+        "Frequency and current"
+      ],
+      "answer": 0,
+      "explanation": "Inductive and capacitive reactances. The impedance magnitude Z=√[R²+(ωL−1/ωC)²] is smallest at ω₀=1/√(LC). At half-power current Imax/√2, bandwidth Δω≈R/L for an ideal series circuit.",
+      "explanation_bn": "আবেশী ও ধারকীয় প্রতিঘাত। প্রতিবন্ধক Z=√[R²+(ωL−১/ωC)²] সর্বনিম্ন হয় ω₀=১/√(LC)-এ। অর্ধক্ষমতায় প্রবাহ Imax/√২; আদর্শ সারি বর্তনীতে Δω≈R/L।"
+    }
+  ]
+}

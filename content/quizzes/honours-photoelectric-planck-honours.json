@@ -1,0 +1,32 @@
+{
+  "slug": "honours-photoelectric-planck-honours",
+  "title_en": "Photoelectric stopping potential for Planck constant — lab viva",
+  "title_bn": "আলোকতড়িৎ নিবৃত্তি বিভব থেকে প্ল্যাঙ্ক ধ্রুবক — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What does the slope of Vs versus f yield?",
+      "q_bn": "Vs বনাম f-এর ঢাল কী দেয়?",
+      "options": [
+        "h/e.",
+        "φ/e",
+        "eh",
+        "1/h"
+      ],
+      "options_bn": [
+        "h/e।",
+        "φ/e",
+        "eh",
+        "1/h"
+      ],
+      "answer": 0,
+      "explanation": "h/e. For a given photocathode eVs=hf−φ; a plot of stopping potential Vs versus frequency f has slope h/e and threshold intercept φ/h.",
+      "explanation_bn": "h/e। নির্দিষ্ট আলোকক্যাথোডে eVs=hf−φ; Vs বনাম f-এর ঢাল h/e এবং প্রান্তিক কম্পাঙ্ক φ/h।"
+    }
+  ]
+}

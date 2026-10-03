@@ -1,0 +1,32 @@
+{
+  "slug": "honours-vitamin-c-iodimetry",
+  "title_en": "Vitamin C by direct iodimetry — lab viva",
+  "title_bn": "প্রত্যক্ষ আয়োডিমেট্রিতে ভিটামিন C — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What is the ascorbic acid to iodine mole ratio?",
+      "q_bn": "অ্যাসকরবিক অ্যাসিড ও আয়োডিনের মোল অনুপাত?",
+      "options": [
+        "One to one.",
+        "One to two",
+        "Two to one",
+        "One to four"
+      ],
+      "options_bn": [
+        "এক-এক।",
+        "One to two",
+        "Two to one",
+        "One to four"
+      ],
+      "answer": 0,
+      "explanation": "One to one. Ascorbic acid reduces iodine to iodide in a 1:1 molar reaction. Excess iodine forms a blue complex with starch, indicating the endpoint.",
+      "explanation_bn": "এক-এক। অ্যাসকরবিক অ্যাসিড আয়োডিনকে ১:১ মোল অনুপাতে আয়োডাইডে বিজারিত করে। অতিরিক্ত আয়োডিন শ্বেতসারে নীল রং দিয়ে সমাপ্তি জানায়।"
+    }
+  ]
+}

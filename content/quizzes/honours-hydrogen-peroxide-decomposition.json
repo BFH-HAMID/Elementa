@@ -1,0 +1,32 @@
+{
+  "slug": "honours-hydrogen-peroxide-decomposition",
+  "title_en": "Hydrogen peroxide decomposition kinetics — lab viva",
+  "title_bn": "হাইড্রোজেন পারঅক্সাইড বিয়োজনের গতি — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "How many moles of peroxide form one mole of O₂?",
+      "q_bn": "এক মোল O₂ পেতে কত মোল পারঅক্সাইড লাগে?",
+      "options": [
+        "Two.",
+        "One",
+        "Four",
+        "Half"
+      ],
+      "options_bn": [
+        "দুই।",
+        "One",
+        "Four",
+        "Half"
+      ],
+      "answer": 0,
+      "explanation": "Two. 2H₂O₂→2H₂O+O₂. Under controlled catalyst and temperature, use O₂ evolved or residual peroxide titration to assess a rate law; apparent first-order behaviour must be tested, not presumed.",
+      "explanation_bn": "দুই। ২H₂O₂→২H₂O+O₂। নিয়ন্ত্রিত অনুঘটক-তাপে উৎপন্ন O₂ বা অবশিষ্ট পারঅক্সাইড মেপে হারসূত্র যাচাই; প্রথম-ক্রম আগে থেকে ধরে নেবেন না।"
+    }
+  ]
+}

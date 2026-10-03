@@ -1,0 +1,32 @@
+{
+  "slug": "honours-specific-heat-calorimetry-honours",
+  "title_en": "Specific heat by mixing calorimetry — lab viva",
+  "title_bn": "মিশ্রণ ক্যালরিমিটিতে আপেক্ষিক তাপ — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "What assumption underlies heat lost equals heat gained?",
+      "q_bn": "হারানো তাপ = পাওয়া তাপ ধরতে কী অনুমান?",
+      "options": [
+        "Negligible exchange with surroundings.",
+        "No water in the calorimeter",
+        "No temperature difference",
+        "Zero specimen mass"
+      ],
+      "options_bn": [
+        "পরিবেশের সঙ্গে তাপ বিনিময় নগণ্য।",
+        "No water in the calorimeter",
+        "No temperature difference",
+        "Zero specimen mass"
+      ],
+      "answer": 0,
+      "explanation": "Negligible exchange with surroundings. In an insulated mixing experiment, heat lost by hot specimen equals heat gained by water and calorimeter: ms cs(Ts−Tf)=(mw cw+Cc)(Tf−Tw).",
+      "explanation_bn": "পরিবেশের সঙ্গে তাপ বিনিময় নগণ্য। তাপরোধী মিশ্রণে গরম নমুনার হারানো তাপ = জল ও পাত্রের প্রাপ্ত তাপ: ms cs(Ts−Tf)=(mw cw+Cc)(Tf−Tw)।"
+    }
+  ]
+}

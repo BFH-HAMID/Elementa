@@ -1,0 +1,32 @@
+{
+  "slug": "honours-atwood-machine-acceleration",
+  "title_en": "Atwood machine acceleration — lab viva",
+  "title_bn": "অ্যাটউড যন্ত্রে ত্বরণ — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "If m₁=m₂ in the ideal model, acceleration is?",
+      "q_bn": "আদর্শ মডেলে m₁=m₂ হলে ত্বরণ কত?",
+      "options": [
+        "Zero.",
+        "g",
+        "2g",
+        "g/2"
+      ],
+      "options_bn": [
+        "শূন্য।",
+        "g",
+        "2g",
+        "g/2"
+      ],
+      "answer": 0,
+      "explanation": "Zero. For ideal pulley and cord, two masses m₁>m₂ have a=(m₁−m₂)g/(m₁+m₂) from coupled Newton equations; pulley inertia reduces measured a.",
+      "explanation_bn": "শূন্য। আদর্শ পুলি ও সুতোয় m₁>m₂ হলে যুগ্ম নিউটন সমীকরণে a=(m₁−m₂)g/(m₁+m₂); পুলির জড়তায় মাপা a কমে।"
+    }
+  ]
+}

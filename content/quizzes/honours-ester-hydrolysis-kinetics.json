@@ -1,0 +1,32 @@
+{
+  "slug": "honours-ester-hydrolysis-kinetics",
+  "title_en": "Acid-catalysed ester hydrolysis kinetics — lab viva",
+  "title_bn": "অম্ল-অনুঘটিত এস্টার হাইড্রোলাইসিসের গতিবিদ্যা — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why is the reaction called pseudo-first-order?",
+      "q_bn": "বিক্রিয়াকে ছদ্ম প্রথম-ক্রম কেন বলি?",
+      "options": [
+        "Water is in such excess that its concentration is effectively constant.",
+        "Because no water participates",
+        "Because ester concentration is constant",
+        "Because catalyst is consumed"
+      ],
+      "options_bn": [
+        "পানি এত বেশি যে তার ঘনত্ব প্রায় স্থির।",
+        "Because no water participates",
+        "Because ester concentration is constant",
+        "Because catalyst is consumed"
+      ],
+      "answer": 0,
+      "explanation": "Water is in such excess that its concentration is effectively constant. With water in large excess and constant acid catalyst, ester decay can be pseudo-first-order: ln[(V∞−V₀)/(V∞−Vt)]=kt when titration volume reflects produced acid.",
+      "explanation_bn": "পানি এত বেশি যে তার ঘনত্ব প্রায় স্থির। পানি অনেক বেশি ও অম্ল অনুঘটক স্থির হলে এস্টারের ক্ষয় ছদ্ম প্রথম-ক্রম: উৎপন্ন অম্লের টাইট্রেশন আয়তনে ln[(V∞−V₀)/(V∞−Vt)]=kt।"
+    }
+  ]
+}

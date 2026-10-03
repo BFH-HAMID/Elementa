@@ -1,0 +1,32 @@
+{
+  "slug": "honours-capillary-rise-tension",
+  "title_en": "Surface tension from capillary rise — lab viva",
+  "title_bn": "কৈশিক উত্থানে পৃষ্ঠটান — ব্যবহারিক প্রশ্ন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "For complete wetting, what is cosθ approximately?",
+      "q_bn": "সম্পূর্ণ ভেজায় cosθ প্রায় কত?",
+      "options": [
+        "One.",
+        "Zero",
+        "Negative one",
+        "Undefined"
+      ],
+      "options_bn": [
+        "এক।",
+        "Zero",
+        "Negative one",
+        "Undefined"
+      ],
+      "answer": 0,
+      "explanation": "One. For a clean circular capillary, vertical surface force 2πrγcosθ balances liquid-column weight πr²hρg; γ=ρgrh/(2cosθ) (meniscus correction may be needed).",
+      "explanation_bn": "এক। পরিষ্কার বৃত্তাকার নলে ২πrγcosθ বল ও πr²hρg তরলস্তম্ভের ওজন সমান; γ=ρgrh/(২cosθ) (meniscus সংশোধন লাগতে পারে)।"
+    }
+  ]
+}

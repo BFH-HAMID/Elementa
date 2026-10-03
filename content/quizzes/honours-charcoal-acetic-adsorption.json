@@ -1,0 +1,32 @@
+{
+  "slug": "honours-charcoal-acetic-adsorption",
+  "title_en": "Acetic acid adsorption on charcoal — lab viva",
+  "title_bn": "কাঠকয়লায় অ্যাসিটিক অ্যাসিড শোষণ — ব্যবহারিক প্রশ্ন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Concept check after the practical.",
+  "description_bn": "পরীক্ষার পর ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "Why measure equilibrium concentration Ce instead of assuming C₀ remains?",
+      "q_bn": "C₀ স্থির না ধরে সাম্য ঘনত্ব Ce মাপি কেন?",
+      "options": [
+        "Adsorption removes solute from the liquid phase.",
+        "Because charcoal creates acid",
+        "Because volume is always zero",
+        "Because titration measures only temperature"
+      ],
+      "options_bn": [
+        "শোষণে তরল থেকে দ্রব কমে যায়।",
+        "Because charcoal creates acid",
+        "Because volume is always zero",
+        "Because titration measures only temperature"
+      ],
+      "answer": 0,
+      "explanation": "Adsorption removes solute from the liquid phase. At equilibrium the adsorbed amount per mass is x/m=(C₀−Ce)V/m. A Freundlich fit ln(x/m)=lnK+(1/n)lnCe is empirical over a limited concentration range.",
+      "explanation_bn": "শোষণে তরল থেকে দ্রব কমে যায়। সাম্যে প্রতি ভরের শোষিত পরিমাণ x/m=(C₀−Ce)V/m। Freundlich রেখা ln(x/m)=lnK+(১/n)lnCe সীমিত ঘনত্বে পরীক্ষালব্ধ।"
+    }
+  ]
+}

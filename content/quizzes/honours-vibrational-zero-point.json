@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Its lowest level is hν/2.",
       "explanation_bn": "নিম্নতম স্তর hν/২।"
+    },
+    {
+      "q": "If hν=0.20 eV, harmonic ground energy E₀?",
+      "q_bn": "hν=০.২০ eV হলে হারমোনিক ভূমিস্তরের শক্তি E₀?",
+      "options": [
+        "0.10 eV",
+        "0",
+        "0.20 eV",
+        "0.40 eV"
+      ],
+      "options_bn": [
+        "0.10 eV",
+        "0",
+        "0.20 eV",
+        "0.40 eV"
+      ],
+      "answer": 0,
+      "explanation": "Use E_v=(v+\\tfrac12)h\\nu;\\quad v=0,1,2,\\ldots. If hν=0.20 eV, ground-state energy is 0.10 eV.",
+      "explanation_bn": "E_v=(v+\\tfrac12)h\\nu;\\quad v=0,1,2,\\ldots ব্যবহার করুন। hν=০.২০ eV হলে ভূমিস্তরের শক্তি ০.১০ eV।"
+    },
+    {
+      "q": "Why can a real molecular vibrational ladder deviate from equal spacing?",
+      "q_bn": "বাস্তব অণুর কম্পনস্তর সমান ব্যবধান থেকে কেন সরে?",
+      "options": [
+        "Anharmonic potential",
+        "Exactly quadratic potential",
+        "Zero-point energy alone",
+        "No chemical bonds"
+      ],
+      "options_bn": [
+        "Anharmonic potential",
+        "Exactly quadratic potential",
+        "Zero-point energy alone",
+        "No chemical bonds"
+      ],
+      "answer": 0,
+      "explanation": "Harmonic approximation about equilibrium bond length; real molecular potentials are anharmonic.",
+      "explanation_bn": "সাম্য বন্ধনদৈর্ঘ্যের কাছে হারমোনিক অনুমান; বাস্তবে বিভব anharmonic।"
     }
   ]
 }

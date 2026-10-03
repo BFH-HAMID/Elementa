@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "s≈Ksp/c.",
       "explanation_bn": "s≈Ksp/c।"
+    },
+    {
+      "q": "For Ksp=10⁻⁸ (mol/L)² and common-ion c=0.01 mol/L, approximate s?",
+      "q_bn": "Ksp=১০⁻⁸ (mol/L)² ও সাধারণ আয়ন c=০.০১ mol/L হলে আনুমানিক s?",
+      "options": [
+        "10⁻⁶ mol/L",
+        "10⁻⁴ mol/L",
+        "10⁻² mol/L",
+        "10⁻¹⁰ mol/L"
+      ],
+      "options_bn": [
+        "10⁻⁶ mol/L",
+        "10⁻⁴ mol/L",
+        "10⁻² mol/L",
+        "10⁻¹⁰ mol/L"
+      ],
+      "answer": 0,
+      "explanation": "Use K_{sp}=(c+s)s;\\quad s\\ll c. If Ksp=10⁻⁸ (mol/L)² and c=0.01 mol/L, s≈10⁻⁶ mol/L.",
+      "explanation_bn": "K_{sp}=(c+s)s;\\quad s\\ll c ব্যবহার করুন। Ksp=১০⁻⁸ (mol/L)² ও c=০.০১ mol/L হলে s≈১০⁻⁶ mol/L।"
+    },
+    {
+      "q": "When should the quadratic rather than s≈Ksp/c be solved?",
+      "q_bn": "s≈Ksp/c-এর বদলে কখন দ্বিঘাত সমাধান করবেন?",
+      "options": [
+        "When s is not negligible relative to c",
+        "Whenever c≫s",
+        "Only for pure solids",
+        "Only at 0 K"
+      ],
+      "options_bn": [
+        "When s is not negligible relative to c",
+        "Whenever c≫s",
+        "Only for pure solids",
+        "Only at 0 K"
+      ],
+      "answer": 0,
+      "explanation": "c≫s; no side reactions and constant activity coefficients; otherwise solve quadratic and use activities.",
+      "explanation_bn": "c≫s; পার্শ্ববিক্রিয়া ও সক্রিয়তা-সহগ পরিবর্তন নেই; নইলে দ্বিঘাত সমাধান ও সক্রিয়তা দরকার।"
     }
   ]
 }

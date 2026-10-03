@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "With the stated sign convention W=∫P dV>0 for expansion.",
       "explanation_bn": "নির্ধারিত চিহ্নরীতিতে প্রসারণে W=∫P dV>০।"
+    },
+    {
+      "q": "If PiVi=400 J, PfVf=300 J and γ=1.4, work by expanding gas?",
+      "q_bn": "PiVi=৪০০ J, PfVf=৩০০ J ও γ=১.৪ হলে গ্যাসের করা কাজ?",
+      "options": [
+        "250 J",
+        "100 J",
+        "40 J",
+        "700 J"
+      ],
+      "options_bn": [
+        "250 J",
+        "100 J",
+        "40 J",
+        "700 J"
+      ],
+      "answer": 0,
+      "explanation": "Use W=-\\Delta U=nC_V(T_i-T_f)=\\frac{nR(T_i-T_f)}{\\gamma-1}. During expansion PiVi=400 J and PfVf=300 J at γ=1.4, work is 250 J.",
+      "explanation_bn": "W=-\\Delta U=nC_V(T_i-T_f)=\\frac{nR(T_i-T_f)}{\\gamma-1} ব্যবহার করুন। প্রসারণে PiVi=৪০০ J ও PfVf=৩০০ J, γ=১.৪ হলে কাজ ২৫০ J।"
+    },
+    {
+      "q": "Can the reversible adiabatic work expression be used unchanged for free expansion?",
+      "q_bn": "প্রত্যাবর্তী অ্যাডিয়াবেটিক কাজের সূত্র কি মুক্ত প্রসারণে অপরিবর্তিত চলে?",
+      "options": [
+        "No",
+        "Yes, always",
+        "Only when γ=1",
+        "Only at high pressure"
+      ],
+      "options_bn": [
+        "No",
+        "Yes, always",
+        "Only when γ=1",
+        "Only at high pressure"
+      ],
+      "answer": 0,
+      "explanation": "Reversible adiabatic ideal gas with constant heat capacities; not an irreversible free expansion.",
+      "explanation_bn": "ধ্রুব তাপধারণ ক্ষমতার আদর্শ গ্যাসে প্রত্যাবর্তী অ্যাডিয়াবেটিক প্রক্রিয়া; মুক্ত প্রসারণে নয়।"
     }
   ]
 }

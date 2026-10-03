@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Differentiate ω with respect to k.",
       "explanation_bn": "k অনুযায়ী ω অন্তরক করুন।"
+    },
+    {
+      "q": "For dispersion ω=ck, what is dω/dk?",
+      "q_bn": "ω=ck হলে dω/dk কত?",
+      "options": [
+        "c",
+        "1/c",
+        "k",
+        "0"
+      ],
+      "options_bn": [
+        "c",
+        "1/c",
+        "k",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Use \\cos(k_1x-\\omega_1t)+\\cos(k_2x-\\omega_2t)=2\\cos(\\Delta kx/2-\\Delta\\omega t/2)\\cos(\\bar kx-\\bar\\omega t). For ω=ck in a nondispersive medium v_g=c.",
+      "explanation_bn": "\\cos(k_1x-\\omega_1t)+\\cos(k_2x-\\omega_2t)=2\\cos(\\Delta kx/2-\\Delta\\omega t/2)\\cos(\\bar kx-\\bar\\omega t) ব্যবহার করুন। অবিচ্ছুরণশীল মাধ্যমে ω=ck হলে v_g=c।"
+    },
+    {
+      "q": "In a strongly absorbing medium, is group velocity necessarily signal speed?",
+      "q_bn": "প্রবল শোষণকারী মাধ্যমে গুচ্ছবেগ কি নিশ্চিতভাবে সংকেতবেগ?",
+      "options": [
+        "No",
+        "Yes, by definition",
+        "Only at zero frequency",
+        "Always speed of light"
+      ],
+      "options_bn": [
+        "No",
+        "Yes, by definition",
+        "Only at zero frequency",
+        "Always speed of light"
+      ],
+      "answer": 0,
+      "explanation": "A narrow wave packet in a smooth dispersion relation; group velocity is not automatically signal speed in absorbing media.",
+      "explanation_bn": "মসৃণ বিচ্ছুরণ সম্পর্কে সংকীর্ণ তরঙ্গগুচ্ছ; শোষণকারী মাধ্যমে গুচ্ছবেগ সবসময় সংকেতবেগ নয়।"
     }
   ]
 }

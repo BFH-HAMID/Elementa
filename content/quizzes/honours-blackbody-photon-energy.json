@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Energy varies inversely with vacuum wavelength.",
       "explanation_bn": "শক্তি শূন্যস্থানের তরঙ্গদৈর্ঘ্যের ব্যস্তানুপাতিক।"
+    },
+    {
+      "q": "If vacuum wavelength triples, photon energy becomes?",
+      "q_bn": "শূন্যস্থানে তরঙ্গদৈর্ঘ্য তিন গুণ হলে ফোটনশক্তি?",
+      "options": [
+        "One third",
+        "Three times",
+        "One half",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "One third",
+        "Three times",
+        "One half",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Use \\nu=c/\\lambda. A photon of twice the wavelength has half the energy.",
+      "explanation_bn": "\\nu=c/\\lambda ব্যবহার করুন। দ্বিগুণ তরঙ্গদৈর্ঘ্যের ফোটনের শক্তি অর্ধেক।"
+    },
+    {
+      "q": "Can wavelength in a medium be directly substituted for vacuum λ in E=hc/λ?",
+      "q_bn": "E=hc/λ-এ মাধ্যমের তরঙ্গদৈর্ঘ্য সরাসরি বসানো যায়?",
+      "options": [
+        "No, use vacuum wavelength",
+        "Yes, always",
+        "Only for ultraviolet",
+        "Only for photons at rest"
+      ],
+      "options_bn": [
+        "No, use vacuum wavelength",
+        "Yes, always",
+        "Only for ultraviolet",
+        "Only for photons at rest"
+      ],
+      "answer": 0,
+      "explanation": "Vacuum wavelength is required; in a medium frequency and photon energy stay fixed while wavelength changes.",
+      "explanation_bn": "শূন্যস্থানের তরঙ্গদৈর্ঘ্য লাগবে; মাধ্যমে কম্পাঙ্ক ও ফোটনশক্তি অপরিবর্তিত থেকেও তরঙ্গদৈর্ঘ্য বদলায়।"
     }
   ]
 }

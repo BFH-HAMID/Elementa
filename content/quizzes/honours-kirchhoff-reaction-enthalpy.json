@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Integral of positive ΔCp° over rising T is positive.",
       "explanation_bn": "বাড়ন্ত T-তে ধনাত্মক ΔCp°-এর সমাকলন ধনাত্মক।"
+    },
+    {
+      "q": "ΔCp°=10 J/(mol K) from 300 to 400 K changes ΔH° by?",
+      "q_bn": "৩০০ থেকে ৪০০ K-তে ΔCp°=১০ J/(mol K) হলে ΔH° কত বদলায়?",
+      "options": [
+        "+1 kJ/mol",
+        "−1 kJ/mol",
+        "+10 kJ/mol",
+        "0"
+      ],
+      "options_bn": [
+        "+1 kJ/mol",
+        "−1 kJ/mol",
+        "+10 kJ/mol",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Use d\\Delta_rH^\\circ/dT=\\Delta_rC_p^\\circ. If ΔCp°=10 J/(mol K) from 300 to 400 K, ΔH° rises by 1.0 kJ/mol.",
+      "explanation_bn": "d\\Delta_rH^\\circ/dT=\\Delta_rC_p^\\circ ব্যবহার করুন। ৩০০ থেকে ৪০০ K-তে ΔCp°=১০ J/(mol K) হলে ΔH° ১.০ kJ/mol বাড়ে।"
+    },
+    {
+      "q": "What extra contribution is needed across a phase transition?",
+      "q_bn": "দশা পরিবর্তনের মধ্য দিয়ে গেলে কোন অতিরিক্ত অবদান লাগে?",
+      "options": [
+        "Latent heat",
+        "Only volume of apparatus",
+        "Only pH",
+        "No correction"
+      ],
+      "options_bn": [
+        "Latent heat",
+        "Only volume of apparatus",
+        "Only pH",
+        "No correction"
+      ],
+      "answer": 0,
+      "explanation": "Same specified reaction and consistent standard states; phase transitions require additional latent-heat terms.",
+      "explanation_bn": "একই বিক্রিয়া ও সঙ্গত মান অবস্থা; দশা পরিবর্তনে সুপ্ততাপ যোগ করতে হয়।"
     }
   ]
 }

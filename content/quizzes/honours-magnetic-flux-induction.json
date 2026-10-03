@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Flux linkage is NΦB.",
       "explanation_bn": "ফ্লাক্স-সংযোগ NΦB।"
+    },
+    {
+      "q": "For 10 turns, flux per turn drops 0.02 Wb in 1 s. Emf magnitude?",
+      "q_bn": "১০ পাকে প্রতি পাকের ফ্লাক্স ১ s-এ ০.০২ Wb কমলে আবিষ্ট বিভব?",
+      "options": [
+        "0.2 V",
+        "0.02 V",
+        "2 V",
+        "20 V"
+      ],
+      "options_bn": [
+        "0.2 V",
+        "0.02 V",
+        "2 V",
+        "20 V"
+      ],
+      "answer": 0,
+      "explanation": "Use \\Lambda=N\\Phi_B;\\quad\\mathcal E=-d\\Lambda/dt. A 10-turn coil with flux per turn falling by 0.02 Wb in 1 s has emf magnitude 0.2 V.",
+      "explanation_bn": "\\Lambda=N\\Phi_B;\\quad\\mathcal E=-d\\Lambda/dt ব্যবহার করুন। ১০ পাক কুণ্ডলীতে প্রতি পাকে ফ্লাক্স ১ s-এ ০.০২ Wb কমলে বিভবের মান ০.২ V।"
+    },
+    {
+      "q": "What does the minus sign in Faraday's law represent?",
+      "q_bn": "ফ্যারাডের সূত্রে ঋণ চিহ্ন কী নির্দেশ করে?",
+      "options": [
+        "Lenz's opposing direction",
+        "Negative energy",
+        "A negative turn count",
+        "No actual emf"
+      ],
+      "options_bn": [
+        "Lenz's opposing direction",
+        "Negative energy",
+        "A negative turn count",
+        "No actual emf"
+      ],
+      "answer": 0,
+      "explanation": "Same flux through each tightly coupled turn; minus sign expresses Lenz's law and orientation convention.",
+      "explanation_bn": "সব পাকে একই ফ্লাক্স; ঋণ চিহ্ন লেঞ্জের সূত্র ও অভিমুখ রীতি নির্দেশ করে।"
     }
   ]
 }

@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "At zero path difference fields add in phase.",
       "explanation_bn": "শূন্য পথ পার্থক্যে তরঙ্গ একই দশায় যোগ হয়।"
+    },
+    {
+      "q": "For λ=500 nm and a=0.10 mm, first minimum angle approximately?",
+      "q_bn": "λ=৫০০ nm ও a=০.১০ mm হলে প্রথম অন্ধকারের কোণ প্রায়?",
+      "options": [
+        "0.005 rad",
+        "0.05 rad",
+        "0.5 rad",
+        "0.00005 rad"
+      ],
+      "options_bn": [
+        "0.005 rad",
+        "0.05 rad",
+        "0.5 rad",
+        "0.00005 rad"
+      ],
+      "answer": 0,
+      "explanation": "Use E(\\theta)\\propto\\int_{-a/2}^{a/2}e^{ikx\\sin\\theta}dx\\propto\\frac{\\sin(\\pi a\\sin\\theta/\\lambda)}{\\pi a\\sin\\theta/\\lambda}. For λ=500 nm and a=0.10 mm, the first minimum is near θ=0.005 rad.",
+      "explanation_bn": "E(\\theta)\\propto\\int_{-a/2}^{a/2}e^{ikx\\sin\\theta}dx\\propto\\frac{\\sin(\\pi a\\sin\\theta/\\lambda)}{\\pi a\\sin\\theta/\\lambda} ব্যবহার করুন। λ=৫০০ nm ও a=০.১০ mm-এ প্রথম অন্ধকার প্রায় θ=০.০০৫ rad।"
+    },
+    {
+      "q": "Does m=0 in a sinθ=mλ denote a minimum?",
+      "q_bn": "a sinθ=mλ-এ m=০ কি অন্ধকার নির্দেশ করে?",
+      "options": [
+        "No, it is the central maximum",
+        "Yes, the first minimum",
+        "Only for blue light",
+        "Only at θ=90°"
+      ],
+      "options_bn": [
+        "No, it is the central maximum",
+        "Yes, the first minimum",
+        "Only for blue light",
+        "Only at θ=90°"
+      ],
+      "answer": 0,
+      "explanation": "Fraunhofer far field, uniform illumination, m nonzero integer; m=0 is the central maximum.",
+      "explanation_bn": "দূরক্ষেত্র ও সুষম আলোকন; m অশূন্য পূর্ণসংখ্যা, m=০ কেন্দ্রীয় উজ্জ্বল অংশ।"
     }
   ]
 }

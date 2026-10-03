@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Parallel (p) reflection coefficient vanishes.",
       "explanation_bn": "সমান্তরাল (p) প্রতিফলন সহগ শূন্য।"
+    },
+    {
+      "q": "For air to a medium with n=1.5, Brewster angle is near?",
+      "q_bn": "বাতাস থেকে n=১.৫ মাধ্যমে ব্রুস্টার কোণ প্রায়?",
+      "options": [
+        "56°",
+        "30°",
+        "90°",
+        "10°"
+      ],
+      "options_bn": [
+        "56°",
+        "30°",
+        "90°",
+        "10°"
+      ],
+      "answer": 0,
+      "explanation": "Use \\theta_t=\\pi/2-\\theta_B;\\quad n_1\\sin\\theta_B=n_2\\sin\\theta_t. From air to glass n₂=1.5, θB≈56.3°.",
+      "explanation_bn": "\\theta_t=\\pi/2-\\theta_B;\\quad n_1\\sin\\theta_B=n_2\\sin\\theta_t ব্যবহার করুন। বাতাস থেকে n₂=১.৫ কাচে θB≈৫৬.৩°।"
+    },
+    {
+      "q": "For which interface does the elementary Brewster-angle derivation apply?",
+      "q_bn": "ব্রুস্টার কোণের সহজ প্রতিপাদন কোন সীমায় প্রযোজ্য?",
+      "options": [
+        "Flat nonabsorbing dielectric interface",
+        "Arbitrary absorbing metal",
+        "Rough scattering interface",
+        "A vacuum without an interface"
+      ],
+      "options_bn": [
+        "Flat nonabsorbing dielectric interface",
+        "Arbitrary absorbing metal",
+        "Rough scattering interface",
+        "A vacuum without an interface"
+      ],
+      "answer": 0,
+      "explanation": "Nonabsorbing isotropic dielectrics and flat interface; metals need complex refractive index.",
+      "explanation_bn": "শোষণহীন সমদিকী ডাইইলেকট্রিক ও সমতল সীমা; ধাতুতে জটিল প্রতিসরাঙ্ক লাগে।"
     }
   ]
 }

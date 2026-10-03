@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "s=√Ksp.",
       "explanation_bn": "s=√Ksp।"
+    },
+    {
+      "q": "If concentration Ksp=10⁻⁸ (mol/L)² for AB in pure water, s?",
+      "q_bn": "AB-এর ঘনত্বভিত্তিক Ksp=১০⁻⁸ (mol/L)² হলে বিশুদ্ধ পানিতে s?",
+      "options": [
+        "10⁻⁴ mol/L",
+        "10⁻⁸ mol/L",
+        "10⁻² mol/L",
+        "10⁴ mol/L"
+      ],
+      "options_bn": [
+        "10⁻⁴ mol/L",
+        "10⁻⁸ mol/L",
+        "10⁻² mol/L",
+        "10⁴ mol/L"
+      ],
+      "answer": 0,
+      "explanation": "Use [A^+]=[B^-]=s;\\quad K_{sp}=[A^+][B^-]. If Ksp=10⁻⁸ (mol/L)² then s=10⁻⁴ mol/L in pure water.",
+      "explanation_bn": "[A^+]=[B^-]=s;\\quad K_{sp}=[A^+][B^-] ব্যবহার করুন। Ksp=১০⁻⁸ (mol/L)² হলে বিশুদ্ধ পানিতে s=১০⁻⁴ mol/L।"
+    },
+    {
+      "q": "Which condition is needed for s=√Ksp?",
+      "q_bn": "s=√Ksp-এর জন্য কোন শর্ত দরকার?",
+      "options": [
+        "No added common ion",
+        "High concentration of added A+",
+        "Strong complex formation",
+        "Significant hydrolysis"
+      ],
+      "options_bn": [
+        "No added common ion",
+        "High concentration of added A+",
+        "Strong complex formation",
+        "Significant hydrolysis"
+      ],
+      "answer": 0,
+      "explanation": "No common ions, complexes or hydrolysis; thermodynamic Ksp uses activities and is dimensionless.",
+      "explanation_bn": "সাধারণ আয়ন, জটিল আয়ন বা hydrolysis নেই; প্রকৃত Ksp সক্রিয়তাভিত্তিক মাত্রাহীন।"
     }
   ]
 }

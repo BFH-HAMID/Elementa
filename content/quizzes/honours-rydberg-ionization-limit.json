@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Balmer transitions end at n=2.",
       "explanation_bn": "বালমার পরিবর্তন n=২-এ শেষ হয়।"
+    },
+    {
+      "q": "For RH≈1.097×10⁷ m⁻¹, Balmer limit is nearest?",
+      "q_bn": "RH≈১.০৯৭×১০⁷ m⁻¹ হলে বালমার সীমার তরঙ্গদৈর্ঘ্য প্রায়?",
+      "options": [
+        "365 nm",
+        "121 nm",
+        "656 nm",
+        "1000 nm"
+      ],
+      "options_bn": [
+        "365 nm",
+        "121 nm",
+        "656 nm",
+        "1000 nm"
+      ],
+      "answer": 0,
+      "explanation": "Use 1/\\lambda=R_H(1/2^2-1/n_2^2);\\quad n_2\\to\\infty. With RH≈1.097×10⁷ m⁻¹, λlimit≈365 nm.",
+      "explanation_bn": "1/\\lambda=R_H(1/2^2-1/n_2^2);\\quad n_2\\to\\infty ব্যবহার করুন। RH≈১.০৯৭×১০⁷ m⁻¹ হলে λlimit≈৩৬৫ nm।"
+    },
+    {
+      "q": "Which lower hydrogen level defines Balmer transitions?",
+      "q_bn": "হাইড্রোজেনের কোন নিম্ন স্তরে বালমার পরিবর্তন ঘটে?",
+      "options": [
+        "n=2",
+        "n=1",
+        "n=3",
+        "n=∞"
+      ],
+      "options_bn": [
+        "n=2",
+        "n=1",
+        "n=3",
+        "n=∞"
+      ],
+      "answer": 0,
+      "explanation": "Hydrogen spectrum ignoring fine structure and isotope corrections; use reduced-mass Rydberg constant for accuracy.",
+      "explanation_bn": "সূক্ষ্ম গঠন ও আইসোটোপ সংশোধন উপেক্ষিত হাইড্রোজেন; নির্ভুলতায় reduced-mass ধ্রুবক নিন।"
     }
   ]
 }

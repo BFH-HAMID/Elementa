@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "r is inversely proportional to B.",
       "explanation_bn": "r, B-এর ব্যস্তানুপাতিক।"
+    },
+    {
+      "q": "For fixed p⊥ and q, triple B. What happens to radius?",
+      "q_bn": "p⊥ ও q স্থির রেখে B তিন গুণ করলে ব্যাসার্ধ?",
+      "options": [
+        "One third",
+        "Triple",
+        "One half",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "One third",
+        "Triple",
+        "One half",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Use \\lvert q\\rvert v_\\perp B=p_\\perp v_\\perp/r. At fixed momentum, doubling B halves r.",
+      "explanation_bn": "\\lvert q\\rvert v_\\perp B=p_\\perp v_\\perp/r ব্যবহার করুন। স্থির ভরবেগে B দ্বিগুণ করলে r অর্ধেক।"
+    },
+    {
+      "q": "With velocity partly along B, what is the trajectory in a uniform field?",
+      "q_bn": "সুষম ক্ষেত্রে B বরাবর বেগের অংশ থাকলে গতিপথ?",
+      "options": [
+        "Helix",
+        "Circle in a plane only",
+        "Straight perpendicular line",
+        "Parabola"
+      ],
+      "options_bn": [
+        "Helix",
+        "Circle in a plane only",
+        "Straight perpendicular line",
+        "Parabola"
+      ],
+      "answer": 0,
+      "explanation": "Uniform field and motion with a nonzero perpendicular component; parallel velocity produces a helix.",
+      "explanation_bn": "সুষম ক্ষেত্র ও লম্ব বেগ-উপাংশ; সমান্তরাল বেগ থাকলে সর্পিল পথ।"
     }
   ]
 }

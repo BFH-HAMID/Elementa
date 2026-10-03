@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Work is needed to remove a bound test mass to infinity.",
       "explanation_bn": "আবদ্ধ ভরকে অসীমে সরাতে কাজ লাগে।"
+    },
+    {
+      "q": "How much energy is required to move m from R to 2R around mass M?",
+      "q_bn": "M-এর চারপাশে m-কে R থেকে ২R-এ নিতে কত শক্তি লাগে?",
+      "options": [
+        "GMm/(2R)",
+        "GMm/R",
+        "2GMm/R",
+        "Zero"
+      ],
+      "options_bn": [
+        "GMm/(2R)",
+        "GMm/R",
+        "2GMm/R",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "Use U(r)-U(\\infty)=-\\int_\\infty^r(-GMm/r'^2)\\,dr'. Moving from r=R to 2R requires positive work GMm/(2R).",
+      "explanation_bn": "U(r)-U(\\infty)=-\\int_\\infty^r(-GMm/r'^2)\\,dr' ব্যবহার করুন। R থেকে ২R-এ নিতে ধনাত্মক কাজ GMm/(২R) লাগে।"
+    },
+    {
+      "q": "Where is potential energy defined as zero in U=−GMm/r?",
+      "q_bn": "U=−GMm/r-এ বিভবশক্তির শূন্য কোথায়?",
+      "options": [
+        "At infinity",
+        "At r=R",
+        "At r=0",
+        "At 2R"
+      ],
+      "options_bn": [
+        "At infinity",
+        "At r=R",
+        "At r=0",
+        "At 2R"
+      ],
+      "answer": 0,
+      "explanation": "Valid outside a spherically symmetric source or point mass; ignore other gravitating bodies.",
+      "explanation_bn": "গোলীয় প্রতিসম উৎসের বাইরে বা বিন্দুভরে প্রযোজ্য; অন্য উৎস উপেক্ষিত।"
     }
   ]
 }

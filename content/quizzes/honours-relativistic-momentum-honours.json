@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "γ approaches 1 in the low-speed limit.",
       "explanation_bn": "কম বেগে γ→১।"
+    },
+    {
+      "q": "For a massive particle with v≪c, γmv approaches?",
+      "q_bn": "ভরযুক্ত কণায় v≪c হলে γmv-এর মান?",
+      "options": [
+        "mv",
+        "mc²",
+        "0",
+        "mv²"
+      ],
+      "options_bn": [
+        "mv",
+        "mc²",
+        "0",
+        "mv²"
+      ],
+      "answer": 0,
+      "explanation": "Use P^\\mu=m\\gamma(c,\\mathbf v);\\quad\\gamma=(1-v^2/c^2)^{-1/2}. For v≪c, γ≈1 and p≈mv.",
+      "explanation_bn": "P^\\mu=m\\gamma(c,\\mathbf v);\\quad\\gamma=(1-v^2/c^2)^{-1/2} ব্যবহার করুন। v≪c হলে γ≈১, তাই p≈mv।"
+    },
+    {
+      "q": "Does p=γmv with m=0 calculate photon momentum?",
+      "q_bn": "m=০ নিয়ে p=γmv কি ফোটনের ভরবেগ দেয়?",
+      "options": [
+        "No, use p=E/c",
+        "Yes, p=0",
+        "Yes, p=mc",
+        "Only in glass"
+      ],
+      "options_bn": [
+        "No, use p=E/c",
+        "Yes, p=0",
+        "Yes, p=mc",
+        "Only in glass"
+      ],
+      "answer": 0,
+      "explanation": "Massive particle in an inertial frame; photons have m=0 and p=E/c instead.",
+      "explanation_bn": "জড় কাঠামোয় স্থির ভরযুক্ত কণা; ফোটনের m=০, তার p=E/c।"
     }
   ]
 }

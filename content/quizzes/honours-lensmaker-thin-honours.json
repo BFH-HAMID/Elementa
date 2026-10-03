@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "No relative index contrast means no refraction power.",
       "explanation_bn": "আপেক্ষিক প্রতিসরাঙ্কের পার্থক্য না থাকলে ফোকাস ক্ষমতা থাকে না।"
+    },
+    {
+      "q": "For R₁=R and R₂=−R, thin biconvex lens power 1/f?",
+      "q_bn": "R₁=R ও R₂=−R-এ পাতলা দ্বি-উত্তল লেন্সের ক্ষমতা ১/f?",
+      "options": [
+        "2(n−1)/R",
+        "(n−1)/R",
+        "0",
+        "R/(n−1)"
+      ],
+      "options_bn": [
+        "2(n−1)/R",
+        "(n−1)/R",
+        "0",
+        "R/(n−1)"
+      ],
+      "answer": 0,
+      "explanation": "Use P_1=(n-1)/R_1;\\quad P_2=(1-n)/R_2;\\quad P=1/f=P_1+P_2. For symmetric biconvex radii R₁=R and R₂=−R, 1/f=2(n−1)/R.",
+      "explanation_bn": "P_1=(n-1)/R_1;\\quad P_2=(1-n)/R_2;\\quad P=1/f=P_1+P_2 ব্যবহার করুন। সমমিত দ্বি-উত্তল লেন্সে R₁=R, R₂=−R হলে ১/f=২(n−১)/R।"
+    },
+    {
+      "q": "Which rays justify the thin-lens lensmaker relation?",
+      "q_bn": "পাতলা লেন্স নির্মাতার সূত্রে কোন রশ্মির অনুমান?",
+      "options": [
+        "Paraxial rays",
+        "Only large-angle rays",
+        "Only X-rays",
+        "Any ray with no approximation"
+      ],
+      "options_bn": [
+        "Paraxial rays",
+        "Only large-angle rays",
+        "Only X-rays",
+        "Any ray with no approximation"
+      ],
+      "answer": 0,
+      "explanation": "Thin lens in air with signed radii, paraxial rays and uniform n; thick lenses need separation correction.",
+      "explanation_bn": "বাতাসে পাতলা লেন্স, চিহ্নযুক্ত ব্যাসার্ধ ও অক্ষসংলগ্ন রশ্মি; মোটা লেন্সে সংশোধন লাগে।"
     }
   ]
 }

@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Square-root dependence on C.",
       "explanation_bn": "C-এর বর্গমূলের সমানুপাতিক।"
+    },
+    {
+      "q": "For Ka=10⁻⁵ mol/L and C=0.10 mol/L, estimated pH?",
+      "q_bn": "Ka=১০⁻⁵ mol/L ও C=০.১০ mol/L হলে আনুমানিক pH?",
+      "options": [
+        "3",
+        "5",
+        "1",
+        "7"
+      ],
+      "options_bn": [
+        "3",
+        "5",
+        "1",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "Use x\\ll C\\Rightarrow C-x\\approx C. For Ka=10⁻⁵ mol/L and C=0.10 mol/L, [H+]≈10⁻³ mol/L, pH≈3.",
+      "explanation_bn": "x\\ll C\\Rightarrow C-x\\approx C ব্যবহার করুন। Ka=১০⁻⁵ mol/L ও C=০.১০ mol/L হলে [H+]≈১০⁻³ mol/L, pH≈৩।"
+    },
+    {
+      "q": "What check supports x≈√(KaC)?",
+      "q_bn": "x≈√(KaC) অনুমান যাচাইয়ে কী দেখবেন?",
+      "options": [
+        "x is much less than C",
+        "Ka is larger than C",
+        "Water dominates H+",
+        "All HA fully dissociates"
+      ],
+      "options_bn": [
+        "x is much less than C",
+        "Ka is larger than C",
+        "Water dominates H+",
+        "All HA fully dissociates"
+      ],
+      "answer": 0,
+      "explanation": "Assumes x≪C and water autoionization negligible; validate x/C, and use activities for accurate pH.",
+      "explanation_bn": "x≪C ও পানির স্ববিয়োজন উপেক্ষণীয়; x/C যাচাই ও নির্ভুল pH-তে সক্রিয়তা ব্যবহার করুন।"
     }
   ]
 }

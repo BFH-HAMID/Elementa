@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "No thermodynamic driving force at equilibrium.",
       "explanation_bn": "সাম্যে তাপগতীয় চালিকা শক্তি শূন্য।"
+    },
+    {
+      "q": "If Q=K/e, what is ΔrG?",
+      "q_bn": "Q=K/e হলে ΔrG কত?",
+      "options": [
+        "−RT",
+        "0",
+        "RT",
+        "−2RT"
+      ],
+      "options_bn": [
+        "−RT",
+        "0",
+        "RT",
+        "−2RT"
+      ],
+      "answer": 0,
+      "explanation": "At Q=K/e, ΔrG=RT ln(Q/K)=−RT. Use \\Delta_rG=\\sum_i\\nu_i\\mu_i;\\quad Q=\\prod_i a_i^{\\nu_i}. At equilibrium ΔrG=0, giving ΔrG°=−RT ln K.",
+      "explanation_bn": "Q=K/e হলে ΔrG=RT ln(Q/K)=−RT। \\Delta_rG=\\sum_i\\nu_i\\mu_i;\\quad Q=\\prod_i a_i^{\\nu_i} ব্যবহার করুন। সাম্যে ΔrG=০; ফলে ΔrG°=−RT ln K।"
+    },
+    {
+      "q": "Which Q is appropriate in ΔrG=ΔrG°+RT lnQ?",
+      "q_bn": "ΔrG=ΔrG°+RT lnQ-তে কেমন Q নিতে হয়?",
+      "options": [
+        "Dimensionless activity quotient",
+        "A dimensional pressure product without standardization",
+        "Only product concentrations",
+        "Always Q=0"
+      ],
+      "options_bn": [
+        "Dimensionless activity quotient",
+        "A dimensional pressure product without standardization",
+        "Only product concentrations",
+        "Always Q=0"
+      ],
+      "answer": 0,
+      "explanation": "Activities are dimensionless relative to standards; Q must not be a logarithm of dimensional concentrations.",
+      "explanation_bn": "সক্রিয়তা মান অবস্থার তুলনায় মাত্রাহীন; মাত্রাযুক্ত ঘনত্বের লগারিদম নেবেন না।"
     }
   ]
 }

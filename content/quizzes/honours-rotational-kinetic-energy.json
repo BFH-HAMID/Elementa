@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "K scales as ω².",
       "explanation_bn": "K, ω²-এর সমানুপাতিক।"
+    },
+    {
+      "q": "A rotor has I=2 kg m² and ω=3 rad/s. Its K?",
+      "q_bn": "I=২ kg m² ও ω=৩ rad/s হলে K কত?",
+      "options": [
+        "9 J",
+        "3 J",
+        "18 J",
+        "6 J"
+      ],
+      "options_bn": [
+        "9 J",
+        "3 J",
+        "18 J",
+        "6 J"
+      ],
+      "answer": 0,
+      "explanation": "Use K=\\sum_i\\tfrac12m_i(\\omega r_i)^2. I=2 kg m² and ω=3 rad/s give K=9 J.",
+      "explanation_bn": "K=\\sum_i\\tfrac12m_i(\\omega r_i)^2 ব্যবহার করুন। I=২ kg m² এবং ω=৩ rad/s হলে K=৯ J।"
+    },
+    {
+      "q": "Which motion needs an extra kinetic-energy term beyond ½Iω² about a fixed axis?",
+      "q_bn": "স্থির অক্ষে ½Iω² ছাড়াও কোন গতিতে বাড়তি গতিশক্তি লাগে?",
+      "options": [
+        "Translation of the centre of mass",
+        "Only rotation about the fixed axis",
+        "A stationary body",
+        "Zero angular speed"
+      ],
+      "options_bn": [
+        "Translation of the centre of mass",
+        "Only rotation about the fixed axis",
+        "A stationary body",
+        "Zero angular speed"
+      ],
+      "answer": 0,
+      "explanation": "Rigid body and fixed rotation axis; translating bodies also carry translational energy.",
+      "explanation_bn": "দৃঢ় বস্তু ও স্থির ঘূর্ণন অক্ষ; সরণ থাকলে অতিরিক্ত সরণগত শক্তিও থাকবে।"
     }
   ]
 }

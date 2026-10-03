@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Substitute into the exponential envelope.",
       "explanation_bn": "সূচকীয় আবরণে মান বসান।"
+    },
+    {
+      "q": "At t=4m/b, what fraction of initial amplitude remains?",
+      "q_bn": "t=৪m/b-এ প্রাথমিক বিস্তারের কত অংশ থাকে?",
+      "options": [
+        "1/e²",
+        "1/e",
+        "1/2",
+        "e"
+      ],
+      "options_bn": [
+        "1/e²",
+        "1/e",
+        "1/2",
+        "e"
+      ],
+      "answer": 0,
+      "explanation": "Use r_{\\pm}=-b/(2m)\\pm i\\sqrt{k/m-b^2/(4m^2)}. After t=2m/b, envelope is A₀/e.",
+      "explanation_bn": "r_{\\pm}=-b/(2m)\\pm i\\sqrt{k/m-b^2/(4m^2)} ব্যবহার করুন। t=২m/b পরে বিস্তার A₀/e হয়।"
+    },
+    {
+      "q": "Does the decaying oscillatory envelope apply in the overdamped regime?",
+      "q_bn": "অতিক্ষয়ী অবস্থায় ক্ষয়মান দোলন-আবরণ কি প্রযোজ্য?",
+      "options": [
+        "No, there is no oscillation",
+        "Yes, with constant period",
+        "Only when b=0",
+        "Only at resonance"
+      ],
+      "options_bn": [
+        "No, there is no oscillation",
+        "Yes, with constant period",
+        "Only when b=0",
+        "Only at resonance"
+      ],
+      "answer": 0,
+      "explanation": "Underdamped regime b²<4mk with constant linear damping; overdamping has no oscillatory amplitude envelope.",
+      "explanation_bn": "b²<৪mk এবং ধ্রুব রৈখিক damping; অতিক্ষয়ে দোলনের বিস্তার-আবরণ নেই।"
     }
   ]
 }

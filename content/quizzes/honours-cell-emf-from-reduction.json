@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "0.34−(−0.76)=1.10 V.",
       "explanation_bn": "০.৩৪−(−০.৭৬)=১.১০ V।"
+    },
+    {
+      "q": "Cathode +0.34 V and anode −0.76 V reduction potentials give E°cell?",
+      "q_bn": "ক্যাথোড +০.৩৪ V ও অ্যানোড −০.৭৬ V বিজারণ বিভবে E°cell?",
+      "options": [
+        "1.10 V",
+        "−1.10 V",
+        "0.42 V",
+        "−0.42 V"
+      ],
+      "options_bn": [
+        "1.10 V",
+        "−1.10 V",
+        "0.42 V",
+        "−0.42 V"
+      ],
+      "answer": 0,
+      "explanation": "Use E_{oxidation,anode}=-E_{reduction,anode}. With cathode +0.34 V and anode −0.76 V, Ecell=1.10 V.",
+      "explanation_bn": "E_{oxidation,anode}=-E_{reduction,anode} ব্যবহার করুন। ক্যাথোড +০.৩৪ V ও অ্যানোড −০.৭৬ V হলে Ecell=১.১০ V।"
+    },
+    {
+      "q": "Should standard electrode potentials be multiplied by balancing coefficients?",
+      "q_bn": "সমীকরণ সাম্য করার সহগ দিয়ে কি মান বিভব গুণ করবেন?",
+      "options": [
+        "No",
+        "Yes, always",
+        "Only at the anode",
+        "Only when n=2"
+      ],
+      "options_bn": [
+        "No",
+        "Yes, always",
+        "Only at the anode",
+        "Only when n=2"
+      ],
+      "answer": 0,
+      "explanation": "Standard activities and consistently tabulated reduction potentials; do not multiply electrode potentials by stoichiometric coefficients.",
+      "explanation_bn": "মান সক্রিয়তা ও একই রীতির বিজারণ বিভব; স্টইকিওমেট্রিক সহগ দিয়ে বিভব গুণ করবেন না।"
     }
   ]
 }

@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Square-root dependence on tension.",
       "explanation_bn": "টানের বর্গমূলের সমানুপাতিক।"
+    },
+    {
+      "q": "Increasing tension fourfold with fixed μ changes wave speed by?",
+      "q_bn": "μ স্থির রেখে টান ৪ গুণ করলে তরঙ্গবেগ কত গুণ?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "1/2"
+      ],
+      "options_bn": [
+        "2",
+        "4",
+        "8",
+        "1/2"
+      ],
+      "answer": 0,
+      "explanation": "Use \\mu\\partial_t^2y=\\mathcal T\\partial_x^2y;\\quad\\partial_t^2y=v^2\\partial_x^2y. Four times the tension yields twice the speed at fixed μ.",
+      "explanation_bn": "\\mu\\partial_t^2y=\\mathcal T\\partial_x^2y;\\quad\\partial_t^2y=v^2\\partial_x^2y ব্যবহার করুন। μ স্থির রেখে টান ৪ গুণ করলে বেগ ২ গুণ হয়।"
+    },
+    {
+      "q": "Which wave is described by v=√(𝒯/μ) under the stated model?",
+      "q_bn": "বর্ণিত মডেলে v=√(𝒯/μ) কোন তরঙ্গে প্রযোজ্য?",
+      "options": [
+        "Small transverse disturbance on a uniform string",
+        "Sound in a vacuum",
+        "Light in glass",
+        "A large-amplitude shock"
+      ],
+      "options_bn": [
+        "Small transverse disturbance on a uniform string",
+        "Sound in a vacuum",
+        "Light in glass",
+        "A large-amplitude shock"
+      ],
+      "answer": 0,
+      "explanation": "Small-amplitude transverse waves, uniform flexible string and nearly constant tension.",
+      "explanation_bn": "ক্ষুদ্র বিস্তারের আনুপ্রস্থ তরঙ্গ; সুষম নমনীয় তার ও প্রায় স্থির টান।"
     }
   ]
 }

@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "κ=G(l/A).",
       "explanation_bn": "κ=G(l/A)।"
+    },
+    {
+      "q": "For G=0.01 S and cell constant 100 m⁻¹, κ?",
+      "q_bn": "G=০.০১ S ও কোষধ্রুবক ১০০ m⁻¹ হলে κ?",
+      "options": [
+        "1 S/m",
+        "0.0001 S/m",
+        "100 S/m",
+        "10 S/m"
+      ],
+      "options_bn": [
+        "1 S/m",
+        "0.0001 S/m",
+        "100 S/m",
+        "10 S/m"
+      ],
+      "answer": 0,
+      "explanation": "Use G=\\kappa A/l. For G=0.01 S and calibrated l/A=100 m⁻¹, κ=1 S/m.",
+      "explanation_bn": "G=\\kappa A/l ব্যবহার করুন। G=০.০১ S ও ক্রমাঙ্কিত l/A=১০০ m⁻¹ হলে κ=১ S/m।"
+    },
+    {
+      "q": "How is effective cell constant best obtained for nonideal electrode geometry?",
+      "q_bn": "বাস্তব ইলেকট্রোড জ্যামিতিতে কার্যকর কোষধ্রুবক কীভাবে পাবেন?",
+      "options": [
+        "Calibrate with standard electrolyte",
+        "Assume exactly zero",
+        "Read only the current",
+        "Ignore electrode placement"
+      ],
+      "options_bn": [
+        "Calibrate with standard electrolyte",
+        "Assume exactly zero",
+        "Read only the current",
+        "Ignore electrode placement"
+      ],
+      "answer": 0,
+      "explanation": "Uniform field approximation; actual conductivity cells use an experimentally calibrated effective cell constant.",
+      "explanation_bn": "সুষম ক্ষেত্র অনুমান; বাস্তব কোষে পরীক্ষালব্ধ কার্যকর কোষধ্রুবক লাগে।"
     }
   ]
 }

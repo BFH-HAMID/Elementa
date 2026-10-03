@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Put n=0 in the expression.",
       "explanation_bn": "সূত্রে n=০ বসান।"
+    },
+    {
+      "q": "With three unpaired electrons, spin-only moment is about?",
+      "q_bn": "তিনটি অযুগ্ম ইলেকট্রনে স্পিনমাত্র মুহূর্ত প্রায়?",
+      "options": [
+        "3.87 μB",
+        "3 μB",
+        "1 μB",
+        "0"
+      ],
+      "options_bn": [
+        "3.87 μB",
+        "3 μB",
+        "1 μB",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Use \\mu_{eff}=g\\sqrt{S(S+1)}\\,\\mu_B;\\quad g\\approx2. For three unpaired electrons μeff=√15≈3.87 μB.",
+      "explanation_bn": "\\mu_{eff}=g\\sqrt{S(S+1)}\\,\\mu_B;\\quad g\\approx2 ব্যবহার করুন। তিনটি অযুগ্ম ইলেকট্রনে μeff=√১৫≈৩.৮৭ μB।"
+    },
+    {
+      "q": "When is spin-only approximation most suspect?",
+      "q_bn": "স্পিনমাত্র অনুমান কখন বেশি সন্দেহজনক?",
+      "options": [
+        "Strong unquenched orbital contribution",
+        "Completely quenched orbital moment",
+        "Negligible spin–orbit coupling",
+        "Light first-row systems"
+      ],
+      "options_bn": [
+        "Strong unquenched orbital contribution",
+        "Completely quenched orbital moment",
+        "Negligible spin–orbit coupling",
+        "Light first-row systems"
+      ],
+      "answer": 0,
+      "explanation": "Orbital angular momentum quenched and negligible spin–orbit effects; not universal for heavy-metal complexes.",
+      "explanation_bn": "কক্ষীয় কৌণিক ভরবেগ দমিত ও স্পিন–কক্ষীয় প্রভাব নগণ্য; ভারী ধাতব জটিলে সর্বজনীন নয়।"
     }
   ]
 }

@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Energy scales as I².",
       "explanation_bn": "শক্তি I²-এর সমানুপাতিক।"
+    },
+    {
+      "q": "For L=2 H and I=3 A, stored energy?",
+      "q_bn": "L=২ H ও I=৩ A হলে সঞ্চিত শক্তি?",
+      "options": [
+        "9 J",
+        "3 J",
+        "18 J",
+        "6 J"
+      ],
+      "options_bn": [
+        "9 J",
+        "3 J",
+        "18 J",
+        "6 J"
+      ],
+      "answer": 0,
+      "explanation": "Use dU=I L\\,dI. L=2 H and I=3 A give U=9 J.",
+      "explanation_bn": "dU=I L\\,dI ব্যবহার করুন। L=২ H ও I=৩ A হলে U=৯ J।"
+    },
+    {
+      "q": "When is U=½LI² with fixed L directly applicable?",
+      "q_bn": "স্থির L নিয়ে U=½LI² সরাসরি কখন প্রযোজ্য?",
+      "options": [
+        "Linear unsaturated inductor",
+        "Strongly saturated magnetic core with varying L",
+        "Only a capacitor",
+        "An open wire with no inductance"
+      ],
+      "options_bn": [
+        "Linear unsaturated inductor",
+        "Strongly saturated magnetic core with varying L",
+        "Only a capacitor",
+        "An open wire with no inductance"
+      ],
+      "answer": 0,
+      "explanation": "Linear inductor with constant L; saturation makes L current dependent.",
+      "explanation_bn": "ধ্রুব L-সহ রৈখিক আবেশক; চৌম্বক saturation-এ L বদলায়।"
     }
   ]
 }

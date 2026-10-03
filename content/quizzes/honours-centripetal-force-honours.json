@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Force is proportional to v².",
       "explanation_bn": "বল v²-এর সমানুপাতিক।"
+    },
+    {
+      "q": "A 2 kg body moves at 3 m/s on a circle of radius 1 m. Radial net force?",
+      "q_bn": "২ kg বস্তু ১ m ব্যাসার্ধে ৩ m/s বেগে চললে অরীয় লব্ধি বল?",
+      "options": [
+        "18 N",
+        "6 N",
+        "9 N",
+        "3 N"
+      ],
+      "options_bn": [
+        "18 N",
+        "6 N",
+        "9 N",
+        "3 N"
+      ],
+      "answer": 0,
+      "explanation": "Use a_c=v^2/r. A 2 kg mass at 3 m/s on a 1 m circle needs radial resultant 18 N.",
+      "explanation_bn": "a_c=v^2/r ব্যবহার করুন। ১ m ব্যাসার্ধে ৩ m/s বেগে ২ kg বস্তুর কেন্দ্রাভিমুখী লব্ধি ১৮ N।"
+    },
+    {
+      "q": "Centripetal force refers to what?",
+      "q_bn": "অভিকেন্দ্র বল বলতে কী বোঝায়?",
+      "options": [
+        "The net inward component of actual forces",
+        "A new independent interaction",
+        "Always gravity alone",
+        "Always outward friction"
+      ],
+      "options_bn": [
+        "The net inward component of actual forces",
+        "A new independent interaction",
+        "Always gravity alone",
+        "Always outward friction"
+      ],
+      "answer": 0,
+      "explanation": "F_c is the resultant radial component, not an additional force; circular path assumed.",
+      "explanation_bn": "F_c লব্ধি বলের অরীয় অংশ; এটি আলাদা কোনো নতুন বল নয়; বৃত্তীয় পথ ধরা হয়েছে।"
     }
   ]
 }

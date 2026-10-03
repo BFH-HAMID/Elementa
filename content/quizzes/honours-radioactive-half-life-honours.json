@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Repeatedly divide by two three times.",
       "explanation_bn": "তিনবার ২ দিয়ে ভাগ করুন।"
+    },
+    {
+      "q": "After four half-lives, fraction of radioactive nuclei left?",
+      "q_bn": "চার অর্ধায়ু পরে তেজস্ক্রিয় নিউক্লিয়াসের কত অংশ থাকে?",
+      "options": [
+        "1/16",
+        "1/4",
+        "1/8",
+        "1/32"
+      ],
+      "options_bn": [
+        "1/16",
+        "1/4",
+        "1/8",
+        "1/32"
+      ],
+      "answer": 0,
+      "explanation": "Use N(t)=N_0e^{-\\lambda_dt};\\quad N(t_{1/2})=N_0/2. After three half-lives N=N₀/8.",
+      "explanation_bn": "N(t)=N_0e^{-\\lambda_dt};\\quad N(t_{1/2})=N_0/2 ব্যবহার করুন। তিন অর্ধায়ু পরে N=N₀/৮।"
+    },
+    {
+      "q": "Does half-life state the certain decay time of a single nucleus?",
+      "q_bn": "অর্ধায়ু কি একটি নিউক্লিয়াসের নিশ্চিত ক্ষয়সময়?",
+      "options": [
+        "No, it is statistical",
+        "Yes, exactly",
+        "Only for stable nuclei",
+        "Only at high T"
+      ],
+      "options_bn": [
+        "No, it is statistical",
+        "Yes, exactly",
+        "Only for stable nuclei",
+        "Only at high T"
+      ],
+      "answer": 0,
+      "explanation": "Independent nuclei with constant decay probability; not a deterministic lifetime for one nucleus.",
+      "explanation_bn": "ধ্রুব ক্ষয়সম্ভাবনাযুক্ত স্বাধীন নিউক্লিয়াস; এক নিউক্লিয়াসের নিশ্চিত আয়ু নয়।"
     }
   ]
 }

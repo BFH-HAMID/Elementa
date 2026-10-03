@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Q inversely depends on b.",
       "explanation_bn": "Q, b-এর ব্যস্তানুপাতিক।"
+    },
+    {
+      "q": "For m=1 kg, ω₀=10 rad/s and b=0.5 kg/s, Q?",
+      "q_bn": "m=১ kg, ω₀=১০ rad/s ও b=০.৫ kg/s হলে Q?",
+      "options": [
+        "20",
+        "5",
+        "2",
+        "0.05"
+      ],
+      "options_bn": [
+        "20",
+        "5",
+        "2",
+        "0.05"
+      ],
+      "answer": 0,
+      "explanation": "Use E(t)=E_0e^{-bt/m};\\quad Q=2\\pi\\frac{E}{\\Delta E_{\\rm cycle}}. m=1 kg, ω₀=10 rad/s and b=0.5 kg/s give Q≈20.",
+      "explanation_bn": "E(t)=E_0e^{-bt/m};\\quad Q=2\\pi\\frac{E}{\\Delta E_{\\rm cycle}} ব্যবহার করুন। m=১ kg, ω₀=১০ rad/s ও b=০.৫ kg/s হলে Q≈২০।"
+    },
+    {
+      "q": "The simple Q=mω₀/b expression is most reliable for which damping?",
+      "q_bn": "Q=mω₀/b সহজ সূত্রটি কোন ক্ষয়ে বেশি নির্ভরযোগ্য?",
+      "options": [
+        "Weak linear damping",
+        "Strong nonlinear damping",
+        "Overdamped motion",
+        "Arbitrary dry friction"
+      ],
+      "options_bn": [
+        "Weak linear damping",
+        "Strong nonlinear damping",
+        "Overdamped motion",
+        "Arbitrary dry friction"
+      ],
+      "answer": 0,
+      "explanation": "Weak linear damping b≪mω₀; different textbooks define damping rate γ differently.",
+      "explanation_bn": "দুর্বল রৈখিক ক্ষয় b≪mω₀; γ-এর সংজ্ঞা বইভেদে আলাদা হতে পারে।"
     }
   ]
 }

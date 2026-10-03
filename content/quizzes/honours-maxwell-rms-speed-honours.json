@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "v_rms scales as 1/√M.",
       "explanation_bn": "v_rms, ১/√M-এর সমানুপাতিক।"
+    },
+    {
+      "q": "If molar mass becomes four times at fixed T, v_rms becomes?",
+      "q_bn": "T স্থির রেখে মোলার ভর ৪ গুণ হলে v_rms?",
+      "options": [
+        "Half",
+        "Quarter",
+        "Double",
+        "Four times"
+      ],
+      "options_bn": [
+        "Half",
+        "Quarter",
+        "Double",
+        "Four times"
+      ],
+      "answer": 0,
+      "explanation": "Use \\tfrac12m\\langle v^2\\rangle=\\tfrac32 k_BT;\\quad m=M/N_A. At equal temperature, a gas with fourfold molar mass has half the rms speed.",
+      "explanation_bn": "\\tfrac12m\\langle v^2\\rangle=\\tfrac32 k_BT;\\quad m=M/N_A ব্যবহার করুন। একই তাপমাত্রায় ৪ গুণ মোলার ভরে rms বেগ অর্ধেক।"
+    },
+    {
+      "q": "What is essential to the classical equipartition derivation?",
+      "q_bn": "ধ্রুপদি সমবণ্টন প্রতিপাদনের জন্য কী জরুরি?",
+      "options": [
+        "Classical dilute equilibrium gas",
+        "Highly degenerate fermions",
+        "T=0",
+        "Strong quantum confinement"
+      ],
+      "options_bn": [
+        "Classical dilute equilibrium gas",
+        "Highly degenerate fermions",
+        "T=0",
+        "Strong quantum confinement"
+      ],
+      "answer": 0,
+      "explanation": "Classical equilibrium dilute gas; quantum degeneracy invalidates Maxwell distribution.",
+      "explanation_bn": "ধ্রুপদি সাম্যাবস্থার বিরল গ্যাস; কোয়ান্টাম অধঃপতনে ম্যাক্সওয়েল বণ্টন চলে না।"
     }
   ]
 }

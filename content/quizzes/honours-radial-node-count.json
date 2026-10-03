@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "3−1−1=1.",
       "explanation_bn": "৩−১−১=১।"
+    },
+    {
+      "q": "How many radial nodes in a 4d hydrogenic orbital?",
+      "q_bn": "হাইড্রোজেন সদৃশ 4d অরবিটালে রেডিয়াল নোড কত?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "options_bn": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "Use R_{nl}(r)\\propto e^{-\\rho/2}\\rho^l L_{n-l-1}^{2l+1}(\\rho). A 3p orbital (n=3,l=1) has one radial node.",
+      "explanation_bn": "R_{nl}(r)\\propto e^{-\\rho/2}\\rho^l L_{n-l-1}^{2l+1}(\\rho) ব্যবহার করুন। 3p অরবিটালে (n=৩,l=১) একটি রেডিয়াল নোড।"
+    },
+    {
+      "q": "Which quantum numbers are permitted for a hydrogenic orbital?",
+      "q_bn": "হাইড্রোজেন সদৃশ অরবিটালে কোন কোয়ান্টাম সংখ্যা গ্রহণযোগ্য?",
+      "options": [
+        "n≥1 and 0≤l≤n−1",
+        "l=n+1",
+        "n=0 and l=0",
+        "l negative"
+      ],
+      "options_bn": [
+        "n≥1 and 0≤l≤n−1",
+        "l=n+1",
+        "n=0 and l=0",
+        "l negative"
+      ],
+      "answer": 0,
+      "explanation": "Hydrogen-like orbitals; n≥1 and 0≤l≤n−1. Multielectron orbitals only approximately retain this pattern.",
+      "explanation_bn": "হাইড্রোজেন সদৃশ অরবিটাল; n≥১ ও ০≤l≤n−১; বহু-ইলেকট্রন অরবিটালে আনুমানিক।"
     }
   ]
 }

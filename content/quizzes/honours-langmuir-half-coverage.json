@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "KP=1 gives θ=1/(1+1).",
       "explanation_bn": "KP=১ হলে θ=১/(১+১)।"
+    },
+    {
+      "q": "At P=1/K, Langmuir surface coverage θ?",
+      "q_bn": "P=১/K হলে ল্যাংমুইর পৃষ্ঠঢাকা θ?",
+      "options": [
+        "0.5",
+        "0",
+        "1",
+        "2"
+      ],
+      "options_bn": [
+        "0.5",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Use \\theta=KP/(1+KP);\\quad K=k_a/k_d. At P=1/K, occupied surface fraction θ=0.5.",
+      "explanation_bn": "\\theta=KP/(1+KP);\\quad K=k_a/k_d ব্যবহার করুন। P=১/K হলে দখলকৃত পৃষ্ঠের অংশ θ=০.৫।"
+    },
+    {
+      "q": "Does simple Langmuir theory include multilayer adsorption?",
+      "q_bn": "সরল ল্যাংমুইর তত্ত্বে কি বহুস্তর শোষণ আছে?",
+      "options": [
+        "No, monolayer only",
+        "Yes, arbitrarily many layers",
+        "Only two layers",
+        "Only in vacuum"
+      ],
+      "options_bn": [
+        "No, monolayer only",
+        "Yes, arbitrarily many layers",
+        "Only two layers",
+        "Only in vacuum"
+      ],
+      "answer": 0,
+      "explanation": "Independent identical sites, monolayer, no lateral interactions; K has inverse-pressure units here.",
+      "explanation_bn": "স্বাধীন সমান আসন, একস্তর ও পার্শ্বিক মিথস্ক্রিয়া নেই; এখানে K-এর একক চাপের ব্যস্ত।"
     }
   ]
 }

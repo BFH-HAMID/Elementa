@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Energy depends on A².",
       "explanation_bn": "শক্তি A²-এর সমানুপাতিক।"
+    },
+    {
+      "q": "For k=100 N/m and amplitude 0.10 m, total ideal spring energy?",
+      "q_bn": "k=১০০ N/m ও বিস্তার ০.১০ m হলে আদর্শ স্প্রিংয়ের মোট শক্তি?",
+      "options": [
+        "0.50 J",
+        "5 J",
+        "1 J",
+        "50 J"
+      ],
+      "options_bn": [
+        "0.50 J",
+        "5 J",
+        "1 J",
+        "50 J"
+      ],
+      "answer": 0,
+      "explanation": "Use E=\\tfrac12kx^2+\\tfrac12mv^2;\\quad v=0\\text{ at }x=A. k=100 N/m and A=0.10 m give E=0.50 J.",
+      "explanation_bn": "E=\\tfrac12kx^2+\\tfrac12mv^2;\\quad v=0\\text{ at }x=A ব্যবহার করুন। k=১০০ N/m এবং A=০.১০ m হলে E=০.৫০ J।"
+    },
+    {
+      "q": "When is total mechanical energy constant in this model?",
+      "q_bn": "এই মডেলে মোট যান্ত্রিক শক্তি কখন স্থির?",
+      "options": [
+        "No damping and no drive",
+        "Strong viscous friction",
+        "Increasing driving force",
+        "Changing spring stiffness during motion"
+      ],
+      "options_bn": [
+        "No damping and no drive",
+        "Strong viscous friction",
+        "Increasing driving force",
+        "Changing spring stiffness during motion"
+      ],
+      "answer": 0,
+      "explanation": "Ideal linear spring without damping or external drive; energy is not constant if friction acts.",
+      "explanation_bn": "ঘর্ষণ বা বাহ্যিক চালনা ছাড়া আদর্শ রৈখিক স্প্রিং; ঘর্ষণে শক্তি স্থির নয়।"
     }
   ]
 }

@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "Derivative is positive if ΔrH°>0.",
       "explanation_bn": "ΔrH°>০ হলে অন্তরক ধনাত্মক।"
+    },
+    {
+      "q": "With positive reaction enthalpy, increasing T locally makes K?",
+      "q_bn": "বিক্রিয়ার এনথ্যালপি ধনাত্মক হলে T বাড়লে K সাধারণত?",
+      "options": [
+        "Increase",
+        "Decrease",
+        "Stay zero",
+        "Become negative"
+      ],
+      "options_bn": [
+        "Increase",
+        "Decrease",
+        "Stay zero",
+        "Become negative"
+      ],
+      "answer": 0,
+      "explanation": "Use d(\\Delta_rG^\\circ/T)/dT=-\\Delta_rH^\\circ/T^2. For ΔrH°>0, K rises with increasing T locally.",
+      "explanation_bn": "d(\\Delta_rG^\\circ/T)/dT=-\\Delta_rH^\\circ/T^2 ব্যবহার করুন। ΔrH°>০ হলে T বাড়ালে স্থানীয়ভাবে K বাড়ে।"
+    },
+    {
+      "q": "For an integrated van't Hoff line, what must stay approximately constant?",
+      "q_bn": "সমাকলিত ভান্ট হফ রেখায় কোনটি প্রায় স্থির ধরতে হয়?",
+      "options": [
+        "ΔrH° over the temperature interval",
+        "K under all conditions",
+        "Absolute temperature",
+        "All concentrations"
+      ],
+      "options_bn": [
+        "ΔrH° over the temperature interval",
+        "K under all conditions",
+        "Absolute temperature",
+        "All concentrations"
+      ],
+      "answer": 0,
+      "explanation": "Standard-state K; integrated forms require ΔH° approximately constant over the range.",
+      "explanation_bn": "মান অবস্থার K; সমাকলিত সূত্রে পরিসরে ΔH° প্রায় স্থির ধরতে হয়।"
     }
   ]
 }

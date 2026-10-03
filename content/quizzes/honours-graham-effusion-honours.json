@@ -27,6 +27,44 @@
       "answer": 0,
       "explanation": "r scales with M^(−1/2).",
       "explanation_bn": "r, M^(−১/২)-এর সমানুপাতিক।"
+    },
+    {
+      "q": "A gas has fourfold molar mass at equal T. Approximate effusion rate relative to light gas?",
+      "q_bn": "একই T-তে মোলার ভর ৪ গুণ হলে হালকা গ্যাসের তুলনায় নির্গমন হার?",
+      "options": [
+        "One half",
+        "One quarter",
+        "Twice",
+        "Four times"
+      ],
+      "options_bn": [
+        "One half",
+        "One quarter",
+        "Twice",
+        "Four times"
+      ],
+      "answer": 0,
+      "explanation": "Use r\\propto\\bar v\\propto\\sqrt{RT/M}. A gas four times heavier effuses approximately half as fast.",
+      "explanation_bn": "r\\propto\\bar v\\propto\\sqrt{RT/M} ব্যবহার করুন। ৪ গুণ ভারী গ্যাস প্রায় অর্ধেক হারে বের হয়।"
+    },
+    {
+      "q": "Which setup matches Graham's ideal effusion model?",
+      "q_bn": "গ্রাহামের আদর্শ নির্গমন মডেলে কোন ব্যবস্থা মেলে?",
+      "options": [
+        "Molecules escaping through a tiny hole",
+        "Bulk liquid flow",
+        "Turbulent gas through a wide pipe",
+        "A gas with no pressure difference"
+      ],
+      "options_bn": [
+        "Molecules escaping through a tiny hole",
+        "Bulk liquid flow",
+        "Turbulent gas through a wide pipe",
+        "A gas with no pressure difference"
+      ],
+      "answer": 0,
+      "explanation": "Small-hole molecular effusion, equal T and comparable pressures; not bulk diffusion through a tube.",
+      "explanation_bn": "ক্ষুদ্র ছিদ্র দিয়ে আণবিক নির্গমন, সমান T ও কাছাকাছি চাপ; নলের ভেতর স্থূল ব্যাপন নয়।"
     }
   ]
 }

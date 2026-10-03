@@ -1,0 +1,32 @@
+{
+  "slug": "honours-maxwell-thermodynamic-relation",
+  "title_en": "A Maxwell thermodynamic relation — check your understanding",
+  "title_bn": "ম্যাক্সওয়েলের তাপগতীয় সম্পর্ক — অনুশীলন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Thermal Physics",
+  "chapter_bn": "Thermal Physics",
+  "description_en": "Concept check with an explained answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Which potential yields this relation directly?",
+      "q_bn": "কোন বিভব থেকে এই সম্পর্ক সরাসরি আসে?",
+      "options": [
+        "U(S,V)",
+        "G(T,P)",
+        "F(T,V)",
+        "H(S,P)"
+      ],
+      "options_bn": [
+        "U(S,V)",
+        "G(T,P)",
+        "F(T,V)",
+        "H(S,P)"
+      ],
+      "answer": 0,
+      "explanation": "dU=T dS−P dV gives its two first derivatives.",
+      "explanation_bn": "dU=T dS−P dV gives its two first derivatives."
+    }
+  ]
+}

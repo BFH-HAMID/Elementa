@@ -1,0 +1,32 @@
+{
+  "slug": "honours-fermi-dirac-occupation",
+  "title_en": "Fermi–Dirac occupation — practice",
+  "title_bn": "ফার্মি–ডিরাক দখল সম্ভাবনা — অনুশীলন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours theory and practical",
+  "chapter_bn": "স্নাতক তত্ত্ব ও ব্যবহারিক",
+  "description_en": "A conceptual question with worked answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At finite temperature, what is f(μ)?",
+      "q_bn": "সসীম তাপমাত্রায় f(μ) কত?",
+      "options": [
+        "1/2",
+        "0",
+        "1",
+        "2"
+      ],
+      "options_bn": [
+        "1/2",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "The exponent vanishes at E=μ, leaving 1/(1+1).",
+      "explanation_bn": "E=μ হলে সূচক শূন্য, তাই ১/(১+১)।"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-wave-energy-string",
+  "title_en": "Wave speed on a stretched string — concept check",
+  "title_bn": "টানটান তারে তরঙ্গের বেগ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If tension quadruples, speed becomes?",
+      "q_bn": "টান চার গুণ করলে বেগ কত?",
+      "options": [
+        "Twice",
+        "Four times",
+        "Half",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Twice",
+        "Four times",
+        "Half",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Square-root dependence on tension.",
+      "explanation_bn": "টানের বর্গমূলের সমানুপাতিক।"
+    }
+  ]
+}

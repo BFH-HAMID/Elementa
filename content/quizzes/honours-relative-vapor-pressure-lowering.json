@@ -1,0 +1,32 @@
+{
+  "slug": "honours-relative-vapor-pressure-lowering",
+  "title_en": "Relative vapour-pressure lowering — concept check",
+  "title_bn": "বাষ্পচাপের আপেক্ষিক হ্রাস — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For xB=0.10, relative lowering is?",
+      "q_bn": "xB=০.১০ হলে আপেক্ষিক হ্রাস?",
+      "options": [
+        "0.10",
+        "0.90",
+        "10",
+        "0"
+      ],
+      "options_bn": [
+        "0.10",
+        "0.90",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Directly equals solute mole fraction.",
+      "explanation_bn": "এটি দ্রবের মোলভাগের সমান।"
+    }
+  ]
+}

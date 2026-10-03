@@ -1,0 +1,32 @@
+{
+  "slug": "honours-lensmaker-thin-honours",
+  "title_en": "Thin lensmaker equation — concept check",
+  "title_bn": "পাতলা লেন্স নির্মাতার সূত্র — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If n approaches 1, focal power tends to?",
+      "q_bn": "n→১ হলে ফোকাস ক্ষমতা কতের দিকে যায়?",
+      "options": [
+        "Zero",
+        "Infinity",
+        "One",
+        "Negative infinity"
+      ],
+      "options_bn": [
+        "Zero",
+        "Infinity",
+        "One",
+        "Negative infinity"
+      ],
+      "answer": 0,
+      "explanation": "No relative index contrast means no refraction power.",
+      "explanation_bn": "আপেক্ষিক প্রতিসরাঙ্কের পার্থক্য না থাকলে ফোকাস ক্ষমতা থাকে না।"
+    }
+  ]
+}

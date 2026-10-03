@@ -1,0 +1,32 @@
+{
+  "slug": "honours-centripetal-force-honours",
+  "title_en": "Centripetal force on circular motion — concept check",
+  "title_bn": "অভিকেন্দ্র বল — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Doubling speed at fixed radius changes F_c by?",
+      "q_bn": "ব্যাসার্ধ স্থির রেখে বেগ দ্বিগুণ করলে F_c কত গুণ?",
+      "options": [
+        "Four",
+        "Two",
+        "Eight",
+        "One"
+      ],
+      "options_bn": [
+        "Four",
+        "Two",
+        "Eight",
+        "One"
+      ],
+      "answer": 0,
+      "explanation": "Force is proportional to v².",
+      "explanation_bn": "বল v²-এর সমানুপাতিক।"
+    }
+  ]
+}

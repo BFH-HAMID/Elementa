@@ -1,0 +1,32 @@
+{
+  "slug": "honours-rydberg-ionization-limit",
+  "title_en": "Balmer-series wavelength limit — concept check",
+  "title_bn": "বালমার শ্রেণির সীমা — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For Balmer series the lower level is?",
+      "q_bn": "বালমার শ্রেণিতে নিম্ন শক্তিস্তর কোনটি?",
+      "options": [
+        "n=2",
+        "n=1",
+        "n=3",
+        "n=∞"
+      ],
+      "options_bn": [
+        "n=2",
+        "n=1",
+        "n=3",
+        "n=∞"
+      ],
+      "answer": 0,
+      "explanation": "Balmer transitions end at n=2.",
+      "explanation_bn": "বালমার পরিবর্তন n=২-এ শেষ হয়।"
+    }
+  ]
+}

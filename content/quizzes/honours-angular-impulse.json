@@ -1,0 +1,32 @@
+{
+  "slug": "honours-angular-impulse",
+  "title_en": "Angular impulse and torque — concept check",
+  "title_bn": "কৌণিক ঘাত — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Zero net external torque implies what?",
+      "q_bn": "মোট বহিঃস্থ টর্ক শূন্য হলে কী সংরক্ষিত?",
+      "options": [
+        "Angular momentum",
+        "Angular speed always",
+        "Kinetic energy always",
+        "Torque"
+      ],
+      "options_bn": [
+        "Angular momentum",
+        "Angular speed always",
+        "Kinetic energy always",
+        "Torque"
+      ],
+      "answer": 0,
+      "explanation": "Integrate dL/dt=0.",
+      "explanation_bn": "dL/dt=০ সমাকলন করুন।"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "honours-partition-function",
+  "title_en": "Molecular partition function — check your understanding",
+  "title_bn": "আণবিক বিভাজন ফাংশন — অনুশীলন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Statistical Thermodynamics",
+  "chapter_bn": "Statistical Thermodynamics",
+  "description_en": "Concept check with an explained answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For two nondegenerate levels 0 and Δ, what is q?",
+      "q_bn": "০ ও Δ শক্তির দুটি অধঃপতনহীন স্তরের জন্য q কত?",
+      "options": [
+        "1+e^(−Δ/kBT)",
+        "e^(−Δ/kBT)",
+        "2",
+        "1−e^(−Δ/kBT)"
+      ],
+      "options_bn": [
+        "1+e^(−Δ/kBT)",
+        "e^(−Δ/kBT)",
+        "2",
+        "1−e^(−Δ/kBT)"
+      ],
+      "answer": 0,
+      "explanation": "Sum the Boltzmann weights of both levels.",
+      "explanation_bn": "Sum the Boltzmann weights of both levels."
+    }
+  ]
+}

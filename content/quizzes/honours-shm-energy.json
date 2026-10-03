@@ -1,0 +1,32 @@
+{
+  "slug": "honours-shm-energy",
+  "title_en": "Energy of ideal simple harmonic motion — concept check",
+  "title_bn": "সরল ছন্দিত গতির শক্তি — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Doubling amplitude changes energy by?",
+      "q_bn": "বিস্তার দ্বিগুণ হলে শক্তি কত গুণ?",
+      "options": [
+        "Four",
+        "Two",
+        "One half",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Four",
+        "Two",
+        "One half",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Energy depends on A².",
+      "explanation_bn": "শক্তি A²-এর সমানুপাতিক।"
+    }
+  ]
+}

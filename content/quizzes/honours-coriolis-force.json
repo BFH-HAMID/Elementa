@@ -1,0 +1,32 @@
+{
+  "slug": "honours-coriolis-force",
+  "title_en": "Coriolis force in a rotating frame — check your understanding",
+  "title_bn": "কোরিওলিস বল — অনুশীলন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Analytical Mechanics",
+  "chapter_bn": "Analytical Mechanics",
+  "description_en": "Concept check with an explained answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If speed relative to the rotating frame doubles, what happens to Coriolis-force magnitude at fixed angle?",
+      "q_bn": "একই কোণে ঘূর্ণায়মান কাঠামোর আপেক্ষিক বেগ দ্বিগুণ হলে কোরিওলিস বল কত?",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Quadruples",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Doubles",
+        "Halves",
+        "Quadruples",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "|F_C|=2mΩv sinθ.",
+      "explanation_bn": "|F_C|=2mΩv sinθ."
+    }
+  ]
+}

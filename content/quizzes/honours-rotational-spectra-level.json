@@ -1,0 +1,32 @@
+{
+  "slug": "honours-rotational-spectra-level",
+  "title_en": "Rigid-rotor rotational levels — concept check",
+  "title_bn": "দৃঢ় ঘূর্ণকের শক্তি — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For J=1, E/(hcB) equals?",
+      "q_bn": "J=১ হলে E/(hcB) কত?",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "options_bn": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "J(J+1)=1×2=2.",
+      "explanation_bn": "J(J+১)=১×২=২।"
+    }
+  ]
+}

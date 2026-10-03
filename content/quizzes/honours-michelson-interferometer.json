@@ -1,0 +1,32 @@
+{
+  "slug": "honours-michelson-interferometer",
+  "title_en": "Michelson interferometer",
+  "title_bn": "মাইকেলসন ব্যতিচারক",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours practical",
+  "chapter_bn": "স্নাতক ব্যবহারিক",
+  "description_en": "Lab concept check with explanation.",
+  "description_bn": "ব্যাখ্যাসহ ব্যবহারিক ধারণা যাচাই।",
+  "questions": [
+    {
+      "q": "A mirror moves 0.15 mm while 500 fringes cross. What is the wavelength?",
+      "q_bn": "দর্পণ ০.১৫ mm সরলে ৫০০ ঝালর যায়। তরঙ্গদৈর্ঘ্য কত?",
+      "options": [
+        "600 nm",
+        "300 nm",
+        "150 nm",
+        "1200 nm"
+      ],
+      "options_bn": [
+        "600 nm",
+        "300 nm",
+        "150 nm",
+        "1200 nm"
+      ],
+      "answer": 0,
+      "explanation": "λ=2Δx/N=2×0.15 mm/500=600 nm.",
+      "explanation_bn": "λ=২Δx/N=২×০.১৫ mm/৫০০=৬০০ nm।"
+    }
+  ]
+}

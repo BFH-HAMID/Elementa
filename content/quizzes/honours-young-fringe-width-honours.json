@@ -1,0 +1,32 @@
+{
+  "slug": "honours-young-fringe-width-honours",
+  "title_en": "Young interference fringe spacing — concept check",
+  "title_bn": "ইয়ং পরীক্ষায় ঝালর প্রস্থ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If slit separation doubles, fringe width becomes?",
+      "q_bn": "চিরের ব্যবধান দ্বিগুণ হলে ঝালর-প্রস্থ কত?",
+      "options": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "β is inversely proportional to d.",
+      "explanation_bn": "β, d-এর ব্যস্তানুপাতিক।"
+    }
+  ]
+}

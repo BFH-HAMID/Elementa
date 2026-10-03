@@ -1,0 +1,32 @@
+{
+  "slug": "honours-relativistic-momentum-honours",
+  "title_en": "Relativistic momentum — concept check",
+  "title_bn": "আপেক্ষিকতামূলক ভরবেগ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For v≪c, what does p approach?",
+      "q_bn": "v≪c হলে p কোন মানের দিকে যায়?",
+      "options": [
+        "mv",
+        "mc²",
+        "0 always",
+        "m/v"
+      ],
+      "options_bn": [
+        "mv",
+        "mc²",
+        "0 always",
+        "m/v"
+      ],
+      "answer": 0,
+      "explanation": "γ approaches 1 in the low-speed limit.",
+      "explanation_bn": "কম বেগে γ→১।"
+    }
+  ]
+}

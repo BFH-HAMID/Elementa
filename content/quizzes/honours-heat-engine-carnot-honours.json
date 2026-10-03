@@ -1,0 +1,32 @@
+{
+  "slug": "honours-heat-engine-carnot-honours",
+  "title_en": "Carnot heat-engine efficiency — concept check",
+  "title_bn": "কার্নো ইঞ্জিনের সর্বোচ্চ দক্ষতা — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For Th=600 K and Tc=300 K maximum η is?",
+      "q_bn": "Th=৬০০ K ও Tc=৩০০ K হলে সর্বোচ্চ η কত?",
+      "options": [
+        "50%",
+        "25%",
+        "100%",
+        "0%"
+      ],
+      "options_bn": [
+        "50%",
+        "25%",
+        "100%",
+        "0%"
+      ],
+      "answer": 0,
+      "explanation": "1−300/600=0.5.",
+      "explanation_bn": "১−৩০০/৬০০=০.৫।"
+    }
+  ]
+}

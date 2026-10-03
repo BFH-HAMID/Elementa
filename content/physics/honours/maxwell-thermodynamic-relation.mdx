@@ -1,0 +1,63 @@
+---
+type: "equation"
+slug: "maxwell-thermodynamic-relation"
+title_bn: "ম্যাক্সওয়েলের তাপগতীয় সম্পর্ক"
+title_en: "A Maxwell thermodynamic relation"
+subject: "physics"
+level: "honours"
+chapter: "Thermal Physics"
+chapter_bn: "Thermal Physics"
+latex: "\\left(\\frac{\\partial T}{\\partial V}\\right)_S=-\\left(\\frac{\\partial P}{\\partial S}\\right)_V"
+calculator: false
+variables:
+  - symbol: "T"
+    name: "temperature"
+    name_bn: "temperature"
+    unit: "K"
+    si_unit: "K"
+  - symbol: "V"
+    name: "volume"
+    name_bn: "volume"
+    unit: "m³"
+    si_unit: "m³"
+  - symbol: "S"
+    name: "entropy"
+    name_bn: "entropy"
+    unit: "J/K"
+    si_unit: "J/K"
+  - symbol: "P"
+    name: "pressure"
+    name_bn: "pressure"
+    unit: "Pa"
+    si_unit: "Pa"
+  - symbol: "U"
+    name: "internal energy"
+    name_bn: "internal energy"
+    unit: "J"
+    si_unit: "J"
+derivation: "Start from the fundamental differential for a simple compressible closed system. Identify T and −P as partial derivatives of U(S,V). Equate mixed second derivatives for a smooth state function."
+derivation_bn: "সরল সংকোচনযোগ্য বদ্ধ ব্যবস্থার মৌলিক অন্তরক দিয়ে শুরু করুন। U(S,V)-এর আংশিক অন্তরক হিসেবে T ও −P শনাক্ত করুন। মসৃণ অবস্থারাশির মিশ্র দ্বিতীয় অন্তরক সমান করুন।"
+derivation_steps:
+  - step_en: "Start from the fundamental differential for a simple compressible closed system."
+    step_bn: "সরল সংকোচনযোগ্য বদ্ধ ব্যবস্থার মৌলিক অন্তরক দিয়ে শুরু করুন।"
+    latex: "dU=T\\,dS-P\\,dV"
+  - step_en: "Identify T and −P as partial derivatives of U(S,V)."
+    step_bn: "U(S,V)-এর আংশিক অন্তরক হিসেবে T ও −P শনাক্ত করুন।"
+    latex: "T=(\\partial U/\\partial S)_V,\\quad-P=(\\partial U/\\partial V)_S"
+  - step_en: "Equate mixed second derivatives for a smooth state function."
+    step_bn: "মসৃণ অবস্থারাশির মিশ্র দ্বিতীয় অন্তরক সমান করুন।"
+    latex: "\\left(\\frac{\\partial T}{\\partial V}\\right)_S=-\\left(\\frac{\\partial P}{\\partial S}\\right)_V"
+summary_en: "For an ideal gas U=U(T) and an isentropic expansion, temperature falls as volume increases; therefore the left side is negative, consistent with the right side."
+summary_bn: " অ্যাডিয়াবেটিক প্রসারণে T কমে।"
+tags:
+  - "honours"
+  - "thermal physics"
+---
+
+### প্রয়োগ / Worked example
+
+For an ideal gas U=U(T) and an isentropic expansion, temperature falls as volume increases; therefore the left side is negative, consistent with the right side. বাংলায়: অ্যাডিয়াবেটিক প্রসারণে T কমে।
+
+### সীমাবদ্ধতা / Assumptions
+
+Assumes equilibrium, fixed composition, differentiable U and only P–V work; across a first-order phase boundary derivatives may be discontinuous.

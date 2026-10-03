@@ -1,0 +1,32 @@
+{
+  "slug": "honours-radial-node-count",
+  "title_en": "Radial nodes of hydrogenic orbital — concept check",
+  "title_bn": "রেডিয়াল নোডের সংখ্যা — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "How many radial nodes has 3p?",
+      "q_bn": "3p-তে রেডিয়াল নোড কত?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "options_bn": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "3−1−1=1.",
+      "explanation_bn": "৩−১−১=১।"
+    }
+  ]
+}

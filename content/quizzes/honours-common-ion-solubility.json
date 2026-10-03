@@ -1,0 +1,32 @@
+{
+  "slug": "honours-common-ion-solubility",
+  "title_en": "Common-ion suppression of AB solubility — concept check",
+  "title_bn": "সাধারণ আয়নে দ্রাব্যতা — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If c doubles under the approximation, s becomes?",
+      "q_bn": "অনুমানে c দ্বিগুণ হলে s?",
+      "options": [
+        "Half",
+        "Double",
+        "Four times",
+        "Same"
+      ],
+      "options_bn": [
+        "Half",
+        "Double",
+        "Four times",
+        "Same"
+      ],
+      "answer": 0,
+      "explanation": "s≈Ksp/c.",
+      "explanation_bn": "s≈Ksp/c।"
+    }
+  ]
+}

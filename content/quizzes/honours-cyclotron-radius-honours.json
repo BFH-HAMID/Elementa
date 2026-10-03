@@ -1,0 +1,32 @@
+{
+  "slug": "honours-cyclotron-radius-honours",
+  "title_en": "Cyclotron orbit radius — concept check",
+  "title_bn": "চৌম্বক ক্ষেত্রে কণার কক্ষব্যাসার্ধ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At fixed p and q, doubling B makes r?",
+      "q_bn": "p ও q স্থির রেখে B দ্বিগুণ করলে r কত?",
+      "options": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "r is inversely proportional to B.",
+      "explanation_bn": "r, B-এর ব্যস্তানুপাতিক।"
+    }
+  ]
+}

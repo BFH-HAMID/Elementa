@@ -1,0 +1,32 @@
+{
+  "slug": "honours-poynting-vector",
+  "title_en": "Poynting vector and electromagnetic energy flux — practice",
+  "title_bn": "পয়েন্টিং ভেক্টর — অনুশীলন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours theory and practical",
+  "chapter_bn": "স্নাতক তত্ত্ব ও ব্যবহারিক",
+  "description_en": "A conceptual question with worked answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For a vacuum plane wave, what is the direction of energy flow?",
+      "q_bn": "শূন্যস্থানের সমতল তরঙ্গে শক্তি কোন দিকে যায়?",
+      "options": [
+        "E×B",
+        "B×E",
+        "Along E",
+        "Opposite E×B"
+      ],
+      "options_bn": [
+        "E×B",
+        "B×E",
+        "Along E",
+        "Opposite E×B"
+      ],
+      "answer": 0,
+      "explanation": "The cross product E×B gives the direction of S.",
+      "explanation_bn": "S-এর দিক E×B ক্রস গুণফলের দিকে।"
+    }
+  ]
+}

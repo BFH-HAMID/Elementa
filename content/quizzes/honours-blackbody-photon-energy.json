@@ -1,0 +1,32 @@
+{
+  "slug": "honours-blackbody-photon-energy",
+  "title_en": "Photon energy and wavelength — concept check",
+  "title_bn": "কৃষ্ণবস্তুর ফোটন শক্তি — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If vacuum wavelength doubles, energy becomes?",
+      "q_bn": "শূন্যস্থানে তরঙ্গদৈর্ঘ্য দ্বিগুণ হলে শক্তি কত?",
+      "options": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Energy varies inversely with vacuum wavelength.",
+      "explanation_bn": "শক্তি শূন্যস্থানের তরঙ্গদৈর্ঘ্যের ব্যস্তানুপাতিক।"
+    }
+  ]
+}

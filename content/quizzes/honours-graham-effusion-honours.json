@@ -1,0 +1,32 @@
+{
+  "slug": "honours-graham-effusion-honours",
+  "title_en": "Graham effusion rate ratio — concept check",
+  "title_bn": "গ্রাহামের ব্যাপন সূত্র — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Fourfold higher molar mass gives rate?",
+      "q_bn": "মোলার ভর চার গুণ হলে নির্গমন হার?",
+      "options": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "r scales with M^(−1/2).",
+      "explanation_bn": "r, M^(−১/২)-এর সমানুপাতিক।"
+    }
+  ]
+}

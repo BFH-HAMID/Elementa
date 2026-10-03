@@ -1,0 +1,32 @@
+{
+  "slug": "honours-brewster-angle-honours",
+  "title_en": "Brewster angle for dielectric interface — concept check",
+  "title_bn": "ব্রুস্টার কোণ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At Brewster incidence, which component has zero reflected intensity ideally?",
+      "q_bn": "ব্রুস্টার কোণে আদর্শভাবে কোন মেরুকরণ প্রতিফলিত হয় না?",
+      "options": [
+        "p polarization",
+        "s polarization",
+        "both",
+        "unpolarized component"
+      ],
+      "options_bn": [
+        "p polarization",
+        "s polarization",
+        "both",
+        "unpolarized component"
+      ],
+      "answer": 0,
+      "explanation": "Parallel (p) reflection coefficient vanishes.",
+      "explanation_bn": "সমান্তরাল (p) প্রতিফলন সহগ শূন্য।"
+    }
+  ]
+}

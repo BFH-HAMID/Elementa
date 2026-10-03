@@ -1,0 +1,32 @@
+{
+  "slug": "honours-langmuir-half-coverage",
+  "title_en": "Langmuir half-coverage pressure — concept check",
+  "title_bn": "ল্যাংমুইর অর্ধ-পৃষ্ঠঢাকা — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At P=1/K, θ equals?",
+      "q_bn": "P=১/K হলে θ?",
+      "options": [
+        "0.5",
+        "0",
+        "1",
+        "2"
+      ],
+      "options_bn": [
+        "0.5",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "KP=1 gives θ=1/(1+1).",
+      "explanation_bn": "KP=১ হলে θ=১/(১+১)।"
+    }
+  ]
+}

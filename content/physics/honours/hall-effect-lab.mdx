@@ -1,0 +1,49 @@
+---
+type: experiment
+slug: hall-effect-lab
+title_bn: হল প্রভাব দিয়ে বাহকের ঘনত্ব নির্ণয়
+title_en: Hall effect and carrier concentration
+subject: physics
+level: honours
+aim: Determine the Hall coefficient and carrier density of a thin sample at fixed current.
+aim_bn: নির্দিষ্ট তড়িৎপ্রবাহে পাতলা নমুনার হল সহগ ও বাহকের ঘনত্ব নির্ণয়।
+apparatus: [Hall probe of known thickness, regulated current supply, electromagnet, gaussmeter, sensitive voltmeter, reversing switches]
+apparatus_bn: [জানা পুরুত্বের হল নমুনা, নিয়ন্ত্রিত তড়িৎপ্রবাহ উৎস, তড়িৎচুম্বক, গসমিটার, সংবেদনশীল ভোল্টমিটার, দিক-বদলের সুইচ]
+theory: "For a single dominant carrier type, transverse force balance qE_H=qv_dB and I=nqv_dwt give V_H=IB/(nqt), where t is thickness along B. The signed Hall coefficient R_H=V_H t/(IB)=1/(nq); its sign identifies the carrier. Multiple carrier types invalidate the simple density formula."
+theory_bn: "এক প্রধান ধরনের বাহকের জন্য আনুপ্রস্থ বলের সাম্য qE_H=qv_dB এবং I=nqv_dwt থেকে V_H=IB/(nqt); t হলো B-এর দিকের পুরুত্ব। চিহ্নযুক্ত হল সহগ R_H=V_Ht/(IB)=1/(nq); চিহ্ন থেকে বাহকের প্রকৃতি বোঝা যায়। একাধিক বাহক থাকলে সহজ ঘনত্বের সূত্র প্রযোজ্য নয়।"
+procedure:
+  - Measure sample thickness and mark current and field directions.
+  - Set a small constant current and measure B with the gaussmeter at the sample position.
+  - Record transverse voltage for +B and −B at each field setting; use half their difference to reject contact-offset voltage.
+  - Repeat at several B values without overheating the sample; plot corrected V_H versus B.
+  - Determine the signed slope and calculate R_H and carrier density.
+procedure_bn:
+  - নমুনার পুরুত্ব মেপে প্রবাহ ও ক্ষেত্রের দিক চিহ্নিত করুন।
+  - ছোট স্থির প্রবাহ দিয়ে নমুনার অবস্থানে গসমিটারে B মাপুন।
+  - প্রতিটি ক্ষেত্রের জন্য +B ও −B-তে আনুপ্রস্থ বিভব মাপুন; যোগাযোগের offset বাদ দিতে পার্থক্যের অর্ধেক নিন।
+  - নমুনা গরম না করে কয়েকটি B-তে পুনরাবৃত্তি করে সংশোধিত V_H বনাম B লেখচিত্র আঁকুন।
+  - চিহ্নযুক্ত ঢাল থেকে R_H ও বাহকের ঘনত্ব হিসাব করুন।
+observation_table:
+  headers: [I (A), t (m), B (T), V(+B) (V), V(−B) (V), corrected V_H (V)]
+  rows:
+    - [record, record, record, record, record, calculate]
+    - [record, record, record, record, record, calculate]
+calculation: "V_H=[V(+B)−V(−B)]/2; if slope s=dV_H/dB at fixed I, R_H=st/I (m³/C), and n=1/(|R_H|e) (m⁻³) for one carrier species. Record the polarity convention before interpreting the sign."
+calculation_bn: "V_H=[V(+B)−V(−B)]/2; স্থির I-তে ঢাল s=dV_H/dB হলে R_H=st/I (m³/C) এবং এক ধরনের বাহকের জন্য n=1/(|R_H|e) (m⁻³)। চিহ্ন ব্যাখ্যার আগে মেরুতার রীতি লিখুন।"
+precautions: [Switch off magnet supply before rewiring, Keep current below the sample rating, Never confuse sample thickness with its width]
+precautions_bn: [তার বদলানোর আগে চুম্বকের বিদ্যুৎ বন্ধ করুন, নমুনার অনুমোদিত সীমার নিচে প্রবাহ রাখুন, নমুনার পুরুত্বকে প্রস্থের সঙ্গে গুলিয়ে ফেলবেন না]
+sources_of_error: [Misaligned voltage contacts cause longitudinal pickup, Temperature drift changes carrier response, Uneven magnetic field]
+sources_of_error_bn: [বিভব-সংযোগের ভুল সারিবদ্ধতায় অনুদৈর্ঘ্য ভোল্টেজ ঢোকে, তাপমাত্রা পরিবর্তনে বাহকের আচরণ বদলায়, অসম চৌম্বক ক্ষেত্র]
+viva:
+  - q: Why reverse the magnetic field?
+    a: The Hall voltage reverses sign while a fixed contact offset largely does not.
+    q_bn: চৌম্বক ক্ষেত্র উল্টাই কেন?
+    a_bn: হল বিভবের চিহ্ন বদলায় কিন্তু স্থির সংযোগ-offset মোটামুটি অপরিবর্তিত থাকে।
+  - q: What assumption is needed to infer n from R_H?
+    a: One dominant carrier type and the elementary single-carrier model.
+    q_bn: R_H থেকে n পেতে কোন অনুমান দরকার?
+    a_bn: একটি প্রধান বাহক-প্রজাতি এবং সরল এক-বাহক মডেল।
+tags: [honours, hall effect, electromagnetism, lab]
+---
+
+The sign depends on the wired voltage polarity and the orientation of the field; document both before calling a sample electron- or hole-dominated.

@@ -1,0 +1,63 @@
+---
+type: "equation"
+slug: "cubic-interplanar-spacing"
+title_bn: "ঘন স্ফটিকের আন্তঃতল ব্যবধান"
+title_en: "Cubic crystal interplanar spacing"
+subject: "chemistry"
+level: "honours"
+chapter: "Solid State Chemistry"
+chapter_bn: "Solid State Chemistry"
+latex: "d_{hkl}=\\frac{a}{\\sqrt{h^2+k^2+l^2}}"
+calculator: false
+variables:
+  - symbol: "d_hkl"
+    name: "interplanar spacing"
+    name_bn: "interplanar spacing"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "a"
+    name: "cubic lattice parameter"
+    name_bn: "cubic lattice parameter"
+    unit: "m"
+    si_unit: "m"
+  - symbol: "h"
+    name: "Miller index h"
+    name_bn: "Miller index h"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "k"
+    name: "Miller index k"
+    name_bn: "Miller index k"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "l"
+    name: "Miller index l"
+    name_bn: "Miller index l"
+    unit: "1"
+    si_unit: "1"
+derivation: "Write the plane intercepts as a/h, a/k and a/l (zero index means parallel to that axis). Normalize the plane normal (h,k,l) to find the origin-to-plane distance. Successive equivalent parallel lattice planes have the same geometric spacing."
+derivation_bn: "তলের অক্ষছেদ a/h, a/k ও a/l লিখুন (সূচক শূন্য মানে সেই অক্ষের সমান্তরাল)। তলের লম্ব (h,k,l) স্বাভাবিকীকরণ করে মূল থেকে তলের দূরত্ব নিন। সমতুল্য পরপর সমান্তরাল জালিকাতলের একই জ্যামিতিক ব্যবধান হয়।"
+derivation_steps:
+  - step_en: "Write the plane intercepts as a/h, a/k and a/l (zero index means parallel to that axis)."
+    step_bn: "তলের অক্ষছেদ a/h, a/k ও a/l লিখুন (সূচক শূন্য মানে সেই অক্ষের সমান্তরাল)।"
+    latex: "hx+ky+lz=a"
+  - step_en: "Normalize the plane normal (h,k,l) to find the origin-to-plane distance."
+    step_bn: "তলের লম্ব (h,k,l) স্বাভাবিকীকরণ করে মূল থেকে তলের দূরত্ব নিন।"
+    latex: "d=a/\\sqrt{h^2+k^2+l^2}"
+  - step_en: "Successive equivalent parallel lattice planes have the same geometric spacing."
+    step_bn: "সমতুল্য পরপর সমান্তরাল জালিকাতলের একই জ্যামিতিক ব্যবধান হয়।"
+    latex: "d_{hkl}=\\frac{a}{\\sqrt{h^2+k^2+l^2}}"
+summary_en: "For a=0.400 nm, (110) planes have spacing 0.400/√2≈0.283 nm."
+summary_bn: " সূচক বর্গের যোগফল ২ হওয়ায় √২ দিয়ে ভাগ।"
+tags:
+  - "honours"
+  - "solid state chemistry"
+---
+
+### প্রয়োগ / Worked example
+
+For a=0.400 nm, (110) planes have spacing 0.400/√2≈0.283 nm. বাংলায়: সূচক বর্গের যোগফল ২ হওয়ায় √২ দিয়ে ভাগ।
+
+### সীমাবদ্ধতা / Assumptions
+
+Only cubic metrics are covered. Reflection selection rules in BCC/FCC can suppress particular (hkl) peaks even when geometric spacing exists.

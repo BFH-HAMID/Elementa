@@ -1,0 +1,32 @@
+{
+  "slug": "honours-pseudo-first-order-rate",
+  "title_en": "Pseudo-first-order rate law — concept check",
+  "title_bn": "ছদ্ম প্রথম-ক্রম হার — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If excess [B]₀ doubles, k′?",
+      "q_bn": "অতিরিক্ত [B]₀ দ্বিগুণ হলে k′?",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Unchanged",
+        "Squares"
+      ],
+      "options_bn": [
+        "Doubles",
+        "Halves",
+        "Unchanged",
+        "Squares"
+      ],
+      "answer": 0,
+      "explanation": "k′=k[B]₀.",
+      "explanation_bn": "k′=k[B]₀।"
+    }
+  ]
+}

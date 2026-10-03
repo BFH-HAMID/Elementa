@@ -1,0 +1,70 @@
+{
+  "slug": "honours-chemistry-thermo-lab",
+  "title_en": "Honours chemistry equations and practicals",
+  "title_bn": "স্নাতক রসায়ন: সমীকরণ ও ব্যবহারিক",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Thermodynamics and organic practical",
+  "chapter_bn": "স্নাতক সমীকরণ ও ব্যবহারিক",
+  "description_en": "Conceptual and numerical checks with explained answers.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত ও সংখ্যাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At fixed T and P, what does Gibbs–Duhem imply for a binary mixture?",
+      "q_bn": "স্থির T ও P-তে দ্বি-উপাদান মিশ্রণে গিবস–ডুহেম থেকে কী পাওয়া যায়?",
+      "options": [
+        "x₁dμ₁+x₂dμ₂=0",
+        "dμ₁=dμ₂=0",
+        "μ₁+μ₂=0",
+        "dG=0 always"
+      ],
+      "options_bn": [
+        "x₁dμ₁+x₂dμ₂=0",
+        "dμ₁=dμ₂=0",
+        "μ₁+μ₂=0",
+        "dG=0 always"
+      ],
+      "answer": 0,
+      "explanation": "Divide Σnᵢdμᵢ=0 by total amount.",
+      "explanation_bn": "Σnᵢdμᵢ=0-কে মোট মোল সংখ্যা দিয়ে ভাগ করুন।"
+    },
+    {
+      "q": "What is the theoretical aspirin mass from 2.00 g salicylic acid with excess anhydride?",
+      "q_bn": "২.০০ g স্যালিসিলিক অ্যাসিড ও অতিরিক্ত অ্যানহাইড্রাইড থেকে তাত্ত্বিক অ্যাসপিরিন কত?",
+      "options": [
+        "2.61 g",
+        "2.00 g",
+        "1.53 g",
+        "4.00 g"
+      ],
+      "options_bn": [
+        "2.61 g",
+        "2.00 g",
+        "1.53 g",
+        "4.00 g"
+      ],
+      "answer": 0,
+      "explanation": "One mole (138.12 g) produces one mole aspirin (180.16 g); 2×180.16/138.12=2.61 g.",
+      "explanation_bn": "১ মোল (১৩৮.১২ g) থেকে ১ মোল অ্যাসপিরিন (১৮০.১৬ g); ২×১৮০.১৬/১৩৮.১২=২.৬১ g।"
+    },
+    {
+      "q": "Why can a wet aspirin sample show yield above 100%?",
+      "q_bn": "ভেজা অ্যাসপিরিন নমুনায় উৎপাদ ১০০%-এর বেশি হতে পারে কেন?",
+      "options": [
+        "Water adds to weighed mass",
+        "Water creates more salicylic acid",
+        "Melting point rises",
+        "Moles cease to be conserved"
+      ],
+      "options_bn": [
+        "Water adds to weighed mass",
+        "Water creates more salicylic acid",
+        "Melting point rises",
+        "Moles cease to be conserved"
+      ],
+      "answer": 0,
+      "explanation": "Residual liquid is weighed along with product.",
+      "explanation_bn": "অবশিষ্ট তরলও উৎপাদের সঙ্গে ওজন হয়।"
+    }
+  ]
+}

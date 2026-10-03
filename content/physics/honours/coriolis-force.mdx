@@ -1,0 +1,58 @@
+---
+type: "equation"
+slug: "coriolis-force"
+title_bn: "কোরিওলিস বল"
+title_en: "Coriolis force in a rotating frame"
+subject: "physics"
+level: "honours"
+chapter: "Analytical Mechanics"
+chapter_bn: "Analytical Mechanics"
+latex: "\\mathbf F_C=-2m(\\boldsymbol\\Omega\\times\\mathbf v_r)"
+calculator: false
+variables:
+  - symbol: "m"
+    name: "mass"
+    name_bn: "mass"
+    unit: "kg"
+    si_unit: "kg"
+  - symbol: "Ω"
+    name: "frame angular speed"
+    name_bn: "frame angular speed"
+    unit: "rad/s"
+    si_unit: "rad/s"
+  - symbol: "v_r"
+    name: "velocity relative to rotating frame"
+    name_bn: "velocity relative to rotating frame"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "F_C"
+    name: "Coriolis pseudo-force"
+    name_bn: "Coriolis pseudo-force"
+    unit: "N"
+    si_unit: "N"
+derivation: "Write the time derivative of a vector in inertial and rotating frames. Apply the rule twice to position and isolate the velocity-dependent acceleration. Move the velocity-dependent term to the rotating-frame force side."
+derivation_bn: "জড় ও ঘূর্ণায়মান কাঠামোয় ভেক্টরের সময়-অন্তরকের সম্পর্ক লিখুন। অবস্থানে নিয়মটি দুবার প্রয়োগ করে বেগনির্ভর ত্বরণ আলাদা করুন। বেগনির্ভর পদটিকে ঘূর্ণায়মান কাঠামোর বলের দিকে নিন।"
+derivation_steps:
+  - step_en: "Write the time derivative of a vector in inertial and rotating frames."
+    step_bn: "জড় ও ঘূর্ণায়মান কাঠামোয় ভেক্টরের সময়-অন্তরকের সম্পর্ক লিখুন।"
+    latex: "(d\\mathbf A/dt)_i=(d\\mathbf A/dt)_r+\\boldsymbol\\Omega\\times\\mathbf A"
+  - step_en: "Apply the rule twice to position and isolate the velocity-dependent acceleration."
+    step_bn: "অবস্থানে নিয়মটি দুবার প্রয়োগ করে বেগনির্ভর ত্বরণ আলাদা করুন।"
+    latex: "\\mathbf a_i=\\mathbf a_r+2\\boldsymbol\\Omega\\times\\mathbf v_r+\\boldsymbol\\Omega\\times(\\boldsymbol\\Omega\\times\\mathbf r)+\\dot{\\boldsymbol\\Omega}\\times\\mathbf r"
+  - step_en: "Move the velocity-dependent term to the rotating-frame force side."
+    step_bn: "বেগনির্ভর পদটিকে ঘূর্ণায়মান কাঠামোর বলের দিকে নিন।"
+    latex: "\\mathbf F_C=-2m(\\boldsymbol\\Omega\\times\\mathbf v_r)"
+summary_en: "At latitude φ, a horizontal northward speed v has horizontal Coriolis acceleration of magnitude 2Ωv sinφ (eastward in the northern hemisphere)."
+summary_bn: " নিরক্ষরেখায় অনুভূমিক অংশ শূন্য, মেরুতে সর্বাধিক।"
+tags:
+  - "honours"
+  - "analytical mechanics"
+---
+
+### প্রয়োগ / Worked example
+
+At latitude φ, a horizontal northward speed v has horizontal Coriolis acceleration of magnitude 2Ωv sinφ (eastward in the northern hemisphere). বাংলায়: নিরক্ষরেখায় অনুভূমিক অংশ শূন্য, মেরুতে সর্বাধিক।
+
+### সীমাবদ্ধতা / Assumptions
+
+This is a frame-dependent inertial force, not a new physical interaction. Centrifugal and Euler terms must also be included when appropriate.

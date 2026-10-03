@@ -1,0 +1,32 @@
+{
+  "slug": "honours-vanthoff-equilibrium-temperature",
+  "title_en": "van't Hoff temperature dependence of equilibrium — concept check",
+  "title_bn": "সাম্যে ভান্ট হফ তাপমাত্রা সূত্র — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For endothermic reaction, increasing T tends to?",
+      "q_bn": "তাপশোষী বিক্রিয়ায় T বাড়ালে K সাধারণত?",
+      "options": [
+        "Increase",
+        "Decrease",
+        "Always 1",
+        "Undefined"
+      ],
+      "options_bn": [
+        "Increase",
+        "Decrease",
+        "Always 1",
+        "Undefined"
+      ],
+      "answer": 0,
+      "explanation": "Derivative is positive if ΔrH°>0.",
+      "explanation_bn": "ΔrH°>০ হলে অন্তরক ধনাত্মক।"
+    }
+  ]
+}

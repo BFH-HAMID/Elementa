@@ -1,0 +1,32 @@
+{
+  "slug": "honours-conductance-cell-constant",
+  "title_en": "Conductivity from cell constant — concept check",
+  "title_bn": "কোষ ধ্রুবক ও পরিবাহিতা — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "G doubles at unchanged geometry; κ?",
+      "q_bn": "জ্যামিতি অপরিবর্তিত রেখে G দ্বিগুণ হলে κ?",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Zero",
+        "Same"
+      ],
+      "options_bn": [
+        "Doubles",
+        "Halves",
+        "Zero",
+        "Same"
+      ],
+      "answer": 0,
+      "explanation": "κ=G(l/A).",
+      "explanation_bn": "κ=G(l/A)।"
+    }
+  ]
+}

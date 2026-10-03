@@ -1,0 +1,32 @@
+{
+  "slug": "honours-maxwell-rms-speed-honours",
+  "title_en": "RMS molecular speed — concept check",
+  "title_bn": "গ্যাস অণুর rms বেগ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Four times the molar mass yields what speed ratio?",
+      "q_bn": "মোলার ভর চার গুণ হলে বেগের অনুপাত কত?",
+      "options": [
+        "One half",
+        "Double",
+        "One fourth",
+        "Four"
+      ],
+      "options_bn": [
+        "One half",
+        "Double",
+        "One fourth",
+        "Four"
+      ],
+      "answer": 0,
+      "explanation": "v_rms scales as 1/√M.",
+      "explanation_bn": "v_rms, ১/√M-এর সমানুপাতিক।"
+    }
+  ]
+}

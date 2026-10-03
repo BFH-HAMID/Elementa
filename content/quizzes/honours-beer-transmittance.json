@@ -1,0 +1,32 @@
+{
+  "slug": "honours-beer-transmittance",
+  "title_en": "Absorbance and transmittance — concept check",
+  "title_bn": "শোষণ ও সঞ্চারণ সম্পর্ক — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If 10% of light transmits, A=?",
+      "q_bn": "১০% আলো পার হলে A কত?",
+      "options": [
+        "1",
+        "0.1",
+        "10",
+        "2"
+      ],
+      "options_bn": [
+        "1",
+        "0.1",
+        "10",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "T=0.10 and −log10(0.10)=1.",
+      "explanation_bn": "T=০.১০, −log10(০.১০)=১।"
+    }
+  ]
+}

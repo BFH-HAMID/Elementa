@@ -1,0 +1,32 @@
+{
+  "slug": "honours-rotational-kinetic-energy",
+  "title_en": "Rotational kinetic energy — concept check",
+  "title_bn": "ঘূর্ণন গতিশক্তি — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If angular speed doubles at fixed I, what happens to K?",
+      "q_bn": "I স্থির রেখে কৌণিক বেগ দ্বিগুণ হলে K কী হয়?",
+      "options": [
+        "Four times",
+        "Twice",
+        "Half",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Four times",
+        "Twice",
+        "Half",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "K scales as ω².",
+      "explanation_bn": "K, ω²-এর সমানুপাতিক।"
+    }
+  ]
+}

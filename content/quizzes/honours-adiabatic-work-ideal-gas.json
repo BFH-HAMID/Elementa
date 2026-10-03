@@ -1,0 +1,32 @@
+{
+  "slug": "honours-adiabatic-work-ideal-gas",
+  "title_en": "Reversible adiabatic work by ideal gas — concept check",
+  "title_bn": "অ্যাডিয়াবেটিক গ্যাসের কাজ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For expansion, is work by the gas positive?",
+      "q_bn": "প্রসারণে গ্যাসের করা কাজের চিহ্ন কী?",
+      "options": [
+        "Positive",
+        "Negative",
+        "Always zero",
+        "Undefined"
+      ],
+      "options_bn": [
+        "Positive",
+        "Negative",
+        "Always zero",
+        "Undefined"
+      ],
+      "answer": 0,
+      "explanation": "With the stated sign convention W=∫P dV>0 for expansion.",
+      "explanation_bn": "নির্ধারিত চিহ্নরীতিতে প্রসারণে W=∫P dV>০।"
+    }
+  ]
+}

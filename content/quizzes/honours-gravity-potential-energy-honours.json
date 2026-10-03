@@ -1,0 +1,32 @@
+{
+  "slug": "honours-gravity-potential-energy-honours",
+  "title_en": "Gravitational potential energy outside a sphere — concept check",
+  "title_bn": "মহাকর্ষীয় বিভব শক্তি — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Why is U negative with zero at infinity?",
+      "q_bn": "অসীমে শূন্য ধরলে U ঋণাত্মক কেন?",
+      "options": [
+        "Attractive binding",
+        "Repulsive binding",
+        "Negative mass",
+        "Zero gravity"
+      ],
+      "options_bn": [
+        "Attractive binding",
+        "Repulsive binding",
+        "Negative mass",
+        "Zero gravity"
+      ],
+      "answer": 0,
+      "explanation": "Work is needed to remove a bound test mass to infinity.",
+      "explanation_bn": "আবদ্ধ ভরকে অসীমে সরাতে কাজ লাগে।"
+    }
+  ]
+}

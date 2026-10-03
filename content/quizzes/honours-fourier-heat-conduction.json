@@ -1,0 +1,32 @@
+{
+  "slug": "honours-fourier-heat-conduction",
+  "title_en": "Fourier’s law of heat conduction — check your understanding",
+  "title_bn": "ফুরিয়ের তাপ-পরিবহন সূত্র — অনুশীলন",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Thermal Physics",
+  "chapter_bn": "Thermal Physics",
+  "description_en": "Concept check with an explained answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "What is the SI unit of thermal conductivity?",
+      "q_bn": "তাপ-পরিবাহিতার SI একক কোনটি?",
+      "options": [
+        "W/(m K)",
+        "W/m²",
+        "J/K",
+        "W K/m"
+      ],
+      "options_bn": [
+        "W/(m K)",
+        "W/m²",
+        "J/K",
+        "W K/m"
+      ],
+      "answer": 0,
+      "explanation": "From j_Q=−κ∇T: (W/m²)/(K/m)=W/(m K).",
+      "explanation_bn": "From j_Q=−κ∇T: (W/m²)/(K/m)=W/(m K)."
+    }
+  ]
+}

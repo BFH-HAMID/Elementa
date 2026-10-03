@@ -1,0 +1,32 @@
+{
+  "slug": "honours-weak-acid-ph-approx",
+  "title_en": "Weak monoprotic acid pH approximation — concept check",
+  "title_bn": "দুর্বল অম্লের pH অনুমান — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If C quadruples at fixed Ka, approximate [H+] becomes?",
+      "q_bn": "Ka স্থির রেখে C চার গুণ হলে আনুমানিক [H+]?",
+      "options": [
+        "Double",
+        "Four times",
+        "Half",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Double",
+        "Four times",
+        "Half",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Square-root dependence on C.",
+      "explanation_bn": "C-এর বর্গমূলের সমানুপাতিক।"
+    }
+  ]
+}

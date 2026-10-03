@@ -1,0 +1,32 @@
+{
+  "slug": "honours-freezing-depression-electrolyte",
+  "title_en": "Electrolyte freezing-point depression — concept check",
+  "title_bn": "তড়িৎবিশ্লেষ্যের হিমাঙ্ক হ্রাস — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If ideal i doubles, ΔTf does what?",
+      "q_bn": "আদর্শ i দ্বিগুণ হলে ΔTf কত?",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Unchanged",
+        "Zero"
+      ],
+      "options_bn": [
+        "Doubles",
+        "Halves",
+        "Unchanged",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "ΔTf is proportional to i at fixed m.",
+      "explanation_bn": "m স্থির থাকলে ΔTf, i-এর সমানুপাতিক।"
+    }
+  ]
+}

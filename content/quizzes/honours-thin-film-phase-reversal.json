@@ -1,0 +1,32 @@
+{
+  "slug": "honours-thin-film-phase-reversal",
+  "title_en": "Thin-film reflected interference — concept check",
+  "title_bn": "পাতলা স্তরে প্রতিফলিত ব্যতিচার — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Does the reflection phase shift matter?",
+      "q_bn": "প্রতিফলনে দশা-বিপর্যয় কি গুরুত্বপূর্ণ?",
+      "options": [
+        "Yes",
+        "No",
+        "Only for sound",
+        "Only at normal incidence"
+      ],
+      "options_bn": [
+        "Yes",
+        "No",
+        "Only for sound",
+        "Only at normal incidence"
+      ],
+      "answer": 0,
+      "explanation": "A π reversal switches bright and dark conditions.",
+      "explanation_bn": "π বিপর্যয়ে উজ্জ্বল ও অন্ধকার শর্ত পাল্টায়।"
+    }
+  ]
+}

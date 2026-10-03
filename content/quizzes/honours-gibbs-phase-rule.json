@@ -1,0 +1,32 @@
+{
+  "slug": "honours-gibbs-phase-rule",
+  "title_en": "Gibbs phase rule — practice",
+  "title_bn": "গিবসের দশা সূত্র — অনুশীলন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours theory and practical",
+  "chapter_bn": "স্নাতক তত্ত্ব ও ব্যবহারিক",
+  "description_en": "A conceptual question with worked answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For one component with three coexisting phases, F equals?",
+      "q_bn": "এক উপাদানের তিনটি সহাবস্থানকারী দশায় F কত?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "options_bn": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "F=C−P+2=1−3+2=0.",
+      "explanation_bn": "F=C−P+২=১−৩+২=০।"
+    }
+  ]
+}

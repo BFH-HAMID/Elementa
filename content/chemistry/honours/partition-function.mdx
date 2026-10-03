@@ -1,0 +1,63 @@
+---
+type: "equation"
+slug: "partition-function"
+title_bn: "আণবিক বিভাজন ফাংশন"
+title_en: "Molecular partition function"
+subject: "chemistry"
+level: "honours"
+chapter: "Statistical Thermodynamics"
+chapter_bn: "Statistical Thermodynamics"
+latex: "q=\\sum_i g_i e^{-\\varepsilon_i/(k_B T)}"
+calculator: false
+variables:
+  - symbol: "q"
+    name: "single-particle partition function"
+    name_bn: "single-particle partition function"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "g_i"
+    name: "degeneracy of level i"
+    name_bn: "degeneracy of level i"
+    unit: "1"
+    si_unit: "1"
+  - symbol: "ε_i"
+    name: "level energy"
+    name_bn: "level energy"
+    unit: "J"
+    si_unit: "J"
+  - symbol: "k_B"
+    name: "Boltzmann constant"
+    name_bn: "Boltzmann constant"
+    unit: "J/K"
+    si_unit: "J/K"
+  - symbol: "T"
+    name: "absolute temperature"
+    name_bn: "absolute temperature"
+    unit: "K"
+    si_unit: "K"
+derivation: "Assign each microstate the canonical Boltzmann weight. Count gᵢ distinct states sharing energy εᵢ. Sum all weights to normalize probabilities."
+derivation_bn: "প্রতিটি ক্ষুদ্রাবস্থার জন্য ক্যানোনিকাল বোল্টজমান ওজন নিন। একই εᵢ শক্তির gᵢ সংখ্যক অবস্থা গণনা করুন। সম্ভাবনা স্বাভাবিকীকরণের জন্য সব ওজন যোগ করুন।"
+derivation_steps:
+  - step_en: "Assign each microstate the canonical Boltzmann weight."
+    step_bn: "প্রতিটি ক্ষুদ্রাবস্থার জন্য ক্যানোনিকাল বোল্টজমান ওজন নিন।"
+    latex: "w_i=e^{-\\varepsilon_i/(k_BT)}"
+  - step_en: "Count gᵢ distinct states sharing energy εᵢ."
+    step_bn: "একই εᵢ শক্তির gᵢ সংখ্যক অবস্থা গণনা করুন।"
+    latex: "w_{\\varepsilon_i}=g_i e^{-\\varepsilon_i/(k_BT)}"
+  - step_en: "Sum all weights to normalize probabilities."
+    step_bn: "সম্ভাবনা স্বাভাবিকীকরণের জন্য সব ওজন যোগ করুন।"
+    latex: "q=\\sum_i g_i e^{-\\varepsilon_i/(k_B T)}"
+summary_en: "For two nondegenerate levels 0 and Δ, q=1+e^(−Δ/kBT). The excited-state probability is e^(−Δ/kBT)/q."
+summary_bn: " তাপমাত্রা বাড়লে উত্তেজিত অবস্থার সম্ভাবনা বাড়ে।"
+tags:
+  - "honours"
+  - "statistical thermodynamics"
+---
+
+### প্রয়োগ / Worked example
+
+For two nondegenerate levels 0 and Δ, q=1+e^(−Δ/kBT). The excited-state probability is e^(−Δ/kBT)/q. বাংলায়: তাপমাত্রা বাড়লে উত্তেজিত অবস্থার সম্ভাবনা বাড়ে।
+
+### সীমাবদ্ধতা / Assumptions
+
+Choose the energy zero consistently. This single-particle q is not automatically the many-particle partition function Q; for indistinguishable classical noninteracting particles Q≈q^N/N! in the dilute limit.

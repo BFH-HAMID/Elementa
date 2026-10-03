@@ -1,0 +1,32 @@
+{
+  "slug": "honours-quality-factor-oscillator",
+  "title_en": "Quality factor of weakly damped oscillator — concept check",
+  "title_bn": "দোলকের গুণাঙ্ক — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Reducing b to half makes Q?",
+      "q_bn": "b অর্ধেক হলে Q কত?",
+      "options": [
+        "Double",
+        "Half",
+        "Four times",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Double",
+        "Half",
+        "Four times",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Q inversely depends on b.",
+      "explanation_bn": "Q, b-এর ব্যস্তানুপাতিক।"
+    }
+  ]
+}

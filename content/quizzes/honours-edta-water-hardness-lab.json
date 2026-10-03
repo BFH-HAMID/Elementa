@@ -1,0 +1,32 @@
+{
+  "slug": "honours-edta-water-hardness-lab",
+  "title_en": "Total water hardness by EDTA titration — practice",
+  "title_bn": "EDTA দিয়ে পানির মোট কঠোরতা — অনুশীলন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours theory and practical",
+  "chapter_bn": "স্নাতক তত্ত্ব ও ব্যবহারিক",
+  "description_en": "A conceptual question with worked answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For 0.0100 M EDTA, 10.0 mL titre and 50.0 mL sample, approximate hardness is?",
+      "q_bn": "০.০১০০ M EDTA, ১০.০ mL পাঠ ও ৫০.০ mL নমুনায় কঠোরতা প্রায় কত?",
+      "options": [
+        "200 mg/L CaCO₃",
+        "20 mg/L CaCO₃",
+        "100 mg/L CaCO₃",
+        "2000 mg/L CaCO₃"
+      ],
+      "options_bn": [
+        "200 mg/L CaCO₃",
+        "20 mg/L CaCO₃",
+        "100 mg/L CaCO₃",
+        "2000 mg/L CaCO₃"
+      ],
+      "answer": 0,
+      "explanation": "0.0100×0.0100×100.09×1000/0.0500≈200 mg/L.",
+      "explanation_bn": "০.০১০০×০.০১০০×১০০.০৯×১০০০/০.০৫০০≈২০০ mg/L।"
+    }
+  ]
+}

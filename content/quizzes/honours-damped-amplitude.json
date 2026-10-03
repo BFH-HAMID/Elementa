@@ -1,0 +1,32 @@
+{
+  "slug": "honours-damped-amplitude",
+  "title_en": "Envelope of a damped oscillator — concept check",
+  "title_bn": "ক্ষয়মান দোলনের বিস্তার — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At t=2m/b the amplitude is?",
+      "q_bn": "t=২m/b-এ বিস্তার কত?",
+      "options": [
+        "A₀/e",
+        "A₀",
+        "2A₀",
+        "A₀/e²"
+      ],
+      "options_bn": [
+        "A₀/e",
+        "A₀",
+        "2A₀",
+        "A₀/e²"
+      ],
+      "answer": 0,
+      "explanation": "Substitute into the exponential envelope.",
+      "explanation_bn": "সূচকীয় আবরণে মান বসান।"
+    }
+  ]
+}

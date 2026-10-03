@@ -1,0 +1,32 @@
+{
+  "slug": "honours-single-slit-minimum-honours",
+  "title_en": "Single-slit diffraction minima — concept check",
+  "title_bn": "একক চিরের অন্ধকার ঝালর — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "Is m=0 a dark fringe?",
+      "q_bn": "m=০ কি অন্ধকার ঝালর?",
+      "options": [
+        "No, central maximum",
+        "Yes",
+        "Only at large angle",
+        "Only for red light"
+      ],
+      "options_bn": [
+        "No, central maximum",
+        "Yes",
+        "Only at large angle",
+        "Only for red light"
+      ],
+      "answer": 0,
+      "explanation": "At zero path difference fields add in phase.",
+      "explanation_bn": "শূন্য পথ পার্থক্যে তরঙ্গ একই দশায় যোগ হয়।"
+    }
+  ]
+}

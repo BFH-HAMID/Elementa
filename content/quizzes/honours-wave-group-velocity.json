@@ -1,0 +1,32 @@
+{
+  "slug": "honours-wave-group-velocity",
+  "title_en": "Group velocity — concept check",
+  "title_bn": "তরঙ্গগুচ্ছের বেগ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For ω=ck, group speed is?",
+      "q_bn": "ω=ck হলে গুচ্ছবেগ কত?",
+      "options": [
+        "c",
+        "k/c",
+        "0",
+        "c²"
+      ],
+      "options_bn": [
+        "c",
+        "k/c",
+        "0",
+        "c²"
+      ],
+      "answer": 0,
+      "explanation": "Differentiate ω with respect to k.",
+      "explanation_bn": "k অনুযায়ী ω অন্তরক করুন।"
+    }
+  ]
+}

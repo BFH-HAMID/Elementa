@@ -1,0 +1,32 @@
+{
+  "slug": "honours-crystal-field-octahedral-cfse",
+  "title_en": "Octahedral crystal-field stabilization — concept check",
+  "title_bn": "অষ্টতলক জটিলে CFSE — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "For t2g³ eg⁰, CFSE is?",
+      "q_bn": "t2g³ eg⁰-এ CFSE কত?",
+      "options": [
+        "−1.2Δo",
+        "+1.2Δo",
+        "0",
+        "−0.4Δo"
+      ],
+      "options_bn": [
+        "−1.2Δo",
+        "+1.2Δo",
+        "0",
+        "−0.4Δo"
+      ],
+      "answer": 0,
+      "explanation": "Three electrons each contribute −0.4Δo.",
+      "explanation_bn": "তিন ইলেকট্রন প্রতি −০.৪Δo দেয়।"
+    }
+  ]
+}

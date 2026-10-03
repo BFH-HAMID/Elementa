@@ -1,0 +1,61 @@
+---
+type: "equation"
+slug: "wave-group-velocity"
+title_bn: "তরঙ্গগুচ্ছের বেগ"
+title_en: "Group velocity"
+subject: "physics"
+level: "honours"
+chapter: "Honours Physics"
+chapter_bn: "স্নাতক পদার্থবিজ্ঞান"
+latex: "v_g=\\frac{d\\omega}{dk}"
+calculator: false
+variables:
+  - symbol: "v_g"
+    name: "group velocity"
+    name_bn: "group velocity"
+    unit: "m/s"
+    si_unit: "m/s"
+  - symbol: "ω"
+    name: "angular frequency"
+    name_bn: "angular frequency"
+    unit: "rad/s"
+    si_unit: "rad/s"
+  - symbol: "k"
+    name: "wave number"
+    name_bn: "wave number"
+    unit: "1/m"
+    si_unit: "1/m"
+derivation: "Superpose neighbouring wave numbers and frequencies. \\cos(k_1x-\\omega_1t)+\\cos(k_2x-\\omega_2t)=2\\cos(\\Delta kx/2-\\Delta\\omega t/2)\\cos(\\bar kx-\\bar\\omega t) Substitute the preceding result and identify the requested relation."
+derivation_bn: "কাছাকাছি তরঙ্গসংখ্যা ও কম্পাঙ্কের তরঙ্গ যোগ করুন। \\cos(k_1x-\\omega_1t)+\\cos(k_2x-\\omega_2t)=2\\cos(\\Delta kx/2-\\Delta\\omega t/2)\\cos(\\bar kx-\\bar\\omega t) আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation_steps:
+  - step_en: "Superpose neighbouring wave numbers and frequencies."
+    step_bn: "কাছাকাছি তরঙ্গসংখ্যা ও কম্পাঙ্কের তরঙ্গ যোগ করুন।"
+    latex: "\\cos(k_1x-\\omega_1t)+\\cos(k_2x-\\omega_2t)=2\\cos(\\Delta kx/2-\\Delta\\omega t/2)\\cos(\\bar kx-\\bar\\omega t)"
+  - step_en: "Substitute the preceding result and identify the requested relation."
+    step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+    latex: "v_g=\\frac{d\\omega}{dk}"
+summary_en: "For ω=ck in a nondispersive medium v_g=c."
+summary_bn: "অবিচ্ছুরণশীল মাধ্যমে ω=ck হলে v_g=c।"
+tags:
+  - "honours"
+  - "physics"
+  - "derivation"
+---
+
+### প্রতিপাদনের ব্যাখ্যা / Derivation
+
+Superpose neighbouring wave numbers and frequencies. `\cos(k_1x-\omega_1t)+\cos(k_2x-\omega_2t)=2\cos(\Delta kx/2-\Delta\omega t/2)\cos(\bar kx-\bar\omega t)` Substitute the preceding result and identify the requested relation.
+
+কাছাকাছি তরঙ্গসংখ্যা ও কম্পাঙ্কের তরঙ্গ যোগ করুন। `\cos(k_1x-\omega_1t)+\cos(k_2x-\omega_2t)=2\cos(\Delta kx/2-\Delta\omega t/2)\cos(\bar kx-\bar\omega t)` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
+
+### সমাধানসহ উদাহরণ / Worked application
+
+For ω=ck in a nondispersive medium v_g=c.
+
+অবিচ্ছুরণশীল মাধ্যমে ω=ck হলে v_g=c।
+
+### সীমা ও সতর্কতা / Assumptions
+
+A narrow wave packet in a smooth dispersion relation; group velocity is not automatically signal speed in absorbing media.
+
+মসৃণ বিচ্ছুরণ সম্পর্কে সংকীর্ণ তরঙ্গগুচ্ছ; শোষণকারী মাধ্যমে গুচ্ছবেগ সবসময় সংকেতবেগ নয়।

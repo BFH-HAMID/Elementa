@@ -1,0 +1,32 @@
+{
+  "slug": "honours-orbital-speed-circular",
+  "title_en": "Circular orbital speed — concept check",
+  "title_bn": "বৃত্তীয় কক্ষপথের বেগ — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At four times the radius, speed is?",
+      "q_bn": "চার গুণ ব্যাসার্ধে বেগ কত?",
+      "options": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "v scales as 1/√r.",
+      "explanation_bn": "v, ১/√r-এর সমানুপাতিক।"
+    }
+  ]
+}

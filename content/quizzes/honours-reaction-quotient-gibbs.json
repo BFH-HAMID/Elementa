@@ -1,0 +1,32 @@
+{
+  "slug": "honours-reaction-quotient-gibbs",
+  "title_en": "Reaction Gibbs energy and quotient — concept check",
+  "title_bn": "বিক্রিয়া ভাগফল ও গিবস শক্তি — বহুনির্বাচনী",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Honours Chemistry",
+  "chapter_bn": "স্নাতক রসায়ন",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At equilibrium ΔrG equals?",
+      "q_bn": "সাম্যে ΔrG কত?",
+      "options": [
+        "Zero",
+        "RT",
+        "Infinity",
+        "Always positive"
+      ],
+      "options_bn": [
+        "Zero",
+        "RT",
+        "Infinity",
+        "Always positive"
+      ],
+      "answer": 0,
+      "explanation": "No thermodynamic driving force at equilibrium.",
+      "explanation_bn": "সাম্যে তাপগতীয় চালিকা শক্তি শূন্য।"
+    }
+  ]
+}

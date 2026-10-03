@@ -1,0 +1,32 @@
+{
+  "slug": "honours-michaelis-menten-equation",
+  "title_en": "Michaelis–Menten enzyme kinetics — check your understanding",
+  "title_bn": "মাইকেলিস–মেন্টেন সমীকরণ — অনুশীলন",
+  "subject": "chemistry",
+  "level": "honours",
+  "chapter": "Chemical Kinetics",
+  "chapter_bn": "Chemical Kinetics",
+  "description_en": "Concept check with an explained answer.",
+  "description_bn": "ব্যাখ্যাসহ ধারণাগত প্রশ্ন।",
+  "questions": [
+    {
+      "q": "At [S]=K_m, what fraction of Vmax is v₀?",
+      "q_bn": "[S]=K_m হলে v₀, Vmax-এর কত অংশ?",
+      "options": [
+        "1/2",
+        "1/4",
+        "3/4",
+        "1"
+      ],
+      "options_bn": [
+        "1/2",
+        "1/4",
+        "3/4",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Substituting [S]=K_m gives K_m/(2K_m)=1/2.",
+      "explanation_bn": "Substituting [S]=K_m gives K_m/(2K_m)=1/2."
+    }
+  ]
+}

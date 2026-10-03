@@ -1,0 +1,32 @@
+{
+  "slug": "honours-inductor-energy-honours",
+  "title_en": "Energy stored in an inductor — concept check",
+  "title_bn": "আবেশকে সঞ্চিত শক্তি — বহুনির্বাচনী",
+  "subject": "physics",
+  "level": "honours",
+  "chapter": "Honours Physics",
+  "chapter_bn": "স্নাতক পদার্থবিজ্ঞান",
+  "description_en": "One explained multiple-choice check for this derivation.",
+  "description_bn": "এই প্রতিপাদনের ওপর ব্যাখ্যাসহ একটি বহুনির্বাচনী প্রশ্ন।",
+  "questions": [
+    {
+      "q": "If I doubles at fixed L, stored energy?",
+      "q_bn": "L স্থির রেখে I দ্বিগুণ হলে সঞ্চিত শক্তি কত?",
+      "options": [
+        "Four times",
+        "Twice",
+        "Half",
+        "Unchanged"
+      ],
+      "options_bn": [
+        "Four times",
+        "Twice",
+        "Half",
+        "Unchanged"
+      ],
+      "answer": 0,
+      "explanation": "Energy scales as I².",
+      "explanation_bn": "শক্তি I²-এর সমানুপাতিক।"
+    }
+  ]
+}

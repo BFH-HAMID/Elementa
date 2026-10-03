@@ -2002,6 +2002,17 @@
     "tags": []
   },
   {
+    "slug": "brewster-angle-honours-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Polarization at Brewster angle",
+    "title_bn": "ব্রুস্টার কোণে মেরুকরণ",
+    "description_en": "Measure Brewster angle and infer refractive-index ratio from reflected p-polarized light.",
+    "description_bn": "p-মেরুকৃত প্রতিফলিত আলো থেকে ব্রুস্টার কোণ মেপে প্রতিসরাঙ্ক অনুপাত নির্ণয়।",
+    "href": "/experiments/brewster-angle-honours-lab",
+    "tags": []
+  },
+  {
     "slug": "brewster-angle-honours",
     "kind": "equation",
     "subject": "physics",
@@ -2299,6 +2310,17 @@
     "tags": []
   },
   {
+    "slug": "rc-discharge-honours-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "RC discharge time-constant practical",
+    "title_bn": "RC নিঃসরণের সময় ধ্রুবক ব্যবহারিক",
+    "description_en": "Measure τ=RC from capacitor voltage as a function of discharge time.",
+    "description_bn": "সময়ের সঙ্গে ধারকের বিভব মেপে τ=RC নির্ণয়।",
+    "href": "/experiments/rc-discharge-honours-lab",
+    "tags": []
+  },
+  {
     "slug": "rc-discharge-honours",
     "kind": "equation",
     "subject": "physics",
@@ -2340,6 +2362,17 @@
     "description_en": "Compute how moving clocks run slow compared with stationary ones.",
     "description_bn": "চলমান ঘড়ি স্থির ঘড়ির তুলনায় কত ধীরে চলে তা নির্ণয়।",
     "href": "/equations/relativistic-time-dilation",
+    "tags": []
+  },
+  {
+    "slug": "rotational-kinetic-energy-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Flywheel moment of inertia and rotational energy",
+    "title_bn": "ফ্লাইহুইলের জড়তার ভ্রামক ও ঘূর্ণনশক্তি",
+    "description_en": "Measure I by falling-mass acceleration and estimate the flywheel's rotational energy.",
+    "description_bn": "পতনশীল ভরের ত্বরণ থেকে I এবং ফ্লাইহুইলের ঘূর্ণনশক্তি নির্ণয়।",
+    "href": "/experiments/rotational-kinetic-energy-lab",
     "tags": []
   },
   {
@@ -2406,6 +2439,17 @@
     "description_en": "At normal incidence and m=0, t=λ₀/(4n); for 600 nm and n=1.5, t=100 nm.",
     "description_bn": "লম্ব আপতনে m=০ হলে t=λ₀/(৪n); ৬০০ nm ও n=১.৫-এ t=১০০ nm।",
     "href": "/equations/thin-film-phase-reversal",
+    "tags": []
+  },
+  {
+    "slug": "wave-energy-string-lab",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Sonometer test of transverse-wave speed",
+    "title_bn": "সনোমিটারে আনুপ্রস্থ তরঙ্গবেগ যাচাই",
+    "description_en": "Test v²=𝒯/μ from the fundamental resonance of a tensioned string.",
+    "description_bn": "টানটান তারের মৌলিক অনুনাদে v²=𝒯/μ যাচাই।",
+    "href": "/experiments/wave-energy-string-lab",
     "tags": []
   },
   {
@@ -3179,6 +3223,17 @@
     "tags": []
   },
   {
+    "slug": "beer-transmittance-lab",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Beer–Lambert absorbance and transmittance calibration",
+    "title_bn": "বিয়ার–ল্যাম্বার্ট শোষণ ও সঞ্চারণ ক্রমাঙ্কন",
+    "description_en": "Verify A=−log₁₀T and A=εlc over a dilute standard concentration series.",
+    "description_bn": "বিরল মান দ্রবণে A=−log₁₀T ও A=εlc যাচাই।",
+    "href": "/experiments/beer-transmittance-lab",
+    "tags": []
+  },
+  {
     "slug": "beer-transmittance",
     "kind": "equation",
     "subject": "chemistry",
@@ -3231,6 +3286,17 @@
     "description_en": "If Ksp=10⁻⁸ (mol/L)² and c=0.01 mol/L, s≈10⁻⁶ mol/L.",
     "description_bn": "Ksp=১০⁻⁸ (mol/L)² ও c=০.০১ mol/L হলে s≈১০⁻⁶ mol/L।",
     "href": "/equations/common-ion-solubility",
+    "tags": []
+  },
+  {
+    "slug": "conductance-cell-constant-lab",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Calibration of conductivity-cell constant",
+    "title_bn": "পরিবাহিতা কোষধ্রুবকের ক্রমাঙ্কন",
+    "description_en": "Calibrate the effective cell constant with a standard solution then measure unknown conductivity.",
+    "description_bn": "মান দ্রবণে কার্যকর কোষধ্রুবক ক্রমাঙ্কিত করে অজানা দ্রবণের পরিবাহিতা মাপা।",
+    "href": "/experiments/conductance-cell-constant-lab",
     "tags": []
   },
   {
@@ -3330,6 +3396,17 @@
     "description_en": "Relate electric charge to the mass deposited in electrolysis.",
     "description_bn": "তড়িৎ বিশ্লেষণে চার্জ ও সঞ্চিত ভরের সম্পর্ক।",
     "href": "/equations/faradays-law",
+    "tags": []
+  },
+  {
+    "slug": "freezing-depression-electrolyte-lab",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Cryoscopic molar-mass and van't Hoff-factor measurement",
+    "title_bn": "হিমাঙ্ক হ্রাসে মোলার ভর ও ভান্ট হফ গুণক",
+    "description_en": "Measure a solvent freezing point and its dilute solution to estimate ΔTf and effective i.",
+    "description_bn": "দ্রাবক ও বিরল দ্রবণের হিমাঙ্ক মেপে ΔTf ও কার্যকর i নির্ণয়।",
+    "href": "/experiments/freezing-depression-electrolyte-lab",
     "tags": []
   },
   {
@@ -3605,6 +3682,17 @@
     "description_en": "If hν=0.20 eV, ground-state energy is 0.10 eV.",
     "description_bn": "hν=০.২০ eV হলে ভূমিস্তরের শক্তি ০.১০ eV।",
     "href": "/equations/vibrational-zero-point",
+    "tags": []
+  },
+  {
+    "slug": "weak-acid-ph-approx-lab",
+    "kind": "experiment",
+    "subject": "chemistry",
+    "title_en": "Weak-acid dissociation and pH measurement",
+    "title_bn": "দুর্বল অম্লের বিয়োজন ও pH পরিমাপ",
+    "description_en": "Estimate Ka from the pH of a known analytical concentration of monoprotic weak acid.",
+    "description_bn": "জানা প্রাথমিক ঘনত্বের এক-প্রোটনীয় দুর্বল অম্লের pH থেকে Ka নির্ণয়।",
+    "href": "/experiments/weak-acid-ph-approx-lab",
     "tags": []
   },
   {

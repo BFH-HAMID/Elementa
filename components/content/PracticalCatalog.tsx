@@ -5,9 +5,19 @@ import { ChevronDown, FlaskConical, Search, X } from 'lucide-react';
 import { useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
-import practicalCatalog from '@/content/practical-topics.json';
+import { practicalCatalog } from '@/lib/practical-topics';
 import { Badge } from '@/components/ui/Badge';
+import { MathText } from './MathText';
 import { Tex } from './Tex';
+
+const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+
+function toBanglaNumeral(value: number): string {
+  return String(value)
+    .split('')
+    .map((digit) => banglaDigits[Number(digit)] ?? digit)
+    .join('');
+}
 
 type SubjectFilter = 'all' | 'physics' | 'chemistry';
 type StageFilter = 'all' | 'school' | 'hsc';
@@ -40,6 +50,8 @@ export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: 
         topic.note_bn,
         topic.category_en,
         topic.category_bn,
+        topic.points_en.join(' '),
+        topic.points_bn.join(' '),
         topic.equation ?? ''
       ].join(' ').toLocaleLowerCase().includes(searchTerm))
     }))
@@ -79,8 +91,8 @@ export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: 
         <h2 className="section-title">{locale === 'bn' ? 'পদার্থবিজ্ঞান ও রসায়নের ল্যাব বিষয়' : 'Physics and chemistry lab topics'}</h2>
         <p className="mt-2 text-sm leading-6 muted">
           {locale === 'bn'
-            ? 'স্কুল (৬–১০) ও এইচএসসি স্তরের তালিকাটি খুঁজে দেখুন। প্রতিটি বিষয়ের উদ্দেশ্য, মূল ধারণা/সম্পর্ক এবং সতর্কতা সংক্ষেপে দেওয়া আছে; যেসব বিষয়ে পূর্ণ নির্দেশিকা আছে, সেখান থেকে সেটি খুলুন।'
-            : 'Browse the school (Classes 6–10) and HSC lists. Each topic has a short purpose, key relation or idea, and a safety/measurement note; open a full guide where one is available.'}
+            ? 'স্কুল (৬–১০) ও এইচএসসি স্তরের তালিকাটি খুঁজে দেখুন। প্রতিটি বিষয়ে ১০–১২টি পয়েন্টে উদ্দেশ্য, যন্ত্রপাতি, মূলনীতি ও সূত্র, ধাপ, পর্যবেক্ষণ, হিসাব, সতর্কতা, ভুলের উৎস ও ভাইভা প্রশ্ন দেওয়া আছে; যেসব বিষয়ে পূর্ণ নির্দেশিকা আছে, সেখান থেকে সেটি খুলুন।'
+            : 'Browse the school (Classes 6–10) and HSC lists. Each topic opens into 10–12 points covering the aim, apparatus, working principle and relation, steps, observation, calculation, precautions, error sources and viva questions; open a full guide where one is available.'}
         </p>
       </div>
 
@@ -154,7 +166,9 @@ export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: 
                       <div key={category}>
                         <h3 className="mb-3 text-xs font-black uppercase tracking-[0.14em] muted">{locale === 'bn' ? categoryBn : category}</h3>
                         <div className="grid gap-2 md:grid-cols-2">
-                          {topics.map((topic) => (
+                          {topics.map((topic) => {
+                            const points = locale === 'bn' ? topic.points_bn : topic.points_en;
+                            return (
                             <details id={`lab-${topic.slug}`} key={topic.slug} className="group min-w-0 scroll-mt-24 rounded-xl border border-[var(--line)] bg-[var(--surface)]">
                               <summary className="flex cursor-pointer list-none items-center gap-2 p-3 text-sm font-bold [&::-webkit-details-marker]:hidden">
                                 <span className="min-w-0 flex-1">{locale === 'bn' ? topic.title_bn : topic.title_en}</span>
@@ -162,11 +176,23 @@ export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: 
                                 <ChevronDown size={15} className="shrink-0 muted transition group-open:rotate-180" />
                               </summary>
                               <div className="space-y-3 border-t border-[var(--line)] px-3 pb-3 pt-3">
-                                <p className="text-sm leading-6 muted">{locale === 'bn' ? topic.note_bn : topic.note_en}</p>
+                                <p className="text-sm font-semibold leading-6">{locale === 'bn' ? topic.note_bn : topic.note_en}</p>
                                 {topic.equation && (
                                   <div className="equation-display rounded-lg bg-[var(--surface-soft)] px-3 py-1">
                                     <Tex latex={topic.equation} />
                                   </div>
+                                )}
+                                {points.length > 0 && (
+                                  <ol className="space-y-1.5">
+                                    {points.map((point, pointIndex) => (
+                                      <li key={`${topic.slug}-point-${pointIndex}`} className="flex gap-2.5 text-sm leading-6 muted">
+                                        <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-[var(--surface-soft)] font-mono text-[10px] font-black text-physics-700 dark:text-physics-200">
+                                          {locale === 'bn' ? toBanglaNumeral(pointIndex + 1) : pointIndex + 1}
+                                        </span>
+                                        <MathText text={point} className="min-w-0 flex-1" />
+                                      </li>
+                                    ))}
+                                  </ol>
                                 )}
                                 {topic.guide_slug && (
                                   <Link href={`/${locale}/experiments/${topic.guide_slug}`} className="inline-flex items-center gap-1 text-sm font-extrabold text-physics-700 hover:underline dark:text-physics-200">
@@ -176,7 +202,8 @@ export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: 
                                 )}
                               </div>
                             </details>
-                          ))}
+                            );
+                          })}
                         </div>
                       </div>
                     );

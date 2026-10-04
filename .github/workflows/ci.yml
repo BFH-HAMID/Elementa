@@ -27,5 +27,13 @@ jobs:
         run: npm run typecheck
       - name: Lint
         run: npm run lint
+      - name: Test
+        run: npm test
+      - name: Check content maths render
+        run: npm run check:math
+      - name: Check calculator models
+        run: npm run check:models
+      - name: Check Honours content structure
+        run: npm run check:honours
       - name: Build
         run: npm run build

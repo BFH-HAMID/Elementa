@@ -13,36 +13,30 @@ experiment: "beer-transmittance-lab"
 variables:
   - symbol: "A"
     name: "absorbance"
-    name_bn: "absorbance"
+    name_bn: "শোষণ মাত্রা"
     unit: "1"
     si_unit: "1"
   - symbol: "T"
     name: "transmittance ratio"
-    name_bn: "transmittance ratio"
+    name_bn: "সঞ্চারণ অনুপাত"
     unit: "1"
     si_unit: "1"
-derivation: "Transmittance is transmitted intensity divided by incident intensity. T=I/I_0;\\quad A=\\log_{10}(I_0/I) Substitute the preceding result and identify the requested relation."
-derivation_bn: "সঞ্চারণ হলো প্রেরিত তীব্রতা ভাগ আপতিত তীব্রতা। T=I/I_0;\\quad A=\\log_{10}(I_0/I) আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation: "Transmittance is transmitted intensity divided by incident intensity."
+derivation_bn: "সঞ্চারণ হলো প্রেরিত তীব্রতা ভাগ আপতিত তীব্রতা।"
 derivation_steps:
   - step_en: "Transmittance is transmitted intensity divided by incident intensity."
     step_bn: "সঞ্চারণ হলো প্রেরিত তীব্রতা ভাগ আপতিত তীব্রতা।"
-    latex: "T=I/I_0;\\quad A=\\log_{10}(I_0/I)"
+    latex: "\\begin{aligned} T &= \\frac{I}{I_0} \\\\ A &= \\log_{10}(\\frac{I_0}{I}) \\end{aligned}"
   - step_en: "Substitute the preceding result and identify the requested relation."
     step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
     latex: "A=-\\log_{10}T"
-summary_en: "For T=0.10, absorbance A=1."
-summary_bn: "T=০.১০ হলে শোষণ A=১।"
+summary_en: "For $T=0.10$, absorbance $A=1$."
+summary_bn: "$T=0.10$ হলে শোষণ $A=1$।"
 tags:
   - "honours"
   - "chemistry"
   - "derivation"
 ---
-
-### প্রতিপাদনের ব্যাখ্যা / Derivation
-
-Transmittance is transmitted intensity divided by incident intensity. `T=I/I_0;\quad A=\log_{10}(I_0/I)` Substitute the preceding result and identify the requested relation.
-
-সঞ্চারণ হলো প্রেরিত তীব্রতা ভাগ আপতিত তীব্রতা। `T=I/I_0;\quad A=\log_{10}(I_0/I)` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
 
 ### সমাধানসহ উদাহরণ / Worked application
 

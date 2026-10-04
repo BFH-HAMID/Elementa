@@ -7,7 +7,7 @@ subject: chemistry
 level: class-9-10
 chapter: "Stoichiometry"
 chapter_bn: "রসায়নমিতি"
-latex: "\\text{extent} = \\min_i\\left(\\frac{n_i}{\\nu_i}\\right), \\qquad n_{\\text{product}} = \\nu_{\\text{product}}\\times\\text{extent}"
+latex: "\\begin{aligned} \\text{extent} &= \\min_i\\left(\\frac{n_i}{\\nu_i}\\right) \\\\ n_{\\text{product}} &= \\nu_{\\text{product}}\\times\\text{extent} \\end{aligned}"
 calculator: false
 variables:
   - symbol: "n_i"
@@ -28,14 +28,14 @@ variables:
 derivation: "Each reactant can support a certain number of \"reaction units\" equal to its mole count divided by its coefficient. The smallest such number limits the reaction and fixes the theoretical yield."
 derivation_bn: "প্রতিটি বিক্রিয়ক তার মোল সংখ্যাকে সহগ দিয়ে ভাগ করলে যত \"বিক্রিয়া একক\" সমর্থন করতে পারে তা পাওয়া যায়। ক্ষুদ্রতম মানটি বিক্রিয়াকে সীমিত করে এবং তাত্ত্বিক উৎপাদ নির্ধারণ করে।"
 derivation_steps:
-  - step_en: "Convert each reactant mass to moles using n = m/M."
-    step_bn: "n = m/M ব্যবহার করে প্রতিটি বিক্রিয়কের ভরকে মোলে রূপান্তর করুন।"
+  - step_en: "Convert each reactant mass to moles using $n = \\frac{m}{M}$."
+    step_bn: "$n = \\frac{m}{M}$ ব্যবহার করে প্রতিটি বিক্রিয়কের ভরকে মোলে রূপান্তর করুন।"
     latex: "n_i = \\frac{m_i}{M_i}"
   - step_en: "Divide each by its balanced-equation coefficient to get the reaction extent each allows."
     step_bn: "প্রতিটিকে সমতুল সমীকরণের সহগ দিয়ে ভাগ করুন।"
     latex: "\\xi_i = \\frac{n_i}{\\nu_i}"
-  - step_en: "The smallest ξ identifies the limiting reactant; multiply it by the product coefficient."
-    step_bn: "ক্ষুদ্রতম ξ সীমিত বিক্রিয়ক নির্দেশ করে; একে উৎপাদের সহগ দিয়ে গুণ করুন।"
+  - step_en: "The smallest $\\xi$ identifies the limiting reactant; multiply it by the product coefficient."
+    step_bn: "ক্ষুদ্রতম $\\xi$ সীমিত বিক্রিয়ক নির্দেশ করে; একে উৎপাদের সহগ দিয়ে গুণ করুন।"
     latex: "n_{\\text{product}} = \\nu_{\\text{product}}\\times \\min_i \\xi_i"
 summary_en: "Identify which starting material runs out first and how much product forms."
 summary_bn: "কোন বিক্রিয়ক আগে শেষ হবে এবং কত উৎপাদ পাওয়া যাবে তা নির্ণয়।"

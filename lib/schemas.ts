@@ -55,6 +55,8 @@ export const equationFrontmatterSchema = z.object({
 
 export const observationTableSchema = z.object({
   headers: z.array(z.string()),
+  /** Bangla column headings; symbols and units stay as they are in `headers`. */
+  headers_bn: z.array(z.string()).optional(),
   rows: z.array(z.array(z.string()))
 });
 
@@ -67,6 +69,12 @@ export const experimentFrontmatterSchema = z.object({
   level: levelSchema,
   aim: z.string().min(1),
   aim_bn: z.string().optional(),
+  /** 10–12 point revision brief shown above the tabbed guide. */
+  key_points: z.array(z.string()).default([]),
+  key_points_bn: z.array(z.string()).optional(),
+  /** How to write up this particular experiment as a laboratory report. */
+  report: z.array(z.string()).default([]),
+  report_bn: z.array(z.string()).optional(),
   apparatus: z.array(z.string()),
   apparatus_bn: z.array(z.string()).optional(),
   theory: z.string().min(1),

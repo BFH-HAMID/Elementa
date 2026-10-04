@@ -27,6 +27,45 @@ function filesIn(dir) {
   if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir).filter((file) => file.endsWith('.mdx')).map((file) => path.join(dir, file));
 }
+const LATEX_MACROS = [
+  ['\\Delta', 'Δ'], ['\\alpha', 'α'], ['\\approx', '≈'], ['\\beta', 'β'], ['\\gamma', 'γ'],
+  ['\\eta', 'η'], ['\\infty', '∞'], ['\\kappa', 'κ'], ['\\lambda', 'λ'], ['\\mu', 'μ'],
+  ['\\omega', 'ω'], ['\\pi', 'π'], ['\\pm', '±'], ['\\propto', '∝'], ['\\rho', 'ρ'],
+  ['\\sigma', 'σ'], ['\\sum', 'Σ'], ['\\theta', 'θ'], ['\\times', '×'], ['\\div', '÷'],
+  ['\\rightarrow', '→'], ['\\longrightarrow', '→'], ['\\rightleftharpoons', '⇌'],
+  ['\\leq', '≤'], ['\\geq', '≥'], ['\\neq', '≠'], ['\\ln', 'ln'], ['\\log', 'log'],
+  ['\\sin', 'sin'], ['\\cos', 'cos'], ['\\tan', 'tan'], ['\\exp', 'exp'],
+  ['\\mathrm', ''], ['\\text', ''], ['\\mathbf', ''], ['\\cdot', '·'], ['\\circ', '°']
+];
+
+// The search index is plain text, so the `$…$` spans that KaTeX renders on the
+// page are converted to readable unicode here instead of shipping LaTeX.
+function mathToText(raw) {
+  if (!raw) return '';
+  const value = raw.replace(/\\\\/g, '\\').replace(/\\"/g, '"');
+  if (!value.includes('$') && !value.includes('\\')) return value;
+  const simplify = (body) => {
+    let out = body
+      .replace(/\\begin\{[^}]*\}|\\end\{[^}]*\}/g, ' ')
+      .replace(/\\d?frac\{([^{}]*)\}\{([^{}]*)\}/g, '$1/$2')
+      .replace(/\\sqrt\{([^{}]*)\}/g, '√$1')
+      .replace(/\\(?:mathrm|text|mathbf)\{([^{}]*)\}/g, '$1')
+      .replace(/_\{([^{}]*)\}/g, '_$1')
+      .replace(/\^\{([^{}]*)\}/g, '^$1')
+      .replace(/\\(?:left|right|big|Big)/g, '')
+      .replace(/\\[,;: !]/g, ' ')
+      .replace(/&/g, ' ')
+      .replace(/\\\\/g, ' ');
+    for (const [macro, plain] of LATEX_MACROS) out = out.split(macro).join(plain);
+    return out.replace(/[{}]/g, '').replace(/\s+/g, ' ').trim();
+  };
+  return value
+    .replace(/\$([^$]*)\$/g, (_match, body) => ` ${simplify(body)} `)
+    .replace(/\s+/g, ' ')
+    .replace(/\s+([.,;:।])/g, '$1')
+    .trim();
+}
+
 function value(text, key) {
   const match = text.match(new RegExp(`^${key}:\\s*["']?(.+?)["']?\\s*$`, 'm'));
   return match?.[1]?.replace(/^['"]|['"]$/g, '') ?? '';
@@ -39,9 +78,9 @@ for (const subject of ['physics', 'chemistry']) {
       const type = value(text, 'type') || 'equation';
       const slug = value(text, 'slug');
       if (type === 'experiment') {
-        records.push({ slug, kind: 'experiment', subject, title_en: value(text, 'title_en'), title_bn: value(text, 'title_bn'), description_en: value(text, 'aim'), description_bn: value(text, 'aim_bn'), href: `/experiments/${slug}`, tags: [] });
+        records.push({ slug, kind: 'experiment', subject, title_en: value(text, 'title_en'), title_bn: value(text, 'title_bn'), description_en: mathToText(value(text, 'aim')), description_bn: mathToText(value(text, 'aim_bn')), href: `/experiments/${slug}`, tags: [] });
       } else {
-        records.push({ slug, kind: 'equation', subject, title_en: value(text, 'title_en'), title_bn: value(text, 'title_bn'), description_en: value(text, 'summary_en') || value(text, 'derivation'), description_bn: value(text, 'summary_bn') || value(text, 'derivation_bn'), href: `/equations/${slug}`, tags: [] });
+        records.push({ slug, kind: 'equation', subject, title_en: value(text, 'title_en'), title_bn: value(text, 'title_bn'), description_en: mathToText(value(text, 'summary_en') || value(text, 'derivation')), description_bn: mathToText(value(text, 'summary_bn') || value(text, 'derivation_bn')), href: `/equations/${slug}`, tags: [] });
       }
     }
   }
@@ -55,8 +94,8 @@ for (const group of practicalCatalog.groups) {
       subject: group.subject,
       title_en: topic.title_en,
       title_bn: topic.title_bn,
-      description_en: topic.note_en,
-      description_bn: topic.note_bn,
+      description_en: mathToText(topic.note_en),
+      description_bn: mathToText(topic.note_bn),
       href: `/experiments#lab-${topic.slug}`,
       tags: ['practical', group.stage, topic.category_en]
     });
@@ -119,7 +158,7 @@ for (const experiment of labExperiments) {
     subject: 'chemistry',
     title_en: experiment.title_en,
     title_bn: experiment.title_bn,
-    description_en: experiment.aim_en,
+    description_en: mathToText(experiment.aim_en),
     description_bn: experiment.aim_bn,
     href: `/lab/experiments/${experiment.slug}`,
     tags: ['lab', experiment.level, ...experiment.tags]

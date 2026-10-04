@@ -12,6 +12,8 @@
     "check:models": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-calculator-models.mjs",
     "prebuild": "node scripts/build-search-index.mjs",
     "check:honours": "node scripts/audit-honours-content.mjs",
+    "check:math": "node scripts/check-math.mjs",
+    "repair:format": "python3 scripts/repair-equation-formatting.py",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"

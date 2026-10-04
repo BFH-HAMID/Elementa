@@ -7,7 +7,7 @@ subject: physics
 level: class-11-12
 chapter: Gravitation
 chapter_bn: মহাকর্ষ
-latex: 'g_h=g_0\\left(\\frac{R}{R+h}\\right)^2, \\qquad g_d\\approx g_0\\left(1-\\frac{d}{R}\\right)'
+latex: "\\begin{aligned} g_h &= g_0\\left(\\frac{R}{R+h}\\right)^2 \\\\ g_d\\approx g_0\\left(1-\\frac{d}{R}\\right) \\end{aligned}"
 calculator: false
 variables:
   - symbol: g_h
@@ -45,13 +45,13 @@ derivation_bn: গোলাকার গ্রহের বাইরে R+h দ�
 derivation_steps:
   - step_en: At altitude h, the distance from the planet centre is R+h; compare the inverse-square field with its surface value.
     step_bn: h উচ্চতায় কেন্দ্র থেকে দূরত্ব R+h; ব্যস্তবর্গ ক্ষেত্রকে পৃষ্ঠের মানের সঙ্গে তুলনা করুন।
-    latex: 'g_h=\\frac{GM}{(R+h)^2}=g_0\\left(\\frac{R}{R+h}\\right)^2'
-  - step_en: At depth d, the radius is r=R−d. For uniform density, enclosed mass scales as r³.
-    step_bn: d গভীরতায় ব্যাসার্ধ r=R−d। সমঘনত্বে অন্তর্ভুক্ত ভর r³-এর সমানুপাতিক।
-    latex: 'M_r=M\\left(\\frac{r}{R}\\right)^3, \\qquad g(r)=\\frac{GM_r}{r^2}=g_0\\frac{r}{R}'
-  - step_en: Substitute r=R−d to obtain the depth relation and state its uniform-density assumption.
-    step_bn: r=R−d বসিয়ে গভীরতার সম্পর্কটি লিখুন এবং সমঘনত্বের অনুমানটি উল্লেখ করুন।
-    latex: 'g_d=g_0\\left(1-\\frac{d}{R}\\right)'
+    latex: "g_h=\\frac{GM}{(R+h)^2}=g_0\\left(\\frac{R}{R+h}\\right)^2"
+  - step_en: "At depth d, the radius is $r=R-d$. For uniform density, enclosed mass scales as $r^{3}$."
+    step_bn: "d গভীরতায় ব্যাসার্ধ $r=R-d$। সমঘনত্বে অন্তর্ভুক্ত ভর r³-এর সমানুপাতিক।"
+    latex: "\\begin{aligned} M_r &= M\\left(\\frac{r}{R}\\right)^3 \\\\ g(r) &= \\frac{GM_r}{r^2}=g_0\\frac{r}{R} \\end{aligned}"
+  - step_en: "Substitute $r=R-d$ to obtain the depth relation and state its uniform-density assumption."
+    step_bn: "$r=R-d$ বসিয়ে গভীরতার সম্পর্কটি লিখুন এবং সমঘনত্বের অনুমানটি উল্লেখ করুন।"
+    latex: "g_d=g_0\\left(1-\\frac{d}{R}\\right)"
 summary_en: Compare how gravity weakens above a planet and toward its centre.
 summary_bn: গ্রহের ওপরের উচ্চতা ও ভেতরের গভীরতার সঙ্গে অভিকর্ষজ ত্বরণ কীভাবে কমে তা তুলনা।
 reference_note_en: The altitude formula assumes a spherical planet. The depth formula is an ideal model for uniform density and ignores rotation, local geology and density layering; it must not be extrapolated to the real centre without that caveat.

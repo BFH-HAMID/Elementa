@@ -12,41 +12,35 @@ calculator: false
 variables:
   - symbol: "n_max"
     name: "maximum order"
-    name_bn: "maximum order"
+    name_bn: "সর্বোচ্চ ক্রম"
     unit: "1"
     si_unit: "1"
   - symbol: "d"
     name: "interplanar spacing"
-    name_bn: "interplanar spacing"
+    name_bn: "তলীয় ব্যবধান"
     unit: "m"
     si_unit: "m"
   - symbol: "λ"
     name: "wavelength"
-    name_bn: "wavelength"
+    name_bn: "তরঙ্গদৈর্ঘ্য"
     unit: "m"
     si_unit: "m"
-derivation: "Start with constructive interference from successive planes. n\\lambda=2d\\sin\\theta;\\quad\\sin\\theta\\leq1 Substitute the preceding result and identify the requested relation."
-derivation_bn: "পরপর তল থেকে গঠনমূলক ব্যতিচারের শর্ত নিন। n\\lambda=2d\\sin\\theta;\\quad\\sin\\theta\\leq1 আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation: "Start with constructive interference from successive planes."
+derivation_bn: "পরপর তল থেকে গঠনমূলক ব্যতিচারের শর্ত নিন।"
 derivation_steps:
   - step_en: "Start with constructive interference from successive planes."
     step_bn: "পরপর তল থেকে গঠনমূলক ব্যতিচারের শর্ত নিন।"
-    latex: "n\\lambda=2d\\sin\\theta;\\quad\\sin\\theta\\leq1"
+    latex: "\\begin{aligned} n\\lambda &= 2d\\sin\\theta \\\\ \\sin\\theta\\leq1 \\end{aligned}"
   - step_en: "Substitute the preceding result and identify the requested relation."
     step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
     latex: "n_{\\max}=\\left\\lfloor\\frac{2d}{\\lambda}\\right\\rfloor"
-summary_en: "For 2d/λ=2.4, highest possible integer order is 2."
-summary_bn: "২d/λ=২.৪ হলে সর্বোচ্চ পূর্ণসংখ্যা ক্রম ২।"
+summary_en: "For $\\frac{2d}{\\lambda} =2.4$, highest possible integer order is 2."
+summary_bn: "$\\frac{2d}{\\lambda} =2.4$ হলে সর্বোচ্চ পূর্ণসংখ্যা ক্রম ২।"
 tags:
   - "honours"
   - "physics"
   - "derivation"
 ---
-
-### প্রতিপাদনের ব্যাখ্যা / Derivation
-
-Start with constructive interference from successive planes. `n\lambda=2d\sin\theta;\quad\sin\theta\leq1` Substitute the preceding result and identify the requested relation.
-
-পরপর তল থেকে গঠনমূলক ব্যতিচারের শর্ত নিন। `n\lambda=2d\sin\theta;\quad\sin\theta\leq1` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
 
 ### সমাধানসহ উদাহরণ / Worked application
 

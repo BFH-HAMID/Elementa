@@ -12,46 +12,40 @@ calculator: false
 variables:
   - symbol: "p"
     name: "momentum"
-    name_bn: "momentum"
+    name_bn: "ভরবেগ"
     unit: "kg m/s"
     si_unit: "kg m/s"
   - symbol: "γ"
     name: "Lorentz factor"
-    name_bn: "Lorentz factor"
+    name_bn: "লরেঞ্জ গুণক"
     unit: "1"
     si_unit: "1"
   - symbol: "m"
     name: "rest mass"
-    name_bn: "rest mass"
+    name_bn: "স্থির ভর"
     unit: "kg"
     si_unit: "kg"
   - symbol: "v"
     name: "speed"
-    name_bn: "speed"
+    name_bn: "বেগ"
     unit: "m/s"
     si_unit: "m/s"
-derivation: "Define four-momentum as rest mass times four-velocity. P^\\mu=m\\gamma(c,\\mathbf v);\\quad\\gamma=(1-v^2/c^2)^{-1/2} Substitute the preceding result and identify the requested relation."
-derivation_bn: "চার-বেগকে স্থির ভর দিয়ে গুণ করে চার-ভরবেগ সংজ্ঞায়িত করুন। P^\\mu=m\\gamma(c,\\mathbf v);\\quad\\gamma=(1-v^2/c^2)^{-1/2} আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation: "Define four-momentum as rest mass times four-velocity."
+derivation_bn: "চার-বেগকে স্থির ভর দিয়ে গুণ করে চার-ভরবেগ সংজ্ঞায়িত করুন।"
 derivation_steps:
   - step_en: "Define four-momentum as rest mass times four-velocity."
     step_bn: "চার-বেগকে স্থির ভর দিয়ে গুণ করে চার-ভরবেগ সংজ্ঞায়িত করুন।"
-    latex: "P^\\mu=m\\gamma(c,\\mathbf v);\\quad\\gamma=(1-v^2/c^2)^{-1/2}"
+    latex: "\\begin{aligned} P^\\mu &= m\\gamma(c,\\mathbf v) \\\\ \\gamma &= (1-\\frac{v^2}{c^2})^{-1/2} \\end{aligned}"
   - step_en: "Substitute the preceding result and identify the requested relation."
     step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
     latex: "p=\\gamma mv"
-summary_en: "For v≪c, γ≈1 and p≈mv."
-summary_bn: "v≪c হলে γ≈১, তাই p≈mv।"
+summary_en: "For v≪c, $\\gamma \\approx 1$ and $p\\approx mv$."
+summary_bn: "v≪c হলে $\\gamma \\approx 1$, তাই $p\\approx mv$।"
 tags:
   - "honours"
   - "physics"
   - "derivation"
 ---
-
-### প্রতিপাদনের ব্যাখ্যা / Derivation
-
-Define four-momentum as rest mass times four-velocity. `P^\mu=m\gamma(c,\mathbf v);\quad\gamma=(1-v^2/c^2)^{-1/2}` Substitute the preceding result and identify the requested relation.
-
-চার-বেগকে স্থির ভর দিয়ে গুণ করে চার-ভরবেগ সংজ্ঞায়িত করুন। `P^\mu=m\gamma(c,\mathbf v);\quad\gamma=(1-v^2/c^2)^{-1/2}` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
 
 ### সমাধানসহ উদাহরণ / Worked application
 

@@ -14,6 +14,7 @@ import {
   type Level
 } from './schemas';
 import { hasCalculatorModel } from './calculator-models';
+import { mathToText } from './utils';
 
 const contentRoot = path.join(process.cwd(), 'content');
 
@@ -121,8 +122,8 @@ export function getSearchRecords(): SearchRecord[] {
     subject: entry.subject,
     title_en: entry.title_en,
     title_bn: entry.title_bn,
-    description_en: entry.summary_en ?? entry.derivation,
-    description_bn: entry.summary_bn ?? entry.derivation_bn ?? entry.derivation,
+    description_en: mathToText(entry.summary_en ?? entry.derivation),
+    description_bn: mathToText(entry.summary_bn ?? entry.derivation_bn ?? entry.derivation),
     href: `/equations/${entry.slug}`,
     tags: [entry.chapter, ...entry.tags]
   }));
@@ -132,8 +133,8 @@ export function getSearchRecords(): SearchRecord[] {
     subject: entry.subject,
     title_en: entry.title_en,
     title_bn: entry.title_bn,
-    description_en: entry.aim,
-    description_bn: entry.aim_bn ?? entry.aim,
+    description_en: mathToText(entry.aim),
+    description_bn: mathToText(entry.aim_bn ?? entry.aim),
     href: `/experiments/${entry.slug}`,
     tags: entry.tags
   }));
@@ -143,8 +144,8 @@ export function getSearchRecords(): SearchRecord[] {
     subject: group.subject as Subject,
     title_en: topic.title_en,
     title_bn: topic.title_bn,
-    description_en: topic.note_en,
-    description_bn: topic.note_bn,
+    description_en: mathToText(topic.note_en),
+    description_bn: mathToText(topic.note_bn),
     href: `/experiments#lab-${topic.slug}`,
     tags: ['practical', group.stage, topic.category_en]
   })));

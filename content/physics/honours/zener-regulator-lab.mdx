@@ -5,8 +5,48 @@ title_bn: "জেনার ডায়োডের বিভব নিয়ন
 title_en: "Zener diode voltage regulation"
 subject: "physics"
 level: "honours"
-aim: "Determine or verify: Zener diode voltage regulation. Record observations and compare against the stated model."
-aim_bn: "উদ্দেশ্য: জেনার ডায়োডের বিভব নিয়ন্ত্রণ; পর্যবেক্ষণ লিখে তাত্ত্বিক মডেলের সঙ্গে তুলনা।"
+aim: "Study how a Zener diode holds the output voltage steady while the input voltage and the load current change."
+aim_bn: "প্রবেশ বিভব ও লোড প্রবাহ বদলালে জেনার ডায়োড কীভাবে নির্গম বিভব স্থির রাখে তা পর্যবেক্ষণ।"
+key_points:
+  - "Aim: Study how a Zener diode holds the output voltage steady while the input voltage and the load current change."
+  - "Apparatus: rated Zener diode, series resistor, variable DC source, load resistor, voltmeter."
+  - "Principle: A reverse-biased Zener near its rated breakdown maintains approximately Vz across a load if series resistor Rs limits current: $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{z}}}{R_{\\mathrm{s}}}-IL$."
+  - "Relation to use: $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{z}}}{R_{\\mathrm{s}}}-IL$."
+  - "Key step: Wire Zener reverse-biased across load, vary input within rated range and then load; measure Vout and compute Zener current indirectly or directly."
+  - "Record: Vin (V), Vout (V), Rs (Ω), load current IL (mA), Zener Iz (mA) for every trial, with units."
+  - "Calculation: Calculate $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{out}}}{R_{\\mathrm{s}}}-IL$ and check $P_{\\mathrm{z}}\\approx V_{\\mathrm{out}}$ Iz below device rating."
+  - "Repeat: Repeat at least three independent trials, preserve raw readings, compute the result with units and compare the observed trend against the stated model."
+  - "Take care: Never exceed diode power rating and always retain the current-limiting resistor."
+  - "Error sources: Below minimum Iz the device stops regulating; heating and meter loading alter Vz."
+  - "Viva: What happens if the load draws too much current?"
+key_points_bn:
+  - "উদ্দেশ্য: প্রবেশ বিভব ও লোড প্রবাহ বদলালে জেনার ডায়োড কীভাবে নির্গম বিভব স্থির রাখে তা পর্যবেক্ষণ।"
+  - "যন্ত্রপাতি: অনুমোদিত জেনার, সারি রোধ, পরিবর্তনশীল DC উৎস, ভার রোধ, ভোল্টমিটার।"
+  - "মূলনীতি: উল্টো বিভবে অনুমোদিত breakdown-এর কাছে জেনার ভারের ওপর প্রায় Vz রাখে; Rs প্রবাহ সীমিত করে: $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{z}}}{R_{\\mathrm{s}}}-IL$।"
+  - "ব্যবহৃত সম্পর্ক: $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{z}}}{R_{\\mathrm{s}}}-IL$।"
+  - "মূল ধাপ: জেনারকে ভারের সমান্তরালে উল্টো বিভবে বসিয়ে অনুমোদিত সীমায় ইনপুট ও ভার বদলান; Vout ও জেনার প্রবাহ মাপুন।"
+  - "লিখে রাখুন: প্রতি পাঠে এককসহ Vin (V), Vout (V), Rs (Ω), লোড তড়িৎপ্রবাহ IL (mA), Zener Iz (mA)।"
+  - "হিসাব: $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{out}}}{R_{\\mathrm{s}}}-IL$ ও $P_{\\mathrm{z}}\\approx V_{\\mathrm{out}}$ Iz অনুমোদিত সীমার নিচে কিনা যাচাই; Vout বনাম Vin আঁকুন।"
+  - "পুনরাবৃত্তি: অন্তত তিনটি স্বাধীন পাঠ নিন, কাঁচা পাঠ রাখুন, এককসহ ফল বের করে বর্ণিত মডেলের সঙ্গে প্রবণতা তুলনা করুন।"
+  - "সতর্কতা: ডায়োডের ক্ষমতার সীমা ছাড়াবেন না; প্রবাহ-সীমক রোধ সবসময় রাখুন।"
+  - "ভুলের উৎস: ন্যূনতম Iz-এর নিচে নিয়ন্ত্রণ চলে না; গরম হওয়া ও মিটারের লোডে Vz বদলায়।"
+  - "ভাইভা: ভার অতিরিক্ত প্রবাহ নিলে কী হয়?"
+report:
+  - "Heading: the title “Zener diode voltage regulation”, the date, your name and your partner’s name, then the aim in one sentence — Study how a Zener diode holds the output voltage steady while the input voltage and the load current change."
+  - "Apparatus: list what you actually used — rated Zener diode, series resistor, variable DC source, load resistor, voltmeter — with the range or least count of every measuring instrument."
+  - "Theory: two or three lines naming the model and its assumptions, then the working relation $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{z}}}{R_{\\mathrm{s}}}-IL$."
+  - "Observation table: reproduce the columns Vin (V), Vout (V), Rs (Ω), load current IL (mA), Zener Iz (mA), enter each raw reading with its unit as you take it, and never overwrite an entry."
+  - "Calculation: Calculate $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{out}}}{R_{\\mathrm{s}}}-IL$ and check $P_{\\mathrm{z}}\\approx V_{\\mathrm{out}}$ Iz below device rating. Show the substitution, then the final value with its unit and the mean of your repeated trials."
+  - "Graph: plot the quantities the procedure asks for on labelled axes, mark every point and draw the best-fit line, then quote the slope or intercept you used."
+  - "Discussion: say whether the observation supports the model, then explain how the main error source — Below minimum Iz the device stops regulating; heating and meter loading alter Vz — shifts the result, and which precaution reduces it."
+report_bn:
+  - "শিরোনাম: “জেনার ডায়োডের বিভব নিয়ন্ত্রণ”, তারিখ, আপনার ও সঙ্গীর নাম, তারপর এক বাক্যে উদ্দেশ্য — প্রবেশ বিভব ও লোড প্রবাহ বদলালে জেনার ডায়োড কীভাবে নির্গম বিভব স্থির রাখে তা পর্যবেক্ষণ।"
+  - "যন্ত্রপাতি: আপনি যা ব্যবহার করেছেন তা লিখুন — অনুমোদিত জেনার, সারি রোধ, পরিবর্তনশীল DC উৎস, ভার রোধ, ভোল্টমিটার — এবং প্রতিটি মাপক যন্ত্রের পরিসর বা লঘিষ্ঠ গণন উল্লেখ করুন।"
+  - "তত্ত্ব: দুই-তিন লাইনে মডেল ও তার অনুমানগুলো লিখুন, তারপর কার্যকর সম্পর্ক $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{z}}}{R_{\\mathrm{s}}}-IL$।"
+  - "পর্যবেক্ষণ সারণি: Vin (V), Vout (V), Rs (Ω), লোড তড়িৎপ্রবাহ IL (mA), Zener Iz (mA) কলামগুলো তুলে ধরুন, প্রতিটি কাঁচা পাঠ এককসহ সঙ্গে সঙ্গে লিখুন এবং কোনো এন্ট্রি মুছে বা ওপরে লিখবেন না।"
+  - "হিসাব: $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{out}}}{R_{\\mathrm{s}}}-IL$ ও $P_{\\mathrm{z}}\\approx V_{\\mathrm{out}}$ Iz অনুমোদিত সীমার নিচে কিনা যাচাই; Vout বনাম Vin আঁকুন। বসানোর ধাপগুলো দেখান, তারপর এককসহ চূড়ান্ত মান এবং পুনরাবৃত্তি পাঠের গড় লিখুন।"
+  - "লেখচিত্র: ধাপ অনুযায়ী রাশিগুলোকে চিহ্নিত অক্ষে সাজান, প্রতিটি বিন্দু দিন, সর্বোত্তম রেখা টানুন এবং ব্যবহৃত ঢাল বা ছেদক লিখুন।"
+  - "আলোচনা: পর্যবেক্ষণ মডেলকে সমর্থন করে কি না বলুন, তারপর প্রধান ভুলের উৎস — ন্যূনতম Iz-এর নিচে নিয়ন্ত্রণ চলে না; গরম হওয়া ও মিটারের লোডে Vz বদলায় — ফলকে কীভাবে বদলায় এবং কোন সতর্কতা তা কমায় তা ব্যাখ্যা করুন।"
 apparatus:
   - "rated Zener diode"
   - "series resistor"
@@ -19,8 +59,8 @@ apparatus_bn:
   - "পরিবর্তনশীল DC উৎস"
   - "ভার রোধ"
   - "ভোল্টমিটার"
-theory: "A reverse-biased Zener near its rated breakdown maintains approximately Vz across a load if series resistor Rs limits current: Iz=(Vin−Vz)/Rs−IL. Ensure Iz remains within the safe range."
-theory_bn: "উল্টো বিভবে অনুমোদিত breakdown-এর কাছে জেনার ভারের ওপর প্রায় Vz রাখে; Rs প্রবাহ সীমিত করে: Iz=(Vin−Vz)/Rs−IL। Iz নিরাপদ সীমায় রাখুন।"
+theory: "A reverse-biased Zener near its rated breakdown maintains approximately Vz across a load if series resistor Rs limits current: $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{z}}}{R_{\\mathrm{s}}}-IL$. Ensure Iz remains within the safe range."
+theory_bn: "উল্টো বিভবে অনুমোদিত breakdown-এর কাছে জেনার ভারের ওপর প্রায় Vz রাখে; Rs প্রবাহ সীমিত করে: $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{z}}}{R_{\\mathrm{s}}}-IL$। Iz নিরাপদ সীমায় রাখুন।"
 procedure:
   - "Check the equipment calibration and record units, zero readings and ambient conditions before starting."
   - "Wire Zener reverse-biased across load, vary input within rated range and then load; measure Vout and compute Zener current indirectly or directly."
@@ -36,12 +76,18 @@ observation_table:
     - "Rs (Ω)"
     - "load current IL (mA)"
     - "Zener Iz (mA)"
+  headers_bn:
+    - "Vin (V)"
+    - "Vout (V)"
+    - "Rs (Ω)"
+    - "লোড তড়িৎপ্রবাহ IL (mA)"
+    - "Zener Iz (mA)"
   rows:
     - ["record", "record", "record", "record", "record"]
     - ["record", "record", "record", "record", "record"]
     - ["record", "record", "record", "record", "record"]
-calculation: "Calculate Iz=(Vin−Vout)/Rs−IL and check Pz≈Vout Iz below device rating. Plot Vout against Vin."
-calculation_bn: "Iz=(Vin−Vout)/Rs−IL ও Pz≈Vout Iz অনুমোদিত সীমার নিচে কিনা যাচাই; Vout বনাম Vin আঁকুন।"
+calculation: "Calculate $I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{out}}}{R_{\\mathrm{s}}}-IL$ and check $P_{\\mathrm{z}}\\approx V_{\\mathrm{out}}$ Iz below device rating. Plot Vout against Vin."
+calculation_bn: "$I_{\\mathrm{z}}=\\frac{V_{\\mathrm{in}}-V_{\\mathrm{out}}}{R_{\\mathrm{s}}}-IL$ ও $P_{\\mathrm{z}}\\approx V_{\\mathrm{out}}$ Iz অনুমোদিত সীমার নিচে কিনা যাচাই; Vout বনাম Vin আঁকুন।"
 precautions:
   - "Never exceed diode power rating and always retain the current-limiting resistor."
 precautions_bn:

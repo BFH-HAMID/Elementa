@@ -7,7 +7,7 @@ subject: physics
 level: class-11-12
 chapter: "Capacitance"
 chapter_bn: "ধারকত্ব"
-latex: "C_{\\text{parallel}} = \\sum_i C_i, \\qquad \\frac{1}{C_{\\text{series}}} = \\sum_i \\frac{1}{C_i}"
+latex: "\\begin{aligned} C_{\\text{parallel}} &= \\sum_i C_i \\\\ \\frac{1}{C_{\\text{series}}} &= \\sum_i \\frac{1}{C_i} \\end{aligned}"
 calculator: false
 variables:
   - symbol: "C_parallel"
@@ -28,11 +28,11 @@ variables:
 derivation: "In parallel each capacitor sees the same voltage and charges add, so capacitances add. In series each capacitor carries the same charge and voltages add, so reciprocal capacitances add."
 derivation_bn: "সমান্তরাল সমবায়ে প্রতিটি ধারকের বিভব পার্থক্য সমান ও আধান যোগ হয়, তাই ধারকত্ব যোগ হয়। শ্রেণি সমবায়ে প্রতিটিতে আধান সমান ও বিভব যোগ হয়, ফলে ব্যস্তানুপাত যোগ হয়।"
 derivation_steps:
-  - step_en: "For parallel connection, add the charges Q_i = C_i V at common voltage V."
-    step_bn: "সমান্তরালে সাধারণ বিভব V-এ প্রতিটির আধান Q_i = C_i V যোগ করুন।"
+  - step_en: "For parallel connection, add the charges $Q_i = C_i V$ at common voltage V."
+    step_bn: "সমান্তরালে সাধারণ বিভব V-এ প্রতিটির আধান $Q_i = C_i V$ যোগ করুন।"
     latex: "Q = \\sum C_i V = V\\sum C_i \\implies C_{\\text{eq}} = \\sum C_i"
-  - step_en: "For series connection, add the voltages V_i = Q/C_i at common charge Q."
-    step_bn: "শ্রেণিতে সাধারণ আধান Q-এ প্রতিটির বিভব V_i = Q/C_i যোগ করুন।"
+  - step_en: "For series connection, add the voltages $V_i = \\frac{Q}{C_i}$ at common charge Q."
+    step_bn: "শ্রেণিতে সাধারণ আধান Q-এ প্রতিটির বিভব $V_i = \\frac{Q}{C_i}$ যোগ করুন।"
     latex: "V = \\sum \\frac{Q}{C_i} = Q\\sum\\frac{1}{C_i} \\implies \\frac{V}{Q} = \\frac{1}{C_{\\text{eq}}} = \\sum\\frac{1}{C_i}"
 summary_en: "Combine capacitors into an equivalent single capacitance."
 summary_bn: "একাধিক ধারকের শ্রেণি বা সমান্তরাল সমবায়ের তুল্য ধারকত্ব নির্ণয়।"

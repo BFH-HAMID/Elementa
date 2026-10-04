@@ -12,37 +12,31 @@ calculator: false
 variables:
   - symbol: "P_half"
     name: "half-coverage pressure"
-    name_bn: "half-coverage pressure"
+    name_bn: "অর্ধ-পৃষ্ঠঢাকা চাপ"
     unit: "Pa"
     si_unit: "Pa"
   - symbol: "K"
     name: "adsorption equilibrium constant"
-    name_bn: "adsorption equilibrium constant"
+    name_bn: "শোষণ সাম্য ধ্রুবক"
     unit: "1/Pa"
     si_unit: "1/Pa"
-derivation: "Balance adsorption k_aP(1−θ) against desorption k_dθ for a monolayer. \\theta=KP/(1+KP);\\quad K=k_a/k_d Substitute the preceding result and identify the requested relation."
-derivation_bn: "একস্তরীয় শোষণে k_aP(১−θ) ও k_dθ সমান করুন। \\theta=KP/(1+KP);\\quad K=k_a/k_d আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation: "Balance adsorption $k_aP(1-\\theta )$ against desorption $k_d\\theta$ for a monolayer."
+derivation_bn: "একস্তরীয় শোষণে $k_aP(1-\\theta )$ ও $k_d\\theta$ সমান করুন।"
 derivation_steps:
-  - step_en: "Balance adsorption k_aP(1−θ) against desorption k_dθ for a monolayer."
-    step_bn: "একস্তরীয় শোষণে k_aP(১−θ) ও k_dθ সমান করুন।"
-    latex: "\\theta=KP/(1+KP);\\quad K=k_a/k_d"
+  - step_en: "Balance adsorption $k_aP(1-\\theta )$ against desorption $k_d\\theta$ for a monolayer."
+    step_bn: "একস্তরীয় শোষণে $k_aP(1-\\theta )$ ও $k_d\\theta$ সমান করুন।"
+    latex: "\\begin{aligned} \\theta &= \\frac{KP}{1+KP} \\\\ K &= \\frac{k_a}{k_d} \\end{aligned}"
   - step_en: "Substitute the preceding result and identify the requested relation."
     step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
     latex: "P_{1/2}=\\frac1K"
-summary_en: "At P=1/K, occupied surface fraction θ=0.5."
-summary_bn: "P=১/K হলে দখলকৃত পৃষ্ঠের অংশ θ=০.৫।"
+summary_en: "At $P=\\frac{1}{K}$, occupied surface fraction $\\theta =0.5$."
+summary_bn: "$P=\\frac{1}{K}$ হলে দখলকৃত পৃষ্ঠের অংশ $\\theta =0.5$।"
 tags:
   - "honours"
   - "chemistry"
   - "derivation"
 experiment: "charcoal-acetic-adsorption"
 ---
-
-### প্রতিপাদনের ব্যাখ্যা / Derivation
-
-Balance adsorption k_aP(1−θ) against desorption k_dθ for a monolayer. `\theta=KP/(1+KP);\quad K=k_a/k_d` Substitute the preceding result and identify the requested relation.
-
-একস্তরীয় শোষণে k_aP(১−θ) ও k_dθ সমান করুন। `\theta=KP/(1+KP);\quad K=k_a/k_d` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
 
 ### সমাধানসহ উদাহরণ / Worked application
 

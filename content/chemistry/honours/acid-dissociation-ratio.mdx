@@ -7,38 +7,38 @@ subject: "chemistry"
 level: "honours"
 chapter: "Honours Chemistry"
 chapter_bn: "স্নাতক রসায়ন"
-latex: "\\frac{[A^-]}{[HA]}=10^{pH-pK_a}"
+latex: "\\frac{[A^-]}{[HA]}=10^{\\mathrm{pH}-\\mathrm{p}K_{a}}"
 calculator: false
 variables:
   - symbol: "A_minus"
     name: "conjugate-base concentration"
-    name_bn: "conjugate-base concentration"
+    name_bn: "অনুবন্ধী ক্ষারকের ঘনত্ব"
     unit: "mol/L"
     si_unit: "mol/L"
   - symbol: "HA"
     name: "weak acid concentration"
-    name_bn: "weak acid concentration"
+    name_bn: "দুর্বল অম্লের ঘনত্ব"
     unit: "mol/L"
     si_unit: "mol/L"
   - symbol: "pH"
     name: "hydrogen ion pH"
-    name_bn: "hydrogen ion pH"
+    name_bn: "হাইড্রোজেন আয়নের pH"
     unit: "1"
     si_unit: "1"
   - symbol: "pKa"
     name: "acid strength exponent"
-    name_bn: "acid strength exponent"
+    name_bn: "অম্লের শক্তি সূচক"
     unit: "1"
     si_unit: "1"
-derivation: "Start from Ka=aH aA/aHA and approximate activities by concentrations under fixed ionic conditions. pH=pK_a+\\log_{10}([A^-]/[HA]) Substitute the preceding result and identify the requested relation."
-derivation_bn: "Ka=aH aA/aHA থেকে স্থির আয়নিক অবস্থায় সক্রিয়তার স্থলে ঘনত্বের অনুমান নিন। pH=pK_a+\\log_{10}([A^-]/[HA]) আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation: "Start from the acid dissociation constant $K_a=\\frac{a_{\\mathrm{H}^+}\\,a_{\\mathrm{A}^-}}{a_{\\mathrm{HA}}}$ and approximate the activities by concentrations at fixed ionic strength."
+derivation_bn: "অম্ল বিয়োজন ধ্রুবক $K_a=\\frac{a_{\\mathrm{H}^+}\\,a_{\\mathrm{A}^-}}{a_{\\mathrm{HA}}}$ থেকে শুরু করে স্থির আয়নিক শক্তিতে সক্রিয়তার বদলে ঘনত্বের অনুমান নিন।"
 derivation_steps:
-  - step_en: "Start from Ka=aH aA/aHA and approximate activities by concentrations under fixed ionic conditions."
-    step_bn: "Ka=aH aA/aHA থেকে স্থির আয়নিক অবস্থায় সক্রিয়তার স্থলে ঘনত্বের অনুমান নিন।"
-    latex: "pH=pK_a+\\log_{10}([A^-]/[HA])"
+  - step_en: "Start from $K_a=\\frac{a_{\\mathrm{H}^+}\\,a_{\\mathrm{A}^-}}{a_{\\mathrm{HA}}}$ and approximate the activities by concentrations at fixed ionic strength."
+    step_bn: "$K_a=\\frac{a_{\\mathrm{H}^+}\\,a_{\\mathrm{A}^-}}{a_{\\mathrm{HA}}}$ থেকে শুরু করে স্থির আয়নিক শক্তিতে সক্রিয়তার বদলে ঘনত্বের অনুমান নিন।"
+    latex: "\\mathrm{pH}=\\mathrm{p}K_{a}+\\log_{10}(\\frac{[A^-]}{[HA]})"
   - step_en: "Substitute the preceding result and identify the requested relation."
     step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
-    latex: "\\frac{[A^-]}{[HA]}=10^{pH-pK_a}"
+    latex: "\\frac{[A^-]}{[HA]}=10^{\\mathrm{pH}-\\mathrm{p}K_{a}}"
 summary_en: "When pH exceeds pKa by one, base-to-acid ratio is 10:1."
 summary_bn: "pH, pKa-এর চেয়ে ১ বেশি হলে ক্ষার:অম্ল অনুপাত ১০:১।"
 tags:
@@ -47,12 +47,6 @@ tags:
   - "derivation"
 experiment: "weak-acid-ph-approx-lab"
 ---
-
-### প্রতিপাদনের ব্যাখ্যা / Derivation
-
-Start from Ka=aH aA/aHA and approximate activities by concentrations under fixed ionic conditions. `pH=pK_a+\log_{10}([A^-]/[HA])` Substitute the preceding result and identify the requested relation.
-
-Ka=aH aA/aHA থেকে স্থির আয়নিক অবস্থায় সক্রিয়তার স্থলে ঘনত্বের অনুমান নিন। `pH=pK_a+\log_{10}([A^-]/[HA])` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
 
 ### সমাধানসহ উদাহরণ / Worked application
 

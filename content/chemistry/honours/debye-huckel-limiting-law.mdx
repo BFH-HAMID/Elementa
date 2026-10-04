@@ -7,7 +7,7 @@ subject: chemistry
 level: honours
 chapter: "Electrochemistry"
 chapter_bn: "তড়িৎ রসায়ন"
-latex: "\\log\\gamma_\\pm = -A |z_+ z_-| \\sqrt{I}, \\qquad I = \\frac{1}{2}\\sum_i c_i z_i^2"
+latex: "\\begin{aligned} \\log\\gamma_\\pm &= -A |z_+ z_-| \\sqrt{I} \\\\ I &= \\frac{1}{2}\\sum_i c_i z_i^2 \\end{aligned}"
 calculator: false
 variables:
   - symbol: "γ_±"
@@ -30,14 +30,14 @@ variables:
     name_bn: "ডিবাই-হাকেল ধ্রুবক"
     unit: "L^½ mol^−½"
     si_unit: "1"
-derivation: "Solving the linearised Poisson–Boltzmann equation for the electrostatic potential around a central ion, then equating the electrical work of charging to the excess chemical potential, gives a logarithm of the activity coefficient proportional to √I."
-derivation_bn: "কেন্দ্রীয় আয়নের চারপাশে স্থির তড়িৎ বিভবের জন্য রৈখিকীকৃত পোয়াসন-বোলটজমান সমীকরণ সমাধান করে আহিতকরণের তড়িৎ কাজকে অতিরিক্ত রাসায়নিক বিভবের সমান ধরলে সক্রিয়তা সহগের লগারিদম √I-এর সমানুপাতিক পাওয়া যায়।"
+derivation: "Solving the linearised Poisson–Boltzmann equation for the electrostatic potential around a central ion, then equating the electrical work of charging to the excess chemical potential, gives a logarithm of the activity coefficient proportional to $\\sqrt{I}$."
+derivation_bn: "কেন্দ্রীয় আয়নের চারপাশে স্থির তড়িৎ বিভবের জন্য রৈখিকীকৃত পোয়াসন-বোলটজমান সমীকরণ সমাধান করে আহিতকরণের তড়িৎ কাজকে অতিরিক্ত রাসায়নিক বিভবের সমান ধরলে সক্রিয়তা সহগের লগারিদম $\\sqrt{I}$-এর সমানুপাতিক পাওয়া যায়।"
 derivation_steps:
-  - step_en: "Write the linearised Poisson–Boltzmann equation for the potential ψ around an ion."
-    step_bn: "আয়নের চারপাশে বিভব ψ-এর জন্য রৈখিকীকৃত পোয়াসন-বোলটজমান সমীকরণ লিখুন।"
-    latex: "\\nabla^2\\psi = \\kappa^2 \\psi, \\qquad \\kappa \\propto \\sqrt{I}"
-  - step_en: "Obtain the screened Coulomb potential with Debye length 1/κ."
-    step_bn: "ডিবাই দৈর্ঘ্য 1/κ সহ আচ্ছাদিত কুলম্ব বিভব পান।"
+  - step_en: "Write the linearised Poisson–Boltzmann equation for the potential $\\psi$ around an ion."
+    step_bn: "আয়নের চারপাশে বিভব $\\psi$-এর জন্য রৈখিকীকৃত পোয়াসন-বোলটজমান সমীকরণ লিখুন।"
+    latex: "\\begin{aligned} \\nabla^2\\psi &= \\kappa^2 \\psi \\\\ \\kappa \\propto \\sqrt{I} \\end{aligned}"
+  - step_en: "Obtain the screened Coulomb potential with Debye length $\\frac{1}{\\kappa}$."
+    step_bn: "ডিবাই দৈর্ঘ্য $\\frac{1}{\\kappa}$ সহ আচ্ছাদিত কুলম্ব বিভব পান।"
     latex: "\\psi(r) = \\frac{z e}{4\\pi\\varepsilon}\\frac{e^{-\\kappa r}}{r}"
   - step_en: "Equate the charging work to the excess chemical potential to reach the limiting law."
     step_bn: "আহিতকরণের কাজকে অতিরিক্ত রাসায়নিক বিভবের সমান ধরে সীমা সূত্র পান."

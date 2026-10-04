@@ -7,7 +7,7 @@ subject: physics
 level: class-11-12
 chapter: "Modern Physics"
 chapter_bn: "আধুনিক পদার্থবিজ্ঞান"
-latex: "T_{1/2} = \\frac{\\ln 2}{\\lambda} \\approx \\frac{0.693}{\\lambda}, \\qquad \\bar{t} = \\frac{1}{\\lambda}"
+latex: "\\begin{aligned} T_{1/2} &= \\frac{\\ln 2}{\\lambda} \\approx \\frac{0.693}{\\lambda} \\\\ \\bar{t} &= \\frac{1}{\\lambda} \\end{aligned}"
 calculator: false
 variables:
   - symbol: "T_1/2"
@@ -25,18 +25,18 @@ variables:
     name_bn: "গড় আয়ু"
     unit: "s"
     si_unit: "s"
-derivation: "By definition the half-life is the time after which N = N_0/2. Substituting into the exponential decay law and taking the natural logarithm gives T_{1/2} = ln 2 / λ."
-derivation_bn: "সংজ্ঞা অনুযায়ী অর্ধায়ু হলো সেই সময় যার পরে N = N_0/2 হয়। সূচকীয় ক্ষয় সূত্রে বসিয়ে স্বাভাবিক লগারিদম নিলে T_{1/2} = ln 2 / λ পাওয়া যায়।"
+derivation: "By definition the half-life is the time after which $N=N_0/2$. Substituting into the exponential decay law and taking the natural logarithm gives $T_{1/2}=\\ln 2/\\lambda$."
+derivation_bn: "সংজ্ঞা অনুযায়ী অর্ধায়ু হলো সেই সময় যার পরে $N=N_0/2$ হয়। সূচকীয় ক্ষয় সূত্রে বসিয়ে স্বাভাবিক লগারিদম নিলে $T_{1/2}=\\ln 2/\\lambda$ পাওয়া যায়।"
 derivation_steps:
-  - step_en: "Set N = N_0/2 in the decay law and cancel N_0."
-    step_bn: "ক্ষয় সূত্রে N = N_0/2 বসিয়ে N_0 বাতিল করুন।"
+  - step_en: "Set $N=N_0/2$ in the decay law and cancel $N_0$."
+    step_bn: "ক্ষয় সূত্রে $N=N_0/2$ বসিয়ে $N_0$ বাতিল করুন।"
     latex: "\\frac{N_0}{2} = N_0 e^{-\\lambda T_{1/2}} \\implies \\frac{1}{2} = e^{-\\lambda T_{1/2}}"
   - step_en: "Take the natural logarithm of both sides."
     step_bn: "উভয় পক্ষের স্বাভাবিক লগারিদম নিন।"
     latex: "\\ln 2 = \\lambda T_{1/2}"
-  - step_en: "Solve for the half-life, and note the mean lifetime is 1/λ."
-    step_bn: "অর্ধায়ুর জন্য সমাধান করুন এবং গড় আয়ু 1/λ উল্লেখ করুন।"
-    latex: "T_{1/2} = \\frac{\\ln 2}{\\lambda} \\approx \\frac{0.693}{\\lambda}, \\qquad \\bar{t} = \\frac{1}{\\lambda}"
+  - step_en: "Solve for the half-life, and note that the mean lifetime is $1/\\lambda$."
+    step_bn: "অর্ধায়ুর জন্য সমাধান করুন এবং গড় আয়ু $1/\\lambda$ উল্লেখ করুন।"
+    latex: "\\begin{aligned} T_{1/2} &= \\frac{\\ln 2}{\\lambda} \\approx \\frac{0.693}{\\lambda} \\\\ \\bar{t} &= \\frac{1}{\\lambda} \\end{aligned}"
 summary_en: "Convert between decay constant, half-life and mean lifetime."
 summary_bn: "ক্ষয় ধ্রুবক, অর্ধায়ু ও গড় আয়ুর মধ্যে রূপান্তর।"
 related: ["radioactive-decay-law", "bohr-quantization-angular-momentum"]

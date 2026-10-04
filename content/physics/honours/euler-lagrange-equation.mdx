@@ -25,8 +25,8 @@ variables:
     name_bn: সময়
     unit: s
     si_unit: s
-derivation: "For a stationary action S=∫L(q,q̇,t)dt, vary q with fixed endpoints. Integrate the δq̇ term by parts; since δq is arbitrary inside the interval, its coefficient vanishes."
-derivation_bn: "স্থির ক্রিয়া S=∫L(q,q̇,t)dt-তে দুই প্রান্তে δq=0 রেখে q পরিবর্তন করি। δq̇-পদটি অংশে সমাকলন করলে অন্তর্বর্তী δq ইচ্ছামতো হওয়ায় তার সহগ শূন্য হয়।"
+derivation: "For a stationary action $S=\\int L(q,q̇,t)dt$, vary q with fixed endpoints. Integrate the $\\delta q̇$ term by parts; since $\\delta q$ is arbitrary inside the interval, its coefficient vanishes."
+derivation_bn: "স্থির ক্রিয়া $S=\\int L(q,q̇,t)dt$-তে দুই প্রান্তে $\\delta q=0$ রেখে q পরিবর্তন করি। δq̇-পদটি অংশে সমাকলন করলে অন্তর্বর্তী $\\delta q$ ইচ্ছামতো হওয়ায় তার সহগ শূন্য হয়।"
 derivation_steps:
   - step_en: "Set the first variation of the action to zero with fixed endpoints."
     step_bn: "স্থির প্রান্ত রেখে ক্রিয়ার প্রথম পরিবর্তন শূন্য ধরুন।"
@@ -34,8 +34,8 @@ derivation_steps:
   - step_en: "Integrate the velocity-variation term by parts; its endpoint term vanishes."
     step_bn: "বেগ-পরিবর্তনের পদটি অংশে সমাকলন করুন; প্রান্তীয় পদ শূন্য।"
     latex: "\\delta S=\\int_{t_1}^{t_2}\\left[\\frac{\\partial L}{\\partial q}-\\frac{d}{dt}\\left(\\frac{\\partial L}{\\partial\\dot q}\\right)\\right]\\delta q\\,dt"
-  - step_en: "Require the coefficient of arbitrary δq to vanish."
-    step_bn: "ইচ্ছামতো δq-এর সহগকে শূন্য করুন।"
+  - step_en: "Require the coefficient of arbitrary $\\delta q$ to vanish."
+    step_bn: "ইচ্ছামতো $\\delta q$-এর সহগকে শূন্য করুন।"
     latex: "\\frac{d}{dt}\\left(\\frac{\\partial L}{\\partial \\dot q}\\right)=\\frac{\\partial L}{\\partial q}"
 summary_en: "Stationary action yields the equation of motion for each independent generalized coordinate."
 summary_bn: "স্থির ক্রিয়া থেকে প্রতিটি স্বাধীন সাধারণীকৃত স্থানাঙ্কের গতিসমীকরণ পাওয়া যায়।"
@@ -44,7 +44,31 @@ tags: [honours, mechanics, variational principle]
 
 ### Worked example · স্প্রিং–ভর
 
-For a one-dimensional ideal spring, `L = ½m q̇² − ½kq²`. Hence `∂L/∂q̇ = mq̇` and `∂L/∂q = −kq`; the equation becomes `mq̈ + kq = 0`. বাংলায়: গতিশক্তি ও বিভবশক্তির পার্থক্য থেকে একই সরল ছন্দিত গতির সমীকরণ পাওয়া যায়।
+For a one-dimensional ideal spring, 
+
+$$
+L = \tfrac{1}{2}m q̇^{2} - \tfrac{1}{2}kq^{2}
+$$
+
+. Hence 
+
+$$
+∂L/∂q̇ = mq̇
+$$
+
+ and 
+
+$$
+∂L/∂q = -kq
+$$
+
+; the equation becomes 
+
+$$
+mq̈ + kq = 0
+$$
+
+. বাংলায়: গতিশক্তি ও বিভবশক্তির পার্থক্য থেকে একই সরল ছন্দিত গতির সমীকরণ পাওয়া যায়।
 
 **Scope · সীমা:** The elementary form assumes holonomic constraints and independent coordinates; dissipative friction is not generally represented by `T−V` alone. A coordinate such as angle has unit rad (dimensionless); the units of `∂L/∂q` depend on the coordinate chosen.
 

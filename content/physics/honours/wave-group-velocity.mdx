@@ -12,41 +12,35 @@ calculator: false
 variables:
   - symbol: "v_g"
     name: "group velocity"
-    name_bn: "group velocity"
+    name_bn: "গুচ্ছ বেগ"
     unit: "m/s"
     si_unit: "m/s"
   - symbol: "ω"
     name: "angular frequency"
-    name_bn: "angular frequency"
+    name_bn: "কৌণিক কম্পাঙ্ক"
     unit: "rad/s"
     si_unit: "rad/s"
   - symbol: "k"
     name: "wave number"
-    name_bn: "wave number"
+    name_bn: "তরঙ্গসংখ্যা"
     unit: "1/m"
     si_unit: "1/m"
-derivation: "Superpose neighbouring wave numbers and frequencies. \\cos(k_1x-\\omega_1t)+\\cos(k_2x-\\omega_2t)=2\\cos(\\Delta kx/2-\\Delta\\omega t/2)\\cos(\\bar kx-\\bar\\omega t) Substitute the preceding result and identify the requested relation."
-derivation_bn: "কাছাকাছি তরঙ্গসংখ্যা ও কম্পাঙ্কের তরঙ্গ যোগ করুন। \\cos(k_1x-\\omega_1t)+\\cos(k_2x-\\omega_2t)=2\\cos(\\Delta kx/2-\\Delta\\omega t/2)\\cos(\\bar kx-\\bar\\omega t) আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation: "Superpose neighbouring wave numbers and frequencies."
+derivation_bn: "কাছাকাছি তরঙ্গসংখ্যা ও কম্পাঙ্কের তরঙ্গ যোগ করুন।"
 derivation_steps:
   - step_en: "Superpose neighbouring wave numbers and frequencies."
     step_bn: "কাছাকাছি তরঙ্গসংখ্যা ও কম্পাঙ্কের তরঙ্গ যোগ করুন।"
-    latex: "\\cos(k_1x-\\omega_1t)+\\cos(k_2x-\\omega_2t)=2\\cos(\\Delta kx/2-\\Delta\\omega t/2)\\cos(\\bar kx-\\bar\\omega t)"
+    latex: "\\cos(k_1x-\\omega_1t)+\\cos(k_2x-\\omega_2t)=2\\cos(\\frac{\\Delta kx}{2}-\\frac{\\Delta\\omega t}{2})\\cos(\\bar kx-\\bar\\omega t)"
   - step_en: "Substitute the preceding result and identify the requested relation."
     step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
     latex: "v_g=\\frac{d\\omega}{dk}"
-summary_en: "For ω=ck in a nondispersive medium v_g=c."
-summary_bn: "অবিচ্ছুরণশীল মাধ্যমে ω=ck হলে v_g=c।"
+summary_en: "For $\\omega =ck$ in a nondispersive medium $v_g=c$."
+summary_bn: "অবিচ্ছুরণশীল মাধ্যমে $\\omega =ck$ হলে $v_g=c$।"
 tags:
   - "honours"
   - "physics"
   - "derivation"
 ---
-
-### প্রতিপাদনের ব্যাখ্যা / Derivation
-
-Superpose neighbouring wave numbers and frequencies. `\cos(k_1x-\omega_1t)+\cos(k_2x-\omega_2t)=2\cos(\Delta kx/2-\Delta\omega t/2)\cos(\bar kx-\bar\omega t)` Substitute the preceding result and identify the requested relation.
-
-কাছাকাছি তরঙ্গসংখ্যা ও কম্পাঙ্কের তরঙ্গ যোগ করুন। `\cos(k_1x-\omega_1t)+\cos(k_2x-\omega_2t)=2\cos(\Delta kx/2-\Delta\omega t/2)\cos(\bar kx-\bar\omega t)` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
 
 ### সমাধানসহ উদাহরণ / Worked application
 

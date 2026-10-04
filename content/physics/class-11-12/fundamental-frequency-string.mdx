@@ -7,7 +7,7 @@ subject: physics
 level: class-11-12
 chapter: "Waves"
 chapter_bn: "তরঙ্গ"
-latex: "f_n = \\frac{n}{2L}\\sqrt{\\frac{T}{\\mu}}, \\qquad f_1 = \\frac{1}{2L}\\sqrt{\\frac{T}{\\mu}}"
+latex: "\\begin{aligned} f_n &= \\frac{n}{2L}\\sqrt{\\frac{T}{\\mu}} \\\\ f_1 &= \\frac{1}{2L}\\sqrt{\\frac{T}{\\mu}} \\end{aligned}"
 calculator: false
 variables:
   - symbol: "f_n"
@@ -35,18 +35,18 @@ variables:
     name_bn: "হারমনিক সংখ্যা"
     unit: "1"
     si_unit: "1"
-derivation: "A string fixed at both ends must have nodes at each end, so only wavelengths satisfying L = nλ/2 are allowed. Combining this with v = √(T/μ) gives the harmonic frequencies."
-derivation_bn: "উভয় প্রান্তে বাঁধা তারে প্রান্তদ্বয়ে নোড থাকতে হয়, তাই কেবল L = nλ/2 শর্ত মেনে চলা তরঙ্গদৈর্ঘ্যই সম্ভব। v = √(T/μ) এর সাথে একত্রিত করলে হারমনিক কম্পাঙ্ক পাওয়া যায়।"
+derivation: "A string fixed at both ends must have nodes at each end, so only wavelengths satisfying $L = \\frac{n\\lambda}{2}$ are allowed. Combining this with $v = \\sqrt{T/\\mu }$ gives the harmonic frequencies."
+derivation_bn: "উভয় প্রান্তে বাঁধা তারে প্রান্তদ্বয়ে নোড থাকতে হয়, তাই কেবল $L = \\frac{n\\lambda}{2}$ শর্ত মেনে চলা তরঙ্গদৈর্ঘ্যই সম্ভব। $v = \\sqrt{T/\\mu }$ এর সাথে একত্রিত করলে হারমনিক কম্পাঙ্ক পাওয়া যায়।"
 derivation_steps:
   - step_en: "Impose nodes at both fixed ends, giving the allowed wavelengths."
     step_bn: "উভয় প্রান্তে নোড থাকার শর্ত থেকে অনুমোদিত তরঙ্গদৈর্ঘ্য নির্ণয় করুন।"
     latex: "L = \\frac{n\\lambda_n}{2} \\implies \\lambda_n = \\frac{2L}{n}"
-  - step_en: "Combine with the string wave speed v = √(T/μ) via v = fλ."
-    step_bn: "v = fλ সম্পর্কে তারের তরঙ্গ বেগ বসান।"
+  - step_en: "Combine with the string wave speed $v = \\sqrt{T/\\mu }$ via $v = f\\lambda$."
+    step_bn: "$v = f\\lambda$ সম্পর্কে তারের তরঙ্গ বেগ বসান।"
     latex: "f_n = \\frac{v}{\\lambda_n} = \\frac{n}{2L}\\sqrt{\\frac{T}{\\mu}}"
-  - step_en: "Set n = 1 for the fundamental and note the harmonic ratios."
-    step_bn: "n = 1 বসিয়ে মৌলিক কম্পাঙ্ক ও হারমনিক অনুপাত লিখুন।"
-    latex: "f_1 = \\frac{1}{2L}\\sqrt{\\frac{T}{\\mu}}, \\qquad f_n = n f_1"
+  - step_en: "Set $n = 1$ for the fundamental and note the harmonic ratios."
+    step_bn: "$n = 1$ বসিয়ে মৌলিক কম্পাঙ্ক ও হারমনিক অনুপাত লিখুন।"
+    latex: "\\begin{aligned} f_1 &= \\frac{1}{2L}\\sqrt{\\frac{T}{\\mu}} \\\\ f_n &= n f_1 \\end{aligned}"
 summary_en: "Find the note produced by a vibrating string of given length and tension."
 summary_bn: "নির্দিষ্ট দৈর্ঘ্য ও টানযুক্ত তার থেকে উৎপন্ন স্বরের কম্পাঙ্ক নির্ণয়।"
 related: ["superposition-standing-wave", "wave-velocity-string"]

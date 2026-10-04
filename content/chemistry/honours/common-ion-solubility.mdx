@@ -12,41 +12,35 @@ calculator: false
 variables:
   - symbol: "s"
     name: "molar solubility"
-    name_bn: "molar solubility"
+    name_bn: "মোলার দ্রাব্যতা"
     unit: "mol/L"
     si_unit: "mol/L"
   - symbol: "Ksp"
     name: "concentration product"
-    name_bn: "concentration product"
+    name_bn: "ঘনত্বের গুণফল"
     unit: "mol²/L²"
     si_unit: "mol²/L²"
   - symbol: "c"
     name: "initial common-ion concentration"
-    name_bn: "initial common-ion concentration"
+    name_bn: "সাধারণ আয়নের প্রারম্ভিক ঘনত্ব"
     unit: "mol/L"
     si_unit: "mol/L"
-derivation: "Dissolve AB in a solution already containing A+ at concentration c. K_{sp}=(c+s)s;\\quad s\\ll c Substitute the preceding result and identify the requested relation."
-derivation_bn: "আগে থেকে c ঘনত্বে A+ থাকা দ্রবণে AB দ্রবীভূত করুন। K_{sp}=(c+s)s;\\quad s\\ll c আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation: "Dissolve AB in a solution already containing A+ at concentration c."
+derivation_bn: "আগে থেকে c ঘনত্বে A+ থাকা দ্রবণে AB দ্রবীভূত করুন।"
 derivation_steps:
   - step_en: "Dissolve AB in a solution already containing A+ at concentration c."
     step_bn: "আগে থেকে c ঘনত্বে A+ থাকা দ্রবণে AB দ্রবীভূত করুন।"
-    latex: "K_{sp}=(c+s)s;\\quad s\\ll c"
+    latex: "\\begin{aligned} K_{sp} &= (c+s)s \\\\ s\\ll c \\end{aligned}"
   - step_en: "Substitute the preceding result and identify the requested relation."
     step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
     latex: "s\\approx\\frac{K_{sp}}{c}"
-summary_en: "If Ksp=10⁻⁸ (mol/L)² and c=0.01 mol/L, s≈10⁻⁶ mol/L."
-summary_bn: "Ksp=১০⁻⁸ (mol/L)² ও c=০.০১ mol/L হলে s≈১০⁻⁶ mol/L।"
+summary_en: "If Ksp=10⁻⁸ $(\\frac{mol}{L})^{2}$ and $c=0.01\\ \\mathrm{mol/L}$, $s \\approx \\frac{10^{-6} mol}{L}$."
+summary_bn: "Ksp=১০⁻⁸ $(\\frac{mol}{L})^{2}$ ও $c=0.01\\ \\mathrm{mol/L}$ হলে $s \\approx \\frac{10^{-6} mol}{L}$।"
 tags:
   - "honours"
   - "chemistry"
   - "derivation"
 ---
-
-### প্রতিপাদনের ব্যাখ্যা / Derivation
-
-Dissolve AB in a solution already containing A+ at concentration c. `K_{sp}=(c+s)s;\quad s\ll c` Substitute the preceding result and identify the requested relation.
-
-আগে থেকে c ঘনত্বে A+ থাকা দ্রবণে AB দ্রবীভূত করুন। `K_{sp}=(c+s)s;\quad s\ll c` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
 
 ### সমাধানসহ উদাহরণ / Worked application
 

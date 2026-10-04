@@ -7,7 +7,7 @@ subject: chemistry
 level: class-11-12
 chapter: "Chemical Thermodynamics"
 chapter_bn: "রাসায়নিক তাপগতিবিদ্যা"
-latex: "\\Delta S = \\int \\frac{dq_{\\text{rev}}}{T}, \\qquad \\Delta S = \\frac{\\Delta H}{T}\\ \\text{(at a phase transition)}"
+latex: "\\begin{aligned} \\Delta S &= \\int \\frac{dq_{\\text{rev}}}{T} \\\\ \\Delta S &= \\frac{\\Delta H}{T}\\ \\text{(at a phase transition)} \\end{aligned}"
 calculator: false
 variables:
   - symbol: "ΔS"
@@ -30,8 +30,8 @@ variables:
     name_bn: "দশা পরিবর্তনের এনথালপি"
     unit: "J/mol"
     si_unit: "J/mol"
-derivation: "Entropy is a state function defined by dS = dq_rev/T. For an isothermal phase change the temperature is constant, so the integral reduces to the transition enthalpy divided by that temperature."
-derivation_bn: "এনট্রপি একটি অবস্থা অপেক্ষক যা dS = dq_rev/T দ্বারা সংজ্ঞায়িত। সমোষ্ণ দশা পরিবর্তনে তাপমাত্রা ধ্রুব থাকে, তাই সমাকলনটি দশা-পরিবর্তন এনথালপিকে ঐ তাপমাত্রা দিয়ে ভাগ করার সমান হয়।"
+derivation: "Entropy is a state function defined by $dS = \\frac{dq_rev}{T}$. For an isothermal phase change the temperature is constant, so the integral reduces to the transition enthalpy divided by that temperature."
+derivation_bn: "এনট্রপি একটি অবস্থা অপেক্ষক যা $dS = \\frac{dq_rev}{T}$ দ্বারা সংজ্ঞায়িত। সমোষ্ণ দশা পরিবর্তনে তাপমাত্রা ধ্রুব থাকে, তাই সমাকলনটি দশা-পরিবর্তন এনথালপিকে ঐ তাপমাত্রা দিয়ে ভাগ করার সমান হয়।"
 derivation_steps:
   - step_en: "Start from the thermodynamic definition of entropy."
     step_bn: "এনট্রপির তাপগতীয় সংজ্ঞা থেকে শুরু করুন।"
@@ -39,8 +39,8 @@ derivation_steps:
   - step_en: "For an isothermal reversible step, T is constant and comes out of the integral."
     step_bn: "সমোষ্ণ প্রত্যাবর্তী ধাপে T ধ্রুব, তাই সমাকলনের বাইরে আসে।"
     latex: "\\Delta S = \\frac{1}{T}\\int dq_{\\text{rev}} = \\frac{q_{\\text{rev}}}{T}"
-  - step_en: "At constant pressure q_rev equals the enthalpy change ΔH, giving the transition result."
-    step_bn: "স্থির চাপে q_rev এনথালপির পরিবর্তন ΔH-এর সমান, ফলে দশা-পরিবর্তনের রূপটি পাওয়া যায়।"
+  - step_en: "At constant pressure $q_{\\mathrm{rev}}$ equals the enthalpy change $\\Delta H$, giving the transition result."
+    step_bn: "স্থির চাপে $q_{\\mathrm{rev}}$ এনথালপির পরিবর্তন $\\Delta H$-এর সমান, ফলে দশা-পরিবর্তনের রূপটি পাওয়া যায়।"
     latex: "\\Delta S = \\frac{\\Delta H}{T}"
 summary_en: "Compute entropy changes for heating and phase transitions."
 summary_bn: "উত্তাপন ও দশা পরিবর্তনে এনট্রপির পরিবর্তন নির্ণয়।"

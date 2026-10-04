@@ -12,47 +12,41 @@ calculator: false
 variables:
   - symbol: "f"
     name: "focal length"
-    name_bn: "focal length"
+    name_bn: "ফোকাস দূরত্ব"
     unit: "m"
     si_unit: "m"
   - symbol: "n"
     name: "relative refractive index"
-    name_bn: "relative refractive index"
+    name_bn: "আপেক্ষিক প্রতিসরাঙ্ক"
     unit: "1"
     si_unit: "1"
   - symbol: "R₁"
     name: "first signed radius"
-    name_bn: "first signed radius"
+    name_bn: "প্রথম চিহ্নযুক্ত ব্যাসার্ধ"
     unit: "m"
     si_unit: "m"
   - symbol: "R₂"
     name: "second signed radius"
-    name_bn: "second signed radius"
+    name_bn: "দ্বিতীয় চিহ্নযুক্ত ব্যাসার্ধ"
     unit: "m"
     si_unit: "m"
-derivation: "Apply paraxial refraction at both spherical surfaces. P_1=(n-1)/R_1;\\quad P_2=(1-n)/R_2;\\quad P=1/f=P_1+P_2 Substitute the preceding result and identify the requested relation."
-derivation_bn: "দুটি গোলীয় পৃষ্ঠে অক্ষসংলগ্ন প্রতিসরণ প্রয়োগ করুন। P_1=(n-1)/R_1;\\quad P_2=(1-n)/R_2;\\quad P=1/f=P_1+P_2 আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation: "Apply paraxial refraction at both spherical surfaces."
+derivation_bn: "দুটি গোলীয় পৃষ্ঠে অক্ষসংলগ্ন প্রতিসরণ প্রয়োগ করুন।"
 derivation_steps:
   - step_en: "Apply paraxial refraction at both spherical surfaces."
     step_bn: "দুটি গোলীয় পৃষ্ঠে অক্ষসংলগ্ন প্রতিসরণ প্রয়োগ করুন।"
-    latex: "P_1=(n-1)/R_1;\\quad P_2=(1-n)/R_2;\\quad P=1/f=P_1+P_2"
+    latex: "\\begin{aligned} P_1 &= \\frac{n-1}{R_1} \\\\ P_2 &= \\frac{1-n}{R_2} \\\\ P &= \\frac{1}{f}=P_1+P_2 \\end{aligned}"
   - step_en: "Substitute the preceding result and identify the requested relation."
     step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
     latex: "\\frac1f=(n-1)\\left(\\frac1{R_1}-\\frac1{R_2}\\right)"
-summary_en: "For symmetric biconvex radii R₁=R and R₂=−R, 1/f=2(n−1)/R."
-summary_bn: "সমমিত দ্বি-উত্তল লেন্সে R₁=R, R₂=−R হলে ১/f=২(n−১)/R।"
+summary_en: "For symmetric biconvex radii $R_{1}=R$ and $R_{2}=-R$, $\\frac{1}{f}=\\frac{2(n-1)}{R}$."
+summary_bn: "সমমিত দ্বি-উত্তল লেন্সে $R_{1}=R$, $R_{2}=-R$ হলে $\\frac{1}{f}=\\frac{2(n-1)}{R}$।"
 tags:
   - "honours"
   - "physics"
   - "derivation"
 experiment: "lens-focal-length"
 ---
-
-### প্রতিপাদনের ব্যাখ্যা / Derivation
-
-Apply paraxial refraction at both spherical surfaces. `P_1=(n-1)/R_1;\quad P_2=(1-n)/R_2;\quad P=1/f=P_1+P_2` Substitute the preceding result and identify the requested relation.
-
-দুটি গোলীয় পৃষ্ঠে অক্ষসংলগ্ন প্রতিসরণ প্রয়োগ করুন। `P_1=(n-1)/R_1;\quad P_2=(1-n)/R_2;\quad P=1/f=P_1+P_2` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
 
 ### সমাধানসহ উদাহরণ / Worked application
 

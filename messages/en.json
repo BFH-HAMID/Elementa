@@ -144,7 +144,11 @@
     "precautions": "Precautions",
     "errors": "Sources of error",
     "viva": "Viva questions",
-    "table": "Observation table"
+    "table": "Observation table",
+    "labGuide": "Lab guide",
+    "keyPoints": "The whole experiment at a glance",
+    "keyPointsHint": "Aim, apparatus, working principle and relation, steps, observation, calculation, precautions, error sources and viva — in one place.",
+    "report": "Writing the report"
   },
   "simulations": {
     "title": "Interactive simulations",

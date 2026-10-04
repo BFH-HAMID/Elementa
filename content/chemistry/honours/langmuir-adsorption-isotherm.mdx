@@ -7,7 +7,7 @@ subject: chemistry
 level: honours
 chapter: "Surface Chemistry"
 chapter_bn: "পৃষ্ঠ রসায়ন"
-latex: "\\theta = \\frac{K P}{1 + K P}, \\qquad \\frac{1}{\\theta} = \\frac{1}{KP} + 1"
+latex: "\\begin{aligned} \\theta &= \\frac{K P}{1 + K P} \\\\ \\frac{1}{\\theta} &= \\frac{1}{KP} + 1 \\end{aligned}"
 calculator: false
 variables:
   - symbol: "θ"
@@ -25,8 +25,8 @@ variables:
     name_bn: "গ্যাসের চাপ"
     unit: "Pa"
     si_unit: "Pa"
-derivation: "Equating the rates of adsorption (proportional to pressure and to the fraction of vacant sites) and desorption (proportional to coverage) at dynamic equilibrium, then solving for θ, gives the Langmuir isotherm."
-derivation_bn: "গতিশীল সাম্যাবস্থায় শোষণের হার (চাপ ও খালি স্থানের ভগ্নাংশের সমানুপাতিক) এবং বিশোষণের হার (আচ্ছাদনের সমানুপাতিক) সমান ধরে θ-এর জন্য সমাধান করলে ল্যাংমুয়ার সমোষ্ণ রেখা পাওয়া যায়।"
+derivation: "Equating the rates of adsorption (proportional to pressure and to the fraction of vacant sites) and desorption (proportional to coverage) at dynamic equilibrium, then solving for $\\theta$, gives the Langmuir isotherm."
+derivation_bn: "গতিশীল সাম্যাবস্থায় শোষণের হার (চাপ ও খালি স্থানের ভগ্নাংশের সমানুপাতিক) এবং বিশোষণের হার (আচ্ছাদনের সমানুপাতিক) সমান ধরে $\\theta$-এর জন্য সমাধান করলে ল্যাংমুয়ার সমোষ্ণ রেখা পাওয়া যায়।"
 derivation_steps:
   - step_en: "Write the adsorption rate as proportional to pressure and vacant-site fraction."
     step_bn: "শোষণের হারকে চাপ ও খালি স্থানের ভগ্নাংশের সমানুপাতিক লিখুন।"
@@ -34,9 +34,9 @@ derivation_steps:
   - step_en: "Write the desorption rate as proportional to coverage."
     step_bn: "বিশোষণের হারকে আচ্ছাদনের সমানুপাতিক লিখুন।"
     latex: "r_{\\text{des}} = k_d \\theta"
-  - step_en: "Equate the two rates and solve for the coverage θ."
-    step_bn: "দুই হার সমান করে θ-এর জন্য সমাধান করুন।"
-    latex: "k_a P(1-\\theta) = k_d\\theta \\implies \\theta = \\frac{KP}{1 + KP}, \\quad K = \\frac{k_a}{k_d}"
+  - step_en: "Equate the two rates and solve for the coverage $\\theta$."
+    step_bn: "দুই হার সমান করে $\\theta$-এর জন্য সমাধান করুন।"
+    latex: "\\begin{aligned} k_a P(1-\\theta) &= k_d\\theta \\implies \\theta = \\frac{KP}{1 + KP} \\\\ K &= \\frac{k_a}{k_d} \\end{aligned}"
 summary_en: "Model monolayer adsorption on a uniform solid surface."
 summary_bn: "সুষম কঠিন পৃষ্ঠে একস্তরীয় শোষণের মডেল তৈরি।"
 related: ["freundlich-adsorption-isotherm", "beer-lambert"]

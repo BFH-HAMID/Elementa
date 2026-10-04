@@ -7,7 +7,7 @@ subject: chemistry
 level: class-11-12
 chapter: "Chemical Equilibrium"
 chapter_bn: "রাসায়নিক সাম্যাবস্থা"
-latex: "K_p = K_c(RT)^{\\Delta n}, \\qquad \\Delta n = \\sum \\nu_{\\text{gas, products}} - \\sum \\nu_{\\text{gas, reactants}}"
+latex: "\\begin{aligned} K_p &= K_c(RT)^{\\Delta n} \\\\ \\Delta n &= \\sum \\nu_{\\text{gas, products}} - \\sum \\nu_{\\text{gas, reactants}} \\end{aligned}"
 calculator: false
 variables:
   - symbol: "K_p"
@@ -35,17 +35,17 @@ variables:
     name_bn: "পরম তাপমাত্রা"
     unit: "K"
     si_unit: "K"
-derivation: "For an ideal gas the partial pressure is P_i = (n_i/V)RT = c_i RT. Substituting into the pressure-based equilibrium expression and collecting the RT factors yields the power Δn."
-derivation_bn: "আদর্শ গ্যাসের ক্ষেত্রে আংশিক চাপ P_i = (n_i/V)RT = c_i RT। চাপ-ভিত্তিক সাম্য রাশিতে বসিয়ে RT পদগুলো একত্রিত করলে Δn ঘাত পাওয়া যায়।"
+derivation: "For an ideal gas the partial pressure is $P_i = (\\frac{n_i}{V})RT = c_i RT$. Substituting into the pressure-based equilibrium expression and collecting the RT factors yields the power $\\Delta n$."
+derivation_bn: "আদর্শ গ্যাসের ক্ষেত্রে আংশিক চাপ $P_i = (\\frac{n_i}{V})RT = c_i RT$। চাপ-ভিত্তিক সাম্য রাশিতে বসিয়ে RT পদগুলো একত্রিত করলে $\\Delta n$ ঘাত পাওয়া যায়।"
 derivation_steps:
   - step_en: "Write partial pressure in terms of molar concentration."
     step_bn: "আংশিক চাপকে মোলার ঘনমাত্রার মাধ্যমে লিখুন।"
     latex: "P_i = c_i RT"
-  - step_en: "Substitute into the K_p expression and separate the RT factors from the concentration ratios."
-    step_bn: "K_p রাশিতে বসিয়ে RT পদগুলো ঘনমাত্রার অনুপাত থেকে আলাদা করুন।"
+  - step_en: "Substitute into the $K_p$ expression and separate the RT factors from the concentration ratios."
+    step_bn: "$K_p$ রাশিতে বসিয়ে RT পদগুলো ঘনমাত্রার অনুপাত থেকে আলাদা করুন।"
     latex: "K_p = \\prod_i (c_i RT)^{\\nu_i} = K_c (RT)^{\\sum \\nu_i}"
-  - step_en: "Restrict the sum to gaseous species, giving Δn."
-    step_bn: "যোগফল কেবল গ্যাসীয় প্রজাতিতে সীমিত করলে Δn পাওয়া যায়।"
+  - step_en: "Restrict the sum to gaseous species, giving $\\Delta n$."
+    step_bn: "যোগফল কেবল গ্যাসীয় প্রজাতিতে সীমিত করলে $\\Delta n$ পাওয়া যায়।"
     latex: "K_p = K_c(RT)^{\\Delta n}"
 summary_en: "Convert between concentration-based and pressure-based equilibrium constants."
 summary_bn: "ঘনমাত্রা-ভিত্তিক ও চাপ-ভিত্তিক সাম্য ধ্রুবকের মধ্যে রূপান্তর।"

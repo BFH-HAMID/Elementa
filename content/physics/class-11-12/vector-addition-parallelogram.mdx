@@ -7,7 +7,7 @@ subject: physics
 level: class-11-12
 chapter: Vectors
 chapter_bn: ভেক্টর
-latex: '\\vec R = \\vec A + \\vec B, \\qquad R = \\sqrt{A^2+B^2+2AB\\cos\\theta}'
+latex: "\\begin{aligned} \\vec R &= \\vec A + \\vec B \\\\ R &= \\sqrt{A^2+B^2+2AB\\cos\\theta} \\end{aligned}"
 calculator: false
 variables:
   - symbol: A
@@ -35,13 +35,13 @@ derivation_bn: দুটি ভেক্টরকে একই বিন্দ�
 derivation_steps:
   - step_en: Choose the x-axis along A, then resolve B into perpendicular components.
     step_bn: x-অক্ষ A-এর দিকে ধরুন এবং B-কে পরস্পর লম্ব দুই উপাংশে ভাঙুন।
-    latex: 'R_x=A+B\\cos\\theta, \\qquad R_y=B\\sin\\theta'
+    latex: "\\begin{aligned} R_x &= A+B\\cos\\theta \\\\ R_y &= B\\sin\\theta \\end{aligned}"
   - step_en: Use the Pythagorean theorem on the perpendicular resultant components.
     step_bn: লব্ধির পরস্পর লম্ব উপাংশে পিথাগোরাসের উপপাদ্য প্রয়োগ করুন।
-    latex: 'R=\\sqrt{R_x^2+R_y^2}=\\sqrt{A^2+B^2+2AB\\cos\\theta}'
+    latex: "R=\\sqrt{R_x^2+R_y^2}=\\sqrt{A^2+B^2+2AB\\cos\\theta}"
   - step_en: Obtain the direction from the ratio of the y- and x-components.
     step_bn: y ও x উপাংশের অনুপাত থেকে লব্ধির দিক নির্ণয় করুন।
-    latex: '\\tan\\phi=\\frac{R_y}{R_x}=\\frac{B\\sin\\theta}{A+B\\cos\\theta}'
+    latex: "\\tan\\phi=\\frac{R_y}{R_x}=\\frac{B\\sin\\theta}{A+B\\cos\\theta}"
 summary_en: Add two vectors graphically or by components, and predict the resultant magnitude and direction.
 summary_bn: সামান্তরিক চিত্র বা উপাংশ পদ্ধতিতে দুটি ভেক্টর যোগ করে লব্ধির মান ও দিক নির্ণয়।
 reference_note_en: Use a common origin for the parallelogram construction. Vector components are signed; the calculator's angle is measured from A toward B.
@@ -49,14 +49,14 @@ reference_note_bn: সামান্তরিক আঁকতে দুই ভ�
 reference_formulas:
   - label_en: Components of a vector
     label_bn: ভেক্টরের উপাংশ
-    latex: 'A_x=A\\cos\\alpha, \\qquad A_y=A\\sin\\alpha'
-    note_en: α is measured counter-clockwise from the positive x-axis.
-    note_bn: ধনাত্মক x-অক্ষ থেকে ঘড়ির কাঁটার বিপরীত দিকে α মাপা হয়।
+    latex: "\\begin{aligned} A_x &= A\\cos\\alpha \\\\ A_y &= A\\sin\\alpha \\end{aligned}"
+    note_en: "$\\alpha$ is measured counter-clockwise from the positive x-axis."
+    note_bn: "ধনাত্মক x-অক্ষ থেকে ঘড়ির কাঁটার বিপরীত দিকে $\\alpha$ মাপা হয়।"
   - label_en: Resultant direction
     label_bn: লব্ধির দিক
-    latex: '\\tan\\phi=\\frac{B\\sin\\theta}{A+B\\cos\\theta}'
-    note_en: Check the quadrant from the signs of R_x and R_y.
-    note_bn: R_x ও R_y-এর চিহ্ন দেখে লব্ধির সঠিক চতুর্ভাগ নির্ধারণ করুন।
+    latex: "\\tan\\phi=\\frac{B\\sin\\theta}{A+B\\cos\\theta}"
+    note_en: "Check the quadrant from the signs of $R_x$ and $R_y$."
+    note_bn: "$R_x$ ও $R_y$-এর চিহ্ন দেখে লব্ধির সঠিক চতুর্ভাগ নির্ধারণ করুন।"
 related: [kinematics-formula-sheet, newtons-second-law]
 simulation: vector-addition
 experiment: vector-addition-force-table

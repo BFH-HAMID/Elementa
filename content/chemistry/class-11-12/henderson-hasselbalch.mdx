@@ -7,7 +7,7 @@ subject: chemistry
 level: class-11-12
 chapter: Acids, bases and buffers
 chapter_bn: অম্ল, ক্ষার ও buffer
-latex: 'pH = pK_a + \\log\\frac{[A^-]}{[HA]}'
+latex: "\\mathrm{pH} = \\mathrm{p}K_{a} + \\log\\frac{[A^-]}{[HA]}"
 calculator: false
 variables:
   - symbol: pH
@@ -17,7 +17,7 @@ variables:
     si_unit: '1'
   - symbol: pKa
     name: acid dissociation index
-    name_bn: acid dissociation index
+    name_bn: "অম্ল বিয়োজন সূচক"
     unit: '1'
     si_unit: '1'
   - symbol: base
@@ -35,13 +35,13 @@ derivation_bn: buffer-এ conjugate base ও weak acid-এর অনুপাত
 derivation_steps:
   - step_en: Start from the acid-dissociation constant for HA.
     step_bn: HA-এর অম্লীয় আয়নীভবন ধ্রুবক দিয়ে শুরু করুন।
-    latex: 'K_a=\\frac{[H^+][A^-]}{[HA]}'
+    latex: "K_a=\\frac{[H^+][A^-]}{[HA]}"
   - step_en: Rearrange for [H+] and take the negative base-10 logarithm of both sides.
     step_bn: "[H+] আলাদা করে উভয় পাশে ঋণাত্মক ১০-ভিত্তিক লগারিদম নিন।"
-    latex: ' [H^+]=K_a\\frac{[HA]}{[A^-]} \\quad\\Longrightarrow\\quad -\\log[H^+]=-\\log K_a+\\log\\frac{[A^-]}{[HA]}'
-  - step_en: Identify pH = −log[H+] and pKa = −log Ka.
-    step_bn: pH = −log[H+] এবং pKa = −log Ka শনাক্ত করে চূড়ান্ত রূপ লিখুন।
-    latex: '\\mathrm{pH}=\\mathrm{p}K_a+\\log\\frac{[A^-]}{[HA]}'
+    latex: "[H^+]=K_a\\frac{[HA]}{[A^-]} \\quad\\Longrightarrow\\quad -\\log[H^+]=-\\log K_a+\\log\\frac{[A^-]}{[HA]}"
+  - step_en: "Identify $\\mathrm{pH} = -\\log[H+]$ and $\\mathrm{p}K_{a} = -\\log K_{\\mathrm{a}}$."
+    step_bn: "$\\mathrm{pH} = -\\log[H+]$ এবং $\\mathrm{p}K_{a} = -\\log K_{\\mathrm{a}}$ শনাক্ত করে চূড়ান্ত রূপ লিখুন।"
+    latex: "\\mathrm{\\mathrm{pH}}=\\mathrm{p}K_a+\\log\\frac{[A^-]}{[HA]}"
 summary_en: Estimate the pH of a weak-acid/conjugate-base buffer.
 summary_bn: দুর্বল অম্ল ও conjugate base-এর buffer-এর pH অনুমান করুন।
 related: [ph, acid-base-titration]

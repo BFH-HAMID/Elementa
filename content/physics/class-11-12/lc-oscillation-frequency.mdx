@@ -7,7 +7,7 @@ subject: physics
 level: class-11-12
 chapter: "Alternating Current"
 chapter_bn: "পরিবর্তী প্রবাহ"
-latex: "f = \\frac{1}{2\\pi\\sqrt{LC}}, \\qquad q(t) = Q_0\\cos(\\omega t)"
+latex: "\\begin{aligned} f &= \\frac{1}{2\\pi\\sqrt{LC}} \\\\ q(t) &= Q_0\\cos(\\omega t) \\end{aligned}"
 calculator: false
 variables:
   - symbol: "f"
@@ -30,17 +30,17 @@ variables:
     name_bn: "তাৎক্ষণিক ধারক আধান"
     unit: "C"
     si_unit: "C"
-derivation: "Energy sloshes between the capacitor’s electric field (q²/2C) and the inductor’s magnetic field (½LI²). Writing the total energy constant and using I = −dq/dt produces a harmonic equation."
-derivation_bn: "শক্তি ধারকের তড়িৎ ক্ষেত্র (q²/2C) ও ইন্ডাক্টরের চৌম্বক ক্ষেত্রের (½LI²) মধ্যে আদান-প্রদান করে। মোট শক্তি ধ্রুব ধরে I = −dq/dt বসালে একটি ছন্দিত সমীকরণ পাওয়া যায়।"
+derivation: "Energy sloshes between the capacitor’s electric field $(\\frac{q^{2}}{2C})$ and the inductor’s magnetic field $(\\tfrac{1}{2}LI^{2})$. Writing the total energy constant and using $I = -\\frac{dq}{dt}$ produces a harmonic equation."
+derivation_bn: "শক্তি ধারকের তড়িৎ ক্ষেত্র $(\\frac{q^{2}}{2C})$ ও ইন্ডাক্টরের চৌম্বক ক্ষেত্রের $(\\tfrac{1}{2}LI^{2})$ মধ্যে আদান-প্রদান করে। মোট শক্তি ধ্রুব ধরে $I = -\\frac{dq}{dt}$ বসালে একটি ছন্দিত সমীকরণ পাওয়া যায়।"
 derivation_steps:
   - step_en: "Write conservation of total energy in the ideal LC loop."
     step_bn: "আদর্শ এলসি লুপে মোট শক্তির সংরক্ষণ লিখুন।"
     latex: "\\frac{q^2}{2C} + \\frac{1}{2}LI^2 = \\text{constant}"
-  - step_en: "Substitute I = −dq/dt and differentiate with respect to time."
-    step_bn: "I = −dq/dt বসিয়ে সময়ের সাপেক্ষে অন্তরীকরণ করুন।"
+  - step_en: "Substitute $I = -\\frac{dq}{dt}$ and differentiate with respect to time."
+    step_bn: "$I = -\\frac{dq}{dt}$ বসিয়ে সময়ের সাপেক্ষে অন্তরীকরণ করুন।"
     latex: "L\\frac{d^2q}{dt^2} + \\frac{q}{C} = 0"
-  - step_en: "Identify the SHM form to read off ω = 1/√(LC)."
-    step_bn: "SHM রূপের সাথে মিলিয়ে ω = 1/√(LC) নির্ণয় করুন।"
+  - step_en: "Identify the SHM form to read off $\\omega = 1/\\sqrt{LC}$."
+    step_bn: "SHM রূপের সাথে মিলিয়ে $\\omega = 1/\\sqrt{LC}$ নির্ণয় করুন।"
     latex: "\\omega = \\frac{1}{\\sqrt{LC}} \\implies f = \\frac{1}{2\\pi\\sqrt{LC}}"
 summary_en: "Find the natural oscillation rate of an ideal LC tank circuit."
 summary_bn: "আদর্শ এলসি ট্যাঙ্ক বর্তনীর স্বাভাবিক দোলন কম্পাঙ্ক নির্ণয়।"

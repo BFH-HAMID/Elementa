@@ -12,52 +12,46 @@ calculator: false
 variables:
   - symbol: "ΔrG"
     name: "reaction Gibbs energy"
-    name_bn: "reaction Gibbs energy"
+    name_bn: "বিক্রিয়ার গিবস শক্তি"
     unit: "J/mol"
     si_unit: "J/mol"
   - symbol: "ΔrG°"
     name: "standard reaction Gibbs energy"
-    name_bn: "standard reaction Gibbs energy"
+    name_bn: "প্রমাণ বিক্রিয়া গিবস শক্তি"
     unit: "J/mol"
     si_unit: "J/mol"
   - symbol: "R"
     name: "gas constant"
-    name_bn: "gas constant"
+    name_bn: "গ্যাস ধ্রুবক"
     unit: "J/(mol K)"
     si_unit: "J/(mol K)"
   - symbol: "T"
     name: "absolute temperature"
-    name_bn: "absolute temperature"
+    name_bn: "পরম তাপমাত্রা"
     unit: "K"
     si_unit: "K"
   - symbol: "Q"
     name: "dimensionless activity quotient"
-    name_bn: "dimensionless activity quotient"
+    name_bn: "এককহীন সক্রিয়তা অনুপাত"
     unit: "1"
     si_unit: "1"
-derivation: "Write each chemical potential as μi=μi°+RT ln ai and sum with stoichiometric coefficients. \\Delta_rG=\\sum_i\\nu_i\\mu_i;\\quad Q=\\prod_i a_i^{\\nu_i} Substitute the preceding result and identify the requested relation."
-derivation_bn: "প্রতিটি রাসায়নিক বিভব μi=μi°+RT ln ai লিখে বিক্রিয়ার সহগসহ যোগ করুন। \\Delta_rG=\\sum_i\\nu_i\\mu_i;\\quad Q=\\prod_i a_i^{\\nu_i} আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
+derivation: "Write each chemical potential as $\\mu i=\\mu i^\\circ+RT$ ln ai and sum with stoichiometric coefficients."
+derivation_bn: "প্রতিটি রাসায়নিক বিভব $\\mu i=\\mu i^\\circ+RT$ ln ai লিখে বিক্রিয়ার সহগসহ যোগ করুন।"
 derivation_steps:
-  - step_en: "Write each chemical potential as μi=μi°+RT ln ai and sum with stoichiometric coefficients."
-    step_bn: "প্রতিটি রাসায়নিক বিভব μi=μi°+RT ln ai লিখে বিক্রিয়ার সহগসহ যোগ করুন।"
-    latex: "\\Delta_rG=\\sum_i\\nu_i\\mu_i;\\quad Q=\\prod_i a_i^{\\nu_i}"
+  - step_en: "Write each chemical potential as $\\mu i=\\mu i^\\circ+RT$ ln ai and sum with stoichiometric coefficients."
+    step_bn: "প্রতিটি রাসায়নিক বিভব $\\mu i=\\mu i^\\circ+RT$ ln ai লিখে বিক্রিয়ার সহগসহ যোগ করুন।"
+    latex: "\\begin{aligned} \\Delta_rG &= \\sum_i\\nu_i\\mu_i \\\\ Q &= \\prod_i a_i^{\\nu_i} \\end{aligned}"
   - step_en: "Substitute the preceding result and identify the requested relation."
     step_bn: "আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।"
     latex: "\\Delta_rG=\\Delta_rG^\\circ+RT\\ln Q"
-summary_en: "At equilibrium ΔrG=0, giving ΔrG°=−RT ln K."
-summary_bn: "সাম্যে ΔrG=০; ফলে ΔrG°=−RT ln K।"
+summary_en: "At equilibrium $\\Delta rG=0$, giving $\\Delta rG^\\circ=-RT \\ln K$."
+summary_bn: "সাম্যে $\\Delta rG=0$; ফলে $\\Delta rG^\\circ=-RT \\ln K$।"
 tags:
   - "honours"
   - "chemistry"
   - "derivation"
 experiment: "iron-thiocyanate-equilibrium-lab"
 ---
-
-### প্রতিপাদনের ব্যাখ্যা / Derivation
-
-Write each chemical potential as μi=μi°+RT ln ai and sum with stoichiometric coefficients. `\Delta_rG=\sum_i\nu_i\mu_i;\quad Q=\prod_i a_i^{\nu_i}` Substitute the preceding result and identify the requested relation.
-
-প্রতিটি রাসায়নিক বিভব μi=μi°+RT ln ai লিখে বিক্রিয়ার সহগসহ যোগ করুন। `\Delta_rG=\sum_i\nu_i\mu_i;\quad Q=\prod_i a_i^{\nu_i}` আগের ফল বসিয়ে নির্ণেয় সম্পর্কটি শনাক্ত করুন।
 
 ### সমাধানসহ উদাহরণ / Worked application
 

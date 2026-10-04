@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import { mathToText, symbolLatex, symbolNeedsMath, symbolText } from '@/lib/utils';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, Beaker, Calculator as CalculatorIcon, ChevronRight } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { Card, CardBody, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Calculator } from '@/components/content/Calculator';
+import { MathText } from '@/components/content/MathText';
 import { MdxArticle } from '@/components/content/MdxArticle';
 import { Tex } from '@/components/content/Tex';
 import { ViewTracker } from '@/components/content/ViewTracker';
@@ -23,7 +25,7 @@ export async function generateMetadata({ params }: { params: { locale: string; s
   const equation = getEquationBySlug(params.slug);
   if (!equation) return {};
   const title = params.locale === 'bn' ? equation.title_bn : equation.title_en;
-  return { title, description: equation.summary_en ?? equation.derivation };
+  return { title, description: mathToText(equation.summary_en ?? equation.derivation) };
 }
 
 export default function EquationDetailPage({ params }: { params: { locale: string; slug: string } }) {
@@ -33,6 +35,7 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
   if (!equation) notFound();
 
   const title = titleFor(locale, equation.title_bn, equation.title_en);
+  const note = (bn?: string, en?: string) => (locale === 'bn' ? bn ?? en : en) ?? '';
   const isReference = equation.reference_formulas.length > 0;
   const related = equation.related.map((slug) => getEquationBySlug(slug)).filter((item) => item !== undefined).slice(0, 3);
   const simulation = equation.simulation ? getSimulationMeta(equation.simulation) : undefined;
@@ -63,7 +66,7 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
               </div>
               <h1 className="text-3xl font-black tracking-tight sm:text-4xl">{title}</h1>
               <p className="text-sm leading-6 muted">
-                {locale === 'bn' ? equation.summary_bn ?? equation.derivation_bn : equation.summary_en ?? equation.derivation}
+                <MathText text={locale === 'bn' ? equation.summary_bn ?? equation.derivation_bn ?? equation.derivation : equation.summary_en ?? equation.derivation} />
               </p>
               <div className="equation-display rounded-2xl bg-[var(--surface)] px-4 py-5">
                 <Tex latex={equation.latex} />
@@ -88,8 +91,14 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
                   <tbody>
                     {equation.variables.map((variable) => (
                       <tr key={variable.symbol} className="border-b border-[var(--line)] last:border-0">
-                        <td className="px-2 py-3 font-mono font-bold text-physics-600">{variable.symbol}</td>
-                        <td className="px-2 py-3">{locale === 'bn' ? variable.name_bn ?? variable.name : variable.name}</td>
+                        <td className={`px-2 py-3 font-bold text-physics-600 ${symbolNeedsMath(variable.symbol) ? '' : 'font-mono'}`}>
+                          {symbolNeedsMath(variable.symbol)
+                            ? <Tex latex={symbolLatex(variable.symbol)} display={false} />
+                            : variable.symbol}
+                        </td>
+                        <td className="px-2 py-3">
+                          <MathText text={symbolText(locale === 'bn' ? variable.name_bn ?? variable.name : variable.name)} />
+                        </td>
                         <td className="px-2 py-3 muted">{variable.unit}</td>
                         <td className="px-2 py-3 muted">{variable.si_unit}</td>
                       </tr>
@@ -155,16 +164,16 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
                       <div className="equation-display rounded-xl bg-[var(--surface)] px-3 py-2">
                         <Tex latex={formula.latex} />
                       </div>
-                      {(locale === 'bn' ? formula.note_bn ?? formula.note_en : formula.note_en) && (
-                        <p className="text-sm leading-6 muted">{locale === 'bn' ? formula.note_bn ?? formula.note_en : formula.note_en}</p>
+                      {note(formula.note_bn, formula.note_en) && (
+                        <p className="text-sm leading-6 muted"><MathText text={note(formula.note_bn, formula.note_en)} /></p>
                       )}
                     </article>
                   ))}
                 </div>
-                {(locale === 'bn' ? equation.reference_note_bn ?? equation.reference_note_en : equation.reference_note_en) && (
+                {note(equation.reference_note_bn, equation.reference_note_en) && (
                   <p className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-100">
                     <strong>{locale === 'bn' ? 'শর্ত ও সতর্কতা: ' : 'Assumptions & cautions: '}</strong>
-                    {locale === 'bn' ? equation.reference_note_bn ?? equation.reference_note_en : equation.reference_note_en}
+                    <MathText text={note(equation.reference_note_bn, equation.reference_note_en)} />
                   </p>
                 )}
               </CardBody>
@@ -176,7 +185,7 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
               <CardTitle>{locale === 'bn' ? 'প্রতিপাদন ও ধারণা' : 'Derivation & intuition'}</CardTitle>
             </CardHeader>
             <CardBody className="space-y-4">
-              <p className="text-sm leading-7 muted">{locale === 'bn' ? equation.derivation_bn ?? equation.derivation : equation.derivation}</p>
+              <p className="text-sm leading-7 muted"><MathText text={locale === 'bn' ? equation.derivation_bn ?? equation.derivation : equation.derivation} /></p>
               {equation.derivation_steps.length > 0 && (
                 <div className="space-y-3 pt-2">
                   <h3 className="text-xs font-black uppercase tracking-widest text-physics-600 dark:text-physics-200">
@@ -191,7 +200,7 @@ export default function EquationDetailPage({ params }: { params: { locale: strin
                           </span>
                           <div className="min-w-0 flex-1 space-y-2">
                             <p className="text-sm font-medium leading-6">
-                              {locale === 'bn' ? step.step_bn : step.step_en}
+                              <MathText text={locale === 'bn' ? step.step_bn : step.step_en} />
                             </p>
                             {step.latex && (
                               <div className="equation-display rounded-xl bg-[var(--surface)] px-3 py-2">

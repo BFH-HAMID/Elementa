@@ -9,7 +9,7 @@ import { calculatorModels, inputsNeeded, solveWithModel, unitChoicesFor } from '
 import { Button } from '@/components/ui/Button';
 import { Card, CardBody, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Tex } from './Tex';
-import { formatNumber } from '@/lib/utils';
+import { formatNumber, symbolLatex, symbolNeedsMath, symbolText } from '@/lib/utils';
 
 function optionsFor(unit: string, symbol: string): string[] {
   if (symbol === 'pH' || symbol === 'Q' || symbol === 'n' || symbol === 'm' || symbol === 'A' || symbol === 'B' || symbol === 'C' || symbol === 'D') {
@@ -108,7 +108,14 @@ export function Calculator({ equation }: { equation: EquationEntry }) {
       {model && symbols.length < equation.variables.length && (
         <p className="text-xs muted">
           {labels ? 'এই ক্যালকুলেটরে ব্যবহৃত চলক: ' : 'This calculator uses: '}
-          <span className="font-mono font-bold">{symbols.join(', ')}</span>
+          <span className="font-bold">
+            {symbols.map((symbol, index) => (
+              <span key={symbol}>
+                {index > 0 ? ', ' : ''}
+                {symbolNeedsMath(symbol) ? <Tex latex={symbolLatex(symbol)} display={false} /> : symbol}
+              </span>
+            ))}
+          </span>
         </p>
       )}
     </CardHeader>
@@ -126,7 +133,7 @@ export function Calculator({ equation }: { equation: EquationEntry }) {
             const variable = bySymbol.get(symbol);
             return (
               <option key={symbol} value={symbol}>
-                {symbol}{variable ? ` · ${variableName(variable)}` : ''}
+                {symbolText(symbol)}{variable ? ` · ${symbolText(variableName(variable))}` : ''}
               </option>
             );
           })}
@@ -141,7 +148,8 @@ export function Calculator({ equation }: { equation: EquationEntry }) {
           return (
             <div key={symbol}>
               <label htmlFor={`${equation.slug}-${symbol}`} className="mb-2 block text-sm font-bold">
-                {symbol} {variable && <span className="font-normal muted">{variableName(variable)}</span>}
+                {symbolNeedsMath(symbol) ? <Tex latex={symbolLatex(symbol)} display={false} /> : symbol}{' '}
+                {variable && <span className="font-normal muted">{symbolText(variableName(variable))}</span>}
               </label>
               <div className="flex gap-2">
                 <input
@@ -157,7 +165,7 @@ export function Calculator({ equation }: { equation: EquationEntry }) {
                   value={unitFor(symbol, unit)}
                   onChange={(event) => setUnits((current) => ({ ...current, [symbol]: event.target.value }))}
                   className="input w-[7.5rem] shrink-0 px-2 text-xs"
-                  aria-label={`${t('unit')} ${symbol}`}
+                  aria-label={`${t('unit')} ${symbolText(symbol)}`}
                 >
                   {options.map((option) => <option key={option} value={option}>{option}</option>)}
                 </select>
@@ -187,7 +195,7 @@ export function Calculator({ equation }: { equation: EquationEntry }) {
           <div className="mt-4 border-t border-chemistry-200 pt-3 dark:border-chemistry-700">
             <p className="mb-2 text-sm font-extrabold">{t('working')}</p>
             <ol className="list-decimal space-y-1 pl-5 text-sm leading-6 text-chemistry-900 dark:text-chemistry-100">
-              {result.steps.map((step) => <li key={step}>{step}</li>)}
+              {result.steps.map((step) => <li key={step}>{symbolText(step)}</li>)}
             </ol>
           </div>
         </div>

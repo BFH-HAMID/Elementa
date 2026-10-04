@@ -7,7 +7,7 @@ subject: physics
 level: class-11-12
 chapter: "Alternating Current"
 chapter_bn: "পরিবর্তী প্রবাহ"
-latex: "I_{\\text{rms}} = \\frac{I_0}{\\sqrt{2}}, \\qquad V_{\\text{rms}} = \\frac{V_0}{\\sqrt{2}}, \\qquad P_{\\text{avg}} = V_{\\text{rms}}I_{\\text{rms}}\\cos\\phi"
+latex: "\\begin{aligned} I_{\\text{rms}} &= \\frac{I_0}{\\sqrt{2}} \\\\ V_{\\text{rms}} &= \\frac{V_0}{\\sqrt{2}} \\\\ P_{\\text{avg}} &= V_{\\text{rms}}I_{\\text{rms}}\\cos\\phi \\end{aligned}"
 calculator: false
 variables:
   - symbol: "I_rms"
@@ -30,8 +30,8 @@ variables:
     name_bn: "ভোল্টেজ ও প্রবাহের দশা পার্থক্য"
     unit: "°"
     si_unit: "rad"
-derivation: "The RMS value is the steady DC value that would deliver the same average power to a resistor. Averaging I² = I_0²sin²ωt over a cycle uses the identity ⟨sin²⟩ = ½."
-derivation_bn: "আরএমএস মান হলো সেই সমতুল্য ডিসি মান যা রোধে একই গড় ক্ষমতা দেয়। একটি পূর্ণ চক্রে I² = I_0² sin²ωt-এর গড় নিতে ⟨sin²⟩ = ½ ব্যবহার করা হয়।"
+derivation: "The RMS value is the steady DC value that would deliver the same average power to a resistor. Averaging $I^{2} = I_0^{2}\\sin^{2}\\omega t$ over a cycle uses the identity $\\langle \\sin^{2}\\rangle = \\tfrac{1}{2}$."
+derivation_bn: "আরএমএস মান হলো সেই সমতুল্য ডিসি মান যা রোধে একই গড় ক্ষমতা দেয়। একটি পূর্ণ চক্রে $I^{2} = I_0^{2}\\ \\sin^{2}\\omega t$-এর গড় নিতে $\\langle \\sin^{2}\\rangle = \\tfrac{1}{2}$ ব্যবহার করা হয়।"
 derivation_steps:
   - step_en: "Square the sinusoidal current and average over one full period."
     step_bn: "সাইন-রূপী প্রবাহের বর্গকে এক পূর্ণ চক্রে গড় করুন।"
@@ -39,8 +39,8 @@ derivation_steps:
   - step_en: "Take the square root to define the RMS current."
     step_bn: "বর্গমূল নিয়ে আরএমএস প্রবাহের সংজ্ঞা দিন।"
     latex: "I_{\\text{rms}} = \\sqrt{\\langle I^2\\rangle} = \\frac{I_0}{\\sqrt{2}}"
-  - step_en: "Average the instantaneous power to get the useful AC power with power factor cos φ."
-    step_bn: "তাৎক্ষণিক ক্ষমতার গড় নিলে পাওয়ার ফ্যাক্টর cos φ সহ কার্যকর AC ক্ষমতা পাওয়া যায়।"
+  - step_en: "Average the instantaneous power to get the useful AC power with power factor $\\cos \\phi$."
+    step_bn: "তাৎক্ষণিক ক্ষমতার গড় নিলে পাওয়ার ফ্যাক্টর $\\cos \\phi$ সহ কার্যকর AC ক্ষমতা পাওয়া যায়।"
     latex: "P_{\\text{avg}} = V_{\\text{rms}}I_{\\text{rms}}\\cos\\phi"
 summary_en: "Convert peak AC values to the RMS values quoted by instruments."
 summary_bn: "পরিবর্তী প্রবাহের শীর্ষ মানকে যন্ত্রে প্রদর্শিত আরএমএস মানে রূপান্তর।"

@@ -554,6 +554,12 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
       values.freqNu = Number(((3e8 / (modernState.incidentWavelengthNm * 1e-9)) / 1e14).toFixed(3));
       values.stoppingPotV = Number(v0.toFixed(3));
       values.hCalc = Number((((v0 * 1.602e-19 + 2.30 * 1.602e-19) / (values.freqNu as number * 1e14)) * 1e34).toFixed(3));
+    } else if (exp?.modelReadings) {
+      // Practical stations expose a clearly labelled model reading so the table,
+      // CSV export and graph are useful even when no continuous simulator exists.
+      Object.entries(exp.modelReadings).forEach(([key, value]) => {
+        values[key] = value;
+      });
     } else {
       // Free-play defaults
       values.x = dataRows.length + 1;

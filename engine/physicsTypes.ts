@@ -362,5 +362,7 @@ export interface GuidedPhysicsExperiment {
     yColumn: string;
     slopeFormula?: string;
   };
+  /** Optional model readout used by the local observation recorder for practical stations. */
+  modelReadings?: Record<string, number | string>;
   quiz: QuizQuestion[];
 }

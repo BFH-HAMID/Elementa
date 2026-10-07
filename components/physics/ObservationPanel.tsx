@@ -50,7 +50,7 @@ export function ObservationPanel() {
             onClick={() => setActiveTab('catalog')}
             className="text-[11px] font-bold text-physics-600 hover:underline"
           >
-            {isBangla ? 'সব পরীক্ষা' : 'All 30 Practicals'}
+            {isBangla ? 'সব পরীক্ষা' : `All ${physicsGuidedExperiments.length} practicals`}
           </button>
         </div>
 
@@ -115,7 +115,7 @@ export function ObservationPanel() {
         {activeTab === 'catalog' && (
           <div className="space-y-2">
             <h4 className="text-xs font-black text-[var(--ink)]">
-              {isBangla ? 'সিলেবাসভিত্তিক ৩০টি পদার্থবিজ্ঞান পরীক্ষা:' : '30 Guided Physics Laboratory Practicals:'}
+              {isBangla ? `সিলেবাসভিত্তিক ${physicsGuidedExperiments.length}টি পদার্থবিজ্ঞান পরীক্ষা:` : `${physicsGuidedExperiments.length} Guided Physics Laboratory Practicals:`}
             </h4>
             <div className="space-y-2 pt-1">
               {physicsGuidedExperiments.map((e) => (

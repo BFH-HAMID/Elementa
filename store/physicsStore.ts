@@ -42,6 +42,15 @@ import {
 import { applyMeasurementNoise, calculatePercentageError } from '@/engine/measurement';
 import { equipmentById, physicsExperimentsBySlug } from '@/lib/physicsData';
 import { findFreeSpot, isLinkPort } from '@/lib/physicsBench';
+import {
+  clampToControl,
+  defaultParams,
+  getPracticalModel,
+  makeNoise,
+  runPractical,
+  summarizeResult,
+  type PracticalParams
+} from '@/engine/practicals';
 
 export type PhysicsBenchMode =
   | 'workbench'
@@ -49,7 +58,8 @@ export type PhysicsBenchMode =
   | 'mechanics'
   | 'waves'
   | 'thermo'
-  | 'modern';
+  | 'modern'
+  | 'practical';
 
 export type PhysicsTab = 'workbench' | 'graph' | 'table' | 'theory' | 'quiz';
 
@@ -81,6 +91,11 @@ export interface PhysicsStoreState {
   noiseEnabled: boolean;
   noiseLevel: number;
   dataRows: DataRow[];
+
+  // Interactive practical simulation (mode 'practical')
+  practicalParams: PracticalParams;
+  /** Date.now() when the current practical process (heating, mixing, settling…) started. */
+  practicalClockStart: number;
 
   // History
   historyPast: { items: BenchItem[]; wires: CircuitWire[] }[];
@@ -129,6 +144,13 @@ export interface PhysicsStoreState {
   addDataRow: (values: Record<string, number | string>, note?: string) => void;
   removeDataRow: (id: string) => void;
   clearDataRows: () => void;
+
+  setPracticalParam: (key: string, value: number) => void;
+  setPracticalParams: (params: PracticalParams) => void;
+  restartPracticalClock: () => void;
+  resetPracticalParams: () => void;
+  /** Seconds since the current practical process started. */
+  getPracticalElapsed: () => number;
 
   recomputeSimulation: () => void;
   stepMechanics: (dt?: number) => void;
@@ -279,11 +301,15 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
   noiseLevel: 1.0,
   dataRows: [],
 
+  practicalParams: {},
+  practicalClockStart: 0,
+
   historyPast: [],
   historyFuture: [],
 
   setMode: (mode) => {
-    set({ mode });
+    if (mode === 'practical' && !getPracticalModel(get().activeExperimentSlug)) return;
+    set(mode === 'practical' ? { mode, practicalClockStart: Date.now() } : { mode });
     get().recomputeSimulation();
   },
 
@@ -529,6 +555,8 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
     else if (exp.category === 'waves') targetMode = 'waves';
     else if (exp.category === 'heat') targetMode = 'thermo';
     else if (exp.category === 'modern-physics') targetMode = 'modern';
+    const practicalModel = getPracticalModel(slug);
+    if (practicalModel) targetMode = 'practical';
 
     set({
       activeExperimentSlug: slug,
@@ -539,6 +567,8 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
       quizAnswers: {},
       quizSubmitted: false,
       dataRows: [],
+      practicalParams: practicalModel ? defaultParams(practicalModel) : {},
+      practicalClockStart: Date.now(),
       activeTab: 'workbench',
       selectedItemId: null,
       selectedWireId: null,
@@ -578,8 +608,40 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
 
     values.obsNo = dataRows.length + 1;
 
+    const practical = mode === 'practical' ? getPracticalModel(activeExperimentSlug) : null;
+
     // Grab values based on current active domain / experiment
-    if (exp?.id === 'ohms-law') {
+    if (practical) {
+      const rows = dataRows.map((r) => r.values);
+      const out = runPractical(practical, get().practicalParams, {
+        noise: makeNoise(noiseEnabled, noiseLevel),
+        elapsed: get().getPracticalElapsed(),
+        rows
+      });
+      Object.assign(values, out.row);
+      values.obsNo = dataRows.length + 1;
+      // Hidden marker (not a table column) so the simulator can tick suggested settings.
+      if (practical.sweep) values.__sweep = get().practicalParams[practical.sweep.key];
+      const summary = practical.result.absolute || practical.result.rowwise === false
+        ? null
+        : summarizeResult(practical, [values], get().practicalParams);
+      const newRow: DataRow = {
+        id: `row-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+        timestamp: Date.now(),
+        values,
+        calculatedValue: summary?.value ?? undefined,
+        theoreticalValue: summary?.expected,
+        percentageError: summary?.error ?? undefined,
+        note: note ?? (out.ready === false ? 'not at a valid setting' : undefined)
+      };
+      const nextRows = [...dataRows, newRow];
+      // Tick procedure steps as the student progresses through the readings.
+      const steps = exp?.procedureSteps ?? [];
+      const done = Math.ceil(steps.length * Math.min(1, nextRows.length / Math.max(1, practical.minReadings)));
+      const completedSteps = Array.from(new Set([...get().completedSteps, ...steps.slice(0, done).map((st) => st.stepNumber)])).sort((a, b) => a - b);
+      set({ dataRows: nextRows, completedSteps });
+      return;
+    } else if (exp?.id === 'ohms-law') {
       const vResult = Object.values(circuitResult.componentResults).find((r) => r.itemId.includes('voltmeter') || r.itemId.includes('resistor'));
       const iResult = Object.values(circuitResult.componentResults).find((r) => r.itemId.includes('ammeter') || r.itemId.includes('resistor'));
       const volt = applyMeasurementNoise(vResult?.voltageDrop || 2.0, 0.05, noiseEnabled, noiseLevel);
@@ -683,6 +745,38 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
   },
 
   clearDataRows: () => set({ dataRows: [] }),
+
+  setPracticalParam: (key, value) => {
+    const model = getPracticalModel(get().activeExperimentSlug);
+    if (!model) return;
+    const control = model.controls.find((c) => c.key === key);
+    if (!control) return;
+    const v = clampToControl(control, value);
+    const current = get().practicalParams;
+    if (current[key] === v) return;
+    set({ practicalParams: { ...defaultParams(model), ...current, [key]: v }, practicalClockStart: Date.now() });
+  },
+
+  setPracticalParams: (params) => {
+    const model = getPracticalModel(get().activeExperimentSlug);
+    if (!model) return;
+    const next: PracticalParams = { ...defaultParams(model), ...get().practicalParams };
+    for (const c of model.controls) if (params[c.key] !== undefined) next[c.key] = clampToControl(c, params[c.key]);
+    set({ practicalParams: next, practicalClockStart: Date.now() });
+  },
+
+  restartPracticalClock: () => set({ practicalClockStart: Date.now() }),
+
+  resetPracticalParams: () => {
+    const model = getPracticalModel(get().activeExperimentSlug);
+    if (!model) return;
+    set({ practicalParams: defaultParams(model), practicalClockStart: Date.now() });
+  },
+
+  getPracticalElapsed: () => {
+    const start = get().practicalClockStart;
+    return start > 0 ? Math.max(0, (Date.now() - start) / 1000) : 0;
+  },
 
   recomputeSimulation: () => {
     const { items, wires, mode, activeExperimentSlug } = get();
@@ -797,8 +891,8 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
   saveToLocalStorage: () => {
     if (typeof window === 'undefined') return false;
     try {
-      const { items, wires, mode, activeExperimentSlug, dataRows, completedSteps } = get();
-      const payload = JSON.stringify({ items, wires, mode, activeExperimentSlug, dataRows, completedSteps });
+      const { items, wires, mode, activeExperimentSlug, dataRows, completedSteps, practicalParams } = get();
+      const payload = JSON.stringify({ items, wires, mode, activeExperimentSlug, dataRows, completedSteps, practicalParams });
       window.localStorage.setItem('elementa_physics_lab_save', payload);
       return true;
     } catch {
@@ -815,8 +909,10 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
       set({
         items: data.items || [],
         wires: data.wires || [],
-        mode: data.mode || 'workbench',
+        mode: data.mode === 'practical' && !getPracticalModel(data.activeExperimentSlug) ? 'workbench' : data.mode || 'workbench',
         activeExperimentSlug: data.activeExperimentSlug || null,
+        practicalParams: data.practicalParams || (getPracticalModel(data.activeExperimentSlug) ? defaultParams(getPracticalModel(data.activeExperimentSlug)!) : {}),
+        practicalClockStart: Date.now(),
         dataRows: data.dataRows || [],
         completedSteps: data.completedSteps || [],
         selectedItemId: null,

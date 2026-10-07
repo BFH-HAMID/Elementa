@@ -24,6 +24,8 @@ import type { CircuitWire } from '@/engine/physicsTypes';
 import { EquipmentRenderer } from './Equipment/EquipmentRenderer';
 import { OpticsBench } from './OpticsBench';
 import { MechanicsStage } from './MechanicsStage';
+import { PracticalSimulator } from './practicals/PracticalSimulator';
+import { hasPracticalModel } from '@/engine/practicals';
 import { PracticalStation } from './PracticalStation';
 import { MeasuringModal } from './Equipment/MeasuringModals';
 import { BenchInspector } from './BenchInspector';
@@ -497,14 +499,17 @@ export function Workbench() {
   ];
   const stationMode = mode === 'waves' || mode === 'thermo' || mode === 'modern';
   const activeExp = activeExperimentSlug ? physicsExperimentsBySlug.get(activeExperimentSlug) : undefined;
-  const practicalMode: PhysicsBenchMode | null =
-    activeExp?.category === 'waves'
-      ? 'waves'
-      : activeExp?.category === 'heat'
-      ? 'thermo'
-      : activeExp?.category === 'modern-physics'
-      ? 'modern'
-      : null;
+  const hasSimulation = hasPracticalModel(activeExperimentSlug);
+  const practicalMode: PhysicsBenchMode | null = hasSimulation
+    ? 'practical'
+    : activeExp?.category === 'waves'
+    ? 'waves'
+    : activeExp?.category === 'heat'
+    ? 'thermo'
+    : activeExp?.category === 'modern-physics'
+    ? 'modern'
+    : null;
+  const practicalActive = mode === 'practical' || stationMode;
 
   const iconBtn =
     'grid h-9 w-9 place-items-center rounded-lg text-[var(--muted)] transition hover:bg-[var(--surface-soft)] hover:text-[var(--ink)] disabled:cursor-not-allowed disabled:opacity-35';
@@ -534,12 +539,12 @@ export function Workbench() {
               onClick={() => setMode(practicalMode)}
               className={cn(
                 'flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-black transition',
-                stationMode ? 'bg-physics-600 text-white shadow-sm' : 'text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]'
+                practicalActive ? 'bg-physics-600 text-white shadow-sm' : 'text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--ink)]'
               )}
-              title={isBangla ? 'গাইডেড প্র্যাকটিক্যালের সেটআপ' : 'Guided practical setup'}
+              title={isBangla ? 'গাইডেড প্র্যাকটিক্যাল' : 'Guided practical'}
             >
               <ClipboardList size={14} />
-              {isBangla ? 'প্র্যাকটিক্যাল' : 'Practical'}
+              {isBangla ? (hasSimulation ? 'প্র্যাকটিক্যাল সিমুলেশন' : 'প্র্যাকটিক্যাল') : hasSimulation ? 'Practical simulation' : 'Practical'}
             </button>
           )}
         </div>
@@ -588,6 +593,7 @@ export function Workbench() {
       {mode === 'optics' && <OpticsBench />}
       {mode === 'mechanics' && <MechanicsStage />}
       {stationMode && <PracticalStation />}
+      {mode === 'practical' && (hasSimulation ? <PracticalSimulator /> : <PracticalStation />)}
 
       {mode === 'workbench' && (
         <div className="overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--surface)] shadow-card">

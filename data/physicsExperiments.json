@@ -262,9 +262,10 @@
       "precautions_en": ["Driver battery EMF must be strictly greater than cell EMFs."],
       "precautions_bn": ["মূল ব্যাটারির তড়িচ্চালক বল অবশ্যই পরীক্ষাধীন কোষের চেয়ে বেশি হতে হবে।"],
       "dataColumns": [
-        { "key": "cell", "label_en": "Cell", "label_bn": "কোষ" },
-        { "key": "balancingL", "label_en": "Balancing Length l (cm)", "label_bn": "ভারসাম্য দৈর্ঘ্য l (cm)", "unit": "cm", "decimals": 1 },
-        { "key": "ratio", "label_en": "E1 / E2", "label_bn": "E1 / E2 অনুপাত", "decimals": 3 }
+        { "key": "cell", "label_en": "Set (rheostat)", "label_bn": "সেট (রিওস্ট্যাট)" },
+        { "key": "balancingL", "label_en": "Balancing Length l₁ for E₁ (cm)", "label_bn": "E₁ এর ভারসাম্য দৈর্ঘ্য l₁ (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "balancingL2", "label_en": "Balancing Length l₂ for E₂ (cm)", "label_bn": "E₂ এর ভারসাম্য দৈর্ঘ্য l₂ (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "ratio", "label_en": "E1 / E2 = l₁ / l₂", "label_bn": "E1 / E2 = l₁ / l₂ অনুপাত", "decimals": 3 }
       ],
       "theoreticalTarget": {
         "formulaName": "E1 / E2 = l1 / l2",
@@ -386,9 +387,9 @@
       "precautions_bn": ["প্রবাহের ধনাত্মক ও ঋণাত্মক দিকচিহ্ন খেয়াল রাখুন।"],
       "dataColumns": [
         { "key": "loopOrNode", "label_en": "Node / Loop", "label_bn": "নোড / লুপ" },
-        { "key": "val1", "label_en": "Term 1 (A or V)", "label_bn": "মান ১" },
-        { "key": "val2", "label_en": "Term 2 (A or V)", "label_bn": "মান ২" },
-        { "key": "sumVal", "label_en": "Sum (Net Zero)", "label_bn": "মোট যোগফল" }
+        { "key": "val1", "label_en": "Inflow ΣI or EMF E (A / V)", "label_bn": "আগত ΣI বা EMF E (A / V)" },
+        { "key": "val2", "label_en": "Outflow ΣI or ΣIR (A / V)", "label_bn": "নির্গত ΣI বা ΣIR (A / V)" },
+        { "key": "sumVal", "label_en": "Difference Σ (≈ 0)", "label_bn": "পার্থক্য Σ (≈ ০)" }
       ],
       "theoreticalTarget": {
         "formulaName": "KCL & KVL Sum = 0",
@@ -1384,7 +1385,8 @@
       ],
       "theoreticalTarget": {
         "formulaName": "EMF = -N * dPhi/dt",
-        "expectedConstant": 1.0,
+        "expectedConstant": 6.0,
+        "expectedConstantUnit": "div per m/s (|θ| ∝ speed)",
         "xColumn": "speed",
         "yColumn": "deflectionDiv"
       },
@@ -1749,10 +1751,11 @@
       ],
       "theoreticalTarget": {
         "formulaName": "Counts ∝ 1 / r²",
-        "expectedConstant": 1000.0,
+        "expectedConstant": 50000.0,
+        "expectedConstantUnit": "cpm·cm²",
         "xColumn": "invRSq",
         "yColumn": "netCpm",
-        "slopeFormula": "Slope = Source Intensity Factor"
+        "slopeFormula": "Slope = Source constant K (net cpm × r²)"
       },
       "quiz": [
         {
@@ -3349,8 +3352,8 @@
       ],
       "theoreticalTarget": {
         "formulaName": "Liquid specific heat c",
-        "expectedConstant": 4180,
-        "expectedConstantUnit": "J/kg K for water reference",
+        "expectedConstant": 2100,
+        "expectedConstantUnit": "J/kg K (kerosene)",
         "xColumn": "rateLiquid",
         "yColumn": "specificHeat"
       },

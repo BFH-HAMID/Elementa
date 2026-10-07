@@ -78,6 +78,30 @@ Elementa/
 
 ---
 
+## 🎛️ Interactive Practical Simulations
+
+44 of the 45 guided practicals (everything except Ohm's law, which is built on the free workbench) open in **Practical simulation** mode — a live, hand-operated version of the real apparatus.
+
+| Category | Practicals with a simulation |
+| --- | --- |
+| Electricity & magnetism | series/parallel resistors, meter bridge, potentiometer (EMF comparison & internal resistance), Kirchhoff's laws, Faraday induction, transformer, series LCR resonance |
+| Mechanics & properties of matter | simple, compound & Kater's pendulum, spring constant, inclined plane friction, projectile, Newton's 2nd law trolley, Atwood machine, flywheel, static & dynamic rigidity modulus, Searle's Young modulus, vernier caliper, screw gauge |
+| Optics | convex lens & concave mirror (optical bench), Snell's law, prism, Young's double slit, diffraction grating |
+| Heat | method of mixtures (liquid & solid), Joule's law, mechanical equivalent, latent heat of ice, cooling curve, Searle & Lee's disc conductivity, density bottle |
+| Waves & surface tension | resonance tube, sonometer, Melde's experiment, capillary rise (water) & depression (mercury) |
+| Modern physics | photoelectric effect, GM counter inverse-square law |
+
+**How it works**
+
+- `engine/practicals/*.ts` — one pure model per practical (`PracticalModel`): controls, `compute(params, noise, ctx)` → live readings + the observation-table row + scene view, `result` (final g, k, μ, λ… from the recorded rows) and an optional `solve()` used by the **Show me** hint. Unit-tested in `engine/__tests__/practicalModels.test.ts` (every model must reproduce its accepted value, and every "Show me" hint must land on a recordable setting).
+- `components/physics/practicals/scenes/*.tsx` — SVG scenes (640×360 viewBox) drawn from the model's `view`. Blue handles are draggable with mouse, pen or touch (`useSvgDrag`; touches on handles never scroll the page). `components/physics/practicals/__tests__/scenes.test.tsx` renders every scene across its full control range and fails on `NaN` or negative sizes.
+- `components/physics/practicals/PracticalSimulator.tsx` — the UI: header with how-to, live scene + status + meters, sliders/segmented controls, suggested-reading chips (ticked when recorded), **Record reading** (enabled only at a valid observation, e.g. a null point or sharp image), running result with % error, and the observation table. Recorded rows go into the normal store `dataRows`, so **Live Graph**, **Data Table** and CSV export work unchanged.
+- Time-based heat practicals use the store's practical clock (`practicalClockStart`, restarted on any control change or with **Restart process**); `timeScale` speeds up simulated time.
+
+**Adding a practical simulation:** write a model in the matching `engine/practicals/<category>.ts`, add it to that file's exported array, make its `row` keys match the experiment's `dataColumns` in `data/physicsExperiments.json`, then reuse a scene id from `PracticalSceneId` (or add a new scene and register it in `scenes/index.tsx`).
+
+---
+
 ## 🛠️ Physics Engine Modules
 
 All physics engines are pure, deterministic functions with 100% test coverage under `engine/__tests__/`:

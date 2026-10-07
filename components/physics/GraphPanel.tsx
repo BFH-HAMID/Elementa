@@ -31,7 +31,7 @@ export function GraphPanel() {
     const keys = new Set<string>();
     for (const row of dataRows) {
       for (const [k, v] of Object.entries(row.values)) {
-        if (typeof v === 'number') keys.add(k);
+        if (typeof v === 'number' && !k.startsWith('__')) keys.add(k);
       }
     }
     return Array.from(keys);

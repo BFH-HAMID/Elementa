@@ -59,7 +59,7 @@ The README uses self-hosted SVG artwork so the project page has a visual identit
 - KaTeX equations, MDX rendering, Zod frontmatter validation, Fuse.js search and a Ctrl/Cmd+K command palette.
 - Recharts live graphs, CSV data export, screenshot download and fullscreen simulation mode.
 - Local-only bookmarks, recently viewed items, quiz score history, progress, theme and language preferences with Zustand.
-- Bangla-first routing (`/bn`) with English (`/en`), a manual service worker, manifest, SEO metadata, sitemap, robots and OpenGraph artwork.
+- Bangla-first routing (`/bn`) with English (`/en`), a production service worker with versioned offline caching and update prompts, an installable PWA manifest with app shortcuts, SEO metadata, sitemap, robots and OpenGraph artwork.
 
 There is no database, backend API, login or required environment variable. PhET's official embedded sims are fetched from PhET's servers, so they need an internet connection. PhET currently licenses its simulation files under CC BY-NC 4.0; commercial or ad-supported use requires separate permission from PhET. See the [official licensing terms](https://phet.colorado.edu/en/licensing).
 

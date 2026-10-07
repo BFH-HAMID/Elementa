@@ -63,12 +63,12 @@ button { cursor: pointer; }
   @supports (min-height: 100dvh) {
     .app-main { min-height: calc(100dvh - 4rem); }
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     .app-main { padding-bottom: 0; }
   }
   /* Footers sit below main, so they need the same mobile tab-bar clearance. */
   .app-footer-clearance { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px)); }
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     .app-footer-clearance { padding-bottom: 0; }
   }
   .section-space { @apply py-14 sm:py-20; }

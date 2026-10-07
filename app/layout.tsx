@@ -10,12 +10,12 @@ const inter = localFont({
   display: 'swap'
 });
 
-// Keep a dedicated variable for Bangla text so a real Noto Sans Bengali or Hind Siliguri
-// installed by the visitor is selected per glyph; the bundled latin fallback keeps builds offline.
+// Bundle the Bengali script subset so every learner gets the same legible glyphs,
+// even when their device does not have a Bengali font installed.
 const bengali = localFont({
-  src: '../public/fonts/noto-sans-latin.ttf',
+  src: '../public/fonts/noto-sans-bengali-variable.woff2',
   variable: '--font-bengali',
-  weight: '400',
+  weight: '100 900',
   display: 'swap'
 });
 

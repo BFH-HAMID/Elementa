@@ -203,6 +203,22 @@
     "credits": "Credits & licence",
     "creditsText": "Original interface and learning notes are released for educational use. Please credit PhysChem Lab when adapting the project."
   },
+  "developer": {
+    "menuLabel": "More options",
+    "information": "Developer information",
+    "name": "Md. Abdul Hamid Anower",
+    "role": "Cybersecurity specialist & full-stack developer",
+    "shortBio": "Works across penetration testing, cyber forensics, network defense and cloud infrastructure, while building secure, dependable web applications.",
+    "pageTitle": "Developer information",
+    "pageDescription": "Meet the developer behind PhysChem Lab and explore his work in cybersecurity and full-stack engineering.",
+    "focusTitle": "Areas of focus",
+    "contactTitle": "Find me online",
+    "location": "Bangladesh",
+    "portfolio": "Portfolio",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
   "errors": {"title": "The lab light flickered.", "text": "This page hit an unexpected error. Your local progress is safe.", "notFound": "This experiment has not been added yet.", "home": "Return home"},
   "pwa": {"title": "Keep the lab close", "description": "Install PhysChem Lab for a faster, app-like study space.", "install": "Install app", "later": "Later", "close": "Dismiss", "offline": "You are offline. Saved pages are still available.", "updateReady": "A fresh version of the lab is ready.", "refresh": "Refresh"},
   "footer": {"built": "Made for curious learners in Bangladesh", "license": "Open educational project"}

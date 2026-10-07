@@ -39,7 +39,7 @@ export function CommandPalette() {
       <button type="button" onClick={() => setOpen(true)} className="btn-secondary hidden min-h-9 gap-2 rounded-lg px-3 text-xs sm:inline-flex" aria-label="Open command palette">
         <Search size={15} /><span>{t('search')}</span><kbd className="rounded border border-[var(--line)] px-1.5 py-0.5 font-mono text-[10px]">⌘K</kbd>
       </button>
-      <button type="button" onClick={() => setOpen(true)} className="btn-secondary min-h-9 rounded-lg px-2.5 sm:hidden" aria-label={t('search')}>
+      <button type="button" onClick={() => setOpen(true)} className="btn-secondary min-h-10 min-w-10 rounded-lg px-2.5 sm:hidden" aria-label={t('search')}>
         <Search size={17} />
       </button>
       {open && (

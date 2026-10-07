@@ -17,7 +17,7 @@ export function LangSwitch() {
     router.push(nextPath || `/${next}`);
   };
   return (
-    <button type="button" onClick={switchLanguage} className="btn-ghost min-h-9 gap-1.5 rounded-lg px-2.5 text-xs" aria-label={locale === 'bn' ? 'Switch to English' : 'বাংলায় পরিবর্তন করুন'}>
+    <button type="button" onClick={switchLanguage} className="btn-ghost min-h-10 min-w-10 gap-1.5 rounded-lg px-2.5 text-xs sm:min-w-0" aria-label={locale === 'bn' ? 'Switch to English' : 'বাংলায় পরিবর্তন করুন'}>
       <Languages size={16} />
       <span className="font-extrabold">{locale === 'bn' ? 'EN' : 'বাং'}</span>
     </button>

@@ -84,6 +84,8 @@ export interface CircuitWire {
   toItemId: string;
   toTerminalId: string;
   color: 'red' | 'black' | 'blue' | 'green' | 'yellow';
+  /** 'link' = a non-electrical clamp/string between two tools; ignored by the circuit solver. */
+  kind?: 'wire' | 'link';
   resistance?: number; // ohms (default ~0.001)
 }
 

@@ -120,6 +120,10 @@ button { cursor: pointer; }
 [data-theme='dark'] .canvas-frame { background: #0c2236; }
 .canvas-frame canvas { display: block; max-width: 100%; }
 
+/* Elementa Physics Lab: current "flowing" along a closed-circuit wire. */
+@keyframes wire-flow { from { stroke-dashoffset: 24; } to { stroke-dashoffset: 0; } }
+.wire-flow { animation: wire-flow 0.9s linear infinite; }
+
 .scrollbar-thin { scrollbar-width: thin; scrollbar-color: #9ab2c8 transparent; }
 
 /* iOS Safari zooms the whole viewport when a focused form control renders text below

@@ -41,6 +41,16 @@ import {
 } from '@/engine/emEngine';
 import { applyMeasurementNoise, calculatePercentageError } from '@/engine/measurement';
 import { equipmentById, physicsExperimentsBySlug } from '@/lib/physicsData';
+import { findFreeSpot, isLinkPort } from '@/lib/physicsBench';
+import {
+  clampToControl,
+  defaultParams,
+  getPracticalModel,
+  makeNoise,
+  runPractical,
+  summarizeResult,
+  type PracticalParams
+} from '@/engine/practicals';
 
 export type PhysicsBenchMode =
   | 'workbench'
@@ -48,7 +58,8 @@ export type PhysicsBenchMode =
   | 'mechanics'
   | 'waves'
   | 'thermo'
-  | 'modern';
+  | 'modern'
+  | 'practical';
 
 export type PhysicsTab = 'workbench' | 'graph' | 'table' | 'theory' | 'quiz';
 
@@ -58,6 +69,7 @@ export interface PhysicsStoreState {
   items: BenchItem[];
   wires: CircuitWire[];
   selectedItemId: string | null;
+  selectedWireId: string | null;
   connectingWireFrom: { itemId: string; terminalId: string } | null;
   measuringToolModal: 'vernier-caliper' | 'screw-gauge' | 'travelling-microscope' | null;
 
@@ -80,6 +92,11 @@ export interface PhysicsStoreState {
   noiseLevel: number;
   dataRows: DataRow[];
 
+  // Interactive practical simulation (mode 'practical')
+  practicalParams: PracticalParams;
+  /** Date.now() when the current practical process (heating, mixing, settling…) started. */
+  practicalClockStart: number;
+
   // History
   historyPast: { items: BenchItem[]; wires: CircuitWire[] }[];
   historyFuture: { items: BenchItem[]; wires: CircuitWire[] }[];
@@ -89,6 +106,11 @@ export interface PhysicsStoreState {
   setActiveTab: (tab: PhysicsTab) => void;
   addItem: (equipmentId: string, x?: number, y?: number) => string;
   updateItem: (id: string, partial: Partial<BenchItem>) => void;
+  /** Moves an item without re-solving physics (positions don't change the circuit). */
+  moveItem: (id: string, x: number, y: number) => void;
+  duplicateItem: (id: string) => string;
+  /** Snapshot the bench so the next change can be undone (used at the start of a drag). */
+  pushHistory: () => void;
   updateItemProperties: (id: string, properties: Record<string, any>) => void;
   removeItem: (id: string) => void;
   rotateItem: (id: string) => void;
@@ -99,6 +121,13 @@ export interface PhysicsStoreState {
   finishConnectingWire: (itemId: string, terminalId: string, color?: CircuitWire['color']) => void;
   cancelConnectingWire: () => void;
   removeWire: (wireId: string) => void;
+  connectPorts: (
+    from: { itemId: string; terminalId: string },
+    to: { itemId: string; terminalId: string },
+    color?: CircuitWire['color']
+  ) => string | null;
+  selectWire: (wireId: string | null) => void;
+  updateWire: (wireId: string, partial: Partial<Pick<CircuitWire, 'color'>>) => void;
 
   setMeasuringToolModal: (tool: 'vernier-caliper' | 'screw-gauge' | 'travelling-microscope' | null) => void;
   setNoiseEnabled: (enabled: boolean) => void;
@@ -115,6 +144,13 @@ export interface PhysicsStoreState {
   addDataRow: (values: Record<string, number | string>, note?: string) => void;
   removeDataRow: (id: string) => void;
   clearDataRows: () => void;
+
+  setPracticalParam: (key: string, value: number) => void;
+  setPracticalParams: (params: PracticalParams) => void;
+  restartPracticalClock: () => void;
+  resetPracticalParams: () => void;
+  /** Seconds since the current practical process started. */
+  getPracticalElapsed: () => number;
 
   recomputeSimulation: () => void;
   stepMechanics: (dt?: number) => void;
@@ -234,6 +270,7 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
   items: [],
   wires: [],
   selectedItemId: null,
+  selectedWireId: null,
   connectingWireFrom: null,
   measuringToolModal: null,
 
@@ -264,23 +301,30 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
   noiseLevel: 1.0,
   dataRows: [],
 
+  practicalParams: {},
+  practicalClockStart: 0,
+
   historyPast: [],
   historyFuture: [],
 
   setMode: (mode) => {
-    set({ mode });
+    if (mode === 'practical' && !getPracticalModel(get().activeExperimentSlug)) return;
+    set(mode === 'practical' ? { mode, practicalClockStart: Date.now() } : { mode });
     get().recomputeSimulation();
   },
 
   setActiveTab: (tab) => set({ activeTab: tab }),
 
-  addItem: (equipmentId, x = 120, y = 100) => {
+  addItem: (equipmentId, xIn, yIn) => {
     const def = equipmentById.get(equipmentId);
     if (!def) return '';
 
     const { items, wires, historyPast } = get();
+    const spot = xIn === undefined || yIn === undefined ? findFreeSpot(items, def) : null;
+    const x = xIn ?? spot!.x;
+    const y = yIn ?? spot!.y;
     // Save history
-    const newPast = [...historyPast.slice(-15), { items: [...items], wires: [...wires] }];
+    const newPast = [...historyPast.slice(-29), { items: [...items], wires: [...wires] }];
 
     const id = `${equipmentId}-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
     const newItem: BenchItem = {
@@ -294,7 +338,7 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
     };
 
     const nextItems = [...items, newItem];
-    set({ items: nextItems, historyPast: newPast, historyFuture: [], selectedItemId: id });
+    set({ items: nextItems, historyPast: newPast, historyFuture: [], selectedItemId: id, selectedWireId: null });
     get().recomputeSimulation();
     return id;
   },
@@ -304,6 +348,29 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
     const nextItems = items.map((it) => (it.id === id ? { ...it, ...partial } : it));
     set({ items: nextItems });
     get().recomputeSimulation();
+  },
+
+  moveItem: (id, x, y) => {
+    set({ items: get().items.map((it) => (it.id === id ? { ...it, x, y } : it)) });
+  },
+
+  duplicateItem: (id) => {
+    const source = get().items.find((it) => it.id === id);
+    if (!source) return '';
+    const newId = get().addItem(source.equipmentId, source.x + 32, source.y + 32);
+    if (!newId) return '';
+    set({
+      items: get().items.map((it) =>
+        it.id === newId ? { ...it, rotation: source.rotation, properties: { ...source.properties } } : it
+      )
+    });
+    get().recomputeSimulation();
+    return newId;
+  },
+
+  pushHistory: () => {
+    const { items, wires, historyPast } = get();
+    set({ historyPast: [...historyPast.slice(-29), { items: [...items], wires: [...wires] }], historyFuture: [] });
   },
 
   updateItemProperties: (id, properties) => {
@@ -317,13 +384,14 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
 
   removeItem: (id) => {
     const { items, wires, historyPast } = get();
-    const newPast = [...historyPast.slice(-15), { items: [...items], wires: [...wires] }];
+    const newPast = [...historyPast.slice(-29), { items: [...items], wires: [...wires] }];
     const nextItems = items.filter((it) => it.id !== id);
     const nextWires = wires.filter((w) => w.fromItemId !== id && w.toItemId !== id);
     set({
       items: nextItems,
       wires: nextWires,
       selectedItemId: null,
+      selectedWireId: null,
       historyPast: newPast,
       historyFuture: []
     });
@@ -331,6 +399,7 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
   },
 
   rotateItem: (id) => {
+    get().pushHistory();
     const { items } = get();
     const nextItems = items.map((it) =>
       it.id === id ? { ...it, rotation: (it.rotation + 90) % 360 } : it
@@ -339,16 +408,17 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
     get().recomputeSimulation();
   },
 
-  selectItem: (id) => set({ selectedItemId: id }),
+  selectItem: (id) => set({ selectedItemId: id, selectedWireId: id ? null : get().selectedWireId }),
 
   clearBench: () => {
     const { items, wires, historyPast } = get();
     if (items.length === 0 && wires.length === 0) return;
-    const newPast = [...historyPast.slice(-15), { items: [...items], wires: [...wires] }];
+    const newPast = [...historyPast.slice(-29), { items: [...items], wires: [...wires] }];
     set({
       items: [],
       wires: [],
       selectedItemId: null,
+      selectedWireId: null,
       connectingWireFrom: null,
       historyPast: newPast,
       historyFuture: []
@@ -368,19 +438,36 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
   finishConnectingWire: (toItemId, toTerminalId, color) => {
     const from = get().connectingWireFrom;
     if (!from) return;
-    if (from.itemId === toItemId && from.terminalId === toTerminalId) {
-      set({ connectingWireFrom: null });
-      return;
+    set({ connectingWireFrom: null });
+    get().connectPorts(from, { itemId: toItemId, terminalId: toTerminalId }, color);
+  },
+
+  connectPorts: (from, to, color) => {
+    if (from.itemId === to.itemId && from.terminalId === to.terminalId) return null;
+    const { wires, items, historyPast } = get();
+    if (!items.some((it) => it.id === from.itemId) || !items.some((it) => it.id === to.itemId)) return null;
+
+    // Never stack two identical wires between the same pair of ports.
+    const duplicate = wires.find(
+      (w) =>
+        (w.fromItemId === from.itemId && w.fromTerminalId === from.terminalId && w.toItemId === to.itemId && w.toTerminalId === to.terminalId) ||
+        (w.fromItemId === to.itemId && w.fromTerminalId === to.terminalId && w.toItemId === from.itemId && w.toTerminalId === from.terminalId)
+    );
+    if (duplicate) {
+      set({ selectedWireId: duplicate.id, selectedItemId: null, connectingWireFrom: null });
+      return duplicate.id;
     }
 
-    const { wires, items, historyPast } = get();
-    const newPast = [...historyPast.slice(-15), { items: [...items], wires: [...wires] }];
+    const newPast = [...historyPast.slice(-29), { items: [...items], wires: [...wires] }];
+    const kind: CircuitWire['kind'] = isLinkPort(from.terminalId) || isLinkPort(to.terminalId) ? 'link' : 'wire';
 
-    // Auto assign wire color based on terminal if not specified
-    let wireColor = color || 'blue';
+    // Auto assign wire colour based on terminal if not specified
+    let wireColor: CircuitWire['color'] = color || 'blue';
     if (!color) {
-      if (from.terminalId === 'pos' || toTerminalId === 'pos') wireColor = 'red';
-      else if (from.terminalId === 'neg' || toTerminalId === 'neg' || from.terminalId === 'gnd' || toTerminalId === 'gnd') wireColor = 'black';
+      const ids = [from.terminalId, to.terminalId];
+      if (kind === 'link') wireColor = 'green';
+      else if (ids.some((t) => t === 'pos' || t === 'red' || t === 'anode' || t === 'live')) wireColor = 'red';
+      else if (ids.some((t) => t === 'neg' || t === 'gnd' || t === 'black' || t === 'cathode' || t === 'neutral')) wireColor = 'black';
     }
 
     const wireId = `wire-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
@@ -388,9 +475,10 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
       id: wireId,
       fromItemId: from.itemId,
       fromTerminalId: from.terminalId,
-      toItemId,
-      toTerminalId,
-      color: wireColor
+      toItemId: to.itemId,
+      toTerminalId: to.terminalId,
+      color: wireColor,
+      kind
     };
 
     set({
@@ -400,15 +488,24 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
       historyFuture: []
     });
     get().recomputeSimulation();
+    return wireId;
+  },
+
+  selectWire: (wireId) => set({ selectedWireId: wireId, selectedItemId: wireId ? null : get().selectedItemId }),
+
+  updateWire: (wireId, partial) => {
+    get().pushHistory();
+    set({ wires: get().wires.map((w) => (w.id === wireId ? { ...w, ...partial } : w)) });
   },
 
   cancelConnectingWire: () => set({ connectingWireFrom: null }),
 
   removeWire: (wireId) => {
     const { wires, items, historyPast } = get();
-    const newPast = [...historyPast.slice(-15), { items: [...items], wires: [...wires] }];
+    const newPast = [...historyPast.slice(-29), { items: [...items], wires: [...wires] }];
     set({
       wires: wires.filter((w) => w.id !== wireId),
+      selectedWireId: get().selectedWireId === wireId ? null : get().selectedWireId,
       historyPast: newPast,
       historyFuture: []
     });
@@ -458,6 +555,8 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
     else if (exp.category === 'waves') targetMode = 'waves';
     else if (exp.category === 'heat') targetMode = 'thermo';
     else if (exp.category === 'modern-physics') targetMode = 'modern';
+    const practicalModel = getPracticalModel(slug);
+    if (practicalModel) targetMode = 'practical';
 
     set({
       activeExperimentSlug: slug,
@@ -468,7 +567,12 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
       quizAnswers: {},
       quizSubmitted: false,
       dataRows: [],
-      activeTab: 'workbench'
+      practicalParams: practicalModel ? defaultParams(practicalModel) : {},
+      practicalClockStart: Date.now(),
+      activeTab: 'workbench',
+      selectedItemId: null,
+      selectedWireId: null,
+      connectingWireFrom: null
     });
 
     get().recomputeSimulation();
@@ -504,8 +608,40 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
 
     values.obsNo = dataRows.length + 1;
 
+    const practical = mode === 'practical' ? getPracticalModel(activeExperimentSlug) : null;
+
     // Grab values based on current active domain / experiment
-    if (exp?.id === 'ohms-law') {
+    if (practical) {
+      const rows = dataRows.map((r) => r.values);
+      const out = runPractical(practical, get().practicalParams, {
+        noise: makeNoise(noiseEnabled, noiseLevel),
+        elapsed: get().getPracticalElapsed(),
+        rows
+      });
+      Object.assign(values, out.row);
+      values.obsNo = dataRows.length + 1;
+      // Hidden marker (not a table column) so the simulator can tick suggested settings.
+      if (practical.sweep) values.__sweep = get().practicalParams[practical.sweep.key];
+      const summary = practical.result.absolute || practical.result.rowwise === false
+        ? null
+        : summarizeResult(practical, [values], get().practicalParams);
+      const newRow: DataRow = {
+        id: `row-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+        timestamp: Date.now(),
+        values,
+        calculatedValue: summary?.value ?? undefined,
+        theoreticalValue: summary?.expected,
+        percentageError: summary?.error ?? undefined,
+        note: note ?? (out.ready === false ? 'not at a valid setting' : undefined)
+      };
+      const nextRows = [...dataRows, newRow];
+      // Tick procedure steps as the student progresses through the readings.
+      const steps = exp?.procedureSteps ?? [];
+      const done = Math.ceil(steps.length * Math.min(1, nextRows.length / Math.max(1, practical.minReadings)));
+      const completedSteps = Array.from(new Set([...get().completedSteps, ...steps.slice(0, done).map((st) => st.stepNumber)])).sort((a, b) => a - b);
+      set({ dataRows: nextRows, completedSteps });
+      return;
+    } else if (exp?.id === 'ohms-law') {
       const vResult = Object.values(circuitResult.componentResults).find((r) => r.itemId.includes('voltmeter') || r.itemId.includes('resistor'));
       const iResult = Object.values(circuitResult.componentResults).find((r) => r.itemId.includes('ammeter') || r.itemId.includes('resistor'));
       const volt = applyMeasurementNoise(vResult?.voltageDrop || 2.0, 0.05, noiseEnabled, noiseLevel);
@@ -609,6 +745,38 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
   },
 
   clearDataRows: () => set({ dataRows: [] }),
+
+  setPracticalParam: (key, value) => {
+    const model = getPracticalModel(get().activeExperimentSlug);
+    if (!model) return;
+    const control = model.controls.find((c) => c.key === key);
+    if (!control) return;
+    const v = clampToControl(control, value);
+    const current = get().practicalParams;
+    if (current[key] === v) return;
+    set({ practicalParams: { ...defaultParams(model), ...current, [key]: v }, practicalClockStart: Date.now() });
+  },
+
+  setPracticalParams: (params) => {
+    const model = getPracticalModel(get().activeExperimentSlug);
+    if (!model) return;
+    const next: PracticalParams = { ...defaultParams(model), ...get().practicalParams };
+    for (const c of model.controls) if (params[c.key] !== undefined) next[c.key] = clampToControl(c, params[c.key]);
+    set({ practicalParams: next, practicalClockStart: Date.now() });
+  },
+
+  restartPracticalClock: () => set({ practicalClockStart: Date.now() }),
+
+  resetPracticalParams: () => {
+    const model = getPracticalModel(get().activeExperimentSlug);
+    if (!model) return;
+    set({ practicalParams: defaultParams(model), practicalClockStart: Date.now() });
+  },
+
+  getPracticalElapsed: () => {
+    const start = get().practicalClockStart;
+    return start > 0 ? Math.max(0, (Date.now() - start) / 1000) : 0;
+  },
 
   recomputeSimulation: () => {
     const { items, wires, mode, activeExperimentSlug } = get();
@@ -723,8 +891,8 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
   saveToLocalStorage: () => {
     if (typeof window === 'undefined') return false;
     try {
-      const { items, wires, mode, activeExperimentSlug, dataRows, completedSteps } = get();
-      const payload = JSON.stringify({ items, wires, mode, activeExperimentSlug, dataRows, completedSteps });
+      const { items, wires, mode, activeExperimentSlug, dataRows, completedSteps, practicalParams } = get();
+      const payload = JSON.stringify({ items, wires, mode, activeExperimentSlug, dataRows, completedSteps, practicalParams });
       window.localStorage.setItem('elementa_physics_lab_save', payload);
       return true;
     } catch {
@@ -741,10 +909,15 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
       set({
         items: data.items || [],
         wires: data.wires || [],
-        mode: data.mode || 'workbench',
+        mode: data.mode === 'practical' && !getPracticalModel(data.activeExperimentSlug) ? 'workbench' : data.mode || 'workbench',
         activeExperimentSlug: data.activeExperimentSlug || null,
+        practicalParams: data.practicalParams || (getPracticalModel(data.activeExperimentSlug) ? defaultParams(getPracticalModel(data.activeExperimentSlug)!) : {}),
+        practicalClockStart: Date.now(),
         dataRows: data.dataRows || [],
-        completedSteps: data.completedSteps || []
+        completedSteps: data.completedSteps || [],
+        selectedItemId: null,
+        selectedWireId: null,
+        connectingWireFrom: null
       });
       get().recomputeSimulation();
       return true;
@@ -759,7 +932,7 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
     const previous = historyPast[historyPast.length - 1];
     const newPast = historyPast.slice(0, -1);
     const newFuture = [{ items: [...items], wires: [...wires] }, ...historyFuture];
-    set({ items: previous.items, wires: previous.wires, historyPast: newPast, historyFuture: newFuture });
+    set({ items: previous.items, wires: previous.wires, historyPast: newPast, historyFuture: newFuture, selectedWireId: null, connectingWireFrom: null });
     get().recomputeSimulation();
   },
 
@@ -769,7 +942,7 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
     const next = historyFuture[0];
     const newFuture = historyFuture.slice(1);
     const newPast = [...historyPast, { items: [...items], wires: [...wires] }];
-    set({ items: next.items, wires: next.wires, historyPast: newPast, historyFuture: newFuture });
+    set({ items: next.items, wires: next.wires, historyPast: newPast, historyFuture: newFuture, selectedWireId: null, connectingWireFrom: null });
     get().recomputeSimulation();
   }
 }));

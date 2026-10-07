@@ -33,9 +33,9 @@ Elementa/
 │   └── experiments/physics/[slug]/page.tsx         # Redirect helper
 ├── components/physics/
 │   ├── PhysicsLab.tsx                              # Master studio container
-│   ├── Workbench.tsx                               # Multi-mode drag-drop canvas
+│   ├── Workbench.tsx                               # Free-form canvas: pointer drag (mouse/touch), zoom, wires & links
+│   ├── BenchInspector.tsx                          # Selected tool's properties, readings & connections
 │   ├── EquipmentShelf.tsx                          # Categorized searchable shelf
-│   ├── CircuitCanvas.tsx                           # SVG interactive wire routing & current flow
 │   ├── OpticsBench.tsx                             # Optical bench rail & ray tracing
 │   ├── MechanicsStage.tsx                          # 2D physics animation stage
 │   ├── GraphPanel.tsx                              # Recharts live scatter & best-fit regression
@@ -60,8 +60,45 @@ Elementa/
 │   └── physicsStore.ts                             # Reactive Zustand store with undo/redo
 └── lib/
     ├── i18n.ts                                     # Bilingual dictionary & hooks
+    ├── physicsBench.ts                             # Bench geometry: ports, snapping, wire paths, shelf→bench bridge
     └── physicsData.ts                              # Typed single entry point
 ```
+
+---
+
+## ✋ Using the Workbench
+
+- **Move any tool** by dragging it (mouse, pen or finger). Positions snap to an 8 px grid; hold <kbd>Alt</kbd> for free placement. Arrow keys nudge the selected tool (<kbd>Shift</kbd> = bigger steps).
+- **Add tools** by dragging a shelf card (or its ⋮⋮ grip on touch screens) onto the bench, or press **Add** — new tools are placed in a free spot automatically.
+- **Connect tools** by dragging from a dot on one tool and releasing on another tool's dot *or anywhere on that tool* — the nearest port is chosen. Tapping a dot and then tapping another tool also works.
+  - Coloured dots are electrical terminals (red = +, black = −, amber = other); wires join the circuit solver.
+  - Tools without terminals (lenses, pendulums, thermometers…) have hollow green *link* points on both sides; links are drawn dashed and are ignored by the circuit solver.
+- **Click a wire** to recolour or delete it. <kbd>Delete</kbd> removes the selected wire/tool, <kbd>R</kbd> rotates, <kbd>Ctrl</kbd>+<kbd>D</kbd> duplicates, <kbd>Ctrl</kbd>+<kbd>Z</kbd>/<kbd>Y</kbd> undo/redo (drags are undoable too), <kbd>Esc</kbd> cancels a connection.
+- Use **− / + / Fit** to zoom; the selected tool's values can be edited in the strip under the canvas.
+
+---
+
+## 🎛️ Interactive Practical Simulations
+
+44 of the 45 guided practicals (everything except Ohm's law, which is built on the free workbench) open in **Practical simulation** mode — a live, hand-operated version of the real apparatus.
+
+| Category | Practicals with a simulation |
+| --- | --- |
+| Electricity & magnetism | series/parallel resistors, meter bridge, potentiometer (EMF comparison & internal resistance), Kirchhoff's laws, Faraday induction, transformer, series LCR resonance |
+| Mechanics & properties of matter | simple, compound & Kater's pendulum, spring constant, inclined plane friction, projectile, Newton's 2nd law trolley, Atwood machine, flywheel, static & dynamic rigidity modulus, Searle's Young modulus, vernier caliper, screw gauge |
+| Optics | convex lens & concave mirror (optical bench), Snell's law, prism, Young's double slit, diffraction grating |
+| Heat | method of mixtures (liquid & solid), Joule's law, mechanical equivalent, latent heat of ice, cooling curve, Searle & Lee's disc conductivity, density bottle |
+| Waves & surface tension | resonance tube, sonometer, Melde's experiment, capillary rise (water) & depression (mercury) |
+| Modern physics | photoelectric effect, GM counter inverse-square law |
+
+**How it works**
+
+- `engine/practicals/*.ts` — one pure model per practical (`PracticalModel`): controls, `compute(params, noise, ctx)` → live readings + the observation-table row + scene view, `result` (final g, k, μ, λ… from the recorded rows) and an optional `solve()` used by the **Show me** hint. Unit-tested in `engine/__tests__/practicalModels.test.ts` (every model must reproduce its accepted value, and every "Show me" hint must land on a recordable setting).
+- `components/physics/practicals/scenes/*.tsx` — SVG scenes (640×360 viewBox) drawn from the model's `view`. Blue handles are draggable with mouse, pen or touch (`useSvgDrag`; touches on handles never scroll the page). `components/physics/practicals/__tests__/scenes.test.tsx` renders every scene across its full control range and fails on `NaN` or negative sizes.
+- `components/physics/practicals/PracticalSimulator.tsx` — the UI: header with how-to, live scene + status + meters, sliders/segmented controls, suggested-reading chips (ticked when recorded), **Record reading** (enabled only at a valid observation, e.g. a null point or sharp image), running result with % error, and the observation table. Recorded rows go into the normal store `dataRows`, so **Live Graph**, **Data Table** and CSV export work unchanged.
+- Time-based heat practicals use the store's practical clock (`practicalClockStart`, restarted on any control change or with **Restart process**); `timeScale` speeds up simulated time.
+
+**Adding a practical simulation:** write a model in the matching `engine/practicals/<category>.ts`, add it to that file's exported array, make its `row` keys match the experiment's `dataColumns` in `data/physicsExperiments.json`, then reuse a scene id from `PracticalSceneId` (or add a new scene and register it in `scenes/index.tsx`).
 
 ---
 

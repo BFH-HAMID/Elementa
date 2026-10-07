@@ -43,6 +43,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Bengali glyphs need more vertical room than Latin, especially in large headings. */
+html[lang='bn'] body { line-height: 1.65; }
+html[lang='bn'] .display-title { line-height: 1.28; }
+html[lang='bn'] .section-title { line-height: 1.45; }
+html[lang='bn'] .eyebrow { letter-spacing: 0.02em; }
+html[lang='bn'] .pill { line-height: 1.5; }
+
 ::selection { background: #b9dcff; color: #082e55; }
 [data-theme='dark'] ::selection { background: #245b88; color: #fff; }
 

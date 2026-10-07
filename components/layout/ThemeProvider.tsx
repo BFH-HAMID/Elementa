@@ -1,10 +1,17 @@
 'use client';
 
 import { useEffect, type ReactNode } from 'react';
+import { useLocale } from 'next-intl';
 import { useLabStore } from '@/lib/store';
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
+  const locale = useLocale();
   const theme = useLabStore((state) => state.theme);
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   useEffect(() => {
     const root = document.documentElement;
     const apply = () => {
@@ -17,5 +24,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     media.addEventListener('change', apply);
     return () => media.removeEventListener('change', apply);
   }, [theme]);
+
   return <>{children}</>;
 }

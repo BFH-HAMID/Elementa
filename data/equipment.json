@@ -1,0 +1,1619 @@
+{
+  "count": 65,
+  "equipment": [
+    {
+      "id": "battery-dc",
+      "name_en": "DC Battery / Cell",
+      "name_bn": "ডিসি ব্যাটারি / সেল",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Direct current voltage source with internal resistance.",
+      "description_bn": "অভ্যন্তরীণ রোধযুক্ত প্রত্যক্ষ বিদ্যুৎ কোষ।",
+      "icon": "battery",
+      "ratedMax": 24,
+      "ratedMaxUnit": "V",
+      "defaultProperties": { "voltage": 6, "internalResistance": 0.1 },
+      "propertySchema": [
+        { "key": "voltage", "name_en": "EMF (Voltage)", "name_bn": "তড়িৎচ্চালক বল (ভোল্টেজ)", "type": "number", "unit": "V", "default": 6, "min": 0.5, "max": 24, "step": 0.5 },
+        { "key": "internalResistance", "name_en": "Internal Resistance", "name_bn": "অভ্যন্তরীণ রোধ", "type": "number", "unit": "Ω", "default": 0.1, "min": 0, "max": 5, "step": 0.05 }
+      ],
+      "terminals": [
+        { "id": "pos", "name": "+", "polarity": "positive", "x": 15, "y": 50 },
+        { "id": "neg", "name": "-", "polarity": "negative", "x": 85, "y": 50 }
+      ],
+      "width": 120,
+      "height": 70
+    },
+    {
+      "id": "ac-source",
+      "name_en": "AC Power Source",
+      "name_bn": "এসি পাওয়ার উৎস",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Alternating current sinusoidal voltage generator.",
+      "description_bn": "পরিবর্তী প্রবাহের সাইনোসয়েডাল ভোল্টেজ উৎস।",
+      "icon": "activity",
+      "defaultProperties": { "voltageRms": 12, "frequency": 50 },
+      "propertySchema": [
+        { "key": "voltageRms", "name_en": "RMS Voltage", "name_bn": "আরএমএস ভোল্টেজ", "type": "number", "unit": "V", "default": 12, "min": 1, "max": 220, "step": 1 },
+        { "key": "frequency", "name_en": "Frequency", "name_bn": "কম্পাঙ্ক", "type": "number", "unit": "Hz", "default": 50, "min": 1, "max": 10000, "step": 5 }
+      ],
+      "terminals": [
+        { "id": "live", "name": "L", "polarity": "input", "x": 20, "y": 50 },
+        { "id": "neutral", "name": "N", "polarity": "neutral", "x": 80, "y": 50 }
+      ],
+      "width": 120,
+      "height": 80
+    },
+    {
+      "id": "power-supply-variable",
+      "name_en": "Regulated DC Power Supply",
+      "name_bn": "নিয়ন্ত্রিত ডিসি পাওয়ার সাপ্লাই",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Variable voltage and current regulated DC bench power supply.",
+      "description_bn": "পরিবর্তনশীল ভোল্টেজ ও বিদ্যুৎ সরবরাহকারী বেঞ্চ পাওয়ার সাপ্লাই।",
+      "icon": "sliders",
+      "defaultProperties": { "voltage": 5, "currentLimit": 2 },
+      "propertySchema": [
+        { "key": "voltage", "name_en": "Output Voltage", "name_bn": "আউটপুট ভোল্টেজ", "type": "number", "unit": "V", "default": 5, "min": 0, "max": 30, "step": 0.1 },
+        { "key": "currentLimit", "name_en": "Current Limit", "name_bn": "সর্বোচ্চ বিদ্যুৎ সীমা", "type": "number", "unit": "A", "default": 2, "min": 0.1, "max": 5, "step": 0.1 }
+      ],
+      "terminals": [
+        { "id": "pos", "name": "+", "polarity": "positive", "x": 25, "y": 70 },
+        { "id": "neg", "name": "-", "polarity": "negative", "x": 75, "y": 70 }
+      ],
+      "width": 130,
+      "height": 90
+    },
+    {
+      "id": "switch-spst",
+      "name_en": "SPST One-Way Key / Switch",
+      "name_bn": "একমুখী প্লাগ চাবি / সুইচ",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Single Pole Single Throw circuit closing switch.",
+      "description_bn": "বর্তনী খোলা বা বন্ধ করার একমুখী প্লাগ চাবি।",
+      "icon": "toggle-right",
+      "defaultProperties": { "closed": false },
+      "propertySchema": [
+        { "key": "closed", "name_en": "Switch State", "name_bn": "চাবির অবস্থা", "type": "boolean", "default": false }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "1", "polarity": "none", "x": 20, "y": 50 },
+        { "id": "t2", "name": "2", "polarity": "none", "x": 80, "y": 50 }
+      ],
+      "width": 100,
+      "height": 60
+    },
+    {
+      "id": "tap-key",
+      "name_en": "Tapping Key",
+      "name_bn": "ট্যাপিং চাবি",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Momentary contact tap key for ballistic and bridge experiments.",
+      "description_bn": "ক্ষণস্থায়ী সংযোগের স্প্রিং চাবি।",
+      "icon": "radio",
+      "defaultProperties": { "closed": false },
+      "propertySchema": [
+        { "key": "closed", "name_en": "Pressed", "name_bn": "চাপা আছে", "type": "boolean", "default": false }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "1", "polarity": "none", "x": 20, "y": 50 },
+        { "id": "t2", "name": "2", "polarity": "none", "x": 80, "y": 50 }
+      ],
+      "width": 90,
+      "height": 55
+    },
+    {
+      "id": "switch-spdt",
+      "name_en": "Two-Way Key (SPDT)",
+      "name_bn": "দ্বিমুখী চাবি (SPDT)",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Two-way switch for comparing two cell circuits.",
+      "description_bn": "দুটি কোষ তুলনা করার দ্বিমুখী চাবি।",
+      "icon": "git-branch",
+      "defaultProperties": { "selectedPosition": "1" },
+      "propertySchema": [
+        {
+          "key": "selectedPosition",
+          "name_en": "Position",
+          "name_bn": "অবস্থান",
+          "type": "select",
+          "default": "1",
+          "options": [
+            { "value": "1", "label_en": "Way 1", "label_bn": "পথ ১" },
+            { "value": "2", "label_en": "Way 2", "label_bn": "পথ ২" },
+            { "value": "off", "label_en": "Off / Open", "label_bn": "খোলা" }
+          ]
+        }
+      ],
+      "terminals": [
+        { "id": "common", "name": "C", "polarity": "common", "x": 15, "y": 50 },
+        { "id": "t1", "name": "1", "polarity": "none", "x": 85, "y": 25 },
+        { "id": "t2", "name": "2", "polarity": "none", "x": 85, "y": 75 }
+      ],
+      "width": 110,
+      "height": 70
+    },
+    {
+      "id": "resistor-fixed",
+      "name_en": "Fixed Resistor",
+      "name_bn": "স্থির মানের রোধক",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Standard carbon or wirewound resistor with color code bands.",
+      "description_bn": "কালার কোড বিশিষ্ট নির্দিষ্ট রোধক।",
+      "icon": "minimize-2",
+      "defaultProperties": { "resistance": 100, "powerRating": 2 },
+      "propertySchema": [
+        { "key": "resistance", "name_en": "Resistance", "name_bn": "রোধ", "type": "number", "unit": "Ω", "default": 100, "min": 0.1, "max": 1000000, "step": 1 },
+        { "key": "powerRating", "name_en": "Power Rating", "name_bn": "ক্ষমতা সীমা", "type": "number", "unit": "W", "default": 2, "min": 0.25, "max": 50, "step": 0.25 }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "1", "polarity": "none", "x": 10, "y": 50 },
+        { "id": "t2", "name": "2", "polarity": "none", "x": 90, "y": 50 }
+      ],
+      "width": 100,
+      "height": 50
+    },
+    {
+      "id": "resistance-box",
+      "name_en": "Decade Resistance Box",
+      "name_bn": "রোধ বাক্স (রেজিস্ট্যান্স বক্স)",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Precision calibrated resistance box with dial or plug settings.",
+      "description_bn": "প্লাগ বা ডায়াল ঘুরিয়ে মান পরিবর্তনের নির্ভুল রোধ বাক্স।",
+      "icon": "box",
+      "defaultProperties": { "resistance": 50 },
+      "propertySchema": [
+        { "key": "resistance", "name_en": "Selected Resistance", "name_bn": "নির্ধারিত রোধ", "type": "number", "unit": "Ω", "default": 50, "min": 1, "max": 10000, "step": 1 }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "1", "polarity": "none", "x": 15, "y": 70 },
+        { "id": "t2", "name": "2", "polarity": "none", "x": 85, "y": 70 }
+      ],
+      "width": 130,
+      "height": 75
+    },
+    {
+      "id": "rheostat",
+      "name_en": "Rheostat (Variable Resistor)",
+      "name_bn": "রিওস্ট্যাট (চলমান রোধক)",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Sliding contact wirewound variable resistor for current control.",
+      "description_bn": "কার্সার সরিয়ে রোধ পরিবর্তনকারী তারে জড়ানো রিওস্ট্যাট।",
+      "icon": "sliders",
+      "defaultProperties": { "maxResistance": 100, "sliderPosition": 50 },
+      "propertySchema": [
+        { "key": "maxResistance", "name_en": "Max Total Resistance", "name_bn": "সর্বোচ্চ রোধ", "type": "number", "unit": "Ω", "default": 100, "min": 10, "max": 1000, "step": 10 },
+        { "key": "sliderPosition", "name_en": "Slider Position", "name_bn": "স্লাইডার অবস্থান", "type": "number", "unit": "%", "default": 50, "min": 0, "max": 100, "step": 1 }
+      ],
+      "terminals": [
+        { "id": "bottom1", "name": "A (Fixed)", "polarity": "none", "x": 10, "y": 75 },
+        { "id": "bottom2", "name": "B (Fixed)", "polarity": "none", "x": 90, "y": 75 },
+        { "id": "slider", "name": "C (Slider)", "polarity": "none", "x": 50, "y": 20 }
+      ],
+      "width": 140,
+      "height": 80
+    },
+    {
+      "id": "potentiometer-wire",
+      "name_en": "Potentiometer (10-Wire Board)",
+      "name_bn": "পোটেনশিওমিটার (১০-তার বোর্ড)",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Precision uniform resistance wire board with sliding jockey for zero-deflection EMF measurements.",
+      "description_bn": "শূন্য-বিক্ষেপ পদ্ধতিতে নিখুঁত বিভব ও কোষের তড়িচ্চালক বল পরিমাপের পোটেনশিওমিটার তার।",
+      "icon": "align-justify",
+      "defaultProperties": { "totalLengthCm": 1000, "wireResistance": 50, "jockeyPositionCm": 350 },
+      "propertySchema": [
+        { "key": "jockeyPositionCm", "name_en": "Jockey Position", "name_bn": "জকি অবস্থান", "type": "number", "unit": "cm", "default": 350, "min": 0, "max": 1000, "step": 0.5 },
+        { "key": "wireResistance", "name_en": "Total Wire Resistance", "name_bn": "মোট তারের রোধ", "type": "number", "unit": "Ω", "default": 50, "min": 10, "max": 200, "step": 5 }
+      ],
+      "terminals": [
+        { "id": "termA", "name": "A (0 cm)", "polarity": "input", "x": 10, "y": 20 },
+        { "id": "termB", "name": "B (1000 cm)", "polarity": "output", "x": 90, "y": 80 },
+        { "id": "jockey", "name": "J (Jockey)", "polarity": "none", "x": 50, "y": 50 }
+      ],
+      "width": 180,
+      "height": 100
+    },
+    {
+      "id": "meter-bridge",
+      "name_en": "Meter Bridge (Wheatstone Bridge)",
+      "name_bn": "মিটার ব্রিজ (হুইটস্টোন ব্রিজ)",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "1-meter uniform slide-wire Wheatstone bridge for unknown resistance determination.",
+      "description_bn": "১ মিটার তারের হুইটস্টোন ব্রিজ যার সাহায্যে অজানা রোধ নির্ণয় করা যায়।",
+      "icon": "git-pull-request",
+      "defaultProperties": { "jockeyPositionCm": 50 },
+      "propertySchema": [
+        { "key": "jockeyPositionCm", "name_en": "Jockey Balance Point", "name_bn": "জকি অবস্থান", "type": "number", "unit": "cm", "default": 50, "min": 0, "max": 100, "step": 0.1 }
+      ],
+      "terminals": [
+        { "id": "endA", "name": "A", "polarity": "none", "x": 10, "y": 70 },
+        { "id": "gapLeft1", "name": "L1", "polarity": "none", "x": 25, "y": 25 },
+        { "id": "gapLeft2", "name": "L2", "polarity": "none", "x": 38, "y": 25 },
+        { "id": "centralD", "name": "D (Galvo)", "polarity": "none", "x": 50, "y": 25 },
+        { "id": "gapRight1", "name": "R1", "polarity": "none", "x": 62, "y": 25 },
+        { "id": "gapRight2", "name": "R2", "polarity": "none", "x": 75, "y": 25 },
+        { "id": "endB", "name": "B", "polarity": "none", "x": 90, "y": 70 },
+        { "id": "jockeyB", "name": "J (Jockey)", "polarity": "none", "x": 50, "y": 85 }
+      ],
+      "width": 200,
+      "height": 110
+    },
+    {
+      "id": "post-office-box",
+      "name_en": "Post Office Box (P.O. Box)",
+      "name_bn": "পোস্ট অফিস বক্স",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Compact Wheatstone bridge ratio arm resistance box for wire fault and resistance measurement.",
+      "description_bn": "হুইটস্টোন ব্রিজ নীতিতে তারের রোধ ও ত্রুটি নির্ণয়ের পোস্ট অফিস বক্স।",
+      "icon": "grid",
+      "defaultProperties": { "ratioArmP": 100, "ratioArmQ": 100, "resistanceR": 45 },
+      "propertySchema": [
+        { "key": "ratioArmP", "name_en": "Ratio Arm P", "name_bn": "অনুপাত বাহু P", "type": "number", "unit": "Ω", "default": 100, "min": 10, "max": 1000, "step": 10 },
+        { "key": "ratioArmQ", "name_en": "Ratio Arm Q", "name_bn": "অনুপাত বাহু Q", "type": "number", "unit": "Ω", "default": 100, "min": 10, "max": 1000, "step": 10 },
+        { "key": "resistanceR", "name_en": "Resistance Arm R", "name_bn": "রোধ বাহু R", "type": "number", "unit": "Ω", "default": 45, "min": 1, "max": 5000, "step": 1 }
+      ],
+      "terminals": [
+        { "id": "battPlus", "name": "B+", "polarity": "positive", "x": 15, "y": 20 },
+        { "id": "battMinus", "name": "B-", "polarity": "negative", "x": 85, "y": 20 },
+        { "id": "galvo1", "name": "G1", "polarity": "none", "x": 30, "y": 80 },
+        { "id": "galvo2", "name": "G2", "polarity": "none", "x": 70, "y": 80 },
+        { "id": "unknownX1", "name": "X1", "polarity": "none", "x": 15, "y": 50 },
+        { "id": "unknownX2", "name": "X2", "polarity": "none", "x": 85, "y": 50 }
+      ],
+      "width": 160,
+      "height": 100
+    },
+    {
+      "id": "incandescent-bulb",
+      "name_en": "Incandescent Bulb / Lamp",
+      "name_bn": "ফিলামেন্ট বাতি / বাল্ব",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Tungsten filament bulb that glows brighter with current and burns out if overpowered.",
+      "description_bn": "টাংস্টেন ফিলামেন্ট বাতি যা আলো ছড়ায় এবং অতিরিক্ত পাওয়ারে পুড়ে যায়।",
+      "icon": "sun",
+      "ratedMax": 10,
+      "ratedMaxUnit": "W",
+      "defaultProperties": { "ratedVoltage": 6, "ratedPower": 3, "filamentColdResistance": 4 },
+      "propertySchema": [
+        { "key": "ratedVoltage", "name_en": "Rated Voltage", "name_bn": "অনুমোদিত ভোল্টেজ", "type": "number", "unit": "V", "default": 6, "min": 1.5, "max": 24, "step": 0.5 },
+        { "key": "ratedPower", "name_en": "Rated Power", "name_bn": "অনুমোদিত ওয়াট", "type": "number", "unit": "W", "default": 3, "min": 0.5, "max": 60, "step": 0.5 }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "1", "polarity": "none", "x": 20, "y": 80 },
+        { "id": "t2", "name": "2", "polarity": "none", "x": 80, "y": 80 }
+      ],
+      "width": 90,
+      "height": 90
+    },
+    {
+      "id": "ammeter-dc",
+      "name_en": "DC Ammeter",
+      "name_bn": "ডিসি অ্যামিটার",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Analog moving-coil ammeter for measuring electric current in series.",
+      "description_bn": "বর্তনীতে শ্রেণিসংযোগে যুক্ত করে তড়িৎ প্রবাহ মাপার অ্যানালগ মিটার।",
+      "icon": "gauge",
+      "leastCount": 0.05,
+      "leastCountUnit": "A",
+      "zeroErrorRange": [-0.1, 0.1],
+      "ratedMax": 3,
+      "ratedMaxUnit": "A",
+      "defaultProperties": { "maxRange": 3, "internalResistance": 0.01, "zeroError": 0 },
+      "propertySchema": [
+        { "key": "maxRange", "name_en": "Full Scale Range", "name_bn": "স্কেল সীমা", "type": "number", "unit": "A", "default": 3, "min": 0.5, "max": 10, "step": 0.5 },
+        { "key": "zeroError", "name_en": "Zero Error", "name_bn": "শূন্য ত্রুটি", "type": "number", "unit": "A", "default": 0, "min": -0.2, "max": 0.2, "step": 0.01 }
+      ],
+      "terminals": [
+        { "id": "pos", "name": "+", "polarity": "positive", "x": 25, "y": 75 },
+        { "id": "neg", "name": "-", "polarity": "negative", "x": 75, "y": 75 }
+      ],
+      "width": 110,
+      "height": 90
+    },
+    {
+      "id": "voltmeter-dc",
+      "name_en": "DC Voltmeter",
+      "name_bn": "ডিসি ভোল্টমিটার",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Analog high-resistance meter for measuring potential difference across components in parallel.",
+      "description_bn": "সমান্তরাল সংযোগে দুই বিন্দুর বিভব পার্থক্য মাপার অ্যানালগ ভোল্টমিটার।",
+      "icon": "gauge",
+      "leastCount": 0.1,
+      "leastCountUnit": "V",
+      "zeroErrorRange": [-0.2, 0.2],
+      "ratedMax": 15,
+      "ratedMaxUnit": "V",
+      "defaultProperties": { "maxRange": 15, "internalResistance": 50000, "zeroError": 0 },
+      "propertySchema": [
+        { "key": "maxRange", "name_en": "Full Scale Range", "name_bn": "স্কেল সীমা", "type": "number", "unit": "V", "default": 15, "min": 3, "max": 300, "step": 1 },
+        { "key": "zeroError", "name_en": "Zero Error", "name_bn": "শূন্য ত্রুটি", "type": "number", "unit": "V", "default": 0, "min": -0.5, "max": 0.5, "step": 0.05 }
+      ],
+      "terminals": [
+        { "id": "pos", "name": "+", "polarity": "positive", "x": 25, "y": 75 },
+        { "id": "neg", "name": "-", "polarity": "negative", "x": 75, "y": 75 }
+      ],
+      "width": 110,
+      "height": 90
+    },
+    {
+      "id": "galvanometer",
+      "name_en": "Center-Zero Galvanometer",
+      "name_bn": "কেন্দ্র-শূন্য গ্যালভানোমিটার",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Sensitive center-zero moving coil galvanometer for null deflection and microcurrent detection.",
+      "description_bn": "সাম্যাবস্থা (শূন্য বিক্ষেপ) ও ক্ষুদ্র প্রবাহ শনাক্তকারী কেন্দ্র-শূন্য গ্যালভানোমিটার।",
+      "icon": "compass",
+      "leastCount": 1,
+      "leastCountUnit": "div (20 µA/div)",
+      "ratedMax": 30,
+      "ratedMaxUnit": "divs",
+      "defaultProperties": { "sensitivityMicroAmpPerDiv": 20, "internalResistance": 100, "scaleDivisions": 30 },
+      "propertySchema": [
+        { "key": "sensitivityMicroAmpPerDiv", "name_en": "Figure of Merit (µA/div)", "name_bn": "সংবেদনশীলতা (µA/ঘর)", "type": "number", "unit": "µA/div", "default": 20, "min": 5, "max": 100, "step": 5 }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "1", "polarity": "positive", "x": 25, "y": 75 },
+        { "id": "t2", "name": "2", "polarity": "negative", "x": 75, "y": 75 }
+      ],
+      "width": 110,
+      "height": 90
+    },
+    {
+      "id": "digital-multimeter",
+      "name_en": "Digital Multimeter (DMM)",
+      "name_bn": "ডিজিটাল মাল্টিমিটার",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Auto-ranging digital meter for Voltage (DC/AC), Current, Resistance and Continuity.",
+      "description_bn": "ভোল্টেজ, বিদ্যুৎ প্রবাহ ও রোধ মাপার বহুমুখী ডিজিটাল মিটার।",
+      "icon": "cpu",
+      "leastCount": 0.001,
+      "defaultProperties": { "mode": "V_DC" },
+      "propertySchema": [
+        {
+          "key": "mode",
+          "name_en": "Measurement Function",
+          "name_bn": "পরিমাপ মোড",
+          "type": "select",
+          "default": "V_DC",
+          "options": [
+            { "value": "V_DC", "label_en": "DC Voltage (V)", "label_bn": "ডিসি ভোল্টেজ (V)" },
+            { "value": "V_AC", "label_en": "AC Voltage (V)", "label_bn": "এসি ভোল্টেজ (V)" },
+            { "value": "I_DC", "label_en": "DC Current (A)", "label_bn": "ডিসি কারেন্ট (A)" },
+            { "value": "RESISTANCE", "label_en": "Resistance (Ω)", "label_bn": "রোধ (Ω)" },
+            { "value": "CONTINUITY", "label_en": "Continuity Beep", "label_bn": "সংযোগ পরীক্ষা" }
+          ]
+        }
+      ],
+      "terminals": [
+        { "id": "red", "name": "V/Ω/mA (+)", "polarity": "positive", "x": 30, "y": 80 },
+        { "id": "black", "name": "COM (-)", "polarity": "negative", "x": 70, "y": 80 }
+      ],
+      "width": 120,
+      "height": 100
+    },
+    {
+      "id": "capacitor",
+      "name_en": "Electrolytic / Ceramic Capacitor",
+      "name_bn": "ধারক (ক্যাপাসিটর)",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Stores electric charge and blocks steady DC while passing AC.",
+      "description_bn": "তড়িৎ আধান সঞ্চয়কারী ধারক।",
+      "icon": "pause",
+      "defaultProperties": { "capacitanceMicroFarad": 100, "voltageRating": 25 },
+      "propertySchema": [
+        { "key": "capacitanceMicroFarad", "name_en": "Capacitance", "name_bn": "ধারকত্ব", "type": "number", "unit": "µF", "default": 100, "min": 0.1, "max": 10000, "step": 10 }
+      ],
+      "terminals": [
+        { "id": "pos", "name": "+", "polarity": "positive", "x": 20, "y": 50 },
+        { "id": "neg", "name": "-", "polarity": "negative", "x": 80, "y": 50 }
+      ],
+      "width": 90,
+      "height": 60
+    },
+    {
+      "id": "inductor",
+      "name_en": "Inductor Coil / Choke",
+      "name_bn": "আবেশক কুণ্ডলী (ইনডাক্টর)",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Coil of wire storing energy in magnetic field, opposing changes in current.",
+      "description_bn": "চৌম্বক ক্ষেত্রে শক্তি সঞ্চয়কারী স্বকীয় আবেশক কুণ্ডলী।",
+      "icon": "zap",
+      "defaultProperties": { "inductanceMilliHenry": 50, "dcResistance": 1.2 },
+      "propertySchema": [
+        { "key": "inductanceMilliHenry", "name_en": "Inductance", "name_bn": "আবেশ গুণাঙ্ক", "type": "number", "unit": "mH", "default": 50, "min": 1, "max": 1000, "step": 5 }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "1", "polarity": "none", "x": 15, "y": 50 },
+        { "id": "t2", "name": "2", "polarity": "none", "x": 85, "y": 50 }
+      ],
+      "width": 100,
+      "height": 60
+    },
+    {
+      "id": "diode-pn",
+      "name_en": "Semiconductor P-N Junction Diode",
+      "name_bn": "পি-এন জাংশন ডায়োড",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Silicon diode allowing current in forward bias (rectifier).",
+      "description_bn": "একমুখী বিদ্যুৎ প্রবাহ পরিচালনাকারী সিলিকন পি-এন ডায়োড।",
+      "icon": "play",
+      "defaultProperties": { "forwardVoltageDrop": 0.7 },
+      "propertySchema": [
+        { "key": "forwardVoltageDrop", "name_en": "Forward Drop (Vf)", "name_bn": "সম্মুখী বিভব পতন", "type": "number", "unit": "V", "default": 0.7, "min": 0.2, "max": 1.2, "step": 0.05 }
+      ],
+      "terminals": [
+        { "id": "anode", "name": "A (+)", "polarity": "positive", "x": 15, "y": 50 },
+        { "id": "cathode", "name": "K (-)", "polarity": "negative", "x": 85, "y": 50 }
+      ],
+      "width": 90,
+      "height": 50
+    },
+    {
+      "id": "led",
+      "name_en": "Light Emitting Diode (LED)",
+      "name_bn": "আলোক নিঃসারক ডায়োড (এলইডি)",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Emits light when forward biased with sufficient voltage.",
+      "description_bn": "সম্মুখী বায়াসে আলো বিকিরণকারী অর্ধপরিবাহী এলইডি।",
+      "icon": "sun",
+      "defaultProperties": { "color": "red", "forwardVoltage": 2.0 },
+      "propertySchema": [
+        {
+          "key": "color",
+          "name_en": "LED Color",
+          "name_bn": "এলইডি রং",
+          "type": "select",
+          "default": "red",
+          "options": [
+            { "value": "red", "label_en": "Red (2.0V)", "label_bn": "লাল (২.০V)" },
+            { "value": "green", "label_en": "Green (2.2V)", "label_bn": "সবুজ (২.২V)" },
+            { "value": "blue", "label_en": "Blue (3.2V)", "label_bn": "নীল (৩.২V)" },
+            { "value": "yellow", "label_en": "Yellow (2.1V)", "label_bn": "হলুদ (২.১V)" }
+          ]
+        }
+      ],
+      "terminals": [
+        { "id": "anode", "name": "A (+)", "polarity": "positive", "x": 20, "y": 70 },
+        { "id": "cathode", "name": "K (-)", "polarity": "negative", "x": 80, "y": 70 }
+      ],
+      "width": 80,
+      "height": 70
+    },
+    {
+      "id": "transistor-npn",
+      "name_en": "NPN Bipolar Junction Transistor (BJT)",
+      "name_bn": "এনপিএন ট্রানজিস্টর (BJT)",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Three-terminal device for current amplification and electronic switching.",
+      "description_bn": "প্রবাহ বিবর্ধন ও সুইচের কাজে ব্যবহৃত তিন-প্রান্তবিশিষ্ট এনপিএন ট্রানজিস্টর।",
+      "icon": "share-2",
+      "defaultProperties": { "beta": 100 },
+      "propertySchema": [
+        { "key": "beta", "name_en": "Current Gain (β / hFE)", "name_bn": "প্রবাহ লাভ (β)", "type": "number", "default": 100, "min": 20, "max": 400, "step": 10 }
+      ],
+      "terminals": [
+        { "id": "base", "name": "B (Base)", "polarity": "input", "x": 20, "y": 50 },
+        { "id": "collector", "name": "C (Collector)", "polarity": "output", "x": 80, "y": 20 },
+        { "id": "emitter", "name": "E (Emitter)", "polarity": "ground", "x": 80, "y": 80 }
+      ],
+      "width": 100,
+      "height": 80
+    },
+    {
+      "id": "step-transformer",
+      "name_en": "Step-Down / Step-Up Transformer",
+      "name_bn": "ট্রান্সফরমার (স্টেপ আপ / ডাউন)",
+      "category": "electricity",
+      "domain": "electricity",
+      "description_en": "Mutual induction iron-core transformer to change AC voltage levels.",
+      "description_bn": "পারস্পরিক আবেশের মাধ্যমে এসি বিভব পরিবর্তনকারী ট্রান্সফরমার।",
+      "icon": "repeat",
+      "defaultProperties": { "primaryTurns": 500, "secondaryTurns": 100 },
+      "propertySchema": [
+        { "key": "primaryTurns", "name_en": "Primary Turns (Np)", "name_bn": "মুখ্য কুণ্ডলীর পাকসংখ্যা", "type": "number", "default": 500, "min": 50, "max": 2000, "step": 50 },
+        { "key": "secondaryTurns", "name_en": "Secondary Turns (Ns)", "name_bn": "গৌণ কুণ্ডলীর পাকসংখ্যা", "type": "number", "default": 100, "min": 10, "max": 2000, "step": 10 }
+      ],
+      "terminals": [
+        { "id": "p1", "name": "P1", "polarity": "input", "x": 15, "y": 30 },
+        { "id": "p2", "name": "P2", "polarity": "input", "x": 15, "y": 70 },
+        { "id": "s1", "name": "S1", "polarity": "output", "x": 85, "y": 30 },
+        { "id": "s2", "name": "S2", "polarity": "output", "x": 85, "y": 70 }
+      ],
+      "width": 130,
+      "height": 90
+    },
+    {
+      "id": "bar-magnet",
+      "name_en": "Alnico Bar Magnet",
+      "name_bn": "দণ্ড চুম্বক",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "description_en": "Permanent bar magnet with North and South poles generating dipole field.",
+      "description_bn": "উত্তর ও দক্ষিণ মেরুযুক্ত স্থায়ী দণ্ড চুম্বক।",
+      "icon": "magnet",
+      "defaultProperties": { "magneticMoment": 1.5, "poleStrength": 20 },
+      "propertySchema": [
+        { "key": "magneticMoment", "name_en": "Magnetic Dipole Moment (M)", "name_bn": "চৌম্বক ভ্রামক (M)", "type": "number", "unit": "A·m²", "default": 1.5, "min": 0.2, "max": 5.0, "step": 0.1 }
+      ],
+      "width": 140,
+      "height": 45
+    },
+    {
+      "id": "magnetic-compass",
+      "name_en": "Magnetic Plotting Compass",
+      "name_bn": "কম্পাস সূচ",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "description_en": "Pivoted magnetic needle aligning with local magnetic field lines.",
+      "description_bn": "চৌম্বক বলরেখা বরাবর মুখ করা সূক্ষ্ম কম্পাস সূচ।",
+      "icon": "compass",
+      "leastCount": 1,
+      "leastCountUnit": "deg",
+      "defaultProperties": { "needleAngleDeg": 0 },
+      "propertySchema": [
+        { "key": "needleAngleDeg", "name_en": "Deflection Angle", "name_bn": "বিক্ষেপ কোণ", "type": "number", "unit": "°", "default": 0, "min": -180, "max": 180, "step": 1 }
+      ],
+      "width": 80,
+      "height": 80
+    },
+    {
+      "id": "solenoid-coil",
+      "name_en": "Solenoid Coil on Core",
+      "name_bn": "সোলেনয়েড কুণ্ডলী",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "description_en": "Helical coil producing uniform axial magnetic field when energized.",
+      "description_bn": "বিদ্যুৎ প্রবাহিত হলে অভ্যন্তরে সুষম চৌম্বক ক্ষেত্র সৃষ্টিকারী সোলেনয়েড।",
+      "icon": "disc",
+      "defaultProperties": { "turns": 300, "lengthCm": 15 },
+      "propertySchema": [
+        { "key": "turns", "name_en": "Number of Turns (N)", "name_bn": "পাকসংখ্যা", "type": "number", "default": 300, "min": 50, "max": 1000, "step": 50 },
+        { "key": "lengthCm", "name_en": "Coil Length", "name_bn": "কুণ্ডলীর দৈর্ঘ্য", "type": "number", "unit": "cm", "default": 15, "min": 5, "max": 50, "step": 1 }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "1", "polarity": "none", "x": 15, "y": 80 },
+        { "id": "t2", "name": "2", "polarity": "none", "x": 85, "y": 80 }
+      ],
+      "width": 140,
+      "height": 70
+    },
+    {
+      "id": "iron-filings-board",
+      "name_en": "Magnetic Field Line Visualizer (Iron Filings)",
+      "name_bn": "চৌম্বক বলরেখা বোর্ড (লোহার গুঁড়া)",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "description_en": "Transparent acrylic plate with iron filings mapping magnetic flux paths.",
+      "description_bn": "লোহার গুঁড়া দিয়ে চৌম্বক বলরেখার নকশা প্রদর্শনকারী স্বচ্ছ বোর্ড।",
+      "icon": "grid",
+      "defaultProperties": { "active": true },
+      "propertySchema": [
+        { "key": "active", "name_en": "Tap Board", "name_bn": "বোর্ডে টোকা দিন", "type": "boolean", "default": true }
+      ],
+      "width": 150,
+      "height": 110
+    },
+    {
+      "id": "electromagnet",
+      "name_en": "U-Shaped Electromagnet with Soft Iron Core",
+      "name_bn": "ইউ-আকৃতির তড়িৎ চুম্বক",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "description_en": "Soft iron core with dual windings producing intense magnetic field.",
+      "description_bn": "নরম লোহার মজ্জা ও তামার তার জড়ানো শক্তিশালী তড়িৎ চুম্বক।",
+      "icon": "magnet",
+      "defaultProperties": { "turns": 400 },
+      "propertySchema": [
+        { "key": "turns", "name_en": "Total Turns", "name_bn": "মোট পাকসংখ্যা", "type": "number", "default": 400, "min": 100, "max": 1200, "step": 50 }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "+", "polarity": "positive", "x": 20, "y": 85 },
+        { "id": "t2", "name": "-", "polarity": "negative", "x": 80, "y": 85 }
+      ],
+      "width": 120,
+      "height": 100
+    },
+    {
+      "id": "deflection-magnetometer",
+      "name_en": "Deflection Magnetometer (Tan-A / Tan-B)",
+      "name_bn": "বিক্ষেপ ম্যাগনেটোমিটার",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "description_en": "Compass box with circular degree scale and wooden arms for verifying Tangent Law.",
+      "description_bn": "ট্যানজেন্ট সূত্রের সাহায্যে চৌম্বক ভ্রামক ও তীব্রতা নির্ণয়ের ম্যাগনেটোমিটার।",
+      "icon": "compass",
+      "leastCount": 0.5,
+      "leastCountUnit": "deg",
+      "defaultProperties": { "armDistanceCm": 20, "positionMode": "tan-A" },
+      "propertySchema": [
+        { "key": "armDistanceCm", "name_en": "Distance d", "name_bn": "দূরত্ব d", "type": "number", "unit": "cm", "default": 20, "min": 10, "max": 50, "step": 0.5 },
+        {
+          "key": "positionMode",
+          "name_en": "Arrangement",
+          "name_bn": "অবস্থান বিন্যাস",
+          "type": "select",
+          "default": "tan-A",
+          "options": [
+            { "value": "tan-A", "label_en": "Tan-A (End-on Position)", "label_bn": "ট্যান-এ (অনুদৈর্ঘ্য)" },
+            { "value": "tan-B", "label_en": "Tan-B (Broadside-on)", "label_bn": "ট্যান-বি (অনুপস্থ)" }
+          ]
+        }
+      ],
+      "width": 180,
+      "height": 80
+    },
+    {
+      "id": "faraday-induction-kit",
+      "name_en": "Faraday Electromagnetic Induction Apparatus",
+      "name_bn": "ফ্যারাডের তড়িচ্চুম্বকীয় আবেশ সেট",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "description_en": "Induction coil and moving magnet setup to demonstrate Faraday's and Lenz's laws.",
+      "description_bn": "চুম্বক ঢুকিয়ে ও বের করে আবিষ্ট তড়িচ্চালক বল প্রদর্শনের সেট।",
+      "icon": "activity",
+      "defaultProperties": { "magnetVelocity": 0, "magnetPosition": 0 },
+      "propertySchema": [
+        { "key": "magnetPosition", "name_en": "Magnet Position", "name_bn": "চুম্বকের অবস্থান", "type": "number", "unit": "cm", "default": 0, "min": -10, "max": 10, "step": 0.5 }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "1", "polarity": "output", "x": 20, "y": 80 },
+        { "id": "t2", "name": "2", "polarity": "output", "x": 80, "y": 80 }
+      ],
+      "width": 150,
+      "height": 90
+    },
+    {
+      "id": "optical-bench",
+      "name_en": "Optical Bench Rail (2 Meter)",
+      "name_bn": "অপটিক্যাল বেঞ্চ রেল",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Precision leveled metal track with millimeter graduations and upright carriers.",
+      "description_bn": "লেন্স, আয়না ও পিন বসানোর মিলিমিটার স্কেলযুক্ত সমতল রেল।",
+      "icon": "maximize-2",
+      "leastCount": 0.1,
+      "leastCountUnit": "cm",
+      "defaultProperties": { "railLengthCm": 150 },
+      "propertySchema": [
+        { "key": "railLengthCm", "name_en": "Bench Length", "name_bn": "বেঞ্চের দৈর্ঘ্য", "type": "number", "unit": "cm", "default": 150, "min": 100, "max": 200, "step": 10 }
+      ],
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "lens-convex",
+      "name_en": "Biconvex Converging Lens",
+      "name_bn": "উত্তল লেন্স",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Converges parallel incident rays to a real focal point.",
+      "description_bn": "সমান্তরাল আলোক রশ্মিকে ফোকাস বিন্দুতে কেন্দ্রীভূত করে।",
+      "icon": "circle",
+      "defaultProperties": { "focalLengthCm": 15, "diameterMm": 50, "positionCm": 50 },
+      "propertySchema": [
+        { "key": "focalLengthCm", "name_en": "Focal Length (f)", "name_bn": "ফোকাস দূরত্ব (f)", "type": "number", "unit": "cm", "default": 15, "min": 5, "max": 50, "step": 0.5 },
+        { "key": "positionCm", "name_en": "Position on Rail", "name_bn": "রেলে অবস্থান", "type": "number", "unit": "cm", "default": 50, "min": 0, "max": 150, "step": 0.5 }
+      ],
+      "width": 70,
+      "height": 110
+    },
+    {
+      "id": "lens-concave",
+      "name_en": "Biconcave Diverging Lens",
+      "name_bn": "অবতল লেন্স",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Diverges incident light rays with a virtual principal focus.",
+      "description_bn": "আপতিত আলোক রশ্মিকে অপসারী করে কাল্পনিক ফোকাস সৃষ্টি করে।",
+      "icon": "circle",
+      "defaultProperties": { "focalLengthCm": -20, "diameterMm": 50, "positionCm": 60 },
+      "propertySchema": [
+        { "key": "focalLengthCm", "name_en": "Focal Length (negative)", "name_bn": "ফোকাস দূরত্ব (ঋণাত্মক)", "type": "number", "unit": "cm", "default": -20, "min": -50, "max": -5, "step": 0.5 },
+        { "key": "positionCm", "name_en": "Position on Rail", "name_bn": "রেলে অবস্থান", "type": "number", "unit": "cm", "default": 60, "min": 0, "max": 150, "step": 0.5 }
+      ],
+      "width": 70,
+      "height": 110
+    },
+    {
+      "id": "mirror-concave",
+      "name_en": "Concave Spherical Mirror",
+      "name_bn": "অবতল দর্পণ / আয়না",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Reflecting curved surface forming real or virtual magnified images.",
+      "description_bn": "গোলীয় প্রতিফলক তল যা বাস্তব বা বিবর্ধিত অবাস্তব প্রতিবিম্ব তৈরি করে।",
+      "icon": "disc",
+      "defaultProperties": { "focalLengthCm": 20, "positionCm": 80 },
+      "propertySchema": [
+        { "key": "focalLengthCm", "name_en": "Focal Length (f)", "name_bn": "ফোকাস দূরত্ব", "type": "number", "unit": "cm", "default": 20, "min": 5, "max": 50, "step": 0.5 },
+        { "key": "positionCm", "name_en": "Position on Rail", "name_bn": "রেলে অবস্থান", "type": "number", "unit": "cm", "default": 80, "min": 0, "max": 150, "step": 0.5 }
+      ],
+      "width": 70,
+      "height": 110
+    },
+    {
+      "id": "mirror-convex",
+      "name_en": "Convex Spherical Mirror",
+      "name_bn": "উত্তল দর্পণ / আয়না",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Diverging reflective surface providing wide field of view with diminished erect virtual images.",
+      "description_bn": "অপসারী গোলীয় প্রতিফলক যা সোজা ও খর্বিত অবাস্তব প্রতিবিম্ব গঠন করে।",
+      "icon": "disc",
+      "defaultProperties": { "focalLengthCm": -25, "positionCm": 80 },
+      "propertySchema": [
+        { "key": "focalLengthCm", "name_en": "Focal Length", "name_bn": "ফোকাস দূরত্ব", "type": "number", "unit": "cm", "default": -25, "min": -50, "max": -5, "step": 0.5 }
+      ],
+      "width": 70,
+      "height": 110
+    },
+    {
+      "id": "mirror-plane",
+      "name_en": "Plane Front-Coated Mirror",
+      "name_bn": "সমতল দর্পণ",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Flat reflecting surface with lateral inversion and angle of incidence = reflection.",
+      "description_bn": "আপতন কোণ = প্রতিফলন কোণ সূত্র মেনে চলা সমতল প্রতিফলক আয়না।",
+      "icon": "square",
+      "defaultProperties": { "angleDeg": 0 },
+      "propertySchema": [
+        { "key": "angleDeg", "name_en": "Mirror Tilt Angle", "name_bn": "দর্পণের কোণ", "type": "number", "unit": "°", "default": 0, "min": -90, "max": 90, "step": 1 }
+      ],
+      "width": 50,
+      "height": 110
+    },
+    {
+      "id": "glass-slab",
+      "name_en": "Rectangular Crown Glass Slab",
+      "name_bn": "আয়তাকার কাচ ফলক",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Refractive slab for verifying Snell's Law and measuring lateral displacement.",
+      "description_bn": "স্নেলের সূত্র যাচাই ও আলোর পার্শ্ব সরণ পরিমাপের কাচ ফলক।",
+      "icon": "layers",
+      "defaultProperties": { "thicknessMm": 30, "refractiveIndex": 1.52 },
+      "propertySchema": [
+        { "key": "refractiveIndex", "name_en": "Refractive Index (µ)", "name_bn": "প্রতিসরাঙ্ক (µ)", "type": "number", "default": 1.52, "min": 1.3, "max": 1.9, "step": 0.01 },
+        { "key": "thicknessMm", "name_en": "Thickness", "name_bn": "পুরুত্ব", "type": "number", "unit": "mm", "default": 30, "min": 10, "max": 80, "step": 1 }
+      ],
+      "width": 110,
+      "height": 80
+    },
+    {
+      "id": "triangular-prism",
+      "name_en": "Equilateral Triangular Glass Prism",
+      "name_bn": "সমবাহু কাচ প্রিজম",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Disperses white light into spectrum and deviates monochromatic rays with minimum deviation.",
+      "description_bn": "আলোক বিচ্ছুরণ ঘটিয়ে বর্ণালি তৈরি ও ন্যূনতম বিচ্যুতি কোণ পরিমাপের প্রিজম।",
+      "icon": "triangle",
+      "defaultProperties": { "prismAngleDeg": 60, "refractiveIndex": 1.517 },
+      "propertySchema": [
+        { "key": "prismAngleDeg", "name_en": "Refracting Angle (A)", "name_bn": "প্রিজম কোণ (A)", "type": "number", "unit": "°", "default": 60, "min": 30, "max": 75, "step": 0.5 },
+        { "key": "refractiveIndex", "name_en": "Refractive Index (µ)", "name_bn": "প্রতিসরাঙ্ক (µ)", "type": "number", "default": 1.517, "min": 1.4, "max": 1.8, "step": 0.005 }
+      ],
+      "width": 90,
+      "height": 85
+    },
+    {
+      "id": "laser-pointer-red",
+      "name_en": "Red He-Ne / Diode Laser (632.8 nm)",
+      "name_bn": "লাল লেজার উৎস (৬৩২.৮ nm)",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Coherent monochromatic collimated light beam for diffraction and ray tracing.",
+      "description_bn": "ব্যতিচার ও অপবর্তনের জন্য একবর্ণী সুসংগত লাল লেজার রশ্মি।",
+      "icon": "zap",
+      "defaultProperties": { "wavelengthNm": 632.8, "powerMw": 5, "on": true, "beamAngleDeg": 0 },
+      "propertySchema": [
+        { "key": "on", "name_en": "Laser Beam On/Off", "name_bn": "লেজার চালু/বন্ধ", "type": "boolean", "default": true },
+        { "key": "beamAngleDeg", "name_en": "Beam Aim Angle", "name_bn": "রশ্মির কোণ", "type": "number", "unit": "°", "default": 0, "min": -45, "max": 45, "step": 0.5 }
+      ],
+      "width": 100,
+      "height": 45
+    },
+    {
+      "id": "laser-pointer-green",
+      "name_en": "Green Diode Laser (532 nm)",
+      "name_bn": "সবুজ লেজার উৎস (৫৩২ nm)",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "High visibility 532 nm green laser source.",
+      "description_bn": "উচ্চ দৃশ্যমানতার ৫৩২ ন্যানোমিটার সবুজ লেজার।",
+      "icon": "zap",
+      "defaultProperties": { "wavelengthNm": 532, "powerMw": 5, "on": true, "beamAngleDeg": 0 },
+      "propertySchema": [
+        { "key": "on", "name_en": "Laser On/Off", "name_bn": "লেজার চালু/বন্ধ", "type": "boolean", "default": true }
+      ],
+      "width": 100,
+      "height": 45
+    },
+    {
+      "id": "white-light-source",
+      "name_en": "Collimated White Light Lamp",
+      "name_bn": "সমান্তরাল শ্বেত আলোক উৎস",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Continuous spectrum incandescent illuminator with condenser lens and slit.",
+      "description_bn": "প্রিজম বর্ণালির জন্য অবিচ্ছিন্ন শ্বেত আলোক বাতি।",
+      "icon": "sun",
+      "defaultProperties": { "intensity": 80, "slitWidthMm": 1.0 },
+      "propertySchema": [
+        { "key": "intensity", "name_en": "Lamp Brightness", "name_bn": "উজ্জ্বলতা", "type": "number", "unit": "%", "default": 80, "min": 10, "max": 100, "step": 5 }
+      ],
+      "width": 90,
+      "height": 70
+    },
+    {
+      "id": "projection-screen",
+      "name_en": "Matte White Projection Screen",
+      "name_bn": "সাদা অভিক্ষেপ পর্দা",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Movable screen to capture real images and interference fringe patterns.",
+      "description_bn": "বাস্তব প্রতিবিম্ব ও ব্যতিচার পট্টি ধারণের চলমান সাদা পর্দা।",
+      "icon": "square",
+      "defaultProperties": { "positionCm": 100 },
+      "propertySchema": [
+        { "key": "positionCm", "name_en": "Screen Position", "name_bn": "পর্দার অবস্থান", "type": "number", "unit": "cm", "default": 100, "min": 0, "max": 150, "step": 0.5 }
+      ],
+      "width": 60,
+      "height": 120
+    },
+    {
+      "id": "diffraction-grating-slide",
+      "name_en": "Diffraction Grating Slide (500 lines/mm)",
+      "name_bn": "অপবর্তন গ্রেটিং স্লাইড",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Periodic ruling glass slide producing sharp diffraction maxima.",
+      "description_bn": "প্রতি মিলিমিটারে নির্দিষ্ট রেখা বিশিষ্ট অপবর্তন গ্রেটিং স্লাইড।",
+      "icon": "grid",
+      "defaultProperties": { "linesPerMm": 500 },
+      "propertySchema": [
+        { "key": "linesPerMm", "name_en": "Grating Ruling (N)", "name_bn": "রেখার ঘনত্ব (প্রতি মিমি)", "type": "number", "unit": "lines/mm", "default": 500, "min": 100, "max": 1200, "step": 100 }
+      ],
+      "width": 60,
+      "height": 80
+    },
+    {
+      "id": "double-slit-slide",
+      "name_en": "Young's Double Slit Slide",
+      "name_bn": "ইয়ং-এর দ্বি-চির স্লাইড",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Two narrow parallel slits spaced distance 'd' apart for wave interference.",
+      "description_bn": "আলোর তরঙ্গ ব্যতিচারের জন্য নির্দিষ্ট ব্যবধানের দুটি চির স্লাইড।",
+      "icon": "columns",
+      "defaultProperties": { "slitSeparationMm": 0.25, "slitWidthMm": 0.04 },
+      "propertySchema": [
+        { "key": "slitSeparationMm", "name_en": "Slit Separation (d)", "name_bn": "চির ব্যবধান (d)", "type": "number", "unit": "mm", "default": 0.25, "min": 0.05, "max": 1.0, "step": 0.01 }
+      ],
+      "width": 60,
+      "height": 80
+    },
+    {
+      "id": "polarizer-analyzer-pair",
+      "name_en": "Polarizer & Analyzer Filters",
+      "name_bn": "পোলারাইজার ও অ্যানালাইজার ফিল্টার",
+      "category": "optics",
+      "domain": "optics",
+      "description_en": "Rotatable Polaroid discs demonstrating Malus's law of polarization.",
+      "description_bn": "ম্যালাসের সূত্র প্রদর্শনের জন্য ঘূর্ণনযোগ্য পোলারয়েড ফিল্টার জোড়া।",
+      "icon": "circle",
+      "defaultProperties": { "analyzerAngleDeg": 0 },
+      "propertySchema": [
+        { "key": "analyzerAngleDeg", "name_en": "Analyzer Angle (θ)", "name_bn": "অ্যানালাইজার কোণ (θ)", "type": "number", "unit": "°", "default": 0, "min": 0, "max": 360, "step": 1 }
+      ],
+      "width": 80,
+      "height": 80
+    },
+    {
+      "id": "simple-pendulum",
+      "name_en": "Simple Pendulum on Rigid Stand",
+      "name_bn": "সরল দোলক ও স্ট্যান্ড",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Inextensible string with metallic spherical bob for finding 'g'.",
+      "description_bn": "অভিকর্ষজ ত্বরণ 'g' নির্ণয়ের জন্য তার ও ধাতব ববযুক্ত সরল দোলক।",
+      "icon": "loader",
+      "leastCount": 0.01,
+      "leastCountUnit": "s",
+      "defaultProperties": { "lengthCm": 100, "bobMassGrams": 50, "initialAngleDeg": 5 },
+      "propertySchema": [
+        { "key": "lengthCm", "name_en": "Effective Length (L)", "name_bn": "কার্যকর দৈর্ঘ্য (L)", "type": "number", "unit": "cm", "default": 100, "min": 20, "max": 200, "step": 1 },
+        { "key": "initialAngleDeg", "name_en": "Initial Amplitude Angle", "name_bn": "প্রাথমিক বিস্তার কোণ", "type": "number", "unit": "°", "default": 5, "min": 1, "max": 30, "step": 0.5 }
+      ],
+      "width": 100,
+      "height": 160
+    },
+    {
+      "id": "helical-spring",
+      "name_en": "Helical Spiral Spring with Pointer",
+      "name_bn": "স্প্রিং ও ভর ঝুলানোর সেট (হুকের সূত্র)",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Calibrated spring for Hooke's Law extension and vertical mass-spring oscillations.",
+      "description_bn": "হুকের সূত্র যাচাই ও স্প্রিং ধ্রুবক নির্ণয়ের জন্য হেলিক্যাল স্প্রিং।",
+      "icon": "activity",
+      "leastCount": 0.1,
+      "leastCountUnit": "cm",
+      "defaultProperties": { "springConstant": 25, "attachedMassGrams": 100 },
+      "propertySchema": [
+        { "key": "springConstant", "name_en": "Spring Constant (k)", "name_bn": "স্প্রিং ধ্রুবক (k)", "type": "number", "unit": "N/m", "default": 25, "min": 5, "max": 100, "step": 1 },
+        { "key": "attachedMassGrams", "name_en": "Hanging Mass (m)", "name_bn": "ঝুলন্ত ভর (m)", "type": "number", "unit": "g", "default": 100, "min": 0, "max": 1000, "step": 20 }
+      ],
+      "width": 90,
+      "height": 150
+    },
+    {
+      "id": "slotted-weights-set",
+      "name_en": "Slotted Brass Weights Set with Hanger",
+      "name_bn": "খাঁজকাটা বাটখারা সেট ও হ্যাঙ্গার",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Set of 50g / 20g / 10g precision slotted masses with 50g hanger.",
+      "description_bn": "নির্ভুল ভর প্রয়োগের পিতলের খাঁজকাটা বাটখারা ও হ্যাঙ্গার।",
+      "icon": "database",
+      "defaultProperties": { "totalMassGrams": 250 },
+      "propertySchema": [
+        { "key": "totalMassGrams", "name_en": "Total Weight Mass", "name_bn": "মোট বাটখারার ভর", "type": "number", "unit": "g", "default": 250, "min": 50, "max": 1000, "step": 50 }
+      ],
+      "width": 70,
+      "height": 80
+    },
+    {
+      "id": "inclined-plane-track",
+      "name_en": "Variable Angle Inclined Plane with Pulley",
+      "name_bn": "নততল ও কপিকল ট্র্যাক",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Hinged wooden / aluminum ramp with protractor scale for friction studies.",
+      "description_bn": "ঘর্ষণ গুণাঙ্ক ও ত্বরণ নির্ণয়ের জন্য কোণ পরিবর্তনযোগ্য নততল।",
+      "icon": "trending-up",
+      "leastCount": 0.5,
+      "leastCountUnit": "deg",
+      "defaultProperties": { "inclineAngleDeg": 30, "surfaceType": "wood-on-wood" },
+      "propertySchema": [
+        { "key": "inclineAngleDeg", "name_en": "Incline Angle (θ)", "name_bn": "নতি কোণ (θ)", "type": "number", "unit": "°", "default": 30, "min": 0, "max": 60, "step": 1 },
+        {
+          "key": "surfaceType",
+          "name_en": "Contact Surface Material",
+          "name_bn": "তলীয় উপাদান",
+          "type": "select",
+          "default": "wood-on-wood",
+          "options": [
+            { "value": "wood-on-wood", "label_en": "Wood on Wood (µ ~ 0.35)", "label_bn": "কাঠের উপর কাঠ (µ ~ ০.৩৫)" },
+            { "value": "metal-on-metal", "label_en": "Metal on Metal (µ ~ 0.20)", "label_bn": "ধাতুর উপর ধাতু (µ ~ ০.২০)" },
+            { "value": "rubber-on-wood", "label_en": "Rubber on Wood (µ ~ 0.60)", "label_bn": "রাবার ও কাঠ (µ ~ ০.৬০)" }
+          ]
+        }
+      ],
+      "width": 180,
+      "height": 110
+    },
+    {
+      "id": "dynamics-trolley",
+      "name_en": "Low-Friction Dynamics Trolley / Cart",
+      "name_bn": "ডাইনামিক্স ট্রলি / গাড়ি",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Ball-bearing wheeled cart for Newton's 2nd Law (F = ma) and collision experiments.",
+      "description_bn": "নিউটনের দ্বিতীয় সূত্র ও সংঘর্ষ পরীক্ষার জন্য চাকাযুক্ত ট্রলি।",
+      "icon": "truck",
+      "defaultProperties": { "cartMassGrams": 500, "extraMassGrams": 0 },
+      "propertySchema": [
+        { "key": "extraMassGrams", "name_en": "Added Mass to Cart", "name_bn": "যোগ করা অতিরিক্ত ভর", "type": "number", "unit": "g", "default": 0, "min": 0, "max": 1000, "step": 100 }
+      ],
+      "width": 110,
+      "height": 60
+    },
+    {
+      "id": "single-pulley",
+      "name_en": "Frictionless Single Clamp Pulley",
+      "name_bn": "কপিকল (একক পুলি)",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Lightweight grooved wheel on ball bearings for redirecting string tension.",
+      "description_bn": "দড়ির টান দিক পরিবর্তনের ঘর্ষণহীন কপিকল।",
+      "icon": "circle",
+      "defaultProperties": { "diameterCm": 5 },
+      "width": 60,
+      "height": 70
+    },
+    {
+      "id": "spring-balance",
+      "name_en": "Tubular Spring Balance (Newton Meter)",
+      "name_bn": "স্প্রিং নিক্তি (নিউটন মিটার)",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Measures gravitational weight force in Newtons and grams.",
+      "description_bn": "বল ও ওজন সরাসরি নিউটন বা গ্রামে মাপার স্প্রিং নিক্তি।",
+      "icon": "anchor",
+      "leastCount": 0.1,
+      "leastCountUnit": "N",
+      "ratedMax": 5,
+      "ratedMaxUnit": "N",
+      "defaultProperties": { "maxCapacityN": 5, "zeroError": 0 },
+      "propertySchema": [
+        { "key": "maxCapacityN", "name_en": "Full Scale (N)", "name_bn": "সর্বোচ্চ সীমা (N)", "type": "number", "unit": "N", "default": 5, "min": 1, "max": 50, "step": 1 }
+      ],
+      "width": 50,
+      "height": 130
+    },
+    {
+      "id": "physical-beam-balance",
+      "name_en": "Analytical Beam Balance",
+      "name_bn": "রাসায়নিক / পদার্থবিজ্ঞান নিক্তি (তুলাযন্ত্র)",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Equal arm lever beam balance for mass determination with milligrams sensitivity.",
+      "description_bn": "ভর নির্ণয়ের জন্য দুই পাল্লার সূক্ষ্ম তুলাযন্ত্র।",
+      "icon": "scale",
+      "leastCount": 0.001,
+      "leastCountUnit": "g",
+      "defaultProperties": { "riderPositionMg": 0 },
+      "width": 140,
+      "height": 130
+    },
+    {
+      "id": "projectile-launcher",
+      "name_en": "Ballistic Projectile Launcher Cannon",
+      "name_bn": "প্রক্ষেপক নিক্ষেপক (প্রজেক্টাইল ক্যানন)",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Spring-loaded launcher with angle dial for 2D parabolic trajectory experiments.",
+      "description_bn": "দ্বিমাত্রিক পরাবৃত্তাকার গতি ও অনুভূমিক পাল্লা মাপার স্প্রিং কামান।",
+      "icon": "crosshair",
+      "leastCount": 1,
+      "leastCountUnit": "deg",
+      "defaultProperties": { "launchAngleDeg": 45, "muzzleVelocity": 8, "launchHeightM": 0 },
+      "propertySchema": [
+        { "key": "launchAngleDeg", "name_en": "Launch Angle (θ)", "name_bn": "নিক্ষেপ কোণ (θ)", "type": "number", "unit": "°", "default": 45, "min": 0, "max": 90, "step": 1 },
+        { "key": "muzzleVelocity", "name_en": "Initial Velocity (v0)", "name_bn": "আদি বেগ (v0)", "type": "number", "unit": "m/s", "default": 8, "min": 2, "max": 25, "step": 0.5 }
+      ],
+      "width": 120,
+      "height": 90
+    },
+    {
+      "id": "atwood-machine",
+      "name_en": "Atwood's Machine System",
+      "name_bn": "অ্যাটউড মেশিন",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Two hanging unequal masses connected by a light string over a frictionless pulley to verify uniform acceleration.",
+      "description_bn": "সুষম ত্বরণ ও নিউটনের সূত্র যাচাইয়ের দুই ঝুলন্ত ভরের অ্যাটউড যন্ত্র।",
+      "icon": "git-commit",
+      "defaultProperties": { "mass1Grams": 200, "mass2Grams": 220 },
+      "propertySchema": [
+        { "key": "mass1Grams", "name_en": "Mass 1 (m1)", "name_bn": "ভর ১ (m1)", "type": "number", "unit": "g", "default": 200, "min": 50, "max": 500, "step": 10 },
+        { "key": "mass2Grams", "name_en": "Mass 2 (m2)", "name_bn": "ভর ২ (m2)", "type": "number", "unit": "g", "default": 220, "min": 50, "max": 500, "step": 10 }
+      ],
+      "width": 130,
+      "height": 160
+    },
+    {
+      "id": "flywheel-rotational",
+      "name_en": "Flywheel Moment of Inertia Apparatus",
+      "name_bn": "ফ্লাইহুইল (জড়তার ভ্রামক যন্ত্র)",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Heavy rotating disc with axle and falling mass to compute moment of inertia 'I'.",
+      "description_bn": "ঘূর্ণন জড়তার ভ্রামক 'I' নির্ণয়ের জন্য ভারী চাকার ফ্লাইহুইল সেট।",
+      "icon": "circle",
+      "defaultProperties": { "wheelRadiusCm": 10, "wheelMassKg": 4, "hangingMassGrams": 200 },
+      "propertySchema": [
+        { "key": "hangingMassGrams", "name_en": "Falling Mass (m)", "name_bn": "পতনশীল ভর (m)", "type": "number", "unit": "g", "default": 200, "min": 50, "max": 500, "step": 10 }
+      ],
+      "width": 130,
+      "height": 130
+    },
+    {
+      "id": "newtons-cradle",
+      "name_en": "Newton's Cradle (5 Steel Balls)",
+      "name_bn": "নিউটনের দোলনা (স্থিতিস্থাপক সংঘর্ষ)",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "description_en": "Series of swinging steel spheres demonstrating conservation of momentum and mechanical energy.",
+      "description_bn": "ভরবেগ ও শক্তির সংরক্ষণশীলতা প্রদর্শনের ৫টি স্টিল বলের নিউটন ক্রেডল।",
+      "icon": "git-pull-request",
+      "defaultProperties": { "displacedBalls": 1 },
+      "propertySchema": [
+        { "key": "displacedBalls", "name_en": "Balls Pulled Back", "name_bn": "টেনে তোলা বল সংখ্যা", "type": "number", "default": 1, "min": 1, "max": 4, "step": 1 }
+      ],
+      "width": 120,
+      "height": 100
+    },
+    {
+      "id": "lab-thermometer-mercury",
+      "name_en": "Standard Laboratory Thermometer (-10°C to 110°C)",
+      "name_bn": "রসায়ন ও পদার্থবিজ্ঞান থার্মোমিটার",
+      "category": "heat",
+      "domain": "heat",
+      "description_en": "Mercury/alcohol glass stem thermometer graduated in 1°C or 0.5°C intervals.",
+      "description_bn": "-১০°সে থেকে ১১০°সে পর্যন্ত দাগাঙ্কিত কাচের থার্মোমিটার।",
+      "icon": "thermometer",
+      "leastCount": 0.5,
+      "leastCountUnit": "°C",
+      "defaultProperties": { "readingCelsius": 25 },
+      "width": 40,
+      "height": 140
+    },
+    {
+      "id": "digital-thermometer",
+      "name_en": "Digital Thermocouple Temperature Probe",
+      "name_bn": "ডিজিটাল তাপমাত্রা পরিমাপক প্রোব",
+      "category": "heat",
+      "domain": "heat",
+      "description_en": "Fast response digital LCD probe with 0.1°C resolution.",
+      "description_bn": "০.১°সে নির্ভুলতার ডিজিটাল থার্মোমিটার প্রোব।",
+      "icon": "thermometer",
+      "leastCount": 0.1,
+      "leastCountUnit": "°C",
+      "defaultProperties": { "readingCelsius": 25 },
+      "width": 90,
+      "height": 80
+    },
+    {
+      "id": "copper-calorimeter",
+      "name_en": "Copper Calorimeter with Wooden Jacket & Stirrer",
+      "name_bn": "তামার ক্যালরিমিটার ও নাড়ানি",
+      "category": "heat",
+      "domain": "heat",
+      "description_en": "Thermally insulated copper vessel for method of mixtures and specific heat experiments.",
+      "description_bn": "মিশ্রণ পদ্ধতিতে আপেক্ষিক তাপ নির্ণয়ের অন্তরিত তামার পাত্র।",
+      "icon": "box",
+      "defaultProperties": { "vesselMassGrams": 85, "waterMassGrams": 150, "initialTempCelsius": 22 },
+      "propertySchema": [
+        { "key": "vesselMassGrams", "name_en": "Calorimeter Mass", "name_bn": "ক্যালরিমিটারের ভর", "type": "number", "unit": "g", "default": 85, "min": 30, "max": 200, "step": 5 },
+        { "key": "waterMassGrams", "name_en": "Water Mass in Vessel", "name_bn": "পানির ভর", "type": "number", "unit": "g", "default": 150, "min": 50, "max": 300, "step": 10 }
+      ],
+      "width": 110,
+      "height": 110
+    },
+    {
+      "id": "bunsen-burner-physics",
+      "name_en": "Laboratory Gas Bunsen Burner",
+      "name_bn": "বুনসেন বার্নার",
+      "category": "heat",
+      "domain": "heat",
+      "description_en": "Adjustable flame heating source for boiling and heat experiments.",
+      "description_bn": "তাপ প্রয়োগের জন্য নিয়ন্ত্রিত শিখাযুক্ত বুনসেন বার্নার।",
+      "icon": "flame",
+      "defaultProperties": { "lit": false, "flameIntensity": 70 },
+      "propertySchema": [
+        { "key": "lit", "name_en": "Burner Flame", "name_bn": "বার্নার শিখা", "type": "boolean", "default": false },
+        { "key": "flameIntensity", "name_en": "Flame Intensity", "name_bn": "শিখার তীব্রতা", "type": "number", "unit": "%", "default": 70, "min": 20, "max": 100, "step": 10 }
+      ],
+      "width": 80,
+      "height": 110
+    },
+    {
+      "id": "immersion-heater",
+      "name_en": "Joule's Electrical Immersion Heater",
+      "name_bn": "বৈদ্যুতিক নিমজ্জন হিটার (জুলের তাপীয় পরীক্ষা)",
+      "category": "heat",
+      "domain": "heat",
+      "description_en": "Resistance heating coil immersed in calorimeter liquid for Joule's electrical equivalent of heat.",
+      "description_bn": "জুলের তাপীয় সমতা 'J' নির্ণয়ের জন্য পানির নিচে নিমজ্জিত হিটার কুণ্ডলী।",
+      "icon": "zap",
+      "defaultProperties": { "coilResistance": 5, "heaterPower": 50 },
+      "propertySchema": [
+        { "key": "coilResistance", "name_en": "Coil Resistance", "name_bn": "কুণ্ডলীর রোধ", "type": "number", "unit": "Ω", "default": 5, "min": 1, "max": 20, "step": 0.5 }
+      ],
+      "terminals": [
+        { "id": "t1", "name": "1", "polarity": "none", "x": 30, "y": 20 },
+        { "id": "t2", "name": "2", "polarity": "none", "x": 70, "y": 20 }
+      ],
+      "width": 90,
+      "height": 120
+    },
+    {
+      "id": "metal-sample-blocks",
+      "name_en": "Specific Heat Metal Solid Cylinder Blocks (Cu, Al, Fe, Pb)",
+      "name_bn": "বিভিন্ন ধাতুর সলিড নমুনা সিলিন্ডার (Cu, Al, Fe, Pb)",
+      "category": "heat",
+      "domain": "heat",
+      "description_en": "Standard metal samples with attached thread for calorimetry immersion.",
+      "description_bn": "আপেক্ষিক তাপ মাপার বিভিন্ন ধাতব খণ্ড।",
+      "icon": "box",
+      "defaultProperties": { "material": "copper", "massGrams": 100, "temperatureCelsius": 100 },
+      "propertySchema": [
+        {
+          "key": "material",
+          "name_en": "Metal Material",
+          "name_bn": "ধাতব উপাদান",
+          "type": "select",
+          "default": "copper",
+          "options": [
+            { "value": "copper", "label_en": "Copper (Cu, c = 385 J/kg·K)", "label_bn": "তামা (Cu, c = ৩৮৫)" },
+            { "value": "aluminum", "label_en": "Aluminum (Al, c = 900 J/kg·K)", "label_bn": "অ্যালুমিনিয়াম (Al, c = ৯০০)" },
+            { "value": "iron", "label_en": "Iron (Fe, c = 450 J/kg·K)", "label_bn": "লোহা (Fe, c = ৪৫০)" },
+            { "value": "lead", "label_en": "Lead (Pb, c = 128 J/kg·K)", "label_bn": "সীসা (Pb, c = ১২৮)" },
+            { "value": "brass", "label_en": "Brass (c = 380 J/kg·K)", "label_bn": "পিতল (c = ৩৮০)" }
+          ]
+        },
+        { "key": "massGrams", "name_en": "Sample Mass", "name_bn": "নমুনার ভর", "type": "number", "unit": "g", "default": 100, "min": 20, "max": 300, "step": 10 },
+        { "key": "temperatureCelsius", "name_en": "Sample Initial Temp", "name_bn": "নমুনার আদি তাপমাত্রা", "type": "number", "unit": "°C", "default": 100, "min": 50, "max": 100, "step": 1 }
+      ],
+      "width": 70,
+      "height": 70
+    },
+    {
+      "id": "searles-conductivity-apparatus",
+      "name_en": "Searle's Thermal Conductivity Apparatus",
+      "name_bn": "সার্লের তাপ পরিবাহিতা নির্ণয় যন্ত্র",
+      "category": "heat",
+      "domain": "heat",
+      "description_en": "Copper bar with steam chamber and cooling water coil to measure thermal conductivity 'K'.",
+      "description_bn": "ধাতুর তাপ পরিবাহিতা গুণাঙ্ক 'K' নির্ণয়ের জন্য সার্লের সুনির্দিষ্ট তামার বার।",
+      "icon": "activity",
+      "defaultProperties": { "rodDiameterMm": 40, "thermometerDistCm": 10 },
+      "width": 170,
+      "height": 110
+    },
+    {
+      "id": "tuning-forks-set",
+      "name_en": "Acoustic Tuning Forks Set (256 Hz to 512 Hz)",
+      "name_bn": "সুরশলাকা সেট (২৫৬ Hz থেকে ৫১২ Hz)",
+      "category": "waves",
+      "domain": "waves",
+      "description_en": "Standard steel tuning forks of precise resonant frequencies with rubber mallet.",
+      "description_bn": "সুনির্দিষ্ট কম্পাঙ্কের সুরশলাকা ও রাবার হাতুড়ি।",
+      "icon": "music",
+      "defaultProperties": { "frequencyHz": 512, "isStriking": false },
+      "propertySchema": [
+        {
+          "key": "frequencyHz",
+          "name_en": "Selected Frequency",
+          "name_bn": "কম্পাঙ্ক",
+          "type": "select",
+          "default": "512",
+          "options": [
+            { "value": "256", "label_en": "C - 256 Hz", "label_bn": "সা - ২৫৬ Hz" },
+            { "value": "288", "label_en": "D - 288 Hz", "label_bn": "রে - ২৮৮ Hz" },
+            { "value": "320", "label_en": "E - 320 Hz", "label_bn": "গা - ৩২০ Hz" },
+            { "value": "341.3", "label_en": "F - 341.3 Hz", "label_bn": "মা - ৩৪১.৩ Hz" },
+            { "value": "384", "label_en": "G - 384 Hz", "label_bn": "পা - ৩৮৪ Hz" },
+            { "value": "426.6", "label_en": "A - 426.6 Hz", "label_bn": "ধা - ৪২৬.৬ Hz" },
+            { "value": "480", "label_en": "B - 480 Hz", "label_bn": "নি - ৪৮০ Hz" },
+            { "value": "512", "label_en": "C' - 512 Hz", "label_bn": "তার সা - ৫১২ Hz" }
+          ]
+        }
+      ],
+      "width": 80,
+      "height": 110
+    },
+    {
+      "id": "resonance-air-column-tube",
+      "name_en": "Resonance Air Column Tube with Water Reservoir",
+      "name_bn": "অনুনাত নল (বাতাসে শব্দের বেগ নির্ণয়)",
+      "category": "waves",
+      "domain": "waves",
+      "description_en": "Vertical glass tube with adjustable water level to measure speed of sound via 1st & 2nd resonance.",
+      "description_bn": "পানির উচ্চতা পরিবর্তন করে ১ম ও ২য় অনুনাদের মাধ্যমে বাতাসে শব্দের বেগ নির্ণয়ের নল।",
+      "icon": "bar-chart-2",
+      "leastCount": 0.1,
+      "leastCountUnit": "cm",
+      "defaultProperties": { "waterLevelCm": 16.5, "tubeDiameterCm": 3.0 },
+      "propertySchema": [
+        { "key": "waterLevelCm", "name_en": "Air Column Length (L)", "name_bn": "বায়ুস্তম্ভের দৈর্ঘ্য (L)", "type": "number", "unit": "cm", "default": 16.5, "min": 0, "max": 100, "step": 0.2 },
+        { "key": "tubeDiameterCm", "name_en": "Tube Internal Diameter (d)", "name_bn": "নলের ব্যাস (d)", "type": "number", "unit": "cm", "default": 3.0, "min": 1.5, "max": 6.0, "step": 0.1 }
+      ],
+      "width": 90,
+      "height": 180
+    },
+    {
+      "id": "sonometer-board",
+      "name_en": "Sonometer Sound Board with Wooden Bridges & Weights",
+      "name_bn": "সোনোমিটার (তারের তির্যক কম্পন)",
+      "category": "waves",
+      "domain": "waves",
+      "description_en": "Hollow sound box with stretched wire, movable knife-edge wedges and suspended tension pan.",
+      "description_bn": "তারের টান ও দৈর্ঘ্যের সঙ্গে কম্পাঙ্কের সম্পর্ক নির্ণয়ের সোনোমিটার।",
+      "icon": "align-justify",
+      "leastCount": 0.1,
+      "leastCountUnit": "cm",
+      "defaultProperties": { "bridgeSeparationCm": 35, "suspendedMassKg": 2.5, "wireMaterial": "steel" },
+      "propertySchema": [
+        { "key": "bridgeSeparationCm", "name_en": "Vibrating Wire Length (L)", "name_bn": "কম্পনশীল তারের দৈর্ঘ্য (L)", "type": "number", "unit": "cm", "default": 35, "min": 10, "max": 90, "step": 0.5 },
+        { "key": "suspendedMassKg", "name_en": "Tension Load (M)", "name_bn": "ঝুলন্ত টান ভর (M)", "type": "number", "unit": "kg", "default": 2.5, "min": 0.5, "max": 10, "step": 0.5 }
+      ],
+      "width": 190,
+      "height": 90
+    },
+    {
+      "id": "ripple-tank-setup",
+      "name_en": "Ripple Tank Wave Simulator",
+      "name_bn": "রিপল ট্যাঙ্ক (তরঙ্গ ট্যাংক সিমুলেটর)",
+      "category": "waves",
+      "domain": "waves",
+      "description_en": "Shallow water tray with motorized dipper and stroboscope for reflection, diffraction & 2-source interference.",
+      "description_bn": "পানিতে বৃত্তাকার ও সরল তরঙ্গের ব্যতিচার ও অপবর্তন প্রদর্শনের রিপল ট্যাঙ্ক।",
+      "icon": "radio",
+      "defaultProperties": { "motorFrequencyHz": 12, "dipperType": "two-points" },
+      "propertySchema": [
+        { "key": "motorFrequencyHz", "name_en": "Vibrator Frequency", "name_bn": "কম্পকের কম্পাঙ্ক", "type": "number", "unit": "Hz", "default": 12, "min": 2, "max": 40, "step": 1 }
+      ],
+      "width": 140,
+      "height": 120
+    },
+    {
+      "id": "audio-signal-generator",
+      "name_en": "Audio Function / Signal Generator",
+      "name_bn": "ফাংশন / সংকেত উৎপাদক (সিগন্যাল জেনারেটর)",
+      "category": "waves",
+      "domain": "waves",
+      "description_en": "Synthesizes sine, square and triangular electronic waveforms with variable frequency.",
+      "description_bn": "সাইনোসয়েডাল ও বর্গাকার বৈদ্যুতিক সংকেত সৃষ্টিকারী সিগন্যাল জেনারেটর।",
+      "icon": "activity",
+      "defaultProperties": { "waveform": "sine", "frequencyHz": 1000, "amplitudeVolts": 5 },
+      "propertySchema": [
+        {
+          "key": "waveform",
+          "name_en": "Wave Shape",
+          "name_bn": "তরঙ্গের ধরন",
+          "type": "select",
+          "default": "sine",
+          "options": [
+            { "value": "sine", "label_en": "Sine Wave", "label_bn": "সাইন তরঙ্গ" },
+            { "value": "square", "label_en": "Square Wave", "label_bn": "বর্গ তরঙ্গ" },
+            { "value": "triangle", "label_en": "Triangle Wave", "label_bn": "ত্রিভুজ তরঙ্গ" }
+          ]
+        },
+        { "key": "frequencyHz", "name_en": "Frequency (f)", "name_bn": "কম্পাঙ্ক (f)", "type": "number", "unit": "Hz", "default": 1000, "min": 10, "max": 20000, "step": 10 }
+      ],
+      "terminals": [
+        { "id": "out", "name": "OUT (+)", "polarity": "output", "x": 25, "y": 75 },
+        { "id": "gnd", "name": "GND (-)", "polarity": "ground", "x": 75, "y": 75 }
+      ],
+      "width": 130,
+      "height": 85
+    },
+    {
+      "id": "digital-oscilloscope",
+      "name_en": "Dual-Channel Digital Oscilloscope (CRO)",
+      "name_bn": "ডিজিটাল অসিলোস্কোপ (সিআরও)",
+      "category": "waves",
+      "domain": "waves",
+      "description_en": "Plots voltage waveforms against time or X-Y Lissajous phase figures.",
+      "description_bn": "তরঙ্গরূপ প্রদর্শন ও লিসাজু ফিগারের জন্য ডুয়াল চ্যানেল অসিলোস্কোপ।",
+      "icon": "tv",
+      "defaultProperties": { "timeBaseMs": 1.0, "voltsPerDiv": 1.0, "xyMode": false },
+      "propertySchema": [
+        { "key": "timeBaseMs", "name_en": "Time Base", "name_bn": "টাইম বেস", "type": "number", "unit": "ms/div", "default": 1.0, "min": 0.1, "max": 10, "step": 0.1 },
+        { "key": "voltsPerDiv", "name_en": "Volts / Div", "name_bn": "ভোল্ট / ঘর", "type": "number", "unit": "V/div", "default": 1.0, "min": 0.1, "max": 10, "step": 0.5 },
+        { "key": "xyMode", "name_en": "X-Y Lissajous Mode", "name_bn": "লিসাজু মোড", "type": "boolean", "default": false }
+      ],
+      "terminals": [
+        { "id": "ch1", "name": "CH1 (Y)", "polarity": "input", "x": 20, "y": 80 },
+        { "id": "ch2", "name": "CH2 (X)", "polarity": "input", "x": 50, "y": 80 },
+        { "id": "gnd", "name": "GND", "polarity": "ground", "x": 80, "y": 80 }
+      ],
+      "width": 160,
+      "height": 110
+    },
+    {
+      "id": "vernier-caliper",
+      "name_en": "Standard Vernier Caliper (0.1 mm / 0.02 mm)",
+      "name_bn": "ভার্নিয়ার ক্যালিপার্স",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "description_en": "Internal, external jaws and depth rod for small cylinder and sphere dimensions.",
+      "description_bn": "বস্তুর দৈর্ঘ্য, ব্যাস ও গভীরতা নিখুঁতভাবে মাপার ভার্নিয়ার স্কেল।",
+      "icon": "minimize-2",
+      "leastCount": 0.1,
+      "leastCountUnit": "mm",
+      "zeroErrorRange": [-0.5, 0.5],
+      "defaultProperties": { "measuredObjectWidthMm": 24.6, "zeroErrorMm": 0, "leastCount": 0.1 },
+      "propertySchema": [
+        { "key": "measuredObjectWidthMm", "name_en": "Jaw Opening", "name_bn": "চোয়ালের ফাঁক", "type": "number", "unit": "mm", "default": 24.6, "min": 0, "max": 120, "step": 0.1 },
+        { "key": "zeroErrorMm", "name_en": "Zero Error", "name_bn": "শূন্য ত্রুটি", "type": "number", "unit": "mm", "default": 0, "min": -0.5, "max": 0.5, "step": 0.1 }
+      ],
+      "width": 160,
+      "height": 70
+    },
+    {
+      "id": "screw-gauge-micrometer",
+      "name_en": "Micrometer Screw Gauge (0.01 mm / 0.005 mm)",
+      "name_bn": "স্ক্রু গজ (মাইক্রোমিটার)",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "description_en": "Spindle and thimble with circular scale to measure wire thickness and sheet gauge.",
+      "description_bn": "চিকন তারের ব্যাস ও পাতলা কাচের পুরুত্ব মাপার স্ক্রু গজ।",
+      "icon": "disc",
+      "leastCount": 0.01,
+      "leastCountUnit": "mm",
+      "zeroErrorRange": [-0.08, 0.08],
+      "defaultProperties": { "gapMm": 3.74, "pitchMm": 1.0, "circularDivisions": 100, "zeroErrorMm": 0 },
+      "propertySchema": [
+        { "key": "gapMm", "name_en": "Spindle Gap", "name_bn": "স্পিন্ডল ফাঁক", "type": "number", "unit": "mm", "default": 3.74, "min": 0, "max": 25, "step": 0.01 },
+        { "key": "zeroErrorMm", "name_en": "Zero Error", "name_bn": "শূন্য ত্রুটি", "type": "number", "unit": "mm", "default": 0, "min": -0.1, "max": 0.1, "step": 0.01 }
+      ],
+      "width": 150,
+      "height": 80
+    },
+    {
+      "id": "meter-scale-wooden",
+      "name_en": "1-Meter Wooden Scale / Rule",
+      "name_bn": "মিটার স্কেল (১০০ সেমি)",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "description_en": "Straight millimeter graduated wooden rule.",
+      "description_bn": "মিলিমিটার দাগাঙ্কিত কাঠের মিটার স্কেল।",
+      "icon": "align-justify",
+      "leastCount": 1,
+      "leastCountUnit": "mm",
+      "defaultProperties": { "lengthCm": 100 },
+      "width": 180,
+      "height": 40
+    },
+    {
+      "id": "digital-stopwatch",
+      "name_en": "Precision Digital Lab Stopwatch",
+      "name_bn": "ডিজিটাল স্টপওয়াচ",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "description_en": "0.01s stopwatch with start, stop, lap and split timing.",
+      "description_bn": "০.০১ সেকেন্ড নির্ভুলতার ল্যাবরেটরি ডিজিটাল স্টপওয়াচ।",
+      "icon": "clock",
+      "leastCount": 0.01,
+      "leastCountUnit": "s",
+      "defaultProperties": { "elapsedSeconds": 0, "running": false },
+      "width": 90,
+      "height": 90
+    },
+    {
+      "id": "circular-protractor",
+      "name_en": "360° Circular Degree Protractor",
+      "name_bn": "৩৬০° বৃত্তাকার চাঁদা",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "description_en": "Transparent circular protractor for angle of incidence and deviation measurement.",
+      "description_bn": "আলোর আপতন কোণ ও বিচ্যুতি মাপার বৃত্তাকার চাঁদা।",
+      "icon": "circle",
+      "leastCount": 0.5,
+      "leastCountUnit": "deg",
+      "defaultProperties": { "angleDeg": 45 },
+      "width": 100,
+      "height": 100
+    },
+    {
+      "id": "travelling-microscope",
+      "name_en": "Travelling Microscope with Vernier",
+      "name_bn": "ট্রাভেলিং মাইক্রোস্কোপ",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "description_en": "Horizontal & vertical precision vernier microscope for glass slab apparent depth and Newton rings.",
+      "description_bn": "কাচের আপাত গভীরতা ও কৈশিক নলের ব্যাসার্ধ মাপার ট্রাভেলিং মাইক্রোস্কোপ।",
+      "icon": "zoom-in",
+      "leastCount": 0.001,
+      "leastCountUnit": "cm",
+      "defaultProperties": { "verticalScaleCm": 4.523, "horizontalScaleCm": 2.145 },
+      "propertySchema": [
+        { "key": "verticalScaleCm", "name_en": "Vertical Position", "name_bn": "উল্লম্ব অবস্থান", "type": "number", "unit": "cm", "default": 4.523, "min": 0, "max": 15, "step": 0.001 }
+      ],
+      "width": 130,
+      "height": 140
+    },
+    {
+      "id": "photoelectric-effect-apparatus",
+      "name_en": "Photoelectric Effect Setup (Einstein / Hertz)",
+      "name_bn": "আলোক-তড়িৎ ক্রিয়া সেটআপ",
+      "category": "modern-physics",
+      "domain": "modern",
+      "description_en": "Vacuum phototube with color filters and retarding voltage circuit to find Planck's constant 'h' and work function.",
+      "description_bn": "প্লাঙ্কের ধ্রুবক 'h' ও কার্য-অপেক্ষক নির্ণয়ের আলোক-তড়িৎ কোষ সেটআপ।",
+      "icon": "sun",
+      "defaultProperties": { "filterWavelengthNm": 450, "retardingVoltage": 0, "cathodeMaterial": "potassium" },
+      "propertySchema": [
+        {
+          "key": "filterWavelengthNm",
+          "name_en": "Monochromatic Filter Wavelength",
+          "name_bn": "আলোর তরঙ্গদৈর্ঘ্য",
+          "type": "select",
+          "default": "450",
+          "options": [
+            { "value": "365", "label_en": "UV (365 nm, 3.40 eV)", "label_bn": "অতিবেগুনী (৩৬৫ nm)" },
+            { "value": "405", "label_en": "Violet (405 nm, 3.06 eV)", "label_bn": "বেগুনী (৪০৫ nm)" },
+            { "value": "450", "label_en": "Blue (450 nm, 2.76 eV)", "label_bn": "নীল (৪৫০ nm)" },
+            { "value": "546", "label_en": "Green (546 nm, 2.27 eV)", "label_bn": "সবুজ (৫৪৬ nm)" },
+            { "value": "589", "label_en": "Yellow (589 nm, 2.10 eV)", "label_bn": "হলুদ (৫৮৯ nm)" }
+          ]
+        },
+        { "key": "retardingVoltage", "name_en": "Retarding Potential (V)", "name_bn": "নিবারক বিভব (V)", "type": "number", "unit": "V", "default": 0, "min": -3.0, "max": 2.0, "step": 0.05 }
+      ],
+      "terminals": [
+        { "id": "anode", "name": "A", "polarity": "positive", "x": 20, "y": 70 },
+        { "id": "cathode", "name": "K", "polarity": "negative", "x": 80, "y": 70 }
+      ],
+      "width": 150,
+      "height": 100
+    },
+    {
+      "id": "geiger-muller-counter",
+      "name_en": "Geiger-Müller (GM) Radiation Counter",
+      "name_bn": "গাইগার-মুলার (GM) কাউন্টার",
+      "category": "modern-physics",
+      "domain": "modern",
+      "description_en": "Gas-filled tube and digital pulse scalar for alpha, beta, gamma decay counts and inverse square law.",
+      "description_bn": "তেজস্ক্রিয় বিকিরণ ও অর্ধায়ু পরিমাপের গাইগার-মুলার কাউন্টার।",
+      "icon": "shield",
+      "leastCount": 1,
+      "leastCountUnit": "CPM",
+      "defaultProperties": { "sourceDistanceCm": 10, "highVoltage": 450, "countingTimeSec": 10 },
+      "propertySchema": [
+        { "key": "sourceDistanceCm", "name_en": "Source Distance (r)", "name_bn": "উৎস দূরত্ব (r)", "type": "number", "unit": "cm", "default": 10, "min": 2, "max": 50, "step": 1 }
+      ],
+      "width": 140,
+      "height": 110
+    },
+    {
+      "id": "franck-hertz-tube",
+      "name_en": "Franck-Hertz Argon / Mercury Tube",
+      "name_bn": "ফ্রাঙ্ক-হার্টজ পরীক্ষা টিউব",
+      "category": "modern-physics",
+      "domain": "modern",
+      "description_en": "Demonstrates quantized energy levels in atoms via inelastic electron collision current dips.",
+      "description_bn": "পরমাণুর কোয়ান্টাম শক্তিস্তর প্রমাণের ফ্রাঙ্ক-হার্টজ টিউব।",
+      "icon": "cpu",
+      "defaultProperties": { "acceleratingVoltage": 0 },
+      "propertySchema": [
+        { "key": "acceleratingVoltage", "name_en": "Accelerating Potential (V1)", "name_bn": "ত্বরণ বিভব (V1)", "type": "number", "unit": "V", "default": 0, "min": 0, "max": 30, "step": 0.5 }
+      ],
+      "width": 130,
+      "height": 90
+    },
+    {
+      "id": "radioactive-source-sample",
+      "name_en": "Sealed Low-Activity Radiation Source Sample",
+      "name_bn": "তেজস্ক্রিয় নমুনা উৎস (নিয়ন্ত্রিত)",
+      "category": "modern-physics",
+      "domain": "modern",
+      "description_en": "Enclosed isotope disc with known half-life for counting experiments.",
+      "description_bn": "পরীক্ষাগারের নিরাপদ তেজস্ক্রিয় নমুনা ডিস্ক।",
+      "icon": "alert-triangle",
+      "defaultProperties": { "isotope": "cobalt-60" },
+      "propertySchema": [
+        {
+          "key": "isotope",
+          "name_en": "Isotope Sample",
+          "name_bn": "আইসোটোপ নমুনা",
+          "type": "select",
+          "default": "cobalt-60",
+          "options": [
+            { "value": "cobalt-60", "label_en": "Cobalt-60 (γ emitter, t1/2 = 5.27 yr)", "label_bn": "কোবাল্ট-৬০ (গামা)" },
+            { "value": "cesium-137", "label_en": "Cesium-137 (β/γ, t1/2 = 30.1 yr)", "label_bn": "সিজিয়াম-১৩৭ (বিটা/গামা)" },
+            { "value": "strontium-90", "label_en": "Strontium-90 (pure β-, t1/2 = 28.8 yr)", "label_bn": "স্ট্রনশিয়াম-৯০ (বিটা)" }
+          ]
+        }
+      ],
+      "width": 70,
+      "height": 70
+    }
+  ]
+}

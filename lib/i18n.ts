@@ -2,12 +2,10 @@ import { useLocale } from 'next-intl';
 import type { Locale } from '@/engine/types';
 
 /**
- * Bilingual copy for the Elementa Chemistry Lab.
+ * Bilingual copy for the Elementa Chemistry Lab & Physics Lab.
  *
- * Every string the lab renders lives here (or in the JSON under `/data`), so the whole
- * experience can be read in Bangla or English without touching a component. The pure
- * `labT()` helper is used by server components and unit tests; `useLabI18n()` wires the
- * same dictionary to next-intl's locale for client components.
+ * Every string the labs render lives here (or in the JSON under `/data`), so the whole
+ * experience can be read in Bangla or English without touching a component.
  */
 
 const en = {
@@ -137,7 +135,7 @@ const en = {
   'effects.flash': 'Flash',
 
   'experiment.title': 'Guided experiments',
-  'experiment.subtitle': 'Ten walkthroughs that set the bench up for you and tick each step off.',
+  'experiment.subtitle': 'Walkthroughs that set the bench up for you and tick each step off.',
   'experiment.steps': 'Steps',
   'experiment.step': 'Step {index}',
   'experiment.progress': '{done} of {total} steps done',
@@ -312,7 +310,7 @@ const bn: Record<keyof typeof en, string> = {
   'effects.flash': 'ঝলক',
 
   'experiment.title': 'গাইডেড পরীক্ষা',
-  'experiment.subtitle': 'দশটি ধাপে-ধাপে পরীক্ষা, যা বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ টিক দেয়।',
+  'experiment.subtitle': 'ধাপে-ধাপে পরীক্ষা, যা বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ টিক দেয়।',
   'experiment.steps': 'ধাপসমূহ',
   'experiment.step': 'ধাপ {index}',
   'experiment.progress': '{total}টির মধ্যে {done}টি ধাপ শেষ',
@@ -360,15 +358,283 @@ const bn: Record<keyof typeof en, string> = {
   'misc.offline': 'সবকিছু লোকালি চলে — কোনো সার্ভার বা ডেটাবেস নেই।'
 };
 
+/**
+ * Physics Lab Bilingual Dictionary
+ */
+const physicsEn = {
+  'brand.title': 'Elementa Physics Lab',
+  'brand.tagline': 'Interactive virtual physics laboratory with circuits, ray optics, mechanics, sound & thermodynamics.',
+  'brand.badge': 'Free · Bilingual · No install',
+
+  'action.reset': 'Reset bench',
+  'action.undo': 'Undo',
+  'action.redo': 'Redo',
+  'action.save': 'Save lab',
+  'action.load': 'Load lab',
+  'action.saved': 'Lab state saved',
+  'action.loaded': 'Saved lab restored',
+  'action.clear': 'Clear workbench',
+  'action.delete': 'Delete item',
+  'action.rotate': 'Rotate 90°',
+  'action.duplicate': 'Duplicate',
+  'action.openGuide': 'Guided experiments',
+  'action.openSandbox': 'Free-play sandbox',
+  'action.measureTool': 'Inspect Scale / Reading',
+  'action.noiseToggle': 'Measurement noise (real lab behavior)',
+  'action.noiseOn': 'Measurement Noise: ON',
+  'action.noiseOff': 'Ideal Precision: OFF',
+  'action.recordData': 'Record observation',
+  'action.exportCsv': 'Download CSV table',
+  'action.clearTable': 'Clear data table',
+  'action.calculate': 'Calculate result & % error',
+  'action.start': 'Start simulation',
+  'action.pause': 'Pause simulation',
+  'action.step': 'Step forward',
+  'action.wire': 'Connect wire',
+  'action.wireCancel': 'Cancel wire',
+
+  'shelf.title': 'Equipment Shelf',
+  'shelf.subtitle': '70+ modular physics instruments',
+  'shelf.search': 'Search equipment',
+  'shelf.searchPlaceholder': 'Search by name, symbol, or category...',
+  'shelf.all': 'All categories',
+  'shelf.add': 'Add to bench',
+  'shelf.dragHint': 'Drag equipment onto the workbench or tap "Add" button.',
+  'shelf.leastCount': 'Least count: {value}',
+
+  'bench.title': 'Workbench',
+  'bench.dropHere': 'Drop physics equipment here',
+  'bench.empty': 'Workbench is empty. Drag instruments from the shelf or load a guided experiment.',
+  'bench.wireHelp': 'Click on a red/black terminal, then click another terminal to draw a connecting wire.',
+  'bench.wireHoverDelete': 'Click on a wire to remove it.',
+  'bench.shortCircuit': 'Short Circuit! Current exceeds safe limits.',
+  'bench.openCircuit': 'Open Circuit (Incomplete loop)',
+  'bench.circuitLive': 'Circuit is active and conducting',
+
+  'modes.workbench': 'Circuit & Freeform Bench',
+  'modes.optics': 'Optics Rail Bench',
+  'modes.mechanics': 'Mechanics Stage',
+  'modes.waves': 'Acoustics & Waves',
+  'modes.thermo': 'Calorimetry & Heat',
+  'modes.modern': 'Modern Physics & GM Counter',
+
+  'tabs.workbench': 'Workbench',
+  'tabs.graph': 'Live Graph',
+  'tabs.table': 'Data Table',
+  'tabs.theory': 'Theory & Guide',
+  'tabs.quiz': 'Quiz',
+
+  'graph.title': 'Live Graph & Regression',
+  'graph.xAxis': 'X-Axis Variable',
+  'graph.yAxis': 'Y-Axis Variable',
+  'graph.slope': 'Slope (m)',
+  'graph.intercept': 'Intercept (c)',
+  'graph.r2': 'Correlation (R²)',
+  'graph.noData': 'Record at least 2 data rows to plot a live best-fit line.',
+  'graph.equation': 'Best-fit line: y = {m}x + {c}',
+
+  'table.title': 'Observation Notebook & Table',
+  'table.empty': 'No observations recorded yet. Click "Record observation" to log live instrument readings.',
+  'table.mean': 'Average Mean',
+  'table.stdErr': 'Standard Error',
+  'table.theoryVal': 'Theoretical value: {value}',
+  'table.errorPercent': 'Percentage Error: {value}%',
+
+  'guide.title': 'Guided Physics Experiments',
+  'guide.subtitle': '30 syllabus-aligned laboratory walkthroughs with step validation.',
+  'guide.selectPrompt': 'Choose an experiment to load apparatus and follow step-by-step.',
+  'guide.aim': 'Aim',
+  'guide.theory': 'Theory & Formula',
+  'guide.steps': 'Procedure Steps',
+  'guide.step': 'Step {index}',
+  'guide.precautions': 'Precautions & Practical Tips',
+  'guide.stepDone': 'Step completed',
+  'guide.allDone': 'All steps complete! Test your knowledge in the Quiz tab.',
+  'guide.level.class-9-10': 'Class 9–10 (SSC)',
+  'guide.level.class-11-12': 'Class 11–12 (HSC)',
+  'guide.level.honours': 'B.Sc. Honours',
+
+  'quiz.title': 'Self-Assessment Quiz',
+  'quiz.submit': 'Submit Answers',
+  'quiz.retry': 'Try Again',
+  'quiz.score': 'You scored {score} out of {total} ({percent}%)',
+  'quiz.correct': 'Correct!',
+  'quiz.incorrect': 'Incorrect.',
+  'quiz.explanation': 'Explanation: {text}',
+
+  'measure.title': 'Instrument Scale Zoom & Vernier Reading',
+  'measure.mainScale': 'Main Scale Reading (MSR): {value}',
+  'measure.vernierScale': 'Vernier / Circular Reading: {value}',
+  'measure.leastCount': 'Least Count (LC): {value}',
+  'measure.zeroError': 'Zero Error (ZE): {value}',
+  'measure.total': 'Total Corrected Reading: {value}',
+  'measure.dragPrompt': 'Drag the slider or knob to move the measuring jaws / spindle.',
+
+  'unit.v': 'V',
+  'unit.a': 'A',
+  'unit.ma': 'mA',
+  'unit.ohm': 'Ω',
+  'unit.w': 'W',
+  'unit.hz': 'Hz',
+  'unit.cm': 'cm',
+  'unit.mm': 'mm',
+  'unit.m': 'm',
+  'unit.s': 's',
+  'unit.celsius': '°C',
+  'unit.j': 'J',
+  'unit.kg': 'kg',
+  'unit.g': 'g',
+  'unit.n': 'N'
+} as const;
+
+const physicsBn: Record<keyof typeof physicsEn, string> = {
+  'brand.title': 'এলিমেন্টা ফিজিক্স ল্যাব',
+  'brand.tagline': 'তড়িৎ বর্তনী, আলোকরশ্মি, বলবিদ্যা, শব্দ ও তাপগতিবিদ্যার ইন্টারেক্টিভ ভার্চুয়াল ফিজিক্স ল্যাব।',
+  'brand.badge': 'ফ্রি · দ্বিভাষিক · ইনস্টল ছাড়াই',
+
+  'action.reset': 'বেঞ্চ রিসেট',
+  'action.undo': 'পূর্বাবস্থা',
+  'action.redo': 'পুনরায়',
+  'action.save': 'ল্যাব সংরক্ষণ',
+  'action.load': 'ল্যাব খুলুন',
+  'action.saved': 'ল্যাব সংরক্ষণ হয়েছে',
+  'action.loaded': 'সংরক্ষিত ল্যাব পুনরুদ্ধার হয়েছে',
+  'action.clear': 'বেঞ্চ পরিষ্কার করুন',
+  'action.delete': 'মুছুন',
+  'action.rotate': '৯০° ঘোরান',
+  'action.duplicate': 'অনুলিপি',
+  'action.openGuide': 'গাইডেড পরীক্ষা',
+  'action.openSandbox': 'মুক্ত স্যান্ডবক্স',
+  'action.measureTool': 'স্কেল ও পাঠ পরীক্ষা',
+  'action.noiseToggle': 'বাস্তবসম্মত পরিমাপ ত্রুটি (Noise)',
+  'action.noiseOn': 'বাস্তবসম্মত ত্রুটি: চালু',
+  'action.noiseOff': 'আদর্শ নির্ভুলতা: বন্ধ',
+  'action.recordData': 'পাঠ রেকর্ড করুন',
+  'action.exportCsv': 'CSV ডাউনলোড',
+  'action.clearTable': 'সারণি মুছুন',
+  'action.calculate': 'ফলাফল ও শতকরা ত্রুটি বের করুন',
+  'action.start': 'সিমুলেশন চালু',
+  'action.pause': 'সিমুলেশন থামান',
+  'action.step': 'এক ধাপ সামনে',
+  'action.wire': 'তার সংযোগ দিন',
+  'action.wireCancel': 'তার বাতিল',
+
+  'shelf.title': 'যন্ত্রপাতির তাক',
+  'shelf.subtitle': '৭০+ পদার্থবিজ্ঞান যন্ত্রপাতি',
+  'shelf.search': 'যন্ত্র খুঁজুন',
+  'shelf.searchPlaceholder': 'নাম, সংকেত বা বিভাগ দিয়ে খুঁজুন...',
+  'shelf.all': 'সকল বিভাগ',
+  'shelf.add': 'বেঞ্চে যোগ করুন',
+  'shelf.dragHint': 'যন্ত্রটি টেনে বেঞ্চে আনুন বা "যোগ করুন" চাপুন।',
+  'shelf.leastCount': 'লঘিষ্ঠ গণন: {value}',
+
+  'bench.title': 'ওয়ার্কবেঞ্চ',
+  'bench.dropHere': 'এখানে পদার্থবিজ্ঞান যন্ত্রপাতি রাখুন',
+  'bench.empty': 'বেঞ্চটি খালি। শেলফ থেকে যন্ত্র টেনে আনুন অথবা গাইডেড পরীক্ষা লোড করুন।',
+  'bench.wireHelp': 'একটি লাল/কালো টার্মিনালে ক্লিক করে অন্য টার্মিনালে যুক্ত করে তার টানুন।',
+  'bench.wireHoverDelete': 'তারের উপর ক্লিক করে তারটি মুছুন।',
+  'bench.shortCircuit': 'শর্ট সার্কিট! বিপজ্জনক অতিরিক্ত বিদ্যুৎ প্রবাহিত হচ্ছে।',
+  'bench.openCircuit': 'খোলা বর্তনী (অসম্পূর্ণ লুপ)',
+  'bench.circuitLive': 'বর্তনী সক্রিয় ও বিদ্যুৎ প্রবাহিত হচ্ছে',
+
+  'modes.workbench': 'সার্কিট ও সাধারণ বেঞ্চ',
+  'modes.optics': 'অপটিক্যাল বেঞ্চ ও রশ্মি চিত্র',
+  'modes.mechanics': 'বলবিদ্যা স্টেজ',
+  'modes.waves': 'শব্দ ও তরঙ্গ স্টেশন',
+  'modes.thermo': 'ক্যালরিমিটার ও তাপ',
+  'modes.modern': 'আধুনিক পদার্থবিজ্ঞান ও জিএম কাউন্টার',
+
+  'tabs.workbench': 'ওয়ার্কবেঞ্চ',
+  'tabs.graph': 'লাইভ লেখচিত্র',
+  'tabs.table': 'ডেটা টেবিল',
+  'tabs.theory': 'তত্ত্ব ও নির্দেশিকা',
+  'tabs.quiz': 'কুইজ',
+
+  'graph.title': 'লাইভ লেখচিত্র ও রিগ্রেশন',
+  'graph.xAxis': 'X-অক্ষ চলক',
+  'graph.yAxis': 'Y-অক্ষ চলক',
+  'graph.slope': 'ঢাল (m)',
+  'graph.intercept': 'ছেদাংশ (c)',
+  'graph.r2': 'সহসম্বন্ধ (R²)',
+  'graph.noData': 'বেস্ট-ফিট লাইন আঁকতে অন্তত ২টি পাঠ রেকর্ড করুন।',
+  'graph.equation': 'সরলরেখা সমীকরণ: y = {m}x + {c}',
+
+  'table.title': 'পর্যবেক্ষণ খাতা ও ডেটা সারণি',
+  'table.empty': 'এখনো কোনো পাঠ রেকর্ড করা হয়নি। যন্ত্রপাতির লাইভ মান যোগ করতে "পাঠ রেকর্ড করুন" চাপুন।',
+  'table.mean': 'গড় মান',
+  'table.stdErr': 'স্ট্যান্ডার্ড এরর',
+  'table.theoryVal': 'তাত্ত্বিক মান: {value}',
+  'table.errorPercent': 'শতকরা ত্রুটি: {value}%',
+
+  'guide.title': 'গাইডেড পদার্থবিজ্ঞান পরীক্ষা',
+  'guide.subtitle': 'সিলেবাসভিত্তিক ৩০টি ধাপে ধাপে নিয়ন্ত্রিত ল্যাব পরীক্ষা।',
+  'guide.selectPrompt': 'যন্ত্রপাতি সাজাতে ও নির্দেশনা পেতে একটি পরীক্ষা বেছে নিন।',
+  'guide.aim': 'উদ্দেশ্য',
+  'guide.theory': 'তত্ত্ব ও সমীকরণ',
+  'guide.steps': 'কার্যপদ্ধতির ধাপসমূহ',
+  'guide.step': 'ধাপ {index}',
+  'guide.precautions': 'সতর্কতা ও ব্যবহারিক পরামর্শ',
+  'guide.stepDone': 'ধাপ সম্পন্ন হয়েছে',
+  'guide.allDone': 'সকল ধাপ শেষ! কুইজ ট্যাবে গিয়ে নিজের বোঝাপড়া যাচাই করুন।',
+  'guide.level.class-9-10': 'নবম–দশম শ্রেণি (SSC)',
+  'guide.level.class-11-12': 'একাদশ–দ্বাদশ শ্রেণি (HSC)',
+  'guide.level.honours': 'স্নাতক (সম্মান)',
+
+  'quiz.title': 'আত্মযাচাই কুইজ',
+  'quiz.submit': 'উত্তর জমা দিন',
+  'quiz.retry': 'আবার চেষ্টা করুন',
+  'quiz.score': 'আপনার প্রাপ্ত নম্বর: {total}-এর মধ্যে {score} ({percent}%)',
+  'quiz.correct': 'সঠিক উত্তর!',
+  'quiz.incorrect': 'ভুল হয়েছে।',
+  'quiz.explanation': 'ব্যাখ্যা: {text}',
+
+  'measure.title': 'পরিমাপক স্কেল জুম ও নিখুঁত পাঠ',
+  'measure.mainScale': 'প্রধান স্কেল পাঠ (MSR): {value}',
+  'measure.vernierScale': 'ভার্নিয়ার / বৃত্তাকার পাঠ: {value}',
+  'measure.leastCount': 'লঘিষ্ঠ গণন (LC): {value}',
+  'measure.zeroError': 'শূন্য ত্রুটি (ZE): {value}',
+  'measure.total': 'সর্বমোট সংশোধিত পাঠ: {value}',
+  'measure.dragPrompt': 'চোয়াল বা স্ক্রু সরাতে স্লাইডার টানুন।',
+
+  'unit.v': 'V',
+  'unit.a': 'A',
+  'unit.ma': 'mA',
+  'unit.ohm': 'Ω',
+  'unit.w': 'W',
+  'unit.hz': 'Hz',
+  'unit.cm': 'cm',
+  'unit.mm': 'mm',
+  'unit.m': 'm',
+  'unit.s': 's',
+  'unit.celsius': '°সে',
+  'unit.j': 'J',
+  'unit.kg': 'কেজি',
+  'unit.g': 'গ্রাম',
+  'unit.n': 'N'
+};
+
 export type LabKey = keyof typeof en;
 export const labDictionary = { en, bn } as const;
 
+export type PhysicsKey = keyof typeof physicsEn;
+export const physicsDictionary = { en: physicsEn, bn: physicsBn } as const;
+
 export type LabVars = Record<string, string | number>;
 
-/** Pure translation lookup with `{name}` interpolation. */
+/** Pure translation lookup for chemistry lab. */
 export function labT(locale: Locale, key: LabKey, vars?: LabVars): string {
   const table = locale === 'bn' ? bn : en;
   const template = table[key] ?? en[key] ?? key;
+  if (!vars) return template;
+  return template.replace(/\{(\w+)\}/g, (match, name: string) =>
+    name in vars ? String(vars[name]) : match
+  );
+}
+
+/** Pure translation lookup for physics lab. */
+export function physicsT(locale: Locale, key: PhysicsKey, vars?: LabVars): string {
+  const table = locale === 'bn' ? physicsBn : physicsEn;
+  const template = table[key] ?? physicsEn[key] ?? key;
   if (!vars) return template;
   return template.replace(/\{(\w+)\}/g, (match, name: string) =>
     name in vars ? String(vars[name]) : match
@@ -379,13 +645,27 @@ export function isLabKey(value: string): value is LabKey {
   return value in en;
 }
 
-/** Client-side hook: same dictionary, locale taken from next-intl. */
+export function isPhysicsKey(value: string): value is PhysicsKey {
+  return value in physicsEn;
+}
+
+/** Client-side hook for Chemistry Lab: same dictionary, locale taken from next-intl. */
 export function useLabI18n() {
   const locale = useLocale() as Locale;
   return {
     locale,
     isBangla: locale === 'bn',
     t: (key: LabKey, vars?: LabVars) => labT(locale, key, vars)
+  };
+}
+
+/** Client-side hook for Physics Lab: same dictionary, locale taken from next-intl. */
+export function usePhysicsI18n() {
+  const locale = useLocale() as Locale;
+  return {
+    locale,
+    isBangla: locale === 'bn',
+    t: (key: PhysicsKey, vars?: LabVars) => physicsT(locale, key, vars)
   };
 }
 

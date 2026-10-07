@@ -130,6 +130,8 @@ export function solveCircuit(
 
   // Connect terminals via wires
   for (const wire of wires) {
+    // Mechanical/optical links between tools carry no current.
+    if (wire.kind === 'link' || wire.fromTerminalId.startsWith('link') || wire.toTerminalId.startsWith('link')) continue;
     const tA = `${wire.fromItemId}:${wire.fromTerminalId}`;
     const tB = `${wire.toItemId}:${wire.toTerminalId}`;
     ds.union(tA, tB);

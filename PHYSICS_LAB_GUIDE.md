@@ -33,9 +33,9 @@ Elementa/
 │   └── experiments/physics/[slug]/page.tsx         # Redirect helper
 ├── components/physics/
 │   ├── PhysicsLab.tsx                              # Master studio container
-│   ├── Workbench.tsx                               # Multi-mode drag-drop canvas
+│   ├── Workbench.tsx                               # Free-form canvas: pointer drag (mouse/touch), zoom, wires & links
+│   ├── BenchInspector.tsx                          # Selected tool's properties, readings & connections
 │   ├── EquipmentShelf.tsx                          # Categorized searchable shelf
-│   ├── CircuitCanvas.tsx                           # SVG interactive wire routing & current flow
 │   ├── OpticsBench.tsx                             # Optical bench rail & ray tracing
 │   ├── MechanicsStage.tsx                          # 2D physics animation stage
 │   ├── GraphPanel.tsx                              # Recharts live scatter & best-fit regression
@@ -60,8 +60,21 @@ Elementa/
 │   └── physicsStore.ts                             # Reactive Zustand store with undo/redo
 └── lib/
     ├── i18n.ts                                     # Bilingual dictionary & hooks
+    ├── physicsBench.ts                             # Bench geometry: ports, snapping, wire paths, shelf→bench bridge
     └── physicsData.ts                              # Typed single entry point
 ```
+
+---
+
+## ✋ Using the Workbench
+
+- **Move any tool** by dragging it (mouse, pen or finger). Positions snap to an 8 px grid; hold <kbd>Alt</kbd> for free placement. Arrow keys nudge the selected tool (<kbd>Shift</kbd> = bigger steps).
+- **Add tools** by dragging a shelf card (or its ⋮⋮ grip on touch screens) onto the bench, or press **Add** — new tools are placed in a free spot automatically.
+- **Connect tools** by dragging from a dot on one tool and releasing on another tool's dot *or anywhere on that tool* — the nearest port is chosen. Tapping a dot and then tapping another tool also works.
+  - Coloured dots are electrical terminals (red = +, black = −, amber = other); wires join the circuit solver.
+  - Tools without terminals (lenses, pendulums, thermometers…) have hollow green *link* points on both sides; links are drawn dashed and are ignored by the circuit solver.
+- **Click a wire** to recolour or delete it. <kbd>Delete</kbd> removes the selected wire/tool, <kbd>R</kbd> rotates, <kbd>Ctrl</kbd>+<kbd>D</kbd> duplicates, <kbd>Ctrl</kbd>+<kbd>Z</kbd>/<kbd>Y</kbd> undo/redo (drags are undoable too), <kbd>Esc</kbd> cancels a connection.
+- Use **− / + / Fit** to zoom; the selected tool's values can be edited in the strip under the canvas.
 
 ---
 

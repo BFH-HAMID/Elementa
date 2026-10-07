@@ -29,7 +29,7 @@ export function PhysicsLab() {
   }, [requestedExp, activeExperimentSlug, loadExperiment]);
 
   return (
-    <div className="page-shell space-y-5 pb-16 pt-4">
+    <div className="mx-auto w-full max-w-[1720px] space-y-4 px-3 pb-16 pt-4 sm:px-5 lg:px-6">
       {/* Brand Hero Header */}
       <div className="flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-[var(--line)] bg-[var(--surface)] p-6 shadow-card">
         <div className="flex items-center gap-3.5">
@@ -96,7 +96,7 @@ export function PhysicsLab() {
             type="button"
             onClick={() => setActiveTab('theory')}
             className={cn(
-              'flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-black transition sm:hidden',
+              'flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-black transition 2xl:hidden',
               activeTab === 'theory'
                 ? 'bg-physics-600 text-white shadow-sm'
                 : 'text-[var(--muted)] hover:text-[var(--ink)]'
@@ -109,9 +109,9 @@ export function PhysicsLab() {
       </div>
 
       {/* Main 3-Column Studio Grid */}
-      <div className="grid gap-5 xl:grid-cols-[minmax(280px,320px)_minmax(0,1fr)_minmax(300px,360px)]">
+      <div className="grid gap-4 xl:grid-cols-[300px_minmax(0,1fr)] 2xl:grid-cols-[300px_minmax(0,1fr)_340px]">
         {/* Left Column: Equipment Shelf */}
-        <div className="xl:block">
+        <div className="min-w-0 xl:sticky xl:top-20 xl:self-start">
           <EquipmentShelf />
         </div>
 
@@ -121,10 +121,16 @@ export function PhysicsLab() {
           {activeTab === 'graph' && <GraphPanel />}
           {activeTab === 'table' && <DataTable />}
           {activeTab === 'theory' && <ObservationPanel />}
+          {/* Below 2xl there is no right column, so the guide sits under the bench. */}
+          {activeTab === 'workbench' && (
+            <div className="mt-4 2xl:hidden">
+              <ObservationPanel />
+            </div>
+          )}
         </div>
 
         {/* Right Column: Observation Notebook & Guide */}
-        <div className="hidden xl:block">
+        <div className="hidden min-w-0 2xl:block">
           <ObservationPanel />
         </div>
       </div>

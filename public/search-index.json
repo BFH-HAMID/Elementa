@@ -4257,6 +4257,726 @@
     "tags": []
   },
   {
+    "slug": "ohms-law",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Verification of Ohm's Law & Unknown Resistance",
+    "title_bn": "ওহমের সূত্র যাচাই ও অজানা রোধ নির্ণয়",
+    "description_en": "To verify Ohm's law by measuring current (I) for various voltages (V) across a resistor and calculate its resistance.",
+    "description_bn": "একটি রোধকের দুই প্রান্তের বিভব পার্থক্য (V) ও তড়িৎ প্রবাহের (I) সম্পর্ক নির্ণয় করে ওহমের সূত্র যাচাই এবং রোধের মান বের করা।",
+    "href": "/experiments/physics/ohms-law",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "electricity"
+    ]
+  },
+  {
+    "slug": "resistors-series-parallel",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Verification of Laws of Combination of Resistors (Series & Parallel)",
+    "title_bn": "রোধের সমবায় সূত্র যাচাই (শ্রেণি ও সমান্তরাল)",
+    "description_en": "To determine the equivalent resistance of two given resistors when connected in series and in parallel.",
+    "description_bn": "শ্রেণি ও সমান্তরাল সমবায়ে দুটি রোধকের তুল্য রোধ নির্ণয় ও সূত্র যাচাই করা।",
+    "href": "/experiments/physics/resistors-series-parallel",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "electricity"
+    ]
+  },
+  {
+    "slug": "meter-bridge",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Unknown Resistance using Meter Bridge",
+    "title_bn": "মিটার ব্রিজের সাহায্যে তারের অজানা রোধ ও আপেক্ষিক রোধ নির্ণয়",
+    "description_en": "To find the resistance of a given wire using a meter bridge and determine its specific resistance (resistivity).",
+    "description_bn": "হুইটস্টোন ব্রিজের নীতিতে মিটার ব্রিজের সাহায্যে অজানা রোধ ও উপাদানের আপেক্ষিক রোধ নির্ণয় করা।",
+    "href": "/experiments/physics/meter-bridge",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "electricity"
+    ]
+  },
+  {
+    "slug": "potentiometer-emf",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Comparison of EMF of Two Primary Cells using Potentiometer",
+    "title_bn": "পোটেনশিওমিটারের সাহায্যে দুটি প্রাথমিক কোষের তড়িচ্চালক বলের তুলনা",
+    "description_en": "To compare the electromotive forces (EMF) of two cells (E1 / E2 = l1 / l2) using a potentiometer.",
+    "description_bn": "পোটেনশিওমিটার ব্যবহার করে দুটি কোষের তড়িচ্চালক বলের অনুপাত নির্ণয় করা।",
+    "href": "/experiments/physics/potentiometer-emf",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "electricity"
+    ]
+  },
+  {
+    "slug": "potentiometer-internal-resistance",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Internal Resistance of a Cell using Potentiometer",
+    "title_bn": "পোটেনশিওমিটারের সাহায্যে কোষের অভ্যন্তরীণ রোধ নির্ণয়",
+    "description_en": "To find the internal resistance 'r' of a primary cell using a potentiometer: r = R × ((l1 / l2) - 1).",
+    "description_bn": "পোটেনশিওমিটার ও রোধ বাক্সের সাহায্যে কোষের অভ্যন্তরীণ রোধ r নির্ণয় করা।",
+    "href": "/experiments/physics/potentiometer-internal-resistance",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "electricity"
+    ]
+  },
+  {
+    "slug": "kirchhoffs-laws",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Verification of Kirchhoff's Current & Voltage Laws (KCL & KVL)",
+    "title_bn": "কার্শফের সূত্র যাচাই (KCL ও KVL)",
+    "description_en": "To verify Kirchhoff's Current Law (ΣI = 0 at node) and Voltage Law (ΣV = 0 around a closed mesh) in a multi-loop circuit.",
+    "description_bn": "একটি বহু-লুপ বর্তনীতে কার্শফের সংযোগ বিন্দু সূত্র (KCL) ও লুপ সূত্র (KVL) যাচাই করা।",
+    "href": "/experiments/physics/kirchhoffs-laws",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "electricity"
+    ]
+  },
+  {
+    "slug": "simple-pendulum",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Acceleration due to Gravity 'g' using Simple Pendulum",
+    "title_bn": "সরল দোলকের সাহায্যে অভিকর্ষজ ত্বরণ 'g' নির্ণয় এবং L-T² গ্রাফ",
+    "description_en": "To measure the time period of oscillation for different lengths of a simple pendulum and determine local acceleration due to gravity 'g'.",
+    "description_bn": "সরল দোলকের বিভিন্ন কার্যকরী দৈর্ঘ্যের জন্য দোলনকাল মেপে 'g'-এর মান ও L বনাম T² লেখচিত্র অঙ্কন।",
+    "href": "/experiments/physics/simple-pendulum",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "spring-constant",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Spring Constant (Hooke's Law & Oscillations)",
+    "title_bn": "স্প্রিং ধ্রুবক নির্ণয় (হুকের সূত্র ও উলম্ব দোলন)",
+    "description_en": "To verify Hooke's Law for a helical spring and determine its force constant 'k' statically and dynamically.",
+    "description_bn": "হেলিক্যাল স্প্রিং-এর হুকের সূত্র যাচাই এবং স্থির লোড ও উলম্ব স্পন্দনের সাহায্যে স্প্রিং ধ্রুবক k নির্ণয়।",
+    "href": "/experiments/physics/spring-constant",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "inclined-plane",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Coefficient of Friction on an Inclined Plane",
+    "title_bn": "নততলের সাহায্যে ঘর্ষণ গুণাঙ্ক ও ত্বরণ নির্ণয়",
+    "description_en": "To determine the coefficient of static friction (μs = tan θ) and kinetic friction for a block on an inclined plane.",
+    "description_bn": "নততলের নতি কোণ বাড়িয়ে স্থির কোণ (Angle of Repose) ও ঘর্ষণ গুণাঙ্ক নির্ণয় করা।",
+    "href": "/experiments/physics/inclined-plane",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "projectile-motion",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Study of Projectile Motion Trajectory, Range and Launch Angle",
+    "title_bn": "প্রাসের গতি, পাল্লা ও নিক্ষেপ কোণের সম্পর্ক",
+    "description_en": "To analyze parabolic projectile trajectory and determine horizontal range R as a function of launch angle θ (maximum range at 45°).",
+    "description_bn": "প্রাসের পরাবৃত্তাকার গতি বিশ্লেষণ এবং নিক্ষেপ কোণ θ পরিবর্তনের সাথে পাল্লা R-এর সম্পর্ক পরীক্ষা।",
+    "href": "/experiments/physics/projectile-motion",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "newtons-second-law",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Verification of Newton's Second Law of Motion (F = m · a)",
+    "title_bn": "নিউটনের গতির দ্বিতীয় সূত্র যাচাই (F = m · a)",
+    "description_en": "To verify that acceleration 'a' is proportional to accelerating net force F for constant mass, and inversely proportional to total mass m.",
+    "description_bn": "গতিশীল ট্রলির সাহায্যে F বনাম a এবং m বনাম a সম্পর্ক যাচাই করে F = m·a প্রমাণ করা।",
+    "href": "/experiments/physics/newtons-second-law",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "vernier-caliper-measurement",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Measurement of Dimensions and Volume using Vernier Caliper",
+    "title_bn": "ভার্নিয়ার ক্যালিপার্সের সাহায্যে বেলন ও গোলকের ব্যাস ও আয়তন নির্ণয়",
+    "description_en": "To measure the diameter and length of a cylinder/sphere, apply zero error correction and determine volume: V = π·r²·h.",
+    "description_bn": "ভার্নিয়ার ক্যালিপার্সের সাহায্যে চোয়ালের শূন্য ত্রুটি নির্ণয়, বেলনের ব্যাস ও উচ্চতা মেপে আয়তন বের করা।",
+    "href": "/experiments/physics/vernier-caliper-measurement",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "measurement"
+    ]
+  },
+  {
+    "slug": "screw-gauge-measurement",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Measurement of Wire Diameter & Sheet Thickness using Screw Gauge",
+    "title_bn": "স্ক্রু গজের সাহায্যে তারের ব্যাস ও পাতলা পাতের পুরুত্ব নির্ণয়",
+    "description_en": "To measure the diameter of a thin resistance wire using a micrometer screw gauge and calculate cross-sectional area.",
+    "description_bn": "স্ক্রু গজের পিচ ও লঘিষ্ঠ গণন বের করে চিকন তারের ব্যাস ও প্রস্থচ্ছেদের ক্ষেত্রফল নির্ণয়।",
+    "href": "/experiments/physics/screw-gauge-measurement",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "measurement"
+    ]
+  },
+  {
+    "slug": "focal-length-convex-lens",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Focal Length of a Convex Lens (u-v Method)",
+    "title_bn": "উত্তল লেন্সের ফোকাস দূরত্ব নির্ণয় (u-v পদ্ধতি ও স্থানচ্যুতি পদ্ধতি)",
+    "description_en": "To find the focal length of a convex lens by plotting graphs between u and v, and 1/u vs 1/v.",
+    "description_bn": "অপটিক্যাল বেঞ্চে বস্তু ও প্রতিবিম্বের দূরত্ব u ও v মেপে উত্তল লেন্সের ফোকাস দূরত্ব f নির্ণয়।",
+    "href": "/experiments/physics/focal-length-convex-lens",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "optics"
+    ]
+  },
+  {
+    "slug": "focal-length-concave-mirror",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Focal Length of a Concave Mirror",
+    "title_bn": "অবতল দর্পণের ফোকাস দূরত্ব নির্ণয়",
+    "description_en": "To determine the focal length of a concave spherical mirror using optical bench.",
+    "description_bn": "অবতল দর্পণের সামনে বস্তু ও পর্দার অবস্থান নির্ধারণ করে ফোকাস দূরত্ব f নির্ণয়।",
+    "href": "/experiments/physics/focal-length-concave-mirror",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "optics"
+    ]
+  },
+  {
+    "slug": "snells-law-verification",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Verification of Snell's Law & Refraction of Light",
+    "title_bn": "স্নেলের সূত্র যাচাই ও প্রতিসরাঙ্ক নির্ণয়",
+    "description_en": "To trace the path of light ray through a rectangular glass slab, verify Snell's law (sin i / sin r = constant) and measure lateral displacement.",
+    "description_bn": "কাচ ফলকে আলোক রশ্মির প্রতিসরণ পর্যবেক্ষণ করে স্নেলের সূত্র (sin i / sin r = µ) যাচাই ও পার্শ্ব সরণ পরিমাপ।",
+    "href": "/experiments/physics/snells-law-verification",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "optics"
+    ]
+  },
+  {
+    "slug": "refractive-index-prism",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Refractive Index & Minimum Deviation of a Prism",
+    "title_bn": "প্রিজমের ন্যূনতম বিচ্যুতি কোণ ও প্রতিসরাঙ্ক নির্ণয়",
+    "description_en": "To plot the i-δ (angle of incidence vs deviation) curve for a prism and determine the refractive index μ using minimum deviation δm.",
+    "description_bn": "প্রিজমের আপতন কোণ i বনাম বিচ্যুতি কোণ δ লেখচিত্র অঙ্কন করে ন্যূনতম বিচ্যুতি δm ও প্রতিসরাঙ্ক µ নির্ণয়।",
+    "href": "/experiments/physics/refractive-index-prism",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "optics"
+    ]
+  },
+  {
+    "slug": "youngs-double-slit",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Measurement of Wavelength of Light by Young's Double Slit",
+    "title_bn": "ইয়ং-এর দ্বি-চির ব্যতিচার ও আলোর তরঙ্গদৈর্ঘ্য নির্ণয়",
+    "description_en": "To observe two-slit interference fringes and measure light wavelength λ using fringe width β.",
+    "description_bn": "দ্বি-চির ব্যতিচার পট্টি পর্যবেক্ষণ করে পট্টি প্রস্থ β থেকে একবর্ণী আলোর তরঙ্গদৈর্ঘ্য λ নির্ণয়।",
+    "href": "/experiments/physics/youngs-double-slit",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "optics"
+    ]
+  },
+  {
+    "slug": "diffraction-grating",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Wavelength of Light using Diffraction Grating",
+    "title_bn": "অপবর্তন গ্রেটিং-এর সাহায্যে আলোর তরঙ্গদৈর্ঘ্য নির্ণয়",
+    "description_en": "To measure the angle of diffraction θ for spectral orders (n = 1, 2) and determine wavelength: d · sin θ = n · λ.",
+    "description_bn": "গ্রেটিং সমীকরণ (d sin θ = nλ) ব্যবহার করে অপবর্তন কোণ মেপে একবর্ণী আলোর তরঙ্গদৈর্ঘ্য নির্ণয়।",
+    "href": "/experiments/physics/diffraction-grating",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "optics"
+    ]
+  },
+  {
+    "slug": "specific-heat-calorimeter",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Specific Heat Capacity by Method of Mixtures",
+    "title_bn": "মিশ্রণ পদ্ধতিতে ধাতব খণ্ডের আপেক্ষিক তাপ নির্ণয়",
+    "description_en": "To determine the specific heat capacity 's' of a metal cylinder (copper/lead/iron) using a copper calorimeter.",
+    "description_bn": "ক্যালরিমিটারে বর্জিত তাপ = গৃহীত তাপ নীতি প্রয়োগ করে ধাতুর আপেক্ষিক তাপ নির্ণয়।",
+    "href": "/experiments/physics/specific-heat-calorimeter",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "heat"
+    ]
+  },
+  {
+    "slug": "joules-law-electrical-equivalent",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Joule's Law & Mechanical Equivalent of Heat (J)",
+    "title_bn": "জুলের তাপীয় ক্রিয়া ও তাপের যান্ত্রিক সমতা (J) নির্ণয়",
+    "description_en": "To verify Joule's law of electrical heating (H = I²·R·t / J) and determine the mechanical equivalent of heat J = W / H (4.186 J/cal).",
+    "description_bn": "বৈদ্যুতিক হিটারের সাহায্যে জুলের তাপীয় সূত্র ও তাপের যান্ত্রিক সমতা J নির্ণয়।",
+    "href": "/experiments/physics/joules-law-electrical-equivalent",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "heat"
+    ]
+  },
+  {
+    "slug": "faradays-law-induction",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Study of Faraday's Law of Induction & Lenz's Law",
+    "title_bn": "ফ্যারাডের তড়িচ্চুম্বকীয় আবেশ সূত্র ও লেনজের সূত্র",
+    "description_en": "To demonstrate that moving a magnet in and out of a coil induces an electromotive force (EMF) whose magnitude depends on velocity and direction opposes the change.",
+    "description_bn": "কুণ্ডলীর ভেতর দণ্ড চুম্বক ঢুকিয়ে ও বের করে আবিষ্ট ভোল্টেজ ও লেনজের বিপরীতমুখী প্রবাহ যাচাই।",
+    "href": "/experiments/physics/faradays-law-induction",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "magnetism"
+    ]
+  },
+  {
+    "slug": "transformer-characteristics",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Study of Step-Up & Step-Down Transformer Turns Ratio",
+    "title_bn": "ট্রান্সফরমারের পাকসংখ্যা অনুপাত ও রূপান্তর ক্রিয়া",
+    "description_en": "To verify the turns ratio equation Vs / Vp = Ns / Np and efficiency of a transformer under AC excitation.",
+    "description_bn": "ট্রান্সফরমারের মুখ্য ও গৌণ কুণ্ডলীর ভোল্টেজ ও পাকসংখ্যার অনুপাত (Vs/Vp = Ns/Np) যাচাই।",
+    "href": "/experiments/physics/transformer-characteristics",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "electricity"
+    ]
+  },
+  {
+    "slug": "lcr-series-resonance",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Study of Series LCR Resonance & Quality Factor (Q)",
+    "title_bn": "শ্রেণি এলসিআর অনুনাদ বর্তনী ও কিউ-ফ্যাক্টর",
+    "description_en": "To plot the frequency response curve I vs f for a series LCR circuit and determine resonant frequency fr = 1 / (2π√LC) and Q factor.",
+    "description_bn": "পরিবর্তনশীল কম্পাঙ্কের এসি উৎসের সাহায্যে LCR বর্তনীর অনুনাদী কম্পাঙ্ক fr ও বিস্তার লেখচিত্র অঙ্কন।",
+    "href": "/experiments/physics/lcr-series-resonance",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "electricity"
+    ]
+  },
+  {
+    "slug": "speed-of-sound-resonance-tube",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Speed of Sound in Air by Resonance Tube",
+    "title_bn": "অনুনাত নলের সাহায্যে বাতাসে শব্দের বেগ নির্ণয়",
+    "description_en": "To find the 1st and 2nd resonating air column lengths for a tuning fork of known frequency f, apply end correction and calculate speed of sound v.",
+    "description_bn": "অনুনাত নলে ১ম ও ২য় অনুনাদের মাধ্যমে প্রান্তীয় সংশোধন e ও বাতাসে শব্দের বেগ v নির্ণয়।",
+    "href": "/experiments/physics/speed-of-sound-resonance-tube",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "waves"
+    ]
+  },
+  {
+    "slug": "sonometer-laws",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Verification of Laws of Transverse Vibrations of Stretched Strings (Sonometer)",
+    "title_bn": "সোনোমিটারের সাহায্যে তারের তির্যক কম্পনের সূত্র যাচাই",
+    "description_en": "To verify Law of Length (f · L = constant) and Law of Tension (f / √T = constant) using a sonometer and tuning forks.",
+    "description_bn": "সোনোমিটারে তারের দৈর্ঘ্য L ও টান T পরিবর্তনের সাথে কম্পাঙ্ক f-এর সূত্র প্রমাণ করা।",
+    "href": "/experiments/physics/sonometer-laws",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "waves"
+    ]
+  },
+  {
+    "slug": "photoelectric-effect",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Photoelectric Effect: Determination of Planck's Constant (h) & Work Function",
+    "title_bn": "আলোক-তড়িৎ ক্রিয়া: প্লাঙ্কের ধ্রুবক (h) ও কার্য-অপেক্ষক নির্ণয়",
+    "description_en": "To measure stopping potential V0 for various monochromatic light frequencies ν and determine Planck's constant 'h' and cathode work function Φ.",
+    "description_bn": "বিভিন্ন কম্পাঙ্কের আলোর জন্য নিবারক বিভব V0 মেপে প্লাঙ্কের ধ্রুবক h ও ধাতুর কার্য-অপেক্ষক Φ নির্ণয়।",
+    "href": "/experiments/physics/photoelectric-effect",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "modern"
+    ]
+  },
+  {
+    "slug": "radioactive-decay-gm-counter",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Radioactive Decay Simulation & GM Counter Inverse Square Law",
+    "title_bn": "তেজস্ক্রিয় ক্ষয় সূত্র ও জিএম কাউন্টার বিপরীত বর্গীয় নীতি",
+    "description_en": "To measure gamma radiation intensity as a function of distance r (I ∝ 1/r²) and verify the radioactive decay law N(t) = N0 · e^(-λt).",
+    "description_bn": "গাইগার-মুলার কাউন্টারে দূরত্বের সাথে তীব্রতার বিপরীত বর্গ নিয়ম ও তেজস্ক্রিয় অর্ধায়ু পরীক্ষা।",
+    "href": "/experiments/physics/radioactive-decay-gm-counter",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-11-12",
+      "modern"
+    ]
+  },
+  {
+    "slug": "atwood-machine-g",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Determination of Acceleration in Atwood's Machine",
+    "title_bn": "অ্যাটউড মেশিনে ত্বরণ ও টান নির্ণয়",
+    "description_en": "To verify Newton's laws of motion and measure acceleration a = (m1 - m2)·g / (m1 + m2) on an Atwood machine.",
+    "description_bn": "অ্যাটউড মেশিনের সাহায্যে দুটি অসমান ঝুলন্ত ভরের ত্বরণ ও দড়ির টান নির্ণয়।",
+    "href": "/experiments/physics/atwood-machine-g",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "class-9-10",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "surface-tension-water-capillary",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Surface tension of water by capillary tube method",
+    "title_bn": "কৈশিক নল পদ্ধতিতে পানির পৃষ্ঠটান",
+    "description_en": "Determine the surface tension of water by measuring the capillary rise in a clean tube.",
+    "description_bn": "পরিষ্কার কৈশিক নলে পানির উত্থান মেপে পানির পৃষ্ঠটান নির্ণয় করা।",
+    "href": "/experiments/physics/surface-tension-water-capillary",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "measurement"
+    ]
+  },
+  {
+    "slug": "surface-tension-mercury-quincke",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Surface tension of mercury by Quincke's method",
+    "title_bn": "কুইঙ্কে পদ্ধতিতে পারদের পৃষ্ঠটান",
+    "description_en": "Determine the surface tension of mercury using Quincke's capillary method, including the contact-angle sign.",
+    "description_bn": "স্পর্শকোণের চিহ্ন বিবেচনা করে কুইঙ্কের কৈশিক পদ্ধতিতে পারদের পৃষ্ঠটান নির্ণয় করা।",
+    "href": "/experiments/physics/surface-tension-mercury-quincke",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "measurement"
+    ]
+  },
+  {
+    "slug": "compound-pendulum-gravity",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Acceleration due to gravity by compound pendulum",
+    "title_bn": "যৌগিক দোলকে অভিকর্ষজ ত্বরণ নির্ণয়",
+    "description_en": "Determine g with a compound pendulum by measuring periods about different knife-edge positions.",
+    "description_bn": "বিভিন্ন knife-edge অবস্থানে পর্যায়কাল মেপে যৌগিক দোলকের সাহায্যে g নির্ণয় করা।",
+    "href": "/experiments/physics/compound-pendulum-gravity",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "katers-pendulum-gravity",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Acceleration due to gravity by Kater's pendulum",
+    "title_bn": "ক্যাটার দোলকে অভিকর্ষজ ত্বরণ নির্ণয়",
+    "description_en": "Determine g using Kater's reversible pendulum by making the periods about its two knife edges equal.",
+    "description_bn": "দুই knife edge-এ পর্যায়কাল সমান করে ক্যাটার দোলকের সাহায্যে g নির্ণয় করা।",
+    "href": "/experiments/physics/katers-pendulum-gravity",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "rigidity-modulus-static",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Rigidity modulus of a wire or rod by static method",
+    "title_bn": "স্থির পদ্ধতিতে তার/দণ্ডের দৃঢ়তার গুণাঙ্ক",
+    "description_en": "Determine the rigidity modulus of a cylindrical wire or rod from its static angle of twist under known torque.",
+    "description_bn": "জ্ঞাত torque-এ তার বা দণ্ডের স্থির twist angle মেপে দৃঢ়তার গুণাঙ্ক নির্ণয় করা।",
+    "href": "/experiments/physics/rigidity-modulus-static",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "flywheel-moment-inertia",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Moment of inertia of a flywheel about its axis",
+    "title_bn": "অক্ষের সাপেক্ষে ফ্লাইহুইলের জড়তার ভ্রামক",
+    "description_en": "Determine the moment of inertia of a flywheel by the falling-mass method.",
+    "description_bn": "পতনশীল ভরের পদ্ধতিতে ফ্লাইহুইলের জড়তার ভ্রামক নির্ণয় করা।",
+    "href": "/experiments/physics/flywheel-moment-inertia",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "searles-young-modulus",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Young's modulus by Searle's apparatus",
+    "title_bn": "সিয়ার্লের যন্ত্রে ইয়ং গুণাঙ্ক",
+    "description_en": "Determine Young's modulus of a wire from the extension produced by known loads in Searle's apparatus.",
+    "description_bn": "সিয়ার্লের যন্ত্রে জ্ঞাত ভারে তারের প্রসারণ মেপে ইয়ং গুণাঙ্ক নির্ণয় করা।",
+    "href": "/experiments/physics/searles-young-modulus",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "mechanics"
+    ]
+  },
+  {
+    "slug": "rigidity-modulus-dynamic",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Rigidity modulus by dynamic torsional method",
+    "title_bn": "গতিশীল পদ্ধতিতে তারের দৃঢ়তার গুণাঙ্ক",
+    "description_en": "Determine the rigidity modulus of a wire from the period of torsional oscillation of a suspended body.",
+    "description_bn": "ঝুলন্ত বস্তুর torsional oscillation-এর পর্যায়কাল থেকে তারের দৃঢ়তার গুণাঙ্ক নির্ণয় করা।",
+    "href": "/experiments/physics/rigidity-modulus-dynamic",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "waves"
+    ]
+  },
+  {
+    "slug": "specific-heat-liquid-cooling",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Specific heat of a liquid by method of cooling",
+    "title_bn": "শীতলন পদ্ধতিতে তরলের আপেক্ষিক তাপ",
+    "description_en": "Determine the specific heat capacity of a liquid by comparing its cooling curve with water under the same conditions.",
+    "description_bn": "একই অবস্থায় পানি ও অজানা তরলের cooling curve তুলনা করে অজানা তরলের আপেক্ষিক তাপ নির্ণয় করা।",
+    "href": "/experiments/physics/specific-heat-liquid-cooling",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "heat"
+    ]
+  },
+  {
+    "slug": "meldes-frequency",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Unknown tuning-fork frequency by Melde's experiment",
+    "title_bn": "মেল্ডের পরীক্ষায় অজানা সুরশলাকার কম্পাঙ্ক",
+    "description_en": "Determine the unknown frequency of a tuning fork using standing waves in a stretched string.",
+    "description_bn": "টানটান তারে স্থির তরঙ্গ তৈরি করে মেল্ডের পরীক্ষায় অজানা tuning fork-এর কম্পাঙ্ক নির্ণয় করা।",
+    "href": "/experiments/physics/meldes-frequency",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "waves"
+    ]
+  },
+  {
+    "slug": "latent-heat-fusion-radiation",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Latent heat of fusion of ice with radiation correction",
+    "title_bn": "বিকিরণ সংশোধনসহ বরফের গলনের সুপ্ততাপ",
+    "description_en": "Determine the specific latent heat of fusion of ice using calorimetry and a radiation correction.",
+    "description_bn": "calorimetry ও radiation correction ব্যবহার করে বরফের গলনের আপেক্ষিক সুপ্ততাপ নির্ণয় করা।",
+    "href": "/experiments/physics/latent-heat-fusion-radiation",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "heat"
+    ]
+  },
+  {
+    "slug": "specific-heat-solid-radiation",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Specific heat of a solid by method of mixtures",
+    "title_bn": "বিকিরণ সংশোধনসহ মিশ্রণ পদ্ধতিতে কঠিনের আপেক্ষিক তাপ",
+    "description_en": "Determine the specific heat of a solid by the method of mixtures with radiation correction.",
+    "description_bn": "radiation correction-সহ method of mixtures-এ কঠিনের আপেক্ষিক তাপ নির্ণয় করা।",
+    "href": "/experiments/physics/specific-heat-solid-radiation",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "heat"
+    ]
+  },
+  {
+    "slug": "mechanical-equivalent-heat-radiation",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Mechanical equivalent of heat J with radiation correction",
+    "title_bn": "বিকিরণ সংশোধনসহ তাপের যান্ত্রিক সমতা J",
+    "description_en": "Determine the mechanical equivalent of heat from electrical work supplied to a calorimeter, including radiation correction.",
+    "description_bn": "calorimeter-এ সরবরাহ করা electrical work থেকে radiation correction-সহ তাপের যান্ত্রিক সমতা J নির্ণয় করা।",
+    "href": "/experiments/physics/mechanical-equivalent-heat-radiation",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "heat"
+    ]
+  },
+  {
+    "slug": "thermal-conductivity-searle",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Thermal conductivity of a good conductor by Searle's apparatus",
+    "title_bn": "সিয়ার্লের যন্ত্রে সুপরিবাহীর তাপ পরিবাহিতা",
+    "description_en": "Determine the thermal conductivity of a good conductor using Searle's steady-flow apparatus.",
+    "description_bn": "সিয়ার্লের steady-flow apparatus ব্যবহার করে সুপরিবাহীর তাপ পরিবাহিতা নির্ণয় করা।",
+    "href": "/experiments/physics/thermal-conductivity-searle",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "heat"
+    ]
+  },
+  {
+    "slug": "density-water-temperature",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Density of water at different temperatures by specific gravity bottle",
+    "title_bn": "specific gravity bottle-এ বিভিন্ন তাপমাত্রায় পানির ঘনত্ব",
+    "description_en": "Determine the density of water at six temperatures and study its variation with temperature.",
+    "description_bn": "ছয়টি তাপমাত্রায় specific gravity bottle ব্যবহার করে পানির ঘনত্ব নির্ণয় ও তাপমাত্রার সঙ্গে পরিবর্তন পর্যবেক্ষণ করা।",
+    "href": "/experiments/physics/density-water-temperature",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "heat"
+    ]
+  },
+  {
+    "slug": "thermal-conductivity-lee-disc",
+    "kind": "experiment",
+    "subject": "physics",
+    "title_en": "Thermal conductivity of a bad conductor by Lee's method",
+    "title_bn": "লির পদ্ধতিতে কুপরিবাহীর তাপ পরিবাহিতা",
+    "description_en": "Determine the thermal conductivity of a poor conductor using Lee's disc and the cooling-rate correction.",
+    "description_bn": "লির চাকতি ও cooling-rate correction ব্যবহার করে কুপরিবাহীর তাপ পরিবাহিতা নির্ণয় করা।",
+    "href": "/experiments/physics/thermal-conductivity-lee-disc",
+    "tags": [
+      "physics lab",
+      "guided practical",
+      "honours",
+      "heat"
+    ]
+  },
+  {
     "slug": "physics-ruler-vernier-measurement",
     "kind": "experiment",
     "subject": "physics",

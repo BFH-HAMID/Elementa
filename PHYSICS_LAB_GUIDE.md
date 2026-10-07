@@ -55,7 +55,7 @@ Elementa/
 │   └── physicsTypes.ts                             # Complete TypeScript data schemas
 ├── data/
 │   ├── equipment.json                              # 70+ equipment definitions
-│   └── physicsExperiments.json                     # 30 guided physics practicals
+│   └── physicsExperiments.json                     # 45 guided physics practicals (including Physics Practical-1)
 ├── store/
 │   └── physicsStore.ts                             # Reactive Zustand store with undo/redo
 └── lib/

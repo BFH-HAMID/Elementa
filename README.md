@@ -25,7 +25,7 @@
 PhysChem Lab is a free, bilingual (Bangla + English) physics and chemistry learning platform for Bangladesh. It combines original equation notes, practical experiment guides, short quizzes and interactive browser simulations for NCTB Classes 6–12 through an introductory National University Honours level.
 
 It also ships two full virtual laboratories:
-- **Elementa Physics Lab** at `/lab/physics`: an interactive multi-domain physics workbench featuring a Modified Nodal Analysis (MNA) circuit solver with interactive wiring, ray optics with Snell's law & prism dispersion, 2D mechanics simulations (pendulum, springs, inclined plane, projectile, Atwood machine), wave acoustics (resonance tube, sonometer, oscilloscope), calorimetry, and modern physics (photoelectric effect, GM counter), alongside live Recharts graphs, statistical error tables with CSV export, and 30 guided practicals. See [`PHYSICS_LAB_GUIDE.md`](PHYSICS_LAB_GUIDE.md).
+- **Elementa Physics Lab** at `/lab/physics`: an interactive multi-domain physics workbench featuring a Modified Nodal Analysis (MNA) circuit solver with interactive wiring, ray optics with Snell's law & prism dispersion, 2D mechanics simulations (pendulum, springs, inclined plane, projectile, Atwood machine), wave acoustics (resonance tube, sonometer, oscilloscope), calorimetry, and modern physics (photoelectric effect, GM counter), alongside live Recharts graphs, statistical error tables with CSV export, and 45 guided practicals, including the full Physics Practical-1 list supplied for Properties of Matter, Waves and Oscillations, Heat, Thermodynamics and Radiation. See [`PHYSICS_LAB_GUIDE.md`](PHYSICS_LAB_GUIDE.md).
 - **Elementa Chemistry Lab** at `/lab/chemistry`: a drag-and-drop virtual wet lab in the header: pour acids, bases, salts and metals into SVG glassware, heat them on a Bunsen burner, spark a gas jar, electrolyse water, read the pH and indicator colours, and follow 11 guided walkthroughs that tick themselves off. See [`CHEMISTRY_LAB_GUIDE.md`](CHEMISTRY_LAB_GUIDE.md).
 
 > **বাংলায়:** সূত্র শুধু মুখস্থ নয় — পরিবর্তন করুন, পর্যবেক্ষণ করুন, এবং নিজের ব্যাখ্যা তৈরি করুন।
@@ -59,7 +59,7 @@ The README uses self-hosted SVG artwork so the project page has a visual identit
 - KaTeX equations, MDX rendering, Zod frontmatter validation, Fuse.js search and a Ctrl/Cmd+K command palette.
 - Recharts live graphs, CSV data export, screenshot download and fullscreen simulation mode.
 - Local-only bookmarks, recently viewed items, quiz score history, progress, theme and language preferences with Zustand.
-- Bangla-first routing (`/bn`) with English (`/en`), a manual service worker, manifest, SEO metadata, sitemap, robots and OpenGraph artwork.
+- Bangla-first routing (`/bn`) with English (`/en`), a production service worker with versioned offline caching and update prompts, an installable PWA manifest with app shortcuts, SEO metadata, sitemap, robots and OpenGraph artwork.
 
 There is no database, backend API, login or required environment variable. PhET's official embedded sims are fetched from PhET's servers, so they need an internet connection. PhET currently licenses its simulation files under CC BY-NC 4.0; commercial or ad-supported use requires separate permission from PhET. See the [official licensing terms](https://phet.colorado.edu/en/licensing).
 

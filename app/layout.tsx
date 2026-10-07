@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
@@ -43,8 +43,26 @@ export const metadata: Metadata = {
     description: 'See science move in your browser.',
     images: ['/og/physchem-lab.svg']
   },
-  icons: { icon: '/icon.svg' },
+  icons: {
+    icon: '/icon.svg',
+    apple: '/icons/icon-192.png'
+  },
+  appleWebApp: {
+    capable: true,
+    title: 'PhysChem Lab',
+    statusBarStyle: 'default'
+  },
   manifest: '/manifest.webmanifest'
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#075db1' },
+    { media: '(prefers-color-scheme: dark)', color: '#0d1926' }
+  ]
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

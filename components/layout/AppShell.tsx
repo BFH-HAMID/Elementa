@@ -5,6 +5,7 @@ import { BottomNav } from './BottomNav';
 import { ThemeProvider } from './ThemeProvider';
 import { ToastProvider } from '@/components/ui/Toast';
 import { ServiceWorkerRegister } from './ServiceWorkerRegister';
+import { PwaPrompt } from './PwaPrompt';
 
 export function AppShell({ children }: { children: ReactNode }) {
   return (
@@ -26,6 +27,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <Footer />
         <BottomNav />
         <ServiceWorkerRegister />
+        <PwaPrompt />
       </ToastProvider>
     </ThemeProvider>
   );

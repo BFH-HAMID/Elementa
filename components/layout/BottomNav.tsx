@@ -19,7 +19,7 @@ export function BottomNav() {
   ] as const;
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--line)] bg-[var(--surface)]/95 px-1 pb-[env(safe-area-inset-bottom)] pt-1.5 backdrop-blur-xl lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--line)] bg-[var(--surface)]/95 px-1 pb-[env(safe-area-inset-bottom)] pt-1.5 backdrop-blur-xl xl:hidden"
       aria-label="Mobile bottom navigation"
     >
       <div className="mx-auto grid max-w-md grid-cols-5">

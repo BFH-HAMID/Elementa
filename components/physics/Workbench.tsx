@@ -7,6 +7,7 @@ import { EquipmentRenderer } from './Equipment/EquipmentRenderer';
 import { CircuitCanvas } from './CircuitCanvas';
 import { OpticsBench } from './OpticsBench';
 import { MechanicsStage } from './MechanicsStage';
+import { PracticalStation } from './PracticalStation';
 import { MeasuringModal } from './Equipment/MeasuringModals';
 import {
   RotateCcw,
@@ -218,6 +219,7 @@ export function Workbench() {
       {/* Mode Renderers */}
       {mode === 'optics' && <OpticsBench />}
       {mode === 'mechanics' && <MechanicsStage />}
+      {(mode === 'waves' || mode === 'thermo' || mode === 'modern') && <PracticalStation />}
 
       {mode === 'workbench' && (
         <div

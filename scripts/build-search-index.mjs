@@ -85,6 +85,20 @@ for (const subject of ['physics', 'chemistry']) {
     }
   }
 }
+const physicsGuidedExperiments = JSON.parse(fs.readFileSync(path.join(root, 'data', 'physicsExperiments.json'), 'utf8')).experiments;
+for (const experiment of physicsGuidedExperiments) {
+  records.push({
+    slug: experiment.slug,
+    kind: 'experiment',
+    subject: 'physics',
+    title_en: experiment.title_en,
+    title_bn: experiment.title_bn,
+    description_en: experiment.aim_en,
+    description_bn: experiment.aim_bn,
+    href: `/experiments/physics/${experiment.slug}`,
+    tags: ['physics lab', 'guided practical', experiment.level, experiment.domain]
+  });
+}
 const practicalCatalog = JSON.parse(fs.readFileSync(path.join(contentRoot, 'practical-topics.json'), 'utf8'));
 for (const group of practicalCatalog.groups) {
   for (const topic of group.topics) {

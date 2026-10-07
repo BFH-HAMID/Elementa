@@ -1,5 +1,5 @@
 {
-  "count": 30,
+  "count": 45,
   "experiments": [
     {
       "id": "ohms-law",
@@ -1829,6 +1829,2850 @@
           "explanation_bn": "ভর দুটি সমান হলে নিট ত্বরণকারী বল শূন্য হওয়ায় ত্বরণ a = ০ হয়।"
         }
       ]
+    },
+    {
+      "id": "surface-tension-water-capillary",
+      "slug": "surface-tension-water-capillary",
+      "title_en": "Surface tension of water by capillary tube method",
+      "title_bn": "কৈশিক নল পদ্ধতিতে পানির পৃষ্ঠটান",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the surface tension of water by measuring the capillary rise in a clean tube.",
+      "aim_bn": "পরিষ্কার কৈশিক নলে পানির উত্থান মেপে পানির পৃষ্ঠটান নির্ণয় করা।",
+      "theory_en": "For a clean capillary, the upward surface-tension force balances the weight of the raised liquid column. The model assumes complete wetting and a circular tube.",
+      "theory_bn": "পরিষ্কার কৈশিক নলে ঊর্ধ্বমুখী পৃষ্ঠটানের বল উত্থিত তরলস্তম্ভের ওজনের সমান। এখানে পূর্ণ ভেজা ও বৃত্তাকার নল ধরা হয়।",
+      "formula_latex": "\\gamma = \\frac{\\rho g r h}{2\\cos\\theta} \\approx \\frac{\\rho g r h}{2}",
+      "formula_desc_en": "For water on clean glass θ is approximately zero; ρ is water density, r is inner radius and h is capillary rise.",
+      "formula_desc_bn": "পরিষ্কার কাচে পানির জন্য θ প্রায় শূন্য; ρ পানির ঘনত্ব, r নলের ভিতরের ব্যাসার্ধ এবং h উত্থান।",
+      "apparatusRequired": [
+        "travelling-microscope",
+        "lab-thermometer-mercury",
+        "copper-calorimeter",
+        "meter-scale-wooden"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "travelling-microscope",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "lab-thermometer-mercury",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "copper-calorimeter",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "meter-scale-wooden",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Clean the capillary and mount it vertically beside a beaker of distilled water.",
+          "instruction_bn": "কৈশিক নল পরিষ্কার করে পাতিত পানির পাত্রের পাশে উল্লম্বভাবে বসান।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Measure the inner diameter or radius of the tube at several positions.",
+          "instruction_bn": "বিভিন্ন স্থানে নলের ভিতরের ব্যাস বা ব্যাসার্ধ মাপুন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Allow the water level to settle and focus the travelling microscope on the meniscus and outside water level.",
+          "instruction_bn": "পানির তল স্থির হতে দিন এবং চলমান অণুবীক্ষণে meniscus ও বাইরের পানির তল ফোকাস করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Measure the capillary rise h for at least three tubes or repeated placements.",
+          "instruction_bn": "অন্তত তিনটি নল বা পুনরাবৃত্ত স্থাপনে উত্থান h মাপুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Record water temperature and use the corresponding density.",
+          "instruction_bn": "পানির তাপমাত্রা লিখে সেই তাপমাত্রার ঘনত্ব নিন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Calculate γ for each observation and report the mean with units.",
+          "instruction_bn": "প্রতিটি পাঠে γ হিসাব করে এককসহ গড় ফল দিন।"
+        },
+        {
+          "stepNumber": 7,
+          "instruction_en": "Compare the result with the accepted value only after preserving every raw reading.",
+          "instruction_bn": "সব কাঁচা পাঠ সংরক্ষণ করার পরই স্বীকৃত মানের সঙ্গে তুলনা করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Use a grease-free, dust-free tube and keep it vertical.",
+        "Take the meniscus reading at eye level and avoid parallax.",
+        "Do not touch the hot lamp or force the fragile capillary; repeat if the meniscus is disturbed.",
+        "Main errors: dirty glass, uncertain radius, meniscus/parallax and temperature variation."
+      ],
+      "precautions_bn": [
+        "গ্রীজ ও ধুলোমুক্ত নল উল্লম্বভাবে ব্যবহার করুন।",
+        "চোখের সমতলে meniscus পড়ুন এবং parallax এড়ান।",
+        "ভঙ্গুর কৈশিক জোরে ধরবেন না; meniscus নড়লে পাঠ পুনরায় নিন।",
+        "প্রধান ভুল: নল ময়লা, ব্যাসার্ধের অনিশ্চয়তা, meniscus/parallax ও তাপমাত্রার পরিবর্তন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "radiusM",
+          "label_en": "Radius r (m)",
+          "label_bn": "ব্যাসার্ধ r (m)",
+          "unit": "m"
+        },
+        {
+          "key": "riseM",
+          "label_en": "Rise h (m)",
+          "label_bn": "উত্থান h (m)",
+          "unit": "m"
+        },
+        {
+          "key": "temperatureC",
+          "label_en": "Temperature (°C)",
+          "label_bn": "তাপমাত্রা (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "surfaceTension",
+          "label_en": "γ (N/m)",
+          "label_bn": "γ (N/m)",
+          "unit": "N/m"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Surface tension γ",
+        "expectedConstant": 0.072,
+        "expectedConstantUnit": "N/m at 20°C",
+        "xColumn": "riseM",
+        "yColumn": "surfaceTension"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "What is the main balance in the capillary-rise method?",
+          "question_bn": "কৈশিক উত্থান পদ্ধতিতে মূল সাম্য কোন দুটি রাশির মধ্যে?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Surface force and liquid-column weight",
+              "text_bn": "পৃষ্ঠটানের বল ও তরলস্তম্ভের ওজন"
+            },
+            {
+              "id": "b",
+              "text_en": "Electric current and voltage",
+              "text_bn": "তড়িৎ প্রবাহ ও বিভব"
+            },
+            {
+              "id": "c",
+              "text_en": "Radiation and pressure",
+              "text_bn": "বিকিরণ ও চাপ"
+            },
+            {
+              "id": "d",
+              "text_en": "Magnetic field and charge",
+              "text_bn": "চৌম্বক ক্ষেত্র ও আধান"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The vertical surface force balances the weight of the raised column.",
+          "explanation_bn": "ঊর্ধ্বমুখী পৃষ্ঠটানের বল উত্থিত তরলস্তম্ভের ওজনের সমান।"
+        }
+      ],
+      "modelReadings": {
+        "radiusM": 0.00025,
+        "riseM": 0.029,
+        "temperatureC": 25,
+        "surfaceTension": 0.071
+      }
+    },
+    {
+      "id": "surface-tension-mercury-quincke",
+      "slug": "surface-tension-mercury-quincke",
+      "title_en": "Surface tension of mercury by Quincke's method",
+      "title_bn": "কুইঙ্কে পদ্ধতিতে পারদের পৃষ্ঠটান",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the surface tension of mercury using Quincke's capillary method, including the contact-angle sign.",
+      "aim_bn": "স্পর্শকোণের চিহ্ন বিবেচনা করে কুইঙ্কের কৈশিক পদ্ধতিতে পারদের পৃষ্ঠটান নির্ণয় করা।",
+      "theory_en": "Mercury does not wet ordinary glass completely, so the meniscus is depressed and θ may be obtuse. The measured height and contact angle must be used consistently.",
+      "theory_bn": "পারদ সাধারণ কাচকে সম্পূর্ণ ভেজায় না; তাই meniscus নিচে নামে এবং θ স্থূলকোণ হতে পারে। উচ্চতা ও স্পর্শকোণ একই convention-এ নিতে হবে।",
+      "formula_latex": "\\gamma = \\frac{\\rho g r |h|}{2|\\cos\\theta|}",
+      "formula_desc_en": "Use the magnitude of the depression and measure or use the stated mercury-glass contact angle; never silently assume θ = 0.",
+      "formula_desc_bn": "অবনতির মান এবং মাপা/প্রদত্ত পারদ-কাচ স্পর্শকোণ ব্যবহার করুন; θ = 0 ধরে নেবেন না।",
+      "apparatusRequired": [
+        "travelling-microscope",
+        "lab-thermometer-mercury",
+        "copper-calorimeter",
+        "meter-scale-wooden"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "travelling-microscope",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "lab-thermometer-mercury",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "copper-calorimeter",
+            "x": 390,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Clean and dry the capillary without contaminating the mercury.",
+          "instruction_bn": "পারদ দূষিত না করে কৈশিক নল পরিষ্কার ও শুকনো করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Measure the inner radius of the capillary and the mercury temperature.",
+          "instruction_bn": "নলের ভিতরের ব্যাসার্ধ ও পারদের তাপমাত্রা মাপুন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Place the tube so the mercury level is undisturbed and focus on the depressed meniscus.",
+          "instruction_bn": "পারদের তল না নড়িয়ে নল বসিয়ে অবনত meniscus-এ অণুবীক্ষণ ফোকাস করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Measure the depression h relative to the outer mercury surface.",
+          "instruction_bn": "বাইরের পারদের তলের তুলনায় অবনতি h মাপুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Record the contact angle convention supplied by the apparatus manual.",
+          "instruction_bn": "যন্ত্রের নির্দেশিত স্পর্শকোণের convention লিখুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Repeat the measurement and calculate γ using absolute magnitudes.",
+          "instruction_bn": "পুনরাবৃত্ত পাঠ নিয়ে পরম মান ব্যবহার করে γ হিসাব করুন।"
+        },
+        {
+          "stepNumber": 7,
+          "instruction_en": "Report the sign convention and the uncertainty rather than averaging incompatible readings.",
+          "instruction_bn": "চিহ্নের convention ও অনিশ্চয়তা লিখুন; অসামঞ্জস্য পাঠের সরল গড় নেবেন না।"
+        }
+      ],
+      "precautions_en": [
+        "Mercury is toxic: use a closed apparatus, gloves and the laboratory waste procedure.",
+        "Never mouth-pipette mercury and clean spills only under the supervisor’s protocol.",
+        "Use a clean tube and avoid vibration while focusing the meniscus.",
+        "Main errors: contact angle, mercury contamination, radius measurement and meniscus parallax."
+      ],
+      "precautions_bn": [
+        "পারদ বিষাক্ত: বন্ধ যন্ত্র, দস্তানা ও ল্যাবের বর্জ্যবিধি মেনে চলুন।",
+        "মুখে পাইপেটিং করবেন না; ছড়ালে শিক্ষকের নির্ধারিত পদ্ধতি অনুসরণ করুন।",
+        "পরিষ্কার নল ব্যবহার করে meniscus ফোকাসের সময় কম্পন এড়ান।",
+        "প্রধান ভুল: স্পর্শকোণ, পারদ দূষণ, ব্যাসার্ধ ও meniscus parallax।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "radiusM",
+          "label_en": "Radius r (m)",
+          "label_bn": "ব্যাসার্ধ r (m)",
+          "unit": "m"
+        },
+        {
+          "key": "depressionM",
+          "label_en": "Depression |h| (m)",
+          "label_bn": "অবনতি |h| (m)",
+          "unit": "m"
+        },
+        {
+          "key": "contactAngleDeg",
+          "label_en": "Contact angle (°)",
+          "label_bn": "স্পর্শকোণ (°)",
+          "unit": "°"
+        },
+        {
+          "key": "surfaceTension",
+          "label_en": "γ (N/m)",
+          "label_bn": "γ (N/m)",
+          "unit": "N/m"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Mercury surface tension γ",
+        "expectedConstant": 0.485,
+        "expectedConstantUnit": "N/m near room temperature",
+        "xColumn": "depressionM",
+        "yColumn": "surfaceTension"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why is the contact angle important for mercury in glass?",
+          "question_bn": "কাচে পারদের জন্য স্পর্শকোণ গুরুত্বপূর্ণ কেন?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Mercury does not completely wet glass",
+              "text_bn": "পারদ কাচকে সম্পূর্ণ ভেজায় না"
+            },
+            {
+              "id": "b",
+              "text_en": "It determines the electrical resistance",
+              "text_bn": "এটি বৈদ্যুতিক রোধ নির্ধারণ করে"
+            },
+            {
+              "id": "c",
+              "text_en": "It changes the mass of the microscope",
+              "text_bn": "এটি অণুবীক্ষণের ভর বদলায়"
+            },
+            {
+              "id": "d",
+              "text_en": "It removes gravity",
+              "text_bn": "এটি মহাকর্ষ সরিয়ে দেয়"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The contact angle controls the vertical component of surface tension.",
+          "explanation_bn": "স্পর্শকোণ পৃষ্ঠটানের উল্লম্ব উপাংশ নির্ধারণ করে।"
+        }
+      ],
+      "modelReadings": {
+        "radiusM": 0.0002,
+        "depressionM": 0.0045,
+        "contactAngleDeg": 140,
+        "surfaceTension": 0.485
+      }
+    },
+    {
+      "id": "compound-pendulum-gravity",
+      "slug": "compound-pendulum-gravity",
+      "title_en": "Acceleration due to gravity by compound pendulum",
+      "title_bn": "যৌগিক দোলকে অভিকর্ষজ ত্বরণ নির্ণয়",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine g with a compound pendulum by measuring periods about different knife-edge positions.",
+      "aim_bn": "বিভিন্ন knife-edge অবস্থানে পর্যায়কাল মেপে যৌগিক দোলকের সাহায্যে g নির্ণয় করা।",
+      "theory_en": "A rigid body oscillating about a horizontal axis has period T = 2π√((k²+h²)/(gh)), where h is the pivot-to-centre-of-mass distance and k is the radius of gyration.",
+      "theory_bn": "অনুভূমিক অক্ষের চারপাশে দৃঢ় বস্তু দুললে T = 2π√((k²+h²)/(gh)); h হলো অক্ষ থেকে ভরকেন্দ্রের দূরত্ব এবং k হলো জড়তার ব্যাসার্ধ।",
+      "formula_latex": "g = \\frac{4\\pi^2(k^2+h^2)}{T^2h}",
+      "formula_desc_en": "Use the equivalent length L = (k²+h²)/h and the measured period T; small oscillations are assumed.",
+      "formula_desc_bn": "সমতুল্য দৈর্ঘ্য L = (k²+h²)/h এবং মাপা T ব্যবহার করুন; ক্ষুদ্র দোলন ধরা হয়।",
+      "apparatusRequired": [
+        "meter-scale-wooden",
+        "digital-stopwatch",
+        "travelling-microscope",
+        "physical-beam-balance"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "meter-scale-wooden",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "digital-stopwatch",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "travelling-microscope",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "physical-beam-balance",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Locate the centre of mass of the bar and mark the distance scale.",
+          "instruction_bn": "দণ্ডের ভরকেন্দ্র নির্ণয় করে স্কেলে চিহ্ন দিন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Suspend the bar from one knife edge and give a small angular displacement.",
+          "instruction_bn": "একটি knife edge থেকে দণ্ড ঝুলিয়ে অল্প কৌণিক সরণ দিন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Time 20 or more complete oscillations and calculate T.",
+          "instruction_bn": "২০ বা তার বেশি পূর্ণ দোলনের সময় নিয়ে T হিসাব করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Repeat for several pivot positions on both sides of the centre of mass.",
+          "instruction_bn": "ভরকেন্দ্রের দুই পাশে কয়েকটি অক্ষ অবস্থানে পাঠ নিন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Plot T²h against h² or use the equivalent-length relation to determine g.",
+          "instruction_bn": "T²h বনাম h² লেখচিত্র বা সমতুল্য দৈর্ঘ্যের সম্পর্ক ব্যবহার করে g বের করুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Repeat the best readings and report mean g and percentage difference from 9.80665 m/s².",
+          "instruction_bn": "সেরা পাঠ পুনরাবৃত্তি করে গড় g এবং 9.80665 m/s² থেকে শতকরা পার্থক্য দিন।"
+        }
+      ],
+      "precautions_en": [
+        "Keep the amplitude small and the knife edge horizontal.",
+        "Count complete oscillations, not half swings; release without a push.",
+        "Avoid air currents and parallax when measuring h.",
+        "Main errors: timing reaction, friction at the edge, wrong centre-of-mass position and large amplitude."
+      ],
+      "precautions_bn": [
+        "বিস্তার ছোট ও knife edge অনুভূমিক রাখুন।",
+        "অর্ধদোলন নয়, পূর্ণ দোলন গুনুন; ধাক্কা না দিয়ে ছাড়ুন।",
+        "h মাপার সময় বায়ুপ্রবাহ ও parallax এড়ান।",
+        "প্রধান ভুল: সময় মাপার প্রতিক্রিয়া, edge friction, ভরকেন্দ্রের ভুল ও বড় বিস্তার।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "pivotDistanceM",
+          "label_en": "h (m)",
+          "label_bn": "h (m)",
+          "unit": "m"
+        },
+        {
+          "key": "oscillations",
+          "label_en": "Oscillations n",
+          "label_bn": "দোলন n"
+        },
+        {
+          "key": "timeS",
+          "label_en": "Time for n (s)",
+          "label_bn": "n দোলনের সময় (s)",
+          "unit": "s"
+        },
+        {
+          "key": "periodS",
+          "label_en": "Period T (s)",
+          "label_bn": "পর্যায়কাল T (s)",
+          "unit": "s"
+        },
+        {
+          "key": "gCalc",
+          "label_en": "g (m/s²)",
+          "label_bn": "g (m/s²)",
+          "unit": "m/s²"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Acceleration due to gravity g",
+        "expectedConstant": 9.80665,
+        "expectedConstantUnit": "m/s²",
+        "xColumn": "pivotDistanceM",
+        "yColumn": "gCalc"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Which condition makes the compound-pendulum formula most reliable?",
+          "question_bn": "যৌগিক দোলকের সূত্র কোন অবস্থায় বেশি নির্ভরযোগ্য?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Small angular oscillations",
+              "text_bn": "ক্ষুদ্র কৌণিক দোলন"
+            },
+            {
+              "id": "b",
+              "text_en": "Very large amplitude",
+              "text_bn": "অত্যন্ত বড় বিস্তার"
+            },
+            {
+              "id": "c",
+              "text_en": "A moving pivot",
+              "text_bn": "চলন্ত অক্ষ"
+            },
+            {
+              "id": "d",
+              "text_en": "A flexible bar",
+              "text_bn": "নমনীয় দণ্ড"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The small-angle approximation is used in the period relation.",
+          "explanation_bn": "পর্যায়কালের সম্পর্কে ক্ষুদ্র-কোণের approximation ব্যবহার করা হয়।"
+        }
+      ],
+      "modelReadings": {
+        "pivotDistanceM": 0.12,
+        "oscillations": 20,
+        "timeS": 44.2,
+        "periodS": 2.21,
+        "gCalc": 9.8
+      }
+    },
+    {
+      "id": "katers-pendulum-gravity",
+      "slug": "katers-pendulum-gravity",
+      "title_en": "Acceleration due to gravity by Kater's pendulum",
+      "title_bn": "ক্যাটার দোলকে অভিকর্ষজ ত্বরণ নির্ণয়",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine g using Kater's reversible pendulum by making the periods about its two knife edges equal.",
+      "aim_bn": "দুই knife edge-এ পর্যায়কাল সমান করে ক্যাটার দোলকের সাহায্যে g নির্ণয় করা।",
+      "theory_en": "At adjustment, the distances between the two knife edges act as the equivalent length L of the reversible pendulum, so the period relation is independent of a separately measured radius of gyration.",
+      "theory_bn": "সাম্যাবস্থায় দুই knife edge-এর দূরত্ব reversible pendulum-এর সমতুল্য দৈর্ঘ্য L হিসেবে কাজ করে; ফলে আলাদাভাবে জড়তার ব্যাসার্ধ মাপার প্রয়োজন কমে।",
+      "formula_latex": "g = \\frac{4\\pi^2 L}{T^2}",
+      "formula_desc_en": "L is the distance between knife edges and T is the common period after reversal adjustment.",
+      "formula_desc_bn": "L হলো দুই knife edge-এর দূরত্ব এবং T হলো reversal adjustment-এর পর অভিন্ন পর্যায়কাল।",
+      "apparatusRequired": [
+        "meter-scale-wooden",
+        "digital-stopwatch",
+        "travelling-microscope"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "meter-scale-wooden",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "digital-stopwatch",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "travelling-microscope",
+            "x": 390,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure the distance L between the two knife edges.",
+          "instruction_bn": "দুই knife edge-এর দূরত্ব L মাপুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Suspend the pendulum from edge A and measure the time for 20 oscillations.",
+          "instruction_bn": "A edge থেকে দোলক ঝুলিয়ে ২০ দোলনের সময় নিন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Reverse it about edge B and measure the same number of oscillations.",
+          "instruction_bn": "B edge-এ উল্টে একই সংখ্যক দোলনের সময় নিন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Adjust the sliding mass until the two periods agree within the stated tolerance.",
+          "instruction_bn": "দুই পর্যায়কাল নির্দিষ্ট tolerance-এর মধ্যে সমান না হওয়া পর্যন্ত sliding mass সামঞ্জস্য করুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Take repeated periods about both edges and use their common mean.",
+          "instruction_bn": "দুই edge-এ পুনরাবৃত্ত পাঠ নিয়ে অভিন্ন গড় ব্যবহার করুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Calculate g = 4π²L/T² and report the difference from the local reference value.",
+          "instruction_bn": "g = 4π²L/T² দিয়ে g হিসাব করে স্থানীয় reference মানের পার্থক্য লিখুন।"
+        }
+      ],
+      "precautions_en": [
+        "Keep the amplitude small and the knife edges clean and horizontal.",
+        "Do not disturb the sliding mass after equality is reached.",
+        "Use the same counting convention in both orientations.",
+        "Main errors: unequal periods, edge wear, large amplitude and stopwatch reaction time."
+      ],
+      "precautions_bn": [
+        "বিস্তার ছোট এবং knife edge পরিষ্কার ও অনুভূমিক রাখুন।",
+        "সমতা পাওয়ার পর sliding mass নাড়বেন না।",
+        "দুই orientation-এ একই counting convention ব্যবহার করুন।",
+        "প্রধান ভুল: অসম পর্যায়কাল, edge wear, বড় বিস্তার ও stopwatch reaction।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "lengthM",
+          "label_en": "Knife-edge length L (m)",
+          "label_bn": "knife-edge দূরত্ব L (m)",
+          "unit": "m"
+        },
+        {
+          "key": "timeA",
+          "label_en": "Time at A (s)",
+          "label_bn": "A-তে সময় (s)",
+          "unit": "s"
+        },
+        {
+          "key": "timeB",
+          "label_en": "Time at B (s)",
+          "label_bn": "B-তে সময় (s)",
+          "unit": "s"
+        },
+        {
+          "key": "periodS",
+          "label_en": "Common T (s)",
+          "label_bn": "অভিন্ন T (s)",
+          "unit": "s"
+        },
+        {
+          "key": "gCalc",
+          "label_en": "g (m/s²)",
+          "label_bn": "g (m/s²)",
+          "unit": "m/s²"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Acceleration due to gravity g",
+        "expectedConstant": 9.80665,
+        "expectedConstantUnit": "m/s²",
+        "xColumn": "lengthM",
+        "yColumn": "gCalc"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "What is adjusted in Kater’s pendulum before using the simple formula?",
+          "question_bn": "সহজ সূত্র ব্যবহারের আগে ক্যাটার দোলকে কী সামঞ্জস্য করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "The two knife-edge periods",
+              "text_bn": "দুই knife edge-এর পর্যায়কাল"
+            },
+            {
+              "id": "b",
+              "text_en": "The room pressure",
+              "text_bn": "কক্ষের চাপ"
+            },
+            {
+              "id": "c",
+              "text_en": "The stopwatch colour",
+              "text_bn": "স্টপওয়াচের রঙ"
+            },
+            {
+              "id": "d",
+              "text_en": "The bar temperature to absolute zero",
+              "text_bn": "দণ্ডের তাপমাত্রা পরম শূন্যে"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The periods about the two edges are made equal.",
+          "explanation_bn": "দুই edge-এ পর্যায়কাল সমান করা হয়।"
+        }
+      ],
+      "modelReadings": {
+        "lengthM": 0.994,
+        "timeA": 39.85,
+        "timeB": 39.87,
+        "periodS": 1.993,
+        "gCalc": 9.86
+      }
+    },
+    {
+      "id": "rigidity-modulus-static",
+      "slug": "rigidity-modulus-static",
+      "title_en": "Rigidity modulus of a wire or rod by static method",
+      "title_bn": "স্থির পদ্ধতিতে তার/দণ্ডের দৃঢ়তার গুণাঙ্ক",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the rigidity modulus of a cylindrical wire or rod from its static angle of twist under known torque.",
+      "aim_bn": "জ্ঞাত torque-এ তার বা দণ্ডের স্থির twist angle মেপে দৃঢ়তার গুণাঙ্ক নির্ণয় করা।",
+      "theory_en": "In the elastic range, torque is proportional to twist. The torsion constant of a circular wire depends on its radius to the fourth power.",
+      "theory_bn": "স্থিতিস্থাপক সীমায় torque twist-এর সমানুপাতিক। বৃত্তাকার তারের torsion constant ব্যাসার্ধের চতুর্থ ঘাতের ওপর নির্ভর করে।",
+      "formula_latex": "\\eta = \\frac{2\\tau L}{\\pi r^4\\theta},\\quad \\tau = M g R",
+      "formula_desc_en": "η is rigidity modulus, L wire length, r wire radius, θ twist in radians and R torque-arm radius.",
+      "formula_desc_bn": "η দৃঢ়তার গুণাঙ্ক, L তারের দৈর্ঘ্য, r ব্যাসার্ধ, θ radian-এ twist এবং R torque-arm ব্যাসার্ধ।",
+      "apparatusRequired": [
+        "spring-balance",
+        "screw-gauge-micrometer",
+        "meter-scale-wooden",
+        "slotted-weights-set"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "spring-balance",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "screw-gauge-micrometer",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "meter-scale-wooden",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "slotted-weights-set",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure wire length and diameter at several positions with the micrometer.",
+          "instruction_bn": "মাইক্রোমিটারে বিভিন্ন স্থানে তারের দৈর্ঘ্য ও ব্যাস মাপুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Fix the wire or rod firmly and attach the torque pulley or lever.",
+          "instruction_bn": "তার বা দণ্ড শক্তভাবে আটকিয়ে torque pulley/lever লাগান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Apply known loads gradually within the elastic limit.",
+          "instruction_bn": "স্থিতিস্থাপক সীমার মধ্যে ধাপে ধাপে জ্ঞাত ভার দিন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Read the angular twist for each torque after the system comes to rest.",
+          "instruction_bn": "স্থির হলে প্রতিটি torque-এর জন্য angular twist পড়ুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Plot torque against twist and use the slope to reduce random error.",
+          "instruction_bn": "random error কমাতে torque বনাম twist লেখচিত্র আঁকুন ও ঢাল নিন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Calculate η in pascals and repeat after unloading to check reversibility.",
+          "instruction_bn": "η pascal-এ হিসাব করে ভার নামানোর পর reversibility পরীক্ষা করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Never cross the elastic limit or allow the load to fall.",
+        "Measure radius carefully: it enters as r⁴.",
+        "Remove backlash before taking each angular reading.",
+        "Main errors: radius, zero error, bearing friction, backlash and non-uniform wire."
+      ],
+      "precautions_bn": [
+        "স্থিতিস্থাপক সীমা অতিক্রম করবেন না বা ভার পড়তে দেবেন না।",
+        "ব্যাসার্ধ খুব সতর্কে মাপুন: সূত্রে r⁴ আছে।",
+        "প্রতিটি angular reading-এর আগে backlash দূর করুন।",
+        "প্রধান ভুল: ব্যাসার্ধ, zero error, bearing friction, backlash ও অসম তার।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "loadKg",
+          "label_en": "Load (kg)",
+          "label_bn": "ভার (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "torqueNm",
+          "label_en": "Torque τ (N m)",
+          "label_bn": "torque τ (N m)",
+          "unit": "N m"
+        },
+        {
+          "key": "twistRad",
+          "label_en": "Twist θ (rad)",
+          "label_bn": "twist θ (rad)",
+          "unit": "rad"
+        },
+        {
+          "key": "rigidityPa",
+          "label_en": "η (Pa)",
+          "label_bn": "η (Pa)",
+          "unit": "Pa"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Rigidity modulus η",
+        "expectedConstant": 80000000000.0,
+        "expectedConstantUnit": "Pa for steel",
+        "xColumn": "twistRad",
+        "yColumn": "rigidityPa"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why must the wire radius be measured carefully in this experiment?",
+          "question_bn": "এই পরীক্ষায় তারের ব্যাসার্ধ সতর্কে মাপতে হয় কেন?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "The formula contains r⁴",
+              "text_bn": "সূত্রে r⁴ আছে"
+            },
+            {
+              "id": "b",
+              "text_en": "It sets the room temperature",
+              "text_bn": "এটি কক্ষের তাপমাত্রা ঠিক করে"
+            },
+            {
+              "id": "c",
+              "text_en": "It changes the stopwatch display",
+              "text_bn": "এটি stopwatch display বদলায়"
+            },
+            {
+              "id": "d",
+              "text_en": "It removes torque",
+              "text_bn": "এটি torque সরায়"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "A small fractional radius error is magnified because radius appears to the fourth power.",
+          "explanation_bn": "ব্যাসার্ধ চতুর্থ ঘাতে থাকায় ছোট আপেক্ষিক ভুলও অনেক বেড়ে যায়।"
+        }
+      ],
+      "modelReadings": {
+        "loadKg": 0.5,
+        "torqueNm": 0.49,
+        "twistRad": 0.035,
+        "rigidityPa": 79000000000.0
+      }
+    },
+    {
+      "id": "flywheel-moment-inertia",
+      "slug": "flywheel-moment-inertia",
+      "title_en": "Moment of inertia of a flywheel about its axis",
+      "title_bn": "অক্ষের সাপেক্ষে ফ্লাইহুইলের জড়তার ভ্রামক",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the moment of inertia of a flywheel by the falling-mass method.",
+      "aim_bn": "পতনশীল ভরের পদ্ধতিতে ফ্লাইহুইলের জড়তার ভ্রামক নির্ণয় করা।",
+      "theory_en": "A falling mass unwinds a thread from the axle and accelerates the flywheel. The ideal expression must be checked against axle friction and thread slip.",
+      "theory_bn": "পতনশীল ভর অক্ষ থেকে সুতো খুলে ফ্লাইহুইলকে ত্বরিত করে। আদর্শ সূত্রের সঙ্গে axle friction ও thread slip বিবেচনা করতে হবে।",
+      "formula_latex": "I = m r^2\\left(\\frac{g}{a}-1\\right),\\quad a=\\frac{2h}{t^2}",
+      "formula_desc_en": "m is falling mass, r axle radius, h drop distance, t descent time and a measured linear acceleration.",
+      "formula_desc_bn": "m পতনশীল ভর, r অক্ষের ব্যাসার্ধ, h পতন দূরত্ব, t সময় এবং a রৈখিক ত্বরণ।",
+      "apparatusRequired": [
+        "flywheel-rotational",
+        "digital-stopwatch",
+        "meter-scale-wooden",
+        "vernier-caliper",
+        "slotted-weights-set"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "flywheel-rotational",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "digital-stopwatch",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "meter-scale-wooden",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "vernier-caliper",
+            "x": 545,
+            "y": 90
+          },
+          {
+            "equipmentId": "slotted-weights-set",
+            "x": 80,
+            "y": 220
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure the axle radius and choose a safe drop height.",
+          "instruction_bn": "অক্ষের ব্যাসার্ধ মেপে নিরাপদ পতন উচ্চতা বেছে নিন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Wind the thread without overlap and attach a known hanging mass.",
+          "instruction_bn": "সুতো overlap ছাড়া পেঁচিয়ে জ্ঞাত ঝুলন্ত ভর লাগান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Release from rest and measure the time for the mass to descend h.",
+          "instruction_bn": "স্থিরাবস্থা থেকে ছেড়ে h দূরত্ব নামতে সময় নিন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Repeat the timing at least five times for the same m and h.",
+          "instruction_bn": "একই m ও h-এর জন্য অন্তত পাঁচবার সময় নিন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Calculate a and I; use a friction correction if the apparatus manual supplies one.",
+          "instruction_bn": "a ও I হিসাব করুন; যন্ত্রের manual-এ থাকলে friction correction নিন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "If angular speed is measured, calculate rotational energy K = Iω²/2 as a supplementary result.",
+          "instruction_bn": "কৌণিক বেগ মাপা গেলে অতিরিক্ত ফল হিসেবে K = Iω²/2 হিসাব করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Keep hands and clothing away from the rotating wheel.",
+        "Secure the hanging mass and do not let it hit the floor.",
+        "Use a photogate where available to reduce reaction-time error.",
+        "Main errors: axle friction, thread slip, axle-radius measurement and timing reaction."
+      ],
+      "precautions_bn": [
+        "ঘূর্ণায়মান চাকা থেকে হাত ও পোশাক দূরে রাখুন।",
+        "ঝুলন্ত ভর আটকে রাখুন এবং মেঝেতে আঘাত করতে দেবেন না।",
+        "সম্ভব হলে reaction error কমাতে photogate ব্যবহার করুন।",
+        "প্রধান ভুল: axle friction, thread slip, অক্ষের ব্যাসার্ধ ও সময়ের reaction।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "massKg",
+          "label_en": "m (kg)",
+          "label_bn": "m (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "axleRadiusM",
+          "label_en": "r (m)",
+          "label_bn": "r (m)",
+          "unit": "m"
+        },
+        {
+          "key": "heightM",
+          "label_en": "h (m)",
+          "label_bn": "h (m)",
+          "unit": "m"
+        },
+        {
+          "key": "timeS",
+          "label_en": "t (s)",
+          "label_bn": "t (s)",
+          "unit": "s"
+        },
+        {
+          "key": "acceleration",
+          "label_en": "a (m/s²)",
+          "label_bn": "a (m/s²)",
+          "unit": "m/s²"
+        },
+        {
+          "key": "inertia",
+          "label_en": "I (kg m²)",
+          "label_bn": "I (kg m²)",
+          "unit": "kg m²"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Flywheel moment of inertia I",
+        "expectedConstant": 0.0016,
+        "expectedConstantUnit": "kg m² (illustrative setup)",
+        "xColumn": "acceleration",
+        "yColumn": "inertia"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Which effect makes the ideal falling-mass formula overestimate or distort I?",
+          "question_bn": "কোন প্রভাব আদর্শ পতনশীল-ভর সূত্রে I-তে বিচ্যুতি আনে?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Axle friction and thread slip",
+              "text_bn": "axle friction ও thread slip"
+            },
+            {
+              "id": "b",
+              "text_en": "A clean scale reading",
+              "text_bn": "পরিষ্কার scale reading"
+            },
+            {
+              "id": "c",
+              "text_en": "A small mass label",
+              "text_bn": "ছোট ভরের label"
+            },
+            {
+              "id": "d",
+              "text_en": "Room lighting only",
+              "text_bn": "শুধু কক্ষের আলো"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Friction consumes part of the gravitational energy and slip changes the kinematic relation.",
+          "explanation_bn": "ঘর্ষণে মহাকর্ষীয় শক্তির অংশ নষ্ট হয় এবং slip-এ kinematic relation বদলে যায়।"
+        }
+      ],
+      "modelReadings": {
+        "massKg": 0.1,
+        "axleRadiusM": 0.02,
+        "heightM": 0.8,
+        "timeS": 0.9,
+        "acceleration": 1.98,
+        "inertia": 0.0016
+      }
+    },
+    {
+      "id": "searles-young-modulus",
+      "slug": "searles-young-modulus",
+      "title_en": "Young's modulus by Searle's apparatus",
+      "title_bn": "সিয়ার্লের যন্ত্রে ইয়ং গুণাঙ্ক",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine Young's modulus of a wire from the extension produced by known loads in Searle's apparatus.",
+      "aim_bn": "সিয়ার্লের যন্ত্রে জ্ঞাত ভারে তারের প্রসারণ মেপে ইয়ং গুণাঙ্ক নির্ণয় করা।",
+      "theory_en": "Within the elastic limit, Young’s modulus is the ratio of tensile stress to tensile strain. A reference wire compensates for support movement and temperature drift.",
+      "theory_bn": "স্থিতিস্থাপক সীমায় ইয়ং গুণাঙ্ক হলো tensile stress ও tensile strain-এর অনুপাত। reference wire support movement ও temperature drift সামলায়।",
+      "formula_latex": "Y=\\frac{F L}{A\\Delta L},\\quad A=\\frac{\\pi d^2}{4}",
+      "formula_desc_en": "Use the slope of force versus extension for repeated loads; diameter d must be in metres.",
+      "formula_desc_bn": "পুনরাবৃত্ত ভারের force বনাম extension-এর ঢাল নিন; d মিটারে ব্যবহার করুন।",
+      "apparatusRequired": [
+        "spring-balance",
+        "screw-gauge-micrometer",
+        "meter-scale-wooden",
+        "slotted-weights-set"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "spring-balance",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "screw-gauge-micrometer",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "meter-scale-wooden",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "slotted-weights-set",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure the test-wire length and diameter at several points.",
+          "instruction_bn": "বিভিন্ন স্থানে test wire-এর দৈর্ঘ্য ও ব্যাস মাপুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Level the Searle frame and remove backlash from both micrometer heads.",
+          "instruction_bn": "Searle frame level করে দুই micrometer head-এর backlash দূর করুন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Add loads gradually and wait for the pointer to settle.",
+          "instruction_bn": "ধীরে ধীরে ভার দিন এবং pointer স্থির হওয়া পর্যন্ত অপেক্ষা করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Read extension relative to the reference wire on loading and unloading.",
+          "instruction_bn": "reference wire-এর তুলনায় loading ও unloading-এ extension পড়ুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Plot F against ΔL and use the elastic straight-line region.",
+          "instruction_bn": "F বনাম ΔL লেখচিত্র এঁকে elastic straight-line region-এর ঢাল নিন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Calculate Y and check that unloading returns close to the original length.",
+          "instruction_bn": "Y হিসাব করে দেখুন unloading-এর পর দৈর্ঘ্য প্রায় আগের অবস্থায় ফেরে কি না।"
+        }
+      ],
+      "precautions_en": [
+        "Never load beyond the elastic limit.",
+        "Measure diameter at several points because area depends on d².",
+        "Allow thermal equilibrium and avoid touching the wires during readings.",
+        "Main errors: micrometer backlash, creep, parallax, diameter error and temperature change."
+      ],
+      "precautions_bn": [
+        "স্থিতিস্থাপক সীমার বেশি ভার দেবেন না।",
+        "d²-এর জন্য বিভিন্ন স্থানে ব্যাস মাপুন।",
+        "তাপীয় সাম্য আসতে দিন এবং পাঠের সময় তার স্পর্শ করবেন না।",
+        "প্রধান ভুল: micrometer backlash, creep, parallax, ব্যাসের ভুল ও তাপমাত্রার পরিবর্তন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "loadKg",
+          "label_en": "Load (kg)",
+          "label_bn": "ভার (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "forceN",
+          "label_en": "Force F (N)",
+          "label_bn": "বল F (N)",
+          "unit": "N"
+        },
+        {
+          "key": "extensionM",
+          "label_en": "Extension ΔL (m)",
+          "label_bn": "প্রসারণ ΔL (m)",
+          "unit": "m"
+        },
+        {
+          "key": "youngPa",
+          "label_en": "Y (Pa)",
+          "label_bn": "Y (Pa)",
+          "unit": "Pa"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Young's modulus Y",
+        "expectedConstant": 200000000000.0,
+        "expectedConstantUnit": "Pa for steel",
+        "xColumn": "extensionM",
+        "yColumn": "youngPa"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why is a reference wire used in Searle’s apparatus?",
+          "question_bn": "সিয়ার্লের যন্ত্রে reference wire কেন থাকে?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "To compensate support movement and temperature effects",
+              "text_bn": "support movement ও তাপমাত্রার প্রভাব সংশোধনে"
+            },
+            {
+              "id": "b",
+              "text_en": "To increase gravity",
+              "text_bn": "মহাকর্ষ বাড়াতে"
+            },
+            {
+              "id": "c",
+              "text_en": "To measure current",
+              "text_bn": "কারেন্ট মাপতে"
+            },
+            {
+              "id": "d",
+              "text_en": "To heat the wire",
+              "text_bn": "তার গরম করতে"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Both wires share frame movement, so their differential reading better represents extension of the test wire.",
+          "explanation_bn": "দুই তার frame movement ভাগ করে; তাই পার্থক্য পাঠ test wire-এর extension ভালোভাবে দেয়।"
+        }
+      ],
+      "modelReadings": {
+        "loadKg": 1.0,
+        "forceN": 9.81,
+        "extensionM": 0.0001,
+        "youngPa": 200000000000.0
+      }
+    },
+    {
+      "id": "rigidity-modulus-dynamic",
+      "slug": "rigidity-modulus-dynamic",
+      "title_en": "Rigidity modulus by dynamic torsional method",
+      "title_bn": "গতিশীল পদ্ধতিতে তারের দৃঢ়তার গুণাঙ্ক",
+      "category": "waves",
+      "domain": "waves",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the rigidity modulus of a wire from the period of torsional oscillation of a suspended body.",
+      "aim_bn": "ঝুলন্ত বস্তুর torsional oscillation-এর পর্যায়কাল থেকে তারের দৃঢ়তার গুণাঙ্ক নির্ণয় করা।",
+      "theory_en": "For a torsion pendulum, T = 2π√(I/κ), while κ = ηπr⁴/(2L) for a circular wire. The combined relation gives η.",
+      "theory_bn": "torsion pendulum-এ T = 2π√(I/κ), এবং বৃত্তাকার তারে κ = ηπr⁴/(2L)। দুটি সম্পর্ক মিলিয়ে η পাওয়া যায়।",
+      "formula_latex": "\\eta = \\frac{8\\pi I L}{T^2 r^4}",
+      "formula_desc_en": "I is the moment of inertia of the suspended system, L wire length, r wire radius and T torsional period.",
+      "formula_desc_bn": "I ঝুলন্ত ব্যবস্থার জড়তার ভ্রামক, L তারের দৈর্ঘ্য, r ব্যাসার্ধ এবং T torsional period।",
+      "apparatusRequired": [
+        "sonometer-board",
+        "screw-gauge-micrometer",
+        "meter-scale-wooden",
+        "digital-stopwatch"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "sonometer-board",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "screw-gauge-micrometer",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "meter-scale-wooden",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "digital-stopwatch",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure wire length and radius at several positions.",
+          "instruction_bn": "বিভিন্ন স্থানে তারের দৈর্ঘ্য ও ব্যাসার্ধ মাপুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Suspend the disc or cylinder centrally and set up pure torsional oscillation.",
+          "instruction_bn": "চাকতি বা cylinder কেন্দ্রে ঝুলিয়ে শুধু torsional oscillation তৈরি করুন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Measure the time for 20–30 oscillations with small angular amplitude.",
+          "instruction_bn": "ছোট angular amplitude-এ ২০–৩০ দোলনের সময় নিন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Repeat with known added masses or a known ring to obtain I if needed.",
+          "instruction_bn": "প্রয়োজনে জানা ring/ভর যোগ করে I নির্ণয় করুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Calculate η from the mean period and geometry.",
+          "instruction_bn": "গড় period ও geometry থেকে η হিসাব করুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Compare loading and unloading or repeated runs to check reproducibility.",
+          "instruction_bn": "পুনরাবৃত্ত run করে ফলের reproducibility যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Avoid sideways swinging; it couples a different mode into the period.",
+        "Keep the twist small and do not exceed the wire elastic limit.",
+        "Measure r carefully because it appears as r⁴.",
+        "Main errors: mixed modes, damping, radius error, clamp slip and timing reaction."
+      ],
+      "precautions_bn": [
+        "পাশের দোলন এড়ান; এতে period-এ অন্য mode মিশে যায়।",
+        "twist ছোট রাখুন এবং elastic limit অতিক্রম করবেন না।",
+        "r⁴ থাকার কারণে ব্যাসার্ধ সতর্কে মাপুন।",
+        "প্রধান ভুল: mixed mode, damping, ব্যাসার্ধ, clamp slip ও timing reaction।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "wireLengthM",
+          "label_en": "Wire length L (m)",
+          "label_bn": "তারের দৈর্ঘ্য L (m)",
+          "unit": "m"
+        },
+        {
+          "key": "radiusM",
+          "label_en": "Radius r (m)",
+          "label_bn": "ব্যাসার্ধ r (m)",
+          "unit": "m"
+        },
+        {
+          "key": "oscillations",
+          "label_en": "Oscillations n",
+          "label_bn": "দোলন n"
+        },
+        {
+          "key": "timeS",
+          "label_en": "Time (s)",
+          "label_bn": "সময় (s)",
+          "unit": "s"
+        },
+        {
+          "key": "periodS",
+          "label_en": "Period T (s)",
+          "label_bn": "পর্যায়কাল T (s)",
+          "unit": "s"
+        },
+        {
+          "key": "rigidityPa",
+          "label_en": "η (Pa)",
+          "label_bn": "η (Pa)",
+          "unit": "Pa"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Dynamic rigidity modulus η",
+        "expectedConstant": 80000000000.0,
+        "expectedConstantUnit": "Pa for steel",
+        "xColumn": "periodS",
+        "yColumn": "rigidityPa"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "What motion should be timed in the dynamic rigidity method?",
+          "question_bn": "গতিশীল দৃঢ়তা পদ্ধতিতে কোন গতি সময় করা উচিত?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Pure torsional oscillation",
+              "text_bn": "শুধু torsional oscillation"
+            },
+            {
+              "id": "b",
+              "text_en": "Sideways translation only",
+              "text_bn": "শুধু পাশের সরণ"
+            },
+            {
+              "id": "c",
+              "text_en": "Random bouncing",
+              "text_bn": "এলোমেলো লাফ"
+            },
+            {
+              "id": "d",
+              "text_en": "Electrical oscillation",
+              "text_bn": "তড়িৎ দোলন"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The torsion-pendulum relation models angular twisting, not coupled sideways motion.",
+          "explanation_bn": "torsion-pendulum relation কৌণিক পাক দোলনের জন্য; পাশের দোলনের জন্য নয়।"
+        }
+      ],
+      "modelReadings": {
+        "wireLengthM": 1.0,
+        "radiusM": 0.0005,
+        "oscillations": 20,
+        "timeS": 36.0,
+        "periodS": 1.8,
+        "rigidityPa": 78000000000.0
+      }
+    },
+    {
+      "id": "specific-heat-liquid-cooling",
+      "slug": "specific-heat-liquid-cooling",
+      "title_en": "Specific heat of a liquid by method of cooling",
+      "title_bn": "শীতলন পদ্ধতিতে তরলের আপেক্ষিক তাপ",
+      "category": "heat",
+      "domain": "heat",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the specific heat capacity of a liquid by comparing its cooling curve with water under the same conditions.",
+      "aim_bn": "একই অবস্থায় পানি ও অজানা তরলের cooling curve তুলনা করে অজানা তরলের আপেক্ষিক তাপ নির্ণয় করা।",
+      "theory_en": "If heat loss is compared over the same temperature interval and the same calorimeter is used, the ratio of cooling rates gives the ratio of heat capacities after mass correction.",
+      "theory_bn": "একই তাপমাত্রা interval ও একই calorimeter ব্যবহার করলে cooling rate-এর অনুপাত mass correction-এর পরে heat capacity-এর অনুপাত দেয়।",
+      "formula_latex": "c_l = c_w\\frac{m_w}{m_l}\\frac{R_l}{R_w}",
+      "formula_desc_en": "R is the magnitude of the cooling slope in the same temperature range; use a radiation correction when required.",
+      "formula_desc_bn": "R একই temperature range-এর cooling slope-এর মান; প্রয়োজনে radiation correction নিন।",
+      "apparatusRequired": [
+        "copper-calorimeter",
+        "lab-thermometer-mercury",
+        "digital-stopwatch",
+        "physical-beam-balance"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "copper-calorimeter",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "lab-thermometer-mercury",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "digital-stopwatch",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "physical-beam-balance",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure equal or known masses of water and the test liquid.",
+          "instruction_bn": "পানি ও test liquid-এর সমান বা জ্ঞাত ভর মাপুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Heat each liquid to the same starting temperature in the same calorimeter.",
+          "instruction_bn": "একই calorimeter-এ উভয় তরল একই starting temperature-এ গরম করুন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Record temperature at equal time intervals while cooling through a fixed range.",
+          "instruction_bn": "নির্দিষ্ট range-এ cooling চলাকালীন সমান time interval-এ temperature লিখুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Plot temperature against time and find the slope at the matched range.",
+          "instruction_bn": "temperature বনাম time graph এঁকে matched range-এর slope বের করুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Apply the mass and calorimeter correction specified by the laboratory manual.",
+          "instruction_bn": "ল্যাব manual-এর mass ও calorimeter correction প্রয়োগ করুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Calculate the liquid specific heat and repeat for a mean value.",
+          "instruction_bn": "তরলের আপেক্ষিক তাপ হিসাব করে পুনরাবৃত্তি থেকে গড় নিন।"
+        }
+      ],
+      "precautions_en": [
+        "Use the same vessel, thermometer position and exposed surface for both liquids.",
+        "Stir gently and uniformly without splashing or evaporation.",
+        "Do not compare slopes from different temperature ranges.",
+        "Main errors: radiation correction, evaporation, thermometer lag and unequal masses."
+      ],
+      "precautions_bn": [
+        "দুই তরলের জন্য একই পাত্র, thermometer position ও exposed surface ব্যবহার করুন।",
+        "ছিটানো বা evaporation ছাড়া আলতো ও সমানভাবে নাড়ুন।",
+        "ভিন্ন temperature range-এর slope তুলনা করবেন না।",
+        "প্রধান ভুল: radiation correction, evaporation, thermometer lag ও অসম ভর।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "massLiquidKg",
+          "label_en": "Liquid mass (kg)",
+          "label_bn": "তরলের ভর (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "rangeC",
+          "label_en": "Temperature range (°C)",
+          "label_bn": "তাপমাত্রা range (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "rateLiquid",
+          "label_en": "Liquid cooling rate",
+          "label_bn": "তরলের cooling rate",
+          "unit": "K/s"
+        },
+        {
+          "key": "rateWater",
+          "label_en": "Water cooling rate",
+          "label_bn": "পানির cooling rate",
+          "unit": "K/s"
+        },
+        {
+          "key": "specificHeat",
+          "label_en": "c liquid (J/kg K)",
+          "label_bn": "c তরল (J/kg K)",
+          "unit": "J/kg K"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Liquid specific heat c",
+        "expectedConstant": 4180,
+        "expectedConstantUnit": "J/kg K for water reference",
+        "xColumn": "rateLiquid",
+        "yColumn": "specificHeat"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why must both cooling curves use the same temperature interval?",
+          "question_bn": "দুই cooling curve-এ একই temperature interval কেন লাগে?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Heat-loss rate depends on temperature difference with the surroundings",
+              "text_bn": "পরিবেশের সঙ্গে temperature difference-এর ওপর heat loss নির্ভর করে"
+            },
+            {
+              "id": "b",
+              "text_en": "To change the liquid mass",
+              "text_bn": "তরলের ভর বদলাতে"
+            },
+            {
+              "id": "c",
+              "text_en": "To remove the calorimeter",
+              "text_bn": "calorimeter সরাতে"
+            },
+            {
+              "id": "d",
+              "text_en": "Because time has no unit",
+              "text_bn": "কারণ সময়ের unit নেই"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "A matched interval makes the heat-loss comparison meaningful.",
+          "explanation_bn": "একই interval হলে heat-loss তুলনা অর্থপূর্ণ হয়।"
+        }
+      ],
+      "modelReadings": {
+        "massLiquidKg": 0.15,
+        "rangeC": 10,
+        "rateLiquid": 0.0011,
+        "rateWater": 0.001,
+        "specificHeat": 4600
+      }
+    },
+    {
+      "id": "meldes-frequency",
+      "slug": "meldes-frequency",
+      "title_en": "Unknown tuning-fork frequency by Melde's experiment",
+      "title_bn": "মেল্ডের পরীক্ষায় অজানা সুরশলাকার কম্পাঙ্ক",
+      "category": "waves",
+      "domain": "waves",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the unknown frequency of a tuning fork using standing waves in a stretched string.",
+      "aim_bn": "টানটান তারে স্থির তরঙ্গ তৈরি করে মেল্ডের পরীক্ষায় অজানা tuning fork-এর কম্পাঙ্ক নির্ণয় করা।",
+      "theory_en": "At resonance the string forms n loops. Its wave speed is √(T/μ), and the loop length gives the wavelength. The vibrator-to-string frequency ratio must be identified from the arrangement.",
+      "theory_bn": "অনুনাদে তারে nটি loop তৈরি হয়। তারের wave speed √(T/μ), আর loop length থেকে wavelength পাওয়া যায়। arrangement অনুযায়ী vibrator-to-string frequency ratio ঠিক করতে হবে।",
+      "formula_latex": "f_s = \\frac{n}{2L}\\sqrt{\\frac{T}{\\mu}}",
+      "formula_desc_en": "L is vibrating length, n loop count, T tension and μ mass per unit length; then convert fs to the tuning-fork frequency as required.",
+      "formula_desc_bn": "L vibrating length, n loop count, T tension ও μ একক দৈর্ঘ্যের ভর; প্রয়োজনমতো fs থেকে tuning-fork frequency নিন।",
+      "apparatusRequired": [
+        "sonometer-board",
+        "tuning-forks-set",
+        "slotted-weights-set",
+        "meter-scale-wooden"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "sonometer-board",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "tuning-forks-set",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "slotted-weights-set",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "meter-scale-wooden",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure the string mass per unit length and set a known hanging tension.",
+          "instruction_bn": "তারের একক দৈর্ঘ্যের ভর মেপে জ্ঞাত hanging tension দিন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Connect the tuning fork and adjust the length until clear stationary loops appear.",
+          "instruction_bn": "tuning fork যুক্ত করে স্পষ্ট স্থির loop না হওয়া পর্যন্ত দৈর্ঘ্য সামঞ্জস্য করুন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Count the loops and measure the vibrating length L.",
+          "instruction_bn": "loop গুনে vibrating length L মাপুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Repeat for several tensions or lengths while keeping the string straight.",
+          "instruction_bn": "তার সোজা রেখে কয়েকটি tension বা length-এ পুনরাবৃত্তি করুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Calculate the string frequency and apply the transverse or longitudinal arrangement factor.",
+          "instruction_bn": "string frequency হিসাব করে transverse বা longitudinal arrangement factor প্রয়োগ করুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Report the unknown tuning-fork frequency from the mean.",
+          "instruction_bn": "গড় থেকে অজানা tuning-fork frequency লিখুন।"
+        }
+      ],
+      "precautions_en": [
+        "Keep the pulley smooth and the tension steady.",
+        "Count only sharp stationary loops; avoid large amplitude.",
+        "Do not touch the vibrating string while reading.",
+        "Main errors: wrong frequency ratio, pulley friction, loop-count ambiguity and non-uniform string."
+      ],
+      "precautions_bn": [
+        "পুলি মসৃণ ও tension স্থির রাখুন।",
+        "শুধু স্পষ্ট stationary loop গুনুন; বড় বিস্তার এড়ান।",
+        "পাঠের সময় vibrating string স্পর্শ করবেন না।",
+        "প্রধান ভুল: ভুল frequency ratio, pulley friction, loop count ও অসম তার।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "tensionN",
+          "label_en": "Tension T (N)",
+          "label_bn": "tension T (N)",
+          "unit": "N"
+        },
+        {
+          "key": "lengthM",
+          "label_en": "Length L (m)",
+          "label_bn": "দৈর্ঘ্য L (m)",
+          "unit": "m"
+        },
+        {
+          "key": "loops",
+          "label_en": "Loops n",
+          "label_bn": "loop n"
+        },
+        {
+          "key": "linearDensity",
+          "label_en": "μ (kg/m)",
+          "label_bn": "μ (kg/m)",
+          "unit": "kg/m"
+        },
+        {
+          "key": "frequencyHz",
+          "label_en": "f (Hz)",
+          "label_bn": "f (Hz)",
+          "unit": "Hz"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Melde frequency f",
+        "expectedConstant": 256,
+        "expectedConstantUnit": "Hz illustrative fork",
+        "xColumn": "lengthM",
+        "yColumn": "frequencyHz"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "What must be identified before converting string frequency to tuning-fork frequency?",
+          "question_bn": "তারের frequency থেকে tuning-fork frequency বের করার আগে কী জানতে হবে?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "The Melde arrangement and frequency ratio",
+              "text_bn": "Melde arrangement ও frequency ratio"
+            },
+            {
+              "id": "b",
+              "text_en": "Only the room colour",
+              "text_bn": "শুধু কক্ষের রঙ"
+            },
+            {
+              "id": "c",
+              "text_en": "The balance brand",
+              "text_bn": "balance-এর brand"
+            },
+            {
+              "id": "d",
+              "text_en": "The water density",
+              "text_bn": "পানির ঘনত্ব"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The vibrator and string may have equal or related frequencies depending on the arrangement.",
+          "explanation_bn": "arrangement অনুযায়ী vibrator ও string-এর frequency সমান বা সম্পর্কিত হতে পারে।"
+        }
+      ],
+      "modelReadings": {
+        "tensionN": 9.81,
+        "lengthM": 0.5,
+        "loops": 4,
+        "linearDensity": 0.0015,
+        "frequencyHz": 256
+      }
+    },
+    {
+      "id": "latent-heat-fusion-radiation",
+      "slug": "latent-heat-fusion-radiation",
+      "title_en": "Latent heat of fusion of ice with radiation correction",
+      "title_bn": "বিকিরণ সংশোধনসহ বরফের গলনের সুপ্ততাপ",
+      "category": "heat",
+      "domain": "heat",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the specific latent heat of fusion of ice using calorimetry and a radiation correction.",
+      "aim_bn": "calorimetry ও radiation correction ব্যবহার করে বরফের গলনের আপেক্ষিক সুপ্ততাপ নির্ণয় করা।",
+      "theory_en": "Heat lost by warm water and the calorimeter melts ice and warms the meltwater. The observed temperature change is corrected for heat exchange with the surroundings.",
+      "theory_bn": "উষ্ণ পানি ও calorimeter-এর বর্জিত তাপে বরফ গলে এবং meltwater গরম হয়। পরিবেশের সঙ্গে heat exchange-এর জন্য observed change সংশোধন করতে হয়।",
+      "formula_latex": "L=\\frac{(m_wc_w+m_cc_c)\\Delta T_{corr}-m_i c_w(T_f-0)}{m_i}",
+      "formula_desc_en": "mi is the mass of ice melted; ΔTcorr includes the radiation correction obtained from the cooling curve.",
+      "formula_desc_bn": "mi গলা বরফের ভর; ΔTcorr cooling curve থেকে পাওয়া radiation correction-সহ temperature fall।",
+      "apparatusRequired": [
+        "copper-calorimeter",
+        "lab-thermometer-mercury",
+        "physical-beam-balance",
+        "digital-stopwatch"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "copper-calorimeter",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "lab-thermometer-mercury",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "physical-beam-balance",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "digital-stopwatch",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure the calorimeter and warm-water masses and record the initial temperature.",
+          "instruction_bn": "calorimeter ও উষ্ণ পানির ভর মেপে initial temperature লিখুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Dry small pieces of ice with blotting paper before adding them.",
+          "instruction_bn": "বরফের ছোট টুকরা blotting paper-এ শুকিয়ে নিন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Add ice gradually while stirring and record temperature against time.",
+          "instruction_bn": "নাড়তে নাড়তে ধীরে বরফ দিন এবং time-এর সঙ্গে temperature লিখুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Stop when the ice has melted and take the final corrected temperature.",
+          "instruction_bn": "বরফ গলে গেলে final corrected temperature নিন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Weigh the system again to find the mass of ice melted.",
+          "instruction_bn": "আবার system-এর ভর নিয়ে গলা বরফের ভর বের করুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Obtain the radiation correction from the cooling curve and calculate L.",
+          "instruction_bn": "cooling curve থেকে radiation correction নিয়ে L হিসাব করুন।"
+        },
+        {
+          "stepNumber": 7,
+          "instruction_en": "Repeat the run and report the mean with uncertainty.",
+          "instruction_bn": "run পুনরাবৃত্তি করে uncertainty-সহ গড় ফল দিন।"
+        }
+      ],
+      "precautions_en": [
+        "Use dry ice; water carried on the surface makes mi too large.",
+        "Keep the lid on and stir gently for a uniform temperature.",
+        "Do not touch ice with bare contaminated hands.",
+        "Main errors: wet ice, evaporation, incomplete melting, heat leak and correction extrapolation."
+      ],
+      "precautions_bn": [
+        "শুকনো বরফ ব্যবহার করুন; বরফের গায়ের পানি mi বেশি দেখাবে।",
+        "ঢাকনা দিয়ে সমান তাপমাত্রার জন্য আলতো নাড়ুন।",
+        "দূষিত খালি হাতে বরফ ধরবেন না।",
+        "প্রধান ভুল: ভেজা বরফ, evaporation, অসম্পূর্ণ গলন, heat leak ও correction extrapolation।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "waterMassKg",
+          "label_en": "Water mass (kg)",
+          "label_bn": "পানির ভর (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "iceMassKg",
+          "label_en": "Melted ice (kg)",
+          "label_bn": "গলা বরফ (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "initialTempC",
+          "label_en": "Initial T (°C)",
+          "label_bn": "প্রাথমিক T (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "finalTempC",
+          "label_en": "Corrected final T (°C)",
+          "label_bn": "সংশোধিত শেষ T (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "latentHeat",
+          "label_en": "L (J/kg)",
+          "label_bn": "L (J/kg)",
+          "unit": "J/kg"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Latent heat of fusion L",
+        "expectedConstant": 334000,
+        "expectedConstantUnit": "J/kg",
+        "xColumn": "iceMassKg",
+        "yColumn": "latentHeat"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why is the ice dried before it is added?",
+          "question_bn": "বরফ যোগ করার আগে বরফ শুকানো হয় কেন?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Surface water would be counted as melted ice",
+              "text_bn": "বরফের গায়ের পানি gলা বরফ হিসেবে গণনা হবে"
+            },
+            {
+              "id": "b",
+              "text_en": "To make ice colder than 0 K",
+              "text_bn": "বরফকে 0 K-এর নিচে ঠান্ডা করতে"
+            },
+            {
+              "id": "c",
+              "text_en": "To increase radiation",
+              "text_bn": "বিকিরণ বাড়াতে"
+            },
+            {
+              "id": "d",
+              "text_en": "To remove the calorimeter",
+              "text_bn": "calorimeter সরাতে"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Surface water adds mass without requiring latent heat of fusion, biasing the result.",
+          "explanation_bn": "গায়ের পানি সুপ্ততাপ না নিয়েই ভর বাড়ায়, তাই ফল ভুল হয়।"
+        }
+      ],
+      "modelReadings": {
+        "waterMassKg": 0.2,
+        "iceMassKg": 0.03,
+        "initialTempC": 35,
+        "finalTempC": 18,
+        "latentHeat": 334000
+      }
+    },
+    {
+      "id": "specific-heat-solid-radiation",
+      "slug": "specific-heat-solid-radiation",
+      "title_en": "Specific heat of a solid by method of mixtures",
+      "title_bn": "বিকিরণ সংশোধনসহ মিশ্রণ পদ্ধতিতে কঠিনের আপেক্ষিক তাপ",
+      "category": "heat",
+      "domain": "heat",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the specific heat of a solid by the method of mixtures with radiation correction.",
+      "aim_bn": "radiation correction-সহ method of mixtures-এ কঠিনের আপেক্ষিক তাপ নির্ণয় করা।",
+      "theory_en": "Heat lost by the hot solid equals heat gained by water and the calorimeter after correcting the final temperature for heat exchange with the room.",
+      "theory_bn": "গরম কঠিনের বর্জিত তাপ পানি ও calorimeter-এর গৃহীত তাপের সমান; room exchange-এর জন্য final temperature সংশোধন করতে হয়।",
+      "formula_latex": "c_s=\\frac{(m_wc_w+m_cc_c)(T_f-T_w)}{m_s(T_s-T_f)}",
+      "formula_desc_en": "Tw is initial water temperature, Ts the solid temperature and Tf the corrected equilibrium temperature.",
+      "formula_desc_bn": "Tw পানির initial temperature, Ts solid temperature এবং Tf সংশোধিত equilibrium temperature।",
+      "apparatusRequired": [
+        "copper-calorimeter",
+        "metal-sample-blocks",
+        "lab-thermometer-mercury",
+        "physical-beam-balance"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "copper-calorimeter",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "metal-sample-blocks",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "lab-thermometer-mercury",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "physical-beam-balance",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure the masses of the dry solid, water and calorimeter.",
+          "instruction_bn": "শুকনো solid, পানি ও calorimeter-এর ভর মাপুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Heat the solid in a boiling-water bath to a known Ts.",
+          "instruction_bn": "ফুটন্ত পানির bath-এ solid-কে জ্ঞাত Ts-এ গরম করুন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Record the initial water temperature Tw and transfer the solid quickly.",
+          "instruction_bn": "পানির initial temperature Tw লিখে solid দ্রুত transfer করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Stir until the mixture reaches equilibrium and record the cooling curve.",
+          "instruction_bn": "নাড়তে নাড়তে equilibrium এনে cooling curve লিখুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Apply the radiation correction to find Tf.",
+          "instruction_bn": "Tf বের করতে radiation correction প্রয়োগ করুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Calculate cs and repeat for a mean result.",
+          "instruction_bn": "cs হিসাব করে গড় ফলের জন্য পুনরাবৃত্তি করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Dry the solid before weighing and transfer it rapidly.",
+        "Keep the calorimeter covered and stir uniformly.",
+        "Keep the thermometer bulb fully immersed without touching the vessel.",
+        "Main errors: heat loss during transfer, wet sample, thermometer lag and wrong calorimeter constant."
+      ],
+      "precautions_bn": [
+        "ওজনের আগে solid শুকিয়ে দ্রুত transfer করুন।",
+        "calorimeter ঢেকে সমানভাবে নাড়ুন।",
+        "thermometer bulb সম্পূর্ণ নিমজ্জিত রাখুন, পাত্রে লাগাবেন না।",
+        "প্রধান ভুল: transfer-এর সময় heat loss, ভেজা sample, thermometer lag ও calorimeter constant।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "solidMassKg",
+          "label_en": "Solid mass (kg)",
+          "label_bn": "solid-এর ভর (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "waterMassKg",
+          "label_en": "Water mass (kg)",
+          "label_bn": "পানির ভর (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "solidTempC",
+          "label_en": "Solid T (°C)",
+          "label_bn": "solid T (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "waterTempC",
+          "label_en": "Water T (°C)",
+          "label_bn": "পানি T (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "finalTempC",
+          "label_en": "Corrected Tf (°C)",
+          "label_bn": "সংশোধিত Tf (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "specificHeat",
+          "label_en": "cs (J/kg K)",
+          "label_bn": "cs (J/kg K)",
+          "unit": "J/kg K"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Solid specific heat cs",
+        "expectedConstant": 385,
+        "expectedConstantUnit": "J/kg K illustrative copper block",
+        "xColumn": "finalTempC",
+        "yColumn": "specificHeat"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "What does the mixture method equate?",
+          "question_bn": "মিশ্রণ পদ্ধতিতে কী সমান ধরা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Heat lost by the hot solid and heat gained by the cooler system",
+              "text_bn": "গরম solid-এর বর্জিত তাপ ও ঠান্ডা system-এর গৃহীত তাপ"
+            },
+            {
+              "id": "b",
+              "text_en": "Mass and density always",
+              "text_bn": "সবসময় ভর ও ঘনত্ব"
+            },
+            {
+              "id": "c",
+              "text_en": "Voltage and current",
+              "text_bn": "voltage ও current"
+            },
+            {
+              "id": "d",
+              "text_en": "Length and time",
+              "text_bn": "দৈর্ঘ্য ও সময়"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The calculation is based on conservation of energy with heat-loss correction.",
+          "explanation_bn": "heat-loss correction-সহ শক্তির সংরক্ষণ নীতির ওপর হিসাবটি নির্ভর করে।"
+        }
+      ],
+      "modelReadings": {
+        "solidMassKg": 0.1,
+        "waterMassKg": 0.2,
+        "solidTempC": 95,
+        "waterTempC": 25,
+        "finalTempC": 31.5,
+        "specificHeat": 385
+      }
+    },
+    {
+      "id": "mechanical-equivalent-heat-radiation",
+      "slug": "mechanical-equivalent-heat-radiation",
+      "title_en": "Mechanical equivalent of heat J with radiation correction",
+      "title_bn": "বিকিরণ সংশোধনসহ তাপের যান্ত্রিক সমতা J",
+      "category": "heat",
+      "domain": "heat",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the mechanical equivalent of heat from electrical work supplied to a calorimeter, including radiation correction.",
+      "aim_bn": "calorimeter-এ সরবরাহ করা electrical work থেকে radiation correction-সহ তাপের যান্ত্রিক সমতা J নির্ণয় করা।",
+      "theory_en": "Electrical work VIt is converted into heat in the calorimeter. The thermal energy is corrected for heat exchanged with the surroundings before taking the ratio.",
+      "theory_bn": "calorimeter-এ electrical work VIt তাপে রূপান্তরিত হয়। অনুপাত নেওয়ার আগে পরিবেশের সঙ্গে heat exchange সংশোধন করতে হয়।",
+      "formula_latex": "J=\\frac{VIt}{(m_wc_w+m_cc_c)\\Delta T_{corr}}",
+      "formula_desc_en": "Use SI electrical work and thermal energy units consistently; J is expected near 4.186 J/cal when calories are used.",
+      "formula_desc_bn": "SI electrical work ও thermal energy-এর unit consistent রাখুন; calorie unit ব্যবহার করলে J প্রায় 4.186 J/cal।",
+      "apparatusRequired": [
+        "copper-calorimeter",
+        "immersion-heater",
+        "power-supply-variable",
+        "lab-thermometer-mercury",
+        "digital-stopwatch"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "copper-calorimeter",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "immersion-heater",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "power-supply-variable",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "lab-thermometer-mercury",
+            "x": 545,
+            "y": 90
+          },
+          {
+            "equipmentId": "digital-stopwatch",
+            "x": 80,
+            "y": 220
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure water and calorimeter masses and record the initial temperature.",
+          "instruction_bn": "পানি ও calorimeter-এর ভর মেপে initial temperature লিখুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Place the immersion heater fully in the water and record V and I.",
+          "instruction_bn": "immersion heater পানিতে সম্পূর্ণ ডুবিয়ে V ও I লিখুন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Pass current for a measured time while stirring gently.",
+          "instruction_bn": "আলতো নাড়তে নাড়তে নির্দিষ্ট সময় current চালান।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Record the temperature rise and use the cooling curve to correct ΔT.",
+          "instruction_bn": "temperature rise লিখে cooling curve থেকে ΔT সংশোধন করুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Calculate electrical work VIt and thermal energy gained.",
+          "instruction_bn": "electrical work VIt ও গৃহীত thermal energy হিসাব করুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Repeat for different times or currents and report the mean J.",
+          "instruction_bn": "ভিন্ন সময় বা current-এ পুনরাবৃত্তি করে গড় J দিন।"
+        }
+      ],
+      "precautions_en": [
+        "Keep the heater fully immersed and insulated from the vessel.",
+        "Use low safe voltage and inspect leads before switching on.",
+        "Stir gently and avoid evaporation.",
+        "Main errors: radiation loss, heater heat capacity, voltage fluctuation and temperature lag."
+      ],
+      "precautions_bn": [
+        "heater সম্পূর্ণ নিমজ্জিত ও vessel থেকে insulated রাখুন।",
+        "নিরাপদ low voltage ব্যবহার করে lead পরীক্ষা করুন।",
+        "আলতো নাড়ুন এবং evaporation এড়ান।",
+        "প্রধান ভুল: radiation loss, heater heat capacity, voltage fluctuation ও temperature lag।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "voltageV",
+          "label_en": "V (V)",
+          "label_bn": "V (V)",
+          "unit": "V"
+        },
+        {
+          "key": "currentA",
+          "label_en": "I (A)",
+          "label_bn": "I (A)",
+          "unit": "A"
+        },
+        {
+          "key": "timeS",
+          "label_en": "t (s)",
+          "label_bn": "t (s)",
+          "unit": "s"
+        },
+        {
+          "key": "deltaTC",
+          "label_en": "Corrected ΔT (°C)",
+          "label_bn": "সংশোধিত ΔT (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "JCalc",
+          "label_en": "J (J/cal)",
+          "label_bn": "J (J/cal)",
+          "unit": "J/cal"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Mechanical equivalent J",
+        "expectedConstant": 4.186,
+        "expectedConstantUnit": "J/cal",
+        "xColumn": "deltaTC",
+        "yColumn": "JCalc"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "What is the purpose of the radiation correction?",
+          "question_bn": "radiation correction-এর উদ্দেশ্য কী?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "To account for heat exchanged with the surroundings",
+              "text_bn": "পরিবেশের সঙ্গে heat exchange হিসাব করা"
+            },
+            {
+              "id": "b",
+              "text_en": "To change electrical work into mass",
+              "text_bn": "electrical work-কে ভরে বদলানো"
+            },
+            {
+              "id": "c",
+              "text_en": "To remove voltage",
+              "text_bn": "voltage সরানো"
+            },
+            {
+              "id": "d",
+              "text_en": "To make the heater cold",
+              "text_bn": "heater ঠান্ডা করা"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The calorimeter may gain or lose heat in addition to the heater input.",
+          "explanation_bn": "heater input ছাড়াও calorimeter পরিবেশ থেকে তাপ নিতে বা দিতে পারে।"
+        }
+      ],
+      "modelReadings": {
+        "voltageV": 12,
+        "currentA": 2,
+        "timeS": 300,
+        "deltaTC": 8.6,
+        "JCalc": 4.18
+      }
+    },
+    {
+      "id": "thermal-conductivity-searle",
+      "slug": "thermal-conductivity-searle",
+      "title_en": "Thermal conductivity of a good conductor by Searle's apparatus",
+      "title_bn": "সিয়ার্লের যন্ত্রে সুপরিবাহীর তাপ পরিবাহিতা",
+      "category": "heat",
+      "domain": "heat",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the thermal conductivity of a good conductor using Searle's steady-flow apparatus.",
+      "aim_bn": "সিয়ার্লের steady-flow apparatus ব্যবহার করে সুপরিবাহীর তাপ পরিবাহিতা নির্ণয় করা।",
+      "theory_en": "At steady state, heat conducted along the bar per second equals heat carried away by the cooling water per second.",
+      "theory_bn": "স্থির অবস্থায় বারে প্রতি সেকেন্ডে পরিবাহিত তাপের হার cooling water প্রতি সেকেন্ডে নিয়ে যাওয়া তাপের হারের সমান।",
+      "formula_latex": "k=\\frac{m_w c_w (T_4-T_3)L}{A(T_1-T_2)t}",
+      "formula_desc_en": "T1 and T2 are hot and cold bar temperatures; T3 and T4 are water inlet and outlet temperatures.",
+      "formula_desc_bn": "T1 ও T2 bar-এর hot/cold temperature; T3 ও T4 water inlet/outlet temperature।",
+      "apparatusRequired": [
+        "searles-conductivity-apparatus",
+        "lab-thermometer-mercury",
+        "physical-beam-balance",
+        "digital-stopwatch"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "searles-conductivity-apparatus",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "lab-thermometer-mercury",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "physical-beam-balance",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "digital-stopwatch",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure bar length, diameter and thermometer least counts.",
+          "instruction_bn": "bar-এর দৈর্ঘ্য, ব্যাস ও thermometer-এর least count মাপুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Start the heater and cooling-water flow; wait until all four temperatures are steady.",
+          "instruction_bn": "heater ও cooling-water flow চালিয়ে চার temperature স্থির হওয়া পর্যন্ত অপেক্ষা করুন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Measure water collected in a known time to obtain mw/t.",
+          "instruction_bn": "জ্ঞাত সময়ে সংগৃহীত পানির ভর মেপে mw/t বের করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Record T1, T2, T3 and T4 simultaneously.",
+          "instruction_bn": "একসঙ্গে T1, T2, T3 ও T4 লিখুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Calculate k from the steady-flow equation and repeat at another flow rate.",
+          "instruction_bn": "steady-flow equation থেকে k হিসাব করে অন্য flow rate-এ পুনরাবৃত্তি করুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Report the mean and discuss lateral heat loss and contact effects.",
+          "instruction_bn": "গড় ফল লিখে lateral heat loss ও contact effect আলোচনা করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Insulate the bar and ensure good thermal contact with the thermometers.",
+        "Keep water flow steady and remove air bubbles from the jacket.",
+        "Do not touch the hot bar or wet electrical connections.",
+        "Main errors: non-steady state, water-flow measurement, heat loss and thermometer calibration."
+      ],
+      "precautions_bn": [
+        "bar insulate করে thermometer-এর সঙ্গে ভালো thermal contact রাখুন।",
+        "water flow স্থির রাখুন এবং jacket-এর air bubble সরান।",
+        "গরম bar বা ভেজা electrical connection স্পর্শ করবেন না।",
+        "প্রধান ভুল: non-steady state, water-flow measurement, heat loss ও thermometer calibration।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "waterMassKg",
+          "label_en": "Water mass (kg)",
+          "label_bn": "পানির ভর (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "timeS",
+          "label_en": "Time (s)",
+          "label_bn": "সময় (s)",
+          "unit": "s"
+        },
+        {
+          "key": "hotTempC",
+          "label_en": "T1 hot (°C)",
+          "label_bn": "T1 hot (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "coldTempC",
+          "label_en": "T2 cold (°C)",
+          "label_bn": "T2 cold (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "waterInC",
+          "label_en": "T3 inlet (°C)",
+          "label_bn": "T3 inlet (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "waterOutC",
+          "label_en": "T4 outlet (°C)",
+          "label_bn": "T4 outlet (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "conductivity",
+          "label_en": "k (W/m K)",
+          "label_bn": "k (W/m K)",
+          "unit": "W/m K"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Thermal conductivity k",
+        "expectedConstant": 390,
+        "expectedConstantUnit": "W/m K for copper",
+        "xColumn": "waterOutC",
+        "yColumn": "conductivity"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "What indicates steady state in Searle’s apparatus?",
+          "question_bn": "সিয়ার্লের যন্ত্রে steady state কীভাবে বোঝা যায়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "The four relevant temperatures remain nearly constant",
+              "text_bn": "প্রাসঙ্গিক চার temperature প্রায় স্থির থাকে"
+            },
+            {
+              "id": "b",
+              "text_en": "The heater is switched off immediately",
+              "text_bn": "heater সঙ্গে সঙ্গে বন্ধ"
+            },
+            {
+              "id": "c",
+              "text_en": "No water flows",
+              "text_bn": "পানি flow করে না"
+            },
+            {
+              "id": "d",
+              "text_en": "The bar is at 0 K",
+              "text_bn": "bar 0 K-এ"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The steady-flow calculation requires stable bar and water temperatures.",
+          "explanation_bn": "steady-flow calculation-এর জন্য bar ও water temperature স্থির থাকা দরকার।"
+        }
+      ],
+      "modelReadings": {
+        "waterMassKg": 0.12,
+        "timeS": 60,
+        "hotTempC": 80,
+        "coldTempC": 42,
+        "waterInC": 25,
+        "waterOutC": 31,
+        "conductivity": 390
+      }
+    },
+    {
+      "id": "density-water-temperature",
+      "slug": "density-water-temperature",
+      "title_en": "Density of water at different temperatures by specific gravity bottle",
+      "title_bn": "specific gravity bottle-এ বিভিন্ন তাপমাত্রায় পানির ঘনত্ব",
+      "category": "heat",
+      "domain": "heat",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the density of water at six temperatures and study its variation with temperature.",
+      "aim_bn": "ছয়টি তাপমাত্রায় specific gravity bottle ব্যবহার করে পানির ঘনত্ব নির্ণয় ও তাপমাত্রার সঙ্গে পরিবর্তন পর্যবেক্ষণ করা।",
+      "theory_en": "A calibrated specific-gravity bottle has fixed volume at the working temperature. Density is mass divided by volume; water reaches maximum density near 4°C.",
+      "theory_bn": "calibrated specific-gravity bottle-এর working temperature-এ volume নির্দিষ্ট। density = mass/volume; 4°C-এর কাছে পানির density সর্বাধিক।",
+      "formula_latex": "\\rho_T=\\frac{m_{b+water,T}-m_b}{V_T}",
+      "formula_desc_en": "Calibrate bottle volume with a reference liquid if required, dry the outside before every weighing and plot ρ versus T.",
+      "formula_desc_bn": "প্রয়োজনে reference liquid দিয়ে bottle volume calibrate করুন; প্রতিবার ওজনের আগে বাইরে শুকিয়ে ρ বনাম T graph আঁকুন।",
+      "apparatusRequired": [
+        "physical-beam-balance",
+        "lab-thermometer-mercury",
+        "digital-stopwatch",
+        "specific-gravity-bottle"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "physical-beam-balance",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "lab-thermometer-mercury",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "specific-gravity-bottle",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "digital-stopwatch",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Clean and dry the specific-gravity bottle and determine its empty mass.",
+          "instruction_bn": "specific gravity bottle পরিষ্কার ও শুকিয়ে empty mass নিন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Fill with water at a controlled temperature, insert the stopper and wipe the outside dry.",
+          "instruction_bn": "নিয়ন্ত্রিত temperature-এর পানি ভরে stopper লাগিয়ে বাইরেটা শুকিয়ে নিন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Weigh at six temperatures spanning below and above room temperature.",
+          "instruction_bn": "room temperature-এর নিচে ও ওপরে ছয়টি temperature-এ ওজন নিন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Record the bath temperature only after the bottle contents equilibrate.",
+          "instruction_bn": "bottle-এর পানি equilibrium-এ এলে bath temperature লিখুন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Calculate density from net water mass and calibrated volume.",
+          "instruction_bn": "net water mass ও calibrated volume থেকে density হিসাব করুন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Plot density against temperature and identify the maximum near 4°C.",
+          "instruction_bn": "density বনাম temperature graph এঁকে 4°C-এর কাছে maximum চিহ্নিত করুন।"
+        },
+        {
+          "stepNumber": 7,
+          "instruction_en": "Never invent missing readings; report the temperature range actually used.",
+          "instruction_bn": "অনুপস্থিত reading বানাবেন না; বাস্তবে নেওয়া temperature range লিখুন।"
+        }
+      ],
+      "precautions_en": [
+        "Remove air bubbles and keep the stopper capillary filled correctly.",
+        "Dry the outside completely before weighing.",
+        "Avoid thermal expansion of the bottle or correct for it if relevant.",
+        "Main errors: temperature lag, balance drift, bottle volume calibration and residual droplets."
+      ],
+      "precautions_bn": [
+        "air bubble সরিয়ে stopper capillary সঠিকভাবে পূর্ণ রাখুন।",
+        "ওজনের আগে বাইরের অংশ সম্পূর্ণ শুকান।",
+        "bottle-এর thermal expansion এড়ান বা প্রয়োজনমতো correction দিন।",
+        "প্রধান ভুল: temperature lag, balance drift, bottle volume calibration ও residual droplet।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "temperatureC",
+          "label_en": "Temperature (°C)",
+          "label_bn": "তাপমাত্রা (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "emptyMassKg",
+          "label_en": "Bottle mass (kg)",
+          "label_bn": "bottle-এর ভর (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "filledMassKg",
+          "label_en": "Bottle + water (kg)",
+          "label_bn": "bottle + পানি (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "volumeM3",
+          "label_en": "Volume (m³)",
+          "label_bn": "আয়তন (m³)",
+          "unit": "m³"
+        },
+        {
+          "key": "density",
+          "label_en": "ρ (kg/m³)",
+          "label_bn": "ρ (kg/m³)",
+          "unit": "kg/m³"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Water density ρ",
+        "expectedConstant": 997,
+        "expectedConstantUnit": "kg/m³ near 25°C",
+        "xColumn": "temperatureC",
+        "yColumn": "density"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "At approximately which temperature is water densest?",
+          "question_bn": "প্রায় কোন temperature-এ পানি সবচেয়ে ঘন?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "4°C",
+              "text_bn": "4°C"
+            },
+            {
+              "id": "b",
+              "text_en": "0°C always",
+              "text_bn": "সবসময় 0°C"
+            },
+            {
+              "id": "c",
+              "text_en": "50°C",
+              "text_bn": "50°C"
+            },
+            {
+              "id": "d",
+              "text_en": "100°C",
+              "text_bn": "100°C"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Pure water has its maximum density close to 4°C at atmospheric pressure.",
+          "explanation_bn": "স্বাভাবিক চাপে বিশুদ্ধ পানির সর্বাধিক density প্রায় 4°C-এ।"
+        }
+      ],
+      "modelReadings": {
+        "temperatureC": 25,
+        "emptyMassKg": 0.025,
+        "filledMassKg": 0.1247,
+        "volumeM3": 0.0001,
+        "density": 997
+      }
+    },
+    {
+      "id": "thermal-conductivity-lee-disc",
+      "slug": "thermal-conductivity-lee-disc",
+      "title_en": "Thermal conductivity of a bad conductor by Lee's method",
+      "title_bn": "লির পদ্ধতিতে কুপরিবাহীর তাপ পরিবাহিতা",
+      "category": "heat",
+      "domain": "heat",
+      "level": "honours",
+      "durationMinutes": 45,
+      "aim_en": "Determine the thermal conductivity of a poor conductor using Lee's disc and the cooling-rate correction.",
+      "aim_bn": "লির চাকতি ও cooling-rate correction ব্যবহার করে কুপরিবাহীর তাপ পরিবাহিতা নির্ণয় করা।",
+      "theory_en": "At steady state, conduction through the specimen equals the rate at which the lower disc loses heat when it is at the same temperature.",
+      "theory_bn": "steady state-এ specimen-এর মধ্য দিয়ে conduction rate একই temperature-এ lower disc-এর heat-loss rate-এর সমান।",
+      "formula_latex": "k=\\frac{m c d}{A(T_1-T_2)}\\left|\\frac{dT}{dt}\\right|_{T_2}",
+      "formula_desc_en": "d is specimen thickness, A area, m and c disc mass and specific heat; measure the cooling slope at T2.",
+      "formula_desc_bn": "d specimen-এর thickness, A area, m ও c disc-এর mass/specific heat; T2-এ cooling slope নিন।",
+      "apparatusRequired": [
+        "searles-conductivity-apparatus",
+        "lab-thermometer-mercury",
+        "digital-stopwatch",
+        "vernier-caliper"
+      ],
+      "setup": {
+        "items": [
+          {
+            "equipmentId": "searles-conductivity-apparatus",
+            "x": 80,
+            "y": 90
+          },
+          {
+            "equipmentId": "lab-thermometer-mercury",
+            "x": 235,
+            "y": 90
+          },
+          {
+            "equipmentId": "digital-stopwatch",
+            "x": 390,
+            "y": 90
+          },
+          {
+            "equipmentId": "vernier-caliper",
+            "x": 545,
+            "y": 90
+          }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Measure specimen thickness and disc diameter to obtain d and A.",
+          "instruction_bn": "specimen-এর thickness ও disc diameter মেপে d ও A বের করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Place the poor conductor between the steam chamber and Lee disc.",
+          "instruction_bn": "steam chamber ও Lee disc-এর মাঝে poor conductor রাখুন।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Pass steam until the two face temperatures T1 and T2 are steady.",
+          "instruction_bn": "দুই face-এর T1 ও T2 steady হওয়া পর্যন্ত steam চালান।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Remove the specimen and heat the disc directly, then allow it to cool.",
+          "instruction_bn": "specimen সরিয়ে disc সরাসরি গরম করে ঠান্ডা হতে দিন।"
+        },
+        {
+          "stepNumber": 5,
+          "instruction_en": "Find dT/dt from the tangent to the cooling curve at T2.",
+          "instruction_bn": "T2-এ cooling curve-এর tangent থেকে dT/dt নিন।"
+        },
+        {
+          "stepNumber": 6,
+          "instruction_en": "Calculate k, repeat and report the mean with the apparatus correction.",
+          "instruction_bn": "k হিসাব করে repeat করে apparatus correction-সহ গড় দিন।"
+        },
+        {
+          "stepNumber": 7,
+          "instruction_en": "State clearly that edge loss and contact resistance limit the ideal model.",
+          "instruction_bn": "edge loss ও contact resistance ideal model সীমিত করে—এটি স্পষ্ট লিখুন।"
+        }
+      ],
+      "precautions_en": [
+        "Steam can scald: use heat protection and supervisor-approved handling.",
+        "Ensure intimate, flat contact between specimen and discs.",
+        "Take the cooling slope at T2, not at an arbitrary temperature.",
+        "Main errors: edge loss, contact resistance, thickness error and tangent estimation."
+      ],
+      "precautions_bn": [
+        "বাষ্পে পোড়া লাগে: heat protection ও supervisor-এর নির্দেশ মানুন।",
+        "specimen ও disc-এর মধ্যে flat, ভালো contact রাখুন।",
+        "যেকোনো temperature নয়, T2-এ cooling slope নিন।",
+        "প্রধান ভুল: edge loss, contact resistance, thickness error ও tangent estimation।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs #",
+          "label_bn": "পাঠ নং"
+        },
+        {
+          "key": "discMassKg",
+          "label_en": "Disc mass (kg)",
+          "label_bn": "disc-এর ভর (kg)",
+          "unit": "kg"
+        },
+        {
+          "key": "thicknessM",
+          "label_en": "Thickness d (m)",
+          "label_bn": "thickness d (m)",
+          "unit": "m"
+        },
+        {
+          "key": "areaM2",
+          "label_en": "Area A (m²)",
+          "label_bn": "area A (m²)",
+          "unit": "m²"
+        },
+        {
+          "key": "hotTempC",
+          "label_en": "T1 (°C)",
+          "label_bn": "T1 (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "coldTempC",
+          "label_en": "T2 (°C)",
+          "label_bn": "T2 (°C)",
+          "unit": "°C"
+        },
+        {
+          "key": "coolingRate",
+          "label_en": "|dT/dt| (K/s)",
+          "label_bn": "|dT/dt| (K/s)",
+          "unit": "K/s"
+        },
+        {
+          "key": "conductivity",
+          "label_en": "k (W/m K)",
+          "label_bn": "k (W/m K)",
+          "unit": "W/m K"
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Poor-conductor thermal conductivity k",
+        "expectedConstant": 0.2,
+        "expectedConstantUnit": "W/m K illustrative specimen",
+        "xColumn": "coolingRate",
+        "yColumn": "conductivity"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why is the cooling rate measured at T2 in Lee’s method?",
+          "question_bn": "লির পদ্ধতিতে T2-এ cooling rate কেন মাপা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "It matches the disc temperature in the steady-state heat balance",
+              "text_bn": "steady-state heat balance-এ disc-এর temperature T2 থাকে"
+            },
+            {
+              "id": "b",
+              "text_en": "To remove the specimen",
+              "text_bn": "specimen সরাতে"
+            },
+            {
+              "id": "c",
+              "text_en": "To make k equal to zero",
+              "text_bn": "k শূন্য করতে"
+            },
+            {
+              "id": "d",
+              "text_en": "Because T2 has no unit",
+              "text_bn": "কারণ T2-এর unit নেই"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The cooling rate must represent the disc heat loss at the same temperature as the conduction measurement.",
+          "explanation_bn": "conduction measurement-এর একই temperature-এ disc-এর heat loss-এর rate নিতে হয়।"
+        }
+      ],
+      "modelReadings": {
+        "discMassKg": 0.2,
+        "thicknessM": 0.004,
+        "areaM2": 0.00785,
+        "hotTempC": 85,
+        "coldTempC": 45,
+        "coolingRate": 0.00045,
+        "conductivity": 0.2
+      }
     }
   ]
 }

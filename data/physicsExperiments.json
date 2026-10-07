@@ -1,0 +1,1834 @@
+{
+  "count": 30,
+  "experiments": [
+    {
+      "id": "ohms-law",
+      "slug": "ohms-law",
+      "title_en": "Verification of Ohm's Law & Unknown Resistance",
+      "title_bn": "ওহমের সূত্র যাচাই ও অজানা রোধ নির্ণয়",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To verify Ohm's law by measuring current (I) for various voltages (V) across a resistor and calculate its resistance.",
+      "aim_bn": "একটি রোধকের দুই প্রান্তের বিভব পার্থক্য (V) ও তড়িৎ প্রবাহের (I) সম্পর্ক নির্ণয় করে ওহমের সূত্র যাচাই এবং রোধের মান বের করা।",
+      "theory_en": "Ohm's Law states that at constant temperature, the electric current (I) flowing through a metallic conductor is directly proportional to the potential difference (V) across its ends: V = I × R.",
+      "theory_bn": "স্থির তাপমাত্রায় কোনো পরিবাহীর মধ্য দিয়ে প্রবাহিত তড়িৎ প্রবাহ তার দুই প্রান্তের বিভব পার্থক্যের সমানুপাতিক: V = I × R।",
+      "formula_latex": "V = I \\cdot R \\implies R = \\frac{V}{I}",
+      "formula_desc_en": "Resistance R is obtained from the reciprocal of the slope of the I-V graph, or the slope of the V-I graph.",
+      "formula_desc_bn": "V-I গ্রাফের ঢাল থেকে রোধ R-এর মান পাওয়া যায়।",
+      "apparatusRequired": ["battery-dc", "switch-spst", "rheostat", "resistor-fixed", "ammeter-dc", "voltmeter-dc"],
+      "setup": {
+        "items": [
+          { "equipmentId": "battery-dc", "x": 60, "y": 60, "properties": { "voltage": 6 } },
+          { "equipmentId": "switch-spst", "x": 220, "y": 60, "properties": { "closed": true } },
+          { "equipmentId": "rheostat", "x": 370, "y": 60, "properties": { "sliderPosition": 30 } },
+          { "equipmentId": "ammeter-dc", "x": 560, "y": 60, "properties": { "maxRange": 3 } },
+          { "equipmentId": "resistor-fixed", "x": 560, "y": 200, "properties": { "resistance": 10 } },
+          { "equipmentId": "voltmeter-dc", "x": 370, "y": 200, "properties": { "maxRange": 15 } }
+        ],
+        "wires": [
+          { "fromItemIndex": 0, "fromTerminalId": "pos", "toItemIndex": 1, "toTerminalId": "t1", "color": "red" },
+          { "fromItemIndex": 1, "fromTerminalId": "t2", "toItemIndex": 2, "toTerminalId": "bottom1", "color": "red" },
+          { "fromItemIndex": 2, "fromTerminalId": "slider", "toItemIndex": 3, "toTerminalId": "pos", "color": "red" },
+          { "fromItemIndex": 3, "fromTerminalId": "neg", "toItemIndex": 4, "toTerminalId": "t1", "color": "red" },
+          { "fromItemIndex": 4, "fromTerminalId": "t2", "toItemIndex": 0, "toTerminalId": "neg", "color": "black" },
+          { "fromItemIndex": 4, "fromTerminalId": "t1", "toItemIndex": 5, "toTerminalId": "pos", "color": "blue" },
+          { "fromItemIndex": 4, "fromTerminalId": "t2", "toItemIndex": 5, "toTerminalId": "neg", "color": "blue" }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Connect the DC battery, switch, rheostat, ammeter, and fixed resistor in series.", "instruction_bn": "ডিসি ব্যাটারি, চাবি, রিওস্ট্যাট, অ্যামিটার ও রোধককে শ্রেণিসংযোগে যুক্ত করুন।" },
+        { "stepNumber": 2, "instruction_en": "Connect the voltmeter in parallel across the fixed resistor.", "instruction_bn": "রোধকের দুই প্রান্তে সমান্তরালে ভোল্টমিটার যুক্ত করুন।" },
+        { "stepNumber": 3, "instruction_en": "Close the switch key and adjust the rheostat slider to start with minimum current.", "instruction_bn": "চাবি বন্ধ করুন এবং রিওস্ট্যাট স্লাইডার সরিয়ে সর্বনিম্ন প্রবাহ দিয়ে শুরু করুন।" },
+        { "stepNumber": 4, "instruction_en": "Note the readings of the Ammeter (I in Amperes) and Voltmeter (V in Volts) in the table.", "instruction_bn": "অ্যামিটার ও ভোল্টমিটারের পাঠ সারণিতে রেকর্ড করুন।" },
+        { "stepNumber": 5, "instruction_en": "Change the rheostat position to take 5 different readings and plot V vs I graph.", "instruction_bn": "রিওস্ট্যাট ৫ বার পরিবর্তন করে ৫টি রিডিং নিন এবং V বনাম I গ্রাফ আঁকুন।" }
+      ],
+      "precautions_en": [
+        "Ensure all wire connections are tight.",
+        "Connect ammeter strictly in series and voltmeter in parallel.",
+        "Observe proper polarities (+ to +, - to -) to prevent meter damage."
+      ],
+      "precautions_bn": [
+        "সকল তারের সংযোগ শক্তভাবে লাগান।",
+        "অ্যামিটার শ্রেণিতে এবং ভোল্টমিটার সমান্তরালে যুক্ত করুন।",
+        "পোলারিটি (+ এবং -) খেয়াল রাখুন যাতে মিটার নষ্ট না হয়।"
+      ],
+      "dataColumns": [
+        { "key": "obsNo", "label_en": "Obs #", "label_bn": "পর্যবেক্ষণ নং" },
+        { "key": "voltage", "label_en": "Voltage (V)", "label_bn": "ভোল্টেজ (V)", "unit": "V", "decimals": 2 },
+        { "key": "current", "label_en": "Current (I)", "label_bn": "কারেন্ট (I)", "unit": "A", "decimals": 3 },
+        { "key": "resistanceCalc", "label_en": "R = V/I", "label_bn": "R = V/I (Ω)", "unit": "Ω", "decimals": 2 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Ohm's Law V = I * R",
+        "expectedConstant": 10.0,
+        "expectedConstantUnit": "Ω",
+        "xColumn": "current",
+        "yColumn": "voltage",
+        "slopeFormula": "Slope = Resistance R"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "What is the slope of the Voltage (Y-axis) vs Current (X-axis) graph?",
+          "question_bn": "V (Y-অক্ষ) বনাম I (X-অক্ষ) গ্রাফের ঢাল কী নির্দেশ করে?",
+          "options": [
+            { "id": "a", "text_en": "Resistance (R)", "text_bn": "রোধ (R)" },
+            { "id": "b", "text_en": "Conductance (G)", "text_bn": "পরিবাহিতা (G)" },
+            { "id": "c", "text_en": "Electric Power (P)", "text_bn": "তড়িৎ ক্ষমতা (P)" },
+            { "id": "d", "text_en": "Capacitance (C)", "text_bn": "ধারকত্ব (C)" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "According to Ohm's Law V = IR, when V is plotted on Y-axis and I on X-axis, slope = ΔV / ΔI = R.",
+          "explanation_bn": "ওহমের সূত্র V = IR অনুসারে V-I গ্রাফের ঢাল ΔV/ΔI = রোধ R।"
+        },
+        {
+          "id": "q2",
+          "question_en": "Why is an ammeter always connected in series?",
+          "question_bn": "অ্যামিটার কেন সর্বদা শ্রেণিসংযোগে যুক্ত করা হয়?",
+          "options": [
+            { "id": "a", "text_en": "Because it has very low internal resistance", "text_bn": "কারণ এর অভ্যন্তরীণ রোধ খুব কম থাকে" },
+            { "id": "b", "text_en": "Because it has infinite resistance", "text_bn": "কারণ এর রোধ অসীম" },
+            { "id": "c", "text_en": "To measure potential difference", "text_bn": "বিভব মাপার জন্য" },
+            { "id": "d", "text_en": "To protect the battery", "text_bn": "ব্যাটারি রক্ষার জন্য" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "An ammeter has very low resistance so that all branch current flows through it without affecting the original circuit current.",
+          "explanation_bn": "অ্যামিটারের রোধ অতি নগণ্য হওয়ায় বর্তনীর মূল প্রবাহে কোনো বাধা না দিয়ে সম্পূর্ণ প্রবাহ মাপতে পারে।"
+        }
+      ]
+    },
+    {
+      "id": "resistors-series-parallel",
+      "slug": "resistors-series-parallel",
+      "title_en": "Verification of Laws of Combination of Resistors (Series & Parallel)",
+      "title_bn": "রোধের সমবায় সূত্র যাচাই (শ্রেণি ও সমান্তরাল)",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To determine the equivalent resistance of two given resistors when connected in series and in parallel.",
+      "aim_bn": "শ্রেণি ও সমান্তরাল সমবায়ে দুটি রোধকের তুল্য রোধ নির্ণয় ও সূত্র যাচাই করা।",
+      "theory_en": "For series combination: Rs = R1 + R2. For parallel combination: 1/Rp = 1/R1 + 1/R2, or Rp = (R1 × R2) / (R1 + R2).",
+      "theory_bn": "শ্রেণি সমবায়ে: Rs = R1 + R2। সমান্তরাল সমবায়ে: 1/Rp = 1/R1 + 1/R2 বা Rp = (R1 × R2) / (R1 + R2)।",
+      "formula_latex": "R_s = R_1 + R_2, \\quad R_p = \\frac{R_1 R_2}{R_1 + R_2}",
+      "formula_desc_en": "Series resistance adds linearly, while parallel conductance adds linearly.",
+      "formula_desc_bn": "শ্রেণিতে রোধ যোগ হয় এবং সমান্তরালে রোধের ব্যস্তানুপাত যোগ হয়।",
+      "apparatusRequired": ["battery-dc", "switch-spst", "resistor-fixed", "ammeter-dc", "voltmeter-dc"],
+      "setup": {
+        "items": [
+          { "equipmentId": "battery-dc", "x": 60, "y": 60, "properties": { "voltage": 6 } },
+          { "equipmentId": "switch-spst", "x": 220, "y": 60, "properties": { "closed": true } },
+          { "equipmentId": "ammeter-dc", "x": 380, "y": 60, "properties": { "maxRange": 3 } },
+          { "equipmentId": "resistor-fixed", "x": 220, "y": 200, "properties": { "resistance": 20 } },
+          { "equipmentId": "resistor-fixed", "x": 400, "y": 200, "properties": { "resistance": 30 } },
+          { "equipmentId": "voltmeter-dc", "x": 310, "y": 320, "properties": { "maxRange": 15 } }
+        ],
+        "wires": []
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Connect R1 (20Ω) and R2 (30Ω) in series with the battery and ammeter.", "instruction_bn": "R1 ও R2 কে ব্যাটারি এবং অ্যামিটারের সঙ্গে শ্রেণিতে যুক্ত করুন।" },
+        { "stepNumber": 2, "instruction_en": "Measure total voltage V and current I to find equivalent series resistance Rs.", "instruction_bn": "মোট ভোল্টেজ ও কারেন্ট মেপে তুল্য রোধ Rs বের করুন।" },
+        { "stepNumber": 3, "instruction_en": "Reconnect R1 and R2 in parallel across the voltmeter and measure equivalent parallel resistance Rp.", "instruction_bn": "রোধ দুটি সমান্তরালে যুক্ত করে তুল্য রোধ Rp পরিমাপ করুন।" }
+      ],
+      "precautions_en": ["Ensure correct parallel/series junction joints."],
+      "precautions_bn": ["সংযোগ স্থলগুলো সঠিকভাবে লাগান।"],
+      "dataColumns": [
+        { "key": "combination", "label_en": "Combination", "label_bn": "সমবায় ধরন" },
+        { "key": "voltage", "label_en": "Voltage (V)", "label_bn": "ভোল্টেজ (V)", "unit": "V", "decimals": 2 },
+        { "key": "current", "label_en": "Current (I)", "label_bn": "কারেন্ট (I)", "unit": "A", "decimals": 3 },
+        { "key": "reqCalc", "label_en": "Req = V/I", "label_bn": "Req (Ω)", "unit": "Ω", "decimals": 2 },
+        { "key": "reqTheory", "label_en": "Theoretical Req", "label_bn": "তাত্ত্বিক মান (Ω)", "unit": "Ω", "decimals": 2 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Series: Rs=R1+R2, Parallel: Rp=R1*R2/(R1+R2)",
+        "expectedConstant": 50.0,
+        "expectedConstantUnit": "Ω (Series)",
+        "xColumn": "current",
+        "yColumn": "voltage"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "If two 20 Ω resistors are connected in parallel, what is the equivalent resistance?",
+          "question_bn": "দুটি ২০ ওহম রোধ সমান্তরালে যুক্ত করলে তুল্য রোধ কত হবে?",
+          "options": [
+            { "id": "a", "text_en": "10 Ω", "text_bn": "১০ Ω" },
+            { "id": "b", "text_en": "40 Ω", "text_bn": "৪০ Ω" },
+            { "id": "c", "text_en": "20 Ω", "text_bn": "২০ Ω" },
+            { "id": "d", "text_en": "5 Ω", "text_bn": "৫ Ω" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Rp = R / 2 = 20 / 2 = 10 Ω.",
+          "explanation_bn": "Rp = 20 × 20 / (20 + 20) = 400 / 40 = ১০ ওহম।"
+        }
+      ]
+    },
+    {
+      "id": "meter-bridge",
+      "slug": "meter-bridge",
+      "title_en": "Determination of Unknown Resistance using Meter Bridge",
+      "title_bn": "মিটার ব্রিজের সাহায্যে তারের অজানা রোধ ও আপেক্ষিক রোধ নির্ণয়",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To find the resistance of a given wire using a meter bridge and determine its specific resistance (resistivity).",
+      "aim_bn": "হুইটস্টোন ব্রিজের নীতিতে মিটার ব্রিজের সাহায্যে অজানা রোধ ও উপাদানের আপেক্ষিক রোধ নির্ণয় করা।",
+      "theory_en": "A meter bridge operates on Wheatstone bridge principle. At balance point (null deflection in galvanometer): X / R = l / (100 - l), where l is balancing length in cm.",
+      "theory_bn": "মিটার ব্রিজ হুইটস্টোন ব্রিজ নীতিতে কাজ করে। গ্যালভানোমিটারে শূন্য বিক্ষেপে: X / R = l / (100 - l)।",
+      "formula_latex": "X = R \\cdot \\frac{l}{100 - l}, \\quad \\rho = X \\cdot \\frac{\\pi r^2}{L}",
+      "formula_desc_en": "X is unknown resistance, R is known standard resistance from resistance box, l is balance length.",
+      "formula_desc_bn": "X অজানা রোধ, R পরিচিত রোধ বাক্সের মান, l নিস্পন্দ বিন্দুর দূরত্ব।",
+      "apparatusRequired": ["meter-bridge", "resistance-box", "resistor-fixed", "galvanometer", "battery-dc", "tap-key"],
+      "setup": {
+        "items": [
+          { "equipmentId": "meter-bridge", "x": 100, "y": 80, "properties": { "jockeyPositionCm": 40 } },
+          { "equipmentId": "resistance-box", "x": 150, "y": 240, "properties": { "resistance": 15 } },
+          { "equipmentId": "resistor-fixed", "x": 350, "y": 240, "properties": { "resistance": 10 } },
+          { "equipmentId": "galvanometer", "x": 260, "y": 240, "properties": { "sensitivityMicroAmpPerDiv": 20 } },
+          { "equipmentId": "battery-dc", "x": 150, "y": 380, "properties": { "voltage": 2 } },
+          { "equipmentId": "tap-key", "x": 350, "y": 380, "properties": { "closed": true } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Connect known resistance box in left gap and unknown coil in right gap.", "instruction_bn": "বাম ফাঁকে জানা রোধ বাক্স এবং ডান ফাঁকে অজানা রোধের তার যুক্ত করুন।" },
+        { "stepNumber": 2, "instruction_en": "Slide the jockey gently along the bridge wire until galvanometer shows null deflection (zero).", "instruction_bn": "জকিটি তারের উপর সরিয়ে গ্যালভানোমিটারে শূন্য বিক্ষেপ অবস্থান (l) খুঁজুন।" },
+        { "stepNumber": 3, "instruction_en": "Record balancing length l and calculate unknown resistance X.", "instruction_bn": "দূরত্ব l লিখে X = R * (100 - l) / l সূত্র দিয়ে অজানা রোধ গণনা করুন।" }
+      ],
+      "precautions_en": ["Do not drag the jockey with pressure — tap gently to avoid scraping the wire."],
+      "precautions_bn": ["জকি জোরে ঘষবেন না — আলতো করে স্পর্শ করান যাতে তারের পুরুত্ব নষ্ট না হয়।"],
+      "dataColumns": [
+        { "key": "resBoxR", "label_en": "Known R (Ω)", "label_bn": "জানা রোধ R (Ω)", "unit": "Ω" },
+        { "key": "lengthL", "label_en": "Balancing Length l (cm)", "label_bn": "ভারসাম্য দৈর্ঘ্য l (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "length100minusL", "label_en": "100 - l (cm)", "label_bn": "১০০ - l (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "unknownX", "label_en": "Unknown X (Ω)", "label_bn": "অজানা রোধ X (Ω)", "unit": "Ω", "decimals": 2 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Meter Bridge Balance X = R * (100 - l) / l",
+        "expectedConstant": 10.0,
+        "expectedConstantUnit": "Ω",
+        "xColumn": "lengthL",
+        "yColumn": "unknownX"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why is the balance point preferably kept near the middle (around 50 cm)?",
+          "question_bn": "মিটার ব্রিজে ভারসাম্য বিন্দু ৫০ সেমির কাছাকাছি রাখা উত্তম কেন?",
+          "options": [
+            { "id": "a", "text_en": "To minimize percentage error and maximize sensitivity", "text_bn": "শতকরা ত্রুটি কমাতে এবং সর্বোচ্চ সংবেদনশীলতার জন্য" },
+            { "id": "b", "text_en": "To save battery power", "text_bn": "ব্যাটারির চার্জ বাঁচাতে" },
+            { "id": "c", "text_en": "To reduce heat in the wire", "text_bn": "তারের তাপ কমাতে" },
+            { "id": "d", "text_en": "Because galvanometer only works in middle", "text_bn": "কারণ গ্যালভানোমিটার শুধু মাঝখানে কাজ করে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The Wheatstone bridge has maximum sensitivity and minimum fractional error when all four arms have nearly equal resistances (l ≈ 50 cm).",
+          "explanation_bn": "চারটি বাহুর রোধ সমানুপাতিক হলে ব্রিজটি সর্বাধিক সংবেদনশীল হয় এবং শতকরা ত্রুটি সর্বনিম্ন হয়।"
+        }
+      ]
+    },
+    {
+      "id": "potentiometer-emf",
+      "slug": "potentiometer-emf",
+      "title_en": "Comparison of EMF of Two Primary Cells using Potentiometer",
+      "title_bn": "পোটেনশিওমিটারের সাহায্যে দুটি প্রাথমিক কোষের তড়িচ্চালক বলের তুলনা",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To compare the electromotive forces (EMF) of two cells (E1 / E2 = l1 / l2) using a potentiometer.",
+      "aim_bn": "পোটেনশিওমিটার ব্যবহার করে দুটি কোষের তড়িচ্চালক বলের অনুপাত নির্ণয় করা।",
+      "theory_en": "Since potentiometer draws zero current at null balance point, potential difference equals true EMF: E1 / E2 = l1 / l2.",
+      "theory_bn": "নিস্পন্দ বিন্দুতে কোনো বিদ্যুৎ প্রবাহিত না হওয়ায় পোটেনশিওমিটারে কোষের আসল তড়িচ্চালক বল মাপা যায়: E1 / E2 = l1 / l2।",
+      "formula_latex": "\\frac{E_1}{E_2} = \\frac{l_1}{l_2}",
+      "formula_desc_en": "Ratio of EMFs equals ratio of their balancing lengths on uniform resistance wire.",
+      "formula_desc_bn": "কোষদ্বয়ের তড়িচ্চালক বলের অনুপাত তাদের ভারসাম্য দৈর্ঘ্যের অনুপাতের সমান।",
+      "apparatusRequired": ["potentiometer-wire", "battery-dc", "rheostat", "switch-spdt", "galvanometer"],
+      "setup": {
+        "items": [
+          { "equipmentId": "potentiometer-wire", "x": 80, "y": 80, "properties": { "jockeyPositionCm": 300 } },
+          { "equipmentId": "battery-dc", "x": 120, "y": 260, "properties": { "voltage": 6 } },
+          { "equipmentId": "switch-spdt", "x": 300, "y": 260, "properties": { "selectedPosition": "1" } },
+          { "equipmentId": "galvanometer", "x": 480, "y": 260, "properties": { "sensitivityMicroAmpPerDiv": 20 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Connect primary circuit with driver battery, rheostat and key across potentiometer wire ends.", "instruction_bn": "মূল বর্তনীতে মূল ব্যাটারি ও রিওস্ট্যাট যুক্ত করুন।" },
+        { "stepNumber": 2, "instruction_en": "Switch to Cell 1 (E1) and find balancing length l1 for zero galvanometer deflection.", "instruction_bn": "১ম কোষ সংযোগ দিয়ে গ্যালভানোমিটারে শূন্য বিক্ষেপের জন্য l1 দূরত্ব নির্ণয় করুন।" },
+        { "stepNumber": 3, "instruction_en": "Switch to Cell 2 (E2) and find balancing length l2.", "instruction_bn": "২য় কোষে পরিবর্তন করে l2 দূরত্ব মাপুন এবং E1/E2 = l1/l2 বের করুন।" }
+      ],
+      "precautions_en": ["Driver battery EMF must be strictly greater than cell EMFs."],
+      "precautions_bn": ["মূল ব্যাটারির তড়িচ্চালক বল অবশ্যই পরীক্ষাধীন কোষের চেয়ে বেশি হতে হবে।"],
+      "dataColumns": [
+        { "key": "cell", "label_en": "Cell", "label_bn": "কোষ" },
+        { "key": "balancingL", "label_en": "Balancing Length l (cm)", "label_bn": "ভারসাম্য দৈর্ঘ্য l (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "ratio", "label_en": "E1 / E2", "label_bn": "E1 / E2 অনুপাত", "decimals": 3 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "E1 / E2 = l1 / l2",
+        "expectedConstant": 1.45,
+        "xColumn": "balancingL",
+        "yColumn": "ratio"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why is a potentiometer preferred over an ordinary voltmeter for measuring EMF?",
+          "question_bn": "কোষের তড়িচ্চালক বল মাপতে সাধারণ ভোল্টমিটারের চেয়ে পোটেনশিওমিটার কেন শ্রেয়?",
+          "options": [
+            { "id": "a", "text_en": "Because it draws no current from the cell at null point (infinite effective resistance)", "text_bn": "কারণ শূন্য বিক্ষেপ বিন্দুতে কোষ থেকে কোনো বিদ্যুৎ গ্রহণ করে না" },
+            { "id": "b", "text_en": "Because it is smaller in size", "text_bn": "কারণ এটি আকারে ছোট" },
+            { "id": "c", "text_en": "Because it works on AC only", "text_bn": "কারণ এটি শুধু এসিতে চলে" },
+            { "id": "d", "text_en": "Because it uses copper wire", "text_bn": "কারণ এতে তামার তার থাকে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "A voltmeter draws a small current causing internal voltage drop (terminal voltage V < E). Potentiometer draws zero current at balance point, measuring exact EMF.",
+          "explanation_bn": "ভোল্টমিটার সামান্য কারেন্ট গ্রহণ করায় অভ্যন্তরীণ রোধে বিভব পতন ঘটে, কিন্তু পোটেনশিওমিটার শূন্য কারেন্টে আসল তড়িচ্চালক বল মাপে।"
+        }
+      ]
+    },
+    {
+      "id": "potentiometer-internal-resistance",
+      "slug": "potentiometer-internal-resistance",
+      "title_en": "Determination of Internal Resistance of a Cell using Potentiometer",
+      "title_bn": "পোটেনশিওমিটারের সাহায্যে কোষের অভ্যন্তরীণ রোধ নির্ণয়",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To find the internal resistance 'r' of a primary cell using a potentiometer: r = R × ((l1 / l2) - 1).",
+      "aim_bn": "পোটেনশিওমিটার ও রোধ বাক্সের সাহায্যে কোষের অভ্যন্তরীণ রোধ r নির্ণয় করা।",
+      "theory_en": "When open circuit, EMF balance length is l1. When shunted by external resistance R, terminal potential balance length is l2. Internal resistance r = R × (l1/l2 - 1).",
+      "theory_bn": "খোলা বর্তনীতে ভারসাম্য দৈর্ঘ্য l1 এবং R রোধ সমান্তরালে যুক্ত অবস্থায় l2 হলে, অভ্যন্তরীণ রোধ r = R × (l1/l2 - 1)।",
+      "formula_latex": "r = R \\left( \\frac{l_1}{l_2} - 1 \\right)",
+      "formula_desc_en": "r is internal resistance, R is shunt resistance, l1 is open circuit length, l2 is closed circuit length.",
+      "formula_desc_bn": "r অভ্যন্তরীণ রোধ, R সান্ট রোধ, l1 খোলা বর্তনীর দৈর্ঘ্য, l2 বন্ধ বর্তনীর দৈর্ঘ্য।",
+      "apparatusRequired": ["potentiometer-wire", "battery-dc", "resistance-box", "galvanometer", "switch-spst"],
+      "setup": {
+        "items": [
+          { "equipmentId": "potentiometer-wire", "x": 80, "y": 80, "properties": { "jockeyPositionCm": 250 } },
+          { "equipmentId": "battery-dc", "x": 120, "y": 260, "properties": { "voltage": 4 } },
+          { "equipmentId": "resistance-box", "x": 300, "y": 260, "properties": { "resistance": 10 } },
+          { "equipmentId": "galvanometer", "x": 480, "y": 260, "properties": { "sensitivityMicroAmpPerDiv": 20 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Find balancing length l1 without closing the shunt resistance box switch.", "instruction_bn": "সান্ট রোধ বন্ধ না করে খোলা অবস্থায় l1 দৈর্ঘ্য নির্ণয় করুন।" },
+        { "stepNumber": 2, "instruction_en": "Introduce resistance R in shunt box, close the switch and find new balancing length l2.", "instruction_bn": "সান্ট বক্সে R রোধ রেখে চাবি বন্ধ করে নতুন দৈর্ঘ্য l2 নির্ণয় করুন।" },
+        { "stepNumber": 3, "instruction_en": "Calculate internal resistance r for 4 different values of R.", "instruction_bn": "R-এর বিভিন্ন মানের জন্য r গণনা করুন।" }
+      ],
+      "precautions_en": ["Do not leave the shunt key plugged in for too long to avoid cell polarization."],
+      "precautions_bn": ["সান্ট চাবি বেশিক্ষণ বন্ধ রাখবেন না যাতে কোষ দুর্বল না হয়।"],
+      "dataColumns": [
+        { "key": "shuntR", "label_en": "Shunt R (Ω)", "label_bn": "সান্ট R (Ω)", "unit": "Ω" },
+        { "key": "lengthL1", "label_en": "Open length l1 (cm)", "label_bn": "খোলা দৈর্ঘ্য l1 (cm)", "unit": "cm" },
+        { "key": "lengthL2", "label_en": "Shunted length l2 (cm)", "label_bn": "সান্ট দৈর্ঘ্য l2 (cm)", "unit": "cm" },
+        { "key": "internalR", "label_en": "Internal r (Ω)", "label_bn": "অভ্যন্তরীণ r (Ω)", "unit": "Ω", "decimals": 2 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "r = R * (l1/l2 - 1)",
+        "expectedConstant": 1.2,
+        "expectedConstantUnit": "Ω",
+        "xColumn": "shuntR",
+        "yColumn": "internalR"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "As a cell gets discharged over time, its internal resistance:",
+          "question_bn": "কোষ পুরোনো বা ক্ষয়প্রাপ্ত হলে তার অভ্যন্তরীণ রোধ:",
+          "options": [
+            { "id": "a", "text_en": "Increases", "text_bn": "বৃদ্ধি পায়" },
+            { "id": "b", "text_en": "Decreases", "text_bn": "হ্রাস পায়" },
+            { "id": "c", "text_en": "Remains constant", "text_bn": "অপরিবর্তিত থাকে" },
+            { "id": "d", "text_en": "Becomes zero", "text_bn": "শূন্য হয়ে যায়" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Due to chemical depletion and accumulation of polarization bubbles, internal resistance increases with discharge.",
+          "explanation_bn": "রাসায়নিক ক্ষয় ও পোলারাইজেশনের কারণে অভ্যন্তরীণ রোধ বৃদ্ধি পায়।"
+        }
+      ]
+    },
+    {
+      "id": "kirchhoffs-laws",
+      "slug": "kirchhoffs-laws",
+      "title_en": "Verification of Kirchhoff's Current & Voltage Laws (KCL & KVL)",
+      "title_bn": "কার্শফের সূত্র যাচাই (KCL ও KVL)",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To verify Kirchhoff's Current Law (ΣI = 0 at node) and Voltage Law (ΣV = 0 around a closed mesh) in a multi-loop circuit.",
+      "aim_bn": "একটি বহু-লুপ বর্তনীতে কার্শফের সংযোগ বিন্দু সূত্র (KCL) ও লুপ সূত্র (KVL) যাচাই করা।",
+      "theory_en": "KCL (Charge Conservation): The algebraic sum of currents meeting at any electrical node is zero (ΣI_in = ΣI_out). KVL (Energy Conservation): In any closed loop, the algebraic sum of EMFs equals the sum of potential drops (ΣE = Σ(I·R)).",
+      "theory_bn": "KCL: যেকোনো নোডে মোট আগত প্রবাহ ও নির্গত প্রবাহ সমান (ΣI = ০)। KVL: যেকোনো বদ্ধ লুপে মোট তড়িচ্চালক বলের যোগফল রোধের বিভব পতনের যোগফলের সমান (ΣV = ০)।",
+      "formula_latex": "\\sum I_{\\text{node}} = 0, \\quad \\sum V_{\\text{loop}} = 0",
+      "formula_desc_en": "Currents entering a junction equal currents leaving. Loop voltages sum to zero.",
+      "formula_desc_bn": "নোডে আগত প্রবাহ = নির্গত প্রবাহ। লুপের মোট বিভব পরিবর্তন = ০।",
+      "apparatusRequired": ["battery-dc", "resistor-fixed", "ammeter-dc", "voltmeter-dc"],
+      "setup": {
+        "items": [
+          { "equipmentId": "battery-dc", "x": 60, "y": 60, "properties": { "voltage": 12 } },
+          { "equipmentId": "resistor-fixed", "x": 220, "y": 60, "properties": { "resistance": 10 } },
+          { "equipmentId": "resistor-fixed", "x": 400, "y": 140, "properties": { "resistance": 20 } },
+          { "equipmentId": "resistor-fixed", "x": 220, "y": 240, "properties": { "resistance": 30 } },
+          { "equipmentId": "battery-dc", "x": 60, "y": 240, "properties": { "voltage": 6 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Construct the 2-mesh circuit with two battery sources and three branch resistors.", "instruction_bn": "দুটি ব্যাটারি ও তিনটি রোধক দিয়ে দ্বিমুখী লুপ বর্তনী তৈরি করুন।" },
+        { "stepNumber": 2, "instruction_en": "Measure currents I1, I2, and I3 at the central node to test I1 + I2 = I3.", "instruction_bn": "নোডের তিনটি শাখার প্রবাহ I1, I2, I3 মেপে I1 + I2 = I3 যাচাই করুন।" },
+        { "stepNumber": 3, "instruction_en": "Measure potential drops along mesh 1 and mesh 2 to test ΣV = 0.", "instruction_bn": "লুপ ১ ও লুপ ২-এর বিভব মেপে মোট বিভব যোগফল শূন্য হয় কিনা দেখুন।" }
+      ],
+      "precautions_en": ["Take careful note of current flow directions at the junction."],
+      "precautions_bn": ["প্রবাহের ধনাত্মক ও ঋণাত্মক দিকচিহ্ন খেয়াল রাখুন।"],
+      "dataColumns": [
+        { "key": "loopOrNode", "label_en": "Node / Loop", "label_bn": "নোড / লুপ" },
+        { "key": "val1", "label_en": "Term 1 (A or V)", "label_bn": "মান ১" },
+        { "key": "val2", "label_en": "Term 2 (A or V)", "label_bn": "মান ২" },
+        { "key": "sumVal", "label_en": "Sum (Net Zero)", "label_bn": "মোট যোগফল" }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "KCL & KVL Sum = 0",
+        "expectedConstant": 0.0,
+        "xColumn": "val1",
+        "yColumn": "sumVal"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Kirchhoff's Junction Rule (KCL) is a direct consequence of the law of conservation of:",
+          "question_bn": "কার্শফের নোড বা সংযোগ সূত্রটি (KCL) কোন সংরক্ষণশীলতা নীতির রূপ?",
+          "options": [
+            { "id": "a", "text_en": "Electric Charge", "text_bn": "তড়িৎ আধান" },
+            { "id": "b", "text_en": "Energy", "text_bn": "শক্তি" },
+            { "id": "c", "text_en": "Linear Momentum", "text_bn": "রৈখিক ভরবেগ" },
+            { "id": "d", "text_en": "Angular Momentum", "text_bn": "কৌণিক ভরবেগ" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "KCL stems from conservation of charge because charge cannot accumulate or disappear at an electrical junction.",
+          "explanation_bn": "সংযোগ বিন্দুতে চার্জ সঞ্চিত বা ধ্বংস হতে পারে না, তাই আগত চার্জ = নির্গত চার্জ (আধান সংরক্ষণশীলতা)।"
+        }
+      ]
+    },
+    {
+      "id": "simple-pendulum",
+      "slug": "simple-pendulum",
+      "title_en": "Determination of Acceleration due to Gravity 'g' using Simple Pendulum",
+      "title_bn": "সরল দোলকের সাহায্যে অভিকর্ষজ ত্বরণ 'g' নির্ণয় এবং L-T² গ্রাফ",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To measure the time period of oscillation for different lengths of a simple pendulum and determine local acceleration due to gravity 'g'.",
+      "aim_bn": "সরল দোলকের বিভিন্ন কার্যকরী দৈর্ঘ্যের জন্য দোলনকাল মেপে 'g'-এর মান ও L বনাম T² লেখচিত্র অঙ্কন।",
+      "theory_en": "For small angular amplitudes (θ < 4°), the time period of a simple pendulum of effective length L is T = 2π√(L/g), hence T² = (4π²/g) × L. The slope of L vs T² graph gives g / 4π².",
+      "theory_bn": "স্বল্প বিস্তারে কার্যকরী দৈর্ঘ্য L হলে দোলনকাল T = ২π√(L/g), সুতরাং T² = (৪π²/g) × L। L-T² লেখচিত্রের ঢাল থেকে g পাওয়া যায়।",
+      "formula_latex": "T = 2\\pi \\sqrt{\\frac{L}{g}} \\implies g = 4\\pi^2 \\frac{L}{T^2}",
+      "formula_desc_en": "g is acceleration due to gravity (9.80665 m/s² standard).",
+      "formula_desc_bn": "g অভিকর্ষজ ত্বরণ, L সুতার দৈর্ঘ্য ও ববের ব্যাসার্ধের যোগফল, T একটি পূর্ণ দোলনের সময়।",
+      "apparatusRequired": ["simple-pendulum", "meter-scale-wooden", "digital-stopwatch", "vernier-caliper"],
+      "setup": {
+        "items": [
+          { "equipmentId": "simple-pendulum", "x": 160, "y": 60, "properties": { "lengthCm": 100, "initialAngleDeg": 5 } },
+          { "equipmentId": "digital-stopwatch", "x": 380, "y": 140, "properties": { "running": false } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Measure diameter of bob with vernier caliper to find radius r, and set string length l (effective L = l + r).", "instruction_bn": "ভার্নিয়ার দিয়ে ববের ব্যাসার্ধ r মেপে কার্যকরী দৈর্ঘ্য L = l + r ঠিক করুন।" },
+        { "stepNumber": 2, "instruction_en": "Displace the bob slightly (< 5°) and release. Start the stopwatch as it passes the mean position.", "instruction_bn": "ববটিকে সামান্য (৫° এর কম) টেনে ছেড়ে দিন এবং সাম্যাবস্থা অতিক্রমকালে স্টপওয়াচ চালু করুন।" },
+        { "stepNumber": 3, "instruction_en": "Measure time for 20 oscillations and calculate period T = t / 20.", "instruction_bn": "২০টি পূর্ণ দোলনের সময় t মেপে পর্যায়কাল T = t / ২০ বের করুন।" },
+        { "stepNumber": 4, "instruction_en": "Repeat for 5 different lengths (60 cm, 70 cm, 80 cm, 90 cm, 100 cm) and compute average g.", "instruction_bn": "বিভিন্ন দৈর্ঘ্যের জন্য পুনরাবৃত্তি করে L-T² গ্রাফ ও g-এর গড় মান নির্ণয় করুন।" }
+      ],
+      "precautions_en": [
+        "Amplitude of swing must be small (< 5°) for simple harmonic motion.",
+        "Motion should strictly be in a vertical plane without circular wobbling."
+      ],
+      "precautions_bn": [
+        "দোলন বিস্তার ৫ ডিগ্রির কম হতে হবে যেন সরল ছন্দিত স্পন্দন বজায় থাকে।",
+        "ববটি কোনো ঘূর্ণন ছাড়া সরল উল্লম্ব তলে দুলতে দিন।"
+      ],
+      "dataColumns": [
+        { "key": "lengthL", "label_en": "Effective L (m)", "label_bn": "কার্যকরী দৈর্ঘ্য L (m)", "unit": "m", "decimals": 3 },
+        { "key": "time20", "label_en": "Time for 20 osc (s)", "label_bn": "২০ দোলনের সময় (s)", "unit": "s", "decimals": 2 },
+        { "key": "periodT", "label_en": "Period T (s)", "label_bn": "পর্যায়কাল T (s)", "unit": "s", "decimals": 3 },
+        { "key": "periodTSq", "label_en": "T² (s²)", "label_bn": "T² (s²)", "unit": "s²", "decimals": 3 },
+        { "key": "gCalc", "label_en": "g = 4π²(L/T²)", "label_bn": "g (m/s²)", "unit": "m/s²", "decimals": 3 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "g = 4π² * (L / T²)",
+        "expectedConstant": 9.807,
+        "expectedConstantUnit": "m/s²",
+        "xColumn": "periodTSq",
+        "yColumn": "lengthL",
+        "slopeFormula": "Slope = g / (4π²)"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "If the effective length of a simple pendulum is made 4 times longer, its time period will:",
+          "question_bn": "একটি সরল দোলকের কার্যকর দৈর্ঘ্য ৪ গুণ বৃদ্ধি করলে দোলনকাল কত গুণ হবে?",
+          "options": [
+            { "id": "a", "text_en": "Double (2 times)", "text_bn": "দ্বিগুণ (২ গুণ)" },
+            { "id": "b", "text_en": "Quadruple (4 times)", "text_bn": "চার গুণ" },
+            { "id": "c", "text_en": "Halve (1/2)", "text_bn": "অর্ধেক" },
+            { "id": "d", "text_en": "Remain unchanged", "text_bn": "অপরিবর্তিত থাকবে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "T is proportional to √L. When L becomes 4L, T' = √(4) × T = 2T.",
+          "explanation_bn": "T ∝ √L হওয়ায় দৈর্ঘ্য ৪ গুণ হলে দোলনকাল √৪ = ২ গুণ বৃদ্ধি পাবে।"
+        }
+      ]
+    },
+    {
+      "id": "spring-constant",
+      "slug": "spring-constant",
+      "title_en": "Determination of Spring Constant (Hooke's Law & Oscillations)",
+      "title_bn": "স্প্রিং ধ্রুবক নির্ণয় (হুকের সূত্র ও উলম্ব দোলন)",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To verify Hooke's Law for a helical spring and determine its force constant 'k' statically and dynamically.",
+      "aim_bn": "হেলিক্যাল স্প্রিং-এর হুকের সূত্র যাচাই এবং স্থির লোড ও উলম্ব স্পন্দনের সাহায্যে স্প্রিং ধ্রুবক k নির্ণয়।",
+      "theory_en": "Hooke's Law: Restoring force F = -k·x => m·g = k·x (static extension). Dynamic oscillation period: T = 2π√(m / k) => k = 4π²·m / T².",
+      "theory_bn": "হুকের সূত্র: F = k·x বা m·g = k·x। স্পন্দনের পর্যায়কাল T = ২π√(m/k), সুতরাং k = ৪π²·m / T²।",
+      "formula_latex": "F = k \\cdot x \\implies k = \\frac{m g}{x}, \\quad T = 2\\pi \\sqrt{\\frac{m}{k}}",
+      "formula_desc_en": "k is spring stiffness in N/m. F vs x plot gives a straight line through origin with slope = k.",
+      "formula_desc_bn": "k স্প্রিং ধ্রুবক (N/m)। F বনাম x গ্রাফের ঢাল থেকে k নির্ণয় করা হয়।",
+      "apparatusRequired": ["helical-spring", "slotted-weights-set", "meter-scale-wooden", "digital-stopwatch"],
+      "setup": {
+        "items": [
+          { "equipmentId": "helical-spring", "x": 160, "y": 60, "properties": { "springConstant": 25, "attachedMassGrams": 150 } },
+          { "equipmentId": "digital-stopwatch", "x": 360, "y": 140, "properties": { "running": false } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Note initial pointer reading on meter scale with hanger only.", "instruction_bn": "শুধু হ্যাঙ্গার ঝুলিয়ে স্কেলের প্রাথমিক রিডিং নিন।" },
+        { "stepNumber": 2, "instruction_en": "Add 50g weights successively and note extension x = x_loaded - x_initial.", "instruction_bn": "ধাপে ধাপে ৫০ গ্রাম করে বাটখারা চাপান এবং প্রসারণ x পরিমাপ করুন।" },
+        { "stepNumber": 3, "instruction_en": "Pull mass down slightly and release to measure period T of 20 vertical oscillations.", "instruction_bn": "সামান্য নিচে টেনে ছেড়ে দিয়ে ২০টি উল্লম্ব দোলনের সময় মেপে T বের করুন।" }
+      ],
+      "precautions_en": ["Do not overload beyond elastic limit of spring."],
+      "precautions_bn": ["স্প্রিং-এর স্থিতিস্থাপক সীমার বাইরে অতিরিক্ত ভর ঝুলাবেন না।"],
+      "dataColumns": [
+        { "key": "massKg", "label_en": "Mass m (kg)", "label_bn": "ভর m (kg)", "unit": "kg", "decimals": 3 },
+        { "key": "forceN", "label_en": "Force F = mg (N)", "label_bn": "বল F (N)", "unit": "N", "decimals": 3 },
+        { "key": "extensionM", "label_en": "Extension x (m)", "label_bn": "প্রসারণ x (m)", "unit": "m", "decimals": 4 },
+        { "key": "kStatic", "label_en": "k = F/x (N/m)", "label_bn": "k (N/m)", "unit": "N/m", "decimals": 2 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Hooke's Law F = k * x",
+        "expectedConstant": 25.0,
+        "expectedConstantUnit": "N/m",
+        "xColumn": "extensionM",
+        "yColumn": "forceN",
+        "slopeFormula": "Slope = Spring Constant k"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "What happens to the equivalent spring constant when two identical springs of constant 'k' are connected in parallel?",
+          "question_bn": "একই মানের 'k' সম্পন্ন দুটি স্প্রিং সমান্তরালে যুক্ত করলে তাদের তুল্য স্প্রিং ধ্রুবক কত হবে?",
+          "options": [
+            { "id": "a", "text_en": "2k", "text_bn": "২k" },
+            { "id": "b", "text_en": "k / 2", "text_bn": "k / ২" },
+            { "id": "c", "text_en": "k", "text_bn": "k" },
+            { "id": "d", "text_en": "4k", "text_bn": "৪k" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "In parallel combination, equivalent spring constant Kp = k1 + k2 = 2k (springs become stiffer).",
+          "explanation_bn": "সমান্তরালে স্প্রিং যুক্ত করলে দৃঢ়তা বৃদ্ধি পায়, Kp = k + k = ২k।"
+        }
+      ]
+    },
+    {
+      "id": "inclined-plane",
+      "slug": "inclined-plane",
+      "title_en": "Determination of Coefficient of Friction on an Inclined Plane",
+      "title_bn": "নততলের সাহায্যে ঘর্ষণ গুণাঙ্ক ও ত্বরণ নির্ণয়",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To determine the coefficient of static friction (μs = tan θ) and kinetic friction for a block on an inclined plane.",
+      "aim_bn": "নততলের নতি কোণ বাড়িয়ে স্থির কোণ (Angle of Repose) ও ঘর্ষণ গুণাঙ্ক নির্ণয় করা।",
+      "theory_en": "At the angle of repose θ_s where the block just starts sliding down the plane: F_friction = m·g·sin θ_s and Normal force N = m·g·cos θ_s => μ_s = tan θ_s.",
+      "theory_bn": "যে নতি কোণে বস্তুটি ঠিক পিছলে পড়তে শুরু করে (বিশ্রাম কোণ θ): μ_s = tan θ।",
+      "formula_latex": "\\mu_s = \\tan \\theta_s, \\quad a = g (\\sin \\theta - \\mu_k \\cos \\theta)",
+      "formula_desc_en": "Coefficient of static friction equals tangent of limiting angle of repose.",
+      "formula_desc_bn": "স্থির ঘর্ষণ গুণাঙ্ক বিশ্রাম কোণের ট্যানজেন্টের সমান।",
+      "apparatusRequired": ["inclined-plane-track", "circular-protractor", "slotted-weights-set"],
+      "setup": {
+        "items": [
+          { "equipmentId": "inclined-plane-track", "x": 120, "y": 80, "properties": { "inclineAngleDeg": 20 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Place the wooden block on the horizontal plane track.", "instruction_bn": "নততলের উপর কাঠের ব্লকটি রাখুন।" },
+        { "stepNumber": 2, "instruction_en": "Gradually elevate the ramp angle until the block just begins to slide down.", "instruction_bn": "ধীরে ধীরে তলের ঢাল বাড়ান যতক্ষণ না বস্তুটি পিছলে নামা শুরু করে।" },
+        { "stepNumber": 3, "instruction_en": "Read the angle of repose θ and calculate coefficient of friction μ = tan(θ).", "instruction_bn": "কোণ θ পড়ে ঘর্ষণ গুণাঙ্ক μ = tan θ গণনা করুন।" }
+      ],
+      "precautions_en": ["Ensure surface is dust-free and clean."],
+      "precautions_bn": ["তলটি পরিষ্কার ও ধূলিমুক্ত রাখুন।"],
+      "dataColumns": [
+        { "key": "trial", "label_en": "Trial #", "label_bn": "পর্যবেক্ষণ নং" },
+        { "key": "angleDeg", "label_en": "Angle of Repose θ (°)", "label_bn": "বিশ্রাম কোণ θ (°)", "unit": "°", "decimals": 1 },
+        { "key": "tanTheta", "label_en": "μ = tan(θ)", "label_bn": "ঘর্ষণ গুণাঙ্ক μ", "decimals": 3 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "μ = tan(θ)",
+        "expectedConstant": 0.364,
+        "xColumn": "angleDeg",
+        "yColumn": "tanTheta"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "The coefficient of static friction (μs) is generally:",
+          "question_bn": "স্থির ঘর্ষণ গুণাঙ্ক (μs) সাধারণত চল ঘর্ষণ গুণাঙ্কের (μk) তুলনায়:",
+          "options": [
+            { "id": "a", "text_en": "Greater than kinetic friction (μs > μk)", "text_bn": "বেশি (μs > μk)" },
+            { "id": "b", "text_en": "Less than kinetic friction (μs < μk)", "text_bn": "কম (μs < μk)" },
+            { "id": "c", "text_en": "Equal to kinetic friction", "text_bn": "সমান" },
+            { "id": "d", "text_en": "Zero", "text_bn": "শূন্য" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "It takes more force to break interlocking static contact points than to maintain motion once moving (μs > μk).",
+          "explanation_bn": "স্থির অবস্থার আন্তঃআণবিক বন্ধন ভাঙতে বেশি বল লাগে, তাই μs > μk।"
+        }
+      ]
+    },
+    {
+      "id": "projectile-motion",
+      "slug": "projectile-motion",
+      "title_en": "Study of Projectile Motion Trajectory, Range and Launch Angle",
+      "title_bn": "প্রাসের গতি, পাল্লা ও নিক্ষেপ কোণের সম্পর্ক",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-11-12",
+      "durationMinutes": 15,
+      "aim_en": "To analyze parabolic projectile trajectory and determine horizontal range R as a function of launch angle θ (maximum range at 45°).",
+      "aim_bn": "প্রাসের পরাবৃত্তাকার গতি বিশ্লেষণ এবং নিক্ষেপ কোণ θ পরিবর্তনের সাথে পাল্লা R-এর সম্পর্ক পরীক্ষা।",
+      "theory_en": "Neglecting air resistance: Horizontal range R = (v0²·sin 2θ) / g. Maximum height H = (v0²·sin²θ) / 2g. Time of flight T = (2·v0·sin θ) / g. Range is maximum at θ = 45°.",
+      "theory_bn": "বাতাসের বাধা উপেক্ষা করলে অনুভূমিক পাল্লা R = (v0² sin ২θ) / g। সর্বোচ্চ উচ্চতা H = (v0² sin²θ) / ২g। θ = ৪৫° কোণে পাল্লা সর্বোচ্চ হয়।",
+      "formula_latex": "R = \\frac{v_0^2 \\sin 2\\theta}{g}, \\quad H = \\frac{v_0^2 \\sin^2 \\theta}{2g}",
+      "formula_desc_en": "R is horizontal distance, v0 is initial speed, θ is launch angle.",
+      "formula_desc_bn": "R অনুভূমিক পাল্লা, v0 আদি বেগ, θ নিক্ষেপ কোণ।",
+      "apparatusRequired": ["projectile-launcher", "meter-scale-wooden", "circular-protractor"],
+      "setup": {
+        "items": [
+          { "equipmentId": "projectile-launcher", "x": 100, "y": 140, "properties": { "launchAngleDeg": 45, "muzzleVelocity": 10 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Set initial launch speed v0 to 10 m/s and adjust angle to 15°.", "instruction_bn": "কামানটির আদি বেগ ১০ m/s এবং কোণ ১৫° নির্ধারণ করুন।" },
+        { "stepNumber": 2, "instruction_en": "Launch projectile and record horizontal range R where it lands on ground level.", "instruction_bn": "প্রাস নিক্ষেপ করে মেঝেতে অবতরণের পাল্লা R মেপে নিন।" },
+        { "stepNumber": 3, "instruction_en": "Change angle θ to 30°, 45°, 60°, 75° and plot R vs θ.", "instruction_bn": "কোণ ৩০°, ৪৫°, ৬০°, ৭৫° করে পাল্লা রেকর্ড করুন এবং R বনাম θ গ্রাফ আঁকুন।" }
+      ],
+      "precautions_en": ["Ensure launcher is clamped securely on horizontal bench."],
+      "precautions_bn": ["লঞ্চারটি বেঞ্চে শক্ত করে আটকান।"],
+      "dataColumns": [
+        { "key": "angleDeg", "label_en": "Angle θ (°)", "label_bn": "নিক্ষেপ কোণ θ (°)", "unit": "°" },
+        { "key": "sin2Theta", "label_en": "sin(2θ)", "label_bn": "sin(২θ)", "decimals": 3 },
+        { "key": "rangeM", "label_en": "Measured Range R (m)", "label_bn": "পরিমাপকৃত পাল্লা R (m)", "unit": "m", "decimals": 2 },
+        { "key": "theoryRangeM", "label_en": "Theoretical R (m)", "label_bn": "তাত্ত্বিক পাল্লা R (m)", "unit": "m", "decimals": 2 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "R = (v0² / g) * sin(2θ)",
+        "expectedConstant": 10.197,
+        "expectedConstantUnit": "m (max range at 45°)",
+        "xColumn": "sin2Theta",
+        "yColumn": "rangeM",
+        "slopeFormula": "Slope = v0² / g"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "For which two launch angles does a projectile have the same horizontal range for equal initial speeds?",
+          "question_bn": "একই আদি বেগের জন্য কোন দুটি নিক্ষেপ কোণে প্রাসের অনুভূমিক পাল্লা সমান হয়?",
+          "options": [
+            { "id": "a", "text_en": "Complementary angles (e.g. 30° and 60° where θ1 + θ2 = 90°)", "text_bn": "পরস্পর পূরক কোণে (যেমন ৩০° ও ৬০° যেখানে θ১ + θ২ = ৯০°)" },
+            { "id": "b", "text_en": "Supplementary angles (θ1 + θ2 = 180°)", "text_bn": "সম্পূরক কোণে" },
+            { "id": "c", "text_en": "45° and 90°", "text_bn": "৪৫° ও ৯০°" },
+            { "id": "d", "text_en": "Only at 45°", "text_bn": "কেবল ৪৫° তে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Since sin(2·(90° - θ)) = sin(180° - 2θ) = sin(2θ), ranges are identical for complementary angles.",
+          "explanation_bn": "sin(২(৯০° - θ)) = sin(২θ) হওয়ায় পূরক কোণদ্বয়ে পাল্লা সমান থাকে।"
+        }
+      ]
+    },
+    {
+      "id": "newtons-second-law",
+      "slug": "newtons-second-law",
+      "title_en": "Verification of Newton's Second Law of Motion (F = m · a)",
+      "title_bn": "নিউটনের গতির দ্বিতীয় সূত্র যাচাই (F = m · a)",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To verify that acceleration 'a' is proportional to accelerating net force F for constant mass, and inversely proportional to total mass m.",
+      "aim_bn": "গতিশীল ট্রলির সাহায্যে F বনাম a এবং m বনাম a সম্পর্ক যাচাই করে F = m·a প্রমাণ করা।",
+      "theory_en": "Newton's Second Law: Acceleration of an object is directly proportional to net applied force and inversely proportional to total system mass: a = F_net / M_total.",
+      "theory_bn": "বস্তুর ত্বরণ প্রযুক্ত নেট বলের সমানুপাতিক এবং মোট ভরের ব্যস্তানুপাতিক: F = M·a।",
+      "formula_latex": "F_{\\text{net}} = M_{\\text{total}} \\cdot a \\implies a = \\frac{m_{\\text{hang}} g}{M_{\\text{cart}} + m_{\\text{hang}}}",
+      "formula_desc_en": "Accelerating force is provided by hanging mass m_hang * g.",
+      "formula_desc_bn": "ত্বরণ সৃষ্টিকারী বল হলো ঝুলন্ত ভর × g।",
+      "apparatusRequired": ["dynamics-trolley", "single-pulley", "slotted-weights-set", "digital-stopwatch"],
+      "setup": {
+        "items": [
+          { "equipmentId": "dynamics-trolley", "x": 100, "y": 100, "properties": { "cartMassGrams": 500, "extraMassGrams": 0 } },
+          { "equipmentId": "single-pulley", "x": 400, "y": 100 }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Attach light string from trolley over pulley to hanging mass hanger (50g).", "instruction_bn": "ট্রলির সাথে দড়ি বেঁধে কপিকল হয়ে ৫০ গ্রাম ঝুলন্ত ভরের সাথে যুক্ত করুন।" },
+        { "stepNumber": 2, "instruction_en": "Release trolley from rest across track length s = 1.0 m and measure travel time t.", "instruction_bn": "স্থিরাবস্থা থেকে ট্রলি ছেড়ে ১ মিটার দূরত্ব পার হতে সময় t রেকর্ড করুন।" },
+        { "stepNumber": 3, "instruction_en": "Calculate acceleration a = 2s / t² and verify F_net = M_total × a.", "instruction_bn": "ত্বরণ a = ২s / t² বের করে F = ma যাচাই করুন।" }
+      ],
+      "precautions_en": ["Ensure the track is horizontally leveled."],
+      "precautions_bn": ["ট্র্যাকটি সম্পূর্ণ অনুভূমিক রাখুন।"],
+      "dataColumns": [
+        { "key": "hangingMassKg", "label_en": "Hanging Mass (kg)", "label_bn": "ঝুলন্ত ভর (kg)", "unit": "kg", "decimals": 3 },
+        { "key": "forceN", "label_en": "Applied Force F (N)", "label_bn": "প্রযুক্ত বল F (N)", "unit": "N", "decimals": 3 },
+        { "key": "timeSec", "label_en": "Time t (s)", "label_bn": "সময় t (s)", "unit": "s", "decimals": 2 },
+        { "key": "accelMps2", "label_en": "Accel a = 2s/t²", "label_bn": "ত্বরণ a (m/s²)", "unit": "m/s²", "decimals": 3 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "F = M * a",
+        "expectedConstant": 0.55,
+        "expectedConstantUnit": "kg (Total System Mass)",
+        "xColumn": "accelMps2",
+        "yColumn": "forceN",
+        "slopeFormula": "Slope = Total Mass M"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "If net force applied on a body is doubled while keeping its mass constant, its acceleration will:",
+          "question_bn": "ভর স্থির রেখে প্রযুক্ত বল দ্বিগুণ করলে ত্বরণ কত হবে?",
+          "options": [
+            { "id": "a", "text_en": "Double", "text_bn": "দ্বিগুণ হবে" },
+            { "id": "b", "text_en": "Remain unchanged", "text_bn": "অপরিবর্তিত থাকবে" },
+            { "id": "c", "text_en": "Halve", "text_bn": "অর্ধেক হবে" },
+            { "id": "d", "text_en": "Quadruple", "text_bn": "চার গুণ হবে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Since a = F / m, acceleration is directly proportional to applied force.",
+          "explanation_bn": "a ∝ F হওয়ায় বল দ্বিগুণ হলে ত্বরণও দ্বিগুণ হবে।"
+        }
+      ]
+    },
+    {
+      "id": "vernier-caliper-measurement",
+      "slug": "vernier-caliper-measurement",
+      "title_en": "Measurement of Dimensions and Volume using Vernier Caliper",
+      "title_bn": "ভার্নিয়ার ক্যালিপার্সের সাহায্যে বেলন ও গোলকের ব্যাস ও আয়তন নির্ণয়",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To measure the diameter and length of a cylinder/sphere, apply zero error correction and determine volume: V = π·r²·h.",
+      "aim_bn": "ভার্নিয়ার ক্যালিপার্সের সাহায্যে চোয়ালের শূন্য ত্রুটি নির্ণয়, বেলনের ব্যাস ও উচ্চতা মেপে আয়তন বের করা।",
+      "theory_en": "Least Count LC = 1 MSD - 1 VSD = 1 mm - (9/10) mm = 0.1 mm (or 0.01 cm). Total reading = MSR + (VSR × LC) - Zero Error.",
+      "theory_bn": "ভার্নিয়ার ধ্রুবক (VC / LC) = ১ প্রধান স্কেল ভাগ - ১ ভার্নিয়ার স্কেল ভাগ = ০.১ মিমি। মোট পাঠ = প্রধান স্কেল পাঠ + (ভার্নিয়ার সমপাতন × VC) - শূন্য ত্রুটি।",
+      "formula_latex": "\\text{Total Reading} = MSR + (VSR \\times LC) - ZE, \\quad V = \\pi r^2 h",
+      "formula_desc_en": "MSR is Main Scale Reading, VSR is Vernier Scale division coinciding with main scale.",
+      "formula_desc_bn": "MSR প্রধান স্কেল পাঠ, VSR ভার্নিয়ার সমপাতন, LC ভার্নিয়ার ধ্রুবক, ZE শূন্য ত্রুটি।",
+      "apparatusRequired": ["vernier-caliper"],
+      "setup": {
+        "items": [
+          { "equipmentId": "vernier-caliper", "x": 120, "y": 100, "properties": { "measuredObjectWidthMm": 24.6, "zeroErrorMm": 0 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Determine the least count (vernier constant) of the instrument.", "instruction_bn": "ভার্নিয়ার ক্যালিপার্সের ভার্নিয়ার ধ্রুবক (VC) বের করুন।" },
+        { "stepNumber": 2, "instruction_en": "Close jaws completely to check for zero error (positive or negative).", "instruction_bn": "চোয়াল দুটি সম্পূর্ণ লাগিয়ে শূন্য দাগ মিলিয়ে শূন্য ত্রুটি নির্ণয় করুন।" },
+        { "stepNumber": 3, "instruction_en": "Grip the object between lower jaws and record Main Scale Reading (MSR) and Vernier Coincidence (VSR).", "instruction_bn": "বস্তুটি চোয়ালে আটকে প্রধান স্কেল পাঠ (MSR) ও ভার্নিয়ার সমপাতন (VSR) লিখুন।" },
+        { "stepNumber": 4, "instruction_en": "Calculate corrected diameter D and compute cylinder volume V.", "instruction_bn": "সংশোধিত ব্যাস D ও উচ্চতা h থেকে আয়তন V = πr²h হিসাব করুন।" }
+      ],
+      "precautions_en": ["Do not overtighten the thumbscrew."],
+      "precautions_bn": ["স্ক্রু অতিরিক্ত টাইট করবেন না।"],
+      "dataColumns": [
+        { "key": "dimension", "label_en": "Dimension", "label_bn": "পরিমাপ" },
+        { "key": "msrMm", "label_en": "MSR (mm)", "label_bn": "MSR (mm)", "unit": "mm", "decimals": 1 },
+        { "key": "vsrDiv", "label_en": "VSR (div)", "label_bn": "ভার্নিয়ার ভাগ", "decimals": 0 },
+        { "key": "totalMm", "label_en": "Corrected (mm)", "label_bn": "সংশোধিত পাঠ (mm)", "unit": "mm", "decimals": 2 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Reading = MSR + VSR * LC",
+        "expectedConstant": 24.6,
+        "expectedConstantUnit": "mm",
+        "xColumn": "vsrDiv",
+        "yColumn": "totalMm"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "If 10 vernier divisions coincide with 9 main scale divisions (each 1 mm), what is the least count?",
+          "question_bn": "যদি প্রধান স্কেলের ৯ ঘর (১ মিমি করে) ভার্নিয়ারের ১০ ঘরের সমান হয়, তবে ভার্নিয়ার ধ্রুবক কত?",
+          "options": [
+            { "id": "a", "text_en": "0.1 mm (0.01 cm)", "text_bn": "০.১ মিমি (০.০১ সেমি)" },
+            { "id": "b", "text_en": "0.01 mm", "text_bn": "০.০১ মিমি" },
+            { "id": "c", "text_en": "1 mm", "text_bn": "১ মিমি" },
+            { "id": "d", "text_en": "0.9 mm", "text_bn": "০.৯ মিমি" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "LC = 1 MSD - 1 VSD = 1 mm - (9/10) mm = 0.1 mm = 0.01 cm.",
+          "explanation_bn": "LC = ১ মিমি - ৯/১০ মিমি = ০.১ মিমি = ০.০১ সেমি।"
+        }
+      ]
+    },
+    {
+      "id": "screw-gauge-measurement",
+      "slug": "screw-gauge-measurement",
+      "title_en": "Measurement of Wire Diameter & Sheet Thickness using Screw Gauge",
+      "title_bn": "স্ক্রু গজের সাহায্যে তারের ব্যাস ও পাতলা পাতের পুরুত্ব নির্ণয়",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To measure the diameter of a thin resistance wire using a micrometer screw gauge and calculate cross-sectional area.",
+      "aim_bn": "স্ক্রু গজের পিচ ও লঘিষ্ঠ গণন বের করে চিকন তারের ব্যাস ও প্রস্থচ্ছেদের ক্ষেত্রফল নির্ণয়।",
+      "theory_en": "Least Count LC = Pitch / Number of circular scale divisions = 1 mm / 100 = 0.01 mm. Total Reading = PSR + (CSR × LC) - Zero Error.",
+      "theory_bn": "লঘিষ্ঠ গণন (LC) = পিচ / বৃত্তাকার স্কেলের মোট ভাগ সংখ্যা = ১ মিমি / ১০০ = ০.০১ মিমি। মোট পাঠ = রৈখিক স্কেল পাঠ (PSR) + (বৃত্তাকার স্কেল পাঠ CSR × LC) - শূন্য ত্রুটি।",
+      "formula_latex": "\\text{Reading} = PSR + (CSR \\times LC) - ZE, \\quad A = \\frac{\\pi d^2}{4}",
+      "formula_desc_en": "PSR is pitch scale reading, CSR is circular division aligned with index line.",
+      "formula_desc_bn": "PSR রৈখিক পাঠ, CSR বৃত্তাকার স্কেল পাঠ, LC লঘিষ্ঠ গণন, ZE শূন্য ত্রুটি।",
+      "apparatusRequired": ["screw-gauge-micrometer"],
+      "setup": {
+        "items": [
+          { "equipmentId": "screw-gauge-micrometer", "x": 120, "y": 100, "properties": { "gapMm": 3.74, "zeroErrorMm": 0 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Find pitch by rotating thimble one complete turn (1 mm) and divide by circular divisions (100) to get LC = 0.01 mm.", "instruction_bn": "এক পূর্ণ ঘূর্ণনে রৈখিক সরণ (পিচ ১ মিমি) থেকে লঘিষ্ঠ গণন LC = ০.০১ মিমি বের করুন।" },
+        { "stepNumber": 2, "instruction_en": "Bring studs in contact using ratchet to record zero error.", "instruction_bn": "র‍্যাচেট ঘুরিয়ে স্টাড স্পর্শ করিয়ে শূন্য ত্রুটি লিপিবদ্ধ করুন।" },
+        { "stepNumber": 3, "instruction_en": "Place wire between studs, turn ratchet until it clicks, and read PSR and CSR.", "instruction_bn": "তারটি স্টাডের মাঝে রেখে র‍্যাচেট ঘুরিয়ে শব্দ হলে PSR ও CSR পাঠ নিন।" }
+      ],
+      "precautions_en": ["Always turn using the ratchet head, never by gripping the thimble directly."],
+      "precautions_bn": ["সর্বদা র‍্যাচেট ঘুরিয়ে টাইট করুন যাতে অতিরিক্ত চাপে তার চাপা না খায়।"],
+      "dataColumns": [
+        { "key": "position", "label_en": "Measurement Position", "label_bn": "পরিমাপ অবস্থান" },
+        { "key": "psrMm", "label_en": "PSR (mm)", "label_bn": "PSR (mm)", "unit": "mm", "decimals": 1 },
+        { "key": "csrDiv", "label_en": "CSR (div)", "label_bn": "CSR ভাগ", "decimals": 0 },
+        { "key": "diameterMm", "label_en": "Diameter d (mm)", "label_bn": "ব্যাস d (mm)", "unit": "mm", "decimals": 3 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Reading = PSR + CSR * 0.01 mm",
+        "expectedConstant": 3.74,
+        "expectedConstantUnit": "mm",
+        "xColumn": "csrDiv",
+        "yColumn": "diameterMm"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "What is the purpose of the ratchet head in a micrometer screw gauge?",
+          "question_bn": "স্ক্রু গজে র‍্যাচেটের কাজ কী?",
+          "options": [
+            { "id": "a", "text_en": "To ensure uniform, gentle pressure on the measured object", "text_bn": "বস্তুর উপর সুষম ও নির্দিষ্ট চাপ নিশ্চিত করা" },
+            { "id": "b", "text_en": "To lock the spindle", "text_bn": "স্পিন্ডল লক করা" },
+            { "id": "c", "text_en": "To measure length", "text_bn": "দৈর্ঘ্য মাপা" },
+            { "id": "d", "text_en": "To illuminate the scale", "text_bn": "স্কেল আলোকিত করা" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The ratchet slips with a click when safe pressure is reached, preventing crushing of delicate samples and parallax deformation.",
+          "explanation_bn": "র‍্যাচেট নির্দিষ্ট চাপের পর পিছলে যায় ফলে নমুনার ক্ষতি হয় না এবং সঠিক পাঠ পাওয়া যায়।"
+        }
+      ]
+    },
+    {
+      "id": "focal-length-convex-lens",
+      "slug": "focal-length-convex-lens",
+      "title_en": "Determination of Focal Length of a Convex Lens (u-v Method)",
+      "title_bn": "উত্তল লেন্সের ফোকাস দূরত্ব নির্ণয় (u-v পদ্ধতি ও স্থানচ্যুতি পদ্ধতি)",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-9-10",
+      "durationMinutes": 20,
+      "aim_en": "To find the focal length of a convex lens by plotting graphs between u and v, and 1/u vs 1/v.",
+      "aim_bn": "অপটিক্যাল বেঞ্চে বস্তু ও প্রতিবিম্বের দূরত্ব u ও v মেপে উত্তল লেন্সের ফোকাস দূরত্ব f নির্ণয়।",
+      "theory_en": "By the thin lens formula: 1/f = 1/v - 1/u (with sign convention, 1/f = 1/v + 1/u where u is positive magnitude). Hence f = (u × v) / (u + v).",
+      "theory_bn": "পাতলা লেন্স সূত্র: ১/f = ১/v - ১/u (চিহ্ন রীতিতে f = u·v / (u + v))। ১/u বনাম ১/v লেখচিত্রের ছেদাংশ থেকে ১/f পাওয়া যায়।",
+      "formula_latex": "\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u} \\implies f = \\frac{u v}{u + v}",
+      "formula_desc_en": "f is focal length, u is object distance from lens optical center, v is real image distance.",
+      "formula_desc_bn": "f ফোকাস দূরত্ব, u বস্তু দূরত্ব, v বাস্তব প্রতিবিম্ব দূরত্ব।",
+      "apparatusRequired": ["optical-bench", "lens-convex", "white-light-source", "projection-screen"],
+      "setup": {
+        "items": [
+          { "equipmentId": "optical-bench", "x": 50, "y": 80, "properties": { "railLengthCm": 150 } },
+          { "equipmentId": "white-light-source", "x": 100, "y": 60, "properties": { "intensity": 90 } },
+          { "equipmentId": "lens-convex", "x": 260, "y": 45, "properties": { "focalLengthCm": 15, "positionCm": 50 } },
+          { "equipmentId": "projection-screen", "x": 420, "y": 45, "properties": { "positionCm": 80 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Mount white object lamp at 0 cm and convex lens at 50 cm on the optical bench (u = 50 cm).", "instruction_bn": "অপটিক্যাল বেঞ্চে আলোক উৎস ০ সেমি এবং লেন্স ৫০ সেমিতে বসান (u = ৫০ সেমি)।" },
+        { "stepNumber": 2, "instruction_en": "Move the screen along the bench until a sharp, inverted real image of the object is formed.", "instruction_bn": "পর্দাটি সামনে-পেছনে সরিয়ে পর্দায় সুস্পষ্ট উল্টো প্রতিবিম্ব ফেলুন।" },
+        { "stepNumber": 3, "instruction_en": "Read image position to get v, and compute f = (u·v) / (u + v). Repeat for 5 different u values (e.g. 25, 30, 40, 50, 60 cm).", "instruction_bn": "পর্দার অবস্থান থেকে v মেপে f গণনা করুন এবং ৫টি ভিন্ন u-এর জন্য পুনরাবৃত্তি করুন।" }
+      ],
+      "precautions_en": ["Ensure the optical centers of object, lens, and screen lie on the same horizontal line."],
+      "precautions_bn": ["বস্তু, লেন্স ও পর্দার কেন্দ্রবিন্দু একই সরলরেখায় রাখুন।"],
+      "dataColumns": [
+        { "key": "obsNo", "label_en": "Obs #", "label_bn": "পর্যবেক্ষণ নং" },
+        { "key": "uCm", "label_en": "Object u (cm)", "label_bn": "বস্তু দূরত্ব u (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "vCm", "label_en": "Image v (cm)", "label_bn": "প্রতিবিম্ব v (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "invU", "label_en": "1/u (cm⁻¹)", "label_bn": "১/u (cm⁻¹)", "decimals": 4 },
+        { "key": "invV", "label_en": "1/v (cm⁻¹)", "label_bn": "১/v (cm⁻¹)", "decimals": 4 },
+        { "key": "fCalc", "label_en": "f (cm)", "label_bn": "f (cm)", "unit": "cm", "decimals": 2 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "1/f = 1/v + 1/u",
+        "expectedConstant": 15.0,
+        "expectedConstantUnit": "cm",
+        "xColumn": "invU",
+        "yColumn": "invV",
+        "slopeFormula": "Intercept = 1/f"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "When an object is placed at 2f in front of a convex lens, the image is formed at:",
+          "question_bn": "উত্তল লেন্সের সামনে ২f দূরত্বে বস্তু রাখলে প্রতিবিম্ব কোথায় তৈরি হয়?",
+          "options": [
+            { "id": "a", "text_en": "At 2f on the other side (real, inverted, same size)", "text_bn": "অপর পাশে ২f দূরত্বে (বাস্তব, উল্টো ও সমান আকৃতির)" },
+            { "id": "b", "text_en": "At focus f", "text_bn": "ফোকাস f-এ" },
+            { "id": "c", "text_en": "At infinity", "text_bn": "অসীমে" },
+            { "id": "d", "text_en": "Between f and 2f", "text_bn": "f ও ২f এর মাঝে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "From lens formula 1/f = 1/v + 1/(2f) => 1/v = 1/(2f) => v = 2f, magnification m = -v/u = -1.",
+          "explanation_bn": "u = ২f হলে প্রতিবিম্ব অপর পাশে v = ২f দূরত্বে বাস্তব, উল্টো এবং লক্ষ্যবস্তুর সমান আকারের হয়।"
+        }
+      ]
+    },
+    {
+      "id": "focal-length-concave-mirror",
+      "slug": "focal-length-concave-mirror",
+      "title_en": "Determination of Focal Length of a Concave Mirror",
+      "title_bn": "অবতল দর্পণের ফোকাস দূরত্ব নির্ণয়",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To determine the focal length of a concave spherical mirror using optical bench.",
+      "aim_bn": "অবতল দর্পণের সামনে বস্তু ও পর্দার অবস্থান নির্ধারণ করে ফোকাস দূরত্ব f নির্ণয়।",
+      "theory_en": "Mirror formula: 1/f = 1/v + 1/u. For real inverted images formed in front of concave mirror, f = (u × v) / (u + v).",
+      "theory_bn": "দর্পণ সমীকরণ: ১/f = ১/v + ১/u বা f = u·v / (u + v)।",
+      "formula_latex": "\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u} \\implies f = \\frac{u v}{u + v}",
+      "formula_desc_en": "u is object distance, v is image distance from mirror pole.",
+      "formula_desc_bn": "u বস্তু দূরত্ব, v প্রতিবিম্ব দূরত্ব।",
+      "apparatusRequired": ["optical-bench", "mirror-concave", "white-light-source", "projection-screen"],
+      "setup": {
+        "items": [
+          { "equipmentId": "optical-bench", "x": 50, "y": 80, "properties": { "railLengthCm": 150 } },
+          { "equipmentId": "mirror-concave", "x": 380, "y": 45, "properties": { "focalLengthCm": 20, "positionCm": 80 } },
+          { "equipmentId": "white-light-source", "x": 100, "y": 60, "properties": { "intensity": 90 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Place concave mirror at 80 cm mark on bench.", "instruction_bn": "অবতল দর্পণটি ৮০ সেমি দাগে বসান।" },
+        { "stepNumber": 2, "instruction_en": "Set object at distance u > 2f and adjust screen position until a sharp real image appears.", "instruction_bn": "বস্তুকে u > ২f দূরত্বে রেখে পর্দায় স্পষ্ট উল্টো প্রতিবিম্ব ফেলুন।" },
+        { "stepNumber": 3, "instruction_en": "Record u and v to calculate focal length f.", "instruction_bn": "u ও v এর মান লিখে f নির্ণয় করুন।" }
+      ],
+      "precautions_en": ["Keep screen slightly offset from optical axis so it does not block light from reaching the mirror."],
+      "precautions_bn": ["পর্দাটি সামান্য পাশে রাখুন যেন দর্পণে আলো পৌঁছাতে বাধা না পায়।"],
+      "dataColumns": [
+        { "key": "obsNo", "label_en": "Obs #", "label_bn": "পর্যবেক্ষণ নং" },
+        { "key": "uCm", "label_en": "Object u (cm)", "label_bn": "বস্তু দূরত্ব u (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "vCm", "label_en": "Image v (cm)", "label_bn": "প্রতিবিম্ব v (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "fCalc", "label_en": "f = uv/(u+v)", "label_bn": "f (cm)", "unit": "cm", "decimals": 2 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "1/f = 1/v + 1/u",
+        "expectedConstant": 20.0,
+        "expectedConstantUnit": "cm",
+        "xColumn": "uCm",
+        "yColumn": "vCm"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Where should an object be placed before a concave mirror to get a virtual, magnified and erect image?",
+          "question_bn": "অবতল দর্পণে সোজা ও বিবর্ধিত অবাস্তব প্রতিবিম্ব পেতে বস্তুকে কোথায় রাখতে হয়?",
+          "options": [
+            { "id": "a", "text_en": "Between pole (P) and principal focus (F)", "text_bn": "মেরু (P) ও প্রধান ফোকাসের (F) মাঝে" },
+            { "id": "b", "text_en": "At center of curvature (C)", "text_bn": "বক্রতার কেন্দ্রে (C)" },
+            { "id": "c", "text_en": "Beyond C", "text_bn": "C-এর বাইরে" },
+            { "id": "d", "text_en": "At infinity", "text_bn": "অসীমে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "When u < f, the rays diverge after reflection and appear to diverge from a point behind the mirror, creating a virtual erect magnified image (used in shaving/dentist mirrors).",
+          "explanation_bn": "u < f হলে প্রতিবিম্ব দর্পণের পেছনে অবাস্তব, সোজা ও আকারে বড় হয় (দাঁতের ডাক্তার বা শেভিং আয়না)।"
+        }
+      ]
+    },
+    {
+      "id": "snells-law-verification",
+      "slug": "snells-law-verification",
+      "title_en": "Verification of Snell's Law & Refraction of Light",
+      "title_bn": "স্নেলের সূত্র যাচাই ও প্রতিসরাঙ্ক নির্ণয়",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To trace the path of light ray through a rectangular glass slab, verify Snell's law (sin i / sin r = constant) and measure lateral displacement.",
+      "aim_bn": "কাচ ফলকে আলোক রশ্মির প্রতিসরণ পর্যবেক্ষণ করে স্নেলের সূত্র (sin i / sin r = µ) যাচাই ও পার্শ্ব সরণ পরিমাপ।",
+      "theory_en": "Snell's Law: For light passing from air (medium 1) into glass (medium 2), sin i / sin r = μ (refractive index of glass). Lateral shift d = t · sin(i - r) / cos r.",
+      "theory_bn": "স্নেলের সূত্র: এক মাধ্যম থেকে অন্য মাধ্যমে আলো গেলে sin i / sin r = µ (ধ্রুবক)। পার্শ্ব সরণ d = t · sin(i - r) / cos r।",
+      "formula_latex": "\\frac{\\sin i}{\\sin r} = \\mu, \\quad d = t \\frac{\\sin(i - r)}{\\cos r}",
+      "formula_desc_en": "i is angle of incidence, r is angle of refraction, μ is refractive index, t is slab thickness.",
+      "formula_desc_bn": "i আপতন কোণ, r প্রতিসরণ কোণ, µ প্রতিসরাঙ্ক, t কাচের পুরুত্ব।",
+      "apparatusRequired": ["glass-slab", "laser-pointer-red", "circular-protractor"],
+      "setup": {
+        "items": [
+          { "equipmentId": "glass-slab", "x": 200, "y": 80, "properties": { "thicknessMm": 30, "refractiveIndex": 1.52 } },
+          { "equipmentId": "laser-pointer-red", "x": 60, "y": 80, "properties": { "beamAngleDeg": 30, "on": true } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Direct laser beam at angle of incidence i = 30° onto the glass slab face.", "instruction_bn": "কাচ ফলকের উপর ৩০° আপতন কোণে লেজার রশ্মি ফেলুন।" },
+        { "stepNumber": 2, "instruction_en": "Measure angle of refraction r inside the glass using protractor.", "instruction_bn": "চাঁদার সাহায্যে কাচের ভেতরের প্রতিসরণ কোণ r পরিমাপ করুন।" },
+        { "stepNumber": 3, "instruction_en": "Calculate sin i / sin r for i = 20°, 30°, 45°, 60° and confirm constancy = μ.", "instruction_bn": "ভিন্ন ভিন্ন আপতন কোণের জন্য sin i / sin r হিসাব করে প্রতিসরাঙ্ক ধ্রুবক কিনা যাচাই করুন।" }
+      ],
+      "precautions_en": ["Ensure laser beam is narrow and precisely centered."],
+      "precautions_bn": ["লেজার রশ্মি সোজা ও সরু রাখুন।"],
+      "dataColumns": [
+        { "key": "angleI", "label_en": "Incidence i (°)", "label_bn": "আপতন কোণ i (°)", "unit": "°" },
+        { "key": "angleR", "label_en": "Refraction r (°)", "label_bn": "প্রতিসরণ কোণ r (°)", "unit": "°" },
+        { "key": "sinI", "label_en": "sin(i)", "label_bn": "sin(i)", "decimals": 4 },
+        { "key": "sinR", "label_en": "sin(r)", "label_bn": "sin(r)", "decimals": 4 },
+        { "key": "muCalc", "label_en": "μ = sin(i)/sin(r)", "label_bn": "প্রতিসরাঙ্ক µ", "decimals": 3 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "sin(i) = μ * sin(r)",
+        "expectedConstant": 1.52,
+        "xColumn": "sinR",
+        "yColumn": "sinI",
+        "slopeFormula": "Slope = Refractive Index μ"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "When a ray of light enters from an optically rarer medium (air) to a denser medium (glass), it bends:",
+          "question_bn": "হালকা মাধ্যম (বায়ু) থেকে ঘন মাধ্যমে (কাচ) আলো প্রবেশ করলে তা:",
+          "options": [
+            { "id": "a", "text_en": "Towards the normal (r < i)", "text_bn": "অভিলম্বের দিকে বেঁকে যায় (r < i)" },
+            { "id": "b", "text_en": "Away from the normal (r > i)", "text_bn": "অভিলম্ব থেকে দূরে সরে যায় (r > i)" },
+            { "id": "c", "text_en": "Continues straight without bending", "text_bn": "না বেঁকে সোজা চলে" },
+            { "id": "d", "text_en": "Reflects back 180°", "text_bn": "১৮০° ফিরে আসে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Speed of light decreases in a denser medium, causing the wavefront to bend towards the normal.",
+          "explanation_bn": "ঘন মাধ্যমে আলোর বেগ কমে যাওয়ায় আলোক রশ্মি অভিলম্বের দিকে বেঁকে যায়।"
+        }
+      ]
+    },
+    {
+      "id": "refractive-index-prism",
+      "slug": "refractive-index-prism",
+      "title_en": "Refractive Index & Minimum Deviation of a Prism",
+      "title_bn": "প্রিজমের ন্যূনতম বিচ্যুতি কোণ ও প্রতিসরাঙ্ক নির্ণয়",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To plot the i-δ (angle of incidence vs deviation) curve for a prism and determine the refractive index μ using minimum deviation δm.",
+      "aim_bn": "প্রিজমের আপতন কোণ i বনাম বিচ্যুতি কোণ δ লেখচিত্র অঙ্কন করে ন্যূনতম বিচ্যুতি δm ও প্রতিসরাঙ্ক µ নির্ণয়।",
+      "theory_en": "Prism Formula: At minimum deviation (δ = δm), ray passes symmetrically through the prism: μ = sin((A + δm) / 2) / sin(A / 2), where A is the prism angle (usually 60°).",
+      "theory_bn": "প্রিজম সূত্র: ন্যূনতম বিচ্যুতি অবস্থানে µ = sin((A + δm) / ২) / sin(A / ২), যেখানে A প্রিজম কোণ (৬০°)।",
+      "formula_latex": "\\mu = \\frac{\\sin\\left(\\frac{A + \\delta_m}{2}\\right)}{\\sin\\left(\\frac{A}{2}\\right)}",
+      "formula_desc_en": "A is angle of equilateral prism (60°), δm is minimum deviation angle.",
+      "formula_desc_bn": "A প্রিজম কোণ, δm ন্যূনতম বিচ্যুতি কোণ।",
+      "apparatusRequired": ["triangular-prism", "laser-pointer-red", "circular-protractor"],
+      "setup": {
+        "items": [
+          { "equipmentId": "triangular-prism", "x": 180, "y": 80, "properties": { "prismAngleDeg": 60, "refractiveIndex": 1.517 } },
+          { "equipmentId": "laser-pointer-red", "x": 60, "y": 100, "properties": { "beamAngleDeg": 48, "on": true } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Place triangular glass prism on the table with refracting edge A pointing upwards.", "instruction_bn": "প্রিজমটি টেবিলে বসান।" },
+        { "stepNumber": 2, "instruction_en": "Incide ray at i = 35°, 40°, 45°, 50°, 55°, 60° and measure emergent angle e and deviation δ = (i + e - A).", "instruction_bn": "বিভিন্ন আপতন কোণে রশ্মি ফেলে নির্গমন কোণ e ও বিচ্যুতি কোণ δ = (i + e - A) মাপুন।" },
+        { "stepNumber": 3, "instruction_en": "Identify lowest point of i-δ curve as δm and calculate refractive index μ.", "instruction_bn": "i-δ গ্রাফের সর্বনিম্ন বিন্দু থেকে δm বের করে প্রতিসরাঙ্ক µ গণনা করুন।" }
+      ],
+      "precautions_en": ["Ensure prism faces are wiped clean."],
+      "precautions_bn": ["প্রিজমের তল পরিষ্কার রাখুন।"],
+      "dataColumns": [
+        { "key": "angleI", "label_en": "Incidence i (°)", "label_bn": "আপতন কোণ i (°)", "unit": "°" },
+        { "key": "angleE", "label_en": "Emergence e (°)", "label_bn": "নির্গমন কোণ e (°)", "unit": "°" },
+        { "key": "deviationDelta", "label_en": "Deviation δ = i+e-A (°)", "label_bn": "বিচ্যুতি কোণ δ (°)", "unit": "°", "decimals": 1 },
+        { "key": "muVal", "label_en": "Calculated μ", "label_bn": "প্রতিসরাঙ্ক µ", "decimals": 3 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "μ = sin((A+δm)/2) / sin(A/2)",
+        "expectedConstant": 1.517,
+        "xColumn": "angleI",
+        "yColumn": "deviationDelta"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "In the condition of minimum deviation for an equilateral prism, the refracted ray inside the prism travels:",
+          "question_bn": "সমবাহু প্রিজমে ন্যূনতম বিচ্যুতি অবস্থানে প্রিজমের ভেতরের প্রতিসরিত রশ্মিটি কীভাবে যায়?",
+          "options": [
+            { "id": "a", "text_en": "Parallel to the base of the prism", "text_bn": "প্রিজমের ভূমির সমান্তরালে" },
+            { "id": "b", "text_en": "Perpendicular to the base", "text_bn": "ভূমির সাথে লম্বভাবে" },
+            { "id": "c", "text_en": "Along the normal", "text_bn": "অভিলম্ব বরাবর" },
+            { "id": "d", "text_en": "Reflects totally inside", "text_bn": "পূর্ণ অভ্যন্তরীণ প্রতিফলিত হয়" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "At minimum deviation δm, angle of incidence i = angle of emergence e, making the ray path symmetrical and parallel to the base.",
+          "explanation_bn": "ন্যূনতম বিচ্যুতিতে আপতন ও নির্গমন কোণ সমান হওয়ায় রশ্মিটি প্রিজমের ভূমির সমান্তরালে চলে।"
+        }
+      ]
+    },
+    {
+      "id": "youngs-double-slit",
+      "slug": "youngs-double-slit",
+      "title_en": "Measurement of Wavelength of Light by Young's Double Slit",
+      "title_bn": "ইয়ং-এর দ্বি-চির ব্যতিচার ও আলোর তরঙ্গদৈর্ঘ্য নির্ণয়",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To observe two-slit interference fringes and measure light wavelength λ using fringe width β.",
+      "aim_bn": "দ্বি-চির ব্যতিচার পট্টি পর্যবেক্ষণ করে পট্টি প্রস্থ β থেকে একবর্ণী আলোর তরঙ্গদৈর্ঘ্য λ নির্ণয়।",
+      "theory_en": "Fringe Width β (distance between consecutive bright or dark fringes) = (λ × D) / d, where D is slit-to-screen distance and d is slit separation.",
+      "theory_bn": "পরপর দুটি উজ্জ্বল বা অন্ধকার ডোরা বা পট্টির ব্যবধান β = (λ · D) / d। সুতরাং তরঙ্গদৈর্ঘ্য λ = (β · d) / D।",
+      "formula_latex": "\\beta = \\frac{\\lambda D}{d} \\implies \\lambda = \\frac{\\beta d}{D}",
+      "formula_desc_en": "β is fringe width, d is slit separation, D is screen distance, λ is light wavelength.",
+      "formula_desc_bn": "β পট্টি প্রস্থ, d চির ব্যবধান, D পর্দা দূরত্ব, λ আলোর তরঙ্গদৈর্ঘ্য।",
+      "apparatusRequired": ["laser-pointer-red", "double-slit-slide", "projection-screen", "optical-bench"],
+      "setup": {
+        "items": [
+          { "equipmentId": "laser-pointer-red", "x": 60, "y": 80, "properties": { "wavelengthNm": 632.8, "on": true } },
+          { "equipmentId": "double-slit-slide", "x": 200, "y": 80, "properties": { "slitSeparationMm": 0.25 } },
+          { "equipmentId": "projection-screen", "x": 420, "y": 60, "properties": { "positionCm": 120 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Direct red laser beam through double slit slide (d = 0.25 mm) onto projection screen placed D = 1.0 m away.", "instruction_bn": "১ মিটার দূরের পর্দায় দ্বি-চিরের মধ্য দিয়ে লাল লেজার আলো ফেলুন।" },
+        { "stepNumber": 2, "instruction_en": "Observe alternating bright and dark interference fringes on screen.", "instruction_bn": "পর্দায় পর্যায়ক্রমিক উজ্জ্বল ও অন্ধকার ব্যতিচার পট্টি পর্যবেক্ষণ করুন।" },
+        { "stepNumber": 3, "instruction_en": "Measure distance across 10 bright fringes to calculate average fringe width β and compute wavelength λ.", "instruction_bn": "১০টি ডোরার মোট প্রস্থ মেপে একটি ডোরার গড় প্রস্থ β এবং λ = β·d / D হিসাব করুন।" }
+      ],
+      "precautions_en": ["Slits must be parallel, very narrow, and close together."],
+      "precautions_bn": ["চির দুটি অত্যন্ত সরু ও সমান্তরাল হতে হবে।"],
+      "dataColumns": [
+        { "key": "screenDistD", "label_en": "Distance D (m)", "label_bn": "পর্দা দূরত্ব D (m)", "unit": "m", "decimals": 2 },
+        { "key": "slitSepD", "label_en": "Slit d (mm)", "label_bn": "চির ব্যবধান d (mm)", "unit": "mm", "decimals": 3 },
+        { "key": "fringeWidthBeta", "label_en": "Fringe Width β (mm)", "label_bn": "পট্টি প্রস্থ β (mm)", "unit": "mm", "decimals": 3 },
+        { "key": "lambdaNm", "label_en": "Wavelength λ (nm)", "label_bn": "তরঙ্গদৈর্ঘ্য λ (nm)", "unit": "nm", "decimals": 1 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "λ = β * d / D",
+        "expectedConstant": 632.8,
+        "expectedConstantUnit": "nm",
+        "xColumn": "screenDistD",
+        "yColumn": "fringeWidthBeta",
+        "slopeFormula": "Slope = λ / d"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "If the whole Young's double slit apparatus is immersed in water (refractive index n = 4/3), the fringe width will:",
+          "question_bn": "ইয়ং-এর দ্বি-চির যন্ত্রটি পানিতে নিমজ্জিত করলে (n = ৪/৩) পট্টি প্রস্থ:",
+          "options": [
+            { "id": "a", "text_en": "Decrease by a factor of 4/3 (fringe becomes narrower)", "text_bn": "৪/৩ গুণ কমে যাবে (পট্টি সংকুচিত হবে)" },
+            { "id": "b", "text_en": "Increase by 4/3", "text_bn": "বৃদ্ধি পাবে" },
+            { "id": "c", "text_en": "Remain exactly unchanged", "text_bn": "একই থাকবে" },
+            { "id": "d", "text_en": "Disappear completely", "text_bn": "বিলুপ্ত হবে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "In water, wavelength reduces to λ' = λ / n. Since β = λ'D/d, fringe width β reduces by factor of n.",
+          "explanation_bn": "পানিতে আলোর তরঙ্গদৈর্ঘ্য কমে λ' = λ/n হওয়ায় পট্টি প্রস্থও কমে যায়।"
+        }
+      ]
+    },
+    {
+      "id": "diffraction-grating",
+      "slug": "diffraction-grating",
+      "title_en": "Determination of Wavelength of Light using Diffraction Grating",
+      "title_bn": "অপবর্তন গ্রেটিং-এর সাহায্যে আলোর তরঙ্গদৈর্ঘ্য নির্ণয়",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To measure the angle of diffraction θ for spectral orders (n = 1, 2) and determine wavelength: d · sin θ = n · λ.",
+      "aim_bn": "গ্রেটিং সমীকরণ (d sin θ = nλ) ব্যবহার করে অপবর্তন কোণ মেপে একবর্ণী আলোর তরঙ্গদৈর্ঘ্য নির্ণয়।",
+      "theory_en": "Grating Equation: (a + b) · sin θ = n · λ, where grating element d = 1 / N (N lines per unit length), n is spectral order (1, 2, ...), and θ is angle of diffraction.",
+      "theory_bn": "গ্রেটিং সূত্র: d sin θ = nλ। যেখানে গ্রেটিং ধ্রুবক d = ১/N, n অপবর্তন ক্রম এবং θ অপবর্তন কোণ।",
+      "formula_latex": "d \\sin \\theta = n \\lambda \\implies \\lambda = \\frac{d \\sin \\theta}{n}",
+      "formula_desc_en": "d is grating spacing = 1/N, n is diffraction order, θ is angle.",
+      "formula_desc_bn": "d গ্রেটিং ব্যবধান, n অপবর্তন ক্রম, θ অপবর্তন কোণ।",
+      "apparatusRequired": ["laser-pointer-red", "diffraction-grating-slide", "projection-screen"],
+      "setup": {
+        "items": [
+          { "equipmentId": "laser-pointer-red", "x": 60, "y": 80, "properties": { "wavelengthNm": 632.8, "on": true } },
+          { "equipmentId": "diffraction-grating-slide", "x": 200, "y": 80, "properties": { "linesPerMm": 500 } },
+          { "equipmentId": "projection-screen", "x": 420, "y": 60, "properties": { "positionCm": 100 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Mount 500 lines/mm grating slide in laser beam path normally.", "instruction_bn": "লেজার রশ্মির সামনে ৫০০ লাইন/মিমি গ্রেটিং স্লাইড সোজাভাবে স্থাপন করুন।" },
+        { "stepNumber": 2, "instruction_en": "Measure spot distance y1 of 1st order principal maxima from central zero-order spot.", "instruction_bn": "কেন্দ্রীয় উজ্জ্বল বিন্দু থেকে ১ম ক্রমের অপবর্তন বিন্দুর দূরত্ব y1 মাপুন।" },
+        { "stepNumber": 3, "instruction_en": "Calculate sin θ = y / √(D² + y²) and compute wavelength λ = (d · sin θ) / n.", "instruction_bn": "কোণ sin θ বের করে λ = d sin θ / n সূত্র দিয়ে তরঙ্গদৈর্ঘ্য হিসাব করুন।" }
+      ],
+      "precautions_en": ["Ensure grating lines are strictly vertical."],
+      "precautions_bn": ["গ্রেটিং স্লাইডের দাগ উল্লম্ব রাখুন।"],
+      "dataColumns": [
+        { "key": "orderN", "label_en": "Order n", "label_bn": "অপবর্তন ক্রম n" },
+        { "key": "spotDistY", "label_en": "Spot Distance y (cm)", "label_bn": "বিন্দুর দূরত্ব y (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "sinTheta", "label_en": "sin(θ)", "label_bn": "sin(θ)", "decimals": 4 },
+        { "key": "lambdaNm", "label_en": "Wavelength λ (nm)", "label_bn": "তরঙ্গদৈর্ঘ্য λ (nm)", "unit": "nm", "decimals": 1 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "λ = (1/N) * sin(θ) / n",
+        "expectedConstant": 632.8,
+        "expectedConstantUnit": "nm",
+        "xColumn": "orderN",
+        "yColumn": "sinTheta"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Compared to Young's double slit interference, the diffraction maxima produced by a grating are:",
+          "question_bn": "ইয়ং-এর দ্বি-চিরের তুলনায় গ্রেটিং-এর অপবর্তন পট্টিগুলো:",
+          "options": [
+            { "id": "a", "text_en": "Much sharper, narrower and more intensely separated", "text_bn": "অনেক বেশি উজ্জ্বল, সূক্ষ্ম ও সুস্পষ্ট পৃথক" },
+            { "id": "b", "text_en": "Broader and blurry", "text_bn": "বিস্তৃত ও অস্পষ্ট" },
+            { "id": "c", "text_en": "Identical in every way", "text_bn": "হুবহু একই রকম" },
+            { "id": "d", "text_en": "Visible only in dark rooms", "text_bn": "শুধু অন্ধকারে দৃশ্যমান" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "With thousands of interfering slits (N), destructive interference is sharp everywhere except at exact integer wavelengths, giving razor-sharp spectral lines.",
+          "explanation_bn": "হাজার হাজার চিরের সম্মিলিত অপবর্তনে তীব্র ব্যতিচার ঘটে যা অত্যন্ত তীক্ষ্ণ ও সুস্পষ্ট বর্ণালি রেখা তৈরি করে।"
+        }
+      ]
+    },
+    {
+      "id": "specific-heat-calorimeter",
+      "slug": "specific-heat-calorimeter",
+      "title_en": "Determination of Specific Heat Capacity by Method of Mixtures",
+      "title_bn": "মিশ্রণ পদ্ধতিতে ধাতব খণ্ডের আপেক্ষিক তাপ নির্ণয়",
+      "category": "heat",
+      "domain": "heat",
+      "level": "class-9-10",
+      "durationMinutes": 20,
+      "aim_en": "To determine the specific heat capacity 's' of a metal cylinder (copper/lead/iron) using a copper calorimeter.",
+      "aim_bn": "ক্যালরিমিটারে বর্জিত তাপ = গৃহীত তাপ নীতি প্রয়োগ করে ধাতুর আপেক্ষিক তাপ নির্ণয়।",
+      "theory_en": "Principle of Mixtures: Heat lost by hot solid = Heat gained by cold water + Heat gained by calorimeter vessel: m1·s·(T1 - Tf) = (m2·sw + W)·(Tf - T2), where W = mc·sc is water equivalent.",
+      "theory_bn": "মিশ্রণের মূলনীতি: উত্তপ্ত বস্তু কর্তৃক বর্জিত তাপ = ক্যালরিমিটার ও শীতল পানি কর্তৃক গৃহীত তাপ। m1·s·(T1 - Tf) = (m2·sw + mc·sc)·(Tf - T2)।",
+      "formula_latex": "s = \\frac{(m_2 s_w + m_c s_c)(T_f - T_2)}{m_1 (T_1 - T_f)}",
+      "formula_desc_en": "s is specific heat of metal, sw = 4186 J/kg·K (water), sc = 385 J/kg·K (copper).",
+      "formula_desc_bn": "s ধাতুর আপেক্ষিক তাপ, sw পানির আপেক্ষিক তাপ (৪১৮৬ J/kg·K), sc ক্যালরিমিটারের আপেক্ষিক তাপ।",
+      "apparatusRequired": ["copper-calorimeter", "metal-sample-blocks", "lab-thermometer-mercury", "physical-beam-balance", "bunsen-burner-physics"],
+      "setup": {
+        "items": [
+          { "equipmentId": "copper-calorimeter", "x": 120, "y": 80, "properties": { "vesselMassGrams": 85, "waterMassGrams": 150, "initialTempCelsius": 22 } },
+          { "equipmentId": "metal-sample-blocks", "x": 300, "y": 80, "properties": { "material": "copper", "massGrams": 100, "temperatureCelsius": 100 } },
+          { "equipmentId": "lab-thermometer-mercury", "x": 450, "y": 60, "properties": { "readingCelsius": 22 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Weigh clean empty copper calorimeter mc and add 150g cold water m2 at temperature T2 = 22°C.", "instruction_bn": "খালি ক্যালরিমিটার মেপে তাতে ১৫০ গ্রাম ঠাণ্ডা পানি যোগ করে প্রাথমিক তাপমাত্রা T2 মেপে নিন।" },
+        { "stepNumber": 2, "instruction_en": "Heat copper metal cylinder m1 = 100g in boiling water bath to T1 = 100°C.", "instruction_bn": "১০০ গ্রাম তামার খণ্ডকে ফুটন্ত পানিতে ১০০°সে তাপমাত্রায় উত্তপ্ত করুন।" },
+        { "stepNumber": 3, "instruction_en": "Quickly transfer hot metal block into calorimeter, stir well, and record maximum equilibrium temperature Tf.", "instruction_bn": "ধাতব খণ্ডটি দ্রুত ক্যালরিমিটারে ফেলে নেড়ে সর্বোচ্চ মিশ্রণ তাপমাত্রা Tf রেকর্ড করুন।" }
+      ],
+      "precautions_en": [
+        "Transfer hot solid quickly to minimize radiation loss in transit.",
+        "Stir continuously until uniform equilibrium temperature is reached."
+      ],
+      "precautions_bn": [
+        "উত্তপ্ত ধাতুটি দ্রুত পাত্রে ফেলুন যেন বাতাসে তাপ বিকিরণ না হয়।",
+        "সুসম তাপমাত্রা না আসা পর্যন্ত ক্রমাগত নাড়তে থাকুন।"
+      ],
+      "dataColumns": [
+        { "key": "sampleMassG", "label_en": "Metal m1 (g)", "label_bn": "ধাতুর ভর m1 (g)", "unit": "g" },
+        { "key": "hotTempT1", "label_en": "Initial Metal T1 (°C)", "label_bn": "ধাতুর আদি তাপমাত্রা T1", "unit": "°C" },
+        { "key": "coldTempT2", "label_en": "Initial Water T2 (°C)", "label_bn": "পানির আদি তাপমাত্রা T2", "unit": "°C" },
+        { "key": "finalTempTf", "label_en": "Final Mixture Tf (°C)", "label_bn": "মিশ্রণের তাপমাত্রা Tf", "unit": "°C" },
+        { "key": "specHeatCalc", "label_en": "Specific Heat s (J/kg·K)", "label_bn": "আপেক্ষিক তাপ s", "unit": "J/kg·K", "decimals": 1 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Method of Mixtures s = (m2*sw + mc*sc)*(Tf-T2) / (m1*(T1-Tf))",
+        "expectedConstant": 385.0,
+        "expectedConstantUnit": "J/(kg·K)",
+        "xColumn": "sampleMassG",
+        "yColumn": "specHeatCalc"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why is copper specifically chosen as the material for calorimeters?",
+          "question_bn": "ক্যালরিমিটার তৈরিতে তামা কেন সবচেয়ে উপযুক্ত ধাতু?",
+          "options": [
+            { "id": "a", "text_en": "Low specific heat capacity and high thermal conductivity", "text_bn": "কম আপেক্ষিক তাপ ও উচ্চ তাপ পরিবাহিতা" },
+            { "id": "b", "text_en": "High specific heat capacity", "text_bn": "বেশি আপেক্ষিক তাপ" },
+            { "id": "c", "text_en": "It does not expand when heated", "text_bn": "তাপে প্রসারিত হয় না" },
+            { "id": "d", "text_en": "Because it is completely transparent", "text_bn": "কারণ এটি স্বচ্ছ" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Copper has low specific heat (absorbs very little heat itself) and high conductivity (quickly attains uniform temperature).",
+          "explanation_bn": "তামার আপেক্ষিক তাপ কম হওয়ায় নিজে খুব কম তাপ গ্রহণ করে এবং দ্রুত তাপ সমভাবে ছড়িয়ে দেয়।"
+        }
+      ]
+    },
+    {
+      "id": "joules-law-electrical-equivalent",
+      "slug": "joules-law-electrical-equivalent",
+      "title_en": "Joule's Law & Mechanical Equivalent of Heat (J)",
+      "title_bn": "জুলের তাপীয় ক্রিয়া ও তাপের যান্ত্রিক সমতা (J) নির্ণয়",
+      "category": "heat",
+      "domain": "heat",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To verify Joule's law of electrical heating (H = I²·R·t / J) and determine the mechanical equivalent of heat J = W / H (4.186 J/cal).",
+      "aim_bn": "বৈদ্যুতিক হিটারের সাহায্যে জুলের তাপীয় সূত্র ও তাপের যান্ত্রিক সমতা J নির্ণয়।",
+      "theory_en": "Electrical energy supplied W = V · I · t (Joules). Heat absorbed by water & calorimeter Q = (m·sw + W_cal)·ΔT (Joules or calories). J = W / Q = 4.186 J/cal.",
+      "theory_bn": "প্রযুক্ত বৈদ্যুতিক কাজ W = V·I·t জুল। গৃহিত তাপ H = (m·sw + mc·sc)·(T2 - T1)। যান্ত্রিক সমতা J = W / H = ৪.১৮৬ জুল/ক্যালরি।",
+      "formula_latex": "H = V I t = I^2 R t, \\quad J = \\frac{V I t}{(m_w s_w + m_c s_c)(T_2 - T_1)}",
+      "formula_desc_en": "V is voltage, I is current, t is time in seconds, mw is water mass, ΔT is temperature rise.",
+      "formula_desc_bn": "V বিভব, I প্রবাহ, t সময় (সেকেন্ড), mw পানির ভর, ΔT তাপমাত্রার বৃদ্ধি।",
+      "apparatusRequired": ["copper-calorimeter", "immersion-heater", "battery-dc", "ammeter-dc", "voltmeter-dc", "digital-stopwatch"],
+      "setup": {
+        "items": [
+          { "equipmentId": "battery-dc", "x": 60, "y": 60, "properties": { "voltage": 12 } },
+          { "equipmentId": "ammeter-dc", "x": 220, "y": 60, "properties": { "maxRange": 3 } },
+          { "equipmentId": "immersion-heater", "x": 380, "y": 60, "properties": { "coilResistance": 5 } },
+          { "equipmentId": "copper-calorimeter", "x": 380, "y": 200, "properties": { "waterMassGrams": 200, "initialTempCelsius": 20 } },
+          { "equipmentId": "voltmeter-dc", "x": 220, "y": 200, "properties": { "maxRange": 15 } },
+          { "equipmentId": "digital-stopwatch", "x": 540, "y": 140, "properties": { "running": false } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Fill calorimeter with 200g cold water, insert heater coil and thermometer.", "instruction_bn": "ক্যালরিমিটারে ২০০ গ্রাম পানি নিয়ে হিটার কুণ্ডলী ও থার্মোমিটার নিমজ্জিত করুন।" },
+        { "stepNumber": 2, "instruction_en": "Start current I = 2.0 A and start stopwatch simultaneously.", "instruction_bn": "২.০ অ্যাম্পিয়ার প্রবাহ চালুর সাথে সাথে স্টপওয়াচ চালু করুন।" },
+        { "stepNumber": 3, "instruction_en": "Record temperature rise ΔT every 60 seconds for 5 minutes and compute J = (V·I·t) / Q.", "instruction_bn": "প্রতি ৬০ সেকেন্ড পর পর তাপমাত্রা মেপে J = VIt / Q নির্ণয় করুন।" }
+      ],
+      "precautions_en": ["Ensure heating coil is completely submerged in water before switching on current."],
+      "precautions_bn": ["বিদ্যুৎ চালুর আগে হিটার কুণ্ডলী সম্পূর্ণ পানির নিচে আছে কিনা নিশ্চিত করুন।"],
+      "dataColumns": [
+        { "key": "timeSec", "label_en": "Time t (s)", "label_bn": "সময় t (s)", "unit": "s" },
+        { "key": "tempC", "label_en": "Temp T (°C)", "label_bn": "তাপমাত্রা (°C)", "unit": "°C", "decimals": 1 },
+        { "key": "elecWorkJ", "label_en": "Work W = VIt (J)", "label_bn": "বৈদ্যুতিক কাজ W (J)", "unit": "J", "decimals": 0 },
+        { "key": "heatQJoules", "label_en": "Heat Absorbed Q (J)", "label_bn": "শোষিত তাপ Q (J)", "unit": "J", "decimals": 0 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "W = J * Q",
+        "expectedConstant": 1.0,
+        "xColumn": "timeSec",
+        "yColumn": "tempC",
+        "slopeFormula": "Rate of Heating = V*I / (mc)"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "If electric current through a fixed resistance is doubled, the rate of heat generation increases by a factor of:",
+          "question_bn": "একটি স্থির রোধের মধ্য দিয়ে বিদ্যুৎ প্রবাহ দ্বিগুণ করা হলে তাপ উৎপাদনের হার কত গুণ বৃদ্ধি পায়?",
+          "options": [
+            { "id": "a", "text_en": "4 times (I² law)", "text_bn": "৪ গুণ (I² সূত্র)" },
+            { "id": "b", "text_en": "2 times", "text_bn": "২ গুণ" },
+            { "id": "c", "text_en": "8 times", "text_bn": "৮ গুণ" },
+            { "id": "d", "text_en": "Remains unchanged", "text_bn": "অপরিবর্তিত থাকে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "By Joule's Law H = I²·R·t, heat generation is proportional to square of the current (2² = 4).",
+          "explanation_bn": "জুলের সূত্রানুসারে H ∝ I² হওয়ায় কারেন্ট দ্বিগুণ হলে তাপ ৪ গুণ বৃদ্ধি পায়।"
+        }
+      ]
+    },
+    {
+      "id": "faradays-law-induction",
+      "slug": "faradays-law-induction",
+      "title_en": "Study of Faraday's Law of Induction & Lenz's Law",
+      "title_bn": "ফ্যারাডের তড়িচ্চুম্বকীয় আবেশ সূত্র ও লেনজের সূত্র",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "level": "class-11-12",
+      "durationMinutes": 15,
+      "aim_en": "To demonstrate that moving a magnet in and out of a coil induces an electromotive force (EMF) whose magnitude depends on velocity and direction opposes the change.",
+      "aim_bn": "কুণ্ডলীর ভেতর দণ্ড চুম্বক ঢুকিয়ে ও বের করে আবিষ্ট ভোল্টেজ ও লেনজের বিপরীতমুখী প্রবাহ যাচাই।",
+      "theory_en": "Faraday's Law: Induced EMF ε = -N · (dΦ_B / dt). The negative sign (Lenz's Law) indicates that the induced current creates a magnetic field opposing the motion of the magnet.",
+      "theory_bn": "ফ্যারাডের সূত্র: আবিষ্ট তড়িচ্চালক বল ε = -N (dΦ/dt)। ঋণাত্মক চিহ্ন লেনজের সূত্র নির্দেশ করে (আবিষ্ট প্রবাহের দিক সর্বদা সৃষ্টির কারণের বিরোধিতা করে)।",
+      "formula_latex": "\\mathcal{E} = -N \\frac{d\\Phi_B}{dt} = -N A \\frac{dB}{dt}",
+      "formula_desc_en": "ε is induced EMF, N is number of coil turns, ΦB is magnetic flux.",
+      "formula_desc_bn": "ε আবিষ্ট ভোল্টেজ, N পাকসংখ্যা, ΦB চৌম্বক ফ্লাক্স।",
+      "apparatusRequired": ["faraday-induction-kit", "bar-magnet", "galvanometer"],
+      "setup": {
+        "items": [
+          { "equipmentId": "faraday-induction-kit", "x": 160, "y": 80 },
+          { "equipmentId": "bar-magnet", "x": 320, "y": 80, "properties": { "magneticMoment": 1.5 } },
+          { "equipmentId": "galvanometer", "x": 480, "y": 80, "properties": { "sensitivityMicroAmpPerDiv": 20 } }
+        ],
+        "wires": [
+          { "fromItemIndex": 0, "fromTerminalId": "t1", "toItemIndex": 2, "toTerminalId": "t1", "color": "red" },
+          { "fromItemIndex": 0, "fromTerminalId": "t2", "toItemIndex": 2, "toTerminalId": "t2", "color": "black" }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Connect induction coil terminals directly to sensitive center-zero galvanometer.", "instruction_bn": "কুণ্ডলীর দুই প্রান্ত কেন্দ্র-শূন্য গ্যালভানোমিটারে যুক্ত করুন।" },
+        { "stepNumber": 2, "instruction_en": "Thrust North pole into coil quickly: observe momentary galvanometer deflection to the right.", "instruction_bn": "উত্তর মেরুটি দ্রুত কুণ্ডলীতে ঢোকান: ডানে গ্যালভানোমিটারের ক্ষণিক বিক্ষেপ লক্ষ্য করুন।" },
+        { "stepNumber": 3, "instruction_en": "Pull magnet out quickly: observe deflection in the opposite (left) direction.", "instruction_bn": "চুম্বকটি দ্রুত টেনে বের করুন: বিপরীত দিকে (বামে) বিক্ষেপ দেখুন।" }
+      ],
+      "precautions_en": ["Galvanometer should be kept away from direct stray fields of the bar magnet."],
+      "precautions_bn": ["গ্যালভানোমিটারটি চুম্বকের সরাসরি চৌম্বক ক্ষেত্র থেকে দূরে রাখুন।"],
+      "dataColumns": [
+        { "key": "motionAction", "label_en": "Magnet Action", "label_bn": "চুম্বকের ক্রিয়া" },
+        { "key": "speed", "label_en": "Speed", "label_bn": "গতি" },
+        { "key": "deflectionDiv", "label_en": "Deflection (div)", "label_bn": "বিক্ষেপ (ঘর)", "decimals": 1 },
+        { "key": "inducedPol", "label_en": "Induced Pole Near Coil", "label_bn": "আবিষ্ট মেরু" }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "EMF = -N * dPhi/dt",
+        "expectedConstant": 1.0,
+        "xColumn": "speed",
+        "yColumn": "deflectionDiv"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Lenz's Law is a consequence of which conservation law?",
+          "question_bn": "লেনজের সূত্রটি কোন সংরক্ষণশীলতা নীতির প্রতিফলন?",
+          "options": [
+            { "id": "a", "text_en": "Conservation of Energy", "text_bn": "শক্তির সংরক্ষণশীলতা" },
+            { "id": "b", "text_en": "Conservation of Charge", "text_bn": "আধানের সংরক্ষণশীলতা" },
+            { "id": "c", "text_en": "Conservation of Momentum", "text_bn": "ভরবেগের সংরক্ষণশীলতা" },
+            { "id": "d", "text_en": "Conservation of Mass", "text_bn": "ভরের সংরক্ষণশীলতা" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The mechanical work done against the opposing induced magnetic force is converted into electrical energy in the coil.",
+          "explanation_bn": "বিপরীতমুখী চৌম্বক বলের বিরুদ্ধে কৃত যান্ত্রিক কাজই বর্তনীতে তড়িৎ শক্তিতে রূপান্তরিত হয়।"
+        }
+      ]
+    },
+    {
+      "id": "transformer-characteristics",
+      "slug": "transformer-characteristics",
+      "title_en": "Study of Step-Up & Step-Down Transformer Turns Ratio",
+      "title_bn": "ট্রান্সফরমারের পাকসংখ্যা অনুপাত ও রূপান্তর ক্রিয়া",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 15,
+      "aim_en": "To verify the turns ratio equation Vs / Vp = Ns / Np and efficiency of a transformer under AC excitation.",
+      "aim_bn": "ট্রান্সফরমারের মুখ্য ও গৌণ কুণ্ডলীর ভোল্টেজ ও পাকসংখ্যার অনুপাত (Vs/Vp = Ns/Np) যাচাই।",
+      "theory_en": "For an ideal transformer with zero flux leakage: Voltage Ratio Vs / Vp = Ns / Np = Ip / Is. If Ns > Np, it is step-up (Vs > Vp); if Ns < Np, it is step-down (Vs < Vp).",
+      "theory_bn": "আদর্শ ট্রান্সফরমারের ক্ষেত্রে: Vs / Vp = Ns / Np = Ip / Is। Ns > Np হলে স্টেপ-আপ এবং Ns < Np হলে স্টেপ-ডাউন ট্রান্সফরমার।",
+      "formula_latex": "\\frac{V_s}{V_p} = \\frac{N_s}{N_p} = \\frac{I_p}{I_s}",
+      "formula_desc_en": "Vp is primary AC voltage, Vs is secondary AC voltage, Np and Ns are coil turns.",
+      "formula_desc_bn": "Vp মুখ্য ভোল্টেজ, Vs গৌণ ভোল্টেজ, Np ও Ns পাকসংখ্যা।",
+      "apparatusRequired": ["ac-source", "step-transformer", "digital-multimeter"],
+      "setup": {
+        "items": [
+          { "equipmentId": "ac-source", "x": 80, "y": 80, "properties": { "voltageRms": 12, "frequency": 50 } },
+          { "equipmentId": "step-transformer", "x": 260, "y": 80, "properties": { "primaryTurns": 500, "secondaryTurns": 100 } },
+          { "equipmentId": "digital-multimeter", "x": 460, "y": 80, "properties": { "mode": "V_AC" } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Connect 12V AC source across primary winding (Np = 500 turns).", "instruction_bn": "১২V এসি উৎস মুখ্য কুণ্ডলীতে (Np = ৫০০) যুক্ত করুন।" },
+        { "stepNumber": 2, "instruction_en": "Measure secondary voltage across Ns = 100 turns using AC voltmeter.", "instruction_bn": "এসি ভোল্টমিটার দিয়ে গৌণ কুণ্ডলীর (Ns = ১০০) ভোল্টেজ মেপে নিন।" },
+        { "stepNumber": 3, "instruction_en": "Verify that Vs = Vp × (Ns / Np) = 12 × (100 / 500) = 2.4 V (Step-down).", "instruction_bn": "Vs = ১২ × (১০০/৫০০) = ২.৪ ভোল্ট যাচাই করুন।" }
+      ],
+      "precautions_en": ["Never connect a steady DC battery to transformer primary — transformers only work on AC."],
+      "precautions_bn": ["ট্রান্সফরমারে কখনো ডিসি ব্যাটারি লাগাবেন না — এটি কেবল পরিবর্তনশীল প্রবাহে কাজ করে।"],
+      "dataColumns": [
+        { "key": "vpVolts", "label_en": "Primary Vp (V)", "label_bn": "মুখ্য Vp (V)", "unit": "V" },
+        { "key": "turnsRatio", "label_en": "Turns Ns/Np", "label_bn": "পাক অনুপাত Ns/Np" },
+        { "key": "vsMeasured", "label_en": "Secondary Vs (V)", "label_bn": "গৌণ Vs (V)", "unit": "V", "decimals": 2 },
+        { "key": "vsTheory", "label_en": "Theory Vs (V)", "label_bn": "তাত্ত্বিক Vs (V)", "unit": "V", "decimals": 2 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Vs = Vp * (Ns/Np)",
+        "expectedConstant": 0.2,
+        "xColumn": "vpVolts",
+        "yColumn": "vsMeasured"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why does a transformer not operate on Direct Current (DC)?",
+          "question_bn": "ট্রান্সফরমার কেন ডিসি (প্রত্যক্ষ প্রবাহে) কাজ করে না?",
+          "options": [
+            { "id": "a", "text_en": "Because steady DC produces a constant magnetic flux (dΦ/dt = 0), so no EMF is induced in secondary", "text_bn": "কারণ স্থির ডিসিতে চৌম্বক ফ্লাক্সের পরিবর্তন হয় না (dΦ/dt = ০), ফলে কোনো ভোল্টেজ আবিষ্ট হয় না" },
+            { "id": "b", "text_en": "Because DC has too much voltage", "text_bn": "কারণ ডিসির ভোল্টেজ অনেক বেশি" },
+            { "id": "c", "text_en": "Because copper core insulates DC", "text_bn": "কারণ তামা ডিসি আটকে দেয়" },
+            { "id": "d", "text_en": "Because secondary is not connected", "text_bn": "কারণ গৌণ কুণ্ডলী যুক্ত থাকে না" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Mutual induction requires changing magnetic flux (Faraday's law). Steady DC produces zero time-rate of change (dΦ/dt = 0).",
+          "explanation_bn": "পারস্পরিক আবেশের জন্য পরিবর্তনশীল ফ্লাক্স দরকার। স্থির ডিসিতে dΦ/dt = ০ হওয়ায় কোনো ভোল্টেজ সৃষ্টি হয় না।"
+        }
+      ]
+    },
+    {
+      "id": "lcr-series-resonance",
+      "slug": "lcr-series-resonance",
+      "title_en": "Study of Series LCR Resonance & Quality Factor (Q)",
+      "title_bn": "শ্রেণি এলসিআর অনুনাদ বর্তনী ও কিউ-ফ্যাক্টর",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To plot the frequency response curve I vs f for a series LCR circuit and determine resonant frequency fr = 1 / (2π√LC) and Q factor.",
+      "aim_bn": "পরিবর্তনশীল কম্পাঙ্কের এসি উৎসের সাহায্যে LCR বর্তনীর অনুনাদী কম্পাঙ্ক fr ও বিস্তার লেখচিত্র অঙ্কন।",
+      "theory_en": "In series LCR circuit, impedance Z = √(R² + (XL - XC)²). At resonance, inductive reactance XL = capacitive reactance XC => fr = 1 / (2π√(L·C)). Impedance is minimum (Z = R) and current is maximum.",
+      "theory_bn": "অনুনাদে XL = XC হওয়ায় মোট প্রতিবন্ধকতা সর্বনিম্ন Z = R এবং বিদ্যুৎ প্রবাহ সর্বোচ্চ হয়। অনুনাদী কম্পাঙ্ক fr = ১ / (২π√LC)।",
+      "formula_latex": "f_r = \\frac{1}{2\\pi \\sqrt{L C}}, \\quad Z = \\sqrt{R^2 + \\left(\\omega L - \\frac{1}{\\omega C}\\right)^2}, \\quad Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}}",
+      "formula_desc_en": "fr is resonant frequency in Hz, L is inductance in H, C is capacitance in F, R is resistance in Ω.",
+      "formula_desc_bn": "fr অনুনাদী কম্পাঙ্ক, L আবেশকত্ব, C ধারকত্ব, R রোধ।",
+      "apparatusRequired": ["audio-signal-generator", "inductor", "capacitor", "resistor-fixed", "ammeter-dc"],
+      "setup": {
+        "items": [
+          { "equipmentId": "audio-signal-generator", "x": 60, "y": 80, "properties": { "waveform": "sine", "frequencyHz": 1000, "amplitudeVolts": 5 } },
+          { "equipmentId": "resistor-fixed", "x": 220, "y": 80, "properties": { "resistance": 50 } },
+          { "equipmentId": "inductor", "x": 360, "y": 80, "properties": { "inductanceMilliHenry": 50 } },
+          { "equipmentId": "capacitor", "x": 500, "y": 80, "properties": { "capacitanceMicroFarad": 0.5 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Connect signal generator, 50Ω resistor, 50mH inductor and 0.5µF capacitor in series.", "instruction_bn": "সিগন্যাল জেনারেটর, ৫০ ওহম রোধ, ৫০ mH ইনডাক্টর ও ০.৫ µF ক্যাপাসিটর শ্রেণিতে যুক্ত করুন।" },
+        { "stepNumber": 2, "instruction_en": "Vary frequency from 500 Hz to 2000 Hz in steps of 100 Hz and record circuit current I.", "instruction_bn": "কম্পাঙ্ক ৫০০ Hz থেকে ২০০০ Hz পর্যন্ত বাড়িয়ে বর্তনীর প্রবাহ I রেকর্ড করুন।" },
+        { "stepNumber": 3, "instruction_en": "Plot I vs f curve: notice sharp peak at fr ≈ 1006 Hz where Z is purely resistive.", "instruction_bn": "I বনাম f গ্রাফ আঁকুন এবং সর্বোচ্চ প্রবাহের বিন্দুটি অনুনাদী কম্পাঙ্ক হিসেবে শনাক্ত করুন।" }
+      ],
+      "precautions_en": ["Keep input AC amplitude constant throughout frequency sweep."],
+      "precautions_bn": ["কম্পাঙ্ক পরিবর্তনের সময় ইনপুট ভোল্টেজের বিস্তার স্থির রাখুন।"],
+      "dataColumns": [
+        { "key": "freqHz", "label_en": "Frequency f (Hz)", "label_bn": "কম্পাঙ্ক f (Hz)", "unit": "Hz" },
+        { "key": "currentMa", "label_en": "Current I (mA)", "label_bn": "প্রবাহ I (mA)", "unit": "mA", "decimals": 1 },
+        { "key": "impedanceZ", "label_en": "Impedance Z (Ω)", "label_bn": "প্রতিবন্ধকতা Z (Ω)", "unit": "Ω", "decimals": 1 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "fr = 1 / (2π * sqrt(L*C))",
+        "expectedConstant": 1006.6,
+        "expectedConstantUnit": "Hz",
+        "xColumn": "freqHz",
+        "yColumn": "currentMa"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "At series resonance in an LCR circuit, the phase difference between applied voltage and circuit current is:",
+          "question_bn": "শ্রেণি এলসিআর অনুনাদে ভোল্টেজ ও কারেন্টের মধ্যে দশা পার্থক্য কত?",
+          "options": [
+            { "id": "a", "text_en": "0° (in phase, power factor cos φ = 1)", "text_bn": "০° (সমদশা, পাওয়ার ফ্যাক্টর cos φ = ১)" },
+            { "id": "b", "text_en": "90°", "text_bn": "৯০°" },
+            { "id": "c", "text_en": "180°", "text_bn": "১৮০°" },
+            { "id": "d", "text_en": "45°", "text_bn": "৪৫°" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Because XL = XC, net reactance is zero. Circuit behaves as a pure resistor with zero phase angle (φ = 0).",
+          "explanation_bn": "XL = XC হওয়ায় নিট রিঅ্যাক্ট্যান্স শূন্য হয় এবং বর্তনীটি বিশুদ্ধ রোধকের মতো সমদশায় কাজ করে।"
+        }
+      ]
+    },
+    {
+      "id": "speed-of-sound-resonance-tube",
+      "slug": "speed-of-sound-resonance-tube",
+      "title_en": "Determination of Speed of Sound in Air by Resonance Tube",
+      "title_bn": "অনুনাত নলের সাহায্যে বাতাসে শব্দের বেগ নির্ণয়",
+      "category": "waves",
+      "domain": "waves",
+      "level": "class-11-12",
+      "durationMinutes": 15,
+      "aim_en": "To find the 1st and 2nd resonating air column lengths for a tuning fork of known frequency f, apply end correction and calculate speed of sound v.",
+      "aim_bn": "অনুনাত নলে ১ম ও ২য় অনুনাদের মাধ্যমে প্রান্তীয় সংশোধন e ও বাতাসে শব্দের বেগ v নির্ণয়।",
+      "theory_en": "For closed pipe resonance: First resonance occurs at l1 + e = λ / 4. Second resonance occurs at l2 + e = 3λ / 4. Subtracting gives λ = 2(l2 - l1). Speed of sound v = f · λ = 2·f·(l2 - l1).",
+      "theory_bn": "১ম অনুনাদে l1 + e = λ/৪ এবং ২য় অনুনাদে l2 + e = ৩λ/৪। বিয়োগ করলে λ = ২(l2 - l1) এবং শব্দের বেগ v = f·λ = ২f(l2 - l1)।",
+      "formula_latex": "v = 2 f (l_2 - l_1), \\quad e = \\frac{l_2 - 3 l_1}{2} \\approx 0.3 d",
+      "formula_desc_en": "f is tuning fork frequency, l1 is 1st resonance length, l2 is 2nd resonance length, e is end correction.",
+      "formula_desc_bn": "f সুরশলাকার কম্পাঙ্ক, l1 ১ম অনুনাদ দৈর্ঘ্য, l2 ২য় অনুনাদ দৈর্ঘ্য, e প্রান্ত সংশোধন।",
+      "apparatusRequired": ["resonance-air-column-tube", "tuning-forks-set", "meter-scale-wooden", "lab-thermometer-mercury"],
+      "setup": {
+        "items": [
+          { "equipmentId": "resonance-air-column-tube", "x": 160, "y": 60, "properties": { "waterLevelCm": 16.5, "tubeDiameterCm": 3.0 } },
+          { "equipmentId": "tuning-forks-set", "x": 340, "y": 80, "properties": { "frequencyHz": 512 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Strike 512 Hz tuning fork and hold it horizontally over the open mouth of the resonance tube.", "instruction_bn": "৫১২ Hz সুরশলাকায় আঘাত করে অনুনাদ নলের খোলা মুখের উপর অনুভূমিকভাবে ধরুন।" },
+        { "stepNumber": 2, "instruction_en": "Lower water reservoir until a loud booming resonance sound is heard (1st resonance length l1 ≈ 16.5 cm).", "instruction_bn": "পানির উচ্চতা ধীরে ধীরে নামিয়ে সবচেয়ে জোরালো অনুনাদ শব্দের ১ম অবস্থান l1 খুঁজুন।" },
+        { "stepNumber": 3, "instruction_en": "Lower water level further until the 2nd resonance position l2 ≈ 50.0 cm is found.", "instruction_bn": "পানির স্তর আরও নামিয়ে ২য় অনুনাদ অবস্থান l2 খুঁজুন এবং v = 2f(l2 - l1) বের করুন।" }
+      ],
+      "precautions_en": [
+        "Do not let the vibrating prongs touch the glass tube rim.",
+        "Hold fork so prongs vibrate in vertical plane above the mouth."
+      ],
+      "precautions_bn": [
+        "কম্পনশীল সুরশলাকা নলের কাচে স্পর্শ করাবেন না।",
+        "সুরশলাকার বাহুগুলো নলের মুখের উপর উল্লম্ব তলে কম্পিত হতে দিন।"
+      ],
+      "dataColumns": [
+        { "key": "forkFreqHz", "label_en": "Frequency f (Hz)", "label_bn": "কম্পাঙ্ক f (Hz)", "unit": "Hz" },
+        { "key": "resLengthL1", "label_en": "1st Res l1 (cm)", "label_bn": "১ম দৈর্ঘ্য l1 (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "resLengthL2", "label_en": "2nd Res l2 (cm)", "label_bn": "২য় দৈর্ঘ্য l2 (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "diffL2minusL1", "label_en": "l2 - l1 (cm)", "label_bn": "l2 - l1 (cm)", "unit": "cm", "decimals": 1 },
+        { "key": "soundSpeedMps", "label_en": "Speed v = 2f(l2-l1)", "label_bn": "শব্দের বেগ v (m/s)", "unit": "m/s", "decimals": 1 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "v = 2 * f * (l2 - l1)",
+        "expectedConstant": 344.0,
+        "expectedConstantUnit": "m/s (at 22°C)",
+        "xColumn": "forkFreqHz",
+        "yColumn": "soundSpeedMps"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "Why is the antinode not formed exactly at the open mouth of the resonance tube?",
+          "question_bn": "অনুনাত নলের খোলা মুখের ঠিক সমান স্তরে কেন সুস্পন্দ বিন্দু (Antinode) গঠিত হয় না?",
+          "options": [
+            { "id": "a", "text_en": "Because air particles just outside the mouth also vibrate, shifting antinode upward by end correction e ≈ 0.3 d", "text_bn": "কারণ নলের মুখের বাইরের বাতাসও কম্পিত হয়, ফলে সুস্পন্দ বিন্দুটি কিছুটা উপরে সরে যায় (e ≈ ০.৩ d)" },
+            { "id": "b", "text_en": "Because tuning fork frequency changes", "text_bn": "কারণ সুরশলাকার কম্পাঙ্ক বদলে যায়" },
+            { "id": "c", "text_en": "Because of water surface tension", "text_bn": "পানির পৃষ্ঠটানের কারণে" },
+            { "id": "d", "text_en": "Because of tube wall friction", "text_bn": "কাচের ঘর্ষণের কারণে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Reflection of sound waves occurs slightly outside the open end into open atmosphere by a distance e ≈ 0.3 × diameter.",
+          "explanation_bn": "শব্দ তরঙ্গের প্রতিফলন খোলা প্রান্তের কিছুটা বাইরে ঘটে যা প্রান্তীয় ত্রুটি e = ০.৩ × ব্যাস হিসেবে সংশোধিত হয়।"
+        }
+      ]
+    },
+    {
+      "id": "sonometer-laws",
+      "slug": "sonometer-laws",
+      "title_en": "Verification of Laws of Transverse Vibrations of Stretched Strings (Sonometer)",
+      "title_bn": "সোনোমিটারের সাহায্যে তারের তির্যক কম্পনের সূত্র যাচাই",
+      "category": "waves",
+      "domain": "waves",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To verify Law of Length (f · L = constant) and Law of Tension (f / √T = constant) using a sonometer and tuning forks.",
+      "aim_bn": "সোনোমিটারে তারের দৈর্ঘ্য L ও টান T পরিবর্তনের সাথে কম্পাঙ্ক f-এর সূত্র প্রমাণ করা।",
+      "theory_en": "Fundamental frequency of a stretched string: f = (1 / 2L) · √(T / m), where L is vibrating length between bridges, T = M·g is tension force, and m is mass per unit length (linear density).",
+      "theory_bn": "টানযুক্ত তারের মূল সুরের কম্পাঙ্ক: f = (১ / ২L) · √(T / m)। দৈর্ঘ্যের সূত্র: f · L = ধ্রুবক। টানের সূত্র: f / √T = ধ্রুবক।",
+      "formula_latex": "f = \\frac{1}{2L} \\sqrt{\\frac{T}{m}} = \\frac{1}{2L} \\sqrt{\\frac{M g}{\\pi r^2 \\rho}}",
+      "formula_desc_en": "f is fundamental frequency, L is vibrating wire length, T is tension, m is linear mass density.",
+      "formula_desc_bn": "f মূল কম্পাঙ্ক, L তারের দৈর্ঘ্য, T টান বল, m একক দৈর্ঘ্যের ভর।",
+      "apparatusRequired": ["sonometer-board", "tuning-forks-set", "slotted-weights-set"],
+      "setup": {
+        "items": [
+          { "equipmentId": "sonometer-board", "x": 100, "y": 80, "properties": { "bridgeSeparationCm": 35, "suspendedMassKg": 2.5 } },
+          { "equipmentId": "tuning-forks-set", "x": 360, "y": 80, "properties": { "frequencyHz": 512 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Hang total mass M = 2.5 kg on sonometer wire tension hanger.", "instruction_bn": "সোনোমিটার তারের ঝুলন্ত হ্যাঙ্গারে ২.৫ কেজি ভর চাপান।" },
+        { "stepNumber": 2, "instruction_en": "Place a light paper rider (V-shaped paper strip) in the middle between the two wooden bridges.", "instruction_bn": "দুটি কাঠের ব্রীজের ঠিক মাঝখানে একটি হালকা কাগজের আরোহী (Rider) রাখুন।" },
+        { "stepNumber": 3, "instruction_en": "Strike 512 Hz tuning fork, place its stem firmly on the soundboard, and slide bridges until the paper rider flutters violently and falls off.", "instruction_bn": "সুরশলাকা বাজিয়ে সোনোমিটার বোর্ডে স্পর্শ করান এবং ব্রীজ সরিয়ে অনুনাদে আরোহী ফেলে দিন।" }
+      ],
+      "precautions_en": ["Ensure the paper rider is placed precisely at the vibrating antinode (midway between bridges)."],
+      "precautions_bn": ["কাগজের আরোহীটি দুই ব্রীজের ঠিক মধ্যস্থলে (সুস্পন্দ বিন্দুতে) রাখুন।"],
+      "dataColumns": [
+        { "key": "forkFreqHz", "label_en": "Fork f (Hz)", "label_bn": "কম্পাঙ্ক f (Hz)", "unit": "Hz" },
+        { "key": "resLengthL", "label_en": "Resonant Length L (m)", "label_bn": "অনুনাদী দৈর্ঘ্য L (m)", "unit": "m", "decimals": 3 },
+        { "key": "productFL", "label_en": "f × L (Constant)", "label_bn": "f × L (ধ্রুবক)", "decimals": 1 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "f * L = (1/2) * sqrt(T/m) = Constant",
+        "expectedConstant": 89.2,
+        "xColumn": "resLengthL",
+        "yColumn": "forkFreqHz",
+        "slopeFormula": "Hyperbolic f = c / L"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "If tension T in a sonometer wire is made 4 times greater, keeping length constant, the fundamental frequency will:",
+          "question_bn": "দৈর্ঘ্য অপরিবর্তিত রেখে সোনোমিটারের তারের টান ৪ গুণ বৃদ্ধি করলে মূল কম্পাঙ্ক কত হবে?",
+          "options": [
+            { "id": "a", "text_en": "Double (2 times)", "text_bn": "দ্বিগুণ (২ গুণ)" },
+            { "id": "b", "text_en": "Quadruple (4 times)", "text_bn": "চার গুণ" },
+            { "id": "c", "text_en": "Halve (1/2)", "text_bn": "অর্ধেক" },
+            { "id": "d", "text_en": "Remain unchanged", "text_bn": "একই থাকবে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Since f is proportional to √T, multiplying tension by 4 increases frequency by √4 = 2.",
+          "explanation_bn": "f ∝ √T হওয়ায় টান ৪ গুণ বাড়ালে কম্পাঙ্ক √৪ = ২ গুণ বৃদ্ধি পাবে।"
+        }
+      ]
+    },
+    {
+      "id": "photoelectric-effect",
+      "slug": "photoelectric-effect",
+      "title_en": "Photoelectric Effect: Determination of Planck's Constant (h) & Work Function",
+      "title_bn": "আলোক-তড়িৎ ক্রিয়া: প্লাঙ্কের ধ্রুবক (h) ও কার্য-অপেক্ষক নির্ণয়",
+      "category": "modern-physics",
+      "domain": "modern",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To measure stopping potential V0 for various monochromatic light frequencies ν and determine Planck's constant 'h' and cathode work function Φ.",
+      "aim_bn": "বিভিন্ন কম্পাঙ্কের আলোর জন্য নিবারক বিভব V0 মেপে প্লাঙ্কের ধ্রুবক h ও ধাতুর কার্য-অপেক্ষক Φ নির্ণয়।",
+      "theory_en": "Einstein's Photoelectric Equation: Kmax = e · V0 = h·ν - Φ = (h·c / λ) - Φ. Stopping potential V0 = (h / e)·ν - (Φ / e). The slope of V0 vs ν graph equals h / e.",
+      "theory_bn": "আইনস্টাইনের আলোক-তড়িৎ সমীকরণ: eV0 = hν - Φ = hc/λ - Φ। নিবারক বিভব V0 বনাম কম্পাঙ্ক ν গ্রাফের ঢাল = h/e এবং Y-ছেদাংশ = -Φ/e।",
+      "formula_latex": "e V_0 = h \\nu - \\Phi \\implies V_0 = \\left(\\frac{h}{e}\\right) \\nu - \\frac{\\Phi}{e}",
+      "formula_desc_en": "V0 is stopping potential, h = 6.626e-34 J·s, e = 1.602e-19 C, ν is light frequency.",
+      "formula_desc_bn": "V0 নিবারক বিভব, h প্লাঙ্কের ধ্রুবক, e ইলেকট্রনের চার্জ, ν কম্পাঙ্ক, Φ কার্য-অপেক্ষক।",
+      "apparatusRequired": ["photoelectric-effect-apparatus", "digital-multimeter"],
+      "setup": {
+        "items": [
+          { "equipmentId": "photoelectric-effect-apparatus", "x": 160, "y": 80, "properties": { "filterWavelengthNm": 450, "retardingVoltage": 0, "cathodeMaterial": "potassium" } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Select monochromatic color filter 365 nm (UV, frequency ν = 8.22 × 10¹⁴ Hz).", "instruction_bn": "৩৬৫ nm ফিল্টার নির্বাচন করুন (কম্পাঙ্ক ν = ৮.২২ × ১০¹⁴ Hz)।" },
+        { "stepNumber": 2, "instruction_en": "Adjust retarding potential knob until photocurrent drops to exactly zero; record stopping voltage V0.", "instruction_bn": "নিবারক বিভব বাড়িয়ে আলোক প্রবাহ শূন্য করুন এবং কাটঅফ ভোল্টেজ V0 লিখুন।" },
+        { "stepNumber": 3, "instruction_en": "Repeat for 405 nm, 450 nm, 546 nm, 589 nm filters and plot V0 vs ν graph to compute slope = h/e.", "instruction_bn": "অন্যান্য ফিল্টারের জন্য পুনরাবৃত্তি করে V0 বনাম ν গ্রাফ থেকে h নির্ণয় করুন।" }
+      ],
+      "precautions_en": ["Ensure no stray room light enters the phototube enclosure."],
+      "precautions_bn": ["বাইরের অনাকাঙ্ক্ষিত আলো যেন ফটোটিউবে প্রবেশ না করে।"],
+      "dataColumns": [
+        { "key": "lambdaNm", "label_en": "Wavelength λ (nm)", "label_bn": "তরঙ্গদৈর্ঘ্য λ (nm)", "unit": "nm" },
+        { "key": "freqNu", "label_en": "Frequency ν (10¹⁴ Hz)", "label_bn": "কম্পাঙ্ক ν (১০¹⁴ Hz)", "unit": "10¹⁴ Hz", "decimals": 3 },
+        { "key": "stoppingPotV", "label_en": "Stopping Pot V0 (V)", "label_bn": "নিবারক বিভব V0 (V)", "unit": "V", "decimals": 3 },
+        { "key": "hCalc", "label_en": "Planck h (10⁻³⁴ J·s)", "label_bn": "প্লাঙ্ক h (১০⁻³⁴ J·s)", "unit": "10⁻³⁴ J·s", "decimals": 3 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "V0 = (h/e) * ν - (Φ/e)",
+        "expectedConstant": 6.626,
+        "expectedConstantUnit": "× 10⁻³⁴ J·s",
+        "xColumn": "freqNu",
+        "yColumn": "stoppingPotV",
+        "slopeFormula": "Slope = h / e = 4.136 × 10⁻¹⁵ V·s"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "If the intensity of incident light is doubled while keeping frequency constant, the stopping potential V0 will:",
+          "question_bn": "কম্পাঙ্ক স্থির রেখে আপতিত আলোর তীব্রতা দ্বিগুণ করলে নিবারক বিভব V0:",
+          "options": [
+            { "id": "a", "text_en": "Remain unchanged", "text_bn": "অপরিবর্তিত থাকবে" },
+            { "id": "b", "text_en": "Double", "text_bn": "দ্বিগুণ হবে" },
+            { "id": "c", "text_en": "Halve", "text_bn": "অর্ধেক হবে" },
+            { "id": "d", "text_en": "Quadruple", "text_bn": "চার গুণ হবে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "Stopping potential depends solely on maximum kinetic energy (photon frequency hν), not on intensity (photon quantity). Intensity only increases photocurrent.",
+          "explanation_bn": "নিবারক বিভব কেবল ফোটনের শক্তি তথা কম্পাঙ্কের উপর নির্ভর করে, তীব্রতার উপর নয় (তীব্রতা শুধু ইলেকট্রন সংখ্যা বাড়ায়)।"
+        }
+      ]
+    },
+    {
+      "id": "radioactive-decay-gm-counter",
+      "slug": "radioactive-decay-gm-counter",
+      "title_en": "Radioactive Decay Simulation & GM Counter Inverse Square Law",
+      "title_bn": "তেজস্ক্রিয় ক্ষয় সূত্র ও জিএম কাউন্টার বিপরীত বর্গীয় নীতি",
+      "category": "modern-physics",
+      "domain": "modern",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To measure gamma radiation intensity as a function of distance r (I ∝ 1/r²) and verify the radioactive decay law N(t) = N0 · e^(-λt).",
+      "aim_bn": "গাইগার-মুলার কাউন্টারে দূরত্বের সাথে তীব্রতার বিপরীত বর্গ নিয়ম ও তেজস্ক্রিয় অর্ধায়ু পরীক্ষা।",
+      "theory_en": "Inverse Square Law: Radiation flux counts per second CPS ∝ 1 / r². Radioactive Decay: Activity A(t) = A0 · e^(-λt), where decay constant λ = ln(2) / t1/2.",
+      "theory_bn": "দূরত্বের বিপরীত বর্গ নিয়ম: বিকিরণ তীব্রতা I ∝ ১/r²। তেজস্ক্রিয় ক্ষয় সমীকরণ: N(t) = N0 e^(-λt), যেখানে ক্ষয় ধ্রুবক λ = ০.৬৯৩ / t1/2।",
+      "formula_latex": "I(r) = \\frac{I_0}{4\\pi r^2}, \\quad N(t) = N_0 e^{-\\lambda t}, \\quad t_{1/2} = \\frac{\\ln 2}{\\lambda}",
+      "formula_desc_en": "CPS is counts per second, r is source-to-tube distance, t1/2 is half-life.",
+      "formula_desc_bn": "CPS প্রতি সেকেন্ডে কাউন্ট, r দূরত্ব, t1/2 অর্ধায়ু।",
+      "apparatusRequired": ["geiger-muller-counter", "radioactive-source-sample", "meter-scale-wooden"],
+      "setup": {
+        "items": [
+          { "equipmentId": "geiger-muller-counter", "x": 120, "y": 80, "properties": { "sourceDistanceCm": 10 } },
+          { "equipmentId": "radioactive-source-sample", "x": 340, "y": 80, "properties": { "isotope": "cobalt-60" } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Measure background radiation count rate without radioactive source.", "instruction_bn": "তেজস্ক্রিয় উৎস ছাড়া প্রাকৃতিক ব্যাকগ্রাউন্ড বিকিরণ কাউন্ট নিন।" },
+        { "stepNumber": 2, "instruction_en": "Place source at r = 5 cm, 10 cm, 15 cm, 20 cm, 25 cm and record net Counts Per Minute (CPM).", "instruction_bn": "উৎসটি বিভিন্ন দূরত্বে রেখে প্রতি মিনিটের নিট কাউন্ট (CPM) রেকর্ড করুন।" },
+        { "stepNumber": 3, "instruction_en": "Plot CPM vs 1/r² to verify inverse square law straight line.", "instruction_bn": "CPM বনাম ১/r² গ্রাফ এঁকে বিপরীত বর্গীয় সূত্র যাচাই করুন।" }
+      ],
+      "precautions_en": ["Handle radioactive source only with forceps; keep distance maximized."],
+      "precautions_bn": ["তেজস্ক্রিয় উৎস দূর থেকে চিমটা দিয়ে ধরুন।"],
+      "dataColumns": [
+        { "key": "distR", "label_en": "Distance r (cm)", "label_bn": "দূরত্ব r (cm)", "unit": "cm" },
+        { "key": "invRSq", "label_en": "1/r² (cm⁻²)", "label_bn": "১/r² (cm⁻²)", "decimals": 4 },
+        { "key": "netCpm", "label_en": "Net Counts / min", "label_bn": "নিট কাউন্ট / মিনিট", "decimals": 0 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Counts ∝ 1 / r²",
+        "expectedConstant": 1000.0,
+        "xColumn": "invRSq",
+        "yColumn": "netCpm",
+        "slopeFormula": "Slope = Source Intensity Factor"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "If distance between GM tube and a gamma source is doubled from 10 cm to 20 cm, the recorded count rate will become:",
+          "question_bn": "জিএম কাউন্টার ও গামা উৎসের দূরত্ব ১০ সেমি থেকে ২০ সেমি (দ্বিগুণ) করলে কাউন্ট হার কত হবে?",
+          "options": [
+            { "id": "a", "text_en": "1/4th (One quarter)", "text_bn": "১/৪ ভাগ (এক চতুর্থাংশ)" },
+            { "id": "b", "text_en": "1/2 (Half)", "text_bn": "অর্ধেক" },
+            { "id": "c", "text_en": "1/8th", "text_bn": "১/৮ ভাগ" },
+            { "id": "d", "text_en": "Remains same", "text_bn": "একই থাকবে" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "According to the Inverse Square Law I ∝ 1/r², doubling r reduces radiation flux to 1/(2²) = 1/4th.",
+          "explanation_bn": "বিপরীত বর্গ নিয়মানুসারে দূরত্ব ২ গুণ হলে তীব্রতা ১/(২²) = ১/৪ অংশে নেমে আসে।"
+        }
+      ]
+    },
+    {
+      "id": "atwood-machine-g",
+      "slug": "atwood-machine-g",
+      "title_en": "Determination of Acceleration in Atwood's Machine",
+      "title_bn": "অ্যাটউড মেশিনে ত্বরণ ও টান নির্ণয়",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "aim_en": "To verify Newton's laws of motion and measure acceleration a = (m1 - m2)·g / (m1 + m2) on an Atwood machine.",
+      "aim_bn": "অ্যাটউড মেশিনের সাহায্যে দুটি অসমান ঝুলন্ত ভরের ত্বরণ ও দড়ির টান নির্ণয়।",
+      "theory_en": "Atwood Machine Equation: Acceleration a = ((m1 - m2) / (m1 + m2)) · g. Tension in string T = (2·m1·m2·g) / (m1 + m2).",
+      "theory_bn": "অ্যাটউড সমীকরণ: ত্বরণ a = ((m1 - m2) / (m1 + m2)) · g। দড়ির টান T = ২·m1·m2·g / (m1 + m2)।",
+      "formula_latex": "a = \\frac{m_1 - m_2}{m_1 + m_2} g, \\quad T = \\frac{2 m_1 m_2}{m_1 + m_2} g",
+      "formula_desc_en": "m1 and m2 are hanging masses over frictionless pulley.",
+      "formula_desc_bn": "m1 ও m2 কপিকলে ঝুলন্ত দুটি ভর।",
+      "apparatusRequired": ["atwood-machine", "slotted-weights-set", "digital-stopwatch", "meter-scale-wooden"],
+      "setup": {
+        "items": [
+          { "equipmentId": "atwood-machine", "x": 160, "y": 60, "properties": { "mass1Grams": 220, "mass2Grams": 200 } }
+        ]
+      },
+      "procedureSteps": [
+        { "stepNumber": 1, "instruction_en": "Set m1 = 220g on right and m2 = 200g on left over frictionless pulley.", "instruction_bn": "ডান পাশে m1 = ২২০ গ্রাম এবং বাম পাশে m2 = ২০০ গ্রাম ভর ঝুলান।" },
+        { "stepNumber": 2, "instruction_en": "Release m1 from rest over height h = 1.0 m and measure falling time t.", "instruction_bn": "১ মিটার উচ্চতা অতিক্রম করার সময় t স্টপওয়াচে পরিমাপ করুন।" },
+        { "stepNumber": 3, "instruction_en": "Compute a = 2h / t² and compare with theoretical value a = (m1 - m2)g / (m1 + m2).", "instruction_bn": "ত্বরণ a = ২h / t² বের করে তাত্ত্বিক মানের সাথে তুলনা করুন।" }
+      ],
+      "precautions_en": ["String must be light and inextensible."],
+      "precautions_bn": ["দড়িটি হালকা ও অপ্রসারণশীল হতে হবে।"],
+      "dataColumns": [
+        { "key": "massDiff", "label_en": "m1 - m2 (g)", "label_bn": "m1 - m2 (g)", "unit": "g" },
+        { "key": "timeT", "label_en": "Time t (s)", "label_bn": "সময় t (s)", "unit": "s", "decimals": 2 },
+        { "key": "accelMps2", "label_en": "Exp a (m/s²)", "label_bn": "ত্বরণ a (m/s²)", "unit": "m/s²", "decimals": 3 },
+        { "key": "theoryA", "label_en": "Theory a (m/s²)", "label_bn": "তাত্ত্বিক a (m/s²)", "unit": "m/s²", "decimals": 3 }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "a = (m1 - m2) / (m1 + m2) * g",
+        "expectedConstant": 0.467,
+        "expectedConstantUnit": "m/s²",
+        "xColumn": "massDiff",
+        "yColumn": "accelMps2"
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "question_en": "If both masses m1 and m2 on an Atwood machine are equal (m1 = m2), the acceleration is:",
+          "question_bn": "অ্যাটউড মেশিনে দুটি ভর সমান হলে (m1 = m2) ত্বরণ কত হবে?",
+          "options": [
+            { "id": "a", "text_en": "Zero (0 m/s²)", "text_bn": "শূন্য (০ m/s²)" },
+            { "id": "b", "text_en": "g (9.8 m/s²)", "text_bn": "g (৯.৮ m/s²)" },
+            { "id": "c", "text_en": "g / 2", "text_bn": "g / ২" },
+            { "id": "d", "text_en": "2g", "text_bn": "২g" }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "When m1 = m2, net force (m1 - m2)g = 0, so system stays in equilibrium with a = 0.",
+          "explanation_bn": "ভর দুটি সমান হলে নিট ত্বরণকারী বল শূন্য হওয়ায় ত্বরণ a = ০ হয়।"
+        }
+      ]
+    }
+  ]
+}

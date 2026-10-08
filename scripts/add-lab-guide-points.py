@@ -156,7 +156,7 @@ def build_key_points(data: dict) -> tuple[list[str], list[str]]:
         f'মূল ধাপ: {step_bn.rstrip("।")}।',
         f'লিখে রাখুন: প্রতি পাঠে এককসহ {join_items(headers_bn, 8)}।',
         f'হিসাব: {first_sentence(calculation_bn, True)}।',
-        f'পুনরাবৃত্তি: {repeat_text_bn.rstrip("।") or "অন্তত তিনটি পাঠ নিয়ে গড় ব্যবহার করুন এবং কাঁচা পাঠ প্রতিবেদনে রাখুন"}।',
+        f'পুনরাবৃত্তি: {repeat_text_bn.rstrip("।") or "অন্তত তিনটি পাঠ নিয়ে গড় ব্যবহার করুন এবং কাঁচা পাঠ প্রতিপাদনে রাখুন"}।',
         f'সতর্কতা: {precautions_bn[0].rstrip("।") if precautions_bn else "ল্যাবের নিরাপত্তা নিয়ম মেনে যন্ত্রপাতি ব্যবহার করুন"}।',
         f'ভুলের উৎস: {errors_bn[0].rstrip("।") if errors_bn else "পাঠের সম্ভাব্য ভুলগুলো এবং তা ফলকে কীভাবে বদলায় তা লিখুন"}।',
     ]

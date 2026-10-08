@@ -305,7 +305,7 @@
       "category": "electricity",
       "domain": "electricity",
       "description_en": "Analog moving-coil ammeter for measuring electric current in series.",
-      "description_bn": "বর্তনীতে শ্রেণিসংযোগে যুক্ত করে তড়িৎ প্রবাহ মাপার অ্যানালগ মিটার।",
+      "description_bn": "বর্তনীতে সিরিজসংযোগে যুক্ত করে তড়িৎ প্রবাহ মাপার অ্যানালগ মিটার।",
       "icon": "gauge",
       "leastCount": 0.05,
       "leastCountUnit": "A",

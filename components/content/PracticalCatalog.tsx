@@ -91,7 +91,7 @@ export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: 
         <h2 className="section-title">{locale === 'bn' ? 'পদার্থবিজ্ঞান ও রসায়নের ল্যাব বিষয়' : 'Physics and chemistry lab topics'}</h2>
         <p className="mt-2 text-sm leading-6 muted">
           {locale === 'bn'
-            ? 'স্কুল (৬–১০) ও এইচএসসি স্তরের তালিকাটি খুঁজে দেখুন। প্রতিটি বিষয়ে ১০–১২টি পয়েন্টে উদ্দেশ্য, যন্ত্রপাতি, মূলনীতি ও সূত্র, ধাপ, পর্যবেক্ষণ, হিসাব, সতর্কতা, ভুলের উৎস ও ভাইভা প্রশ্ন দেওয়া আছে; যেসব বিষয়ে পূর্ণ নির্দেশিকা আছে, সেখান থেকে সেটি খুলুন।'
+            ? 'স্কুল (৬ষ্ঠ–১০ম) ও উচ্চমাধ্যমিক (১১শ–১২শ) স্তরের তালিকাটি খুঁজে দেখুন। প্রতিটি বিষয়ে ১০–১২টি পয়েন্টে উদ্দেশ্য, যন্ত্রপাতি, মূলনীতি ও সূত্র, ধাপ, পর্যবেক্ষণ, হিসাব, সতর্কতা, ভুলের উৎস ও ভাইভা প্রশ্ন দেওয়া আছে; যেসব বিষয়ে পূর্ণ নির্দেশিকা আছে, সেখান থেকে সেটি খুলুন।'
             : 'Browse the school (Classes 6–10) and HSC lists. Each topic opens into 10–12 points covering the aim, apparatus, working principle and relation, steps, observation, calculation, precautions, error sources and viva questions; open a full guide where one is available.'}
         </p>
       </div>
@@ -119,8 +119,8 @@ export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: 
         </select>
         <select value={stage} onChange={(event) => setStage(event.target.value as StageFilter)} className="input" aria-label={locale === 'bn' ? 'স্তর বাছাই' : 'Filter by stage'}>
           <option value="all">{locale === 'bn' ? 'সব স্তর' : 'All levels'}</option>
-          <option value="school">{locale === 'bn' ? 'স্কুল · ৬–১০' : 'School · 6–10'}</option>
-          <option value="hsc">HSC</option>
+          <option value="school">{locale === 'bn' ? 'স্কুল · ৬ষ্ঠ–১০ম' : 'School · 6–10'}</option>
+          <option value="hsc">{locale === 'bn' ? 'উচ্চমাধ্যমিক · ১১শ–১২শ' : 'Higher secondary (HSC) · 11–12'}</option>
         </select>
         {hasFilters && (
           <button type="button" onClick={clearFilters} className="btn-secondary min-h-11 px-3 text-sm">

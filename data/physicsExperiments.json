@@ -38,7 +38,7 @@
         ]
       },
       "procedureSteps": [
-        { "stepNumber": 1, "instruction_en": "Connect the DC battery, switch, rheostat, ammeter, and fixed resistor in series.", "instruction_bn": "ডিসি ব্যাটারি, চাবি, রিওস্ট্যাট, অ্যামিটার ও রোধককে শ্রেণিসংযোগে যুক্ত করুন।" },
+        { "stepNumber": 1, "instruction_en": "Connect the DC battery, switch, rheostat, ammeter, and fixed resistor in series.", "instruction_bn": "ডিসি ব্যাটারি, চাবি, রিওস্ট্যাট, অ্যামিটার ও রোধককে সিরিজসংযোগে যুক্ত করুন।" },
         { "stepNumber": 2, "instruction_en": "Connect the voltmeter in parallel across the fixed resistor.", "instruction_bn": "রোধকের দুই প্রান্তে সমান্তরালে ভোল্টমিটার যুক্ত করুন।" },
         { "stepNumber": 3, "instruction_en": "Close the switch key and adjust the rheostat slider to start with minimum current.", "instruction_bn": "চাবি বন্ধ করুন এবং রিওস্ট্যাট স্লাইডার সরিয়ে সর্বনিম্ন প্রবাহ দিয়ে শুরু করুন।" },
         { "stepNumber": 4, "instruction_en": "Note the readings of the Ammeter (I in Amperes) and Voltmeter (V in Volts) in the table.", "instruction_bn": "অ্যামিটার ও ভোল্টমিটারের পাঠ সারণিতে রেকর্ড করুন।" },
@@ -51,7 +51,7 @@
       ],
       "precautions_bn": [
         "সকল তারের সংযোগ শক্তভাবে লাগান।",
-        "অ্যামিটার শ্রেণিতে এবং ভোল্টমিটার সমান্তরালে যুক্ত করুন।",
+        "অ্যামিটার সিরিজে এবং ভোল্টমিটার সমান্তরালে যুক্ত করুন।",
         "পোলারিটি (+ এবং -) খেয়াল রাখুন যাতে মিটার নষ্ট না হয়।"
       ],
       "dataColumns": [
@@ -86,7 +86,7 @@
         {
           "id": "q2",
           "question_en": "Why is an ammeter always connected in series?",
-          "question_bn": "অ্যামিটার কেন সর্বদা শ্রেণিসংযোগে যুক্ত করা হয়?",
+          "question_bn": "অ্যামিটার কেন সর্বদা সিরিজসংযোগে যুক্ত করা হয়?",
           "options": [
             { "id": "a", "text_en": "Because it has very low internal resistance", "text_bn": "কারণ এর অভ্যন্তরীণ রোধ খুব কম থাকে" },
             { "id": "b", "text_en": "Because it has infinite resistance", "text_bn": "কারণ এর রোধ অসীম" },
@@ -103,18 +103,18 @@
       "id": "resistors-series-parallel",
       "slug": "resistors-series-parallel",
       "title_en": "Verification of Laws of Combination of Resistors (Series & Parallel)",
-      "title_bn": "রোধের সমবায় সূত্র যাচাই (শ্রেণি ও সমান্তরাল)",
+      "title_bn": "রোধের সমবায় সূত্র যাচাই (সিরিজ ও সমান্তরাল)",
       "category": "electricity",
       "domain": "electricity",
       "level": "class-9-10",
       "durationMinutes": 15,
       "aim_en": "To determine the equivalent resistance of two given resistors when connected in series and in parallel.",
-      "aim_bn": "শ্রেণি ও সমান্তরাল সমবায়ে দুটি রোধকের তুল্য রোধ নির্ণয় ও সূত্র যাচাই করা।",
+      "aim_bn": "সিরিজ ও সমান্তরাল সমবায়ে দুটি রোধকের তুল্য রোধ নির্ণয় ও সূত্র যাচাই করা।",
       "theory_en": "For series combination: Rs = R1 + R2. For parallel combination: 1/Rp = 1/R1 + 1/R2, or Rp = (R1 × R2) / (R1 + R2).",
-      "theory_bn": "শ্রেণি সমবায়ে: Rs = R1 + R2। সমান্তরাল সমবায়ে: 1/Rp = 1/R1 + 1/R2 বা Rp = (R1 × R2) / (R1 + R2)।",
+      "theory_bn": "সিরিজ সমবায়ে: Rs = R1 + R2। সমান্তরাল সমবায়ে: 1/Rp = 1/R1 + 1/R2 বা Rp = (R1 × R2) / (R1 + R2)।",
       "formula_latex": "R_s = R_1 + R_2, \\quad R_p = \\frac{R_1 R_2}{R_1 + R_2}",
       "formula_desc_en": "Series resistance adds linearly, while parallel conductance adds linearly.",
-      "formula_desc_bn": "শ্রেণিতে রোধ যোগ হয় এবং সমান্তরালে রোধের ব্যস্তানুপাত যোগ হয়।",
+      "formula_desc_bn": "সিরিজে রোধ যোগ হয় এবং সমান্তরালে রোধের ব্যস্তানুপাত যোগ হয়।",
       "apparatusRequired": ["battery-dc", "switch-spst", "resistor-fixed", "ammeter-dc", "voltmeter-dc"],
       "setup": {
         "items": [
@@ -128,7 +128,7 @@
         "wires": []
       },
       "procedureSteps": [
-        { "stepNumber": 1, "instruction_en": "Connect R1 (20Ω) and R2 (30Ω) in series with the battery and ammeter.", "instruction_bn": "R1 ও R2 কে ব্যাটারি এবং অ্যামিটারের সঙ্গে শ্রেণিতে যুক্ত করুন।" },
+        { "stepNumber": 1, "instruction_en": "Connect R1 (20Ω) and R2 (30Ω) in series with the battery and ammeter.", "instruction_bn": "R1 ও R2 কে ব্যাটারি এবং অ্যামিটারের সঙ্গে সিরিজে যুক্ত করুন।" },
         { "stepNumber": 2, "instruction_en": "Measure total voltage V and current I to find equivalent series resistance Rs.", "instruction_bn": "মোট ভোল্টেজ ও কারেন্ট মেপে তুল্য রোধ Rs বের করুন।" },
         { "stepNumber": 3, "instruction_en": "Reconnect R1 and R2 in parallel across the voltmeter and measure equivalent parallel resistance Rp.", "instruction_bn": "রোধ দুটি সমান্তরালে যুক্ত করে তুল্য রোধ Rp পরিমাপ করুন।" }
       ],
@@ -1471,7 +1471,7 @@
       "id": "lcr-series-resonance",
       "slug": "lcr-series-resonance",
       "title_en": "Study of Series LCR Resonance & Quality Factor (Q)",
-      "title_bn": "শ্রেণি এলসিআর অনুনাদ বর্তনী ও কিউ-ফ্যাক্টর",
+      "title_bn": "সিরিজ এলসিআর অনুনাদ বর্তনী ও কিউ-ফ্যাক্টর",
       "category": "electricity",
       "domain": "electricity",
       "level": "class-11-12",
@@ -1493,7 +1493,7 @@
         ]
       },
       "procedureSteps": [
-        { "stepNumber": 1, "instruction_en": "Connect signal generator, 50Ω resistor, 50mH inductor and 0.5µF capacitor in series.", "instruction_bn": "সিগন্যাল জেনারেটর, ৫০ ওহম রোধ, ৫০ mH ইনডাক্টর ও ০.৫ µF ক্যাপাসিটর শ্রেণিতে যুক্ত করুন।" },
+        { "stepNumber": 1, "instruction_en": "Connect signal generator, 50Ω resistor, 50mH inductor and 0.5µF capacitor in series.", "instruction_bn": "সিগন্যাল জেনারেটর, ৫০ ওহম রোধ, ৫০ mH ইনডাক্টর ও ০.৫ µF ক্যাপাসিটর সিরিজে যুক্ত করুন।" },
         { "stepNumber": 2, "instruction_en": "Vary frequency from 500 Hz to 2000 Hz in steps of 100 Hz and record circuit current I.", "instruction_bn": "কম্পাঙ্ক ৫০০ Hz থেকে ২০০০ Hz পর্যন্ত বাড়িয়ে বর্তনীর প্রবাহ I রেকর্ড করুন।" },
         { "stepNumber": 3, "instruction_en": "Plot I vs f curve: notice sharp peak at fr ≈ 1006 Hz where Z is purely resistive.", "instruction_bn": "I বনাম f গ্রাফ আঁকুন এবং সর্বোচ্চ প্রবাহের বিন্দুটি অনুনাদী কম্পাঙ্ক হিসেবে শনাক্ত করুন।" }
       ],
@@ -1515,7 +1515,7 @@
         {
           "id": "q1",
           "question_en": "At series resonance in an LCR circuit, the phase difference between applied voltage and circuit current is:",
-          "question_bn": "শ্রেণি এলসিআর অনুনাদে ভোল্টেজ ও কারেন্টের মধ্যে দশা পার্থক্য কত?",
+          "question_bn": "সিরিজ এলসিআর অনুনাদে ভোল্টেজ ও কারেন্টের মধ্যে দশা পার্থক্য কত?",
           "options": [
             { "id": "a", "text_en": "0° (in phase, power factor cos φ = 1)", "text_bn": "০° (সমদশা, পাওয়ার ফ্যাক্টর cos φ = ১)" },
             { "id": "b", "text_en": "90°", "text_bn": "৯০°" },

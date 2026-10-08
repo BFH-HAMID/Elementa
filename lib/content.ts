@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import practicalCatalog from '../content/practical-topics.json';
+import { formatLevel } from './labels';
 import {
   equationFrontmatterSchema,
   experimentFrontmatterSchema,
@@ -29,15 +30,6 @@ function directoriesFor(subject: Subject): string[] {
 
 function allMdx(subject: Subject): string[] {
   return directoriesFor(subject).flatMap(readMarkdownFiles);
-}
-
-function labelLevel(level: Level): string {
-  return ({
-    'class-6-8': 'Class 6–8',
-    'class-9-10': 'Class 9–10',
-    'class-11-12': 'Class 11–12',
-    honours: 'Honours'
-  })[level];
 }
 
 let equationCache: EquationEntry[] | null = null;
@@ -152,17 +144,7 @@ export function getSearchRecords(): SearchRecord[] {
   return [...equations, ...experiments, ...practicals];
 }
 
-export function formatLevel(level: Level, locale: 'bn' | 'en'): string {
-  if (locale === 'bn') {
-    return ({
-      'class-6-8': '৬–৮ শ্রেণি',
-      'class-9-10': '৯–১০ শ্রেণি',
-      'class-11-12': '১১–১২ শ্রেণি',
-      honours: 'অনার্স'
-    })[level];
-  }
-  return labelLevel(level);
-}
+export { formatLevel };
 
 export function contentCounts() {
   return {

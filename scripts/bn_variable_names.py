@@ -165,7 +165,7 @@ BN_VARIABLE_NAMES = {
     "screen distance": "পর্দার দূরত্ব",
     "second signed radius": "দ্বিতীয় চিহ্নযুক্ত ব্যাসার্ধ",
     "second-order rate constant": "দ্বিতীয়-ক্রম হার ধ্রুবক",
-    "series-limit wavelength": "শ্রেণির সীমা তরঙ্গদৈর্ঘ্য",
+    "series-limit wavelength": "সিরিজের সীমা তরঙ্গদৈর্ঘ্য",
     "single-particle energy": "একক-কণার শক্তি",
     "single-particle partition function": "একক-কণার বণ্টন ফাংশন",
     "slit separation": "চিরের ব্যবধান",

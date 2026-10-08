@@ -1,7 +1,7 @@
 {
   "slug": "honours-rydberg-ionization-limit",
   "title_en": "Balmer-series wavelength limit — concept check",
-  "title_bn": "বালমার শ্রেণির সীমা — বহুনির্বাচনী",
+  "title_bn": "বালমার সিরিজের সীমা — বহুনির্বাচনী",
   "subject": "chemistry",
   "level": "honours",
   "chapter": "Honours Chemistry",
@@ -11,7 +11,7 @@
   "questions": [
     {
       "q": "For Balmer series the lower level is?",
-      "q_bn": "বালমার শ্রেণিতে নিম্ন শক্তিস্তর কোনটি?",
+      "q_bn": "বালমার সিরিজে নিম্ন শক্তিস্তর কোনটি?",
       "options": [
         "n=2",
         "n=1",

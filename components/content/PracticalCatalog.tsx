@@ -20,14 +20,17 @@ function toBanglaNumeral(value: number): string {
 }
 
 type SubjectFilter = 'all' | 'physics' | 'chemistry';
-type StageFilter = 'all' | 'school' | 'hsc';
+// One filter option per practical topic category, e.g. আলোকবিজ্ঞান, শব্দ, তড়িৎ.
+const topicOptions = Array.from(
+  new Map(practicalCatalog.groups.flatMap((group) => group.topics).map((topic) => [topic.category_en, topic] as const)).values()
+).sort((a, b) => a.category_en.localeCompare(b.category_en));
 
 export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: SubjectFilter }) {
   const locale = useLocale() as 'bn' | 'en';
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [subject, setSubject] = useState<SubjectFilter>(initialSubject);
-  const [stage, setStage] = useState<StageFilter>('all');
+  const [topicFilter, setTopicFilter] = useState('all');
   const updateSubject = (value: SubjectFilter) => {
     setSubject(value);
     const params = new URLSearchParams(window.location.search);
@@ -40,10 +43,9 @@ export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: 
 
   const visibleGroups = useMemo(() => practicalCatalog.groups
     .filter((group) => subject === 'all' || group.subject === subject)
-    .filter((group) => stage === 'all' || group.stage === stage)
     .map((group) => ({
       ...group,
-      topics: group.topics.filter((topic) => !searchTerm || [
+      topics: group.topics.filter((topic) => (topicFilter === 'all' || topic.category_en === topicFilter) && (!searchTerm || [
         topic.title_en,
         topic.title_bn,
         topic.note_en,
@@ -53,14 +55,14 @@ export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: 
         topic.points_en.join(' '),
         topic.points_bn.join(' '),
         topic.equation ?? ''
-      ].join(' ').toLocaleLowerCase().includes(searchTerm))
+      ].join(' ').toLocaleLowerCase().includes(searchTerm)))
     }))
     .filter((group) => group.topics.length > 0),
-  [searchTerm, stage, subject]);
+  [searchTerm, topicFilter, subject]);
 
   const visibleCount = visibleGroups.reduce((count, group) => count + group.topics.length, 0);
-  const hasFilters = query.length > 0 || subject !== 'all' || stage !== 'all';
-  const clearFilters = () => { setQuery(''); updateSubject('all'); setStage('all'); };
+  const hasFilters = query.length > 0 || subject !== 'all' || topicFilter !== 'all';
+  const clearFilters = () => { setQuery(''); updateSubject('all'); setTopicFilter('all'); };
 
   useEffect(() => setSubject(initialSubject), [initialSubject]);
 
@@ -117,10 +119,9 @@ export function PracticalCatalog({ initialSubject = 'all' }: { initialSubject?: 
           <option value="physics">{locale === 'bn' ? 'পদার্থবিজ্ঞান' : 'Physics'}</option>
           <option value="chemistry">{locale === 'bn' ? 'রসায়ন' : 'Chemistry'}</option>
         </select>
-        <select value={stage} onChange={(event) => setStage(event.target.value as StageFilter)} className="input" aria-label={locale === 'bn' ? 'স্তর বাছাই' : 'Filter by stage'}>
-          <option value="all">{locale === 'bn' ? 'সব স্তর' : 'All levels'}</option>
-          <option value="school">{locale === 'bn' ? 'স্কুল · ৬ষ্ঠ–১০ম' : 'School · 6–10'}</option>
-          <option value="hsc">{locale === 'bn' ? 'উচ্চমাধ্যমিক · ১১শ–১২শ' : 'Higher secondary (HSC) · 11–12'}</option>
+        <select value={topicFilter} onChange={(event) => setTopicFilter(event.target.value)} className="input" aria-label={locale === 'bn' ? 'টপিক বাছাই' : 'Filter by topic'}>
+          <option value="all">{locale === 'bn' ? 'সব টপিক' : 'All topics'}</option>
+          {topicOptions.map((option) => <option key={option.category_en} value={option.category_en}>{locale === 'bn' ? option.category_bn : option.category_en}</option>)}
         </select>
         {hasFilters && (
           <button type="button" onClick={clearFilters} className="btn-secondary min-h-11 px-3 text-sm">

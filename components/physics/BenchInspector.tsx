@@ -5,7 +5,7 @@ import { usePhysicsStore } from '@/store/physicsStore';
 import { usePhysicsI18n } from '@/lib/i18n';
 import { equipmentById } from '@/lib/physicsData';
 import { getPorts, isLinkWire } from '@/lib/physicsBench';
-import { equipmentIcon } from './Equipment/EquipmentRenderer';
+import { EquipmentArt } from './Equipment/art';
 import { Cable, CircleDot, Link2, MousePointer2, Wrench } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -98,7 +98,6 @@ export function BenchInspector() {
   }
 
   // ── A tool is selected ──
-  const Icon = equipmentIcon(def.icon);
   const result = circuitResult.componentResults[item.id];
   const props = item.properties || {};
   const connections = wires.filter((w) => w.fromItemId === item.id || w.toItemId === item.id);
@@ -107,8 +106,8 @@ export function BenchInspector() {
     <div className="grid gap-3 border-t border-[var(--line)] bg-[var(--surface-soft)] px-4 py-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
       <div className="min-w-0">
         <div className="flex items-start gap-2.5">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl border border-[var(--line)] bg-[var(--surface)] text-physics-600 dark:text-physics-300">
-            <Icon size={18} />
+          <span className="instrument-card grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-xl border border-[var(--line)]">
+            <EquipmentArt equipmentId={item.equipmentId} p={item.properties || {}} bn={isBangla} live detailed={false} className="p-[2px]" />
           </span>
           <div className="min-w-0">
             <p className="truncate text-sm font-black text-[var(--ink)]">{isBangla ? def.name_bn : def.name_en}</p>

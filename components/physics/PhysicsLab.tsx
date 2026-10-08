@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { usePhysicsStore } from '@/store/physicsStore';
 import { usePhysicsI18n } from '@/lib/i18n';
 import { EquipmentShelf } from './EquipmentShelf';
+import { InstrumentDefs } from './Equipment/art/materials';
 import { Workbench } from './Workbench';
 import { ObservationPanel } from './ObservationPanel';
 import { GraphPanel } from './GraphPanel';
@@ -30,6 +31,8 @@ export function PhysicsLab() {
 
   return (
     <div className="mx-auto w-full max-w-[1720px] space-y-4 px-3 pb-16 pt-4 sm:px-5 lg:px-6">
+      {/* One shared paint server for every instrument drawn in the lab. */}
+      <InstrumentDefs />
       {/* Brand Hero Header */}
       <div className="flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-[var(--line)] bg-[var(--surface)] p-6 shadow-card">
         <div className="flex items-center gap-3.5">

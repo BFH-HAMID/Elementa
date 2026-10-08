@@ -124,6 +124,107 @@ button { cursor: pointer; }
 @keyframes wire-flow { from { stroke-dashoffset: 24; } to { stroke-dashoffset: 0; } }
 .wire-flow { animation: wire-flow 0.9s linear infinite; }
 
+/* ------------------------------------------------------------------ */
+/* Instrument artwork: living details on the physics bench             */
+/* ------------------------------------------------------------------ */
+
+/* Indicator lamps, LEDs and neon tell-tales breathing gently. */
+@keyframes ix-pulse {
+  0%, 100% { opacity: 0.72; }
+  50% { opacity: 1; }
+}
+
+/* Gas flame: a fast, small flicker so the cone never looks frozen. */
+@keyframes ix-flame {
+  0% { transform: scaleY(1) scaleX(1); }
+  35% { transform: scaleY(1.045) scaleX(0.985); }
+  70% { transform: scaleY(0.97) scaleX(1.02); }
+  100% { transform: scaleY(1) scaleX(1); }
+}
+
+/* Filament lamp warming up / cooling down. */
+@keyframes ix-lamp {
+  0%, 100% { opacity: 0.82; }
+  45% { opacity: 1; }
+}
+
+/* GM counter / scaler neon blips. */
+@keyframes ix-blink {
+  0%, 100% { opacity: 0.25; }
+  8% { opacity: 1; }
+  16% { opacity: 0.25; }
+}
+
+/* Ripple tank, sonometer loops, Newton's cradle: a slow mechanical sway. */
+@keyframes ix-sway {
+  0%, 100% { transform: rotate(-1.6deg); }
+  50% { transform: rotate(1.6deg); }
+}
+
+/* CRO sweep / chart recorder pen. */
+@keyframes ix-sweep {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+/* Liquid bubbling in heated vessels. */
+@keyframes ix-bubble {
+  0% { transform: translateY(0) scale(0.7); opacity: 0.2; }
+  60% { opacity: 0.85; }
+  100% { transform: translateY(-26px) scale(1.1); opacity: 0; }
+}
+
+.ix-blink { animation: ix-blink 1.4s steps(1, end) infinite; }
+.ix-sway { animation: ix-sway 1.1s ease-in-out infinite; }
+
+/* ------------------------------------------------------------------ */
+/* Workbench surface: brushed anti-static mat on a lab bench           */
+/* ------------------------------------------------------------------ */
+
+.bench-mat {
+  /* Photographed bench surface: a resin worktop with a soft sky light above and
+     a warm bounce from the wooden edging below. */
+  background-color: #e4ebf2;
+  background-image:
+    radial-gradient(115% 80% at 22% -6%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 62%),
+    radial-gradient(90% 60% at 82% 4%, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0) 58%),
+    linear-gradient(180deg, #f4f8fc 0%, #e6ecf3 44%, #d6dfe8 78%, #c6d1dc 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -24px 34px -26px rgba(15, 30, 48, 0.55);
+}
+.bench-mat::after {
+  /* faint speckle of a resin-worktop finish, so large areas stay alive */
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(rgba(15, 30, 48, 0.10) 0.6px, transparent 0.7px),
+    radial-gradient(rgba(255, 255, 255, 0.6) 0.5px, transparent 0.6px);
+  background-size: 7px 7px, 11px 11px;
+  background-position: 0 0, 3px 5px;
+  mix-blend-mode: multiply;
+}
+[data-theme='dark'] .bench-mat {
+  background-color: #12202f;
+  background-image:
+    radial-gradient(110% 70% at 20% -8%, rgba(120, 190, 255, 0.20), rgba(255, 255, 255, 0) 60%),
+    radial-gradient(80% 50% at 85% 0%, rgba(120, 190, 255, 0.10), rgba(255, 255, 255, 0) 60%),
+    linear-gradient(180deg, #1b2c3e 0%, #142333 46%, #101c2a 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 -26px 36px -26px rgba(0, 0, 0, 0.7);
+}
+[data-theme='dark'] .bench-mat::after {
+  opacity: 0.28;
+  mix-blend-mode: screen;
+}
+
+/* An instrument's own bench pad: the light mat real lab photos sit tools on. */
+.instrument-card {
+  background-image: linear-gradient(178deg, #ffffff 0%, #f6f9fc 58%, #e9eff6 100%);
+  box-shadow: 0 1px 1px rgba(15, 30, 48, 0.10), 0 10px 22px -12px rgba(15, 30, 48, 0.55);
+}
+
+
 .scrollbar-thin { scrollbar-width: thin; scrollbar-color: #9ab2c8 transparent; }
 
 /* iOS Safari zooms the whole viewport when a focused form control renders text below

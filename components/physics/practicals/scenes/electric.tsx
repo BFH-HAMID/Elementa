@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { Battery, C, CurrentDots, Dial, Grip, Resistor, Ruler, SceneFrame, Txt, Wire, fmt, num, useSvgDrag, type SceneProps } from '../primitives';
+import { Battery, C, CurrentDots, Dial, Grip, PlugKey, Resistor, Rheostat, Ruler, SceneFrame, Txt, Wire, fmt, num, useSvgDrag, type SceneProps } from '../primitives';
 
 /* ------------------------------------------------------------------ */
 /* Circuit boards                                                       */
@@ -60,16 +60,7 @@ function SeriesParallelBoard({ view, t, bn }: SceneProps) {
         <rect x={-14} y={-18} width={28} height={36} fill={C.surface} />
         <Battery x={0} y={0} label={bn ? 'ব্যাটারি' : 'Battery'} />
       </g>
-      <g>
-        <rect x={330} y={bottom - 9} width={120} height={18} rx={4} fill={C.surface} stroke={C.steelDark} />
-        {Array.from({ length: 16 }).map((_, i) => (
-          <line key={i} x1={336 + i * 7} x2={336 + i * 7} y1={bottom - 9} y2={bottom + 9} stroke={C.copper} strokeWidth={1.4} />
-        ))}
-        <path d={`M ${340 + (num(view, 'emf') / 12) * 100} ${bottom - 22} l 0 12`} stroke={C.red} strokeWidth={3} markerEnd="url(#pr-arrow)" color={C.red} />
-        <Txt x={390} y={bottom + 26} size={10}>
-          {bn ? 'রিওস্ট্যাট' : 'Rheostat'} · {fmt(num(view, 'emf'), 1)} V
-        </Txt>
-      </g>
+      <Rheostat x={332} y={bottom} w={116} frac={num(view, 'emf') / 12} label={`${bn ? 'রিওস্ট্যাট' : 'Rheostat'} · ${fmt(num(view, 'emf'), 1)} V`} />
       <Txt x={390} y={top - 62} size={11} color={C.ink} weight={800}>
         {combo === 0 ? (bn ? 'সিরিজ সমবায়' : 'Series combination') : bn ? 'প্যারালাল সমবায়' : 'Parallel combination'}
       </Txt>
@@ -280,11 +271,11 @@ function MeterBridgeBoard({ view, setParam, bn, params }: SceneProps) {
       <Ruler x1={x0} x2={x1} y={wy + 12} from={0} to={100} major={10} minor={1} unit="cm" />
       {/* battery and key */}
       <Wire d={`M ${x0} ${wy} L ${x0} 330 L 280 330 M 360 330 L ${x1} 330 L ${x1} ${wy}`} color={C.ink} />
-      <g transform="translate(320 330)">
-        <rect x={-30} y={-14} width={60} height={28} fill={C.surface} />
-        <Battery x={-10} y={0} />
-        <circle cx={18} cy={0} r={3} fill={C.ink} />
+      <g transform="translate(292 330)">
+        <rect x={-34} y={-16} width={58} height={32} fill={C.surface} />
+        <Battery x={0} y={0} />
       </g>
+      <PlugKey x={352} y={330} closed />
       <Txt x={x0} y={wy - 8} size={11} color={C.ink} weight={900}>A</Txt>
       <Txt x={x1} y={wy - 8} size={11} color={C.ink} weight={900}>C</Txt>
       {/* jockey + drag zone */}
@@ -327,13 +318,8 @@ function PotentiometerBoard({ model, view, setParam, bn, params }: SceneProps) {
         <rect x={-22} y={-15} width={44} height={30} fill={C.surface} />
         <Battery x={0} y={0} label={bn ? 'ড্রাইভার 2 V' : 'Driver 2 V'} />
       </g>
-      <g>
-        <rect x={420} y={31} width={100} height={18} rx={4} fill={C.surface} stroke={C.steelDark} />
-        {Array.from({ length: 13 }).map((_, i) => (
-          <line key={i} x1={426 + i * 7} x2={426 + i * 7} y1={31} y2={49} stroke={C.copper} strokeWidth={1.4} />
-        ))}
-        <Txt x={470} y={64} size={9.5}>{isEmf ? `Rh = ${params.rh} Ω` : 'Rh = 0.5 Ω'}</Txt>
-      </g>
+      <PlugKey x={375} y={40} closed label={bn ? 'চাবি' : 'Key'} />
+      <Rheostat x={422} y={40} w={96} frac={0.45} label={isEmf ? `Rh = ${params.rh} Ω` : 'Rh = 0.5 Ω'} />
       {/* wire */}
       <line x1={x0} y1={wy} x2={x1} y2={wy} stroke="#cbd5e1" strokeWidth={2.5} />
       <Ruler x1={x0} x2={x1} y={wy + 12} from={0} to={1000} major={100} minor={20} unit="cm" />

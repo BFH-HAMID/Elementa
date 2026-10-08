@@ -9,6 +9,7 @@ import type { EquipmentCategory } from '@/engine/physicsTypes';
 import { Search, Plus, Zap, Magnet, Sun, Activity, Flame, Music, Scale, Cpu, GripVertical } from 'lucide-react';
 import { dropOnBench, hoverBench } from '@/lib/physicsBench';
 import { equipmentIcon } from './Equipment/EquipmentRenderer';
+import { EquipmentArt } from './Equipment/art';
 import { cn } from '@/lib/utils';
 
 export function EquipmentShelf() {
@@ -192,8 +193,16 @@ export function EquipmentShelf() {
                   >
                     <GripVertical size={15} />
                   </button>
-                  <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[var(--surface)] text-physics-600 shadow-sm border border-[var(--line)] group-hover:scale-105 transition">
-                    <Icon size={18} />
+                  {/* A real preview of the instrument that will land on the bench. */}
+                  <div className="instrument-card relative h-10 w-12 shrink-0 overflow-hidden rounded-lg border border-[var(--line)] transition group-hover:scale-105">
+                    <EquipmentArt
+                      equipmentId={eq.id}
+                      p={eq.defaultProperties || {}}
+                      bn={isBangla}
+                      live={false}
+                      detailed={false}
+                      className="absolute inset-0 p-[3px]"
+                    />
                   </div>
                   <div className="min-w-0">
                     <h4 className="text-xs font-black text-[var(--ink)] leading-snug">
@@ -242,16 +251,25 @@ export function EquipmentShelf() {
           (() => {
             const eq = physicsEquipment.find((x) => x.id === ghost.id);
             if (!eq) return null;
-            const GhostIcon = equipmentIcon(eq.icon);
+            void equipmentIcon(eq.icon);
             return (
               <div
                 className={cn(
-                  'pointer-events-none fixed z-[100] flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-xl border-2 bg-[var(--surface)] px-3 py-2 text-xs font-black text-[var(--ink)] shadow-float',
+                  'pointer-events-none fixed z-[100] flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-xl border-2 bg-[var(--surface)] px-2 py-1.5 text-xs font-black text-[var(--ink)] shadow-float',
                   ghost.overBench ? 'border-emerald-500' : 'border-physics-400'
                 )}
                 style={{ left: ghost.x, top: ghost.y }}
               >
-                <GhostIcon size={16} className="text-physics-600" />
+                <span className="instrument-card relative block h-8 w-10 overflow-hidden rounded-md border border-[var(--line)]">
+                  <EquipmentArt
+                    equipmentId={eq.id}
+                    p={eq.defaultProperties || {}}
+                    bn={isBangla}
+                    live={false}
+                    detailed={false}
+                    className="absolute inset-0 p-[2px]"
+                  />
+                </span>
                 {isBangla ? eq.name_bn : eq.name_en}
                 <span className={cn('rounded-md px-1.5 py-0.5 text-[10px]', ghost.overBench ? 'bg-emerald-500 text-white' : 'bg-[var(--surface-soft)] text-[var(--muted)]')}>
                   {ghost.overBench ? (isBangla ? 'ছেড়ে দিন' : 'Drop') : isBangla ? 'বেঞ্চে আনুন' : 'To bench'}

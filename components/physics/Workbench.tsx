@@ -689,15 +689,47 @@ export function Workbench() {
                   height: world.height,
                   transform: `scale(${scale})`,
                   transformOrigin: '0 0',
-                  backgroundImage: 'radial-gradient(circle, rgba(100,116,139,0.35) 1px, transparent 1px)',
-                  backgroundSize: '24px 24px'
+                  backgroundSize: '24px 24px, 24px 24px, auto'
                 }}
-                className={cn('absolute left-0 top-0', connectingWireFrom && 'cursor-crosshair')}
+                className={cn('bench-mat absolute left-0 top-0', connectingWireFrom && 'cursor-crosshair')}
               >
                 {/* Drop hint while dragging from shelf */}
                 {shelfHover && (
                   <div className="pointer-events-none absolute inset-3 z-0 rounded-2xl border-2 border-dashed border-physics-400" />
                 )}
+
+                {/* Steel rule laid along the front edge of the bench. */}
+                <svg
+                  className="pointer-events-none absolute bottom-0 left-0 z-0"
+                  width={canvasWidth}
+                  height={16}
+                  aria-hidden
+                >
+                  <rect x={0} y={0} width={canvasWidth} height={16} fill="url(#ix-ivory)" />
+                  <rect x={0} y={0} width={canvasWidth} height={3} fill="#ffffff" opacity={0.45} />
+                  {Array.from({ length: Math.floor(canvasWidth / 10) + 1 }).map((_, i) => {
+                    const cm = i / 2;
+                    const major = i % 10 === 0;
+                    return (
+                      <line
+                        key={i}
+                        x1={i * 10}
+                        y1={16}
+                        x2={i * 10}
+                        y2={16 - (major ? 11 : i % 2 === 0 ? 7 : 4)}
+                        stroke="#1f2937"
+                        strokeWidth={major ? 0.9 : 0.5}
+                        opacity={0.85}
+                      />
+                    );
+                  })}
+                  {Array.from({ length: Math.floor(canvasWidth / 200) + 1 }).map((_, i) => (
+                    <text key={`t${i}`} x={i * 200 + 2} y={13} fontSize={9} fontWeight={700} fill="#334155" fontFamily="ui-monospace, monospace">
+                      {i * 10}
+                    </text>
+                  ))}
+                  <line x1={0} y1={0} x2={canvasWidth} y2={0} stroke="#8a8272" strokeWidth={0.6} opacity={0.8} />
+                </svg>
 
                 {/* Empty bench helper */}
                 {items.length === 0 && (
@@ -773,19 +805,31 @@ export function Workbench() {
                           />
                         ) : (
                           <>
-                            {/* Soft outline keeps dark wires visible on the dark theme. */}
-                            <path d={d} fill="none" stroke="rgba(148,163,184,0.55)" strokeWidth={selected ? 8 : 6.5} strokeLinecap="round" />
+                            {/* Rubber-sheathed lab lead: shadow, insulation, specular line, brass plugs. */}
+                            <path d={d} fill="none" stroke="#0b1220" strokeOpacity={0.30} strokeWidth={selected ? 9 : 7.4} strokeLinecap="round" />
                             <path
                               d={d}
                               fill="none"
                               stroke={hex}
-                              strokeWidth={selected ? 5.5 : 4}
+                              strokeWidth={selected ? 5.6 : 4.6}
                               strokeLinecap="round"
-                              className="transition-[stroke-width] group-hover:[stroke-width:5.5px]"
+                              className="transition-[stroke-width] group-hover:[stroke-width:5.6px]"
                             />
+                            <path d={d} fill="none" stroke="#ffffff" strokeOpacity={0.30} strokeWidth={1.1} strokeLinecap="round" transform="translate(0 -1.3)" />
                             {!circuitResult.isOpenCircuit && (
-                              <path d={d} fill="none" stroke="#ffffff" strokeWidth={1.6} strokeDasharray="3 9" opacity={0.85} className="wire-flow" />
+                              <path d={d} fill="none" stroke="#fde68a" strokeWidth={2} strokeDasharray="2 18" opacity={0.95} className="wire-flow" />
                             )}
+                            {[
+                              { pt: from, dx: from.x - to.x, dy: from.y - to.y },
+                              { pt: to, dx: to.x - from.x, dy: to.y - from.y }
+                            ].map((end, k) => (
+                              <g key={`plug-${k}`} transform={`translate(${end.pt.x} ${end.pt.y}) rotate(${(Math.atan2(end.dy, end.dx) * 180) / Math.PI})`}>
+                                <rect x={-1.5} y={-3} width={9} height={6} rx={2} fill="#1f2937" />
+                                <rect x={-1.5} y={-3} width={9} height={2.2} rx={1} fill="#ffffff" opacity={0.22} />
+                                <rect x={6} y={-1.9} width={7} height={3.8} rx={1.2} fill="url(#ix-brass)" />
+                                <rect x={7} y={-1.4} width={5} height={1.2} rx={0.6} fill="#fff8dc" opacity={0.6} />
+                              </g>
+                            ))}
                           </>
                         )}
                       </g>
@@ -842,23 +886,42 @@ export function Workbench() {
                       >
                         <span
                           className={cn(
-                            'grid place-items-center rounded-full border-2 font-black leading-none text-white shadow-md transition-transform duration-150',
-                            link
-                              ? 'h-3.5 w-3.5 border-emerald-600 bg-white dark:bg-neutral-900'
-                              : port.polarity === 'positive'
-                              ? 'h-4 w-4 border-white bg-red-600'
-                              : port.polarity === 'negative' || port.polarity === 'ground'
-                              ? 'h-4 w-4 border-white bg-neutral-900'
-                              : 'h-4 w-4 border-white bg-amber-500',
-                            link && connected && 'bg-emerald-500 dark:bg-emerald-500',
-                            'group-hover/port:scale-[1.45]',
-                            showAll && !isSource && 'scale-125 ring-2 ring-emerald-400/50',
-                            isHover && 'scale-[1.7] ring-4 ring-emerald-500/70',
-                            isSource && 'scale-150 ring-4 ring-physics-400 animate-pulse'
+                            'block transition-transform duration-150',
+                            link ? 'h-4 w-4' : 'h-[18px] w-[18px]',
+                            'group-hover/port:scale-125',
+                            showAll && !isSource && 'scale-110',
+                            isHover && 'scale-[1.35]',
+                            isSource && 'scale-125'
                           )}
-                          style={{ fontSize: 7 }}
                         >
-                          {!link && label}
+                          {/* A real binding post: brass pillar, coloured cap, clamp nut. */}
+                          <svg viewBox="0 0 20 20" className="h-full w-full drop-shadow-sm">
+                            <ellipse cx={10} cy={17} rx={6} ry={1.8} fill="#0b1220" opacity={0.28} />
+                            <rect x={8.6} y={6} width={2.8} height={10} rx={1} fill="url(#ix-brass)" />
+                            <circle
+                              cx={10}
+                              cy={9}
+                              r={6.2}
+                              fill={link ? '#f8fafc' : port.polarity === 'positive' ? 'url(#ix-red-plastic)' : port.polarity === 'negative' || port.polarity === 'ground' ? 'url(#ix-charcoal)' : 'url(#ix-brass)'}
+                              stroke={link ? '#059669' : '#0b1220'}
+                              strokeWidth={link ? 1.6 : 0.8}
+                            />
+                            <circle cx={7.8} cy={7.2} r={1.9} fill="#ffffff" opacity={0.42} />
+                            {link && <circle cx={10} cy={9} r={2.6} fill={connected ? '#10b981' : '#e2e8f0'} stroke="#059669" strokeWidth={0.8} />}
+                          </svg>
+                          {!link && (
+                            <span className="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 text-[7px] font-black leading-none text-[var(--ink)]">
+                              {label}
+                            </span>
+                          )}
+                          {(showAll || isHover || isSource) && (
+                            <span
+                              className={cn(
+                                'pointer-events-none absolute inset-0 rounded-full ring-2',
+                                isSource ? 'ring-physics-400 animate-pulse' : isHover ? 'ring-emerald-500' : 'ring-emerald-400/60'
+                              )}
+                            />
+                          )}
                         </span>
                       </button>
                     );

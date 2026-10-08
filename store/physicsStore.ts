@@ -156,6 +156,8 @@ export interface PhysicsStoreState {
   stepMechanics: (dt?: number) => void;
   toggleMechanicsRunning: () => void;
   resetMechanics: () => void;
+  /** Change the parameters of the live mechanics bench (lengths, angles, masses…). */
+  updateMechanics: (partial: Partial<MechanicsState>) => void;
 
   saveToLocalStorage: () => boolean;
   loadFromLocalStorage: () => boolean;
@@ -879,13 +881,30 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
     });
   },
 
+  updateMechanics: (partial) => {
+    set({ mechanicsState: { ...get().mechanicsState, ...partial } });
+  },
+
   toggleMechanicsRunning: () => {
     const { mechanicsState } = get();
     set({ mechanicsState: { ...mechanicsState, running: !mechanicsState.running } });
   },
 
   resetMechanics: () => {
-    set({ mechanicsState: { ...initialMechanicsState, time: 0 } });
+    // Keep the user's chosen parameters; rewind the clock so the incline,
+    // projectile and Atwood scenes restart from rest.
+    const { mechanicsState } = get();
+    set({
+      mechanicsState: {
+        ...mechanicsState,
+        time: 0,
+        pendulumAngle: mechanicsState.pendulumAngle > 0 ? mechanicsState.pendulumAngle : initialMechanicsState.pendulumAngle,
+        pendulumAngularVelocity: 0,
+        springDisplacement: initialMechanicsState.springDisplacement,
+        springVelocity: 0,
+        projectileTrajectory: []
+      }
+    });
   },
 
   saveToLocalStorage: () => {

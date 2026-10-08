@@ -5,12 +5,22 @@ import type { Level } from './schemas';
  * with their grades listed under each category, instead of one flat list.
  */
 export const levelCategories = [
-  { id: 'school', levels: ['class-6-8', 'class-9-10'], bn: 'স্কুল', en: 'School' },
-  { id: 'higher-secondary', levels: ['class-11-12'], bn: 'উচ্চমাধ্যমিক', en: 'Higher secondary' },
-  { id: 'university', levels: ['honours'], bn: 'বিশ্ববিদ্যালয়', en: 'University' }
-] as const satisfies ReadonlyArray<{ id: string; levels: readonly Level[]; bn: string; en: string }>;
+  { id: 'school', levels: ['class-6-8', 'class-9-10'], bn: 'স্কুল', en: 'School', bnRange: '৬ষ্ঠ–১০ম', enRange: 'Class 6–10' },
+  { id: 'higher-secondary', levels: ['class-11-12'], bn: 'উচ্চমাধ্যমিক', en: 'Higher secondary', bnRange: '১১শ–১২শ', enRange: 'Class 11–12' },
+  { id: 'university', levels: ['honours'], bn: 'বিশ্ববিদ্যালয়', en: 'University', bnRange: 'অনার্স', enRange: 'Honours' }
+] as const satisfies ReadonlyArray<{ id: string; levels: readonly Level[]; bn: string; en: string; bnRange: string; enRange: string }>;
 
 export type LevelCategory = (typeof levelCategories)[number];
+
+/** Category id a level belongs to, e.g. 'school' for 'class-9-10'. */
+export function levelCategoryId(level: Level): LevelCategory['id'] | undefined {
+  return levelCategories.find((item) => (item.levels as readonly Level[]).includes(level))?.id;
+}
+
+/** One filter option per category, e.g. "স্কুল (৬ষ্ঠ–১০ম)". */
+export function formatLevelCategoryOption(category: LevelCategory, locale: 'bn' | 'en'): string {
+  return locale === 'bn' ? `${category.bn} (${category.bnRange})` : `${category.en} (${category.enRange})`;
+}
 
 /** Grade or programme name only, e.g. "৯ম–১০ম" or "অনার্স". */
 export function formatLevelShort(level: Level, locale: 'bn' | 'en'): string {

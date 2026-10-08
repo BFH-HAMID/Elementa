@@ -155,6 +155,17 @@ records.push({
   tags: ['virtual lab', 'drag and drop', 'reactions', 'pH']
 });
 records.push({
+  slug: 'elementa-circuit-lab',
+  kind: 'lab',
+  subject: 'electronics',
+  title_en: 'Elementa Circuit Lab',
+  title_bn: 'এলিমেন্টা সার্কিট ল্যাব',
+  description_en: 'Browser circuit workbench: breadboards, Arduino/ESP32 sketches, live simulation, multimeter and oscilloscope.',
+  description_bn: 'ব্রাউজারে সার্কিট বেঞ্চ: ব্রেডবোর্ড, Arduino/ESP32 স্কেচ, লাইভ সিমুলেশন, মাল্টিমিটার ও অসিলোস্কোপ।',
+  href: '/lab/circuit',
+  tags: ['circuit simulator', 'arduino', 'esp32', 'breadboard', 'electronics']
+});
+records.push({
   slug: 'lab-guided-experiments',
   kind: 'lab',
   subject: 'chemistry',

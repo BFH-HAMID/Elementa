@@ -8,7 +8,10 @@
  */
 
 import { getPart } from '../parts/registry';
-import type { PlacedComponent, PlacedWire, WireColor, PropValue } from '../types';
+import type { PlacedComponent, PlacedWire } from '../types';
+import { C, W } from './builders';
+import { CIRCUIT_PROJECTS } from './catalog-circuits';
+import { MCU_PROJECTS } from './catalog-mcu';
 
 export interface Bilingual {
   en: string;
@@ -52,18 +55,6 @@ function placeOnHole(partId: string, pinId: string, col: number, row: string): {
 }
 
 // ── Builders ────────────────────────────────────────────────────────────────
-
-function C(id: string, partId: string, x: number, y: number, props: Record<string, PropValue> = {}, code?: string): PlacedComponent {
-  const def = getPart(partId);
-  if (!def) throw new Error(`Unknown part ${partId}`);
-  return { id, partId, x, y, rotation: 0, flipH: false, props: { ...def.defaults, ...props }, state: {}, ...(code ? { code } : {}) };
-}
-
-function W(id: string, from: string, to: string, color: WireColor = 'blue'): PlacedWire {
-  const [fc, fp] = from.split('.');
-  const [tc, tp] = to.split('.');
-  return { id, from: { compId: fc, pinId: fp }, to: { compId: tc, pinId: tp }, color, waypoints: [] };
-}
 
 // ── Sketches ────────────────────────────────────────────────────────────────
 
@@ -733,7 +724,10 @@ const ldr: ExampleProject = {
   ]
 };
 
-export const EXAMPLE_PROJECTS: ExampleProject[] = [blink, traffic, astable, rcFilter, transistor, ultrasonic, dht, esp32Oled, motorDriver, servo, pot, ldr];
+const BASE_PROJECTS: ExampleProject[] = [blink, traffic, astable, rcFilter, transistor, ultrasonic, dht, esp32Oled, motorDriver, servo, pot, ldr];
+
+/** Every example, in catalogue order: the core set, then circuit and MCU catalogues. */
+export const EXAMPLE_PROJECTS: ExampleProject[] = [...BASE_PROJECTS, ...CIRCUIT_PROJECTS, ...MCU_PROJECTS];
 
 export function getExample(id: string): ExampleProject | undefined {
   return EXAMPLE_PROJECTS.find((e) => e.id === id);

@@ -28,7 +28,7 @@ dependencies. It deploys as part of the existing Next.js app on Vercel's free ti
 | Sketch editor (line numbers, Tab, auto-indent), Arduino-style C++ subset, Run/Stop/Reset | Done |
 | Serial monitor | Done |
 | Multimeter (V / A / Ω, unpowered-circuit ohmmeter), oscilloscope (2 channels), logic analyser (8 channels) | Done |
-| 12 example projects with bilingual steps, wiring and explanation | Done |
+| 50 example projects (12 core + 21 circuit + 17 MCU) with bilingual steps, wiring and explanation, each verified by the simulator | Done |
 | Save (browser) / load, export & import JSON, share link (`?circuit=`), PNG and SVG export | Done |
 | Bill of materials, netlist, rule-based “Check circuit” validator | Done |
 | Synced schematic view (netlist-labelled symbols, live net voltages, click-to-select) | Done. Toggle with the schematic button in the toolbar. See §4.7. |
@@ -87,7 +87,10 @@ components/circuit-lab/
   panels/BottomPanel.tsx               Serial, examples, BOM & netlist, check, guide
   schematic/layout.ts                  Pure schematic layout: symbols, net labels, grid packing
   schematic/SchematicView.tsx          Schematic toolbar, store wrapper and SVG canvas
-  projects/examples.ts                 ★ Example projects (data + sketches + bilingual text)
+  projects/examples.ts                 ★ Example registry: merges the core, circuit and MCU sets into EXAMPLE_PROJECTS
+  projects/builders.ts                 `C()` and `W()` helpers that keep example data short
+  projects/catalog-circuits.ts         21 circuit examples (no MCU): discretes, op-amps, logic, sensors-without-MCU
+  projects/catalog-mcu.ts              17 Uno/ESP32 examples with Arduino sketches
   lib/i18n.ts                          UI strings (en / bn) and the useCircuitI18n hook
   lib/analysis.ts                      BOM, netlist, Check-circuit validator
   lib/snap.ts                          Grid and hole snapping
@@ -95,6 +98,7 @@ components/circuit-lab/
   lib/shortcuts.ts                     Global keyboard shortcuts
   lib/nets.ts                          Net resolution and naming (shared by netlist and schematic)
   __tests__/                           Vitest suites (see §8)
+    catalog-projects.test.ts           Checks all 50 examples: pin ids, bilingual text, no errors or burns, physical values
 ```
 
 The lab's other integration points:
@@ -248,7 +252,9 @@ devicePins, [defIds])`.
 
 ## 6. Adding an example project
 
-Add an object to `projects/examples.ts` and append it to `EXAMPLE_PROJECTS`:
+Circuit-only examples go in `projects/catalog-circuits.ts` and MCU examples in `projects/catalog-mcu.ts`.
+Both files export an array, which `projects/examples.ts` merges into `EXAMPLE_PROJECTS`. Add an
+object like this:
 
 - `components`: placed parts with full `props` (use `C(id, partId, x, y, props, sketch)`).
 - `wires`: `W(id, 'partId.pinId', 'partId.pinId', colour)`. Use the pin ids from the registry
@@ -286,6 +292,10 @@ npx vitest run components/circuit-lab
   blink with serial output, syntax error reporting, every example simulating without NaN.
 - `geometry.test.ts` — transforms, grid snapping, wire paths, registry invariants (≥40 parts,
   8 categories, unique pin ids, documented parts), hole-group connectivity, hole snapping.
+- `catalog-projects.test.ts` — every example in the library (40–50 projects): pin ids exist, both languages
+  are filled in, the circuit simulates with no errors, no part burns out, and the key physical
+  readings (LED current, motor speed, sensor values, relay state) match the expected behaviour. Each
+  project has its own assertions, so a wrong wire or value fails a named test.
 - `store.test.ts` — undo/redo, duplicate keeps internal wires, rotation cycles, examples load
   with a non-empty BOM, the Check-circuit validator flags a missing GND, and the Uno blink
   example lights its LED through breadboard holes.

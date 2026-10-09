@@ -24,7 +24,7 @@ export function BottomPanel() {
 
   return (
     <section aria-label={t('serial')} className="card flex min-h-0 flex-col p-0">
-      <div role="tablist" aria-label={t('serial')} className="flex flex-wrap gap-1 border-b border-line px-2 pt-2">
+      <div role="tablist" aria-label={t('serial')} className="flex flex-wrap gap-1 border-b border-[color:var(--line)] px-2 pt-2">
         {TABS.map((x) => (
           <button
             key={x.id}
@@ -34,7 +34,7 @@ export function BottomPanel() {
             id={`tab-${x.id}`}
             type="button"
             onClick={() => setTab(x.id)}
-            className={cn('rounded-t-lg px-3 py-2 text-sm font-medium transition', tab === x.id ? 'bg-surface-soft text-ink' : 'text-muted hover:text-ink')}
+            className={cn('rounded-t-lg px-3 py-2 text-sm font-medium transition', tab === x.id ? 'bg-[color:var(--surface-soft)] text-[color:var(--ink)]' : 'text-[color:var(--muted)] hover:text-[color:var(--ink)]')}
           >
             {t(x.key)}
           </button>
@@ -59,13 +59,13 @@ function SerialTab() {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between">
-        <p className="text-xs text-muted">{t('sendHint')}</p>
+        <p className="text-xs text-[color:var(--muted)]">{t('sendHint')}</p>
         <button type="button" className="btn btn-ghost px-2 py-1 text-xs" onClick={clear}>
           {t('clear')}
         </button>
       </div>
       {errors.length > 0 ? (
-        <ul className="space-y-1 rounded-xl bg-coral-50 p-2 text-xs text-coral-700 dark:bg-coral-900/20 dark:text-coral-200" role="status">
+        <ul className="space-y-1 rounded-xl bg-orange-50 p-2 text-xs text-orange-700 dark:bg-orange-900/20 dark:text-orange-200" role="status">
           {errors.slice(0, 8).map((e, i) => (
             <li key={i}>• {e}</li>
           ))}
@@ -85,20 +85,20 @@ function ExamplesTab({ locale }: { locale: 'en' | 'bn' }) {
   return (
     <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
       {EXAMPLE_PROJECTS.map((ex) => (
-        <article key={ex.id} className={cn('rounded-2xl border border-line bg-surface p-3', active === ex.id && 'ring-2 ring-physics-300')}>
+        <article key={ex.id} className={cn('rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface)] p-3', active === ex.id && 'ring-2 ring-physics-300')}>
           <div className="flex items-start justify-between gap-2">
-            <h3 className="font-semibold text-ink">{locale === 'bn' ? ex.title.bn : ex.title.en}</h3>
+            <h3 className="font-semibold text-[color:var(--ink)]">{locale === 'bn' ? ex.title.bn : ex.title.en}</h3>
             <span className="pill shrink-0 text-[10px] uppercase">{ex.difficulty}</span>
           </div>
-          <p className="mt-1 text-xs text-muted">{locale === 'bn' ? ex.summary.bn : ex.summary.en}</p>
+          <p className="mt-1 text-xs text-[color:var(--muted)]">{locale === 'bn' ? ex.summary.bn : ex.summary.en}</p>
           <details className="mt-2 text-xs">
-            <summary className="cursor-pointer text-brand dark:text-physics-200">{locale === 'bn' ? 'ধাপে ধাপে' : 'Step by step'}</summary>
-            <ol className="mt-2 list-decimal space-y-1 pl-4 text-muted">
+            <summary className="cursor-pointer text-[color:var(--brand)] dark:text-physics-200">{locale === 'bn' ? 'ধাপে ধাপে' : 'Step by step'}</summary>
+            <ol className="mt-2 list-decimal space-y-1 pl-4 text-[color:var(--muted)]">
               {ex.steps.map((s, i) => (
                 <li key={i}>{locale === 'bn' ? s.bn : s.en}</li>
               ))}
             </ol>
-            <p className="mt-2 text-muted">{locale === 'bn' ? ex.explanation.bn : ex.explanation.en}</p>
+            <p className="mt-2 text-[color:var(--muted)]">{locale === 'bn' ? ex.explanation.bn : ex.explanation.en}</p>
           </details>
           <button type="button" className="btn btn-primary mt-3 w-full text-xs" onClick={() => loadExample(ex.id)}>
             {locale === 'bn' ? 'এই উদাহরণ খুলুন' : 'Open example'}
@@ -118,10 +118,10 @@ function AnalysisTab() {
   return (
     <div className="grid gap-4 lg:grid-cols-2">
       <section>
-        <h3 className="mb-2 font-semibold text-ink">{t('bom')}</h3>
-        {bom.length === 0 ? <p className="text-muted">—</p> : null}
+        <h3 className="mb-2 font-semibold text-[color:var(--ink)]">{t('bom')}</h3>
+        {bom.length === 0 ? <p className="text-[color:var(--muted)]">—</p> : null}
         <table className="w-full text-left text-xs">
-          <thead className="text-muted">
+          <thead className="text-[color:var(--muted)]">
             <tr>
               <th className="py-1">Qty</th>
               <th>Part</th>
@@ -130,7 +130,7 @@ function AnalysisTab() {
           </thead>
           <tbody>
             {bom.map((l) => (
-              <tr key={l.partId} className="border-t border-line/60">
+              <tr key={l.partId} className="border-t border-[color:var(--line)]">
                 <td className="py-1 tabular-nums">{l.count}</td>
                 <td>{l.name}</td>
                 <td className="font-mono">{l.partNumber}</td>
@@ -140,14 +140,14 @@ function AnalysisTab() {
         </table>
       </section>
       <section>
-        <h3 className="mb-2 font-semibold text-ink">{t('netlist')}</h3>
-        {nets.length === 0 ? <p className="text-muted">—</p> : null}
+        <h3 className="mb-2 font-semibold text-[color:var(--ink)]">{t('netlist')}</h3>
+        {nets.length === 0 ? <p className="text-[color:var(--muted)]">—</p> : null}
         <ul className="max-h-64 space-y-2 overflow-auto text-xs">
           {nets.map((n) => (
-            <li key={n.net} className="rounded-lg border border-line p-2">
+            <li key={n.net} className="rounded-lg border border-[color:var(--line)] p-2">
               <p className="font-mono font-semibold">{n.net}</p>
               {n.pins.length ? (
-                <ul className="mt-1 list-disc pl-4 text-muted">
+                <ul className="mt-1 list-disc pl-4 text-[color:var(--muted)]">
                   {n.pins.map((p, i) => (
                     <li key={i}>{p}</li>
                   ))}
@@ -176,16 +176,16 @@ function CheckTab() {
             key={idx}
             className={cn(
               'rounded-xl border p-3 text-xs',
-              i.level === 'error' && 'border-coral-200 bg-coral-50 text-coral-800 dark:bg-coral-900/20 dark:text-coral-100',
-              i.level === 'warning' && 'border-sun-300 bg-sun-50 text-ink dark:bg-sun-900/20',
-              i.level === 'info' && 'border-line bg-surface-soft text-ink'
+              i.level === 'error' && 'border-orange-200 bg-orange-50 text-orange-800 dark:bg-orange-900/20 dark:text-orange-100',
+              i.level === 'warning' && 'border-amber-300 bg-amber-50 text-[color:var(--ink)] dark:bg-amber-900/20',
+              i.level === 'info' && 'border-[color:var(--line)] bg-[color:var(--surface-soft)] text-[color:var(--ink)]'
             )}
           >
             {locale === 'bn' ? i.text.bn : i.text.en}
           </li>
         ))}
       </ul>
-      {frame?.isShortCircuit ? <p className="text-xs text-coral-700">{t('shortCircuit')}</p> : null}
+      {frame?.isShortCircuit ? <p className="text-xs text-orange-700">{t('shortCircuit')}</p> : null}
     </div>
   );
 }
@@ -210,14 +210,14 @@ function GuideTab() {
   ];
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      <ol className="list-decimal space-y-2 pl-5 text-muted">{(locale === 'bn' ? bn : en).map((x) => <li key={x}>{x}</li>)}</ol>
+      <ol className="list-decimal space-y-2 pl-5 text-[color:var(--muted)]">{(locale === 'bn' ? bn : en).map((x) => <li key={x}>{x}</li>)}</ol>
       <div>
-        <h3 className="mb-2 font-semibold text-ink">{locale === 'bn' ? 'কীবোর্ড শর্টকাট' : 'Keyboard shortcuts'}</h3>
+        <h3 className="mb-2 font-semibold text-[color:var(--ink)]">{locale === 'bn' ? 'কীবোর্ড শর্টকাট' : 'Keyboard shortcuts'}</h3>
         <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-xs">
           {shortcuts.map(([k, v]) => (
             <div key={k} className="contents">
-              <dt className="font-mono text-ink">{k}</dt>
-              <dd className="text-muted">{v}</dd>
+              <dt className="font-mono text-[color:var(--ink)]">{k}</dt>
+              <dd className="text-[color:var(--muted)]">{v}</dd>
             </div>
           ))}
         </dl>

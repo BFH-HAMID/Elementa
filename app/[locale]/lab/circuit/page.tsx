@@ -60,7 +60,7 @@ export default function CircuitLabPage({ params }: { params: { locale: string } 
       <ViewTracker item={{ slug: 'circuit', kind: 'lab', href: '/lab/circuit', title: copy.title }} />
       <section className="page-shell pt-6">
         <p className="eyebrow">{locale === 'bn' ? 'ইলেকট্রনিক্স' : 'Electronics'}</p>
-        <h1 className="display-title mt-1 text-3xl text-ink">{copy.title}</h1>
+        <h1 className="display-title mt-1 text-3xl text-[color:var(--ink)]">{copy.title}</h1>
         <p className="mt-2 max-w-3xl text-sm muted">{copy.tagline}</p>
       </section>
       <section className="page-shell py-4">

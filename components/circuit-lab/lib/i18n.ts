@@ -90,6 +90,15 @@ const STRINGS = {
       ['Esc', 'Cancel wire / clear selection'],
       ['F5', 'Run / Stop']
     ] as [string, string][],
+    schematicView: 'Schematic',
+    breadboardView: 'Breadboard',
+    schematicHint: 'Net labels that share a name are connected. Click a symbol to select its part.',
+    schematicEmpty: 'Nothing to draw yet. Add parts and wire them to see the schematic.',
+    zoomIn: 'Zoom in',
+    zoomOut: 'Zoom out',
+    select: 'Select',
+    pan: 'Pan',
+    projectName: 'Project name',
     close: 'Close',
     tooManyParts: 'Large bench — simulation runs at reduced speed.'
   },
@@ -172,6 +181,15 @@ const STRINGS = {
       ['Esc', 'ওয়্যার বাতিল / নির্বাচন মুছুন'],
       ['F5', 'চালু / থামান']
     ] as [string, string][],
+    schematicView: 'স্কিম্যাটিক',
+    breadboardView: 'ব্রেডবোর্ড',
+    schematicHint: 'একই নামের নেট লেবেল যুক্ত। সিম্বলে ক্লিক করলে যন্ত্রাংশ বেছে নেওয়া হবে।',
+    schematicEmpty: 'এখনো আঁকার কিছু নেই। যন্ত্রাংশ যোগ করে ওয়্যার করুন।',
+    zoomIn: 'বড় করুন',
+    zoomOut: 'ছোট করুন',
+    select: 'নির্বাচন',
+    pan: 'প্যান',
+    projectName: 'প্রকল্পের নাম',
     close: 'বন্ধ করুন',
     tooManyParts: 'বড় বেঞ্চ — সিমুলেশন ধীর গতিতে চলছে।'
   }

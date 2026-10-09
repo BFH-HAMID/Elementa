@@ -3,7 +3,7 @@
 /** Top toolbar: simulation controls, editing tools, view options, file and share actions. */
 
 import { useRef, useState } from 'react';
-import { Play, Square, RotateCcw, Undo2, Redo2, RotateCw, FlipHorizontal2, Copy, Trash2, Maximize2, Activity, Magnet, FilePlus2, Save, FolderOpen, Download, Upload, Share2, ImageDown, FileCode2, HelpCircle, MousePointer2, Hand, Cable } from 'lucide-react';
+import { Play, Square, RotateCcw, Undo2, Redo2, RotateCw, FlipHorizontal2, Copy, Trash2, Maximize2, Activity, Magnet, FilePlus2, Save, FolderOpen, Download, Upload, Share2, ImageDown, FileCode2, HelpCircle, MousePointer2, Hand, Grid3x3, GitFork } from 'lucide-react';
 import { useCircuitStore, CIRCUIT_STORAGE_KEY, isValidProject } from '@/store/circuitStore';
 import { EXAMPLE_PROJECTS } from '../projects/examples';
 import { useCircuitI18n } from '../lib/i18n';
@@ -12,6 +12,7 @@ import { cn, downloadText } from '@/lib/utils';
 import { benchBounds } from '../geometry';
 import { getPart } from '../parts/registry';
 import type { CircuitProject } from '../types';
+import { SCHEMATIC_SVG_ID } from '../schematic/SchematicView';
 
 const SPEEDS = [0.1, 0.25, 0.5, 1, 2];
 
@@ -26,13 +27,22 @@ function IconBtn({ label, onClick, active, disabled, children, danger }: { label
       title={label}
       className={cn(
         'inline-flex h-9 min-w-9 items-center justify-center gap-1.5 rounded-xl border px-2.5 text-sm transition disabled:opacity-40',
-        active ? 'border-physics-300 bg-physics-50 text-physics-800 dark:bg-physics-900/40 dark:text-physics-100' : 'border-line bg-surface text-ink hover:bg-surface-soft',
-        danger && 'text-coral-700 hover:bg-coral-50 dark:hover:bg-coral-900/20'
+        active ? 'border-physics-300 bg-physics-50 text-physics-700 dark:bg-physics-900/40 dark:text-physics-100' : 'border-[color:var(--line)] bg-[color:var(--surface)] text-[color:var(--ink)] hover:bg-[color:var(--surface-soft)]',
+        danger && 'text-orange-700 hover:bg-orange-50 dark:hover:bg-orange-900/20'
       )}
     >
       {children}
     </button>
   );
+}
+
+/** Crop box for picture export: the schematic exports its own viewBox, the bench its contents. */
+function exportBox(svg: SVGSVGElement, st: ReturnType<typeof useCircuitStore.getState>) {
+  if (svg.id === SCHEMATIC_SVG_ID) {
+    const vb = svg.viewBox.baseVal;
+    return { x: vb.x + 24, y: vb.y + 24, w: vb.width - 48, h: vb.height - 48 };
+  }
+  return boundsOf(st);
 }
 
 export function Toolbar({ svgId, onFit }: { svgId: string; onFit: () => void }) {
@@ -42,6 +52,7 @@ export function Toolbar({ svgId, onFit }: { svgId: string; onFit: () => void }) 
   const showFlow = useCircuitStore((s) => s.showFlow);
   const snap = useCircuitStore((s) => s.snap);
   const tool = useCircuitStore((s) => s.tool);
+  const view = useCircuitStore((s) => s.view);
   const projectName = useCircuitStore((s) => s.projectName);
   const activeExampleId = useCircuitStore((s) => s.activeExampleId);
   const canUndo = useCircuitStore((s) => s.past.length > 0);
@@ -106,8 +117,7 @@ export function Toolbar({ svgId, onFit }: { svgId: string; onFit: () => void }) 
     const svg = document.getElementById(svgId) as SVGSVGElement | null;
     if (!svg) return;
     const st = useCircuitStore.getState();
-    const box = boundsOf(st);
-    exportSvg(svg, box, st.projectName);
+    exportSvg(svg, exportBox(svg, st), st.projectName);
   };
 
   const onExportPng = async () => {
@@ -115,7 +125,7 @@ export function Toolbar({ svgId, onFit }: { svgId: string; onFit: () => void }) 
     if (!svg) return;
     const st = useCircuitStore.getState();
     try {
-      await exportPng(svg, boundsOf(st), st.projectName);
+      await exportPng(svg, exportBox(svg, st), st.projectName);
     } catch {
       flash(locale === 'bn' ? 'PNG তৈরি করা যায়নি' : 'PNG export failed');
     }
@@ -137,7 +147,7 @@ export function Toolbar({ svgId, onFit }: { svgId: string; onFit: () => void }) 
       >
         <RotateCcw className="h-4 w-4" />
       </IconBtn>
-      <label className="flex items-center gap-1 rounded-xl border border-line bg-surface px-2 py-1 text-sm">
+      <label className="flex items-center gap-1 rounded-xl border border-[color:var(--line)] bg-[color:var(--surface)] px-2 py-1 text-sm">
         <span className="sr-only">{t('speed')}</span>
         <select aria-label={t('speed')} value={simSpeed} onChange={(e) => useCircuitStore.getState().setSimSpeed(Number(e.target.value))} className="bg-transparent py-1 text-sm outline-none">
           {SPEEDS.map((s) => (
@@ -148,7 +158,7 @@ export function Toolbar({ svgId, onFit }: { svgId: string; onFit: () => void }) 
         </select>
       </label>
 
-      <span className="mx-1 hidden h-6 w-px bg-line sm:block" aria-hidden />
+      <span className="mx-1 hidden h-6 w-px bg-[color:var(--line)] sm:block" aria-hidden />
 
       <IconBtn label={t('undo')} disabled={!canUndo} onClick={() => useCircuitStore.getState().undo()}>
         <Undo2 className="h-4 w-4" />
@@ -169,16 +179,22 @@ export function Toolbar({ svgId, onFit }: { svgId: string; onFit: () => void }) 
         <Trash2 className="h-4 w-4" />
       </IconBtn>
 
-      <span className="mx-1 hidden h-6 w-px bg-line sm:block" aria-hidden />
+      <span className="mx-1 hidden h-6 w-px bg-[color:var(--line)] sm:block" aria-hidden />
 
-      <IconBtn label="Select" active={tool === 'select'} onClick={() => useCircuitStore.getState().setTool('select')}>
+      <IconBtn label={t('select')} active={tool === 'select'} onClick={() => useCircuitStore.getState().setTool('select')}>
         <MousePointer2 className="h-4 w-4" />
       </IconBtn>
-      <IconBtn label="Pan" active={tool === 'pan'} onClick={() => useCircuitStore.getState().setTool(tool === 'pan' ? 'select' : 'pan')}>
+      <IconBtn label={t('pan')} active={tool === 'pan'} onClick={() => useCircuitStore.getState().setTool(tool === 'pan' ? 'select' : 'pan')}>
         <Hand className="h-4 w-4" />
       </IconBtn>
       <IconBtn label={t('fit')} onClick={onFit}>
         <Maximize2 className="h-4 w-4" />
+      </IconBtn>
+      <IconBtn label={t('breadboardView')} active={view === 'breadboard'} onClick={() => useCircuitStore.getState().setView('breadboard')}>
+        <Grid3x3 className="h-4 w-4" />
+      </IconBtn>
+      <IconBtn label={t('schematicView')} active={view === 'schematic'} onClick={() => useCircuitStore.getState().setView('schematic')}>
+        <GitFork className="h-4 w-4" />
       </IconBtn>
       <IconBtn label={t('flow')} active={showFlow} onClick={() => useCircuitStore.getState().setShowFlow(!showFlow)}>
         <Activity className="h-4 w-4" />
@@ -190,10 +206,10 @@ export function Toolbar({ svgId, onFit }: { svgId: string; onFit: () => void }) 
         <HelpCircle className="h-4 w-4" />
       </IconBtn>
 
-      <span className="mx-1 hidden h-6 w-px bg-line sm:block" aria-hidden />
+      <span className="mx-1 hidden h-6 w-px bg-[color:var(--line)] sm:block" aria-hidden />
 
       <label className="min-w-[10rem] flex-1">
-        <span className="sr-only">Project name</span>
+        <span className="sr-only">{t('projectName')}</span>
         <input
           value={projectName}
           onChange={(e) => useCircuitStore.getState().setProjectName(e.target.value.slice(0, 60))}

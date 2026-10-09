@@ -18,6 +18,7 @@ import { PartPalette } from './palette/PartPalette';
 import { Inspector } from './inspector/Inspector';
 import { Toolbar } from './toolbar/Toolbar';
 import { BottomPanel } from './panels/BottomPanel';
+import { SchematicView, SCHEMATIC_SVG_ID } from './schematic/SchematicView';
 import { SHARE_PARAM } from './lib/exporters';
 import { cn } from '@/lib/utils';
 
@@ -35,9 +36,14 @@ export default function CircuitLab() {
     fitRef.current = api.fit;
   }, []);
   const help = useCircuitStore((s) => s.showHelp);
+  const view = useCircuitStore((s) => s.view);
+  const fitActive = useCallback(() => {
+    if (useCircuitStore.getState().view === 'schematic') useCircuitStore.getState().setSchematicZoom(null);
+    else fitRef.current();
+  }, []);
 
   useSimEngine();
-  useCircuitShortcuts(() => fitRef.current());
+  useCircuitShortcuts(fitActive);
 
   // Shared project link: ?circuit=<base64url JSON>.
   const params = useSearchParams();
@@ -62,14 +68,14 @@ export default function CircuitLab() {
   return (
     <div className="space-y-4">
       <div className="flex flex-col gap-3">
-        <Toolbar svgId={SVG_ID} onFit={() => fitRef.current()} />
+        <Toolbar svgId={view === 'schematic' ? SCHEMATIC_SVG_ID : SVG_ID} onFit={fitActive} />
         {shortStatus ? (
-          <p role="alert" className="rounded-xl border border-coral-200 bg-coral-50 px-3 py-2 text-sm text-coral-800 dark:bg-coral-900/20 dark:text-coral-100">
+          <p role="alert" className="rounded-xl border border-orange-200 bg-orange-50 px-3 py-2 text-sm text-orange-800 dark:bg-orange-900/20 dark:text-orange-100">
             {shortStatus}
           </p>
         ) : null}
         {problem ? (
-          <p role="status" className="rounded-xl border border-sun-300 bg-sun-50 px-3 py-2 text-xs text-ink dark:bg-sun-900/20">
+          <p role="status" className="rounded-xl border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-[color:var(--ink)] dark:bg-amber-900/20">
             {problem}
           </p>
         ) : null}
@@ -86,7 +92,7 @@ export default function CircuitLab() {
 
       <div className="grid gap-4 lg:grid-cols-[250px_minmax(0,1fr)_300px]">
         <aside className={cn('card h-[70vh] min-h-[420px] overflow-hidden p-3 lg:flex lg:flex-col', mobilePanel === 'parts' ? 'block' : 'hidden lg:flex')} aria-label={t('library')}>
-          <h2 className="mb-2 px-1 text-sm font-semibold text-ink">{t('library')}</h2>
+          <h2 className="mb-2 px-1 text-sm font-semibold text-[color:var(--ink)]">{t('library')}</h2>
           <div className="min-h-0 flex-1">
             <PartPalette onPick={() => setMobilePanel(null)} />
           </div>
@@ -94,13 +100,13 @@ export default function CircuitLab() {
 
         <div className="flex min-w-0 flex-col gap-2">
           <div className="h-[70vh] min-h-[420px]">
-            <BenchCanvas frame={frame} onFit={onFit} />
+            {view === 'schematic' ? <SchematicView frame={frame} /> : <BenchCanvas frame={frame} onFit={onFit} />}
           </div>
-          <p className="text-xs text-muted">{t('wireHint')}</p>
+          {view === 'schematic' ? null : <p className="text-xs text-[color:var(--muted)]">{t('wireHint')}</p>}
         </div>
 
         <aside className={cn('card max-h-[70vh] min-h-[420px] overflow-y-auto p-4', mobilePanel === 'inspect' ? 'block' : 'hidden lg:block')} aria-label={t('inspector')}>
-          <h2 className="mb-3 text-sm font-semibold text-ink">{t('inspector')}</h2>
+          <h2 className="mb-3 text-sm font-semibold text-[color:var(--ink)]">{t('inspector')}</h2>
           <Inspector />
         </aside>
       </div>
@@ -108,14 +114,14 @@ export default function CircuitLab() {
       <BottomPanel />
 
       {help ? (
-        <div role="dialog" aria-modal="true" aria-labelledby="circuit-help-title" className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" onClick={() => useCircuitStore.getState().setShowHelp(false)}>
+        <div role="dialog" aria-modal="true" aria-labelledby="circuit-help-title" className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onClick={() => useCircuitStore.getState().setShowHelp(false)}>
           <div className="card max-w-md p-5" onClick={(e) => e.stopPropagation()}>
-            <h2 id="circuit-help-title" className="display-title mb-3 text-lg text-ink">{t('helpTitle')}</h2>
+            <h2 id="circuit-help-title" className="display-title mb-3 text-lg text-[color:var(--ink)]">{t('helpTitle')}</h2>
             <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
               {shortcuts.map(([k, v]) => (
                 <div key={k} className="contents">
-                  <dt className="font-mono text-xs text-ink">{k}</dt>
-                  <dd className="text-muted">{v}</dd>
+                  <dt className="font-mono text-xs text-[color:var(--ink)]">{k}</dt>
+                  <dd className="text-[color:var(--muted)]">{v}</dd>
                 </div>
               ))}
             </dl>

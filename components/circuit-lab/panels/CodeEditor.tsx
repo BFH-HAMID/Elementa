@@ -15,8 +15,8 @@ function highlight(src: string): string {
   return esc
     .replace(/(\/\/[^\n]*)/g, '<span class="text-emerald-600 dark:text-emerald-400">$1</span>')
     .replace(/("[^"\n]*")/g, '<span class="text-amber-700 dark:text-amber-300">$1</span>')
-    .replace(KEYWORDS, '<span class="text-brand dark:text-physics-300 font-semibold">$1</span>')
-    .replace(/\b(\d+(\.\d+)?)\b/g, '<span class="text-coral-600 dark:text-coral-300">$1</span>');
+    .replace(KEYWORDS, '<span class="text-[color:var(--brand)] dark:text-physics-300 font-semibold">$1</span>')
+    .replace(/\b(\d+(\.\d+)?)\b/g, '<span class="text-orange-600 dark:text-orange-300">$1</span>');
 }
 
 export function CodeEditor({ value, onChange, errors, label }: { value: string; onChange: (v: string) => void; errors: string[]; label: string }) {
@@ -49,7 +49,7 @@ export function CodeEditor({ value, onChange, errors, label }: { value: string; 
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-2">
-      <div className="relative flex min-h-[180px] flex-1 overflow-hidden rounded-xl border border-line bg-[#0f1822] font-mono text-[12px] leading-5 text-slate-100">
+      <div className="relative flex min-h-[180px] flex-1 overflow-hidden rounded-xl border border-[color:var(--line)] bg-[#0f1822] font-mono text-[12px] leading-5 text-slate-100">
         <div aria-hidden className="select-none border-r border-white/10 bg-black/20 px-2 py-2 text-right text-slate-500">
           {Array.from({ length: lines }, (_, i) => (
             <div key={i}>{i + 1}</div>
@@ -69,7 +69,7 @@ export function CodeEditor({ value, onChange, errors, label }: { value: string; 
         </div>
       </div>
       {errors.length > 0 ? (
-        <ul className="space-y-1 rounded-xl border border-coral-200 bg-coral-50 p-2 text-xs text-coral-700 dark:bg-coral-900/20 dark:text-coral-200" role="alert">
+        <ul className="space-y-1 rounded-xl border border-orange-200 bg-orange-50 p-2 text-xs text-orange-700 dark:bg-orange-900/20 dark:text-orange-200" role="alert">
           {errors.map((e, i) => (
             <li key={i}>• {e}</li>
           ))}

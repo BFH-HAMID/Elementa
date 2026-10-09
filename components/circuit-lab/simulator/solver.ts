@@ -30,6 +30,8 @@ export interface Topology {
   nodeCount: number;
   /** "compId|pinId" → node index, −1 = ground. */
   nodeOf: Map<string, number>;
+  /** "compId|pinId" keys that sit on the ground net (nodeOf is −1 for these). */
+  groundKeys: Set<string>;
   comps: Map<string, { def: PartDef; comp: PlacedComponent }>;
   boards: string[];
   groundRoot: string | null;
@@ -201,6 +203,7 @@ export function buildTopology(components: PlacedComponent[], wires: PlacedWire[]
 
   const rootIndex = new Map<string, number>();
   const nodeOf = new Map<string, number>();
+  const groundKeys = new Set<string>();
   let next = 0;
   for (const [, { def, comp }] of comps) {
     for (const pin of def.pins) {
@@ -208,6 +211,7 @@ export function buildTopology(components: PlacedComponent[], wires: PlacedWire[]
       const r = dsu.find(k);
       if (groundRoot !== null && r === groundRoot) {
         nodeOf.set(k, -1);
+        groundKeys.add(k);
         continue;
       }
       if (!occupied.has(r)) {
@@ -228,6 +232,7 @@ export function buildTopology(components: PlacedComponent[], wires: PlacedWire[]
     key: `${components.length}:${wires.length}`,
     nodeCount: next,
     nodeOf,
+    groundKeys,
     comps,
     boards,
     groundRoot,

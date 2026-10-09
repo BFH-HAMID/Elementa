@@ -24,7 +24,7 @@ function PropField({ def, comp, onChange }: { def: PropDef; comp: PlacedComponen
   if (def.type === 'boolean') {
     return (
       <label className="flex items-center justify-between gap-3 py-1 text-sm">
-        <span className="text-ink">{def.label}</span>
+        <span className="text-[color:var(--ink)]">{def.label}</span>
         <input id={id} type="checkbox" checked={Boolean(raw)} onChange={(e) => onChange(def.key, e.target.checked)} className="h-4 w-4 accent-physics-600" />
       </label>
     );
@@ -32,7 +32,7 @@ function PropField({ def, comp, onChange }: { def: PropDef; comp: PlacedComponen
   if (def.type === 'select') {
     return (
       <label className="flex items-center justify-between gap-3 py-1 text-sm">
-        <span className="text-ink">{def.label}</span>
+        <span className="text-[color:var(--ink)]">{def.label}</span>
         <select id={id} value={fieldValue(raw)} onChange={(e) => onChange(def.key, e.target.value)} className="input max-w-[60%] text-sm">
           {def.options?.map((o) => (
             <option key={o.value} value={o.value}>
@@ -46,16 +46,16 @@ function PropField({ def, comp, onChange }: { def: PropDef; comp: PlacedComponen
   if (def.type === 'text') {
     return (
       <label className="flex flex-col gap-1 py-1 text-sm">
-        <span className="text-ink">{def.label}</span>
+        <span className="text-[color:var(--ink)]">{def.label}</span>
         <input id={id} type="text" value={fieldValue(raw)} onChange={(e) => onChange(def.key, e.target.value)} className="input text-sm" maxLength={32} />
       </label>
     );
   }
   return (
     <label className="flex items-center justify-between gap-3 py-1 text-sm">
-      <span className="text-ink">
+      <span className="text-[color:var(--ink)]">
         {def.label}
-        {typeof raw === 'number' && def.unit ? <span className="ml-1 text-xs text-muted">({formatSI(raw, def.unit)})</span> : null}
+        {typeof raw === 'number' && def.unit ? <span className="ml-1 text-xs text-[color:var(--muted)]">({formatSI(raw, def.unit)})</span> : null}
       </span>
       <span className="flex items-center gap-1">
         <input
@@ -72,7 +72,7 @@ function PropField({ def, comp, onChange }: { def: PropDef; comp: PlacedComponen
           }}
           className="input w-28 text-right text-sm tabular-nums"
         />
-        {def.unit ? <span className="w-8 text-xs text-muted">{def.unit}</span> : null}
+        {def.unit ? <span className="w-8 text-xs text-[color:var(--muted)]">{def.unit}</span> : null}
       </span>
     </label>
   );
@@ -94,7 +94,7 @@ export function Inspector() {
 
   if (!comp && !wire) {
     return (
-      <div className="space-y-3 text-sm text-muted">
+      <div className="space-y-3 text-sm text-[color:var(--muted)]">
         <p>{t('noSelection')}</p>
         <p className="text-xs">{t('wireHint')}</p>
         {selectedComps.length > 1 ? <p className="text-xs">{selectedComps.length} selected — rotate, flip, duplicate or delete them together.</p> : null}
@@ -108,9 +108,9 @@ export function Inspector() {
   return (
     <div className="space-y-4">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wide text-muted">{def.partNumber}</p>
-        <h3 className="display-title text-lg text-ink">{def.name}</h3>
-        <p className="mt-1 text-xs leading-5 text-muted">{def.description}</p>
+        <p className="text-xs font-semibold uppercase tracking-wide text-[color:var(--muted)]">{def.partNumber}</p>
+        <h3 className="display-title text-lg text-[color:var(--ink)]">{def.name}</h3>
+        <p className="mt-1 text-xs leading-5 text-[color:var(--muted)]">{def.description}</p>
       </div>
 
       <div className="flex flex-wrap gap-1.5">
@@ -123,17 +123,17 @@ export function Inspector() {
         <button type="button" className="btn btn-secondary px-2.5 py-1.5 text-xs" onClick={() => useCircuitStore.getState().duplicateSelection()}>
           <Copy className="mr-1 h-3.5 w-3.5" /> {t('duplicate')}
         </button>
-        <button type="button" className="btn btn-secondary px-2.5 py-1.5 text-xs text-coral-700" onClick={() => useCircuitStore.getState().deleteSelection()}>
+        <button type="button" className="btn btn-secondary px-2.5 py-1.5 text-xs text-orange-700" onClick={() => useCircuitStore.getState().deleteSelection()}>
           <Trash2 className="mr-1 h-3.5 w-3.5" /> {t('delete')}
         </button>
       </div>
 
-      {sim?.burnt ? <p className="rounded-xl bg-coral-50 p-2 text-xs text-coral-700 dark:bg-coral-900/20 dark:text-coral-200">{t('burnt')}: {sim.warnings?.[0] ?? ''}</p> : null}
+      {sim?.burnt ? <p className="rounded-xl bg-orange-50 p-2 text-xs text-orange-700 dark:bg-orange-900/20 dark:text-orange-200">{t('burnt')}: {sim.warnings?.[0] ?? ''}</p> : null}
 
       {def.props.length > 0 ? (
         <section aria-labelledby="props-heading">
-          <h4 id="props-heading" className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted">{t('properties')}</h4>
-          <div className="divide-y divide-line/60 rounded-xl border border-line px-3">
+          <h4 id="props-heading" className="mb-1 text-xs font-semibold uppercase tracking-wide text-[color:var(--muted)]">{t('properties')}</h4>
+          <div className="divide-y divide-[color:var(--line)] rounded-xl border border-[color:var(--line)] px-3">
             {def.props.map((p) => (
               <PropField
                 key={p.key}
@@ -154,37 +154,37 @@ export function Inspector() {
 
       {def.category === 'boards' ? (
         <section aria-labelledby="sketch-heading" className="flex min-h-[260px] flex-col gap-2">
-          <h4 id="sketch-heading" className="text-xs font-semibold uppercase tracking-wide text-muted">{t('code')}</h4>
+          <h4 id="sketch-heading" className="text-xs font-semibold uppercase tracking-wide text-[color:var(--muted)]">{t('code')}</h4>
           <CodeEditor
             label={t('code')}
             value={comp.code ?? ''}
             onChange={(v) => useCircuitStore.getState().setCode(comp.id, v)}
             errors={errors.filter((e) => e.includes(def.name) || e.startsWith('Sketch'))}
           />
-          <p className="text-xs text-muted">
+          <p className="text-xs text-[color:var(--muted)]">
             {isBangla
               ? 'Arduino-ধরনের C++ সাবসেট: pinMode, digitalWrite/Read, analogWrite/Read, delay, Serial, Servo, DHT, LiquidCrystal, Adafruit_SSD1306, pulseIn, tone।'
               : 'Arduino-style C++ subset: pinMode, digitalWrite/Read, analogWrite/Read, delay, Serial, Servo, DHT, LiquidCrystal, Adafruit_SSD1306, pulseIn, tone.'}
           </p>
-          <p className="text-xs text-muted">{sim?.powered === false ? t('unpowered') : ''}</p>
+          <p className="text-xs text-[color:var(--muted)]">{sim?.powered === false ? t('unpowered') : ''}</p>
         </section>
       ) : null}
 
       <section aria-labelledby="pinout-heading">
-        <h4 id="pinout-heading" className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted">{t('pinout')}</h4>
-        <ul className="max-h-48 space-y-0.5 overflow-y-auto rounded-xl border border-line p-2 text-xs">
+        <h4 id="pinout-heading" className="mb-1 text-xs font-semibold uppercase tracking-wide text-[color:var(--muted)]">{t('pinout')}</h4>
+        <ul className="max-h-48 space-y-0.5 overflow-y-auto rounded-xl border border-[color:var(--line)] p-2 text-xs">
           {def.pins.map((p) => (
             <li key={p.id} className="flex items-baseline gap-2">
-              <span className={cn('w-14 shrink-0 font-mono text-[11px]', p.kind === 'gnd' ? 'text-ink' : p.kind === 'vcc' || p.kind === 'vin' ? 'text-coral-600' : 'text-brand')}>{p.label}</span>
-              <span className="text-muted">{p.func ?? ''}</span>
+              <span className={cn('w-14 shrink-0 font-mono text-[11px]', p.kind === 'gnd' ? 'text-[color:var(--ink)]' : p.kind === 'vcc' || p.kind === 'vin' ? 'text-orange-600' : 'text-[color:var(--brand)]')}>{p.label}</span>
+              <span className="text-[color:var(--muted)]">{p.func ?? ''}</span>
             </li>
           ))}
         </ul>
       </section>
 
       <section aria-labelledby="ratings-heading">
-        <h4 id="ratings-heading" className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted">{t('ratings')}</h4>
-        <ul className="list-disc space-y-0.5 pl-4 text-xs text-muted">
+        <h4 id="ratings-heading" className="mb-1 text-xs font-semibold uppercase tracking-wide text-[color:var(--muted)]">{t('ratings')}</h4>
+        <ul className="list-disc space-y-0.5 pl-4 text-xs text-[color:var(--muted)]">
           {def.ratings.map((r) => (
             <li key={r}>{r}</li>
           ))}
@@ -199,12 +199,12 @@ function WireInspector({ wire }: { wire: PlacedWire }) {
   const colors: WireColor[] = ['red', 'black', 'blue', 'green', 'yellow', 'white', 'orange', 'purple'];
   return (
     <div className="space-y-3">
-      <h3 className="display-title text-lg text-ink">Wire</h3>
-      <p className="text-xs text-muted">
+      <h3 className="display-title text-lg text-[color:var(--ink)]">Wire</h3>
+      <p className="text-xs text-[color:var(--muted)]">
         {wire.from ? `${wire.from.compId}·${wire.from.pinId}` : '—'} → {wire.to ? `${wire.to.compId}·${wire.to.pinId}` : '—'}
       </p>
       <div>
-        <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted">{t('wireColor')}</p>
+        <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[color:var(--muted)]">{t('wireColor')}</p>
         <div className="flex flex-wrap gap-2">
           {colors.map((c) => (
             <button
@@ -213,14 +213,14 @@ function WireInspector({ wire }: { wire: PlacedWire }) {
               aria-label={c}
               aria-pressed={wire.color === c}
               onClick={() => useCircuitStore.getState().setWireColor(wire.id, c)}
-              className={cn('h-7 w-7 rounded-full border-2', wire.color === c ? 'border-ink' : 'border-white/60')}
+              className={cn('h-7 w-7 rounded-full border-2', wire.color === c ? 'border-[color:var(--ink)]' : 'border-white/60')}
               style={{ background: WIRE_COLORS[c] }}
             />
           ))}
         </div>
       </div>
       <div className="flex gap-2">
-        <button type="button" className="btn btn-secondary px-2.5 py-1.5 text-xs text-coral-700" onClick={() => useCircuitStore.getState().deleteWire(wire.id)}>
+        <button type="button" className="btn btn-secondary px-2.5 py-1.5 text-xs text-orange-700" onClick={() => useCircuitStore.getState().deleteWire(wire.id)}>
           {t('deleteWire')}
         </button>
       </div>

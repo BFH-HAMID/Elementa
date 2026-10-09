@@ -61,14 +61,14 @@ export function PartPalette({ onPick }: { onPick?: () => void }) {
       }}
       onClick={() => addAtCentre(def)}
       className={cn(
-        'group flex w-full cursor-grab items-start gap-2 rounded-xl border border-transparent px-2.5 py-2 text-left text-sm transition hover:border-line hover:bg-surface-soft active:cursor-grabbing',
+        'group flex w-full cursor-grab items-start gap-2 rounded-xl border border-transparent px-2.5 py-2 text-left text-sm transition hover:border-[color:var(--line)] hover:bg-[color:var(--surface-soft)] active:cursor-grabbing',
         selected === def.id && 'border-physics-300 bg-physics-50 dark:bg-physics-900/30'
       )}
       title={def.description}
     >
       <span className="min-w-0 flex-1">
-        <span className="block truncate font-medium text-ink">{def.name}</span>
-        <span className="block truncate text-xs text-muted">{def.partNumber}</span>
+        <span className="block truncate font-medium text-[color:var(--ink)]">{def.name}</span>
+        <span className="block truncate text-xs text-[color:var(--muted)]">{def.partNumber}</span>
       </span>
     </button>
   );
@@ -77,7 +77,7 @@ export function PartPalette({ onPick }: { onPick?: () => void }) {
     <div className="flex h-full flex-col gap-3">
       <label className="relative block">
         <span className="sr-only">{t('search')}</span>
-        <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" aria-hidden />
+        <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[color:var(--muted)]" aria-hidden />
         <input
           type="search"
           value={query}
@@ -90,7 +90,7 @@ export function PartPalette({ onPick }: { onPick?: () => void }) {
       <div className="min-h-0 flex-1 overflow-y-auto pr-1" role="listbox" aria-label={t('library')}>
         {results ? (
           <div className="space-y-1">
-            {results.length === 0 ? <p className="px-2 py-4 text-sm text-muted">—</p> : results.map(renderItem)}
+            {results.length === 0 ? <p className="px-2 py-4 text-sm text-[color:var(--muted)]">—</p> : results.map(renderItem)}
           </div>
         ) : (
           CATEGORY_ORDER.map((cat) => {
@@ -99,10 +99,10 @@ export function PartPalette({ onPick }: { onPick?: () => void }) {
             const items = PARTS.filter((p) => p.category === cat);
             return (
               <details key={cat} open={cat === 'boards' || cat === 'passives' || cat === 'semiconductors'} className="group mb-2">
-                <summary className="flex cursor-pointer list-none items-center gap-2 rounded-lg px-2 py-1.5 text-xs font-semibold uppercase tracking-wide text-muted hover:bg-surface-soft">
+                <summary className="flex cursor-pointer list-none items-center gap-2 rounded-lg px-2 py-1.5 text-xs font-semibold uppercase tracking-wide text-[color:var(--muted)] hover:bg-[color:var(--surface-soft)]">
                   <Icon className="h-3.5 w-3.5" aria-hidden />
                   <span className="flex-1">{locale === 'bn' ? meta.bn : meta.en}</span>
-                  <span className="rounded-full bg-surface-soft px-1.5 text-[10px]">{items.length}</span>
+                  <span className="rounded-full bg-[color:var(--surface-soft)] px-1.5 text-[10px]">{items.length}</span>
                 </summary>
                 <div className="mt-1 space-y-0.5">{items.map(renderItem)}</div>
               </details>

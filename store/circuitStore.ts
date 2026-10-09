@@ -22,7 +22,7 @@ interface Snapshot {
 }
 
 export type ToolMode = 'select' | 'wire' | 'pan';
-export type ViewMode = 'breadboard' | 'schematic' | 'pcb';
+export type ViewMode = 'breadboard' | 'schematic';
 
 export interface CircuitState {
   projectName: string;
@@ -33,6 +33,8 @@ export interface CircuitState {
   viewport: Viewport;
   tool: ToolMode;
   view: ViewMode;
+  /** Schematic zoom factor; null = fit the width of the panel. */
+  schematicZoom: number | null;
   snap: boolean;
   showFlow: boolean;
   running: boolean;
@@ -89,6 +91,7 @@ export interface CircuitState {
   setViewport: (vp: Viewport) => void;
   setTool: (tool: ToolMode) => void;
   setView: (view: ViewMode) => void;
+  setSchematicZoom: (zoom: number | null) => void;
   setSnap: (on: boolean) => void;
   setShowFlow: (on: boolean) => void;
   setRunning: (on: boolean) => void;
@@ -172,6 +175,7 @@ export const useCircuitStore = create<CircuitState>()((set, get) => ({
   viewport: { x: -60, y: -40, zoom: 1 },
   tool: 'select',
   view: 'breadboard',
+  schematicZoom: null,
   snap: true,
   showFlow: true,
   running: false,
@@ -424,6 +428,7 @@ export const useCircuitStore = create<CircuitState>()((set, get) => ({
   setViewport: (viewport) => set({ viewport }),
   setTool: (tool) => set({ tool }),
   setView: (view) => set({ view }),
+  setSchematicZoom: (schematicZoom) => set({ schematicZoom }),
   setSnap: (snap) => set({ snap }),
   setShowFlow: (showFlow) => set({ showFlow }),
   setRunning: (running) => set({ running }),

@@ -5,6 +5,7 @@
 
 import { getPart } from '../parts/registry';
 import { buildTopology } from '../simulator/solver';
+import { netlistRows } from './nets';
 import type { PlacedComponent, PlacedWire } from '../types';
 
 export interface BomLine {
@@ -28,31 +29,9 @@ export function billOfMaterials(components: PlacedComponent[]): BomLine[] {
   return [...map.values()].sort((a, b) => a.name.localeCompare(b.name));
 }
 
-/** Netlist: each electrical net with the component pins that sit on it. */
+/** Netlist: each electrical net with the component pins that sit on it. Names match the schematic view. */
 export function netlist(components: PlacedComponent[], wires: PlacedWire[]): { net: string; pins: string[] }[] {
-  const topo = buildTopology(components, wires);
-  const nets = new Map<number, string[]>();
-  const labelOf = (compId: string, pinId: string) => {
-    const def = topo.comps.get(compId)?.def;
-    const pin = def?.pins.find((p) => p.id === pinId);
-    return `${topo.comps.get(compId)?.comp.partId ? getPart(topo.comps.get(compId)!.comp.partId)?.name : compId} · ${pin?.func ?? pinId}`;
-  };
-  for (const [key, node] of topo.nodeOf) {
-    if (node < 0) continue;
-    const [compId, pinId] = key.split('|');
-    const list = nets.get(node) ?? [];
-    list.push(labelOf(compId, pinId));
-    nets.set(node, list);
-  }
-  const out: { net: string; pins: string[] }[] = [];
-  let i = 1;
-  for (const [, pins] of [...nets.entries()].sort((a, b) => a[0] - b[0])) {
-    // Hide single-pin nets: they are unconnected pins, not connections.
-    if (pins.length < 2) continue;
-    out.push({ net: `N${String(i++).padStart(2, '0')}`, pins });
-  }
-  if (topo.groundRoot !== null) out.unshift({ net: 'GND', pins: [] });
-  return out;
+  return netlistRows(components, wires);
 }
 
 export interface CheckIssue {

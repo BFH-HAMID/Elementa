@@ -471,7 +471,7 @@ export function BenchCanvas({ frame, onFit }: { frame: SimFrame | null; onFit: (
   const cursorClass = tool === 'pan' || spaceDown ? (drag?.kind === 'pan' ? 'cursor-grabbing' : 'cursor-grab') : 'cursor-crosshair';
 
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-2xl border border-line bg-[#eef3f8] dark:bg-[#0c141d]">
+    <div className="relative h-full w-full overflow-hidden rounded-2xl border border-[color:var(--line)] bg-[#eef3f8] dark:bg-[#0c141d]">
       <svg
         ref={svgRef}
         id="circuit-bench-svg"
@@ -591,7 +591,7 @@ export function BenchCanvas({ frame, onFit }: { frame: SimFrame | null; onFit: (
         </g>
 
         {components.length === 0 ? (
-          <text x="50%" y="50%" textAnchor="middle" fontSize={14} className="fill-muted" pointerEvents="none">
+          <text x="50%" y="50%" textAnchor="middle" fontSize={14} className="fill-[color:var(--muted)]" pointerEvents="none">
             {t('emptyBench')}
           </text>
         ) : null}
@@ -616,7 +616,7 @@ export function BenchCanvas({ frame, onFit }: { frame: SimFrame | null; onFit: (
 
       {/* Context menu */}
       {menu ? (
-        <div role="menu" className="absolute z-20 min-w-[180px] rounded-xl border border-line bg-surface p-1 text-sm shadow-xl" style={{ left: Math.min(menu.x, size.w - 200), top: Math.min(menu.y, size.h - 220) }} onPointerDown={(e) => e.stopPropagation()}>
+        <div role="menu" className="absolute z-20 min-w-[180px] rounded-xl border border-[color:var(--line)] bg-[color:var(--surface)] p-1 text-sm shadow-xl" style={{ left: Math.min(menu.x, size.w - 200), top: Math.min(menu.y, size.h - 220) }} onPointerDown={(e) => e.stopPropagation()}>
           {menu.compId ? (
             <>
               <MenuItem icon={<RotateCw className="h-4 w-4" />} label={t('rotate')} onClick={() => { useCircuitStore.getState().rotateSelection(1); setMenu(null); }} />
@@ -654,7 +654,7 @@ export function BenchCanvas({ frame, onFit }: { frame: SimFrame | null; onFit: (
 
 function MenuItem({ icon, label, onClick }: { icon: React.ReactNode; label: string; onClick: () => void }) {
   return (
-    <button type="button" role="menuitem" className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left hover:bg-surface-soft" onClick={onClick}>
+    <button type="button" role="menuitem" className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left hover:bg-[color:var(--surface-soft)]" onClick={onClick}>
       {icon}
       <span>{label}</span>
     </button>
@@ -748,11 +748,11 @@ function Minimap({
     st.setViewport(clampViewport({ zoom: st.viewport.zoom, x: wx - size.w / 2 / st.viewport.zoom, y: wy - size.h / 2 / st.viewport.zoom }));
   };
   return (
-    <svg width={mw} height={mh} className="absolute bottom-3 right-3 rounded-lg border border-line bg-surface/90 shadow" onClick={onClick} role="img" aria-label="Minimap">
+    <svg width={mw} height={mh} className="absolute bottom-3 right-3 rounded-lg border border-[color:var(--line)] bg-[color:var(--surface)] shadow" onClick={onClick} role="img" aria-label="Minimap">
       {components.map((c) => {
         const d = defs.get(c.id);
         if (!d) return null;
-        return <rect key={c.id} x={(c.x - x0) * sc} y={(c.y - y0) * sc} width={Math.max(2, d.w * sc)} height={Math.max(2, d.h * sc)} className="fill-brand/60" />;
+        return <rect key={c.id} x={(c.x - x0) * sc} y={(c.y - y0) * sc} width={Math.max(2, d.w * sc)} height={Math.max(2, d.h * sc)} className="fill-physics-600/60" />;
       })}
       {wires.slice(0, 300).map((w) => {
         const a = w.from ? components.find((c) => c.id === w.from!.compId) : null;

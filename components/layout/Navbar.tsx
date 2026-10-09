@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import {
   Atom,
   Beaker,
+  Cpu,
   BookOpen,
   Bookmark,
   ChevronDown,
@@ -192,6 +193,17 @@ export function Navbar() {
             <Beaker size={15} />
             {t('chemistryLab')}
           </Link>
+          <Link
+            href={hrefFor('/lab/circuit')}
+            aria-current={isActive('/lab/circuit') ? 'page' : undefined}
+            className={cn(
+              'flex items-center gap-1.5 rounded-lg bg-physics-700 px-3 py-2 text-sm font-black text-white shadow-sm transition hover:bg-physics-800 dark:bg-physics-700 dark:hover:bg-physics-600',
+              isActive('/lab/circuit') && 'ring-2 ring-sun-300 dark:ring-sun-700'
+            )}
+          >
+            <Cpu size={15} />
+            {t('circuitLab')}
+          </Link>
         </nav>
 
         <div className="flex shrink-0 items-center gap-0.5 sm:gap-1">
@@ -212,6 +224,14 @@ export function Navbar() {
             title={t('chemistryLab')}
           >
             <Beaker size={17} />
+          </Link>
+          <Link
+            href={hrefFor('/lab/circuit')}
+            className="btn-ghost hidden min-h-10 min-w-10 rounded-lg p-2 text-physics-700 dark:text-physics-200 sm:inline-flex xl:hidden"
+            aria-label={t('circuitLab')}
+            title={t('circuitLab')}
+          >
+            <Cpu size={17} />
           </Link>
           <LangSwitch />
           <ThemeToggle />
@@ -275,6 +295,18 @@ export function Navbar() {
               >
                 <Beaker size={17} className="shrink-0" />
                 <span className="truncate">{t('chemistryLab')}</span>
+              </Link>
+              <Link
+                href={hrefFor('/lab/circuit')}
+                onClick={() => setMobileOpen(false)}
+                aria-current={isActive('/lab/circuit') ? 'page' : undefined}
+                className={cn(
+                  'col-span-1 flex min-w-0 items-center gap-2 rounded-xl p-3 text-sm font-black text-white transition sm:col-span-2',
+                  isActive('/lab/circuit') ? 'bg-physics-800' : 'bg-physics-700 hover:bg-physics-800'
+                )}
+              >
+                <Cpu size={17} className="shrink-0" />
+                <span className="truncate">{t('circuitLab')}</span>
               </Link>
               {subjectLinks.map(({ key, href, icon: Icon }) => {
                 const active = isActive(href);

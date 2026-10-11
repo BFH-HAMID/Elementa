@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { AMBIENT_C, applyDeltaT, boilingPointFor, describeHeat, stepHeat } from '@/engine/heatModel';
+import { AMBIENT_C, applyDeltaT, boilingPointFor, describeHeat, stepHeat, volatileVolumeMl } from '@/engine/heatModel';
 import {
   MOLAR_VOLUME_ML,
   clamp,
@@ -190,11 +190,16 @@ export function contextFor(vessel: Vessel, burner: BurnerState, extra: Partial<R
   };
 }
 
-/** Remove boiled-off liquid, taking water first and then other solvents proportionally. */
+/**
+ * Remove boiled-off liquid, taking water first and then other liquids proportionally.
+ * Solids and gases stay behind: a metal ribbon or a spoon of marble chips does not
+ * evaporate, so it is still there when the vessel runs dry and the temperature climbs.
+ */
 function boilOff(vessel: Vessel, mL: number, chemicalsById: Map<string, Chemical>): void {
   let remaining = mL;
   if (remaining <= 0) return;
-  const water = vessel.portions.find((portion) => portion.chemicalId === 'H2O');
+  const isVolatile = (portion: Portion) => (chemicalsById.get(portion.chemicalId)?.state ?? 'liquid') === 'liquid';
+  const water = vessel.portions.find((portion) => portion.chemicalId === 'H2O' && isVolatile(portion));
   const takeFrom = (portion: Portion, wanted: number) => {
     const taken = Math.min(portion.mL, wanted);
     portion.mL -= taken;
@@ -203,14 +208,14 @@ function boilOff(vessel: Vessel, mL: number, chemicalsById: Map<string, Chemical
   };
   if (water) remaining -= takeFrom(water, remaining);
   if (remaining > 0) {
-    const others = vessel.portions.filter((portion) => portion.chemicalId !== 'H2O');
+    const others = vessel.portions.filter((portion) => portion.chemicalId !== 'H2O' && isVolatile(portion));
     const total = others.reduce((sum, portion) => sum + portion.mL, 0);
     for (const portion of others) {
       if (total <= 0) break;
       remaining -= takeFrom(portion, (portion.mL / total) * remaining);
     }
   }
-  vessel.portions = vessel.portions.filter((portion) => portion.mL > 0.05);
+  vessel.portions = vessel.portions.filter((portion) => !isVolatile(portion) || portion.mL > 0.05);
   vessel.colorOverride = null;
 }
 
@@ -619,7 +624,9 @@ export const useLabStore = create<LabStore>()((set, get) => {
                   text_en: 'Electrolysis cell connected — current is flowing.',
                   text_bn: 'তড়িৎ বিশ্লেষণ কোষ যুক্ত — বিদ্যুৎ প্রবাহিত হচ্ছে।'
                 },
-                current
+                // The cell drives real chemistry, so keep the observations resolve() just staged
+                // and only add the wiring note on top of them.
+                { ...current, log: patch.log ?? current.log }
               )
             : current.log
         };
@@ -694,7 +701,9 @@ export const useLabStore = create<LabStore>()((set, get) => {
               text_en: `Collected ${names} through the delivery tube.`,
               text_bn: `ডেলিভারি টিউব দিয়ে ${namesBn} সংগ্রহ করা হলো।`
             },
-            current
+            // Whatever the gas did on arrival (limewater going milky, a pop) must reach the
+            // notebook too, so merge with the observations resolve() staged.
+            { ...current, log: patch.log ?? current.log }
           )
         };
       });
@@ -761,7 +770,7 @@ export const useLabStore = create<LabStore>()((set, get) => {
         const heating = vessel.heating && state.burner.lit;
         const apparatus = apparatusById.get(vessel.apparatusId);
         const canHeat = heating && (apparatus?.canHeat ?? false);
-        const volume = liquidVolume(vessel);
+        const volume = volatileVolumeMl(vessel.portions, chemicalsById);
         const boilingPointC = boilingPointFor(vessel.portions, chemicalsById);
         const stepped = stepHeat({
           temperatureC: vessel.temperatureC,
@@ -772,7 +781,7 @@ export const useLabStore = create<LabStore>()((set, get) => {
           boilingPointC,
           canHeat: apparatus?.canHeat ?? true
         });
-        const next: Vessel = {
+        let next: Vessel = {
           ...vessel,
           temperatureC: stepped.temperatureC,
           portions: vessel.portions.map((portion) => ({ ...portion })),
@@ -790,7 +799,9 @@ export const useLabStore = create<LabStore>()((set, get) => {
         if (Math.abs(next.temperatureC - vessel.temperatureC) > 0.05) changed = true;
         settleGases(next, apparatus?.capacityMl ?? 100);
 
-        // Heat-triggered rules are re-checked whenever the temperature climbs a step.
+        // Heat-triggered rules are re-checked whenever the temperature climbs a step, and the
+        // reaction is applied to the vessel — a thermal decomposition has to change what is in
+        // the tube, not just write a line in the notebook.
         if (canHeat && next.temperatureC - vessel.lastResolveTempC >= 8) {
           const context = contextFor(next, state.burner);
           const result = resolveVessel(next, labDataset, context);
@@ -829,7 +840,8 @@ export const useLabStore = create<LabStore>()((set, get) => {
                 };
               }
             }
-            next.lastResolveTempC = next.temperatureC;
+            next = { ...result.vessel, lastResolveTempC: result.vessel.temperatureC };
+            settleGases(next, apparatus?.capacityMl ?? 100);
             activeEffects.unshift(...toActiveEffects(vessel.id, result.effects, now));
             changed = true;
           } else {

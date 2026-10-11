@@ -46,11 +46,27 @@ export type HeatStepResult = {
   powerW: number;
 };
 
+/**
+ * Portions that can actually boil: only a liquid has a vapour pressure here. A solid
+ * sitting in the vessel and a gas in the headspace are not solvent — which is what lets a
+ * dry solid (marble chips, ammonium chloride, a metal ribbon) climb past 100 °C and
+ * decompose or burn, instead of quietly boiling away like water.
+ */
+export function volatilePortions(portions: Portion[], chemicalsById?: Map<string, Chemical>): Portion[] {
+  return portions.filter((portion) => (chemicalsById?.get(portion.chemicalId)?.state ?? 'liquid') === 'liquid');
+}
+
+/** Total volume that can boil off — the liquid part of the contents, in mL. */
+export function volatileVolumeMl(portions: Portion[], chemicalsById?: Map<string, Chemical>): number {
+  return volatilePortions(portions, chemicalsById).reduce((sum, portion) => sum + portion.mL, 0);
+}
+
 export function boilingPointFor(portions: Portion[], chemicalsById?: Map<string, Chemical>): number {
-  const water = portions.find((portion) => portion.chemicalId === 'H2O');
-  const solventMassKg = Math.max(0.01, ((water?.mL ?? portions.reduce((sum, p) => sum + p.mL, 0)) / 1000));
+  const volatile = volatilePortions(portions, chemicalsById);
+  const water = volatile.find((portion) => portion.chemicalId === 'H2O');
+  const solventMassKg = Math.max(0.01, ((water?.mL ?? volatile.reduce((sum, p) => sum + p.mL, 0)) / 1000));
   let soluteMoles = 0;
-  for (const portion of portions) {
+  for (const portion of volatile) {
     const chemical = chemicalsById?.get(portion.chemicalId);
     if (portion.chemicalId === 'H2O') continue;
     if (chemical && chemical.state === 'gas') continue;

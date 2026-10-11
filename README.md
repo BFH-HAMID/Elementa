@@ -26,7 +26,7 @@ PhysChem Lab is a free, bilingual (Bangla + English) physics and chemistry learn
 
 It also ships two full virtual laboratories:
 - **Elementa Physics Lab** at `/lab/physics`: an interactive multi-domain physics workbench featuring a Modified Nodal Analysis (MNA) circuit solver with interactive wiring, ray optics with Snell's law & prism dispersion, 2D mechanics simulations (pendulum, springs, inclined plane, projectile, Atwood machine), wave acoustics (resonance tube, sonometer, oscilloscope), calorimetry, and modern physics (photoelectric effect, GM counter), alongside live Recharts graphs, statistical error tables with CSV export, and 45 guided practicals, including the full Physics Practical-1 list supplied for Properties of Matter, Waves and Oscillations, Heat, Thermodynamics and Radiation. See [`PHYSICS_LAB_GUIDE.md`](PHYSICS_LAB_GUIDE.md).
-- **Elementa Chemistry Lab** at `/lab/chemistry`: a drag-and-drop virtual wet lab in the header: pour acids, bases, salts and metals into SVG glassware, heat them on a Bunsen burner, spark a gas jar, electrolyse water, read the pH and indicator colours, and follow 11 guided walkthroughs that tick themselves off. See [`CHEMISTRY_LAB_GUIDE.md`](CHEMISTRY_LAB_GUIDE.md).
+- **Elementa Chemistry Lab** at `/lab/chemistry`: a drag-and-drop virtual wet lab in the header: pour acids, bases, salts and metals into SVG glassware, heat them on a Bunsen burner, spark a gas jar, electrolyse water, read the pH and indicator colours, and follow 31 guided walkthroughs that tick themselves off. See [`CHEMISTRY_LAB_GUIDE.md`](CHEMISTRY_LAB_GUIDE.md).
 
 > **বাংলায়:** সূত্র শুধু মুখস্থ নয় — পরিবর্তন করুন, পর্যবেক্ষণ করুন, এবং নিজের ব্যাখ্যা তৈরি করুন।
 
@@ -55,7 +55,7 @@ The README uses self-hosted SVG artwork so the project page has a visual identit
 - 16 original interactive Canvas 2D simulations for projectile motion, vector addition, spring oscillations, fluid flow, Wheatstone bridges, Young's double slit, a pendulum, circuits, wave interference, Newton's second law, optics, titration, pH, ideal gases and reaction kinetics.
 - An embedded, searchable PhET HTML5 library with 67 Physics and 35 Chemistry subject entries (81 unique simulations); official `/latest/` builds are loaded only on each detail page, with direct-open fallback and attribution.
 - A dynamically loaded 3Dmol.js molecule viewer for water, methane and benzene, plus an optional React Three Fiber optics field preview.
-- The Elementa Chemistry Lab at `/lab/chemistry`: a bilingual drag-and-drop bench with SVG glassware, live liquid levels and colours, bubbling/precipitate/smoke/flame effects, heating and boiling, a pH + indicator model, a balanced-equation box, a bilingual observation notebook, a safety layer and 11 guided experiments with auto-checked steps and quizzes.
+- The Elementa Chemistry Lab at `/lab/chemistry`: a bilingual drag-and-drop bench with SVG glassware, live liquid levels and colours, bubbling/precipitate/smoke/flame effects, heating and boiling, a pH + indicator model, a balanced-equation box, a bilingual observation notebook, a safety layer and 31 guided experiments with auto-checked steps and quizzes.
 - KaTeX equations, MDX rendering, Zod frontmatter validation, Fuse.js search and a Ctrl/Cmd+K command palette.
 - Recharts live graphs, CSV data export, screenshot download and fullscreen simulation mode.
 - Local-only bookmarks, recently viewed items, quiz score history, progress, theme and language preferences with Zustand.
@@ -250,7 +250,7 @@ Everything it knows is content, not code:
 | `data/chemicals.json` | 109 chemicals (54 on the shelf): acids, bases, salts, metals, gases, indicators, solvents |
 | `data/apparatus.json` | 15 items: test tube, beaker, conical flask, measuring cylinder, burette, gas jar, evaporating dish, Bunsen burner, tripod stand, thermometer, dropper, spatula, delivery tube, test tube holder, electrolysis cell |
 | `data/reactions.json` | 119 reaction rules with stoichiometry, triggers, effects, bilingual equations and observations |
-| `data/experiments.json` | 11 guided experiments with bench setups, auto-checked steps, safety notes and quizzes |
+| `data/experiments.json` | 31 guided experiments with bench setups, auto-checked steps, safety notes and quizzes |
 | `data/elements.json` | All 118 elements as a bilingual reference drawer |
 
 The engine in `engine/` is pure TypeScript with no React and no clock of its own, so it is fully

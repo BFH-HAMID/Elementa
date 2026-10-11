@@ -32,7 +32,7 @@ data/*.json  ──►  lib/labData.ts  ──►  engine/*.ts (pure)  ──►
 | State | `store/labStore.ts` | Zustand store: bench contents, burner, effects, notebook, history (undo/redo), localStorage save/load, guided-experiment progress, the 5 Hz `tick()` that advances heat and settles gases. |
 | UI | `components/lab/**` | `ChemistryLab` (drag-and-drop shell), `Shelf`, `Workbench`, `VesselStation`, `Apparatus/*` (SVG glassware), `LiquidView`, `EffectsLayer`, `PhMeter`, `EquationBox`, `ObservationPanel`, `ExperimentGuidePanel`, `SafetyOverlay`, `LabToolbar`, `ElementReference`. |
 | Copy | `lib/i18n.ts`, `messages/{bn,en}.json` | All lab strings live in `lib/i18n.ts` as one bilingual dictionary (`labT(locale, key, vars)`); only the header button label is in `messages/*.json` (`nav.chemistryLab`). |
-| Tests | `engine/__tests__/*.test.ts` | Vitest unit tests for the engine — currently 85 assertions across 5 files. |
+| Tests | `engine/__tests__/*.test.ts`, `store/__tests__/*.test.ts` | Vitest unit tests: reaction selection and chaining, mole/volume conversion, pH and indicators, the heat and boiling model, guided-step checking, the store's bench operations and a scripted walkthrough of every new guided experiment. |
 
 **Rule of thumb:** if a piece of chemistry is wrong, fix it in `data/` or `engine/` and add a
 test. If something only looks wrong, fix it in `components/lab/`.
@@ -275,7 +275,10 @@ carry such records — follow their tone.
 
 ## 6. Add a guided experiment
 
-Append to `data/experiments.json` → `experiments[]` and update `count`.
+The lab ships 31 guided experiments (see the catalog at `/bn|/en/lab/experiments`) — the last twenty came from
+`scripts/add-chemistry-lab-practicals.py`, a small generator that appends an experiment only when its `slug` is
+new and recomputes `count`. To add another, append to `data/experiments.json` → `experiments[]` and update
+`count` (or extend the script and run it).
 
 ```json
 {

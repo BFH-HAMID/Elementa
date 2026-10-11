@@ -133,21 +133,48 @@ describe('heating', () => {
     expect(state().flash?.tone).toBe('warning');
   });
 
-  it('fires a heat-triggered rule only once the liquid is hot enough', () => {
+  it('fires a heat-triggered rule once a dry solid is hot enough', () => {
     const id = state().addVessel('test-tube');
-    state().addChemical(id, 'NaHCO3', 5); // a dry solid: nothing to boil, so it can pass 100 °C
+    state().addChemical(id, 'NaHCO3', 5); // a dry solid: nothing to boil, so it heats fast
     state().setHeating(id, true);
 
     expect(state().log.some((entry) => entry.reactionId === 'nahco3-heat')).toBe(false);
     for (let step = 0; step < 400; step += 1) state().tick(1);
 
-    expect(vesselOf(id)?.temperatureC).toBeGreaterThan(120);
+    const vessel = vesselOf(id);
     expect(state().log.some((entry) => entry.reactionId === 'nahco3-heat')).toBe(true);
-    expect(vesselOf(id)?.portions.some((portion) => portion.chemicalId === 'NaHCO3')).toBe(false);
+    expect(vessel?.portions.some((portion) => portion.chemicalId === 'NaHCO3')).toBe(false);
+    expect(vessel?.portions.some((portion) => portion.chemicalId === 'Na2CO3')).toBe(true);
+    // The water the decomposition releases then clamps the tube near its boiling point.
+    expect(vessel?.temperatureC).toBeGreaterThan(80);
   });
 
-  it('collects gas through the delivery tube into a gas jar', () => {
-    const tube = state().addVessel('test-tube');
+  it('leaves the solid residue behind when a decomposition happens on the flame', () => {
+    const id = state().addVessel('test-tube');
+    state().addChemical(id, 'CaCO3', 3);
+    state().setHeating(id, true);
+    for (let step = 0; step < 90; step += 1) state().tick(1);
+
+    const vessel = vesselOf(id);
+    expect(vessel?.temperatureC).toBeGreaterThan(600);
+    expect(state().log.some((entry) => entry.reactionId === 'caco3-heat')).toBe(true);
+    expect(vessel?.portions.some((portion) => portion.chemicalId === 'CaO')).toBe(true);
+    expect(vessel?.gases.some((gas) => gas.chemicalId === 'CO2')).toBe(true);
+  });
+
+  it('burns a metal ribbon in air without boiling the metal away', () => {
+    const id = state().addVessel('evaporating-dish');
+    state().addChemical(id, 'Mg', 1);
+    state().addChemical(id, 'O2', 20);
+    state().setHeating(id, true);
+    for (let step = 0; step < 40; step += 1) state().tick(1);
+
+    const vessel = vesselOf(id);
+    expect(state().log.some((entry) => entry.reactionId === 'mg-o2-heat')).toBe(true);
+    expect(vessel?.portions.some((portion) => portion.chemicalId === 'MgO')).toBe(true);
+  });
+
+  it('collects gas through the delivery tube into a gas jar', () => {    const tube = state().addVessel('test-tube');
     state().addChemical(tube, 'Zn', 1);
     state().addChemical(tube, 'HCl', 10);
     expect(vesselOf(tube)?.gases.length).toBeGreaterThan(0);
@@ -269,5 +296,33 @@ describe('guided experiments', () => {
 
     state().stopExperiment();
     expect(state().activeExperiment).toBeNull();
+  });
+});
+
+describe('the notebook keeps what happens during a gas transfer or an electrolysis', () => {
+  it('records the reaction when collected carbon dioxide reaches limewater', () => {
+    const carbonate = state().addVessel('test-tube');
+    state().addChemical(carbonate, 'Na2CO3', 5);
+    state().addChemical(carbonate, 'HCl', 3);
+    const jar = state().addVessel('gas-jar');
+    const limewater = state().addVessel('test-tube');
+    state().addChemical(limewater, 'Ca(OH)2', 5);
+
+    state().collectGas(carbonate, jar);
+    state().collectGas(jar, limewater);
+
+    expect(vesselOf(limewater)?.portions.some((portion) => portion.chemicalId === 'CaCO3')).toBe(true);
+    expect(state().log.some((entry) => entry.reactionId === 'co2-caoh2')).toBe(true);
+  });
+
+  it('records the chemistry the electrolysis cell drives', () => {
+    const beaker = state().addVessel('beaker');
+    state().addChemical(beaker, 'NaCl', 20);
+    state().addChemical(beaker, 'H2O', 30);
+
+    state().attachElectrolysis(beaker, true);
+
+    expect(vesselOf(beaker)?.gases.map((gas) => gas.chemicalId)).toContain('Cl2');
+    expect(state().log.some((entry) => entry.reactionId === 'nacl-electrolysis')).toBe(true);
   });
 });

@@ -7,7 +7,9 @@ import {
   boilingPointFor,
   describeHeat,
   heatColour,
-  stepHeat
+  stepHeat,
+  volatilePortions,
+  volatileVolumeMl
 } from '../heatModel';
 import { makePortion } from '../reactionEngine';
 import { chemicalsById, chemical } from './helpers';
@@ -123,5 +125,29 @@ describe('readouts', () => {
   it('colours the thermometer', () => {
     expect(heatColour(20)).toBe('#8fb6d6');
     expect(heatColour(150)).toBe('#e0453c');
+  });
+});
+
+describe('volatile contents', () => {
+  it('counts only liquids as able to boil', () => {
+    const portions = [
+      makePortion(chemical('H2O'), 10),
+      makePortion(chemical('CaCO3'), 5),
+      makePortion(chemical('O2'), 20)
+    ];
+    expect(volatileVolumeMl(portions, chemicalsById)).toBe(10);
+    expect(volatilePortions(portions, chemicalsById).map((portion) => portion.chemicalId)).toEqual(['H2O']);
+  });
+
+  it('reads a dry solid as having nothing to boil', () => {
+    const portions = [makePortion(chemical('NH4Cl'), 5)];
+    expect(volatileVolumeMl(portions, chemicalsById)).toBe(0);
+    expect(boilingPointFor(portions, chemicalsById)).toBe(100);
+  });
+
+  it('still counts dissolved salts when a solution is heated', () => {
+    const water = boilingPointFor([makePortion(chemical('H2O'), 50)], chemicalsById);
+    const brine = boilingPointFor([makePortion(chemical('H2O'), 50), makePortion(chemical('NaCl'), 5)], chemicalsById);
+    expect(brine).toBeGreaterThan(water);
   });
 });

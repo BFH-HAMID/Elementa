@@ -1,5 +1,5 @@
 {
-  "count": 11,
+  "count": 31,
   "experiments": [
     {
       "order": 1,
@@ -1355,6 +1355,3393 @@
       "title_bn": "তাপ, স্ফুটন ও তাপীয় বিয়োজন",
       "aim_en": "See how temperature changes drive physical and chemical change.",
       "aim_bn": "তাপমাত্রার পরিবর্তন কীভাবে ভৌত ও রাসায়নিক পরিবর্তন ঘটায় তা দেখা।"
+    },
+    {
+      "order": 12,
+      "level": "class-9-10",
+      "durationMinutes": 9,
+      "apparatus": [
+        "test-tube",
+        "bunsen-burner",
+        "tripod-stand",
+        "test-tube-holder"
+      ],
+      "chemicals": [
+        "NH4Cl"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Ammonium chloride tube",
+            "label_bn": "অ্যামোনিয়াম ক্লোরাইড নল",
+            "portions": [
+              {
+                "chemicalId": "NH4Cl",
+                "mL": 3
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Light the burner under the dry white salt.",
+          "text_bn": "শুকনো সাদা লবণটির নিচে বার্নার জ্বালান।",
+          "check": {
+            "type": "heating",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "The solid does not melt — there is no liquid stage at all; the tube is already past 100 °C.",
+          "text_bn": "কঠিনটি গলে না — তরল অবস্থা আসেই না; নল ইতিমধ্যেই ১০০ °C ছাড়িয়ে গেছে।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 100
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "White smoke of ammonia and hydrogen chloride pours off the solid. It has sublimed.",
+          "text_bn": "কঠিন থেকে অ্যামোনিয়া ও হাইড্রোজেন ক্লোরাইডের সাদা ধোঁয়া বেরোয়। এটি ঊর্ধ্বপাতিত হয়েছে।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "nh4cl-heat"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "One of the vapours is ammonia — it is the alkaline gas of the pair.",
+          "text_bn": "বাষ্পের একটি অ্যামোনিয়া — জোড়ার মধ্যে এটিই ক্ষারীয় গ্যাস।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NH3"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "On the cooler part of the tube the vapour condenses straight back to the same white solid.",
+          "text_bn": "নলের ঠান্ডা অংশে বাষ্প সরাসরি আবার সেই সাদা কঠিন পদার্থে ঘনীভূত হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NH4Cl"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Ammonium chloride smoke and ammonia gas sting the eyes and throat. A real lab uses a fume cupboard and a very small sample.",
+        "bn": "অ্যামোনিয়াম ক্লোরাইডের ধোঁয়া ও অ্যামোনিয়া গ্যাস চোখ-গলায় জ্বালা করে। বাস্তব ল্যাবে ফিউম কাপবোর্ডে অল্প নমুনা নিয়ে কাজ করা হয়।"
+      },
+      "expectedReactions": [
+        "nh4cl-heat"
+      ],
+      "quiz": [
+        {
+          "question_en": "Sublimation is the change of a solid directly into…",
+          "question_bn": "ঊর্ধ্বপাতন হলো কঠিন পদার্থের সরাসরি রূপান্তর —",
+          "options_en": [
+            "A liquid",
+            "A vapour, and back to a solid",
+            "A solution",
+            "A different compound"
+          ],
+          "options_bn": [
+            "তরলে",
+            "বাষ্পে, এবং আবার কঠিনে",
+            "দ্রবণে",
+            "ভিন্ন যৌগে"
+          ],
+          "answer": 1,
+          "explain_en": "Ammonium chloride splits into NH₃ and HCl gases; on the cooler glass they recombine as the same white solid. No liquid stage appears.",
+          "explain_bn": "অ্যামোনিয়াম ক্লোরাইড ভেঙে NH₃ ও HCl গ্যাস হয়; ঠান্ডা কাচে আবার একই সাদা কঠিন পদার্থে মিলিত হয়। মাঝে তরল অবস্থা আসে না।"
+        },
+        {
+          "question_en": "Damp red litmus turns blue in which gas?",
+          "question_bn": "আর্দ্র লাল লিটমাস কোন গ্যাসে নীল হয়?",
+          "options_en": [
+            "Hydrogen chloride",
+            "Ammonia",
+            "Carbon dioxide",
+            "Oxygen"
+          ],
+          "options_bn": [
+            "হাইড্রোজেন ক্লোরাইড",
+            "অ্যামোনিয়া",
+            "কার্বন ডাই-অক্সাইড",
+            "অক্সিজেন"
+          ],
+          "answer": 1,
+          "explain_en": "Ammonia is the only common alkaline gas: it dissolves in the damp paper to give NH₄OH.",
+          "explain_bn": "অ্যামোনিয়াই সাধারণ ক্ষারীয় গ্যাস: আর্দ্র কাগজে দ্রবীভূত হয়ে NH₄OH দেয়।"
+        }
+      ],
+      "tags": [
+        "sublimation",
+        "gas-test",
+        "heating"
+      ],
+      "slug": "sublimation-nh4cl",
+      "title_en": "Sublimation of ammonium chloride",
+      "title_bn": "অ্যামোনিয়াম ক্লোরাইডের ঊর্ধ্বপাতন",
+      "aim_en": "Heat ammonium chloride and watch a solid turn straight into white smoke and back into a solid again, with no liquid stage.",
+      "aim_bn": "অ্যামোনিয়াম ক্লোরাইড গরম করে দেখুন কীভাবে কঠিন পদার্থ সরাসরি সাদা ধোঁয়ায় ও আবার কঠিনে ফিরে যায় — মাঝে কোনো তরল অবস্থা ছাড়াই।"
+    },
+    {
+      "order": 13,
+      "level": "class-11-12",
+      "durationMinutes": 12,
+      "apparatus": [
+        "conical-flask",
+        "dropper",
+        "gas-jar",
+        "delivery-tube",
+        "measuring-cylinder"
+      ],
+      "chemicals": [
+        "HCl",
+        "KMnO4",
+        "H2O",
+        "litmus"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Acid flask",
+            "label_bn": "অ্যাসিড ফ্লাস্ক",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 20
+              }
+            ]
+          },
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Gas jar",
+            "label_bn": "গ্যাস জার",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "The flask holds dilute hydrochloric acid — the source of chloride ions.",
+          "text_bn": "ফ্লাস্কে লঘু হাইড্রোক্লোরিক অ্যাসিড আছে — ক্লোরাইড আয়নের উৎস।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "HCl"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Run in the purple potassium permanganate solution. It is a strong oxidiser.",
+          "text_bn": "বেগুনি পটাশিয়াম পারম্যাঙ্গানেট দ্রবণ ঢালুন। এটি তীব্র জারক।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "kmno4-hcl"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "A greenish-yellow gas leaves the acid: chlorine, heavier than air.",
+          "text_bn": "অ্যাসিড থেকে হালকা সবুজ-হলুদ গ্যাস বেরোয়: ক্লোরিন, বাতাসের চেয়ে ভারী।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Cl2"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Collect the gas in the gas jar through the delivery tube.",
+          "text_bn": "ডেলিভারি টিউব দিয়ে গ্যাসটি গ্যাস জারে সংগ্রহ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Cl2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Add water to the jar to make chlorine water.",
+          "text_bn": "জারে পানি যোগ করে ক্লোরিন পানি তৈরি করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Chlorine water is acidic — it contains HCl and HClO.",
+          "text_bn": "ক্লোরিন পানি অম্লীয় — এতে HCl ও HClO আছে।",
+          "check": {
+            "type": "phRange",
+            "vessel": 1,
+            "max": 3
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "Add litmus: the acid reddens it at once, and the HClO bleaches the colour away.",
+          "text_bn": "লিটমাস যোগ করুন: অ্যাসিড সঙ্গে সঙ্গে লাল করে, আর HClO রঙ ব্লিচ করে মুছে দেয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "litmus"
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Chlorine damages the lungs and must never be made outside a fume cupboard. A real preparation uses very dilute acid, a tiny amount of permanganate and the flask in a fume hood.",
+        "bn": "ক্লোরিন ফুসফুসের ক্ষতি করে এবং ফিউম কাপবোর্ডের বাইরে কখনো তৈরি করা যায় না। বাস্তব প্রস্তুতিতে খুব লঘু অ্যাসিড, অল্প পারম্যাঙ্গানেট এবং ফিউম হুড ব্যবহার করা হয়।"
+      },
+      "expectedReactions": [
+        "kmno4-hcl",
+        "cl2-h2o"
+      ],
+      "quiz": [
+        {
+          "question_en": "Which gas is greenish-yellow and bleaches damp litmus paper?",
+          "question_bn": "কোন গ্যাসটি হালকা সবুজ-হলুদ এবং আর্দ্র লিটমাস কাগজ ব্লিচ করে?",
+          "options_en": [
+            "Oxygen",
+            "Chlorine",
+            "Hydrogen",
+            "Carbon dioxide"
+          ],
+          "options_bn": [
+            "অক্সিজেন",
+            "ক্লোরিন",
+            "হাইড্রোজেন",
+            "কার্বন ডাই-অক্সাইড"
+          ],
+          "answer": 1,
+          "explain_en": "Chlorine is the only common greenish-yellow gas; in water it forms HClO, which bleaches the dye.",
+          "explain_bn": "ক্লোরিনই সাধারণ ক্ষেত্রে একমাত্র হালকা সবুজ-হলুদ গ্যাস; পানিতে এটি HClO তৈরি করে, যা রঙ নষ্ট করে।"
+        },
+        {
+          "question_en": "What is the role of potassium permanganate in this preparation?",
+          "question_bn": "এই প্রস্তুতিতে পটাশিয়াম পারম্যাঙ্গানেটের ভূমিকা কী?",
+          "options_en": [
+            "It supplies chlorine",
+            "It oxidises HCl and releases Cl₂",
+            "It absorbs water",
+            "It works as a catalyst"
+          ],
+          "options_bn": [
+            "এটি ক্লোরিন যোগায়",
+            "এটি HCl-কে জারিত করে Cl₂ মুক্ত করে",
+            "এটি পানি শোষণ করে",
+            "এটি অনুঘটক হিসেবে কাজ করে"
+          ],
+          "answer": 1,
+          "explain_en": "2KMnO₄ + 16HCl → 2KCl + 2MnCl₂ + 5Cl₂ + 8H₂O. The chloride is oxidised from −1 to 0.",
+          "explain_bn": "2KMnO₄ + 16HCl → 2KCl + 2MnCl₂ + 5Cl₂ + 8H₂O। ক্লোরাইড −১ থেকে ০-তে জারিত হয়।"
+        }
+      ],
+      "tags": [
+        "gas-preparation",
+        "halogen",
+        "redox"
+      ],
+      "slug": "prepare-chlorine",
+      "title_en": "Preparation of chlorine",
+      "title_bn": "ক্লোরিন প্রস্তুতি",
+      "aim_en": "Oxidise hydrochloric acid with permanganate, collect the chlorine and test it with water and litmus.",
+      "aim_bn": "পারম্যাঙ্গানেট দিয়ে হাইড্রোক্লোরিক অ্যাসিড জারিত করে ক্লোরিন সংগ্রহ করা এবং পানি ও লিটমাস দিয়ে পরীক্ষা করা।"
+    },
+    {
+      "order": 14,
+      "level": "class-11-12",
+      "durationMinutes": 11,
+      "apparatus": [
+        "beaker",
+        "electrolysis-cell",
+        "dropper",
+        "gas-jar",
+        "delivery-tube"
+      ],
+      "chemicals": [
+        "NaCl",
+        "H2O",
+        "phenolphthalein"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "beaker",
+            "label_en": "Brine",
+            "label_bn": "লবণ পানি (ব্রাইন)",
+            "portions": [
+              {
+                "chemicalId": "NaCl",
+                "mL": 20
+              },
+              {
+                "chemicalId": "H2O",
+                "mL": 30
+              }
+            ]
+          },
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Gas jar",
+            "label_bn": "গ্যাস জার",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "The beaker holds concentrated brine — sodium chloride dissolved in water.",
+          "text_bn": "বিকারে ঘন ব্রাইন আছে — পানিতে দ্রবীভূত সোডিয়াম ক্লোরাইড।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NaCl"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Drag the electrolysis cell onto the beaker and close the circuit.",
+          "text_bn": "বিকারে তড়িৎ কোষটি বসিয়ে বর্তনী বন্ধ করুন।",
+          "check": {
+            "type": "electrolysis",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Chlorine is liberated at the anode and hydrogen at the cathode.",
+          "text_bn": "অ্যানোডে ক্লোরিন এবং ক্যাথোডে হাইড্রোজেন মুক্ত হয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "nacl-electrolysis"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Greenish-yellow chlorine collects above the anode.",
+          "text_bn": "অ্যানোডের উপরে হালকা সবুজ-হলুদ ক্লোরিন জমা হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Cl2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Hydrogen bubbles rise from the cathode. Collect the gases in the jar.",
+          "text_bn": "ক্যাথোড থেকে হাইড্রোজেনের বুদবুদ ওঠে। গ্যাসগুলো গ্যাস জারে সংগ্রহ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "H2"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Add phenolphthalein — the liquid around the cathode turns pink.",
+          "text_bn": "ফেনফথ্যালিন যোগ করুন — ক্যাথোডের আশপাশের দ্রবণ গোলাপি হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "phenolphthalein"
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "Sodium hydroxide has formed, so the solution is strongly alkaline.",
+          "text_bn": "সোডিয়াম হাইড্রোক্সাইড তৈরি হয়েছে, তাই দ্রবণটি তীব্র ক্ষারীয়।",
+          "check": {
+            "type": "phRange",
+            "vessel": 0,
+            "min": 11
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "The chlorine released is toxic and the hydrogen is flammable. A real cell runs in a fume cupboard with a low voltage and never in a sealed vessel.",
+        "bn": "নির্গত ক্লোরিন বিষাক্ত এবং হাইড্রোজেন দাহ্য। বাস্তব কোষ কম ভোল্টেজে, ফিউম কাপবোর্ডে চালানো হয় — কখনো বদ্ধ পাত্রে নয়।"
+      },
+      "expectedReactions": [
+        "nacl-electrolysis"
+      ],
+      "quiz": [
+        {
+          "question_en": "What are the products when concentrated brine is electrolysed?",
+          "question_bn": "ঘন ব্রাইন তড়িৎ বিশ্লেষণ করলে কী কী উৎপাদ পাওয়া যায়?",
+          "options_en": [
+            "Sodium, chlorine and oxygen",
+            "Sodium hydroxide, hydrogen and chlorine",
+            "Hydrogen and oxygen only",
+            "Sodium chloride and water"
+          ],
+          "options_bn": [
+            "সোডিয়াম, ক্লোরিন ও অক্সিজেন",
+            "সোডিয়াম হাইড্রোক্সাইড, হাইড্রোজেন ও ক্লোরিন",
+            "কেবল হাইড্রোজেন ও অক্সিজেন",
+            "সোডিয়াম ক্লোরাইড ও পানি"
+          ],
+          "answer": 1,
+          "explain_en": "This is the chlor-alkali process: 2NaCl + 2H₂O → 2NaOH + H₂ + Cl₂, the basis of the alkali industry.",
+          "explain_bn": "এটিই ক্লোর-ক্ষার প্রক্রিয়া: 2NaCl + 2H₂O → 2NaOH + H₂ + Cl₂, ক্ষার শিল্পের ভিত্তি।"
+        },
+        {
+          "question_en": "Why does phenolphthalein turn pink near the cathode?",
+          "question_bn": "ক্যাথোডের কাছে ফেনফথ্যালিন গোলাপি হয় কেন?",
+          "options_en": [
+            "Hydroxide ions build up there",
+            "Chlorine dissolves there",
+            "Hydrogen is acidic",
+            "The cathode is hot"
+          ],
+          "options_bn": [
+            "সেখানে হাইড্রোক্সাইড আয়ন জমা হয়",
+            "সেখানে ক্লোরিন দ্রবীভূত হয়",
+            "হাইড্রোজেন অম্লীয়",
+            "ক্যাথোড গরম"
+          ],
+          "answer": 0,
+          "explain_en": "Water is reduced at the cathode, leaving OH⁻ behind; phenolphthalein is pink above pH ≈ 8.2.",
+          "explain_bn": "ক্যাথোডে পানি বিজারিত হয়ে পিছনে OH⁻ রেখে যায়; pH ≈ ৮.২-এর উপরে ফেনফথ্যালিন গোলাপি হয়।"
+        }
+      ],
+      "tags": [
+        "electrolysis",
+        "industrial",
+        "chlor-alkali"
+      ],
+      "slug": "electrolysis-brine",
+      "title_en": "Electrolysis of brine",
+      "title_bn": "ব্রাইনের তড়িৎ বিশ্লেষণ",
+      "aim_en": "Electrolyse concentrated brine and identify the three products of the chlor-alkali process.",
+      "aim_bn": "ঘন ব্রাইন তড়িৎ বিশ্লেষণ করে ক্লোর-ক্ষার প্রক্রিয়ার তিনটি উৎপাদ শনাক্ত করা।"
+    },
+    {
+      "order": 15,
+      "level": "class-9-10",
+      "durationMinutes": 10,
+      "apparatus": [
+        "beaker",
+        "spatula",
+        "gas-jar",
+        "delivery-tube",
+        "dropper"
+      ],
+      "chemicals": [
+        "H2O",
+        "Na",
+        "phenolphthalein"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "beaker",
+            "label_en": "Cold water",
+            "label_bn": "ঠান্ডা পানি",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 40
+              }
+            ]
+          },
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Gas jar",
+            "label_bn": "গ্যাস জার",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "The beaker holds ordinary cold water.",
+          "text_bn": "বিকারে সাধারণ ঠান্ডা পানি আছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Drop in one small piece of sodium — it darts about, hissing and fizzing.",
+          "text_bn": "এক টুকরো ছোট সোডিয়াম ফেলুন — এটি ছোটাছুটি করে, হিসহিস ও ফুটতে থাকে।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "na-h2o"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "The reaction is violently exothermic: the water becomes far hotter than the air.",
+          "text_bn": "বিক্রিয়াটি প্রচণ্ড তাপোৎপাদী: পানি বাতাসের চেয়ে অনেক গরম হয়ে যায়।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 60
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "The gas released is hydrogen.",
+          "text_bn": "নির্গত গ্যাসটি হাইড্রোজেন।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Collect the hydrogen in the gas jar for the pop test.",
+          "text_bn": "পপ পরীক্ষার জন্য হাইড্রোজেন গ্যাস জারে সংগ্রহ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "H2"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Add phenolphthalein to the solution left behind.",
+          "text_bn": "পিছনে থাকা দ্রবণে ফেনফথ্যালিন যোগ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "phenolphthalein"
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "The solution is sodium hydroxide: pH well above 11, one of the strongest alkalis we use.",
+          "text_bn": "দ্রবণটি সোডিয়াম হাইড্রোক্সাইড: pH ১১-র অনেক উপরে, ব্যবহৃত সবচেয়ে তীব্র ক্ষারগুলোর একটি।",
+          "check": {
+            "type": "phRange",
+            "vessel": 0,
+            "min": 11
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Sodium reacts explosively with water and can catch fire or spit molten metal. It is stored under oil, handled only with forceps, and never with bare hands or near water in bulk.",
+        "bn": "সোডিয়াম পানির সঙ্গে বিস্ফোরকভাবে বিক্রিয়া করে, আগুন ধরতে পারে বা গলিত ধাতু ছিটাতে পারে। এটি তেলে সংরক্ষণ করা হয়, কেবল ফরসেপ দিয়ে ধরা হয় — খালি হাতে বা বেশি পানির কাছে কখনো নয়।"
+      },
+      "expectedReactions": [
+        "na-h2o"
+      ],
+      "quiz": [
+        {
+          "question_en": "Which gas is released when sodium reacts with cold water?",
+          "question_bn": "সোডিয়াম ঠান্ডা পানির সঙ্গে বিক্রিয়া করলে কোন গ্যাস নির্গত হয়?",
+          "options_en": [
+            "Oxygen",
+            "Hydrogen",
+            "Chlorine",
+            "Carbon dioxide"
+          ],
+          "options_bn": [
+            "অক্সিজেন",
+            "হাইড্রোজেন",
+            "ক্লোরিন",
+            "কার্বন ডাই-অক্সাইড"
+          ],
+          "answer": 1,
+          "explain_en": "2Na + 2H₂O → 2NaOH + H₂. The hydrogen pops with a lit splint.",
+          "explain_bn": "2Na + 2H₂O → 2NaOH + H₂। জ্বলন্ত কাঠিতে হাইড্রোজেন পট শব্দ করে।"
+        },
+        {
+          "question_en": "Why is sodium kept under kerosene or oil?",
+          "question_bn": "সোডিয়াম কেন কেরোসিন বা তেলে রাখা হয়?",
+          "options_en": [
+            "To keep it cool",
+            "Because it reacts with the moisture and oxygen of air",
+            "To make it soft",
+            "Because oil is a catalyst"
+          ],
+          "options_bn": [
+            "ঠান্ডা রাখতে",
+            "কারণ এটি বাতাসের আর্দ্রতা ও অক্সিজেনের সঙ্গে বিক্রিয়া করে",
+            "নরম করতে",
+            "কারণ তেল অনুঘটক"
+          ],
+          "answer": 1,
+          "explain_en": "Air always carries water vapour and oxygen, and sodium attacks both, so it must be kept under oil.",
+          "explain_bn": "বাতাসে সর্বদা জলীয়বাষ্প ও অক্সিজেন থাকে, আর সোডিয়াম দুটোর সঙ্গেই বিক্রিয়া করে, তাই তেলে রাখতে হয়।"
+        }
+      ],
+      "tags": [
+        "metal",
+        "alkali-metal",
+        "exothermic"
+      ],
+      "slug": "sodium-water",
+      "title_en": "Sodium in water",
+      "title_bn": "পানিতে সোডিয়ামের বিক্রিয়া",
+      "aim_en": "Drop a small piece of sodium into cold water, collect the hydrogen and show that the solution is a strong alkali.",
+      "aim_bn": "ঠান্ডা পানিতে ছোট সোডিয়াম টুকরো ফেলে হাইড্রোজেন সংগ্রহ করা এবং দ্রবণটি তীব্র ক্ষারীয় তা প্রমাণ করা।"
+    },
+    {
+      "order": 16,
+      "level": "class-11-12",
+      "durationMinutes": 12,
+      "apparatus": [
+        "test-tube",
+        "dropper",
+        "gas-jar",
+        "delivery-tube",
+        "spatula"
+      ],
+      "chemicals": [
+        "HNO3",
+        "Cu",
+        "Zn"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Copper and acid",
+            "label_bn": "কপার ও অ্যাসিড",
+            "portions": [
+              {
+                "chemicalId": "HNO3",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Zinc and acid",
+            "label_bn": "জিঙ্ক ও অ্যাসিড",
+            "portions": [
+              {
+                "chemicalId": "HNO3",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Gas jar",
+            "label_bn": "গ্যাস জার",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "The first tube holds dilute nitric acid.",
+          "text_bn": "প্রথম নলে লঘু নাইট্রিক অ্যাসিড আছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "HNO3"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add copper turnings — a metal below hydrogen, yet it dissolves in this acid.",
+          "text_bn": "কপারের টুকরো যোগ করুন — হাইড্রোজেনের নিচের ধাতু, তবুও এই অ্যাসিডে দ্রবীভূত হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Cu"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "The mixture warms and copper(II) nitrate forms: Cu + 4HNO₃ → Cu(NO₃)₂ + 2NO₂ + 2H₂O.",
+          "text_bn": "মিশ্রণ উষ্ণ হয় এবং কপার(II) নাইট্রেট তৈরি হয়: Cu + 4HNO₃ → Cu(NO₃)₂ + 2NO₂ + 2H₂O।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "cu-hno3"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Dense brown nitrogen dioxide pours off — the acid is reduced, not the metal exchanged.",
+          "text_bn": "ঘন বাদামি নাইট্রোজেন ডাই-অক্সাইড বেরোয় — অ্যাসিড বিজারিত হয়, ধাতুর প্রতিস্থাপন নয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NO2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Collect the brown gas in the gas jar.",
+          "text_bn": "বাদামি গ্যাসটি গ্যাস জারে সংগ্রহ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 2,
+            "chemicalId": "NO2"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Now add zinc to the second tube of acid.",
+          "text_bn": "এবার দ্বিতীয় নলের অ্যাসিডে জিঙ্ক যোগ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Zn"
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "Zinc reduces the acid further, so colourless nitric oxide comes off this time.",
+          "text_bn": "জিঙ্ক অ্যাসিডকে আরও বিজারিত করে, তাই এবার বর্ণহীন নাইট্রিক অক্সাইড বেরোয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "zn-hno3"
+          }
+        },
+        {
+          "order": 8,
+          "text_en": "A colourless gas that browns the instant it meets air is nitric oxide, NO.",
+          "text_bn": "বাতাসের সংস্পর্শে সঙ্গে সঙ্গে বাদামি হয়ে যাওয়া বর্ণহীন গ্যাসটিই নাইট্রিক অক্সাইড, NO।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "NO"
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Nitrogen dioxide is a poisonous brown gas that scars the lungs; nitric acid burns skin. The real experiment is done in a fume cupboard with the tube pointed away from everybody.",
+        "bn": "নাইট্রোজেন ডাই-অক্সাইড ফুসফুসের ক্ষতি করা বিষাক্ত বাদামি গ্যাস; নাইট্রিক অ্যাসিড ত্বক পোড়ায়। বাস্তব পরীক্ষা ফিউম কাপবোর্ডে, নলের মুখ সবার থেকে দূরে রেখে করা হয়।"
+      },
+      "expectedReactions": [
+        "cu-hno3",
+        "zn-hno3"
+      ],
+      "quiz": [
+        {
+          "question_en": "Dilute nitric acid dissolves copper, although copper is below hydrogen. Why?",
+          "question_bn": "লঘু নাইট্রিক অ্যাসিড কপারকে দ্রবীভূত করে, যদিও কপার হাইড্রোজেনের নিচে। কেন?",
+          "options_en": [
+            "Copper floats on the acid",
+            "Nitric acid is a strong oxidiser, not just a source of H⁺",
+            "Copper reacts with water",
+            "The acid is hot"
+          ],
+          "options_bn": [
+            "কপার অ্যাসিডের উপরে ভাসে",
+            "নাইট্রিক অ্যাসিড কেবল H⁺-এর উৎস নয়, শক্তিশালী জারকও",
+            "কপার পানির সঙ্গে বিক্রিয়া করে",
+            "অ্যাসিড গরম"
+          ],
+          "answer": 1,
+          "explain_en": "With copper it is the nitrate ion that is reduced, giving NO₂ — no hydrogen is released at all.",
+          "explain_bn": "কপারের ক্ষেত্রে নাইট্রেট আয়নই বিজারিত হয়ে NO₂ দেয় — হাইড্রোজেন আদৌ নির্গত হয় না।"
+        },
+        {
+          "question_en": "Why does the colourless gas from zinc turn brown in air?",
+          "question_bn": "জিঙ্ক থেকে পাওয়া বর্ণহীন গ্যাস বাতাসে বাদামি হয় কেন?",
+          "options_en": [
+            "NO oxidises to brown NO₂",
+            "It combines with water vapour",
+            "It burns",
+            "It is chlorine"
+          ],
+          "options_bn": [
+            "NO জারিত হয়ে বাদামি NO₂ হয়",
+            "এটি জলীয়বাষ্পের সঙ্গে মিশে যায়",
+            "এটি জ্বলে যায়",
+            "এটি ক্লোরিন"
+          ],
+          "answer": 0,
+          "explain_en": "2NO + O₂ → 2NO₂, which is why NO is always collected and observed with care.",
+          "explain_bn": "2NO + O₂ → 2NO₂, তাই NO সর্বদা সতর্কতার সঙ্গে সংগ্রহ ও পর্যবেক্ষণ করতে হয়।"
+        }
+      ],
+      "tags": [
+        "redox",
+        "nitric-acid",
+        "gas-test"
+      ],
+      "slug": "copper-nitric-acid",
+      "title_en": "Action of nitric acid on copper and zinc",
+      "title_bn": "কপার ও জিঙ্কের উপর নাইট্রিক অ্যাসিডের ক্রিয়া",
+      "aim_en": "Let dilute nitric acid act on copper and on zinc and identify the very different oxides of nitrogen it gives off.",
+      "aim_bn": "লঘু নাইট্রিক অ্যাসিড কপার ও জিঙ্কের উপর ক্রিয়া করিয়ে নির্গত ভিন্ন ভিন্ন নাইট্রোজেন অক্সাইড শনাক্ত করা।"
+    },
+    {
+      "order": 17,
+      "level": "honours",
+      "durationMinutes": 14,
+      "apparatus": [
+        "test-tube",
+        "dropper",
+        "burette",
+        "measuring-cylinder"
+      ],
+      "chemicals": [
+        "FeSO4",
+        "H2SO4",
+        "KMnO4",
+        "K2Cr2O7"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Iron(II) tube A",
+            "label_bn": "আয়রন(II) নল ক",
+            "portions": [
+              {
+                "chemicalId": "FeSO4",
+                "mL": 5
+              },
+              {
+                "chemicalId": "H2SO4",
+                "mL": 2
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Iron(II) tube B",
+            "label_bn": "আয়রন(II) নল খ",
+            "portions": [
+              {
+                "chemicalId": "FeSO4",
+                "mL": 5
+              },
+              {
+                "chemicalId": "H2SO4",
+                "mL": 2
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Tube A holds pale green iron(II) sulphate, acidified with dilute sulphuric acid.",
+          "text_bn": "নল ক-তে হালকা সবুজ আয়রন(II) সালফেট আছে, লঘু সালফিউরিক অ্যাসিডে অম্লীয় করা।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "FeSO4"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "The acid makes the medium acidic — this titration only works in acid.",
+          "text_bn": "অ্যাসিড মাধ্যমটিকে অম্লীয় করে — এই টাইট্রেশন কেবল অম্লীয় মাধ্যমে হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2SO4"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Run in the permanganate drop by drop: it is its own indicator and the purple colour vanishes as it is reduced.",
+          "text_bn": "পারম্যাঙ্গানেট বিন্দু বিন্দু করে ঢালুন: এটি নিজেই সূচক, বিজারিত হওয়ায় বেগুনি রঙ মিলিয়ে যায়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "kmno4-feso4"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Almost colourless manganese(II) sulphate is left in the tube.",
+          "text_bn": "নলে প্রায় বর্ণহীন ম্যাঙ্গানিজ(II) সালফেট পড়ে থাকে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "MnSO4"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Now add the orange dichromate solution to tube B.",
+          "text_bn": "এবার নল খ-তে কমলা ডাইক্রোমেট দ্রবণ যোগ করুন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "k2cr2o7-feso4"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Chromium(VI) is reduced to chromium(III), so the orange turns green.",
+          "text_bn": "ক্রোমিয়াম(VI) বিজারিত হয়ে ক্রোমিয়াম(III) হয়, তাই কমলা রঙ সবুজ হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Cr2(SO4)3"
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "Potassium sulphate is the other soluble product in the green solution.",
+          "text_bn": "সবুজ দ্রবণে অন্যটি দ্রবণীয় উৎপাদ — পটাশিয়াম সালফেট।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "K2SO4"
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Acidified permanganate and, above all, dichromate are corrosive oxidisers; dichromate is toxic and a known carcinogen. Real titrations use gloves, goggles and a pipette filler.",
+        "bn": "অম্লীয় পারম্যাঙ্গানেট এবং বিশেষত ডাইক্রোমেট তীব্র জারক ও ক্ষয়কারী; ডাইক্রোমেট বিষাক্ত ও ক্যান্সার সৃষ্টিকারী। বাস্তবে গ্লাভস, গগলস ও পিপেট ফিলার ব্যবহার করতে হয়।"
+      },
+      "expectedReactions": [
+        "kmno4-feso4",
+        "k2cr2o7-feso4"
+      ],
+      "quiz": [
+        {
+          "question_en": "In this titration, potassium permanganate acts as…",
+          "question_bn": "এই টাইট্রেশনে পটাশিয়াম পারম্যাঙ্গানেটের ভূমিকা —",
+          "options_en": [
+            "A reducing agent",
+            "An oxidising agent",
+            "A catalyst",
+            "An indicator only"
+          ],
+          "options_bn": [
+            "বিজারক পদার্থ",
+            "জারক পদার্থ",
+            "অনুঘটক",
+            "কেবল সূচক"
+          ],
+          "answer": 1,
+          "explain_en": "It oxidises Fe²⁺ to Fe³⁺ and is itself reduced to almost colourless Mn²⁺ — which is why no extra indicator is needed.",
+          "explain_bn": "এটি Fe²⁺-কে Fe³⁺-এ জারিত করে এবং নিজে বিজারিত হয়ে প্রায় বর্ণহীন Mn²⁺ হয় — তাই আলাদা সূচক লাগে না।"
+        },
+        {
+          "question_en": "What colour change shows that dichromate has been reduced?",
+          "question_bn": "ডাইক্রোমেট বিজারিত হয়েছে — তা কোন রঙের পরিবর্তনে বোঝা যায়?",
+          "options_en": [
+            "Purple to colourless",
+            "Orange to green",
+            "Blue to pink",
+            "Yellow to white"
+          ],
+          "options_bn": [
+            "বেগুনি থেকে বর্ণহীন",
+            "কমলা থেকে সবুজ",
+            "নীল থেকে গোলাপি",
+            "হলুদ থেকে সাদা"
+          ],
+          "answer": 1,
+          "explain_en": "Cr₂O₇²⁻ (orange) is reduced to Cr³⁺ (green) as it oxidises iron(II) to iron(III).",
+          "explain_bn": "Fe²⁺-কে Fe³⁺-এ জারিত করার সময় Cr₂O₇²⁻ (কমলা) বিজারিত হয়ে Cr³⁺ (সবুজ) হয়।"
+        }
+      ],
+      "tags": [
+        "redox",
+        "titration",
+        "volumetric-analysis"
+      ],
+      "slug": "oxidising-agents",
+      "title_en": "Oxidising action of permanganate and dichromate",
+      "title_bn": "পারম্যাঙ্গানেট ও ডাইক্রোমেটের জারক ক্রিয়া",
+      "aim_en": "Titrate acidified iron(II) sulphate with potassium permanganate and potassium dichromate and follow the colour changes that mark the end point.",
+      "aim_bn": "অম্লীয় আয়রন(II) সালফেটে পটাশিয়াম পারম্যাঙ্গানেট ও ডাইক্রোমেট যোগ করে শেষ বিন্দু চিহ্নিত করা রঙের পরিবর্তন অনুসরণ করা।"
+    },
+    {
+      "order": 18,
+      "level": "class-11-12",
+      "durationMinutes": 9,
+      "apparatus": [
+        "test-tube",
+        "dropper"
+      ],
+      "chemicals": [
+        "KI",
+        "FeCl3"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Potassium iodide",
+            "label_bn": "পটাশিয়াম আয়োডাইড",
+            "portions": [
+              {
+                "chemicalId": "KI",
+                "mL": 3
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "The tube holds colourless potassium iodide solution.",
+          "text_bn": "নলে বর্ণহীন পটাশিয়াম আয়োডাইড দ্রবণ আছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "KI"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add yellow-brown iron(III) chloride: Fe³⁺ is a strong enough oxidiser to free iodine.",
+          "text_bn": "হলুদ-বাদামি আয়রন(III) ক্লোরাইড যোগ করুন: Fe³⁺ যথেষ্ট শক্তিশালী জারক, আয়োডিন মুক্ত করে।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "fecl3-ki"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "The mixture darkens as violet-brown iodine is set free.",
+          "text_bn": "ভায়োলেট-বাদামি আয়োডিন মুক্ত হওয়ায় মিশ্রণটি গাঢ় হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "I2"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Iodide is the reducing agent: it is oxidised and iron(III) is reduced to iron(II).",
+          "text_bn": "আয়োডাইড বিজারক: এটি জারিত হয় এবং আয়রন(III) বিজারিত হয়ে আয়রন(II) হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "FeCl2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Some iron(III) chloride is left over — that is the pale yellow colour still in the tube.",
+          "text_bn": "কিছু আয়রন(III) ক্লোরাইড উদ্বৃত্ত থাকে — নলে যে হালকা হলুদ রঙ দেখা যায় তা-ই।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "FeCl3"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Iodine stains skin and clothing and its vapour irritates the eyes; iron(III) chloride is corrosive. Work with small volumes and rinse at once.",
+        "bn": "আয়োডিন ত্বক ও কাপড়ে দাগ ফেলে এবং এর বাষ্প চোখে জ্বালা করে; আয়রন(III) ক্লোরাইড ক্ষয়কারী। অল্প পরিমাণে কাজ করুন এবং সঙ্গে সঙ্গে ধুয়ে ফেলুন।"
+      },
+      "expectedReactions": [
+        "fecl3-ki"
+      ],
+      "quiz": [
+        {
+          "question_en": "Which species is oxidised in FeCl₃ + KI?",
+          "question_bn": "FeCl₃ + KI বিক্রিয়ায় কোনটি জারিত হয়?",
+          "options_en": [
+            "Fe³⁺",
+            "I⁻",
+            "Cl⁻",
+            "K⁺"
+          ],
+          "options_bn": [
+            "Fe³⁺",
+            "I⁻",
+            "Cl⁻",
+            "K⁺"
+          ],
+          "answer": 1,
+          "explain_en": "Iodide ions lose electrons to become I₂; the iron(III) ions gain them and become iron(II).",
+          "explain_bn": "আয়োডাইড আয়ন ইলেকট্রন হারিয়ে I₂ হয়; আয়রন(III) আয়ন তা গ্রহণ করে আয়রন(II) হয়।"
+        },
+        {
+          "question_en": "Which reagent turns the mixture blue-black, confirming iodine?",
+          "question_bn": "কোন বিকারক মিশ্রণটিকে নীল-কালো করে আয়োডিন নিশ্চিত করে?",
+          "options_en": [
+            "Limewater",
+            "Starch solution",
+            "Litmus",
+            "Sodium chloride"
+          ],
+          "options_bn": [
+            "চুনের পানি",
+            "স্টার্চ দ্রবণ",
+            "লিটমাস",
+            "সোডিয়াম ক্লোরাইড"
+          ],
+          "answer": 1,
+          "explain_en": "Iodine and starch give the familiar blue-black complex — the standard iodine test.",
+          "explain_bn": "আয়োডিন ও স্টার্চ মিলে চেনা নীল-কালো জটিল যৌগ দেয় — এটিই আয়োডিনের আদর্শ পরীক্ষা।"
+        }
+      ],
+      "tags": [
+        "redox",
+        "iodine",
+        "halogen"
+      ],
+      "slug": "iodine-liberation",
+      "title_en": "Liberation of iodine by iron(III) chloride",
+      "title_bn": "আয়রন(III) ক্লোরাইড দিয়ে আয়োডিন নিষ্কাশন",
+      "aim_en": "Show that iron(III) chloride is a strong enough oxidiser to displace iodine from potassium iodide, and identify the iodine formed.",
+      "aim_bn": "আয়রন(III) ক্লোরাইড যথেষ্ট শক্তিশালী জারক — তা পটাশিয়াম আয়োডাইড থেকে আয়োডিন মুক্ত করে, এবং তৈরি আয়োডিন শনাক্ত করা।"
+    },
+    {
+      "order": 19,
+      "level": "class-11-12",
+      "durationMinutes": 10,
+      "apparatus": [
+        "test-tube",
+        "dropper",
+        "bunsen-burner",
+        "tripod-stand",
+        "test-tube-holder"
+      ],
+      "chemicals": [
+        "Pb(NO3)2",
+        "KI"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Lead nitrate solution",
+            "label_bn": "লেড নাইট্রেট দ্রবণ",
+            "portions": [
+              {
+                "chemicalId": "Pb(NO3)2",
+                "mL": 5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "The tube holds colourless lead nitrate solution.",
+          "text_bn": "নলে বর্ণহীন লেড নাইট্রেট দ্রবণ আছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Pb(NO3)2"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add potassium iodide solution drop by drop.",
+          "text_bn": "বিন্দু বিন্দু করে পটাশিয়াম আয়োডাইড দ্রবণ যোগ করুন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "pbno32-ki"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "A brilliant golden-yellow precipitate of lead iodide settles out.",
+          "text_bn": "উজ্জ্বল সোনালি-হলুদ লেড আয়োডাইডের অধঃক্ষেপ পড়ে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "PbI2"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Heat the tube gently on the burner.",
+          "text_bn": "নলটি বার্নারে অল্প আঁচে গরম করুন।",
+          "check": {
+            "type": "heating",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "The solubility of PbI₂ rises steeply with temperature, so the precipitate dissolves in the hot water.",
+          "text_bn": "তাপমাত্রার সঙ্গে PbI₂-এর দ্রাব্যতা দ্রুত বাড়ে, তাই গরম পানিতে অধঃক্ষেপটি দ্রবীভূত হয়।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 90
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "On cooling, shining golden plates crystallise again — the demonstration called golden rain. Potassium nitrate is the soluble product left in the solution above them.",
+          "text_bn": "ঠান্ডা হলে আবার চকচকে সোনালি ফলক কেলাসিত হয় — এই পরীক্ষার নামই সোনালি বৃষ্টি। উপরের দ্রবণে দ্রবণীয় উৎপাদ পটাশিয়াম নাইট্রেট থাকে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "KNO3"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Lead compounds are toxic and accumulate in the body. In a real lab the filtrate and the solid are both collected as lead waste — never poured down the sink.",
+        "bn": "সীসার যৌগ বিষাক্ত এবং শরীরে জমা হয়। বাস্তব ল্যাবে পরিস্রুত দ্রবণ ও কঠিন পদার্থ — দুটোই সীসার বর্জ্য হিসেবে সংগ্রহ করা হয়, নর্দমায় ফেলা হয় না।"
+      },
+      "expectedReactions": [
+        "pbno32-ki"
+      ],
+      "quiz": [
+        {
+          "question_en": "Why is this demonstration called golden rain?",
+          "question_bn": "এই পরীক্ষার নাম সোনালি বৃষ্টি কেন?",
+          "options_en": [
+            "The solution is gold-coloured",
+            "Shining golden plates of PbI₂ crystallise as the tube cools",
+            "A gold salt is used",
+            "It rains inside the tube"
+          ],
+          "options_bn": [
+            "দ্রবণটি সোনালি রঙের",
+            "ঠান্ডা হলে PbI₂-এর চকচকে সোনালি ফলক কেলাসিত হয়",
+            "সোনার লবণ ব্যবহৃত হয়",
+            "নলের ভিতরে বৃষ্টি হয়"
+          ],
+          "answer": 1,
+          "explain_en": "Lead iodide is very insoluble in cold water but dissolves in hot water; cooling makes it crystallise as bright golden plates.",
+          "explain_bn": "লেড আয়োডাইড ঠান্ডা পানিতে খুব অদ্রবণীয় কিন্তু গরম পানিতে দ্রবণীয়; ঠান্ডা হলে তা উজ্জ্বল সোনালি ফলক হিসেবে কেলাসিত হয়।"
+        },
+        {
+          "question_en": "Which compound makes up the precipitate?",
+          "question_bn": "অধঃক্ষেপটি কোন যৌগ দিয়ে গঠিত?",
+          "options_en": [
+            "KNO₃",
+            "PbI₂",
+            "Pb(NO₃)₂ only",
+            "Water"
+          ],
+          "options_bn": [
+            "KNO₃",
+            "PbI₂",
+            "কেবল Pb(NO₃)₂",
+            "পানি"
+          ],
+          "answer": 1,
+          "explain_en": "Pb²⁺ from lead nitrate and I⁻ from potassium iodide meet and leave the solution as insoluble PbI₂.",
+          "explain_bn": "লেড নাইট্রেটের Pb²⁺ ও পটাশিয়াম আয়োডাইডের I⁻ মিলিত হয়ে অদ্রবণীয় PbI₂ হিসেবে দ্রবণ ছেড়ে যায়।"
+        }
+      ],
+      "tags": [
+        "precipitation",
+        "recrystallisation",
+        "solubility"
+      ],
+      "slug": "golden-rain",
+      "title_en": "Golden rain: preparation of lead iodide",
+      "title_bn": "সোনালি বৃষ্টি: লেড আয়োডাইড প্রস্তুতি",
+      "aim_en": "Precipitate bright yellow lead iodide, dissolve it in hot water and recrystallise it — the classic golden rain demonstration.",
+      "aim_bn": "উজ্জ্বল হলুদ লেড আয়োডাইড অধঃক্ষেপ করা, গরম পানিতে দ্রবীভূত করা ও পুনর্কেলাসন করা — ক্লাসিক সোনালি বৃষ্টি পরীক্ষা।"
+    },
+    {
+      "order": 20,
+      "level": "class-11-12",
+      "durationMinutes": 14,
+      "apparatus": [
+        "test-tube",
+        "dropper",
+        "bunsen-burner",
+        "tripod-stand",
+        "test-tube-holder"
+      ],
+      "chemicals": [
+        "CuSO4",
+        "FeCl3",
+        "ZnSO4",
+        "NaOH"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Copper sulphate",
+            "label_bn": "কপার সালফেট",
+            "portions": [
+              {
+                "chemicalId": "CuSO4",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Iron(III) chloride",
+            "label_bn": "আয়রন(III) ক্লোরাইড",
+            "portions": [
+              {
+                "chemicalId": "FeCl3",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Zinc sulphate",
+            "label_bn": "জিঙ্ক সালফেট",
+            "portions": [
+              {
+                "chemicalId": "ZnSO4",
+                "mL": 5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Add sodium hydroxide solution to the blue copper sulphate solution.",
+          "text_bn": "নীল কপার সালফেট দ্রবণে সোডিয়াম হাইড্রোক্সাইড দ্রবণ যোগ করুন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "cuso4-naoh"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "A pale blue gelatinous precipitate of copper hydroxide appears.",
+          "text_bn": "কপার হাইড্রোক্সাইডের হালকা নীল আঠালো অধঃক্ষেপ পড়ে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Cu(OH)2"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Now add alkali to the yellow-brown iron(III) chloride.",
+          "text_bn": "এবার হলুদ-বাদামি আয়রন(III) ক্লোরাইডে ক্ষার যোগ করুন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "fecl3-naoh"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "A rust-brown precipitate of iron(III) hydroxide settles — iron(III) is unmistakable.",
+          "text_bn": "আয়রন(III) হাইড্রোক্সাইডের মরচে-বাদামি অধঃক্ষেপ পড়ে — আয়রন(III) নিশ্চিত।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Fe(OH)3"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Add alkali to the colourless zinc sulphate solution.",
+          "text_bn": "বর্ণহীন জিঙ্ক সালফেট দ্রবণে ক্ষার যোগ করুন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "znso4-naoh"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "A white precipitate of zinc hydroxide forms.",
+          "text_bn": "জিঙ্ক হাইড্রোক্সাইডের সাদা অধঃক্ষেপ তৈরি হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 2,
+            "chemicalId": "Zn(OH)2"
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "Keep adding alkali to the zinc tube: the precipitate dissolves again — zinc hydroxide is amphoteric.",
+          "text_bn": "জিঙ্কের নলে আরও ক্ষার যোগ করুন: অধঃক্ষেপ আবার দ্রবীভূত হয় — জিঙ্ক হাইড্রোক্সাইড উভধর্মী।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "znoh2-naoh"
+          }
+        },
+        {
+          "order": 8,
+          "text_en": "Finish by heating the tube of copper hydroxide.",
+          "text_bn": "শেষে কপার হাইড্রোক্সাইডের নলটি গরম করুন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "cuoh2-heat"
+          }
+        },
+        {
+          "order": 9,
+          "text_en": "The blue hydroxide decomposes to black copper(II) oxide, so copper is confirmed.",
+          "text_bn": "নীল হাইড্রোক্সাইড ভেঙে কালো কপার(II) অক্সাইড হয়, ফলে কপার নিশ্চিত হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "CuO"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Sodium hydroxide is caustic and destroys skin and eyes; the heavy-metal salt solutions must not be poured away. Real work uses goggles, gloves, small volumes and a waste bottle.",
+        "bn": "সোডিয়াম হাইড্রোক্সাইড ক্ষয়কারী — ত্বক ও চোখ নষ্ট করে; ভারী ধাতুর লবণ দ্রবণ ফেলে দেওয়া যাবে না। বাস্তবে গগলস, গ্লাভস, অল্প পরিমাণ ও বর্জ্য বোতল ব্যবহার করতে হয়।"
+      },
+      "expectedReactions": [
+        "cuso4-naoh",
+        "fecl3-naoh",
+        "znso4-naoh",
+        "znoh2-naoh",
+        "cuoh2-heat"
+      ],
+      "quiz": [
+        {
+          "question_en": "Which of these hydroxides is amphoteric?",
+          "question_bn": "এদের মধ্যে কোন হাইড্রোক্সাইডটি উভধর্মী?",
+          "options_en": [
+            "Cu(OH)₂",
+            "Fe(OH)₃",
+            "Zn(OH)₂",
+            "NaOH"
+          ],
+          "options_bn": [
+            "Cu(OH)₂",
+            "Fe(OH)₃",
+            "Zn(OH)₂",
+            "NaOH"
+          ],
+          "answer": 2,
+          "explain_en": "Zn(OH)₂ dissolves in excess alkali as well as in acid; copper and iron hydroxides do not.",
+          "explain_bn": "Zn(OH)₂ অতিরিক্ত ক্ষার ও অ্যাসিড — দুটোতেই দ্রবীভূত হয়; কপার ও আয়রনের হাইড্রোক্সাইড হয় না।"
+        },
+        {
+          "question_en": "Heating copper(II) hydroxide leaves a black solid. What is it?",
+          "question_bn": "কপার(II) হাইড্রোক্সাইড গরম করলে কালো কঠিন পদার্থ থাকে। এটি কী?",
+          "options_en": [
+            "Copper metal",
+            "Copper(II) oxide",
+            "Copper sulphate",
+            "Carbon"
+          ],
+          "options_bn": [
+            "কপার ধাতু",
+            "কপার(II) অক্সাইড",
+            "কপার সালফেট",
+            "কার্বন"
+          ],
+          "answer": 1,
+          "explain_en": "Cu(OH)₂ → CuO + H₂O; the black residue is copper(II) oxide.",
+          "explain_bn": "Cu(OH)₂ → CuO + H₂O; কালো অবশেষটি কপার(II) অক্সাইড।"
+        }
+      ],
+      "tags": [
+        "ion-test",
+        "precipitation",
+        "amphoteric"
+      ],
+      "slug": "metal-hydroxide-precipitates",
+      "title_en": "Identifying metal ions with sodium hydroxide",
+      "title_bn": "সোডিয়াম হাইড্রোক্সাইড দিয়ে ধাতব আয়ন শনাক্তকরণ",
+      "aim_en": "Tell copper, iron(III) and zinc ions apart by the precipitates sodium hydroxide gives, then prove that zinc hydroxide is amphoteric.",
+      "aim_bn": "সোডিয়াম হাইড্রোক্সাইডের অধঃক্ষেপ দেখে কপার, আয়রন(III) ও জিঙ্ক আয়ন আলাদা করা এবং জিঙ্ক হাইড্রোক্সাইডের উভধর্মী ধর্ম প্রমাণ করা।"
+    },
+    {
+      "order": 21,
+      "level": "class-11-12",
+      "durationMinutes": 11,
+      "apparatus": [
+        "test-tube",
+        "dropper",
+        "measuring-cylinder",
+        "spatula"
+      ],
+      "chemicals": [
+        "NaCl",
+        "Na2CO3",
+        "NH4Cl",
+        "H2O",
+        "universal"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Sodium chloride",
+            "label_bn": "সোডিয়াম ক্লোরাইড",
+            "portions": [
+              {
+                "chemicalId": "NaCl",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Sodium carbonate",
+            "label_bn": "সোডিয়াম কার্বনেট",
+            "portions": [
+              {
+                "chemicalId": "Na2CO3",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Ammonium chloride",
+            "label_bn": "অ্যামোনিয়াম ক্লোরাইড",
+            "portions": [
+              {
+                "chemicalId": "NH4Cl",
+                "mL": 2
+              },
+              {
+                "chemicalId": "H2O",
+                "mL": 5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Add universal indicator to the sodium chloride solution.",
+          "text_bn": "সোডিয়াম ক্লোরাইড দ্রবণে ইউনিভার্সাল সূচক যোগ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "universal"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "It stays green: NaCl comes from a strong acid and a strong base, so its solution is neutral.",
+          "text_bn": "রঙ সবুজই থাকে: NaCl তীব্র অ্যাসিড ও তীব্র ক্ষার থেকে তৈরি, তাই এর দ্রবণ প্রশম।",
+          "check": {
+            "type": "phRange",
+            "vessel": 0,
+            "min": 6,
+            "max": 8
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Add indicator to the sodium carbonate solution.",
+          "text_bn": "সোডিয়াম কার্বনেট দ্রবণে সূচক যোগ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "universal"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "The colour swings to blue-violet: carbonate ions hydrolyse and make the solution alkaline.",
+          "text_bn": "রঙ নীল-বেগুনিতে যায়: কার্বনেট আয়নের আয়নিক বিশ্লেষণে দ্রবণ ক্ষারীয় হয়।",
+          "check": {
+            "type": "phRange",
+            "vessel": 1,
+            "min": 9
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Add indicator to the dissolved ammonium chloride.",
+          "text_bn": "দ্রবীভূত অ্যামোনিয়াম ক্লোরাইডে সূচক যোগ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 2,
+            "chemicalId": "universal"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "This one turns red-orange: the ammonium ion hydrolyses and leaves the solution acidic.",
+          "text_bn": "এটি লাল-কমলা হয়: অ্যামোনিয়াম আয়নের আয়নিক বিশ্লেষণে দ্রবণটি অম্লীয় হয়।",
+          "check": {
+            "type": "phRange",
+            "vessel": 2,
+            "max": 6
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Universal indicator is a flammable spirit solution and sodium carbonate is a skin irritant. Keep the bottle away from the burner.",
+        "bn": "ইউনিভার্সাল সূচক দাহ্য স্পিরিট দ্রবণ এবং সোডিয়াম কার্বনেট ত্বকে জ্বালা করে। বোতলটি বার্নার থেকে দূরে রাখুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Why is a sodium carbonate solution alkaline?",
+          "question_bn": "সোডিয়াম কার্বনেট দ্রবণ ক্ষারীয় কেন?",
+          "options_en": [
+            "It contains sodium hydroxide",
+            "The carbonate ion is the conjugate base of a weak acid",
+            "Carbon dioxide dissolves in it",
+            "Sodium is a metal"
+          ],
+          "options_bn": [
+            "এতে সোডিয়াম হাইড্রোক্সাইড আছে",
+            "কার্বনেট আয়ন দুর্বল অ্যাসিডের অনুবন্ধী ক্ষারক",
+            "এতে কার্বন ডাই-অক্সাইড দ্রবীভূত হয়",
+            "সোডিয়াম একটি ধাতু"
+          ],
+          "answer": 1,
+          "explain_en": "CO₃²⁻ takes a proton from water, leaving OH⁻ — the salt of a weak acid and a strong base is alkaline.",
+          "explain_bn": "CO₃²⁻ পানি থেকে প্রোটন নিয়ে OH⁻ রেখে যায় — দুর্বল অ্যাসিড ও তীব্র ক্ষারের লবণ ক্ষারীয়।"
+        },
+        {
+          "question_en": "Which salt solution stays neutral?",
+          "question_bn": "কোন লবণ দ্রবণ প্রশম থাকে?",
+          "options_en": [
+            "CH₃COONa",
+            "NH₄Cl",
+            "NaCl",
+            "Na₂CO₃"
+          ],
+          "options_bn": [
+            "CH₃COONa",
+            "NH₄Cl",
+            "NaCl",
+            "Na₂CO₃"
+          ],
+          "answer": 2,
+          "explain_en": "NaCl comes from a strong acid (HCl) and a strong base (NaOH), so neither ion hydrolyses.",
+          "explain_bn": "NaCl তীব্র অ্যাসিড (HCl) ও তীব্র ক্ষার (NaOH) থেকে তৈরি, তাই কোনো আয়নই বিশ্লেষিত হয় না।"
+        }
+      ],
+      "tags": [
+        "hydrolysis",
+        "ph",
+        "salts"
+      ],
+      "slug": "salt-solution-ph",
+      "title_en": "pH of salt solutions",
+      "title_bn": "লবণ দ্রবণের pH",
+      "aim_en": "Measure the pH of three salt solutions and explain why a salt of a weak acid or base does not give a neutral solution.",
+      "aim_bn": "তিনটি লবণ দ্রবণের pH মেপে ব্যাখ্যা করা কেন দুর্বল অ্যাসিড বা ক্ষারের লবণ প্রশম দ্রবণ দেয় না।"
+    },
+    {
+      "order": 22,
+      "level": "class-11-12",
+      "durationMinutes": 11,
+      "apparatus": [
+        "test-tube",
+        "dropper",
+        "measuring-cylinder",
+        "spatula"
+      ],
+      "chemicals": [
+        "HCl",
+        "CH3COOH",
+        "universal",
+        "Zn"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Hydrochloric acid",
+            "label_bn": "হাইড্রোক্লোরিক অ্যাসিড",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Acetic acid",
+            "label_bn": "অ্যাসিটিক অ্যাসিড",
+            "portions": [
+              {
+                "chemicalId": "CH3COOH",
+                "mL": 5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Both tubes hold a 1 mol/L acid. Add universal indicator to the hydrochloric acid.",
+          "text_bn": "দুটি নলেই ১ মোল/লিটার অ্যাসিড আছে। হাইড্রোক্লোরিক অ্যাসিডে ইউনিভার্সাল সূচক যোগ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "universal"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "It is deep red — a strong acid is almost completely ionised.",
+          "text_bn": "এটি গাঢ় লাল — তীব্র অ্যাসিড প্রায় সম্পূর্ণ আয়নিত।",
+          "check": {
+            "type": "phRange",
+            "vessel": 0,
+            "max": 1
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Add the same number of drops to the acetic acid.",
+          "text_bn": "অ্যাসিটিক অ্যাসিডেও সমান সংখ্যক ফোঁটা যোগ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "universal"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "This one is orange: with Ka = 1.8 × 10⁻⁵ only a small fraction of the molecules ionise.",
+          "text_bn": "এটি কমলা: Ka = ১.৮ × ১০⁻⁵ হওয়ায় অণুর অল্প অংশই আয়নিত হয়।",
+          "check": {
+            "type": "phRange",
+            "vessel": 1,
+            "min": 2,
+            "max": 4
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Drop one granule of zinc into the strong acid.",
+          "text_bn": "তীব্র অ্যাসিডে একটি জিঙ্ক দানা ফেলুন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "zn-hcl"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Now the same granule into the weak acid: hydrogen comes off far more slowly.",
+          "text_bn": "এবার একই দানা দুর্বল অ্যাসিডে ফেলুন: হাইড্রোজেন অনেক ধীরে নির্গত হয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "zn-ch3cooh"
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "Zinc acetate stays in the weak-acid tube, and the metal the acid attacks is the same in both.",
+          "text_bn": "দুর্বল অ্যাসিডের নলে জিঙ্ক অ্যাসিটেট থাকে, আর দুটো নলেই অ্যাসিড আক্রমণ করে একই ধাতুকে।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Zn(CH3COO)2"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Hydrochloric acid is corrosive and zinc–acid mixtures give off flammable hydrogen. Wear goggles and keep flames away.",
+        "bn": "হাইড্রোক্লোরিক অ্যাসিড ক্ষয়কারী এবং জিঙ্ক–অ্যাসিড মিশ্রণ দাহ্য হাইড্রোজেন ছাড়ে। গগলস পরুন এবং শিখা দূরে রাখুন।"
+      },
+      "expectedReactions": [
+        "zn-hcl",
+        "zn-ch3cooh"
+      ],
+      "quiz": [
+        {
+          "question_en": "Both acids are 1 mol/L, yet their pH values differ. Why?",
+          "question_bn": "দুটি অ্যাসিডই ১ মোল/লিটার, তবুও pH আলাদা। কেন?",
+          "options_en": [
+            "Acetic acid is more concentrated",
+            "pH measures H⁺ concentration, and a weak acid ionises only partly",
+            "Hydrochloric acid has more molecules",
+            "Acetic acid is a base"
+          ],
+          "options_bn": [
+            "অ্যাসিটিক অ্যাসিড বেশি ঘন",
+            "pH আসলে H⁺ ঘনমাত্রা মাপে, আর দুর্বল অ্যাসিড আংশিক আয়নিত হয়",
+            "হাইড্রোক্লোরিক অ্যাসিডে অণুর সংখ্যা বেশি",
+            "অ্যাসিটিক অ্যাসিড একটি ক্ষার"
+          ],
+          "answer": 1,
+          "explain_en": "pH = −log[H⁺]. HCl is fully ionised, so [H⁺] ≈ 1 mol/L (pH ≈ 0); CH₃COOH gives only ≈ 0.004 mol/L H⁺ (pH ≈ 2.5).",
+          "explain_bn": "pH = −log[H⁺]। HCl সম্পূর্ণ আয়নিত, তাই [H⁺] ≈ ১ মোল/লিটার (pH ≈ ০); CH₃COOH কেবল ≈ ০.০০৪ মোল/লিটার H⁺ দেয় (pH ≈ ২.৫)।"
+        },
+        {
+          "question_en": "Strong is not the same as concentrated. Which statement is correct?",
+          "question_bn": "তীব্র আর ঘন — এক নয়। কোন বাক্যটি সঠিক?",
+          "options_en": [
+            "A concentrated weak acid can have a lower pH than a dilute strong acid",
+            "A weak acid never reacts with metals",
+            "Dilute acids are always weak",
+            "Strong acids are always more concentrated"
+          ],
+          "options_bn": [
+            "ঘন দুর্বল অ্যাসিডের pH লঘু তীব্র অ্যাসিডের চেয়ে কম হতে পারে",
+            "দুর্বল অ্যাসিড কখনো ধাতুর সঙ্গে বিক্রিয়া করে না",
+            "লঘু অ্যাসিড সবসময় দুর্বল",
+            "তীব্র অ্যাসিড সবসময় বেশি ঘন"
+          ],
+          "answer": 0,
+          "explain_en": "Strength is how fully an acid ionises; concentration is how much acid is dissolved. A very concentrated acetic acid can still be more acidic than a very dilute HCl.",
+          "explain_bn": "তীব্রতা হলো আয়নিত হওয়ার মাত্রা, ঘনমাত্রা হলো দ্রবীভূত অ্যাসিডের পরিমাণ। খুব ঘন অ্যাসিটিক অ্যাসিড অতিশয় লঘু HCl-এর চেয়ে বেশি অম্লীয় হতে পারে।"
+        }
+      ],
+      "tags": [
+        "acids",
+        "ph",
+        "ionisation"
+      ],
+      "slug": "acid-strength-comparison",
+      "title_en": "Strong and weak acids at the same concentration",
+      "title_bn": "একই ঘনমাত্রার তীব্র ও দুর্বল অ্যাসিড",
+      "aim_en": "Compare 1 mol/L hydrochloric acid with 1 mol/L acetic acid by pH and by how fast they attack zinc.",
+      "aim_bn": "১ মোল/লিটার হাইড্রোক্লোরিক অ্যাসিডের সঙ্গে ১ মোল/লিটার অ্যাসিটিক অ্যাসিডের pH ও জিঙ্কের উপর আক্রমণের গতি তুলনা করা।"
+    },
+    {
+      "order": 23,
+      "level": "class-11-12",
+      "durationMinutes": 12,
+      "apparatus": [
+        "beaker",
+        "measuring-cylinder",
+        "thermometer",
+        "dropper"
+      ],
+      "chemicals": [
+        "HCl",
+        "NaOH"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "beaker",
+            "label_en": "Dilute hydrochloric acid",
+            "label_bn": "লঘু হাইড্রোক্লোরিক অ্যাসিড",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 40
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "The beaker holds 40 mL of dilute hydrochloric acid.",
+          "text_bn": "বিকারে ৪০ মিলি লঘু হাইড্রোক্লোরিক অ্যাসিড আছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "HCl"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Note the starting temperature: the beaker sits at room temperature before anything is added.",
+          "text_bn": "শুরুর তাপমাত্রা লক্ষ্য করুন: কিছু যোগ করার আগে বিকারটি ঘরের তাপমাত্রায় থাকে।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 20
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Measure out the same volume of sodium hydroxide and pour it in.",
+          "text_bn": "সমান আয়তনের সোডিয়াম হাইড্রোক্সাইড মেপে ঢেলে দিন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "hcl-naoh"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "The mixture warms up: neutralisation is exothermic, H⁺ + OH⁻ → H₂O + heat.",
+          "text_bn": "মিশ্রণটি উষ্ণ হয়: প্রশমন তাপোৎপাদী, H⁺ + OH⁻ → H₂O + তাপ।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 35
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "The only dissolved product is sodium chloride — salty water.",
+          "text_bn": "দ্রবীভূত একমাত্র উৎপাদ সোডিয়াম ক্লোরাইড — লবণাক্ত পানি।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NaCl"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "With equal amounts of acid and base the mixture is exactly neutral.",
+          "text_bn": "সমান পরিমাণ অ্যাসিড ও ক্ষার নিলে মিশ্রণটি ঠিক প্রশম হয়।",
+          "check": {
+            "type": "phRange",
+            "vessel": 0,
+            "min": 6,
+            "max": 8
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Dilute acid and alkali both irritate skin and eyes, and the mixture gets hot. Add the alkali slowly with the thermometer already in place.",
+        "bn": "লঘু অ্যাসিড ও ক্ষার — দুটোই ত্বক-চোখে জ্বালা করে, আর মিশ্রণটি গরম হয়। থার্মোমিটার লাগানো অবস্থায় আস্তে আস্তে ক্ষার যোগ করুন।"
+      },
+      "expectedReactions": [
+        "hcl-naoh"
+      ],
+      "quiz": [
+        {
+          "question_en": "Why does the temperature rise in this experiment?",
+          "question_bn": "এই পরীক্ষায় তাপমাত্রা বাড়ে কেন?",
+          "options_en": [
+            "Heat is absorbed from the air",
+            "Neutralisation releases energy as heat",
+            "Sodium hydroxide is already hot",
+            "Salt formation cools the mixture"
+          ],
+          "options_bn": [
+            "বাতাস থেকে তাপ শোষিত হয়",
+            "প্রশমন বিক্রিয়ায় শক্তি তাপ হিসেবে নির্গত হয়",
+            "সোডিয়াম হাইড্রোক্সাইড আগেই গরম ছিল",
+            "লবণ তৈরি হলে মিশ্রণ ঠান্ডা হয়"
+          ],
+          "answer": 1,
+          "explain_en": "H⁺ + OH⁻ → H₂O releases about 57 kJ per mole of water formed, so the solution warms.",
+          "explain_bn": "H⁺ + OH⁻ → H₂O বিক্রিয়ায় প্রতি মোল পানির জন্য প্রায় ৫৭ kJ শক্তি নির্গত হয়, তাই দ্রবণ উষ্ণ হয়।"
+        },
+        {
+          "question_en": "If you repeated this with nitric acid and potassium hydroxide, the temperature rise would be…",
+          "question_bn": "একই পরীক্ষা নাইট্রিক অ্যাসিড ও পটাশিয়াম হাইড্রোক্সাইড দিয়ে করলে তাপমাত্রার বৃদ্ধি হবে —",
+          "options_en": [
+            "Much larger",
+            "About the same",
+            "Zero",
+            "Much smaller"
+          ],
+          "options_bn": [
+            "অনেক বেশি",
+            "প্রায় একই",
+            "শূন্য",
+            "অনেক কম"
+          ],
+          "answer": 1,
+          "explain_en": "Every strong acid–strong base neutralisation is the same ionic reaction, H⁺ + OH⁻ → H₂O, so ΔH is the same.",
+          "explain_bn": "প্রতিটি তীব্র অ্যাসিড–তীব্র ক্ষারের প্রশমন একই আয়নিক বিক্রিয়া, H⁺ + OH⁻ → H₂O; তাই ΔH একই থাকে।"
+        }
+      ],
+      "tags": [
+        "thermochemistry",
+        "neutralisation",
+        "measurement"
+      ],
+      "slug": "heat-of-neutralisation",
+      "title_en": "Heat of neutralisation",
+      "title_bn": "প্রশমনের তাপ",
+      "aim_en": "Measure the temperature rise when equal amounts of a strong acid and a strong base neutralise each other and check that the product is neutral salt water.",
+      "aim_bn": "সমান পরিমাণ তীব্র অ্যাসিড ও তীব্র ক্ষার প্রশমিত হলে তাপমাত্রার বৃদ্ধি মাপা এবং উৎপাদ প্রশম লবণ পানি কি না যাচাই করা।"
+    },
+    {
+      "order": 24,
+      "level": "class-9-10",
+      "durationMinutes": 12,
+      "apparatus": [
+        "test-tube",
+        "gas-jar",
+        "delivery-tube",
+        "dropper",
+        "spatula"
+      ],
+      "chemicals": [
+        "Na2CO3",
+        "NaHCO3",
+        "HCl",
+        "Ca(OH)2"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Sodium carbonate",
+            "label_bn": "সোডিয়াম কার্বনেট",
+            "portions": [
+              {
+                "chemicalId": "Na2CO3",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Sodium bicarbonate",
+            "label_bn": "সোডিয়াম বাইকার্বনেট",
+            "portions": [
+              {
+                "chemicalId": "NaHCO3",
+                "mL": 2
+              }
+            ]
+          },
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Gas jar",
+            "label_bn": "গ্যাস জার",
+            "portions": []
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Limewater",
+            "label_bn": "চুনের পানি",
+            "portions": [
+              {
+                "chemicalId": "Ca(OH)2",
+                "mL": 5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "The first tube holds sodium carbonate solution.",
+          "text_bn": "প্রথম নলে সোডিয়াম কার্বনেট দ্রবণ আছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Na2CO3"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add dilute hydrochloric acid: it fizzes at once.",
+          "text_bn": "লঘু হাইড্রোক্লোরিক অ্যাসিড যোগ করুন: সঙ্গে সঙ্গে ফেনা ওঠে।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "na2co3-hcl"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Collect the colourless gas in the gas jar.",
+          "text_bn": "বর্ণহীন গ্যাসটি গ্যাস জারে সংগ্রহ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 2,
+            "chemicalId": "CO2"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Bubble the gas through limewater — a white precipitate of calcium carbonate forms.",
+          "text_bn": "গ্যাসটি চুনের পানির মধ্য দিয়ে চালনা করুন — ক্যালসিয়াম কার্বনেটের সাদা অধঃক্ষেপ পড়ে।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "co2-caoh2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "The limewater has turned milky. That is the standard test for carbon dioxide.",
+          "text_bn": "চুনের পানি ঘোলা হয়েছে। এটিই কার্বন ডাই-অক্সাইডের আদর্শ পরীক্ষা।",
+          "check": {
+            "type": "contains",
+            "vessel": 3,
+            "chemicalId": "CaCO3"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Now add acid to the sodium bicarbonate in the second tube.",
+          "text_bn": "এবার দ্বিতীয় নলের সোডিয়াম বাইকার্বনেটে অ্যাসিড যোগ করুন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "nahco3-hcl"
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "It froths even more violently — a bicarbonate releases its carbon dioxide very easily.",
+          "text_bn": "এটি আরও তীব্রভাবে ফেনা ওঠে — বাইকার্বনেট সহজেই কার্বন ডাই-অক্সাইড ছাড়ে।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "CO2"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Acid plus carbonate froths and builds up pressure in a closed vessel. Keep the tube pointed away from your face and never stopper it.",
+        "bn": "অ্যাসিড ও কার্বনেটে ফেনা ওঠে এবং বদ্ধ পাত্রে চাপ তৈরি করে। নলের মুখ নিজের দিক থেকে দূরে রাখুন এবং কখনো ছিপি লাগাবেন না।"
+      },
+      "expectedReactions": [
+        "na2co3-hcl",
+        "nahco3-hcl",
+        "co2-caoh2"
+      ],
+      "quiz": [
+        {
+          "question_en": "Which gas turns limewater milky?",
+          "question_bn": "কোন গ্যাস চুনের পানি ঘোলা করে?",
+          "options_en": [
+            "Hydrogen",
+            "Oxygen",
+            "Carbon dioxide",
+            "Nitrogen"
+          ],
+          "options_bn": [
+            "হাইড্রোজেন",
+            "অক্সিজেন",
+            "কার্বন ডাই-অক্সাইড",
+            "নাইট্রোজেন"
+          ],
+          "answer": 2,
+          "explain_en": "CO₂ + Ca(OH)₂ → CaCO₃↓ + H₂O. The white calcium carbonate makes the limewater milky.",
+          "explain_bn": "CO₂ + Ca(OH)₂ → CaCO₃↓ + H₂O। সাদা ক্যালসিয়াম কার্বনেটই চুনের পানি ঘোলা করে।"
+        },
+        {
+          "question_en": "Why does sodium bicarbonate fizz more than sodium carbonate for the same mass?",
+          "question_bn": "সমান ভরের সোডিয়াম কার্বনেটের চেয়ে সোডিয়াম বাইকার্বনেট বেশি ফেনা তোলে কেন?",
+          "options_en": [
+            "It contains more carbon per gram",
+            "One mole of it gives one mole of CO₂ from a lighter formula mass",
+            "It is a stronger base",
+            "It contains water"
+          ],
+          "options_bn": [
+            "এতে প্রতি গ্রামে বেশি কার্বন আছে",
+            "এর একটি মোল হালকা সূত্রভর থেকে এক মোল CO₂ দেয়",
+            "এটি বেশি তীব্র ক্ষার",
+            "এতে পানি আছে"
+          ],
+          "answer": 1,
+          "explain_en": "NaHCO₃ (M = 84) gives 1 mol CO₂ per mole, Na₂CO₃ (M = 106) also gives 1 mol — so the lighter bicarbonate gives more gas per gram.",
+          "explain_bn": "NaHCO₃ (M = ৮৪) প্রতি মোলে ১ মোল CO₂ দেয়, Na₂CO₃ (M = ১০৬)-ও ১ মোল দেয় — তাই হালকা বাইকার্বনেট প্রতি গ্রামে বেশি গ্যাস দেয়।"
+        }
+      ],
+      "tags": [
+        "gas-test",
+        "carbonate",
+        "acid-carbonate"
+      ],
+      "slug": "carbonate-test",
+      "title_en": "Test for carbonate and bicarbonate ions",
+      "title_bn": "কার্বনেট ও বাইকার্বনেট আয়ন শনাক্তকরণ",
+      "aim_en": "Add dilute acid to a carbonate and a bicarbonate, compare the fizz, and prove the gas with limewater.",
+      "aim_bn": "কার্বনেট ও বাইকার্বনেটে লঘু অ্যাসিড যোগ করে ফেনার তুলনা করা এবং চুনের পানি দিয়ে গ্যাস শনাক্ত করা।"
+    },
+    {
+      "order": 25,
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "apparatus": [
+        "test-tube",
+        "bunsen-burner",
+        "tripod-stand",
+        "test-tube-holder",
+        "gas-jar",
+        "delivery-tube",
+        "dropper"
+      ],
+      "chemicals": [
+        "CaCO3",
+        "H2O",
+        "CO2"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Limestone",
+            "label_bn": "চুনাপাথর",
+            "portions": [
+              {
+                "chemicalId": "CaCO3",
+                "mL": 3
+              }
+            ]
+          },
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Gas jar",
+            "label_bn": "গ্যাস জার",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Clamp the tube with its marble chips and light the burner.",
+          "text_bn": "মার্বেল চিপসহ নলটি ক্ল্যাম্পে লাগিয়ে বার্নার জ্বালান।",
+          "check": {
+            "type": "heating",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Calcium carbonate needs a very strong heat — the tube glows before anything happens.",
+          "text_bn": "ক্যালসিয়াম কার্বনেটের জন্য খুব বেশি তাপ দরকার — কিছু ঘটার আগেই নলটি জ্বলজ্বল করে।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 600
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "The limestone breaks down into quicklime and carbon dioxide.",
+          "text_bn": "চুনাপাথর ভেঙে কুইকলাইম ও কার্বন ডাই-অক্সাইড হয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "caco3-heat"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Collect the carbon dioxide in the gas jar — it will be needed at the end of the cycle.",
+          "text_bn": "কার্বন ডাই-অক্সাইড গ্যাস জারে সংগ্রহ করুন — চক্রের শেষে এটি লাগবে।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "CO2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "The white residue is calcium oxide, quicklime.",
+          "text_bn": "সাদা অবশেষটি ক্যালসিয়াম অক্সাইড, কুইকলাইম।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "CaO"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Let the tube cool a little, then add water. It hisses and steams — slaking of lime.",
+          "text_bn": "নলটি একটু ঠান্ডা হতে দিন, তারপর পানি যোগ করুন। হিসহিস শব্দ ও বাষ্প হয় — চুন স্লেকিং।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "cao-h2o"
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "The product is calcium hydroxide, slaked lime — the suspension we call limewater.",
+          "text_bn": "উৎপাদ ক্যালসিয়াম হাইড্রোক্সাইড, স্লেকড লাইম — এই ঝুলকেই আমরা চুনের পানি বলি।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Ca(OH)2"
+          }
+        },
+        {
+          "order": 8,
+          "text_en": "Bubble the collected carbon dioxide back into the limewater.",
+          "text_bn": "সংগৃহীত কার্বন ডাই-অক্সাইড আবার চুনের পানিতে চালনা করুন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "co2-caoh2"
+          }
+        },
+        {
+          "order": 9,
+          "text_en": "The limewater turns milky as calcium carbonate re-forms: the cycle has come full circle.",
+          "text_bn": "আবার ক্যালসিয়াম কার্বনেট তৈরি হয়ে চুনের পানি ঘোলা হয়: চক্রটি পূর্ণ হলো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "CaCO3"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Quicklime reacts with water with a great deal of heat and makes a caustic slurry, and hot glass looks exactly like cold glass. In a real lab you use tongs, goggles and a small sample.",
+        "bn": "কুইকলাইম পানির সঙ্গে প্রচুর তাপে বিক্রিয়া করে ক্ষয়কারী ঘোল তৈরি করে, আর গরম কাচ দেখতে ঠান্ডা কাচের মতোই। বাস্তবে টং, গগলস ও অল্প নমুনা ব্যবহার করুন।"
+      },
+      "expectedReactions": [
+        "caco3-heat",
+        "cao-h2o",
+        "co2-caoh2"
+      ],
+      "quiz": [
+        {
+          "question_en": "Put the limestone cycle in order.",
+          "question_bn": "চুনাপাথরের চক্রটি সঠিক ক্রমে সাজান।",
+          "options_en": [
+            "CaCO₃ → Ca(OH)₂ → CaO → CaCO₃",
+            "CaCO₃ → CaO → Ca(OH)₂ → CaCO₃",
+            "CaO → CaCO₃ → Ca(OH)₂ → CaO",
+            "CaCO₃ → CaO → CaCO₃ → Ca(OH)₂"
+          ],
+          "options_bn": [
+            "CaCO₃ → Ca(OH)₂ → CaO → CaCO₃",
+            "CaCO₃ → CaO → Ca(OH)₂ → CaCO₃",
+            "CaO → CaCO₃ → Ca(OH)₂ → CaO",
+            "CaCO₃ → CaO → CaCO₃ → Ca(OH)₂"
+          ],
+          "answer": 1,
+          "explain_en": "Heat drives off CO₂ to give quicklime (CaO); water slakes it to Ca(OH)₂; carbon dioxide turns it back into CaCO₃.",
+          "explain_bn": "তাপে CO₂ বেরিয়ে কুইকলাইম (CaO) হয়; পানি দিলে স্লেকড লাইম Ca(OH)₂ হয়; কার্বন ডাই-অক্সাইডে আবার CaCO₃ হয়।"
+        },
+        {
+          "question_en": "Why is quicklime packed in sealed containers?",
+          "question_bn": "কুইকলাইম সিল করা পাত্রে রাখা হয় কেন?",
+          "options_en": [
+            "It is explosive",
+            "It reacts with moisture of the air",
+            "It is volatile",
+            "It dissolves in air"
+          ],
+          "options_bn": [
+            "এটি বিস্ফোরক",
+            "এটি বাতাসের আর্দ্রতার সঙ্গে বিক্রিয়া করে",
+            "এটি উদ্বায়ী",
+            "এটি বাতাসে দ্রবীভূত হয়"
+          ],
+          "answer": 1,
+          "explain_en": "Air contains water vapour, and CaO + H₂O → Ca(OH)₂ slowly turns the whole stock into slaked lime.",
+          "explain_bn": "বাতাসে জলীয়বাষ্প থাকে, আর CaO + H₂O → Ca(OH)₂ বিক্রিয়ায় ধীরে ধীরে সমস্ত কুইকলাইম স্লেকড লাইমে পরিণত হয়।"
+        }
+      ],
+      "tags": [
+        "thermal-decomposition",
+        "lime",
+        "cycle"
+      ],
+      "slug": "limestone-cycle",
+      "title_en": "The limestone cycle",
+      "title_bn": "চুনাপাথরের চক্র",
+      "aim_en": "Turn limestone into quicklime, slake it with water and bubble carbon dioxide through it to get limestone back again.",
+      "aim_bn": "চুনাপাথরকে কুইকলাইমে পরিণত করা, পানিতে স্লেক করা এবং কার্বন ডাই-অক্সাইড চালনা করে আবার চুনাপাথর পাওয়া।"
+    },
+    {
+      "order": 26,
+      "level": "class-9-10",
+      "durationMinutes": 12,
+      "apparatus": [
+        "test-tube",
+        "dropper",
+        "spatula"
+      ],
+      "chemicals": [
+        "HCl",
+        "Mg",
+        "Zn",
+        "Fe",
+        "Cu"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Magnesium tube",
+            "label_bn": "ম্যাগনেসিয়াম নল",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Zinc tube",
+            "label_bn": "জিঙ্ক নল",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Iron tube",
+            "label_bn": "আয়রন নল",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Copper tube",
+            "label_bn": "কপার নল",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Drop a piece of magnesium ribbon into the first tube: violent fizzing at once.",
+          "text_bn": "প্রথম নলে ম্যাগনেসিয়াম ফিতার একটি টুকরো ফেলুন: সঙ্গে সঙ্গে তীব্র ফেনা।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "mg-hcl"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Hydrogen streams off the magnesium — the fastest of the four metals.",
+          "text_bn": "ম্যাগনেসিয়াম থেকে হাইড্রোজেনের ধারা ওঠে — চারটি ধাতুর মধ্যে সবচেয়ে দ্রুত।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Zinc in the second tube gives a steady stream of bubbles.",
+          "text_bn": "দ্বিতীয় নলে জিঙ্ক থেকে অবিরাম বুদবুদ ওঠে।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "zn-hcl"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Iron in the third tube bubbles slowly and the liquid turns pale green with Fe²⁺.",
+          "text_bn": "তৃতীয় নলে আয়রন ধীরে বুদবুদ তোলে এবং Fe²⁺-এ দ্রবণ হালকা সবুজ হয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "fe-hcl"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Copper in the last tube does nothing at all — it is below hydrogen in the series.",
+          "text_bn": "শেষ নলে কপার একেবারেই কিছু করে না — সক্রিয়তা সিরিজে এটি হাইড্রোজেনের নিচে।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "cu-hcl"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "The copper is still there, bright and unreacted.",
+          "text_bn": "কপারটি এখনো আছে, চকচকে ও অনার্দ্রিত।",
+          "check": {
+            "type": "contains",
+            "vessel": 3,
+            "chemicalId": "Cu"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "The hydrogen released is flammable and the magnesium reaction gets hot enough to crack glass. Work with small pieces and keep flames away from the tube mouths.",
+        "bn": "নির্গত হাইড্রোজেন দাহ্য এবং ম্যাগনেসিয়ামের বিক্রিয়ায় নল ফাটার মতো গরম হয়। ছোট টুকরো নিয়ে কাজ করুন এবং নলের মুখ থেকে শিখা দূরে রাখুন।"
+      },
+      "expectedReactions": [
+        "mg-hcl",
+        "zn-hcl",
+        "fe-hcl",
+        "cu-hcl"
+      ],
+      "quiz": [
+        {
+          "question_en": "Which metal does not displace hydrogen from dilute hydrochloric acid?",
+          "question_bn": "কোন ধাতু লঘু হাইড্রোক্লোরিক অ্যাসিড থেকে হাইড্রোজেনকে অপসারণ করে না?",
+          "options_en": [
+            "Magnesium",
+            "Zinc",
+            "Iron",
+            "Copper"
+          ],
+          "options_bn": [
+            "ম্যাগনেসিয়াম",
+            "জিঙ্ক",
+            "আয়রন",
+            "কপার"
+          ],
+          "answer": 3,
+          "explain_en": "Copper lies below hydrogen in the reactivity series, so it cannot reduce H⁺ to H₂.",
+          "explain_bn": "সক্রিয়তা সিরিজে কপার হাইড্রোজেনের নিচে, তাই এটি H⁺-কে বিজারিত করে H₂ তৈরি করতে পারে না।"
+        },
+        {
+          "question_en": "The rate of bubbling ranks Mg > Zn > Fe. What does that order show?",
+          "question_bn": "বুদবুদের গতির ক্রম Mg > Zn > Fe। এই ক্রম কী বোঝায়?",
+          "options_en": [
+            "The molar masses",
+            "The reactivity series",
+            "The solubility of the metals",
+            "The boiling points"
+          ],
+          "options_bn": [
+            "মোলার ভর",
+            "সক্রিয়তা সিরিজ",
+            "ধাতুগুলোর দ্রাব্যতা",
+            "স্ফুটনাঙ্ক"
+          ],
+          "answer": 1,
+          "explain_en": "The more reactive the metal, the faster it reduces H⁺ — this is exactly how the reactivity series is built.",
+          "explain_bn": "ধাতু যত বেশি সক্রিয়, H⁺-কে তত দ্রুত বিজারিত করে — ঠিক এভাবেই সক্রিয়তা সিরিজ তৈরি করা হয়।"
+        }
+      ],
+      "tags": [
+        "metal",
+        "acid",
+        "reactivity-series"
+      ],
+      "slug": "metal-acid-reactivity",
+      "title_en": "Reactivity of metals with dilute acid",
+      "title_bn": "লঘু অ্যাসিডের সঙ্গে ধাতুর সক্রিয়তা",
+      "aim_en": "Reach magnesium, zinc, iron and copper with the same dilute acid and rank them by how vigorously they release hydrogen.",
+      "aim_bn": "একই লঘু অ্যাসিড দিয়ে ম্যাগনেসিয়াম, জিঙ্ক, আয়রন ও কপারে আঘাত করে হাইড্রোজেন নির্গমনের তীব্রতার ভিত্তিতে ক্রম তৈরি করা।"
+    },
+    {
+      "order": 27,
+      "level": "class-6-8",
+      "durationMinutes": 9,
+      "apparatus": [
+        "test-tube",
+        "dropper",
+        "spatula"
+      ],
+      "chemicals": [
+        "H2O",
+        "Fe",
+        "O2"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Tube A — water only",
+            "label_bn": "নল ক — শুধু পানি",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 8
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Tube B — water and air",
+            "label_bn": "নল খ — পানি ও বাতাস",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 8
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Put iron filings into tube A, which holds water but no air.",
+          "text_bn": "নল ক-তে লোহার গুঁড়ো দিন — এতে পানি আছে কিন্তু বাতাস নেই।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Fe"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Put the same amount of iron into tube B, which holds water and air.",
+          "text_bn": "একই পরিমাণ লোহা নল খ-তে দিন — এতে পানি ও বাতাস দুটোই আছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Fe"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Blow air through tube B: the iron starts to rust where air and water meet.",
+          "text_bn": "নল খ-তে বাতাস চালনা করুন: বাতাস ও পানির সংস্পর্শে লোহায় মরচে ধরতে শুরু করে।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "fe-rust"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "A brown coating of hydrated iron(III) oxide forms.",
+          "text_bn": "লোহার(III) অক্সাইডের বাদামি আবরণ তৈরি হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Fe2O3"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Back in tube A the iron is still bright: water alone cannot rust it.",
+          "text_bn": "নল ক-তে লোহা এখনো চকচকে: কেবল পানি দিয়ে মরচে ধরে না।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Fe"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Rusting itself is safe; this demonstration only shows the brown coating. In a real lab the tubes are left plugged with cotton for a day or two and compared.",
+        "bn": "মরচে ধরা নিজে নিরাপদ; এই পরীক্ষা কেবল বাদামি আবরণ দেখায়। বাস্তব ল্যাবে নলের মুখ তুলায় আটকে এক-দুই দিন রেখে তুলনা করা হয়।"
+      },
+      "expectedReactions": [
+        "fe-rust"
+      ],
+      "quiz": [
+        {
+          "question_en": "Which two things must both be present for iron to rust?",
+          "question_bn": "লোহায় মরচে ধরার জন্য কোন দুটি জিনিস একসঙ্গে থাকা দরকার?",
+          "options_en": [
+            "Oxygen and water",
+            "Nitrogen and water",
+            "Carbon dioxide and light",
+            "Salt and oil"
+          ],
+          "options_bn": [
+            "অক্সিজেন ও পানি",
+            "নাইট্রোজেন ও পানি",
+            "কার্বন ডাই-অক্সাইড ও আলো",
+            "লবণ ও তেল"
+          ],
+          "answer": 0,
+          "explain_en": "Rusting needs both air (oxygen) and water; take either away and the iron stays bright.",
+          "explain_bn": "মরচে ধরতে বাতাস (অক্সিজেন) ও পানি — দুটোই দরকার; যেকোনো একটি সরালেই লোহা চকচকে থাকে।"
+        },
+        {
+          "question_en": "Which of these protects iron from rusting?",
+          "question_bn": "কোনটি লোহাকে মরচে থেকে রক্ষা করে?",
+          "options_en": [
+            "Leaving it in the rain",
+            "Painting or greasing the surface",
+            "Keeping it in salt water",
+            "Warming it gently"
+          ],
+          "options_bn": [
+            "বৃষ্টিতে ফেলে রাখা",
+            "পৃষ্ঠে রং বা গ্রিজের আস্তরণ",
+            "লবণ পানিতে রাখা",
+            "অল্প গরম করা"
+          ],
+          "answer": 1,
+          "explain_en": "Paint, grease, galvanising and oiling all stop air and water from reaching the iron.",
+          "explain_bn": "রং, গ্রিজ, গ্যালভানাইজিং বা তেল — সবই বাতাস ও পানিকে লোহার কাছে পৌঁছাতে বাধা দেয়।"
+        }
+      ],
+      "tags": [
+        "rusting",
+        "oxidation",
+        "corrosion"
+      ],
+      "slug": "rusting-conditions",
+      "title_en": "Conditions needed for iron to rust",
+      "title_bn": "লোহায় মরচে ধরার শর্ত",
+      "aim_en": "Show that iron rusts only when both air (oxygen) and water are present.",
+      "aim_bn": "বাতাস (অক্সিজেন) ও পানি — দুটোই থাকলে তবেই লোহায় মরচে ধরে, তা দেখানো।"
+    },
+    {
+      "order": 28,
+      "level": "class-11-12",
+      "durationMinutes": 9,
+      "apparatus": [
+        "test-tube",
+        "dropper"
+      ],
+      "chemicals": [
+        "ethanol",
+        "KMnO4"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Ethanol",
+            "label_bn": "ইথানল",
+            "portions": [
+              {
+                "chemicalId": "ethanol",
+                "mL": 3
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "The tube holds a little ethanol.",
+          "text_bn": "নলে অল্প ইথানল আছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "ethanol"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add the purple permanganate solution drop by drop: it is the oxidising agent.",
+          "text_bn": "বেগুনি পারম্যাঙ্গানেট দ্রবণ বিন্দু বিন্দু করে যোগ করুন: এটি জারক পদার্থ।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "kmno4-ethanol"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "The purple colour disappears and the mixture becomes hot.",
+          "text_bn": "বেগুনি রঙ মিলিয়ে যায় এবং মিশ্রণটি গরম হয়।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 40
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Ethanol is oxidised all the way to ethanoic acid (acetic acid).",
+          "text_bn": "ইথানল জারিত হয়ে সরাসরি ইথানয়িক অ্যাসিড (অ্যাসিটিক অ্যাসিড) হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "CH3COOH"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Brown manganese dioxide settles out — the permanganate has been reduced.",
+          "text_bn": "বাদামি ম্যাঙ্গানিজ ডাই-অক্সাইড থিতিয়ে পড়ে — পারম্যাঙ্গানেট বিজারিত হয়েছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "MnO2"
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Permanganate and alcohol can flare up without warning; ethanol is highly flammable. A real lab adds the oxidiser slowly, behind a screen, with no flame nearby.",
+        "bn": "পারম্যাঙ্গানেট ও অ্যালকোহল বিনা নোটিশে জ্বলে উঠতে পারে; ইথানল অত্যন্ত দাহ্য। বাস্তব ল্যাবে শিখা থেকে দূরে, পর্দার পিছনে ধীরে ধীরে জারক যোগ করা হয়।"
+      },
+      "expectedReactions": [
+        "kmno4-ethanol"
+      ],
+      "quiz": [
+        {
+          "question_en": "Ethanol → ethanoic acid is an example of…",
+          "question_bn": "ইথানল → ইথানয়িক অ্যাসিড একটি উদাহরণ —",
+          "options_en": [
+            "Reduction",
+            "Oxidation",
+            "Neutralisation",
+            "Hydrolysis"
+          ],
+          "options_bn": [
+            "বিজারণ",
+            "জারণ",
+            "প্রশমন",
+            "আয়নিক বিশ্লেষণ"
+          ],
+          "answer": 1,
+          "explain_en": "The carbon in ethanol gains oxygen (and loses hydrogen): CH₃CH₂OH + 2[O] → CH₃COOH + H₂O.",
+          "explain_bn": "ইথানলের কার্বন অক্সিজেন গ্রহণ করে (ও হাইড্রোজেন হারায়): CH₃CH₂OH + 2[O] → CH₃COOH + H₂O।"
+        },
+        {
+          "question_en": "What does the brown solid left in the tube show?",
+          "question_bn": "নলে থাকা বাদামি কঠিন পদার্থটি কী বোঝায়?",
+          "options_en": [
+            "The permanganate was reduced to MnO₂",
+            "The ethanol evaporated",
+            "The tube cracked",
+            "The acid was neutralised"
+          ],
+          "options_bn": [
+            "পারম্যাঙ্গানেট বিজারিত হয়ে MnO₂ হয়েছে",
+            "ইথানল বাষ্প হয়ে গেছে",
+            "নলটি ফেটে গেছে",
+            "অ্যাসিড প্রশমিত হয়েছে"
+          ],
+          "answer": 0,
+          "explain_en": "Purple MnO₄⁻ is reduced to brown MnO₂ as it oxidises the alcohol — the colour change is the evidence.",
+          "explain_bn": "অ্যালকোহলকে জারিত করার সময় বেগুনি MnO₄⁻ বিজারিত হয়ে বাদামি MnO₂ হয় — রঙের পরিবর্তনই প্রমাণ।"
+        }
+      ],
+      "tags": [
+        "oxidation",
+        "organic",
+        "redox"
+      ],
+      "slug": "oxidation-ethanol",
+      "title_en": "Oxidation of ethanol by permanganate",
+      "title_bn": "পারম্যাঙ্গানেট দিয়ে ইথানলের জারণ",
+      "aim_en": "Oxidise ethanol to ethanoic acid with permanganate solution and watch the purple colour vanish as brown manganese dioxide appears.",
+      "aim_bn": "পারম্যাঙ্গানেট দ্রবণ দিয়ে ইথানলকে ইথানয়িক অ্যাসিডে জারিত করা এবং বেগুনি রঙ মিলিয়ে বাদামি ম্যাঙ্গানিজ ডাই-অক্সাইড তৈরি হওয়া দেখা।"
+    },
+    {
+      "order": 29,
+      "level": "class-9-10",
+      "durationMinutes": 12,
+      "apparatus": [
+        "gas-jar",
+        "test-tube",
+        "bunsen-burner",
+        "tripod-stand",
+        "test-tube-holder",
+        "dropper"
+      ],
+      "chemicals": [
+        "H2",
+        "O2",
+        "CO2",
+        "Ca(OH)2"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Hydrogen jar",
+            "label_bn": "হাইড্রোজেন জার",
+            "portions": [
+              {
+                "chemicalId": "H2",
+                "mL": 40
+              }
+            ]
+          },
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Carbon dioxide jar",
+            "label_bn": "কার্বন ডাই-অক্সাইড জার",
+            "portions": [
+              {
+                "chemicalId": "CO2",
+                "mL": 40
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Oxygen tube",
+            "label_bn": "অক্সিজেন নল",
+            "portions": [
+              {
+                "chemicalId": "O2",
+                "mL": 10
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Add oxygen to the jar of hydrogen: the mixture looks harmless and waits.",
+          "text_bn": "হাইড্রোজেনের জারে অক্সিজেন যোগ করুন: মিশ্রণটি নিরীহ দেখায়, অপেক্ষা করে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "O2"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Now hold a lit splint to the mouth of the jar.",
+          "text_bn": "এবার জারের মুখে জ্বলন্ত কাঠি ধরুন।",
+          "check": {
+            "type": "spark",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "A squeaky pop — water is left behind, and hydrogen is confirmed.",
+          "text_bn": "তীক্ষ্ণ পট শব্দ — পিছনে পানি পড়ে থাকে, হাইড্রোজেন নিশ্চিত হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Pour limewater into the jar of colourless carbon dioxide.",
+          "text_bn": "বর্ণহীন কার্বন ডাই-অক্সাইডের জারে চুনের পানি ঢালুন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "co2-caoh2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "It turns milky: the white precipitate is calcium carbonate, so the gas is CO₂.",
+          "text_bn": "পানি ঘোলা হয়: সাদা অধঃক্ষেপটি ক্যালসিয়াম কার্বনেট, তাই গ্যাসটি CO₂।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "CaCO3"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Finally heat the tube of oxygen.",
+          "text_bn": "শেষে অক্সিজেনের নলটি গরম করুন।",
+          "check": {
+            "type": "heating",
+            "vessel": 2
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "A glowing splint bursts back into flame — the test for oxygen.",
+          "text_bn": "ধূমায়িত কাঠি আবার দপ করে জ্বলে ওঠে — এটিই অক্সিজেনের পরীক্ষা।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "o2-glowing-splint"
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Hydrogen–air mixtures are explosive. In a real lab only a very small volume is collected, and the jar is opened away from your face and from any other flame.",
+        "bn": "হাইড্রোজেন–বাতাসের মিশ্রণ বিস্ফোরক। বাস্তব ল্যাবে অল্প আয়তনে গ্যাস সংগ্রহ করা হয় এবং মুখ ও অন্য শিখা থেকে দূরে রেখে জার খোলা হয়।"
+      },
+      "expectedReactions": [
+        "h2-o2-spark",
+        "co2-caoh2",
+        "o2-glowing-splint"
+      ],
+      "quiz": [
+        {
+          "question_en": "Which gas is identified by a squeaky pop?",
+          "question_bn": "কোন গ্যাস তীক্ষ্ণ পট শব্দে শনাক্ত হয়?",
+          "options_en": [
+            "Oxygen",
+            "Hydrogen",
+            "Carbon dioxide",
+            "Nitrogen"
+          ],
+          "options_bn": [
+            "অক্সিজেন",
+            "হাইড্রোজেন",
+            "কার্বন ডাই-অক্সাইড",
+            "নাইট্রোজেন"
+          ],
+          "answer": 1,
+          "explain_en": "2H₂ + O₂ → 2H₂O gives the pop; oxygen instead relights a glowing splint, and CO₂ turns limewater milky.",
+          "explain_bn": "2H₂ + O₂ → 2H₂O বিক্রিয়ায় পট শব্দ হয়; অক্সিজেন ধূমায়িত কাঠি জ্বালায় আর CO₂ চুনের পানি ঘোলা করে।"
+        },
+        {
+          "question_en": "Why is the glowing splint test done in a heated tube rather than a gas jar?",
+          "question_bn": "ধূমায়িত কাঠির পরীক্ষা গ্যাস জারের বদলে গরম নলে করা হয় কেন?",
+          "options_en": [
+            "The jar cannot be heated",
+            "Oxygen is heavier than air",
+            "The jar holds water",
+            "Splints are unsafe in glass"
+          ],
+          "options_bn": [
+            "জার গরম করা যায় না",
+            "অক্সিজেন বাতাসের চেয়ে ভারী",
+            "জারে পানি আছে",
+            "কাচে কাঠি নিরাপদ নয়"
+          ],
+          "answer": 0,
+          "explain_en": "A gas jar must never be heated; the oxygen is warmed in a test tube so that it can reach the temperature the test needs.",
+          "explain_bn": "গ্যাস জার কখনো গরম করা যায় না; পরীক্ষার দরকারি তাপমাত্রায় পৌঁছাতে অক্সিজেনকে টেস্ট টিউবে গরম করা হয়।"
+        }
+      ],
+      "tags": [
+        "gas-test",
+        "hydrogen",
+        "oxygen",
+        "carbon-dioxide"
+      ],
+      "slug": "gas-identification",
+      "title_en": "Identifying hydrogen, oxygen and carbon dioxide",
+      "title_bn": "হাইড্রোজেন, অক্সিজেন ও কার্বন ডাই-অক্সাইড শনাক্তকরণ",
+      "aim_en": "Run all three standard gas tests — the pop, the glowing splint and limewater — and link each one to its gas.",
+      "aim_bn": "তিনটি আদর্শ গ্যাস পরীক্ষা — পট শব্দ, ধূমায়িত কাঠি ও চুনের পানি — চালিয়ে প্রতিটিকে তার গ্যাসের সঙ্গে মেলানো।"
+    },
+    {
+      "order": 30,
+      "level": "class-11-12",
+      "durationMinutes": 9,
+      "apparatus": [
+        "test-tube",
+        "dropper",
+        "spatula",
+        "gas-jar",
+        "delivery-tube"
+      ],
+      "chemicals": [
+        "NaOH",
+        "H2O",
+        "Al"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Sodium hydroxide",
+            "label_bn": "সোডিয়াম হাইড্রোক্সাইড",
+            "portions": [
+              {
+                "chemicalId": "NaOH",
+                "mL": 5
+              },
+              {
+                "chemicalId": "H2O",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Gas jar",
+            "label_bn": "গ্যাস জার",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "The tube holds sodium hydroxide dissolved in water.",
+          "text_bn": "নলে পানিতে দ্রবীভূত সোডিয়াম হাইড্রোক্সাইড আছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NaOH"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add aluminium foil. Its oxide layer slows the start, so be patient.",
+          "text_bn": "অ্যালুমিনিয়াম ফয়েল যোগ করুন। এর অক্সাইড স্তর শুরুতে বাধা দেয়, তাই অপেক্ষা করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Al"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Bubbles stream off the metal: aluminium is amphoteric and dissolves in alkali.",
+          "text_bn": "ধাতু থেকে বুদবুদের ধারা ওঠে: অ্যালুমিনিয়াম উভধর্মী, ক্ষারে দ্রবীভূত হয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "al-naoh"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "The gas is hydrogen — and it is flammable.",
+          "text_bn": "গ্যাসটি হাইড্রোজেন — এবং এটি দাহ্য।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Collect the hydrogen in the gas jar for the pop test.",
+          "text_bn": "পপ পরীক্ষার জন্য হাইড্রোজেন গ্যাস জারে সংগ্রহ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "H2"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "The metal dissolves as sodium aluminate, NaAlO₂.",
+          "text_bn": "ধাতুটি সোডিয়াম অ্যালুমিনেট NaAlO₂ হিসেবে দ্রবীভূত হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NaAlO2"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Sodium hydroxide is caustic and the hydrogen it releases is flammable. Real work uses dilute alkali, a small piece of foil and no flame nearby.",
+        "bn": "সোডিয়াম হাইড্রোক্সাইড ক্ষয়কারী এবং নির্গত হাইড্রোজেন দাহ্য। বাস্তবে লঘু ক্ষার, ছোট ফয়েল টুকরো এবং কাছাকাছি শিখা ছাড়া কাজ করতে হয়।"
+      },
+      "expectedReactions": [
+        "al-naoh"
+      ],
+      "quiz": [
+        {
+          "question_en": "Aluminium reacts with both acids and alkalis, so it is called…",
+          "question_bn": "অ্যালুমিনিয়াম অ্যাসিড ও ক্ষার — দুটোর সঙ্গেই বিক্রিয়া করে, তাই একে বলা হয় —",
+          "options_en": [
+            "Amphoteric",
+            "Noble",
+            "Radioactive",
+            "Inert"
+          ],
+          "options_bn": [
+            "উভধর্মী",
+            "নিষ্ক্রিয়",
+            "তেজস্ক্রিয়",
+            "জড়"
+          ],
+          "answer": 0,
+          "explain_en": "Amphoteric metals and their oxides and hydroxides react with acids and with alkalis, forming salts in both.",
+          "explain_bn": "উভধর্মী ধাতু এবং তাদের অক্সাইড-হাইড্রোক্সাইড অ্যাসিড ও ক্ষার — দুটোর সঙ্গেই বিক্রিয়া করে লবণ তৈরি করে।"
+        },
+        {
+          "question_en": "Which gas is collected when aluminium dissolves in sodium hydroxide?",
+          "question_bn": "সোডিয়াম হাইড্রোক্সাইডে অ্যালুমিনিয়াম দ্রবীভূত হলে কোন গ্যাস সংগ্রহ করা হয়?",
+          "options_en": [
+            "Oxygen",
+            "Hydrogen",
+            "Chlorine",
+            "Carbon dioxide"
+          ],
+          "options_bn": [
+            "অক্সিজেন",
+            "হাইড্রোজেন",
+            "ক্লোরিন",
+            "কার্বন ডাই-অক্সাইড"
+          ],
+          "answer": 1,
+          "explain_en": "2Al + 2NaOH + 2H₂O → 2NaAlO₂ + 3H₂↑. The gas pops with a lit splint.",
+          "explain_bn": "2Al + 2NaOH + 2H₂O → 2NaAlO₂ + 3H₂↑। জ্বলন্ত কাঠিতে গ্যাসটি পট শব্দ করে।"
+        }
+      ],
+      "tags": [
+        "amphoteric",
+        "metal",
+        "hydrogen"
+      ],
+      "slug": "aluminium-alkali",
+      "title_en": "Action of sodium hydroxide on aluminium",
+      "title_bn": "অ্যালুমিনিয়ামের উপর সোডিয়াম হাইড্রোক্সাইডের ক্রিয়া",
+      "aim_en": "Show that aluminium is amphoteric: it dissolves in alkali as well as in acid, releasing hydrogen.",
+      "aim_bn": "অ্যালুমিনিয়াম উভধর্মী: অ্যাসিডের মতো ক্ষারেও দ্রবীভূত হয় এবং হাইড্রোজেন ছাড়ে — তা দেখানো।"
+    },
+    {
+      "order": 31,
+      "level": "class-9-10",
+      "durationMinutes": 12,
+      "apparatus": [
+        "evaporating-dish",
+        "bunsen-burner",
+        "tripod-stand",
+        "dropper",
+        "spatula"
+      ],
+      "chemicals": [
+        "Mg",
+        "O2",
+        "Cu"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "evaporating-dish",
+            "label_en": "Magnesium dish",
+            "label_bn": "ম্যাগনেসিয়াম ডিশ",
+            "portions": []
+          },
+          {
+            "apparatusId": "evaporating-dish",
+            "label_en": "Copper dish",
+            "label_bn": "কপার ডিশ",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Put a short ribbon of magnesium into the first dish.",
+          "text_bn": "প্রথম ডিশে ম্যাগনেসিয়াম ফিতার ছোট টুকরো দিন।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Mg"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add oxygen: this is the air the metal needs to burn.",
+          "text_bn": "অক্সিজেন যোগ করুন: জ্বলতে ধাতুটির যে বাতাস দরকার তা-ই এটি।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "O2"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Light the burner under the dish.",
+          "text_bn": "ডিশের নিচে বার্নার জ্বালান।",
+          "check": {
+            "type": "heating",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "The ribbon catches with a dazzling white flame. Never look straight at burning magnesium.",
+          "text_bn": "ফিতাটি চোখ ধাঁধানো সাদা শিখায় জ্বলে ওঠে। জ্বলন্ত ম্যাগনেসিয়ামের দিকে সরাসরি তাকাবেন না।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "mg-o2-heat"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "A white powder of magnesium oxide is left in the dish.",
+          "text_bn": "ডিশে ম্যাগনেসিয়াম অক্সাইডের সাদা গুঁড়ো পড়ে থাকে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "MgO"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Now put copper turnings into the second dish.",
+          "text_bn": "এবার দ্বিতীয় ডিশে কপারের টুকরো দিন।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Cu"
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "Add oxygen to the copper dish as well.",
+          "text_bn": "কপারের ডিশেও অক্সিজেন যোগ করুন।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "O2"
+          }
+        },
+        {
+          "order": 8,
+          "text_en": "Heat the copper dish too.",
+          "text_bn": "কপারের ডিশটিও গরম করুন।",
+          "check": {
+            "type": "heating",
+            "vessel": 1
+          }
+        },
+        {
+          "order": 9,
+          "text_en": "Copper does not flame — it only darkens as it is oxidised.",
+          "text_bn": "কপার জ্বলে ওঠে না — জারিত হয়ে কেবল কালো হয়ে যায়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "cu-o2-heat"
+          }
+        },
+        {
+          "order": 10,
+          "text_en": "A black layer of copper(II) oxide coats the metal.",
+          "text_bn": "ধাতুতে কপার(II) অক্সাইডের কালো আস্তরণ পড়ে।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "CuO"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Burning magnesium gives an intense light that can hurt the eyes, and hot dishes look cold. Use tongs, goggles and a sand tray, and never look directly at the flame.",
+        "bn": "জ্বলন্ত ম্যাগনেসিয়াম চোখের ক্ষতি করতে পারে এমন তীব্র আলো দেয় এবং গরম ডিশ দেখতে ঠান্ডার মতো। টং, গগলস ও বালুর ট্রে ব্যবহার করুন, শিখার দিকে সরাসরি তাকাবেন না।"
+      },
+      "expectedReactions": [
+        "mg-o2-heat",
+        "cu-o2-heat"
+      ],
+      "quiz": [
+        {
+          "question_en": "What is formed when magnesium burns in air?",
+          "question_bn": "বাতাসে ম্যাগনেসিয়াম পুড়লে কী তৈরি হয়?",
+          "options_en": [
+            "Magnesium hydroxide",
+            "Magnesium oxide",
+            "Magnesium chloride",
+            "Magnesium carbonate"
+          ],
+          "options_bn": [
+            "ম্যাগনেসিয়াম হাইড্রোক্সাইড",
+            "ম্যাগনেসিয়াম অক্সাইড",
+            "ম্যাগনেসিয়াম ক্লোরাইড",
+            "ম্যাগনেসিয়াম কার্বনেট"
+          ],
+          "answer": 1,
+          "explain_en": "2Mg + O₂ → 2MgO; the white ash is magnesium oxide.",
+          "explain_bn": "2Mg + O₂ → 2MgO; সাদা ছাইটি ম্যাগনেসিয়াম অক্সাইড।"
+        },
+        {
+          "question_en": "Copper and magnesium are both oxidised, yet only one burns. Why?",
+          "question_bn": "কপার ও ম্যাগনেসিয়াম দুটোই জারিত হয়, কিন্তু কেবল একটি জ্বলে ওঠে। কেন?",
+          "options_en": [
+            "Magnesium is far more reactive",
+            "Copper has no electrons",
+            "Copper is a gas",
+            "Magnesium is a non-metal"
+          ],
+          "options_bn": [
+            "ম্যাগনেসিয়াম অনেক বেশি সক্রিয়",
+            "কপারের ইলেকট্রন নেই",
+            "কপার একটি গ্যাস",
+            "ম্যাগনেসিয়াম অধাতু"
+          ],
+          "answer": 0,
+          "explain_en": "The more reactive the metal, the more vigorously it combines with oxygen. Copper below hydrogen only forms a dull black oxide.",
+          "explain_bn": "ধাতু যত বেশি সক্রিয়, অক্সিজেনের সঙ্গে তত তীব্রভাবে যুক্ত হয়। হাইড্রোজেনের নিচের কপার কেবল নীরব কালো অক্সাইড তৈরি করে।"
+        }
+      ],
+      "tags": [
+        "combustion",
+        "oxidation",
+        "metals"
+      ],
+      "slug": "burning-metals-in-air",
+      "title_en": "Action of heat on metals in air",
+      "title_bn": "বাতাসে ধাতুর উপর তাপের ক্রিয়া",
+      "aim_en": "Burn magnesium and heat copper in air and compare a dazzling white flame with the dull black oxide copper forms.",
+      "aim_bn": "বাতাসে ম্যাগনেসিয়াম পুড়িয়ে ও কপার গরম করে চোখ ধাঁধানো সাদা শিখার সঙ্গে কপারের কালো অক্সাইডের তুলনা করা।"
     }
   ]
 }

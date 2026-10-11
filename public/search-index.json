@@ -7702,8 +7702,8 @@
     "subject": "chemistry",
     "title_en": "Guided chemistry experiments",
     "title_bn": "গাইডেড কেমিস্ট্রি পরীক্ষা",
-    "description_en": "11 walkthroughs that set the virtual bench up for you and tick each step off.",
-    "description_bn": "11টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে।",
+    "description_en": "31 walkthroughs that set the virtual bench up for you and tick each step off.",
+    "description_bn": "31টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে।",
     "href": "/lab/experiments",
     "tags": [
       "experiments",
@@ -7877,6 +7877,347 @@
       "lab",
       "class-11-12",
       "heating"
+    ]
+  },
+  {
+    "slug": "lab-sublimation-nh4cl",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Sublimation of ammonium chloride",
+    "title_bn": "অ্যামোনিয়াম ক্লোরাইডের ঊর্ধ্বপাতন",
+    "description_en": "Heat ammonium chloride and watch a solid turn straight into white smoke and back into a solid again, with no liquid stage.",
+    "description_bn": "অ্যামোনিয়াম ক্লোরাইড গরম করে দেখুন কীভাবে কঠিন পদার্থ সরাসরি সাদা ধোঁয়ায় ও আবার কঠিনে ফিরে যায় — মাঝে কোনো তরল অবস্থা ছাড়াই।",
+    "href": "/lab/experiments/sublimation-nh4cl",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "sublimation",
+      "gas-test",
+      "heating"
+    ]
+  },
+  {
+    "slug": "lab-prepare-chlorine",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Preparation of chlorine",
+    "title_bn": "ক্লোরিন প্রস্তুতি",
+    "description_en": "Oxidise hydrochloric acid with permanganate, collect the chlorine and test it with water and litmus.",
+    "description_bn": "পারম্যাঙ্গানেট দিয়ে হাইড্রোক্লোরিক অ্যাসিড জারিত করে ক্লোরিন সংগ্রহ করা এবং পানি ও লিটমাস দিয়ে পরীক্ষা করা।",
+    "href": "/lab/experiments/prepare-chlorine",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "gas-preparation",
+      "halogen",
+      "redox"
+    ]
+  },
+  {
+    "slug": "lab-electrolysis-brine",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Electrolysis of brine",
+    "title_bn": "ব্রাইনের তড়িৎ বিশ্লেষণ",
+    "description_en": "Electrolyse concentrated brine and identify the three products of the chlor-alkali process.",
+    "description_bn": "ঘন ব্রাইন তড়িৎ বিশ্লেষণ করে ক্লোর-ক্ষার প্রক্রিয়ার তিনটি উৎপাদ শনাক্ত করা।",
+    "href": "/lab/experiments/electrolysis-brine",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "electrolysis",
+      "industrial",
+      "chlor-alkali"
+    ]
+  },
+  {
+    "slug": "lab-sodium-water",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Sodium in water",
+    "title_bn": "পানিতে সোডিয়ামের বিক্রিয়া",
+    "description_en": "Drop a small piece of sodium into cold water, collect the hydrogen and show that the solution is a strong alkali.",
+    "description_bn": "ঠান্ডা পানিতে ছোট সোডিয়াম টুকরো ফেলে হাইড্রোজেন সংগ্রহ করা এবং দ্রবণটি তীব্র ক্ষারীয় তা প্রমাণ করা।",
+    "href": "/lab/experiments/sodium-water",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "metal",
+      "alkali-metal",
+      "exothermic"
+    ]
+  },
+  {
+    "slug": "lab-copper-nitric-acid",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Action of nitric acid on copper and zinc",
+    "title_bn": "কপার ও জিঙ্কের উপর নাইট্রিক অ্যাসিডের ক্রিয়া",
+    "description_en": "Let dilute nitric acid act on copper and on zinc and identify the very different oxides of nitrogen it gives off.",
+    "description_bn": "লঘু নাইট্রিক অ্যাসিড কপার ও জিঙ্কের উপর ক্রিয়া করিয়ে নির্গত ভিন্ন ভিন্ন নাইট্রোজেন অক্সাইড শনাক্ত করা।",
+    "href": "/lab/experiments/copper-nitric-acid",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "redox",
+      "nitric-acid",
+      "gas-test"
+    ]
+  },
+  {
+    "slug": "lab-oxidising-agents",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Oxidising action of permanganate and dichromate",
+    "title_bn": "পারম্যাঙ্গানেট ও ডাইক্রোমেটের জারক ক্রিয়া",
+    "description_en": "Titrate acidified iron(II) sulphate with potassium permanganate and potassium dichromate and follow the colour changes that mark the end point.",
+    "description_bn": "অম্লীয় আয়রন(II) সালফেটে পটাশিয়াম পারম্যাঙ্গানেট ও ডাইক্রোমেট যোগ করে শেষ বিন্দু চিহ্নিত করা রঙের পরিবর্তন অনুসরণ করা।",
+    "href": "/lab/experiments/oxidising-agents",
+    "tags": [
+      "lab",
+      "honours",
+      "redox",
+      "titration",
+      "volumetric-analysis"
+    ]
+  },
+  {
+    "slug": "lab-iodine-liberation",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Liberation of iodine by iron(III) chloride",
+    "title_bn": "আয়রন(III) ক্লোরাইড দিয়ে আয়োডিন নিষ্কাশন",
+    "description_en": "Show that iron(III) chloride is a strong enough oxidiser to displace iodine from potassium iodide, and identify the iodine formed.",
+    "description_bn": "আয়রন(III) ক্লোরাইড যথেষ্ট শক্তিশালী জারক — তা পটাশিয়াম আয়োডাইড থেকে আয়োডিন মুক্ত করে, এবং তৈরি আয়োডিন শনাক্ত করা।",
+    "href": "/lab/experiments/iodine-liberation",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "redox",
+      "iodine",
+      "halogen"
+    ]
+  },
+  {
+    "slug": "lab-golden-rain",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Golden rain: preparation of lead iodide",
+    "title_bn": "সোনালি বৃষ্টি: লেড আয়োডাইড প্রস্তুতি",
+    "description_en": "Precipitate bright yellow lead iodide, dissolve it in hot water and recrystallise it — the classic golden rain demonstration.",
+    "description_bn": "উজ্জ্বল হলুদ লেড আয়োডাইড অধঃক্ষেপ করা, গরম পানিতে দ্রবীভূত করা ও পুনর্কেলাসন করা — ক্লাসিক সোনালি বৃষ্টি পরীক্ষা।",
+    "href": "/lab/experiments/golden-rain",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "precipitation",
+      "recrystallisation",
+      "solubility"
+    ]
+  },
+  {
+    "slug": "lab-metal-hydroxide-precipitates",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Identifying metal ions with sodium hydroxide",
+    "title_bn": "সোডিয়াম হাইড্রোক্সাইড দিয়ে ধাতব আয়ন শনাক্তকরণ",
+    "description_en": "Tell copper, iron(III) and zinc ions apart by the precipitates sodium hydroxide gives, then prove that zinc hydroxide is amphoteric.",
+    "description_bn": "সোডিয়াম হাইড্রোক্সাইডের অধঃক্ষেপ দেখে কপার, আয়রন(III) ও জিঙ্ক আয়ন আলাদা করা এবং জিঙ্ক হাইড্রোক্সাইডের উভধর্মী ধর্ম প্রমাণ করা।",
+    "href": "/lab/experiments/metal-hydroxide-precipitates",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "ion-test",
+      "precipitation",
+      "amphoteric"
+    ]
+  },
+  {
+    "slug": "lab-salt-solution-ph",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "pH of salt solutions",
+    "title_bn": "লবণ দ্রবণের pH",
+    "description_en": "Measure the pH of three salt solutions and explain why a salt of a weak acid or base does not give a neutral solution.",
+    "description_bn": "তিনটি লবণ দ্রবণের pH মেপে ব্যাখ্যা করা কেন দুর্বল অ্যাসিড বা ক্ষারের লবণ প্রশম দ্রবণ দেয় না।",
+    "href": "/lab/experiments/salt-solution-ph",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "hydrolysis",
+      "ph",
+      "salts"
+    ]
+  },
+  {
+    "slug": "lab-acid-strength-comparison",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Strong and weak acids at the same concentration",
+    "title_bn": "একই ঘনমাত্রার তীব্র ও দুর্বল অ্যাসিড",
+    "description_en": "Compare 1 mol/L hydrochloric acid with 1 mol/L acetic acid by pH and by how fast they attack zinc.",
+    "description_bn": "১ মোল/লিটার হাইড্রোক্লোরিক অ্যাসিডের সঙ্গে ১ মোল/লিটার অ্যাসিটিক অ্যাসিডের pH ও জিঙ্কের উপর আক্রমণের গতি তুলনা করা।",
+    "href": "/lab/experiments/acid-strength-comparison",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "acids",
+      "ph",
+      "ionisation"
+    ]
+  },
+  {
+    "slug": "lab-heat-of-neutralisation",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Heat of neutralisation",
+    "title_bn": "প্রশমনের তাপ",
+    "description_en": "Measure the temperature rise when equal amounts of a strong acid and a strong base neutralise each other and check that the product is neutral salt water.",
+    "description_bn": "সমান পরিমাণ তীব্র অ্যাসিড ও তীব্র ক্ষার প্রশমিত হলে তাপমাত্রার বৃদ্ধি মাপা এবং উৎপাদ প্রশম লবণ পানি কি না যাচাই করা।",
+    "href": "/lab/experiments/heat-of-neutralisation",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "thermochemistry",
+      "neutralisation",
+      "measurement"
+    ]
+  },
+  {
+    "slug": "lab-carbonate-test",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Test for carbonate and bicarbonate ions",
+    "title_bn": "কার্বনেট ও বাইকার্বনেট আয়ন শনাক্তকরণ",
+    "description_en": "Add dilute acid to a carbonate and a bicarbonate, compare the fizz, and prove the gas with limewater.",
+    "description_bn": "কার্বনেট ও বাইকার্বনেটে লঘু অ্যাসিড যোগ করে ফেনার তুলনা করা এবং চুনের পানি দিয়ে গ্যাস শনাক্ত করা।",
+    "href": "/lab/experiments/carbonate-test",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "gas-test",
+      "carbonate",
+      "acid-carbonate"
+    ]
+  },
+  {
+    "slug": "lab-limestone-cycle",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "The limestone cycle",
+    "title_bn": "চুনাপাথরের চক্র",
+    "description_en": "Turn limestone into quicklime, slake it with water and bubble carbon dioxide through it to get limestone back again.",
+    "description_bn": "চুনাপাথরকে কুইকলাইমে পরিণত করা, পানিতে স্লেক করা এবং কার্বন ডাই-অক্সাইড চালনা করে আবার চুনাপাথর পাওয়া।",
+    "href": "/lab/experiments/limestone-cycle",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "thermal-decomposition",
+      "lime",
+      "cycle"
+    ]
+  },
+  {
+    "slug": "lab-metal-acid-reactivity",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Reactivity of metals with dilute acid",
+    "title_bn": "লঘু অ্যাসিডের সঙ্গে ধাতুর সক্রিয়তা",
+    "description_en": "Reach magnesium, zinc, iron and copper with the same dilute acid and rank them by how vigorously they release hydrogen.",
+    "description_bn": "একই লঘু অ্যাসিড দিয়ে ম্যাগনেসিয়াম, জিঙ্ক, আয়রন ও কপারে আঘাত করে হাইড্রোজেন নির্গমনের তীব্রতার ভিত্তিতে ক্রম তৈরি করা।",
+    "href": "/lab/experiments/metal-acid-reactivity",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "metal",
+      "acid",
+      "reactivity-series"
+    ]
+  },
+  {
+    "slug": "lab-rusting-conditions",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Conditions needed for iron to rust",
+    "title_bn": "লোহায় মরচে ধরার শর্ত",
+    "description_en": "Show that iron rusts only when both air (oxygen) and water are present.",
+    "description_bn": "বাতাস (অক্সিজেন) ও পানি — দুটোই থাকলে তবেই লোহায় মরচে ধরে, তা দেখানো।",
+    "href": "/lab/experiments/rusting-conditions",
+    "tags": [
+      "lab",
+      "class-6-8",
+      "rusting",
+      "oxidation",
+      "corrosion"
+    ]
+  },
+  {
+    "slug": "lab-oxidation-ethanol",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Oxidation of ethanol by permanganate",
+    "title_bn": "পারম্যাঙ্গানেট দিয়ে ইথানলের জারণ",
+    "description_en": "Oxidise ethanol to ethanoic acid with permanganate solution and watch the purple colour vanish as brown manganese dioxide appears.",
+    "description_bn": "পারম্যাঙ্গানেট দ্রবণ দিয়ে ইথানলকে ইথানয়িক অ্যাসিডে জারিত করা এবং বেগুনি রঙ মিলিয়ে বাদামি ম্যাঙ্গানিজ ডাই-অক্সাইড তৈরি হওয়া দেখা।",
+    "href": "/lab/experiments/oxidation-ethanol",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "oxidation",
+      "organic",
+      "redox"
+    ]
+  },
+  {
+    "slug": "lab-gas-identification",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Identifying hydrogen, oxygen and carbon dioxide",
+    "title_bn": "হাইড্রোজেন, অক্সিজেন ও কার্বন ডাই-অক্সাইড শনাক্তকরণ",
+    "description_en": "Run all three standard gas tests — the pop, the glowing splint and limewater — and link each one to its gas.",
+    "description_bn": "তিনটি আদর্শ গ্যাস পরীক্ষা — পট শব্দ, ধূমায়িত কাঠি ও চুনের পানি — চালিয়ে প্রতিটিকে তার গ্যাসের সঙ্গে মেলানো।",
+    "href": "/lab/experiments/gas-identification",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "gas-test",
+      "hydrogen",
+      "oxygen",
+      "carbon-dioxide"
+    ]
+  },
+  {
+    "slug": "lab-aluminium-alkali",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Action of sodium hydroxide on aluminium",
+    "title_bn": "অ্যালুমিনিয়ামের উপর সোডিয়াম হাইড্রোক্সাইডের ক্রিয়া",
+    "description_en": "Show that aluminium is amphoteric: it dissolves in alkali as well as in acid, releasing hydrogen.",
+    "description_bn": "অ্যালুমিনিয়াম উভধর্মী: অ্যাসিডের মতো ক্ষারেও দ্রবীভূত হয় এবং হাইড্রোজেন ছাড়ে — তা দেখানো।",
+    "href": "/lab/experiments/aluminium-alkali",
+    "tags": [
+      "lab",
+      "class-11-12",
+      "amphoteric",
+      "metal",
+      "hydrogen"
+    ]
+  },
+  {
+    "slug": "lab-burning-metals-in-air",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Action of heat on metals in air",
+    "title_bn": "বাতাসে ধাতুর উপর তাপের ক্রিয়া",
+    "description_en": "Burn magnesium and heat copper in air and compare a dazzling white flame with the dull black oxide copper forms.",
+    "description_bn": "বাতাসে ম্যাগনেসিয়াম পুড়িয়ে ও কপার গরম করে চোখ ধাঁধানো সাদা শিখার সঙ্গে কপারের কালো অক্সাইডের তুলনা করা।",
+    "href": "/lab/experiments/burning-metals-in-air",
+    "tags": [
+      "lab",
+      "class-9-10",
+      "combustion",
+      "oxidation",
+      "metals"
     ]
   }
 ]

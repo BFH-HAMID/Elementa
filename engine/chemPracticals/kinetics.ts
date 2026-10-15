@@ -31,7 +31,7 @@ const rateConcentration: ChemPracticalModel = {
     'Make up sodium thiosulfate solution to 50 mL with water in a flask standing on a paper cross, add 5 mL of 2 M HCl and start the stopwatch (▶). Sulfur clouds the solution — stop the clock the moment the cross can no longer be seen from above. Repeat for each volume; the slope of log(1/t) against log c is the order of reaction.',
   howTo_bn:
     'কাগজে আঁকা ক্রসের উপর রাখা ফ্লাস্কে সোডিয়াম থায়োসালফেট দ্রবণে পানি মিশিয়ে 50 mL করো, 5 mL 2 M HCl দিয়ে স্টপওয়াচ চালু করো (▶)। সালফারে দ্রবণ ঘোলা হয় — উপর থেকে ক্রস আর দেখা না যাওয়ার মুহূর্তে ঘড়ি থামাও। প্রতিটি আয়তনে পুনরাবৃত্তি করো; log(1/t) বনাম log c-এর ঢালই বিক্রিয়ার ক্রম।',
-  formula: 'Na₂S₂O₃ + 2HCl → 2NaCl + S↓ + SO₂ + H₂O · rate ∝ 1/t ∝ [S₂O₃²⁻]ⁿ',
+  formula: 'Na₂S₂O₃ + 2HCl → 2NaCl + S↓ + SO₂ + H₂O · rate ∝ 1/t ∝ [S₂O₃²⁻]^n',
   controls: [
     { key: 'vthio', en: 'Na₂S₂O₃ (0.15 M), made up to 50 mL', bn: 'Na₂S₂O₃ (0.15 M), পানি মিশিয়ে 50 mL', min: 10, max: 50, step: 5, unit: 'mL', default: 50 },
     { key: 't', en: 'Stopwatch', bn: 'স্টপওয়াচ', kind: 'time', min: 0, max: 150, step: 0.5, unit: 's', default: 0, fine: true, digits: 1, play: { rate: 3 } }

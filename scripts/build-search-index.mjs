@@ -171,10 +171,21 @@ records.push({
   subject: 'chemistry',
   title_en: 'Guided chemistry experiments',
   title_bn: 'গাইডেড কেমিস্ট্রি পরীক্ষা',
-  description_en: `${labExperiments.length} walkthroughs that set the virtual bench up for you and tick each step off.`,
-  description_bn: `${labExperiments.length}টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে।`,
+  description_en: `${labExperiments.length} walkthroughs that set the virtual bench up for you and tick each step off — each with an interactive practical simulation.`,
+  description_bn: `${labExperiments.length}টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে — প্রতিটির সাথে ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল সিমুলেশন।`,
   href: '/lab/experiments',
   tags: ['experiments', 'guided']
+});
+records.push({
+  slug: 'lab-practical-simulations',
+  kind: 'lab',
+  subject: 'chemistry',
+  title_en: 'Chemistry practical simulations',
+  title_bn: 'রসায়ন প্র্যাকটিক্যাল সিমুলেশন',
+  description_en: `${labExperiments.length} interactive practicals: titrations, ion tests, gas preparation, electrolysis, rates and more — take readings, fill the observation table and check your result.`,
+  description_bn: `${labExperiments.length}টি ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল: টাইট্রেশন, আয়ন শনাক্তকরণ, গ্যাস প্রস্তুতি, তড়িৎবিশ্লেষণ, বিক্রিয়ার হার ও আরও — পাঠ নাও, পর্যবেক্ষণ সারণি পূরণ করো এবং ফলাফল যাচাই করো।`,
+  href: '/lab/experiments',
+  tags: ['simulation', 'practical', 'titration', 'salt analysis', 'virtual lab']
 });
 for (const experiment of labExperiments) {
   records.push({
@@ -186,7 +197,7 @@ for (const experiment of labExperiments) {
     description_en: mathToText(experiment.aim_en),
     description_bn: experiment.aim_bn,
     href: `/lab/experiments/${experiment.slug}`,
-    tags: ['lab', experiment.level, ...experiment.tags]
+    tags: ['lab', 'simulation', experiment.level, ...experiment.tags.filter((tag) => tag !== 'simulation')]
   });
 }
 fs.mkdirSync(path.dirname(output), { recursive: true });

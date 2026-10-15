@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowRight, Beaker, Clock, FlaskConical, Layers, ListChecks } from 'lucide-react';
+import { ArrowRight, Beaker, ClipboardList, Clock, FlaskConical, Layers, ListChecks } from 'lucide-react';
+import { allChemPracticalModels, getChemPracticalModel } from '@/engine/chemPracticals';
+import { SimulationProgress } from '@/components/lab/practicals/SimulationProgress';
 import { labT } from '@/lib/i18n';
 import { apparatusName, chemicalName, experimentHref, guidedExperiments } from '@/lib/labData';
 import { isLocale } from '@/i18n/routing';
@@ -32,10 +34,16 @@ export default function LabExperimentsPage({ params }: { params: { locale: strin
         <p className="eyebrow">{labT(locale, 'brand.badge')}</p>
         <h1 className="display-title mt-3">{labT(locale, 'experiment.title')}</h1>
         <p className={`mt-4 text-base leading-7 muted ${locale === 'bn' ? 'font-bengali' : ''}`}>{labT(locale, 'experiment.subtitle')}</p>
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap items-center gap-3">
           <Link href={`/${locale}/lab/chemistry`} className="btn-primary">
             <Beaker size={17} /> {labT(locale, 'brand.title')}
           </Link>
+          <span className="pill bg-chemistry-100 text-xs font-black text-chemistry-800 dark:bg-chemistry-900 dark:text-chemistry-100">
+            <ClipboardList size={13} />
+            {locale === 'bn'
+              ? `${guidedExperiments.length}টি প্র্যাকটিক্যাল · প্রতিটির ইন্টার‍্যাক্টিভ সিমুলেশন (${allChemPracticalModels.length})`
+              : `${guidedExperiments.length} practicals · each with an interactive simulation (${allChemPracticalModels.length})`}
+          </span>
         </div>
       </div>
 
@@ -87,13 +95,19 @@ export default function LabExperimentsPage({ params }: { params: { locale: strin
               </p>
             </div>
 
-            <div className="mt-auto flex flex-wrap gap-2 pt-5">
-              <Link href={`/${locale}${experimentHref(experiment.slug)}`} className="btn-secondary min-h-9 rounded-lg px-3 text-xs font-bold">
+            <div className="mt-auto flex flex-wrap items-center gap-2 pt-5">
+              {getChemPracticalModel(experiment.slug) && (
+                <Link href={`/${locale}/lab/chemistry?experiment=${experiment.slug}&mode=simulation`} className="btn-primary min-h-9 rounded-lg px-3 text-xs font-bold">
+                  <ClipboardList size={14} /> {locale === 'bn' ? 'সিমুলেশন' : 'Simulation'}
+                </Link>
+              )}
+              <Link href={`/${locale}/lab/chemistry?experiment=${experiment.slug}&mode=bench`} className="btn-secondary min-h-9 rounded-lg px-3 text-xs font-bold">
+                <Beaker size={14} /> {locale === 'bn' ? 'বেঞ্চ' : 'Bench'}
+              </Link>
+              <Link href={`/${locale}${experimentHref(experiment.slug)}`} className="btn-ghost min-h-9 rounded-lg px-2 text-xs font-bold">
                 {locale === 'bn' ? 'বিস্তারিত' : 'Details'} <ArrowRight size={14} />
               </Link>
-              <Link href={`/${locale}/lab/chemistry?experiment=${experiment.slug}`} className="btn-primary min-h-9 rounded-lg px-3 text-xs font-bold">
-                {labT(locale, 'action.openInLab')}
-              </Link>
+              {getChemPracticalModel(experiment.slug) && <SimulationProgress slug={experiment.slug} minReadings={getChemPracticalModel(experiment.slug)!.minReadings} />}
             </div>
           </article>
         ))}

@@ -1,6 +1,6 @@
 {
-  "count": 109,
-  "shelfCount": 54,
+  "count": 117,
+  "shelfCount": 61,
   "categories": {
     "acid": {
       "en": "Acids",
@@ -1334,7 +1334,7 @@
       }
     },
     {
-      "shelf": false,
+      "shelf": true,
       "hazard": "oxidiser",
       "opacity": 0.4,
       "soluble": true,
@@ -1354,7 +1354,8 @@
           "acid": "HNO3",
           "base": "KOH"
         }
-      }
+      },
+      "concentrationM": 1.0
     },
     {
       "shelf": false,
@@ -1724,7 +1725,7 @@
       }
     },
     {
-      "shelf": false,
+      "shelf": true,
       "hazard": "irritant",
       "opacity": 1,
       "soluble": false,
@@ -2422,6 +2423,182 @@
       "state": "solid",
       "color": "#f4f6f6",
       "molarMass": 120.14
+    },
+    {
+      "shelf": true,
+      "hazard": "irritant",
+      "opacity": 0.35,
+      "soluble": true,
+      "precipitate": false,
+      "amphoteric": false,
+      "id": "Na2S2O3",
+      "formula": "Na₂S₂O₃",
+      "name_en": "Sodium thiosulfate",
+      "name_bn": "সোডিয়াম থায়োসালফেট",
+      "category": "salt",
+      "state": "liquid",
+      "color": "#f2f6f9",
+      "molarMass": 158.11,
+      "concentrationM": 0.15,
+      "acidity": {
+        "kind": "neutral"
+      },
+      "notes_en": "“Hypo”: turns cloudy with acid as sulfur forms; also titrates iodine.",
+      "notes_bn": "“হাইপো”: অ্যাসিডে সালফার তৈরি হয়ে ঘোলা হয়; আয়োডিন টাইট্রেশনেও ব্যবহৃত।"
+    },
+    {
+      "shelf": false,
+      "hazard": "none",
+      "opacity": 1,
+      "soluble": false,
+      "precipitate": true,
+      "amphoteric": false,
+      "id": "S",
+      "formula": "S",
+      "name_en": "Sulfur",
+      "name_bn": "সালফার",
+      "category": "salt",
+      "state": "solid",
+      "color": "#f1e39a",
+      "molarMass": 32.06,
+      "acidity": {
+        "kind": "neutral"
+      },
+      "notes_en": "Pale-yellow colloidal sulfur.",
+      "notes_bn": "হালকা হলুদ কলয়েডীয় সালফার।"
+    },
+    {
+      "shelf": true,
+      "hazard": "oxidiser",
+      "opacity": 0.3,
+      "soluble": true,
+      "precipitate": false,
+      "amphoteric": false,
+      "id": "H2O2",
+      "formula": "H₂O₂",
+      "name_en": "Hydrogen peroxide (3%)",
+      "name_bn": "হাইড্রোজেন পারক্সাইড (৩%)",
+      "category": "solvent",
+      "state": "liquid",
+      "color": "#eef6fb",
+      "molarMass": 34.01,
+      "concentrationM": 0.9,
+      "acidity": {
+        "kind": "neutral"
+      },
+      "notes_en": "Slowly decomposes to water and oxygen; manganese(IV) oxide speeds it up enormously.",
+      "notes_bn": "ধীরে পানি ও অক্সিজেনে বিয়োজিত হয়; ম্যাঙ্গানিজ(IV) অক্সাইড একে বহুগুণ দ্রুত করে।"
+    },
+    {
+      "shelf": true,
+      "hazard": "irritant",
+      "opacity": 1,
+      "soluble": true,
+      "precipitate": false,
+      "amphoteric": false,
+      "id": "CuSO4-5H2O",
+      "formula": "CuSO₄·5H₂O",
+      "name_en": "Copper(II) sulphate crystals",
+      "name_bn": "কপার(II) সালফেট কেলাস (তুঁতে)",
+      "category": "salt",
+      "state": "solid",
+      "color": "#2f6fd0",
+      "molarMass": 249.69,
+      "acidity": {
+        "kind": "salt",
+        "saltOf": {
+          "acid": "H2SO4",
+          "base": "Cu(OH)2"
+        }
+      },
+      "notes_en": "Blue vitriol: blue crystals holding five molecules of water of crystallisation.",
+      "notes_bn": "নীল তুঁতে: পাঁচ অণু কেলাস পানিযুক্ত নীল কেলাস।"
+    },
+    {
+      "shelf": false,
+      "hazard": "irritant",
+      "opacity": 1,
+      "soluble": true,
+      "precipitate": false,
+      "amphoteric": false,
+      "id": "CuSO4-anh",
+      "formula": "CuSO₄",
+      "name_en": "Anhydrous copper(II) sulphate",
+      "name_bn": "অনার্দ্র কপার(II) সালফেট",
+      "category": "salt",
+      "state": "solid",
+      "color": "#f1f1ec",
+      "molarMass": 159.61,
+      "acidity": {
+        "kind": "neutral"
+      },
+      "notes_en": "White powder that turns blue with water — a test for water.",
+      "notes_bn": "সাদা গুঁড়া, পানিতে নীল হয় — পানির পরীক্ষা।"
+    },
+    {
+      "shelf": true,
+      "hazard": "irritant",
+      "opacity": 0.35,
+      "soluble": true,
+      "precipitate": false,
+      "amphoteric": false,
+      "id": "KSCN",
+      "formula": "KSCN",
+      "name_en": "Potassium thiocyanate",
+      "name_bn": "পটাশিয়াম থায়োসায়ানেট",
+      "category": "salt",
+      "state": "liquid",
+      "color": "#f2f6f9",
+      "molarMass": 97.18,
+      "concentrationM": 0.1,
+      "acidity": {
+        "kind": "neutral"
+      },
+      "notes_en": "Gives a blood-red colour with Fe³⁺ ions.",
+      "notes_bn": "Fe³⁺ আয়নের সাথে রক্ত-লাল রং দেয়।"
+    },
+    {
+      "shelf": false,
+      "hazard": "irritant",
+      "opacity": 0.85,
+      "soluble": true,
+      "precipitate": false,
+      "amphoteric": false,
+      "id": "FeSCN",
+      "formula": "[Fe(SCN)]Cl₂",
+      "name_en": "Iron(III) thiocyanate complex",
+      "name_bn": "আয়রন(III) থায়োসায়ানেট জটিল যৌগ",
+      "category": "salt",
+      "state": "liquid",
+      "color": "#9b1414",
+      "molarMass": 184.83,
+      "concentrationM": 0.1,
+      "acidity": {
+        "kind": "neutral"
+      },
+      "notes_en": "The blood-red complex ion [Fe(SCN)]²⁺.",
+      "notes_bn": "রক্ত-লাল জটিল আয়ন [Fe(SCN)]²⁺।"
+    },
+    {
+      "shelf": true,
+      "hazard": "none",
+      "opacity": 1,
+      "soluble": false,
+      "precipitate": true,
+      "amphoteric": false,
+      "id": "SiO2",
+      "formula": "SiO₂",
+      "name_en": "Sand (silica)",
+      "name_bn": "বালি (সিলিকা)",
+      "category": "salt",
+      "state": "solid",
+      "color": "#d8c08f",
+      "molarMass": 60.08,
+      "acidity": {
+        "kind": "neutral"
+      },
+      "notes_en": "Insoluble in water — the impurity in rock salt.",
+      "notes_bn": "পানিতে অদ্রবণীয় — খনিজ লবণের অপদ্রব্য।"
     }
   ]
 }

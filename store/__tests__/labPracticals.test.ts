@@ -146,6 +146,49 @@ const walkthroughs: Record<string, (b: Bench) => void> = {
     b.add(1, 'Cu', 1);
     b.add(1, 'O2', 20);
     b.heat(1, 25);
+  },
+  // ── the ten extra practicals added together with the practical simulations ──
+  'rate-thiosulfate-concentration': (b) => {
+    b.add(0, 'HCl', 5);
+    b.add(1, 'HCl', 5);
+  },
+  'rate-thiosulfate-temperature': (b) => {
+    b.heat(0, 30);
+    b.add(0, 'HCl', 5);
+  },
+  'water-of-crystallisation': (b) => {
+    b.heat(0, 30);
+    b.add(0, 'H2O', 2);
+  },
+  'molar-volume-hydrogen': (b) => {
+    b.add(0, 'Mg', 0.05);
+    b.collect(0, 1);
+    b.spark(1);
+  },
+  'copper-electrolysis-faraday': (b) => {
+    b.electrolyse(0);
+  },
+  'solubility-curve-kno3': (b) => {
+    b.heat(0, 20);
+  },
+  'electrochemical-cell': (b) => {
+    b.add(0, 'Zn', 1);
+    b.add(1, 'Cu', 1);
+    b.add(2, 'Zn', 1);
+  },
+  'catalytic-decomposition-h2o2': (b) => {
+    b.add(0, 'MnO2', 0.5);
+    b.collect(0, 1);
+    b.heat(1, 15);
+  },
+  'rock-salt-purification': (b) => {
+    b.add(0, 'H2O', 20);
+    b.heat(1, 75);
+  },
+  'iron-thiocyanate-equilibrium': (b) => {
+    b.add(0, 'KSCN', 1);
+    b.add(1, 'KSCN', 1);
+    b.add(1, 'NaOH', 2);
   }
 };
 
@@ -154,7 +197,7 @@ beforeEach(() => {
   state().setBurnerIntensity(0.8);
 });
 
-describe('the twenty practicals added to the chemistry lab', () => {
+describe('the practicals added to the chemistry lab', () => {
   it('lists exactly the walkthroughs that exist in the dataset', () => {
     const newlyAdded = guidedExperiments.filter((experiment) => experiment.order > 11).map((experiment) => experiment.slug);
     expect(newlyAdded.sort()).toEqual(Object.keys(walkthroughs).sort());

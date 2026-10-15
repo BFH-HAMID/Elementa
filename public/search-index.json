@@ -7702,12 +7702,29 @@
     "subject": "chemistry",
     "title_en": "Guided chemistry experiments",
     "title_bn": "গাইডেড কেমিস্ট্রি পরীক্ষা",
-    "description_en": "31 walkthroughs that set the virtual bench up for you and tick each step off.",
-    "description_bn": "31টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে।",
+    "description_en": "41 walkthroughs that set the virtual bench up for you and tick each step off — each with an interactive practical simulation.",
+    "description_bn": "41টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে — প্রতিটির সাথে ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল সিমুলেশন।",
     "href": "/lab/experiments",
     "tags": [
       "experiments",
       "guided"
+    ]
+  },
+  {
+    "slug": "lab-practical-simulations",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Chemistry practical simulations",
+    "title_bn": "রসায়ন প্র্যাকটিক্যাল সিমুলেশন",
+    "description_en": "41 interactive practicals: titrations, ion tests, gas preparation, electrolysis, rates and more — take readings, fill the observation table and check your result.",
+    "description_bn": "41টি ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল: টাইট্রেশন, আয়ন শনাক্তকরণ, গ্যাস প্রস্তুতি, তড়িৎবিশ্লেষণ, বিক্রিয়ার হার ও আরও — পাঠ নাও, পর্যবেক্ষণ সারণি পূরণ করো এবং ফলাফল যাচাই করো।",
+    "href": "/lab/experiments",
+    "tags": [
+      "simulation",
+      "practical",
+      "titration",
+      "salt analysis",
+      "virtual lab"
     ]
   },
   {
@@ -7721,6 +7738,7 @@
     "href": "/lab/experiments/litmus-test",
     "tags": [
       "lab",
+      "simulation",
       "class-6-8",
       "indicator",
       "ph"
@@ -7737,6 +7755,7 @@
     "href": "/lab/experiments/acid-base-neutralisation",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "neutralisation",
       "ph"
@@ -7753,6 +7772,7 @@
     "href": "/lab/experiments/titration-burette",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "titration",
       "ph"
@@ -7769,6 +7789,7 @@
     "href": "/lab/experiments/flame-test",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "flame-test",
       "heating"
@@ -7785,6 +7806,7 @@
     "href": "/lab/experiments/prepare-hydrogen",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "gas-preparation"
     ]
@@ -7800,6 +7822,7 @@
     "href": "/lab/experiments/prepare-co2",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "gas-preparation"
     ]
@@ -7815,6 +7838,7 @@
     "href": "/lab/experiments/precipitate-agcl",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "precipitation"
     ]
@@ -7830,6 +7854,7 @@
     "href": "/lab/experiments/precipitate-baso4",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "precipitation"
     ]
@@ -7845,6 +7870,7 @@
     "href": "/lab/experiments/metal-displacement",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "displacement"
     ]
@@ -7860,6 +7886,7 @@
     "href": "/lab/experiments/electrolysis-water",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "electrolysis"
     ]
@@ -7875,6 +7902,7 @@
     "href": "/lab/experiments/heat-and-boiling",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "heating"
     ]
@@ -7890,6 +7918,7 @@
     "href": "/lab/experiments/sublimation-nh4cl",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "sublimation",
       "gas-test",
@@ -7907,6 +7936,7 @@
     "href": "/lab/experiments/prepare-chlorine",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "gas-preparation",
       "halogen",
@@ -7924,6 +7954,7 @@
     "href": "/lab/experiments/electrolysis-brine",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "electrolysis",
       "industrial",
@@ -7941,6 +7972,7 @@
     "href": "/lab/experiments/sodium-water",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "metal",
       "alkali-metal",
@@ -7958,6 +7990,7 @@
     "href": "/lab/experiments/copper-nitric-acid",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "redox",
       "nitric-acid",
@@ -7975,6 +8008,7 @@
     "href": "/lab/experiments/oxidising-agents",
     "tags": [
       "lab",
+      "simulation",
       "honours",
       "redox",
       "titration",
@@ -7992,6 +8026,7 @@
     "href": "/lab/experiments/iodine-liberation",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "redox",
       "iodine",
@@ -8009,6 +8044,7 @@
     "href": "/lab/experiments/golden-rain",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "precipitation",
       "recrystallisation",
@@ -8026,6 +8062,7 @@
     "href": "/lab/experiments/metal-hydroxide-precipitates",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "ion-test",
       "precipitation",
@@ -8043,6 +8080,7 @@
     "href": "/lab/experiments/salt-solution-ph",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "hydrolysis",
       "ph",
@@ -8060,6 +8098,7 @@
     "href": "/lab/experiments/acid-strength-comparison",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "acids",
       "ph",
@@ -8077,6 +8116,7 @@
     "href": "/lab/experiments/heat-of-neutralisation",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "thermochemistry",
       "neutralisation",
@@ -8094,6 +8134,7 @@
     "href": "/lab/experiments/carbonate-test",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "gas-test",
       "carbonate",
@@ -8111,6 +8152,7 @@
     "href": "/lab/experiments/limestone-cycle",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "thermal-decomposition",
       "lime",
@@ -8128,6 +8170,7 @@
     "href": "/lab/experiments/metal-acid-reactivity",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "metal",
       "acid",
@@ -8145,6 +8188,7 @@
     "href": "/lab/experiments/rusting-conditions",
     "tags": [
       "lab",
+      "simulation",
       "class-6-8",
       "rusting",
       "oxidation",
@@ -8162,6 +8206,7 @@
     "href": "/lab/experiments/oxidation-ethanol",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "oxidation",
       "organic",
@@ -8179,6 +8224,7 @@
     "href": "/lab/experiments/gas-identification",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "gas-test",
       "hydrogen",
@@ -8197,6 +8243,7 @@
     "href": "/lab/experiments/aluminium-alkali",
     "tags": [
       "lab",
+      "simulation",
       "class-11-12",
       "amphoteric",
       "metal",
@@ -8214,10 +8261,184 @@
     "href": "/lab/experiments/burning-metals-in-air",
     "tags": [
       "lab",
+      "simulation",
       "class-9-10",
       "combustion",
       "oxidation",
       "metals"
+    ]
+  },
+  {
+    "slug": "lab-rate-thiosulfate-concentration",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Rate of reaction: concentration and the disappearing cross",
+    "title_bn": "বিক্রিয়ার হার: ঘনমাত্রা ও অদৃশ্য ক্রস",
+    "description_en": "Time how long sodium thiosulfate and hydrochloric acid take to hide a paper cross at different concentrations, and find the order of reaction.",
+    "description_bn": "বিভিন্ন ঘনমাত্রায় সোডিয়াম থায়োসালফেট ও হাইড্রোক্লোরিক অ্যাসিড কাগজের ক্রস ঢাকতে কত সময় নেয় তা মেপে বিক্রিয়ার ক্রম নির্ণয় করা।",
+    "href": "/lab/experiments/rate-thiosulfate-concentration",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "rate",
+      "kinetics"
+    ]
+  },
+  {
+    "slug": "lab-rate-thiosulfate-temperature",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Rate of reaction: temperature and activation energy",
+    "title_bn": "বিক্রিয়ার হার: তাপমাত্রা ও সক্রিয়ন শক্তি",
+    "description_en": "Repeat the disappearing-cross reaction at 20–60 °C and use an Arrhenius plot to find the activation energy.",
+    "description_bn": "২০–৬০ °C তাপমাত্রায় অদৃশ্য ক্রস বিক্রিয়াটি করে আরহেনিয়াস লেখ থেকে সক্রিয়ন শক্তি নির্ণয় করা।",
+    "href": "/lab/experiments/rate-thiosulfate-temperature",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "rate",
+      "kinetics",
+      "activation-energy"
+    ]
+  },
+  {
+    "slug": "lab-water-of-crystallisation",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Water of crystallisation in blue vitriol",
+    "title_bn": "তুঁতের কেলাস পানি নির্ণয়",
+    "description_en": "Heat hydrated copper(II) sulphate to constant mass, find x in CuSO₄·xH₂O, and reverse the change with water.",
+    "description_bn": "সোদক কপার(II) সালফেট স্থির ভর পর্যন্ত উত্তপ্ত করে CuSO₄·xH₂O-তে x নির্ণয় করা এবং পানি দিয়ে পরিবর্তনটি উল্টে দেখা।",
+    "href": "/lab/experiments/water-of-crystallisation",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-9-10",
+      "water-of-crystallisation",
+      "heating",
+      "stoichiometry"
+    ]
+  },
+  {
+    "slug": "lab-molar-volume-hydrogen",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Molar volume of hydrogen",
+    "title_bn": "হাইড্রোজেনের মোলার আয়তন",
+    "description_en": "React weighed magnesium with excess acid, collect the hydrogen in a gas syringe and find the volume of one mole of gas.",
+    "description_bn": "ওজন করা ম্যাগনেসিয়াম অতিরিক্ত অ্যাসিডের সাথে বিক্রিয়া করিয়ে হাইড্রোজেন গ্যাস সিরিঞ্জে সংগ্রহ করা এবং এক মোল গ্যাসের আয়তন নির্ণয় করা।",
+    "href": "/lab/experiments/molar-volume-hydrogen",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "mole-concept",
+      "gases"
+    ]
+  },
+  {
+    "slug": "lab-copper-electrolysis-faraday",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Electrolysis of copper(II) sulphate: Faraday’s first law",
+    "title_bn": "কপার(II) সালফেটের তড়িৎবিশ্লেষণ: ফ্যারাডের প্রথম সূত্র",
+    "description_en": "Weigh the copper deposited on the cathode for different charges passed and find the Faraday constant.",
+    "description_bn": "বিভিন্ন পরিমাণ আধান প্রবাহিত করে ক্যাথোডে জমা কপারের ভর মেপে ফ্যারাডে ধ্রুবক নির্ণয় করা।",
+    "href": "/lab/experiments/copper-electrolysis-faraday",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "electrolysis",
+      "faraday"
+    ]
+  },
+  {
+    "slug": "lab-solubility-curve-kno3",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Solubility curve of potassium nitrate",
+    "title_bn": "পটাশিয়াম নাইট্রেটের দ্রাব্যতা লেখ",
+    "description_en": "Find the temperature at which different masses of KNO₃ in 10 g of water start to crystallise and draw its solubility curve.",
+    "description_bn": "১০ g পানিতে বিভিন্ন ভরের KNO₃ কোন তাপমাত্রায় কেলাসিত হতে শুরু করে তা নির্ণয় করে দ্রাব্যতা লেখ আঁকা।",
+    "href": "/lab/experiments/solubility-curve-kno3",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-9-10",
+      "solubility",
+      "crystallisation"
+    ]
+  },
+  {
+    "slug": "lab-electrochemical-cell",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Daniell cell and the electrochemical series",
+    "title_bn": "ড্যানিয়েল কোষ ও তড়িৎরাসায়নিক সারি",
+    "description_en": "Build zinc–copper and other cells with a salt bridge, measure their EMF and see how concentration changes it.",
+    "description_bn": "লবণ সেতু দিয়ে জিঙ্ক–কপার ও অন্যান্য কোষ তৈরি করে এদের EMF মাপা এবং ঘনমাত্রায় তা কীভাবে বদলায় দেখা।",
+    "href": "/lab/experiments/electrochemical-cell",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "electrochemistry",
+      "cells"
+    ]
+  },
+  {
+    "slug": "lab-catalytic-decomposition-h2o2",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Catalytic decomposition of hydrogen peroxide",
+    "title_bn": "হাইড্রোজেন পারক্সাইডের প্রভাবকীয় বিয়োজন",
+    "description_en": "Use manganese(IV) oxide to decompose hydrogen peroxide, follow the oxygen volume with time and show the catalyst is unchanged.",
+    "description_bn": "ম্যাঙ্গানিজ(IV) অক্সাইড দিয়ে হাইড্রোজেন পারক্সাইড বিয়োজিত করে সময়ের সাথে অক্সিজেনের আয়তন অনুসরণ করা এবং প্রভাবক অপরিবর্তিত থাকে দেখানো।",
+    "href": "/lab/experiments/catalytic-decomposition-h2o2",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-9-10",
+      "catalysis",
+      "gases"
+    ]
+  },
+  {
+    "slug": "lab-rock-salt-purification",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Purifying rock salt",
+    "title_bn": "খনিজ লবণ বিশোধন",
+    "description_en": "Separate salt from sand by dissolving, filtering and evaporating, and work out the percentage of salt in rock salt.",
+    "description_bn": "দ্রবীভূত করে, ছেঁকে ও বাষ্পীভূত করে বালি থেকে লবণ আলাদা করা এবং খনিজ লবণে লবণের শতকরা পরিমাণ নির্ণয় করা।",
+    "href": "/lab/experiments/rock-salt-purification",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-6-8",
+      "separation",
+      "filtration",
+      "evaporation"
+    ]
+  },
+  {
+    "slug": "lab-iron-thiocyanate-equilibrium",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Le Chatelier’s principle with iron(III) thiocyanate",
+    "title_bn": "আয়রন(III) থায়োসায়ানেট দিয়ে লা শাতেলিয়ের নীতি",
+    "description_en": "Disturb the blood-red Fe³⁺ + SCN⁻ ⇌ [Fe(SCN)]²⁺ equilibrium by adding reagents, heating and cooling, and predict which way it shifts.",
+    "description_bn": "বিকারক যোগ করে, গরম ও ঠান্ডা করে রক্ত-লাল Fe³⁺ + SCN⁻ ⇌ [Fe(SCN)]²⁺ সাম্যাবস্থা বিঘ্নিত করা এবং কোন দিকে সরে তা নির্ণয় করা।",
+    "href": "/lab/experiments/iron-thiocyanate-equilibrium",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "equilibrium",
+      "le-chatelier"
     ]
   }
 ]

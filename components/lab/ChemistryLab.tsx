@@ -10,13 +10,17 @@ import {
   type DragEndEvent,
   type DragStartEvent
 } from '@dnd-kit/core';
-import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
+import { useCallback, useEffect, useState } from 'react';
+import { ClipboardList, FlaskConical, ListChecks } from 'lucide-react';
 import type { Locale } from '@/engine/types';
+import { allChemPracticalModels, hasChemPracticalModel } from '@/engine/chemPracticals';
 import { labT, useLabI18n } from '@/lib/i18n';
 import { apparatusById, getExperiment } from '@/lib/labData';
 import { cn } from '@/lib/utils';
 import { useLabStore } from '@/store/labStore';
+import { ChemPracticalSimulator } from './practicals/ChemPracticalSimulator';
 import { ApparatusGlyph } from './Apparatus';
 import { EquationBox } from './EquationBox';
 import { ExperimentGuidePanel } from './ExperimentGuidePanel';
@@ -38,8 +42,28 @@ const TICK_MS = 200;
 export function ChemistryLab() {
   const { t, locale } = useLabI18n();
   const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
   const [activeDrag, setActiveDrag] = useState<DragPayload | null>(null);
   const requestedExperiment = searchParams.get('experiment');
+  const benchExperiment = useLabStore((state) => state.activeExperiment?.slug ?? null);
+  // `?experiment=<slug>` opens the interactive practical simulation (when the practical
+  // has one); `&mode=bench` opens the drag-and-drop bench walkthrough instead.
+  const simulationSlug = requestedExperiment && hasChemPracticalModel(requestedExperiment) ? requestedExperiment : null;
+  const mode: 'simulation' | 'bench' = simulationSlug && searchParams.get('mode') !== 'bench' ? 'simulation' : 'bench';
+  // On the bench the walkthrough can be switched from the guide panel, so the mode
+  // switch follows whatever practical is loaded there.
+  const switchSlug = mode === 'simulation' ? simulationSlug : benchExperiment && hasChemPracticalModel(benchExperiment) ? benchExperiment : simulationSlug;
+
+  const goTo = useCallback(
+    (slug: string, nextMode: 'simulation' | 'bench') => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set('experiment', slug);
+      params.set('mode', nextMode);
+      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+    },
+    [pathname, router, searchParams]
+  );
 
   const sensors = useSensors(
     // A small distance threshold keeps taps and scrolling working on touch screens.
@@ -79,7 +103,7 @@ export function ChemistryLab() {
   };
 
   return (
-    <DndContext sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd} onDragCancel={() => setActiveDrag(null)}>
+    <DndContext id="elementa-chemistry-lab" sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd} onDragCancel={() => setActiveDrag(null)}>
       <div className="page-shell space-y-4">
         <header className="card flex flex-wrap items-end justify-between gap-3 p-5">
           <div className="max-w-2xl">
@@ -87,27 +111,75 @@ export function ChemistryLab() {
             <h1 className="display-title mt-1">{t('brand.title')}</h1>
             <p className={cn('mt-2 text-sm leading-6 muted', locale === 'bn' && 'font-bengali')}>{t('brand.tagline')}</p>
           </div>
-          <p className="max-w-xs text-[11px] leading-5 muted">{t('shelf.dragHint')}</p>
+          <div className="flex max-w-xs flex-col items-start gap-2 sm:items-end">
+            <Link
+              href={`/${locale}/lab/experiments`}
+              className="inline-flex items-center gap-1.5 rounded-xl border border-chemistry-300 bg-chemistry-50 px-3 py-2 text-[11px] font-black text-chemistry-800 transition hover:bg-chemistry-100 dark:border-chemistry-700 dark:bg-chemistry-900/40 dark:text-chemistry-100"
+            >
+              <ClipboardList size={14} />
+              {locale === 'bn' ? `${allChemPracticalModels.length}টি প্র্যাকটিক্যাল সিমুলেশন` : `${allChemPracticalModels.length} practical simulations`}
+            </Link>
+            {mode === 'bench' && <p className="text-[11px] leading-5 muted">{t('shelf.dragHint')}</p>}
+          </div>
         </header>
 
-        <LabToolbar />
-
-        <div className="grid gap-4 xl:grid-cols-[minmax(290px,340px)_minmax(0,1fr)_minmax(300px,370px)]">
-          <div className="order-2 min-w-0 xl:order-1">
-            <Shelf />
+        {switchSlug && (
+          <div className="flex flex-wrap items-center gap-1.5 rounded-2xl border border-[var(--line)] bg-[var(--surface-soft)] p-1.5" role="tablist" aria-label={locale === 'bn' ? 'পরীক্ষার ধরন' : 'Practical mode'}>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={mode === 'simulation'}
+              data-testid="mode-simulation"
+              onClick={() => goTo(switchSlug, 'simulation')}
+              className={cn(
+                'flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-black transition',
+                mode === 'simulation' ? 'bg-chemistry-600 text-white shadow-sm' : 'text-[var(--muted)] hover:text-[var(--ink)]'
+              )}
+            >
+              <FlaskConical size={14} />
+              {locale === 'bn' ? 'প্র্যাকটিক্যাল সিমুলেশন' : 'Practical simulation'}
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={mode === 'bench'}
+              data-testid="mode-bench"
+              onClick={() => goTo(switchSlug, 'bench')}
+              className={cn(
+                'flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-black transition',
+                mode === 'bench' ? 'bg-chemistry-600 text-white shadow-sm' : 'text-[var(--muted)] hover:text-[var(--ink)]'
+              )}
+            >
+              <ListChecks size={14} />
+              {locale === 'bn' ? 'ভার্চুয়াল বেঞ্চ (ধাপে ধাপে)' : 'Virtual bench (guided steps)'}
+            </button>
           </div>
+        )}
 
-          <div className="order-1 min-w-0 space-y-4 xl:order-2">
-            <Workbench />
-            <ExperimentGuidePanel />
-          </div>
+        {mode === 'simulation' && simulationSlug ? (
+          <ChemPracticalSimulator slug={simulationSlug} onNavigate={(slug) => goTo(slug, 'simulation')} onOpenBench={() => goTo(simulationSlug, 'bench')} />
+        ) : (
+          <>
+            <LabToolbar />
 
-          <div className="order-3 min-w-0 space-y-4">
-            <PhMeter />
-            <EquationBox />
-            <ObservationPanel />
-          </div>
-        </div>
+            <div className="grid gap-4 xl:grid-cols-[minmax(290px,340px)_minmax(0,1fr)_minmax(300px,370px)]">
+              <div className="order-2 min-w-0 xl:order-1">
+                <Shelf />
+              </div>
+
+              <div className="order-1 min-w-0 space-y-4 xl:order-2">
+                <Workbench />
+                <ExperimentGuidePanel />
+              </div>
+
+              <div className="order-3 min-w-0 space-y-4">
+                <PhMeter />
+                <EquationBox />
+                <ObservationPanel />
+              </div>
+            </div>
+          </>
+        )}
 
         <p className="px-1 pb-2 text-[11px] muted">
           {t('safety.simulated')} · {t('misc.reducedMotion')} · {t('misc.offline')}

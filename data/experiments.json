@@ -1,5 +1,5 @@
 {
-  "count": 31,
+  "count": 41,
   "experiments": [
     {
       "order": 1,
@@ -4742,6 +4742,1478 @@
       "title_bn": "বাতাসে ধাতুর উপর তাপের ক্রিয়া",
       "aim_en": "Burn magnesium and heat copper in air and compare a dazzling white flame with the dull black oxide copper forms.",
       "aim_bn": "বাতাসে ম্যাগনেসিয়াম পুড়িয়ে ও কপার গরম করে চোখ ধাঁধানো সাদা শিখার সঙ্গে কপারের কালো অক্সাইডের তুলনা করা।"
+    },
+    {
+      "order": 32,
+      "level": "class-11-12",
+      "durationMinutes": 15,
+      "apparatus": [
+        "conical-flask",
+        "measuring-cylinder",
+        "dropper"
+      ],
+      "chemicals": [
+        "Na2S2O3",
+        "HCl",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Concentrated thiosulfate",
+            "label_bn": "ঘন থায়োসালফেট",
+            "portions": [
+              {
+                "chemicalId": "Na2S2O3",
+                "mL": 40
+              },
+              {
+                "chemicalId": "H2O",
+                "mL": 10
+              }
+            ]
+          },
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Dilute thiosulfate",
+            "label_bn": "লঘু থায়োসালফেট",
+            "portions": [
+              {
+                "chemicalId": "Na2S2O3",
+                "mL": 10
+              },
+              {
+                "chemicalId": "H2O",
+                "mL": 40
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Stand the first flask on a paper cross and add dilute hydrochloric acid: the thiosulfate reacts.",
+          "text_bn": "প্রথম ফ্লাস্কটি কাগজে আঁকা ক্রসের উপর রেখে লঘু হাইড্রোক্লোরিক অ্যাসিড দাও: থায়োসালফেট বিক্রিয়া করে।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "na2s2o3-hcl"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Pale-yellow sulfur clouds the flask until the cross can no longer be seen.",
+          "text_bn": "হালকা হলুদ সালফার ফ্লাস্ক ঘোলা করে, শেষে ক্রস আর দেখা যায় না।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "S"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "The sulfur dioxide formed dissolves in the water as sulphurous acid.",
+          "text_bn": "উৎপন্ন সালফার ডাই-অক্সাইড পানিতে দ্রবীভূত হয়ে সালফিউরাস অ্যাসিড হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2SO3"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Repeat with the more dilute thiosulfate in the second flask — it takes much longer to cloud.",
+          "text_bn": "দ্বিতীয় ফ্লাস্কের লঘু থায়োসালফেট দিয়ে আবার করো — ঘোলা হতে অনেক বেশি সময় লাগে।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "S"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Sulfur dioxide is given off — keep the room ventilated and do not breathe over the flask.",
+        "bn": "সালফার ডাই-অক্সাইড বের হয় — ঘর বায়ুচলাচলযুক্ত রাখো এবং ফ্লাস্কের উপর শ্বাস নিয়ো না।"
+      },
+      "expectedReactions": [
+        "na2s2o3-hcl"
+      ],
+      "quiz": [
+        {
+          "question_en": "Halving the thiosulfate concentration roughly…",
+          "question_bn": "থায়োসালফেটের ঘনমাত্রা অর্ধেক করলে প্রায়…",
+          "options_en": [
+            "Halves the time",
+            "Doubles the time for the cross to vanish",
+            "Has no effect",
+            "Stops the reaction"
+          ],
+          "options_bn": [
+            "সময় অর্ধেক হয়",
+            "ক্রস অদৃশ্য হতে দ্বিগুণ সময় লাগে",
+            "কোনো প্রভাব নেই",
+            "বিক্রিয়া থেমে যায়"
+          ],
+          "answer": 1,
+          "explain_en": "The rate is proportional to [S₂O₃²⁻] (first order), so half the concentration takes twice as long to make the same amount of sulfur.",
+          "explain_bn": "হার [S₂O₃²⁻]-এর সমানুপাতিক (প্রথম ক্রম), তাই অর্ধেক ঘনমাত্রায় একই পরিমাণ সালফার তৈরি হতে দ্বিগুণ সময় লাগে।"
+        },
+        {
+          "question_en": "Why is 1/t used as a measure of rate?",
+          "question_bn": "হারের পরিমাপ হিসেবে 1/t কেন ব্যবহার করা হয়?",
+          "options_en": [
+            "t is always 1",
+            "The same amount of sulfur forms each time, so rate ∝ 1/t",
+            "It makes the numbers bigger",
+            "Because the acid is in excess"
+          ],
+          "options_bn": [
+            "t সবসময় 1",
+            "প্রতিবার একই পরিমাণ সালফার তৈরি হয়, তাই হার ∝ 1/t",
+            "সংখ্যা বড় করতে",
+            "কারণ অ্যাসিড বেশি"
+          ],
+          "answer": 1,
+          "explain_en": "The cross vanishes when a fixed amount of sulfur has formed, so a faster reaction means a shorter time: rate ∝ 1/t.",
+          "explain_bn": "নির্দিষ্ট পরিমাণ সালফার তৈরি হলেই ক্রস অদৃশ্য হয়, তাই দ্রুত বিক্রিয়া মানে কম সময়: হার ∝ 1/t।"
+        }
+      ],
+      "tags": [
+        "rate",
+        "kinetics",
+        "simulation"
+      ],
+      "slug": "rate-thiosulfate-concentration",
+      "title_en": "Rate of reaction: concentration and the disappearing cross",
+      "title_bn": "বিক্রিয়ার হার: ঘনমাত্রা ও অদৃশ্য ক্রস",
+      "aim_en": "Time how long sodium thiosulfate and hydrochloric acid take to hide a paper cross at different concentrations, and find the order of reaction.",
+      "aim_bn": "বিভিন্ন ঘনমাত্রায় সোডিয়াম থায়োসালফেট ও হাইড্রোক্লোরিক অ্যাসিড কাগজের ক্রস ঢাকতে কত সময় নেয় তা মেপে বিক্রিয়ার ক্রম নির্ণয় করা।"
+    },
+    {
+      "order": 33,
+      "level": "class-11-12",
+      "durationMinutes": 18,
+      "apparatus": [
+        "conical-flask",
+        "bunsen-burner",
+        "thermometer",
+        "dropper"
+      ],
+      "chemicals": [
+        "Na2S2O3",
+        "HCl",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Thiosulfate to warm",
+            "label_bn": "গরম করার থায়োসালফেট",
+            "portions": [
+              {
+                "chemicalId": "Na2S2O3",
+                "mL": 10
+              },
+              {
+                "chemicalId": "H2O",
+                "mL": 40
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Warm the thiosulfate solution gently.",
+          "text_bn": "থায়োসালফেট দ্রবণটি মৃদু গরম করো।",
+          "check": {
+            "type": "heating",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Let it reach at least 40 °C.",
+          "text_bn": "অন্তত ৪০ °C পর্যন্ত গরম হতে দাও।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 40
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Add the hydrochloric acid and start timing.",
+          "text_bn": "হাইড্রোক্লোরিক অ্যাসিড দিয়ে সময় মাপা শুরু করো।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "na2s2o3-hcl"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Sulfur clouds the warm flask far faster than it did at room temperature.",
+          "text_bn": "কক্ষ তাপমাত্রার চেয়ে অনেক দ্রুত সালফার গরম ফ্লাস্কটি ঘোলা করে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "S"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Warm gently (below 60 °C) — hot acid mixtures release more sulfur dioxide.",
+        "bn": "মৃদু গরম করো (৬০ °C-এর নিচে) — গরম অ্যাসিড মিশ্রণ থেকে বেশি সালফার ডাই-অক্সাইড বের হয়।"
+      },
+      "expectedReactions": [
+        "na2s2o3-hcl"
+      ],
+      "quiz": [
+        {
+          "question_en": "A 10 °C rise in temperature roughly…",
+          "question_bn": "তাপমাত্রা ১০ °C বাড়লে প্রায়…",
+          "options_en": [
+            "Halves the rate",
+            "Doubles the rate",
+            "Leaves the rate unchanged",
+            "Changes the products"
+          ],
+          "options_bn": [
+            "হার অর্ধেক হয়",
+            "হার দ্বিগুণ হয়",
+            "হার একই থাকে",
+            "উৎপাদ বদলে যায়"
+          ],
+          "answer": 1,
+          "explain_en": "Many more collisions have energy above the activation energy, so the rate roughly doubles for every 10 °C near room temperature.",
+          "explain_bn": "অনেক বেশি সংঘর্ষের শক্তি সক্রিয়ন শক্তির চেয়ে বেশি হয়, তাই কক্ষ তাপমাত্রার কাছে প্রতি ১০ °C-এ হার প্রায় দ্বিগুণ হয়।"
+        },
+        {
+          "question_en": "In an Arrhenius plot of ln(1/t) against 1/T the slope equals…",
+          "question_bn": "ln(1/t) বনাম 1/T আরহেনিয়াস লেখের ঢাল সমান…",
+          "options_en": [
+            "+Ea/R",
+            "−Ea/R",
+            "R/Ea",
+            "ln A"
+          ],
+          "options_bn": [
+            "+Ea/R",
+            "−Ea/R",
+            "R/Ea",
+            "ln A"
+          ],
+          "answer": 1,
+          "explain_en": "ln k = ln A − Ea/(RT), and 1/t is proportional to k, so the slope is −Ea/R.",
+          "explain_bn": "ln k = ln A − Ea/(RT), আর 1/t, k-এর সমানুপাতিক, তাই ঢাল −Ea/R।"
+        }
+      ],
+      "tags": [
+        "rate",
+        "kinetics",
+        "activation-energy",
+        "simulation"
+      ],
+      "slug": "rate-thiosulfate-temperature",
+      "title_en": "Rate of reaction: temperature and activation energy",
+      "title_bn": "বিক্রিয়ার হার: তাপমাত্রা ও সক্রিয়ন শক্তি",
+      "aim_en": "Repeat the disappearing-cross reaction at 20–60 °C and use an Arrhenius plot to find the activation energy.",
+      "aim_bn": "২০–৬০ °C তাপমাত্রায় অদৃশ্য ক্রস বিক্রিয়াটি করে আরহেনিয়াস লেখ থেকে সক্রিয়ন শক্তি নির্ণয় করা।"
+    },
+    {
+      "order": 34,
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "apparatus": [
+        "evaporating-dish",
+        "bunsen-burner",
+        "tripod-stand",
+        "dropper"
+      ],
+      "chemicals": [
+        "CuSO4-5H2O",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "evaporating-dish",
+            "label_en": "Blue copper sulphate crystals",
+            "label_bn": "নীল কপার সালফেট কেলাস",
+            "portions": [
+              {
+                "chemicalId": "CuSO4-5H2O",
+                "mL": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Heat the blue crystals gently.",
+          "text_bn": "নীল কেলাসগুলো মৃদু উত্তপ্ত করো।",
+          "check": {
+            "type": "heating",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Let the dish pass 110 °C.",
+          "text_bn": "পাত্রটির তাপমাত্রা ১১০ °C ছাড়াতে দাও।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 110
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Steam is driven off and the crystals crumble.",
+          "text_bn": "বাষ্প বেরিয়ে যায় এবং কেলাস ভেঙে যায়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "cuso4-5h2o-heat"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "A white powder of anhydrous copper(II) sulphate is left.",
+          "text_bn": "অনার্দ্র কপার(II) সালফেটের সাদা গুঁড়া থেকে যায়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "CuSO4-anh"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "When it has cooled, add a few drops of water.",
+          "text_bn": "ঠান্ডা হলে কয়েক ফোঁটা পানি দাও।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "cuso4-anh-h2o"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "It turns blue again and gets hot: the blue hydrate is back.",
+          "text_bn": "আবার নীল হয় ও গরম হয়: নীল সোদক লবণ ফিরে আসে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "CuSO4-5H2O"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Hot porcelain stays hot for a long time — use tongs, and let the dish cool before adding water (it can spit).",
+        "bn": "গরম চীনামাটি অনেকক্ষণ গরম থাকে — চিমটা ব্যবহার করো এবং পানি দেওয়ার আগে পাত্র ঠান্ডা হতে দাও (ছিটকে যেতে পারে)।"
+      },
+      "expectedReactions": [
+        "cuso4-5h2o-heat",
+        "cuso4-anh-h2o"
+      ],
+      "quiz": [
+        {
+          "question_en": "2.50 g of blue crystals leave 1.60 g of white powder. How many waters of crystallisation (x)?",
+          "question_bn": "২.৫০ g নীল কেলাস উত্তপ্ত করলে ১.৬০ g সাদা গুঁড়া থাকে। কেলাস পানির সংখ্যা (x) কত?",
+          "options_en": [
+            "1",
+            "3",
+            "5",
+            "7"
+          ],
+          "options_bn": [
+            "১",
+            "৩",
+            "৫",
+            "৭"
+          ],
+          "answer": 2,
+          "explain_en": "Water lost = 0.90 g = 0.050 mol; CuSO₄ = 1.60 g = 0.0100 mol; x = 0.050 ÷ 0.0100 = 5.",
+          "explain_bn": "হারানো পানি = ০.৯০ g = ০.০৫০ mol; CuSO₄ = ১.৬০ g = ০.০১০০ mol; x = ০.০৫০ ÷ ০.০১০০ = ৫।"
+        },
+        {
+          "question_en": "Why must the crystals be heated to constant mass?",
+          "question_bn": "কেলাসগুলো কেন স্থির ভর পর্যন্ত উত্তপ্ত করতে হয়?",
+          "options_en": [
+            "To melt the dish",
+            "To be sure all the water has gone",
+            "To make the powder blue",
+            "To add oxygen"
+          ],
+          "options_bn": [
+            "পাত্র গলাতে",
+            "সব পানি বেরিয়ে গেছে তা নিশ্চিত হতে",
+            "গুঁড়া নীল করতে",
+            "অক্সিজেন যোগ করতে"
+          ],
+          "answer": 1,
+          "explain_en": "If the mass is still falling, some water is left and x comes out too small.",
+          "explain_bn": "ভর তখনও কমতে থাকলে কিছু পানি রয়ে গেছে, ফলে x কম আসবে।"
+        }
+      ],
+      "tags": [
+        "water-of-crystallisation",
+        "heating",
+        "stoichiometry",
+        "simulation"
+      ],
+      "slug": "water-of-crystallisation",
+      "title_en": "Water of crystallisation in blue vitriol",
+      "title_bn": "তুঁতের কেলাস পানি নির্ণয়",
+      "aim_en": "Heat hydrated copper(II) sulphate to constant mass, find x in CuSO₄·xH₂O, and reverse the change with water.",
+      "aim_bn": "সোদক কপার(II) সালফেট স্থির ভর পর্যন্ত উত্তপ্ত করে CuSO₄·xH₂O-তে x নির্ণয় করা এবং পানি দিয়ে পরিবর্তনটি উল্টে দেখা।"
+    },
+    {
+      "order": 35,
+      "level": "class-11-12",
+      "durationMinutes": 15,
+      "apparatus": [
+        "conical-flask",
+        "gas-jar",
+        "delivery-tube",
+        "spatula"
+      ],
+      "chemicals": [
+        "Mg",
+        "HCl"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Acid flask",
+            "label_bn": "অ্যাসিড ফ্লাস্ক",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 30
+              }
+            ]
+          },
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Gas syringe / jar",
+            "label_bn": "গ্যাস সিরিঞ্জ / জার",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Drop a weighed strip of magnesium ribbon into the excess acid: it fizzes away.",
+          "text_bn": "ওজন করা ম্যাগনেসিয়াম ফিতার টুকরো অতিরিক্ত অ্যাসিডে ফেলো: বুদবুদ তুলে শেষ হয়ে যায়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "mg-hcl"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "All the magnesium has gone into solution as magnesium chloride.",
+          "text_bn": "সব ম্যাগনেসিয়াম ম্যাগনেসিয়াম ক্লোরাইড হয়ে দ্রবণে চলে গেছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "MgCl2"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Hydrogen fills the flask's headspace.",
+          "text_bn": "ফ্লাস্কের ফাঁকা অংশ হাইড্রোজেনে ভরে যায়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Collect the gas and measure its volume.",
+          "text_bn": "গ্যাস সংগ্রহ করে এর আয়তন মাপো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "H2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Confirm it is hydrogen with a lighted splint.",
+          "text_bn": "জ্বলন্ত কাঠি দিয়ে নিশ্চিত হও যে এটি হাইড্রোজেন।",
+          "check": {
+            "type": "spark",
+            "vessel": 1
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Hydrogen is flammable — keep flames away until the test, and test only a small sample.",
+        "bn": "হাইড্রোজেন দাহ্য — পরীক্ষার আগে শিখা দূরে রাখো এবং কেবল অল্প নমুনা পরীক্ষা করো।"
+      },
+      "expectedReactions": [
+        "mg-hcl"
+      ],
+      "quiz": [
+        {
+          "question_en": "0.048 g of Mg (Ar 24) gives 48 mL of H₂. The molar volume is…",
+          "question_bn": "০.০৪৮ g Mg (Ar ২৪) থেকে ৪৮ mL H₂ পাওয়া যায়। মোলার আয়তন…",
+          "options_en": [
+            "12 L mol⁻¹",
+            "24 L mol⁻¹",
+            "48 L mol⁻¹",
+            "22.4 L mol⁻¹ always"
+          ],
+          "options_bn": [
+            "১২ L mol⁻¹",
+            "২৪ L mol⁻¹",
+            "৪৮ L mol⁻¹",
+            "সবসময় ২২.৪ L mol⁻¹"
+          ],
+          "answer": 1,
+          "explain_en": "n(Mg) = n(H₂) = 0.002 mol; 48 mL ÷ 0.002 mol = 24 000 mL = 24 L mol⁻¹ at room temperature and pressure.",
+          "explain_bn": "n(Mg) = n(H₂) = ০.০০২ mol; ৪৮ mL ÷ ০.০০২ mol = ২৪ ০০০ mL = কক্ষ তাপমাত্রা ও চাপে ২৪ L mol⁻¹।"
+        },
+        {
+          "question_en": "Why must the acid be in excess?",
+          "question_bn": "অ্যাসিড কেন অতিরিক্ত নিতে হয়?",
+          "options_en": [
+            "So all the magnesium reacts",
+            "To make more acid",
+            "To cool the flask",
+            "So less gas forms"
+          ],
+          "options_bn": [
+            "যাতে সব ম্যাগনেসিয়াম বিক্রিয়া করে",
+            "আরও অ্যাসিড তৈরি করতে",
+            "ফ্লাস্ক ঠান্ডা করতে",
+            "যাতে কম গ্যাস হয়"
+          ],
+          "answer": 0,
+          "explain_en": "The volume of hydrogen must depend only on the mass of magnesium, so every bit of it has to react.",
+          "explain_bn": "হাইড্রোজেনের আয়তন কেবল ম্যাগনেসিয়ামের ভরের উপর নির্ভর করতে হবে, তাই এর সবটুকু বিক্রিয়া করা চাই।"
+        }
+      ],
+      "tags": [
+        "mole-concept",
+        "gases",
+        "simulation"
+      ],
+      "slug": "molar-volume-hydrogen",
+      "title_en": "Molar volume of hydrogen",
+      "title_bn": "হাইড্রোজেনের মোলার আয়তন",
+      "aim_en": "React weighed magnesium with excess acid, collect the hydrogen in a gas syringe and find the volume of one mole of gas.",
+      "aim_bn": "ওজন করা ম্যাগনেসিয়াম অতিরিক্ত অ্যাসিডের সাথে বিক্রিয়া করিয়ে হাইড্রোজেন গ্যাস সিরিঞ্জে সংগ্রহ করা এবং এক মোল গ্যাসের আয়তন নির্ণয় করা।"
+    },
+    {
+      "order": 36,
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "apparatus": [
+        "beaker",
+        "electrolysis-cell"
+      ],
+      "chemicals": [
+        "CuSO4",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "beaker",
+            "label_en": "Copper(II) sulphate cell",
+            "label_bn": "কপার(II) সালফেট কোষ",
+            "portions": [
+              {
+                "chemicalId": "CuSO4",
+                "mL": 40
+              },
+              {
+                "chemicalId": "H2O",
+                "mL": 20
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Connect the cell and pass a steady current.",
+          "text_bn": "কোষটি যুক্ত করে স্থির তড়িৎপ্রবাহ চালাও।",
+          "check": {
+            "type": "electrolysis",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Copper(II) sulphate is electrolysed.",
+          "text_bn": "কপার(II) সালফেট তড়িৎবিশ্লেষিত হয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "cuso4-electrolysis"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Pink-brown copper is deposited on the cathode.",
+          "text_bn": "ক্যাথোডে গোলাপি-বাদামি কপার জমে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Cu"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Sulphuric acid builds up in the solution (with an inert anode).",
+          "text_bn": "দ্রবণে সালফিউরিক অ্যাসিড জমে (নিষ্ক্রিয় অ্যানোডে)।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2SO4"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Copper(II) sulphate is harmful if swallowed; use a low-voltage supply and switch off before touching the electrodes.",
+        "bn": "কপার(II) সালফেট গিললে ক্ষতিকর; কম ভোল্টেজের সরবরাহ ব্যবহার করো এবং তড়িৎদ্বার ছোঁয়ার আগে বন্ধ করো।"
+      },
+      "expectedReactions": [
+        "cuso4-electrolysis"
+      ],
+      "quiz": [
+        {
+          "question_en": "How much copper is deposited by 0.50 A for 30 minutes (F = 96 500 C mol⁻¹)?",
+          "question_bn": "০.৫০ A প্রবাহ ৩০ মিনিট চালালে কত কপার জমে (F = ৯৬ ৫০০ C mol⁻¹)?",
+          "options_en": [
+            "0.15 g",
+            "0.30 g",
+            "0.59 g",
+            "1.19 g"
+          ],
+          "options_bn": [
+            "০.১৫ g",
+            "০.৩০ g",
+            "০.৫৯ g",
+            "১.১৯ g"
+          ],
+          "answer": 1,
+          "explain_en": "Q = 0.50 × 1800 = 900 C; n(e⁻) = 900 ÷ 96 500 = 0.00933 mol; n(Cu) = 0.00466 mol; m = 0.00466 × 63.5 = 0.30 g.",
+          "explain_bn": "Q = ০.৫০ × ১৮০০ = ৯০০ C; n(e⁻) = ৯০০ ÷ ৯৬ ৫০০ = ০.০০৯৩৩ mol; n(Cu) = ০.০০৪৬৬ mol; m = ০.০০৪৬৬ × ৬৩.৫ = ০.৩০ g।"
+        },
+        {
+          "question_en": "With copper electrodes the blue colour of the solution…",
+          "question_bn": "কপার তড়িৎদ্বার ব্যবহার করলে দ্রবণের নীল রং…",
+          "options_en": [
+            "Fades quickly",
+            "Stays the same",
+            "Turns green",
+            "Turns colourless at once"
+          ],
+          "options_bn": [
+            "দ্রুত ফিকে হয়",
+            "একই থাকে",
+            "সবুজ হয়",
+            "সাথে সাথে বর্ণহীন হয়"
+          ],
+          "answer": 1,
+          "explain_en": "The copper anode dissolves as fast as copper is deposited on the cathode, so [Cu²⁺] does not change.",
+          "explain_bn": "ক্যাথোডে যত দ্রুত কপার জমে, কপার অ্যানোড তত দ্রুত দ্রবীভূত হয়, তাই [Cu²⁺] বদলায় না।"
+        }
+      ],
+      "tags": [
+        "electrolysis",
+        "faraday",
+        "simulation"
+      ],
+      "slug": "copper-electrolysis-faraday",
+      "title_en": "Electrolysis of copper(II) sulphate: Faraday’s first law",
+      "title_bn": "কপার(II) সালফেটের তড়িৎবিশ্লেষণ: ফ্যারাডের প্রথম সূত্র",
+      "aim_en": "Weigh the copper deposited on the cathode for different charges passed and find the Faraday constant.",
+      "aim_bn": "বিভিন্ন পরিমাণ আধান প্রবাহিত করে ক্যাথোডে জমা কপারের ভর মেপে ফ্যারাডে ধ্রুবক নির্ণয় করা।"
+    },
+    {
+      "order": 37,
+      "level": "class-9-10",
+      "durationMinutes": 20,
+      "apparatus": [
+        "test-tube",
+        "beaker",
+        "bunsen-burner",
+        "thermometer"
+      ],
+      "chemicals": [
+        "KNO3",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "KNO₃ in water",
+            "label_bn": "পানিতে KNO₃",
+            "portions": [
+              {
+                "chemicalId": "KNO3",
+                "mL": 5
+              },
+              {
+                "chemicalId": "H2O",
+                "mL": 5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Warm the tube in a water bath.",
+          "text_bn": "নলটি পানির গামলায় গরম করো।",
+          "check": {
+            "type": "heating",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Heat above 60 °C, stirring with the thermometer.",
+          "text_bn": "থার্মোমিটার দিয়ে নাড়তে নাড়তে ৬০ °C-এর উপরে গরম করো।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 60
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "All the potassium nitrate dissolves.",
+          "text_bn": "সব পটাশিয়াম নাইট্রেট দ্রবীভূত হয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "kno3-dissolve-heat"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Let it cool and note the temperature at which crystals first appear.",
+          "text_bn": "ঠান্ডা হতে দাও এবং যে তাপমাত্রায় প্রথম কেলাস দেখা দেয় তা লেখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "KNO3"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Potassium nitrate is an oxidiser — keep it away from flames and fuels; heat in a water bath, not directly.",
+        "bn": "পটাশিয়াম নাইট্রেট জারক — শিখা ও জ্বালানি থেকে দূরে রাখো; সরাসরি নয়, পানির গামলায় গরম করো।"
+      },
+      "expectedReactions": [
+        "kno3-dissolve-heat"
+      ],
+      "quiz": [
+        {
+          "question_en": "6.0 g of KNO₃ in 10 g of water starts to crystallise at 38 °C. The solubility at 38 °C is…",
+          "question_bn": "১০ g পানিতে ৬.০ g KNO₃ ৩৮ °C-এ কেলাসিত হতে শুরু করে। ৩৮ °C-এ দ্রাব্যতা…",
+          "options_en": [
+            "6 g per 100 g water",
+            "38 g per 100 g water",
+            "60 g per 100 g water",
+            "600 g per 100 g water"
+          ],
+          "options_bn": [
+            "প্রতি ১০০ g পানিতে ৬ g",
+            "প্রতি ১০০ g পানিতে ৩৮ g",
+            "প্রতি ১০০ g পানিতে ৬০ g",
+            "প্রতি ১০০ g পানিতে ৬০০ g"
+          ],
+          "answer": 2,
+          "explain_en": "Solubility is quoted per 100 g of water: 6.0 g × (100 ÷ 10) = 60 g.",
+          "explain_bn": "দ্রাব্যতা প্রতি ১০০ g পানির হিসাবে বলা হয়: ৬.০ g × (১০০ ÷ ১০) = ৬০ g।"
+        },
+        {
+          "question_en": "Why does KNO₃ crystallise when its hot solution cools?",
+          "question_bn": "গরম দ্রবণ ঠান্ডা হলে KNO₃ কেলাসিত হয় কেন?",
+          "options_en": [
+            "It decomposes",
+            "Its solubility falls with temperature",
+            "Water evaporates instantly",
+            "It reacts with air"
+          ],
+          "options_bn": [
+            "এটি বিয়োজিত হয়",
+            "তাপমাত্রা কমলে এর দ্রাব্যতা কমে",
+            "পানি সাথে সাথে বাষ্পীভূত হয়",
+            "এটি বায়ুর সাথে বিক্রিয়া করে"
+          ],
+          "answer": 1,
+          "explain_en": "Less KNO₃ can stay dissolved at the lower temperature, so the excess comes out of solution as crystals.",
+          "explain_bn": "কম তাপমাত্রায় কম KNO₃ দ্রবীভূত থাকতে পারে, তাই বাড়তিটুকু কেলাস হিসেবে বেরিয়ে আসে।"
+        }
+      ],
+      "tags": [
+        "solubility",
+        "crystallisation",
+        "simulation"
+      ],
+      "slug": "solubility-curve-kno3",
+      "title_en": "Solubility curve of potassium nitrate",
+      "title_bn": "পটাশিয়াম নাইট্রেটের দ্রাব্যতা লেখ",
+      "aim_en": "Find the temperature at which different masses of KNO₃ in 10 g of water start to crystallise and draw its solubility curve.",
+      "aim_bn": "১০ g পানিতে বিভিন্ন ভরের KNO₃ কোন তাপমাত্রায় কেলাসিত হতে শুরু করে তা নির্ণয় করে দ্রাব্যতা লেখ আঁকা।"
+    },
+    {
+      "order": 38,
+      "level": "class-11-12",
+      "durationMinutes": 15,
+      "apparatus": [
+        "beaker",
+        "test-tube",
+        "spatula"
+      ],
+      "chemicals": [
+        "ZnSO4",
+        "CuSO4",
+        "Zn",
+        "Cu"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "beaker",
+            "label_en": "Zinc half-cell (ZnSO₄)",
+            "label_bn": "জিঙ্ক অর্ধকোষ (ZnSO₄)",
+            "portions": [
+              {
+                "chemicalId": "ZnSO4",
+                "mL": 40
+              }
+            ]
+          },
+          {
+            "apparatusId": "beaker",
+            "label_en": "Copper half-cell (CuSO₄)",
+            "label_bn": "কপার অর্ধকোষ (CuSO₄)",
+            "portions": [
+              {
+                "chemicalId": "CuSO4",
+                "mL": 40
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Zinc straight into CuSO₄",
+            "label_bn": "সরাসরি CuSO₄-এ জিঙ্ক",
+            "portions": [
+              {
+                "chemicalId": "CuSO4",
+                "mL": 5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Dip a zinc strip into the zinc sulphate solution.",
+          "text_bn": "জিঙ্ক সালফেট দ্রবণে একটি জিঙ্ক পাত ডুবাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Zn"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Dip a copper strip into the copper(II) sulphate solution and join the beakers with a salt bridge.",
+          "text_bn": "কপার(II) সালফেট দ্রবণে একটি কপার পাত ডুবাও এবং লবণ সেতু দিয়ে বিকার দুটি যুক্ত করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Cu"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Now drop zinc straight into copper(II) sulphate: the same reaction, but the energy is wasted as heat.",
+          "text_bn": "এবার জিঙ্ক সরাসরি কপার(II) সালফেটে দাও: একই বিক্রিয়া, কিন্তু শক্তি তাপ হিসেবে নষ্ট হয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "zn-cuso4"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Copper is displaced — in the cell the electrons travel through the wire instead.",
+          "text_bn": "কপার প্রতিস্থাপিত হয় — কোষে ইলেকট্রনগুলো বরং তারের মধ্য দিয়ে যায়।",
+          "check": {
+            "type": "contains",
+            "vessel": 2,
+            "chemicalId": "Cu"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Copper(II) and zinc salts are harmful if swallowed — wash your hands after handling the electrodes.",
+        "bn": "কপার(II) ও জিঙ্ক লবণ গিললে ক্ষতিকর — তড়িৎদ্বার ধরার পর হাত ধুয়ে নাও।"
+      },
+      "expectedReactions": [
+        "zn-cuso4"
+      ],
+      "quiz": [
+        {
+          "question_en": "The standard EMF of the Daniell cell (E°Cu = +0.34 V, E°Zn = −0.76 V) is…",
+          "question_bn": "ড্যানিয়েল কোষের প্রমাণ EMF (E°Cu = +০.৩৪ V, E°Zn = −০.৭৬ V)…",
+          "options_en": [
+            "0.42 V",
+            "1.10 V",
+            "−1.10 V",
+            "0.34 V"
+          ],
+          "options_bn": [
+            "০.৪২ V",
+            "১.১০ V",
+            "−১.১০ V",
+            "০.৩৪ V"
+          ],
+          "answer": 1,
+          "explain_en": "E°cell = E°(cathode) − E°(anode) = 0.34 − (−0.76) = 1.10 V.",
+          "explain_bn": "E°cell = E°(ক্যাথোড) − E°(অ্যানোড) = ০.৩৪ − (−০.৭৬) = ১.১০ V।"
+        },
+        {
+          "question_en": "What does the salt bridge do?",
+          "question_bn": "লবণ সেতুর কাজ কী?",
+          "options_en": [
+            "Supplies electrons",
+            "Completes the circuit by letting ions flow",
+            "Heats the solutions",
+            "Stops the reaction"
+          ],
+          "options_bn": [
+            "ইলেকট্রন সরবরাহ করে",
+            "আয়ন চলাচলের মাধ্যমে বর্তনী সম্পূর্ণ করে",
+            "দ্রবণ গরম করে",
+            "বিক্রিয়া থামায়"
+          ],
+          "answer": 1,
+          "explain_en": "Ions move through the bridge to keep both solutions electrically neutral; without it no current flows.",
+          "explain_bn": "দুই দ্রবণকে তড়িৎ-নিরপেক্ষ রাখতে আয়ন সেতুর মধ্য দিয়ে চলে; এটি ছাড়া প্রবাহ চলে না।"
+        }
+      ],
+      "tags": [
+        "electrochemistry",
+        "cells",
+        "simulation"
+      ],
+      "slug": "electrochemical-cell",
+      "title_en": "Daniell cell and the electrochemical series",
+      "title_bn": "ড্যানিয়েল কোষ ও তড়িৎরাসায়নিক সারি",
+      "aim_en": "Build zinc–copper and other cells with a salt bridge, measure their EMF and see how concentration changes it.",
+      "aim_bn": "লবণ সেতু দিয়ে জিঙ্ক–কপার ও অন্যান্য কোষ তৈরি করে এদের EMF মাপা এবং ঘনমাত্রায় তা কীভাবে বদলায় দেখা।"
+    },
+    {
+      "order": 39,
+      "level": "class-9-10",
+      "durationMinutes": 12,
+      "apparatus": [
+        "conical-flask",
+        "test-tube",
+        "delivery-tube",
+        "spatula",
+        "bunsen-burner"
+      ],
+      "chemicals": [
+        "H2O2",
+        "MnO2"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Hydrogen peroxide",
+            "label_bn": "হাইড্রোজেন পারক্সাইড",
+            "portions": [
+              {
+                "chemicalId": "H2O2",
+                "mL": 20
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Collecting tube",
+            "label_bn": "সংগ্রাহক নল",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Tip a spatula of black manganese(IV) oxide into the peroxide.",
+          "text_bn": "পারক্সাইডে এক চামচ কালো ম্যাঙ্গানিজ(IV) অক্সাইড দাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "MnO2"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "The peroxide decomposes rapidly.",
+          "text_bn": "পারক্সাইড দ্রুত বিয়োজিত হয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "h2o2-mno2"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Oxygen fizzes off.",
+          "text_bn": "অক্সিজেন বুদবুদ তুলে বের হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "O2"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Collect the oxygen in a test tube.",
+          "text_bn": "অক্সিজেন একটি টেস্টটিউবে সংগ্রহ করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "O2"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Hold a glowing splint in the tube…",
+          "text_bn": "নলে একটি ধূমায়িত কাঠি ধরো…",
+          "check": {
+            "type": "heating",
+            "vessel": 1
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "…it relights: the gas is oxygen.",
+          "text_bn": "…এটি আবার জ্বলে ওঠে: গ্যাসটি অক্সিজেন।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "o2-glowing-splint"
+          }
+        },
+        {
+          "order": 7,
+          "text_en": "The manganese(IV) oxide is still there — a catalyst is not used up.",
+          "text_bn": "ম্যাঙ্গানিজ(IV) অক্সাইড তখনও আছে — প্রভাবক খরচ হয় না।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "MnO2"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Hydrogen peroxide irritates skin and eyes; the reaction is exothermic and froths — use dilute (3%) peroxide only.",
+        "bn": "হাইড্রোজেন পারক্সাইড ত্বক ও চোখে জ্বালা করে; বিক্রিয়াটি তাপোৎপাদী ও ফেনা তোলে — কেবল লঘু (৩%) পারক্সাইড ব্যবহার করো।"
+      },
+      "expectedReactions": [
+        "h2o2-mno2",
+        "o2-glowing-splint"
+      ],
+      "quiz": [
+        {
+          "question_en": "After the reaction the MnO₂ is filtered, dried and weighed. Its mass is…",
+          "question_bn": "বিক্রিয়ার পর MnO₂ ছেঁকে, শুকিয়ে ওজন করা হলো। এর ভর…",
+          "options_en": [
+            "Zero",
+            "The same as before",
+            "Doubled",
+            "Halved"
+          ],
+          "options_bn": [
+            "শূন্য",
+            "আগের সমান",
+            "দ্বিগুণ",
+            "অর্ধেক"
+          ],
+          "answer": 1,
+          "explain_en": "A catalyst speeds up a reaction without being used up, so the same mass is recovered.",
+          "explain_bn": "প্রভাবক নিজে খরচ না হয়ে বিক্রিয়া দ্রুত করে, তাই একই ভর ফিরে পাওয়া যায়।"
+        },
+        {
+          "question_en": "10.0 mL of H₂O₂ gives 60 mL of O₂ (24 L mol⁻¹). Its concentration is…",
+          "question_bn": "১০.০ mL H₂O₂ থেকে ৬০ mL O₂ পাওয়া যায় (২৪ L mol⁻¹)। এর ঘনমাত্রা…",
+          "options_en": [
+            "0.25 M",
+            "0.50 M",
+            "1.0 M",
+            "2.5 M"
+          ],
+          "options_bn": [
+            "০.২৫ M",
+            "০.৫০ M",
+            "১.০ M",
+            "২.৫ M"
+          ],
+          "answer": 1,
+          "explain_en": "n(O₂) = 0.060 ÷ 24 = 0.0025 mol; n(H₂O₂) = 2 × 0.0025 = 0.005 mol in 0.010 L → 0.50 M.",
+          "explain_bn": "n(O₂) = ০.০৬০ ÷ ২৪ = ০.০০২৫ mol; n(H₂O₂) = ২ × ০.০০২৫ = ০.০০৫ mol, ০.০১০ L-এ → ০.৫০ M।"
+        }
+      ],
+      "tags": [
+        "catalysis",
+        "gases",
+        "simulation"
+      ],
+      "slug": "catalytic-decomposition-h2o2",
+      "title_en": "Catalytic decomposition of hydrogen peroxide",
+      "title_bn": "হাইড্রোজেন পারক্সাইডের প্রভাবকীয় বিয়োজন",
+      "aim_en": "Use manganese(IV) oxide to decompose hydrogen peroxide, follow the oxygen volume with time and show the catalyst is unchanged.",
+      "aim_bn": "ম্যাঙ্গানিজ(IV) অক্সাইড দিয়ে হাইড্রোজেন পারক্সাইড বিয়োজিত করে সময়ের সাথে অক্সিজেনের আয়তন অনুসরণ করা এবং প্রভাবক অপরিবর্তিত থাকে দেখানো।"
+    },
+    {
+      "order": 40,
+      "level": "class-6-8",
+      "durationMinutes": 20,
+      "apparatus": [
+        "beaker",
+        "evaporating-dish",
+        "bunsen-burner",
+        "tripod-stand"
+      ],
+      "chemicals": [
+        "NaCl",
+        "SiO2",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "beaker",
+            "label_en": "Crushed rock salt",
+            "label_bn": "গুঁড়া খনিজ লবণ",
+            "portions": [
+              {
+                "chemicalId": "NaCl",
+                "mL": 30
+              },
+              {
+                "chemicalId": "SiO2",
+                "mL": 3
+              }
+            ]
+          },
+          {
+            "apparatusId": "evaporating-dish",
+            "label_en": "Filtrate",
+            "label_bn": "পরিস্রুত",
+            "portions": [
+              {
+                "chemicalId": "NaCl",
+                "mL": 10
+              },
+              {
+                "chemicalId": "H2O",
+                "mL": 10
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Add water to the crushed rock salt and stir.",
+          "text_bn": "গুঁড়া খনিজ লবণে পানি দিয়ে নাড়ো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "The salt dissolves; the sand does not and is left on the filter paper.",
+          "text_bn": "লবণ দ্রবীভূত হয়; বালি হয় না, ছাঁকনি কাগজে থেকে যায়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "SiO2"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "The clear filtrate in the evaporating basin contains the salt.",
+          "text_bn": "বাষ্পীভবন পাত্রের স্বচ্ছ পরিস্রুতে লবণ আছে।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "NaCl"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Heat the filtrate.",
+          "text_bn": "পরিস্রুত উত্তপ্ত করো।",
+          "check": {
+            "type": "heating",
+            "vessel": 1
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Bring it to the boil.",
+          "text_bn": "এটি ফুটিয়ে তোলো।",
+          "check": {
+            "type": "temperature",
+            "vessel": 1,
+            "min": 100
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "The water boils away and salt crystals are left behind.",
+          "text_bn": "পানি বাষ্পীভূত হয়ে যায় এবং লবণের কেলাস থেকে যায়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "h2o-boil"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Hot salt spits near dryness — turn the flame down at the end and keep your face away.",
+        "bn": "শুকানোর কাছাকাছি গরম লবণ ছিটকে আসে — শেষে শিখা কমাও এবং মুখ দূরে রাখো।"
+      },
+      "expectedReactions": [
+        "h2o-boil"
+      ],
+      "quiz": [
+        {
+          "question_en": "Which part of rock salt stays on the filter paper?",
+          "question_bn": "খনিজ লবণের কোন অংশ ছাঁকনি কাগজে থেকে যায়?",
+          "options_en": [
+            "Salt",
+            "Sand",
+            "Water",
+            "Nothing"
+          ],
+          "options_bn": [
+            "লবণ",
+            "বালি",
+            "পানি",
+            "কিছুই না"
+          ],
+          "answer": 1,
+          "explain_en": "Sand is insoluble in water, so it is the residue; dissolved salt passes through in the filtrate.",
+          "explain_bn": "বালি পানিতে অদ্রবণীয়, তাই এটিই অবশেষ; দ্রবীভূত লবণ পরিস্রুতের সাথে চলে যায়।"
+        },
+        {
+          "question_en": "10.0 g of rock salt gives 7.5 g of pure salt. The percentage of salt is…",
+          "question_bn": "১০.০ g খনিজ লবণ থেকে ৭.৫ g বিশুদ্ধ লবণ পাওয়া যায়। লবণের শতকরা পরিমাণ…",
+          "options_en": [
+            "7.5%",
+            "25%",
+            "75%",
+            "133%"
+          ],
+          "options_bn": [
+            "৭.৫%",
+            "২৫%",
+            "৭৫%",
+            "১৩৩%"
+          ],
+          "answer": 2,
+          "explain_en": "7.5 ÷ 10.0 × 100 = 75%.",
+          "explain_bn": "৭.৫ ÷ ১০.০ × ১০০ = ৭৫%।"
+        }
+      ],
+      "tags": [
+        "separation",
+        "filtration",
+        "evaporation",
+        "simulation"
+      ],
+      "slug": "rock-salt-purification",
+      "title_en": "Purifying rock salt",
+      "title_bn": "খনিজ লবণ বিশোধন",
+      "aim_en": "Separate salt from sand by dissolving, filtering and evaporating, and work out the percentage of salt in rock salt.",
+      "aim_bn": "দ্রবীভূত করে, ছেঁকে ও বাষ্পীভূত করে বালি থেকে লবণ আলাদা করা এবং খনিজ লবণে লবণের শতকরা পরিমাণ নির্ণয় করা।"
+    },
+    {
+      "order": 41,
+      "level": "class-11-12",
+      "durationMinutes": 15,
+      "apparatus": [
+        "test-tube",
+        "dropper"
+      ],
+      "chemicals": [
+        "FeCl3",
+        "KSCN",
+        "NaOH"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Iron(III) chloride A",
+            "label_bn": "আয়রন(III) ক্লোরাইড A",
+            "portions": [
+              {
+                "chemicalId": "FeCl3",
+                "mL": 3
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Iron(III) chloride B",
+            "label_bn": "আয়রন(III) ক্লোরাইড B",
+            "portions": [
+              {
+                "chemicalId": "FeCl3",
+                "mL": 3
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Add a little potassium thiocyanate to tube A.",
+          "text_bn": "A নলে অল্প পটাশিয়াম থায়োসায়ানেট দাও।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "fecl3-kscn"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "A blood-red complex forms at once.",
+          "text_bn": "সাথে সাথে রক্ত-লাল জটিল যৌগ তৈরি হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "FeSCN"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Make the same red solution in tube B.",
+          "text_bn": "B নলেও একই লাল দ্রবণ তৈরি করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "FeSCN"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Add sodium hydroxide to tube B: it removes Fe³⁺ as a brown precipitate…",
+          "text_bn": "B নলে সোডিয়াম হাইড্রোক্সাইড দাও: এটি Fe³⁺-কে বাদামি অধঃক্ষেপ হিসেবে সরিয়ে দেয়…",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "fecl3-naoh"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "…so the equilibrium shifts to the left and the red colour fades.",
+          "text_bn": "…তাই সাম্যাবস্থা বামে সরে এবং লাল রং ফিকে হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Fe(OH)3"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Iron(III) chloride stains and irritates; sodium hydroxide is corrosive — wear goggles.",
+        "bn": "আয়রন(III) ক্লোরাইড দাগ ফেলে ও জ্বালা করে; সোডিয়াম হাইড্রোক্সাইড ক্ষয়কারী — গগলস পরো।"
+      },
+      "expectedReactions": [
+        "fecl3-kscn",
+        "fecl3-naoh"
+      ],
+      "quiz": [
+        {
+          "question_en": "Adding more Fe³⁺ to the red equilibrium mixture makes it…",
+          "question_bn": "লাল সাম্য মিশ্রণে আরও Fe³⁺ যোগ করলে এটি…",
+          "options_en": [
+            "Paler",
+            "Deeper red",
+            "Colourless",
+            "Blue"
+          ],
+          "options_bn": [
+            "হালকা",
+            "গাঢ় লাল",
+            "বর্ণহীন",
+            "নীল"
+          ],
+          "answer": 1,
+          "explain_en": "Le Chatelier: the equilibrium shifts right to use up the added Fe³⁺, making more red [Fe(SCN)]²⁺.",
+          "explain_bn": "লা শাতেলিয়ে: যোগ করা Fe³⁺ খরচ করতে সাম্যাবস্থা ডানে সরে, ফলে বেশি লাল [Fe(SCN)]²⁺ তৈরি হয়।"
+        },
+        {
+          "question_en": "The forward reaction is exothermic. Warming the mixture…",
+          "question_bn": "সম্মুখ বিক্রিয়াটি তাপোৎপাদী। মিশ্রণ গরম করলে…",
+          "options_en": [
+            "Makes it deeper red",
+            "Makes it paler",
+            "Changes nothing",
+            "Makes it green"
+          ],
+          "options_bn": [
+            "গাঢ় লাল হয়",
+            "হালকা হয়",
+            "কিছুই বদলায় না",
+            "সবুজ হয়"
+          ],
+          "answer": 1,
+          "explain_en": "Heat favours the endothermic (backward) direction, so the equilibrium shifts left and Kc gets smaller.",
+          "explain_bn": "তাপ তাপহারী (পশ্চাৎমুখী) দিককে সুবিধা দেয়, তাই সাম্যাবস্থা বামে সরে এবং Kc ছোট হয়।"
+        }
+      ],
+      "tags": [
+        "equilibrium",
+        "le-chatelier",
+        "simulation"
+      ],
+      "slug": "iron-thiocyanate-equilibrium",
+      "title_en": "Le Chatelier’s principle with iron(III) thiocyanate",
+      "title_bn": "আয়রন(III) থায়োসায়ানেট দিয়ে লা শাতেলিয়ের নীতি",
+      "aim_en": "Disturb the blood-red Fe³⁺ + SCN⁻ ⇌ [Fe(SCN)]²⁺ equilibrium by adding reagents, heating and cooling, and predict which way it shifts.",
+      "aim_bn": "বিকারক যোগ করে, গরম ও ঠান্ডা করে রক্ত-লাল Fe³⁺ + SCN⁻ ⇌ [Fe(SCN)]²⁺ সাম্যাবস্থা বিঘ্নিত করা এবং কোন দিকে সরে তা নির্ণয় করা।"
     }
   ]
 }

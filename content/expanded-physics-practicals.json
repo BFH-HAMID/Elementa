@@ -1,0 +1,4535 @@
+{
+  "count": 30,
+  "experiments": [
+    {
+      "id": "wire-resistivity-length",
+      "slug": "wire-resistivity-length",
+      "title_en": "Resistivity from wire length",
+      "title_bn": "তারের দৈর্ঘ্য থেকে রোধাঙ্ক",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate resistivity from wire length using a controlled five-reading data set and recover copper resistivity.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে তারের দৈর্ঘ্য থেকে রোধাঙ্ক অনুসন্ধান করা এবং তামার রোধাঙ্ক নির্ণয় করা।",
+      "theory_en": "The simulator follows R = ρL/A. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর R = ρL/A অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "R = ρL/A",
+      "formula_desc_en": "The recorded values are reduced to Copper resistivity.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে তামার রোধাঙ্ক নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the ohmmeter.",
+          "instruction_bn": "ওহমমিটার পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the metre bridge wire, micrometer and ohmmeter as shown.",
+          "instruction_bn": "মিটার ব্রিজ তার, মাইক্রোমিটার ও ওহমমিটার দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep wire length through five suggested values and record measured resistance.",
+          "instruction_bn": "তারের দৈর্ঘ্য পাঁচটি প্রস্তাবিত মানে বদলে পরিমাপিত রোধ রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Wire length",
+          "label_bn": "তারের দৈর্ঘ্য",
+          "unit": "m",
+          "unit_bn": "m",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Measured resistance",
+          "label_bn": "পরিমাপিত রোধ",
+          "unit": "Ω",
+          "unit_bn": "Ω",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Copper resistivity",
+          "label_bn": "তামার রোধাঙ্ক",
+          "unit": "Ω·m",
+          "unit_bn": "Ω·m",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "R = ρL/A",
+        "expectedConstant": 1.68e-08,
+        "expectedConstantUnit": "Ω·m",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "wire-resistivity-length-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "R = ρL/A",
+              "text_bn": "R = ρL/A"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on R = ρL/A.",
+          "explanation_bn": "modelটি R = ρL/A-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 1.68e-08,
+        "result_en": "Copper resistivity",
+        "result_bn": "তামার রোধাঙ্ক",
+        "result_unit": "Ω·m",
+        "x_en": "Wire length",
+        "x_bn": "তারের দৈর্ঘ্য",
+        "x_unit": "m",
+        "x_min": 0.2,
+        "x_max": 1.0,
+        "x_step": 0.2,
+        "x_default": 0.4,
+        "sweep": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "y_en": "Measured resistance",
+        "y_bn": "পরিমাপিত রোধ",
+        "y_unit": "Ω",
+        "scale": 2000000.0,
+        "offset": 0,
+        "formula": "R = ρL/A",
+        "apparatus_en": [
+          "metre bridge wire",
+          "micrometer",
+          "ohmmeter"
+        ],
+        "apparatus_bn": [
+          "মিটার ব্রিজ তার",
+          "মাইক্রোমিটার",
+          "ওহমমিটার"
+        ]
+      }
+    },
+    {
+      "id": "series-parallel-effective-resistance",
+      "slug": "series-parallel-effective-resistance",
+      "title_en": "Series–parallel effective resistance",
+      "title_bn": "সিরিজ–প্যারালাল সমতুল্য রোধ",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-9-10",
+      "durationMinutes": 20,
+      "aim_en": "To investigate series–parallel effective resistance using a controlled five-reading data set and recover equivalent resistance.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে সিরিজ–প্যারালাল সমতুল্য রোধ অনুসন্ধান করা এবং সমতুল্য রোধ নির্ণয় করা।",
+      "theory_en": "The simulator follows I = V/Rₑq. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর I = V/Rₑq অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "I = V/Rₑq",
+      "formula_desc_en": "The recorded values are reduced to Equivalent resistance.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে সমতুল্য রোধ নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the ammeter.",
+          "instruction_bn": "অ্যামিটার পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the DC supply, resistor network and ammeter as shown.",
+          "instruction_bn": "ডিসি উৎস, রোধক নেটওয়ার্ক ও অ্যামিটার দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep supply voltage through five suggested values and record circuit current.",
+          "instruction_bn": "উৎস ভোল্টেজ পাঁচটি প্রস্তাবিত মানে বদলে সার্কিট প্রবাহ রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Supply voltage",
+          "label_bn": "উৎস ভোল্টেজ",
+          "unit": "V",
+          "unit_bn": "V",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Circuit current",
+          "label_bn": "সার্কিট প্রবাহ",
+          "unit": "A",
+          "unit_bn": "A",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Equivalent resistance",
+          "label_bn": "সমতুল্য রোধ",
+          "unit": "Ω",
+          "unit_bn": "Ω",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "I = V/Rₑq",
+        "expectedConstant": 150,
+        "expectedConstantUnit": "Ω",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "series-parallel-effective-resistance-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "I = V/Rₑq",
+              "text_bn": "I = V/Rₑq"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on I = V/Rₑq.",
+          "explanation_bn": "modelটি I = V/Rₑq-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "reciprocalK",
+        "expected": 150,
+        "result_en": "Equivalent resistance",
+        "result_bn": "সমতুল্য রোধ",
+        "result_unit": "Ω",
+        "x_en": "Supply voltage",
+        "x_bn": "উৎস ভোল্টেজ",
+        "x_unit": "V",
+        "x_min": 2,
+        "x_max": 10,
+        "x_step": 2,
+        "x_default": 4,
+        "sweep": [
+          2.0,
+          4.0,
+          6.0,
+          8.0,
+          10.0
+        ],
+        "y_en": "Circuit current",
+        "y_bn": "সার্কিট প্রবাহ",
+        "y_unit": "A",
+        "scale": 1,
+        "offset": 0,
+        "formula": "I = V/Rₑq",
+        "apparatus_en": [
+          "DC supply",
+          "resistor network",
+          "ammeter"
+        ],
+        "apparatus_bn": [
+          "ডিসি উৎস",
+          "রোধক নেটওয়ার্ক",
+          "অ্যামিটার"
+        ]
+      }
+    },
+    {
+      "id": "capacitor-charge-discharge-curve",
+      "slug": "capacitor-charge-discharge-curve",
+      "title_en": "Capacitor charging curve",
+      "title_bn": "ক্যাপাসিটরের charging curve",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate capacitor charging curve using a controlled five-reading data set and recover rc time constant.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে ক্যাপাসিটরের charging curve অনুসন্ধান করা এবং RC সময় ধ্রুবক নির্ণয় করা।",
+      "theory_en": "The simulator follows ΔV = V₀e^(−t/RC). Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর ΔV = V₀e^(−t/RC) অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "ΔV = V₀e^(−t/RC)",
+      "formula_desc_en": "The recorded values are reduced to RC time constant.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে RC সময় ধ্রুবক নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the data logger.",
+          "instruction_bn": "ডেটা লগার পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the capacitor, resistor and data logger as shown.",
+          "instruction_bn": "ক্যাপাসিটর, রোধক ও ডেটা লগার দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep elapsed time through five suggested values and record remaining voltage gap.",
+          "instruction_bn": "অতিক্রান্ত সময় পাঁচটি প্রস্তাবিত মানে বদলে অবশিষ্ট ভোল্টেজ পার্থক্য রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Elapsed time",
+          "label_bn": "অতিক্রান্ত সময়",
+          "unit": "s",
+          "unit_bn": "s",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Remaining voltage gap",
+          "label_bn": "অবশিষ্ট ভোল্টেজ পার্থক্য",
+          "unit": "V",
+          "unit_bn": "V",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "RC time constant",
+          "label_bn": "RC সময় ধ্রুবক",
+          "unit": "s",
+          "unit_bn": "s",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "ΔV = V₀e^(−t/RC)",
+        "expectedConstant": 0.45,
+        "expectedConstantUnit": "s",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "capacitor-charge-discharge-curve-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "ΔV = V₀e^(−t/RC)",
+              "text_bn": "ΔV = V₀e^(−t/RC)"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on ΔV = V₀e^(−t/RC).",
+          "explanation_bn": "modelটি ΔV = V₀e^(−t/RC)-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "exponential",
+        "expected": 0.45,
+        "result_en": "RC time constant",
+        "result_bn": "RC সময় ধ্রুবক",
+        "result_unit": "s",
+        "x_en": "Elapsed time",
+        "x_bn": "অতিক্রান্ত সময়",
+        "x_unit": "s",
+        "x_min": 0.2,
+        "x_max": 1.4,
+        "x_step": 0.3,
+        "x_default": 0.5,
+        "sweep": [
+          0.2,
+          0.5,
+          0.8,
+          1.1,
+          1.4
+        ],
+        "y_en": "Remaining voltage gap",
+        "y_bn": "অবশিষ্ট ভোল্টেজ পার্থক্য",
+        "y_unit": "V",
+        "scale": 1,
+        "offset": 5,
+        "formula": "ΔV = V₀e^(−t/RC)",
+        "apparatus_en": [
+          "capacitor",
+          "resistor",
+          "data logger"
+        ],
+        "apparatus_bn": [
+          "ক্যাপাসিটর",
+          "রোধক",
+          "ডেটা লগার"
+        ]
+      }
+    },
+    {
+      "id": "rc-time-constant-resistance",
+      "slug": "rc-time-constant-resistance",
+      "title_en": "RC time constant versus resistance",
+      "title_bn": "রোধের সঙ্গে RC সময় ধ্রুবক",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate rc time constant versus resistance using a controlled five-reading data set and recover capacitance.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে রোধের সঙ্গে RC সময় ধ্রুবক অনুসন্ধান করা এবং ধারকত্ব নির্ণয় করা।",
+      "theory_en": "The simulator follows τ = RC. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর τ = RC অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "τ = RC",
+      "formula_desc_en": "The recorded values are reduced to Capacitance.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে ধারকত্ব নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the stopwatch.",
+          "instruction_bn": "স্টপওয়াচ পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the resistance box, capacitor and stopwatch as shown.",
+          "instruction_bn": "রোধ বাক্স, ক্যাপাসিটর ও স্টপওয়াচ দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep resistance through five suggested values and record time constant.",
+          "instruction_bn": "রোধ পাঁচটি প্রস্তাবিত মানে বদলে সময় ধ্রুবক রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Resistance",
+          "label_bn": "রোধ",
+          "unit": "kΩ",
+          "unit_bn": "kΩ",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Time constant",
+          "label_bn": "সময় ধ্রুবক",
+          "unit": "s",
+          "unit_bn": "s",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Capacitance",
+          "label_bn": "ধারকত্ব",
+          "unit": "F",
+          "unit_bn": "F",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "τ = RC",
+        "expectedConstant": 0.0001,
+        "expectedConstantUnit": "F",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "rc-time-constant-resistance-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "τ = RC",
+              "text_bn": "τ = RC"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on τ = RC.",
+          "explanation_bn": "modelটি τ = RC-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.0001,
+        "result_en": "Capacitance",
+        "result_bn": "ধারকত্ব",
+        "result_unit": "F",
+        "x_en": "Resistance",
+        "x_bn": "রোধ",
+        "x_unit": "kΩ",
+        "x_min": 1,
+        "x_max": 9,
+        "x_step": 2,
+        "x_default": 3,
+        "sweep": [
+          1.0,
+          3.0,
+          5.0,
+          7.0,
+          9.0
+        ],
+        "y_en": "Time constant",
+        "y_bn": "সময় ধ্রুবক",
+        "y_unit": "s",
+        "scale": 1000,
+        "offset": 0,
+        "formula": "τ = RC",
+        "apparatus_en": [
+          "resistance box",
+          "capacitor",
+          "stopwatch"
+        ],
+        "apparatus_bn": [
+          "রোধ বাক্স",
+          "ক্যাপাসিটর",
+          "স্টপওয়াচ"
+        ]
+      }
+    },
+    {
+      "id": "lcr-resonant-frequency-sweep",
+      "slug": "lcr-resonant-frequency-sweep",
+      "title_en": "LCR resonance sweep",
+      "title_bn": "LCR resonance sweep",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "honours",
+      "durationMinutes": 20,
+      "aim_en": "To investigate lcr resonance sweep using a controlled five-reading data set and recover resonance constant fr.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে LCR resonance sweep অনুসন্ধান করা এবং অনুরণন ধ্রুবক fR নির্ণয় করা।",
+      "theory_en": "The simulator follows B = fᵣ/Q. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর B = fᵣ/Q অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "B = fᵣ/Q",
+      "formula_desc_en": "The recorded values are reduced to Resonance constant fR.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে অনুরণন ধ্রুবক fR নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the oscilloscope.",
+          "instruction_bn": "oscilloscope পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the signal generator, LCR circuit and oscilloscope as shown.",
+          "instruction_bn": "signal generator, LCR বর্তনী ও oscilloscope দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep circuit resistance through five suggested values and record resonance sharpness.",
+          "instruction_bn": "সার্কিট রোধ পাঁচটি প্রস্তাবিত মানে বদলে অনুরণনের তীক্ষ্ণতা রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Circuit resistance",
+          "label_bn": "সার্কিট রোধ",
+          "unit": "Ω",
+          "unit_bn": "Ω",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Resonance sharpness",
+          "label_bn": "অনুরণনের তীক্ষ্ণতা",
+          "unit": "Hz",
+          "unit_bn": "Hz",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Resonance constant fR",
+          "label_bn": "অনুরণন ধ্রুবক fR",
+          "unit": "Hz·Ω",
+          "unit_bn": "Hz·Ω",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "B = fᵣ/Q",
+        "expectedConstant": 1591.55,
+        "expectedConstantUnit": "Hz·Ω",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "lcr-resonant-frequency-sweep-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "B = fᵣ/Q",
+              "text_bn": "B = fᵣ/Q"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on B = fᵣ/Q.",
+          "explanation_bn": "modelটি B = fᵣ/Q-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "inverseX",
+        "expected": 1591.55,
+        "result_en": "Resonance constant fR",
+        "result_bn": "অনুরণন ধ্রুবক fR",
+        "result_unit": "Hz·Ω",
+        "x_en": "Circuit resistance",
+        "x_bn": "সার্কিট রোধ",
+        "x_unit": "Ω",
+        "x_min": 10,
+        "x_max": 50,
+        "x_step": 10,
+        "x_default": 20,
+        "sweep": [
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0
+        ],
+        "y_en": "Resonance sharpness",
+        "y_bn": "অনুরণনের তীক্ষ্ণতা",
+        "y_unit": "Hz",
+        "scale": 1,
+        "offset": 0,
+        "formula": "B = fᵣ/Q",
+        "apparatus_en": [
+          "signal generator",
+          "LCR circuit",
+          "oscilloscope"
+        ],
+        "apparatus_bn": [
+          "signal generator",
+          "LCR বর্তনী",
+          "oscilloscope"
+        ]
+      }
+    },
+    {
+      "id": "transformer-turns-ratio-load",
+      "slug": "transformer-turns-ratio-load",
+      "title_en": "Transformer turns ratio under load",
+      "title_bn": "লোডে transformer turns ratio",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate transformer turns ratio under load using a controlled five-reading data set and recover turns ratio nₛ/nₚ.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে লোডে transformer turns ratio অনুসন্ধান করা এবং পাকসংখ্যার অনুপাত Nₛ/Nₚ নির্ণয় করা।",
+      "theory_en": "The simulator follows Vₛ/Vₚ = Nₛ/Nₚ. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর Vₛ/Vₚ = Nₛ/Nₚ অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "Vₛ/Vₚ = Nₛ/Nₚ",
+      "formula_desc_en": "The recorded values are reduced to Turns ratio Nₛ/Nₚ.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে পাকসংখ্যার অনুপাত Nₛ/Nₚ নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the voltmeter.",
+          "instruction_bn": "voltmিটার পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the AC source, step transformer and voltmeter as shown.",
+          "instruction_bn": "এসি উৎস, স্টেপ transformer ও voltmিটার দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep primary voltage through five suggested values and record secondary voltage.",
+          "instruction_bn": "প্রাইমারি ভোল্টেজ পাঁচটি প্রস্তাবিত মানে বদলে সেকেন্ডারি ভোল্টেজ রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Primary voltage",
+          "label_bn": "প্রাইমারি ভোল্টেজ",
+          "unit": "V",
+          "unit_bn": "V",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Secondary voltage",
+          "label_bn": "সেকেন্ডারি ভোল্টেজ",
+          "unit": "V",
+          "unit_bn": "V",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Turns ratio Nₛ/Nₚ",
+          "label_bn": "পাকসংখ্যার অনুপাত Nₛ/Nₚ",
+          "unit": "",
+          "unit_bn": "",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Vₛ/Vₚ = Nₛ/Nₚ",
+        "expectedConstant": 0.5,
+        "expectedConstantUnit": "",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "transformer-turns-ratio-load-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Vₛ/Vₚ = Nₛ/Nₚ",
+              "text_bn": "Vₛ/Vₚ = Nₛ/Nₚ"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on Vₛ/Vₚ = Nₛ/Nₚ.",
+          "explanation_bn": "modelটি Vₛ/Vₚ = Nₛ/Nₚ-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.5,
+        "result_en": "Turns ratio Nₛ/Nₚ",
+        "result_bn": "পাকসংখ্যার অনুপাত Nₛ/Nₚ",
+        "result_unit": "",
+        "x_en": "Primary voltage",
+        "x_bn": "প্রাইমারি ভোল্টেজ",
+        "x_unit": "V",
+        "x_min": 2,
+        "x_max": 10,
+        "x_step": 2,
+        "x_default": 4,
+        "sweep": [
+          2.0,
+          4.0,
+          6.0,
+          8.0,
+          10.0
+        ],
+        "y_en": "Secondary voltage",
+        "y_bn": "সেকেন্ডারি ভোল্টেজ",
+        "y_unit": "V",
+        "scale": 1,
+        "offset": 0,
+        "formula": "Vₛ/Vₚ = Nₛ/Nₚ",
+        "apparatus_en": [
+          "AC source",
+          "step transformer",
+          "voltmeter"
+        ],
+        "apparatus_bn": [
+          "এসি উৎস",
+          "স্টেপ transformer",
+          "voltmিটার"
+        ]
+      }
+    },
+    {
+      "id": "faraday-coil-speed-emf",
+      "slug": "faraday-coil-speed-emf",
+      "title_en": "Induced emf versus magnet speed",
+      "title_bn": "চুম্বকের বেগের সঙ্গে আবিষ্ট emf",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate induced emf versus magnet speed using a controlled five-reading data set and recover flux-gradient constant.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে চুম্বকের বেগের সঙ্গে আবিষ্ট emf অনুসন্ধান করা এবং ফ্লাক্স-gradient ধ্রুবক নির্ণয় করা।",
+      "theory_en": "The simulator follows |ε| = |dΦ/dt|. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর |ε| = |dΦ/dt| অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "|ε| = |dΦ/dt|",
+      "formula_desc_en": "The recorded values are reduced to Flux-gradient constant.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে ফ্লাক্স-gradient ধ্রুবক নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the galvanometer.",
+          "instruction_bn": "গ্যালভানোমিটার পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the bar magnet, induction coil and galvanometer as shown.",
+          "instruction_bn": "দণ্ড চুম্বক, আবেশ কুণ্ডলী ও গ্যালভানোমিটার দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep magnet speed through five suggested values and record peak induced emf.",
+          "instruction_bn": "চুম্বকের বেগ পাঁচটি প্রস্তাবিত মানে বদলে সর্বোচ্চ আবিষ্ট emf রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Magnet speed",
+          "label_bn": "চুম্বকের বেগ",
+          "unit": "m/s",
+          "unit_bn": "m/s",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Peak induced emf",
+          "label_bn": "সর্বোচ্চ আবিষ্ট emf",
+          "unit": "V",
+          "unit_bn": "V",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Flux-gradient constant",
+          "label_bn": "ফ্লাক্স-gradient ধ্রুবক",
+          "unit": "V·s/m",
+          "unit_bn": "V·s/m",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "|ε| = |dΦ/dt|",
+        "expectedConstant": 0.08,
+        "expectedConstantUnit": "V·s/m",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "faraday-coil-speed-emf-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "|ε| = |dΦ/dt|",
+              "text_bn": "|ε| = |dΦ/dt|"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on |ε| = |dΦ/dt|.",
+          "explanation_bn": "modelটি |ε| = |dΦ/dt|-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.08,
+        "result_en": "Flux-gradient constant",
+        "result_bn": "ফ্লাক্স-gradient ধ্রুবক",
+        "result_unit": "V·s/m",
+        "x_en": "Magnet speed",
+        "x_bn": "চুম্বকের বেগ",
+        "x_unit": "m/s",
+        "x_min": 0.1,
+        "x_max": 0.9,
+        "x_step": 0.2,
+        "x_default": 0.3,
+        "sweep": [
+          0.1,
+          0.3,
+          0.5,
+          0.7,
+          0.9
+        ],
+        "y_en": "Peak induced emf",
+        "y_bn": "সর্বোচ্চ আবিষ্ট emf",
+        "y_unit": "V",
+        "scale": 1,
+        "offset": 0,
+        "formula": "|ε| = |dΦ/dt|",
+        "apparatus_en": [
+          "bar magnet",
+          "induction coil",
+          "galvanometer"
+        ],
+        "apparatus_bn": [
+          "দণ্ড চুম্বক",
+          "আবেশ কুণ্ডলী",
+          "গ্যালভানোমিটার"
+        ]
+      }
+    },
+    {
+      "id": "magnetic-force-current-wire",
+      "slug": "magnetic-force-current-wire",
+      "title_en": "Magnetic force on a current-carrying wire",
+      "title_bn": "প্রবাহবাহী তারের ওপর চৌম্বক বল",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate magnetic force on a current-carrying wire using a controlled five-reading data set and recover bl product.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে প্রবাহবাহী তারের ওপর চৌম্বক বল অনুসন্ধান করা এবং BL গুণফল নির্ণয় করা।",
+      "theory_en": "The simulator follows F = BIL. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর F = BIL অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "F = BIL",
+      "formula_desc_en": "The recorded values are reduced to BL product.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে BL গুণফল নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the force sensor.",
+          "instruction_bn": "বল sensor পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the horseshoe magnet, wire frame and force sensor as shown.",
+          "instruction_bn": "অশ্বক্ষুর চুম্বক, তার ফ্রেম ও বল sensor দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep current through five suggested values and record magnetic force.",
+          "instruction_bn": "তড়িৎ প্রবাহ পাঁচটি প্রস্তাবিত মানে বদলে চৌম্বক বল রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Current",
+          "label_bn": "তড়িৎ প্রবাহ",
+          "unit": "A",
+          "unit_bn": "A",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Magnetic force",
+          "label_bn": "চৌম্বক বল",
+          "unit": "N",
+          "unit_bn": "N",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "BL product",
+          "label_bn": "BL গুণফল",
+          "unit": "N/A",
+          "unit_bn": "N/A",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "F = BIL",
+        "expectedConstant": 0.12,
+        "expectedConstantUnit": "N/A",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "magnetic-force-current-wire-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "F = BIL",
+              "text_bn": "F = BIL"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on F = BIL.",
+          "explanation_bn": "modelটি F = BIL-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.12,
+        "result_en": "BL product",
+        "result_bn": "BL গুণফল",
+        "result_unit": "N/A",
+        "x_en": "Current",
+        "x_bn": "তড়িৎ প্রবাহ",
+        "x_unit": "A",
+        "x_min": 0.5,
+        "x_max": 2.5,
+        "x_step": 0.5,
+        "x_default": 1,
+        "sweep": [
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+        ],
+        "y_en": "Magnetic force",
+        "y_bn": "চৌম্বক বল",
+        "y_unit": "N",
+        "scale": 1,
+        "offset": 0,
+        "formula": "F = BIL",
+        "apparatus_en": [
+          "horseshoe magnet",
+          "wire frame",
+          "force sensor"
+        ],
+        "apparatus_bn": [
+          "অশ্বক্ষুর চুম্বক",
+          "তার ফ্রেম",
+          "বল sensor"
+        ]
+      }
+    },
+    {
+      "id": "current-balance-field",
+      "slug": "current-balance-field",
+      "title_en": "Current balance for magnetic field",
+      "title_bn": "current balance দিয়ে চৌম্বক ক্ষেত্র",
+      "category": "magnetism",
+      "domain": "magnetism",
+      "level": "honours",
+      "durationMinutes": 20,
+      "aim_en": "To investigate current balance for magnetic field using a controlled five-reading data set and recover magnetic field b.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে current balance দিয়ে চৌম্বক ক্ষেত্র অনুসন্ধান করা এবং চৌম্বক ক্ষেত্র B নির্ণয় করা।",
+      "theory_en": "The simulator follows F = BIL. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর F = BIL অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "F = BIL",
+      "formula_desc_en": "The recorded values are reduced to Magnetic field B.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে চৌম্বক ক্ষেত্র B নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the digital balance.",
+          "instruction_bn": "ডিজিটাল balance পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the current balance, electromagnet and digital balance as shown.",
+          "instruction_bn": "current balance, তড়িৎচুম্বক ও ডিজিটাল balance দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep current × wire length through five suggested values and record balance force.",
+          "instruction_bn": "প্রবাহ × তারের দৈর্ঘ্য পাঁচটি প্রস্তাবিত মানে বদলে সাম্য বল রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Current × wire length",
+          "label_bn": "প্রবাহ × তারের দৈর্ঘ্য",
+          "unit": "A·m",
+          "unit_bn": "A·m",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Balance force",
+          "label_bn": "সাম্য বল",
+          "unit": "N",
+          "unit_bn": "N",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Magnetic field B",
+          "label_bn": "চৌম্বক ক্ষেত্র B",
+          "unit": "T",
+          "unit_bn": "T",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "F = BIL",
+        "expectedConstant": 0.22,
+        "expectedConstantUnit": "T",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "current-balance-field-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "F = BIL",
+              "text_bn": "F = BIL"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on F = BIL.",
+          "explanation_bn": "modelটি F = BIL-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.22,
+        "result_en": "Magnetic field B",
+        "result_bn": "চৌম্বক ক্ষেত্র B",
+        "result_unit": "T",
+        "x_en": "Current × wire length",
+        "x_bn": "প্রবাহ × তারের দৈর্ঘ্য",
+        "x_unit": "A·m",
+        "x_min": 0.02,
+        "x_max": 0.1,
+        "x_step": 0.02,
+        "x_default": 0.04,
+        "sweep": [
+          0.02,
+          0.04,
+          0.06,
+          0.08,
+          0.1
+        ],
+        "y_en": "Balance force",
+        "y_bn": "সাম্য বল",
+        "y_unit": "N",
+        "scale": 1,
+        "offset": 0,
+        "formula": "F = BIL",
+        "apparatus_en": [
+          "current balance",
+          "electromagnet",
+          "digital balance"
+        ],
+        "apparatus_bn": [
+          "current balance",
+          "তড়িৎচুম্বক",
+          "ডিজিটাল balance"
+        ]
+      }
+    },
+    {
+      "id": "diode-forward-threshold",
+      "slug": "diode-forward-threshold",
+      "title_en": "Forward diode threshold",
+      "title_bn": "ডায়োডের forward threshold",
+      "category": "electricity",
+      "domain": "electricity",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate the forward diode characteristic using a controlled five-reading data set and recover the threshold voltage.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে diode-এর forward characteristic অনুসন্ধান করা এবং threshold ভোল্টেজ নির্ণয় করা।",
+      "theory_en": "The simulator follows I ≈ g(V − V₀). Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর I ≈ g(V − V₀) অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "V = V₀ + r_d I",
+      "formula_desc_en": "The voltage-axis intercept gives the forward threshold.",
+      "formula_desc_bn": "voltage-axis intercept থেকে forward threshold পাওয়া যায়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the milliammeter.",
+          "instruction_bn": "মিলিঅ্যামিটার পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the silicon diode, variable supply and milliammeter as shown.",
+          "instruction_bn": "silicon diode, পরিবর্তনশীল উৎস ও মিলিঅ্যামিটার দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep forward current through five suggested values and record the forward voltage.",
+          "instruction_bn": "forward প্রবাহ পাঁচটি প্রস্তাবিত মানে বদলে forward ভোল্টেজ রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Forward current",
+          "label_bn": "forward প্রবাহ",
+          "unit": "A",
+          "unit_bn": "A",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Forward voltage",
+          "label_bn": "forward ভোল্টেজ",
+          "unit": "V",
+          "unit_bn": "V",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Forward threshold voltage",
+          "label_bn": "forward threshold ভোল্টেজ",
+          "unit": "V",
+          "unit_bn": "V",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "V = V₀ + r_d I",
+        "expectedConstant": 0.65,
+        "expectedConstantUnit": "V",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "diode-forward-threshold-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "I ≈ g(V − V₀)",
+              "text_bn": "I ≈ g(V − V₀)"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on I ≈ g(V − V₀).",
+          "explanation_bn": "modelটি I ≈ g(V − V₀)-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "intercept",
+        "expected": 0.65,
+        "result_en": "Forward threshold voltage",
+        "result_bn": "forward threshold ভোল্টেজ",
+        "result_unit": "V",
+        "x_en": "Forward current",
+        "x_bn": "forward প্রবাহ",
+        "x_unit": "A",
+        "x_min": 0.005,
+        "x_max": 0.025,
+        "x_step": 0.005,
+        "x_default": 0.01,
+        "sweep": [
+          0.005,
+          0.01,
+          0.015,
+          0.02,
+          0.025
+        ],
+        "y_en": "Forward voltage",
+        "y_bn": "forward ভোল্টেজ",
+        "y_unit": "V",
+        "scale": 8,
+        "offset": 0,
+        "formula": "V = V₀ + r_d I",
+        "apparatus_en": [
+          "silicon diode",
+          "variable supply",
+          "milliammeter"
+        ],
+        "apparatus_bn": [
+          "silicon diode",
+          "পরিবর্তনশীল উৎস",
+          "মিলিঅ্যামিটার"
+        ]
+      }
+    },
+    {
+      "id": "stokes-terminal-velocity-radius",
+      "slug": "stokes-terminal-velocity-radius",
+      "title_en": "Terminal velocity versus sphere radius",
+      "title_bn": "গোলকের ব্যাসার্ধের সঙ্গে প্রান্তিক বেগ",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "honours",
+      "durationMinutes": 20,
+      "aim_en": "To investigate terminal velocity versus sphere radius using a controlled five-reading data set and recover stokes velocity coefficient.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে গোলকের ব্যাসার্ধের সঙ্গে প্রান্তিক বেগ অনুসন্ধান করা এবং Stokes বেগ সহগ নির্ণয় করা।",
+      "theory_en": "The simulator follows vₜ = 2r²(ρₛ−ρ)g/9η. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর vₜ = 2r²(ρₛ−ρ)g/9η অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "vₜ = 2r²(ρₛ−ρ)g/9η",
+      "formula_desc_en": "The recorded values are reduced to Stokes velocity coefficient.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে Stokes বেগ সহগ নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the timer gates.",
+          "instruction_bn": "timer gate পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the falling-ball tube, steel spheres and timer gates as shown.",
+          "instruction_bn": "falling-ball tube, ইস্পাত গোলক ও timer gate দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep sphere radius through five suggested values and record terminal velocity.",
+          "instruction_bn": "গোলকের ব্যাসার্ধ পাঁচটি প্রস্তাবিত মানে বদলে প্রান্তিক বেগ রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Sphere radius",
+          "label_bn": "গোলকের ব্যাসার্ধ",
+          "unit": "mm",
+          "unit_bn": "mm",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Terminal velocity",
+          "label_bn": "প্রান্তিক বেগ",
+          "unit": "m/s",
+          "unit_bn": "m/s",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Stokes velocity coefficient",
+          "label_bn": "Stokes বেগ সহগ",
+          "unit": "m⁻¹s⁻¹",
+          "unit_bn": "m⁻¹s⁻¹",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "vₜ = 2r²(ρₛ−ρ)g/9η",
+        "expectedConstant": 420,
+        "expectedConstantUnit": "m⁻¹s⁻¹",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "stokes-terminal-velocity-radius-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "vₜ = 2r²(ρₛ−ρ)g/9η",
+              "text_bn": "vₜ = 2r²(ρₛ−ρ)g/9η"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on vₜ = 2r²(ρₛ−ρ)g/9η.",
+          "explanation_bn": "modelটি vₜ = 2r²(ρₛ−ρ)g/9η-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "square",
+        "expected": 420,
+        "result_en": "Stokes velocity coefficient",
+        "result_bn": "Stokes বেগ সহগ",
+        "result_unit": "m⁻¹s⁻¹",
+        "x_en": "Sphere radius",
+        "x_bn": "গোলকের ব্যাসার্ধ",
+        "x_unit": "mm",
+        "x_min": 0.5,
+        "x_max": 2.5,
+        "x_step": 0.5,
+        "x_default": 1,
+        "sweep": [
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+        ],
+        "y_en": "Terminal velocity",
+        "y_bn": "প্রান্তিক বেগ",
+        "y_unit": "m/s",
+        "scale": 1e-06,
+        "offset": 0,
+        "formula": "vₜ = 2r²(ρₛ−ρ)g/9η",
+        "apparatus_en": [
+          "falling-ball tube",
+          "steel spheres",
+          "timer gates"
+        ],
+        "apparatus_bn": [
+          "falling-ball tube",
+          "ইস্পাত গোলক",
+          "timer gate"
+        ]
+      }
+    },
+    {
+      "id": "momentum-two-trolley",
+      "slug": "momentum-two-trolley",
+      "title_en": "Momentum conservation with two trolleys",
+      "title_bn": "দুটি trolley-তে ভরবেগ সংরক্ষণ",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-9-10",
+      "durationMinutes": 20,
+      "aim_en": "To investigate momentum conservation with two trolleys using a controlled five-reading data set and recover momentum-transfer factor.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে দুটি trolley-তে ভরবেগ সংরক্ষণ অনুসন্ধান করা এবং ভরবেগ স্থানান্তর factor নির্ণয় করা।",
+      "theory_en": "The simulator follows m₁u₁ + m₂u₂ = (m₁+m₂)v. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর m₁u₁ + m₂u₂ = (m₁+m₂)v অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "m₁u₁ + m₂u₂ = (m₁+m₂)v",
+      "formula_desc_en": "The recorded values are reduced to Momentum-transfer factor.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে ভরবেগ স্থানান্তর factor নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the photogates.",
+          "instruction_bn": "photogate পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the dynamics track, two trolleys and photogates as shown.",
+          "instruction_bn": "dynamics track, দুটি trolley ও photogate দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep initial speed through five suggested values and record combined momentum per unit mass.",
+          "instruction_bn": "প্রাথমিক বেগ পাঁচটি প্রস্তাবিত মানে বদলে একক ভরে সম্মিলিত ভরবেগ রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Initial speed",
+          "label_bn": "প্রাথমিক বেগ",
+          "unit": "m/s",
+          "unit_bn": "m/s",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Combined momentum per unit mass",
+          "label_bn": "একক ভরে সম্মিলিত ভরবেগ",
+          "unit": "m/s",
+          "unit_bn": "m/s",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Momentum-transfer factor",
+          "label_bn": "ভরবেগ স্থানান্তর factor",
+          "unit": "",
+          "unit_bn": "",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "m₁u₁ + m₂u₂ = (m₁+m₂)v",
+        "expectedConstant": 0.75,
+        "expectedConstantUnit": "",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "momentum-two-trolley-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "m₁u₁ + m₂u₂ = (m₁+m₂)v",
+              "text_bn": "m₁u₁ + m₂u₂ = (m₁+m₂)v"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on m₁u₁ + m₂u₂ = (m₁+m₂)v.",
+          "explanation_bn": "modelটি m₁u₁ + m₂u₂ = (m₁+m₂)v-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.75,
+        "result_en": "Momentum-transfer factor",
+        "result_bn": "ভরবেগ স্থানান্তর factor",
+        "result_unit": "",
+        "x_en": "Initial speed",
+        "x_bn": "প্রাথমিক বেগ",
+        "x_unit": "m/s",
+        "x_min": 0.2,
+        "x_max": 1.0,
+        "x_step": 0.2,
+        "x_default": 0.4,
+        "sweep": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "y_en": "Combined momentum per unit mass",
+        "y_bn": "একক ভরে সম্মিলিত ভরবেগ",
+        "y_unit": "m/s",
+        "scale": 1,
+        "offset": 0,
+        "formula": "m₁u₁ + m₂u₂ = (m₁+m₂)v",
+        "apparatus_en": [
+          "dynamics track",
+          "two trolleys",
+          "photogates"
+        ],
+        "apparatus_bn": [
+          "dynamics track",
+          "দুটি trolley",
+          "photogate"
+        ]
+      }
+    },
+    {
+      "id": "coefficient-restitution-bounce",
+      "slug": "coefficient-restitution-bounce",
+      "title_en": "Coefficient of restitution by bounce",
+      "title_bn": "bounce থেকে restitution coefficient",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate coefficient of restitution by bounce using a controlled five-reading data set and recover restitution coefficient squared.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে bounce থেকে restitution coefficient অনুসন্ধান করা এবং restitution coefficient-এর বর্গ নির্ণয় করা।",
+      "theory_en": "The simulator follows e = √(h₂/h₁). Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর e = √(h₂/h₁) অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "e = √(h₂/h₁)",
+      "formula_desc_en": "The recorded values are reduced to Restitution coefficient squared.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে restitution coefficient-এর বর্গ নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the motion sensor.",
+          "instruction_bn": "motion sensor পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the drop stand, rubber ball and motion sensor as shown.",
+          "instruction_bn": "drop stand, রাবার বল ও motion sensor দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep drop height through five suggested values and record rebound height.",
+          "instruction_bn": "পতনের উচ্চতা পাঁচটি প্রস্তাবিত মানে বদলে প্রতিক্ষেপ উচ্চতা রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Drop height",
+          "label_bn": "পতনের উচ্চতা",
+          "unit": "m",
+          "unit_bn": "m",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Rebound height",
+          "label_bn": "প্রতিক্ষেপ উচ্চতা",
+          "unit": "m",
+          "unit_bn": "m",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Restitution coefficient squared",
+          "label_bn": "restitution coefficient-এর বর্গ",
+          "unit": "",
+          "unit_bn": "",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "e = √(h₂/h₁)",
+        "expectedConstant": 0.81,
+        "expectedConstantUnit": "",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "coefficient-restitution-bounce-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "e = √(h₂/h₁)",
+              "text_bn": "e = √(h₂/h₁)"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on e = √(h₂/h₁).",
+          "explanation_bn": "modelটি e = √(h₂/h₁)-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "square",
+        "expected": 0.81,
+        "result_en": "Restitution coefficient squared",
+        "result_bn": "restitution coefficient-এর বর্গ",
+        "result_unit": "",
+        "x_en": "Drop height",
+        "x_bn": "পতনের উচ্চতা",
+        "x_unit": "m",
+        "x_min": 0.2,
+        "x_max": 1.0,
+        "x_step": 0.2,
+        "x_default": 0.4,
+        "sweep": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "y_en": "Rebound height",
+        "y_bn": "প্রতিক্ষেপ উচ্চতা",
+        "y_unit": "m",
+        "scale": 1,
+        "offset": 0,
+        "formula": "e = √(h₂/h₁)",
+        "apparatus_en": [
+          "drop stand",
+          "rubber ball",
+          "motion sensor"
+        ],
+        "apparatus_bn": [
+          "drop stand",
+          "রাবার বল",
+          "motion sensor"
+        ]
+      }
+    },
+    {
+      "id": "centripetal-force-angular-speed",
+      "slug": "centripetal-force-angular-speed",
+      "title_en": "Centripetal force versus angular speed",
+      "title_bn": "কৌণিক বেগের সঙ্গে কেন্দ্রমুখী বল",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate centripetal force versus angular speed using a controlled five-reading data set and recover mr product.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে কৌণিক বেগের সঙ্গে কেন্দ্রমুখী বল অনুসন্ধান করা এবং mr গুণফল নির্ণয় করা।",
+      "theory_en": "The simulator follows F = mrω². Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর F = mrω² অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "F = mrω²",
+      "formula_desc_en": "The recorded values are reduced to mr product.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে mr গুণফল নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the force sensor.",
+          "instruction_bn": "বল sensor পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the rotating platform, mass carrier and force sensor as shown.",
+          "instruction_bn": "ঘূর্ণায়মান platform, ভর carrier ও বল sensor দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep angular speed through five suggested values and record centripetal force.",
+          "instruction_bn": "কৌণিক বেগ পাঁচটি প্রস্তাবিত মানে বদলে কেন্দ্রমুখী বল রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Angular speed",
+          "label_bn": "কৌণিক বেগ",
+          "unit": "rad/s",
+          "unit_bn": "rad/s",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Centripetal force",
+          "label_bn": "কেন্দ্রমুখী বল",
+          "unit": "N",
+          "unit_bn": "N",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "mr product",
+          "label_bn": "mr গুণফল",
+          "unit": "kg·m",
+          "unit_bn": "kg·m",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "F = mrω²",
+        "expectedConstant": 0.12,
+        "expectedConstantUnit": "kg·m",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "centripetal-force-angular-speed-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "F = mrω²",
+              "text_bn": "F = mrω²"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on F = mrω².",
+          "explanation_bn": "modelটি F = mrω²-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "square",
+        "expected": 0.12,
+        "result_en": "mr product",
+        "result_bn": "mr গুণফল",
+        "result_unit": "kg·m",
+        "x_en": "Angular speed",
+        "x_bn": "কৌণিক বেগ",
+        "x_unit": "rad/s",
+        "x_min": 2,
+        "x_max": 10,
+        "x_step": 2,
+        "x_default": 4,
+        "sweep": [
+          2.0,
+          4.0,
+          6.0,
+          8.0,
+          10.0
+        ],
+        "y_en": "Centripetal force",
+        "y_bn": "কেন্দ্রমুখী বল",
+        "y_unit": "N",
+        "scale": 1,
+        "offset": 0,
+        "formula": "F = mrω²",
+        "apparatus_en": [
+          "rotating platform",
+          "mass carrier",
+          "force sensor"
+        ],
+        "apparatus_bn": [
+          "ঘূর্ণায়মান platform",
+          "ভর carrier",
+          "বল sensor"
+        ]
+      }
+    },
+    {
+      "id": "projectile-range-speed-squared",
+      "slug": "projectile-range-speed-squared",
+      "title_en": "Projectile range versus speed squared",
+      "title_bn": "বেগের বর্গের সঙ্গে প্রক্ষেপণ পাল্লা",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate projectile range versus speed squared using a controlled five-reading data set and recover sin(2θ)/g.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে বেগের বর্গের সঙ্গে প্রক্ষেপণ পাল্লা অনুসন্ধান করা এবং sin(2θ)/g নির্ণয় করা।",
+      "theory_en": "The simulator follows R = u²sin(2θ)/g. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর R = u²sin(2θ)/g অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "R = u²sin(2θ)/g",
+      "formula_desc_en": "The recorded values are reduced to sin(2θ)/g.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে sin(2θ)/g নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the range mat.",
+          "instruction_bn": "পাল্লা mat পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the projectile launcher, angle scale and range mat as shown.",
+          "instruction_bn": "projectile launcher, কোণ scale ও পাল্লা mat দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep launch speed through five suggested values and record horizontal range.",
+          "instruction_bn": "নিক্ষেপ বেগ পাঁচটি প্রস্তাবিত মানে বদলে অনুভূমিক পাল্লা রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Launch speed",
+          "label_bn": "নিক্ষেপ বেগ",
+          "unit": "m/s",
+          "unit_bn": "m/s",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Horizontal range",
+          "label_bn": "অনুভূমিক পাল্লা",
+          "unit": "m",
+          "unit_bn": "m",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "sin(2θ)/g",
+          "label_bn": "sin(2θ)/g",
+          "unit": "s²/m",
+          "unit_bn": "s²/m",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "R = u²sin(2θ)/g",
+        "expectedConstant": 0.10194,
+        "expectedConstantUnit": "s²/m",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "projectile-range-speed-squared-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "R = u²sin(2θ)/g",
+              "text_bn": "R = u²sin(2θ)/g"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on R = u²sin(2θ)/g.",
+          "explanation_bn": "modelটি R = u²sin(2θ)/g-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "square",
+        "expected": 0.10194,
+        "result_en": "sin(2θ)/g",
+        "result_bn": "sin(2θ)/g",
+        "result_unit": "s²/m",
+        "x_en": "Launch speed",
+        "x_bn": "নিক্ষেপ বেগ",
+        "x_unit": "m/s",
+        "x_min": 4,
+        "x_max": 12,
+        "x_step": 2,
+        "x_default": 6,
+        "sweep": [
+          4.0,
+          6.0,
+          8.0,
+          10.0,
+          12.0
+        ],
+        "y_en": "Horizontal range",
+        "y_bn": "অনুভূমিক পাল্লা",
+        "y_unit": "m",
+        "scale": 1,
+        "offset": 0,
+        "formula": "R = u²sin(2θ)/g",
+        "apparatus_en": [
+          "projectile launcher",
+          "angle scale",
+          "range mat"
+        ],
+        "apparatus_bn": [
+          "projectile launcher",
+          "কোণ scale",
+          "পাল্লা mat"
+        ]
+      }
+    },
+    {
+      "id": "spring-energy-amplitude",
+      "slug": "spring-energy-amplitude",
+      "title_en": "Spring energy versus amplitude",
+      "title_bn": "বিস্তারের সঙ্গে স্প্রিং শক্তি",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate spring energy versus amplitude using a controlled five-reading data set and recover half spring constant k/2.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে বিস্তারের সঙ্গে স্প্রিং শক্তি অনুসন্ধান করা এবং স্প্রিং ধ্রুবকের অর্ধেক k/2 নির্ণয় করা।",
+      "theory_en": "The simulator follows E = ½kA². Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর E = ½kA² অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "E = ½kA²",
+      "formula_desc_en": "The recorded values are reduced to Half spring constant k/2.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে স্প্রিং ধ্রুবকের অর্ধেক k/2 নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the energy sensor.",
+          "instruction_bn": "শক্তি sensor পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the spring stand, mass hanger and energy sensor as shown.",
+          "instruction_bn": "স্প্রিং stand, ভর hanger ও শক্তি sensor দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep amplitude through five suggested values and record elastic energy.",
+          "instruction_bn": "বিস্তার পাঁচটি প্রস্তাবিত মানে বদলে স্থিতিস্থাপক শক্তি রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Amplitude",
+          "label_bn": "বিস্তার",
+          "unit": "m",
+          "unit_bn": "m",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Elastic energy",
+          "label_bn": "স্থিতিস্থাপক শক্তি",
+          "unit": "J",
+          "unit_bn": "J",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Half spring constant k/2",
+          "label_bn": "স্প্রিং ধ্রুবকের অর্ধেক k/2",
+          "unit": "N/m",
+          "unit_bn": "N/m",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "E = ½kA²",
+        "expectedConstant": 12.5,
+        "expectedConstantUnit": "N/m",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "spring-energy-amplitude-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "E = ½kA²",
+              "text_bn": "E = ½kA²"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on E = ½kA².",
+          "explanation_bn": "modelটি E = ½kA²-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "square",
+        "expected": 12.5,
+        "result_en": "Half spring constant k/2",
+        "result_bn": "স্প্রিং ধ্রুবকের অর্ধেক k/2",
+        "result_unit": "N/m",
+        "x_en": "Amplitude",
+        "x_bn": "বিস্তার",
+        "x_unit": "m",
+        "x_min": 0.02,
+        "x_max": 0.1,
+        "x_step": 0.02,
+        "x_default": 0.04,
+        "sweep": [
+          0.02,
+          0.04,
+          0.06,
+          0.08,
+          0.1
+        ],
+        "y_en": "Elastic energy",
+        "y_bn": "স্থিতিস্থাপক শক্তি",
+        "y_unit": "J",
+        "scale": 1,
+        "offset": 0,
+        "formula": "E = ½kA²",
+        "apparatus_en": [
+          "spring stand",
+          "mass hanger",
+          "energy sensor"
+        ],
+        "apparatus_bn": [
+          "স্প্রিং stand",
+          "ভর hanger",
+          "শক্তি sensor"
+        ]
+      }
+    },
+    {
+      "id": "disc-rotational-inertia",
+      "slug": "disc-rotational-inertia",
+      "title_en": "Rotational inertia of a disc",
+      "title_bn": "চাকতির ঘূর্ণন জড়তা",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "honours",
+      "durationMinutes": 20,
+      "aim_en": "To investigate rotational inertia of a disc using a controlled five-reading data set and recover half disc mass m/2.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে চাকতির ঘূর্ণন জড়তা অনুসন্ধান করা এবং চাকতির অর্ধ ভর M/2 নির্ণয় করা।",
+      "theory_en": "The simulator follows I = ½MR². Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর I = ½MR² অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "I = ½MR²",
+      "formula_desc_en": "The recorded values are reduced to Half disc mass M/2.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে চাকতির অর্ধ ভর M/2 নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the angular sensor.",
+          "instruction_bn": "কৌণিক sensor পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the rotary table, disc set and angular sensor as shown.",
+          "instruction_bn": "rotary table, চাকতি set ও কৌণিক sensor দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep disc radius through five suggested values and record moment of inertia.",
+          "instruction_bn": "চাকতির ব্যাসার্ধ পাঁচটি প্রস্তাবিত মানে বদলে জড়তার ভ্রামক রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Disc radius",
+          "label_bn": "চাকতির ব্যাসার্ধ",
+          "unit": "m",
+          "unit_bn": "m",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Moment of inertia",
+          "label_bn": "জড়তার ভ্রামক",
+          "unit": "kg·m²",
+          "unit_bn": "kg·m²",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Half disc mass M/2",
+          "label_bn": "চাকতির অর্ধ ভর M/2",
+          "unit": "kg",
+          "unit_bn": "kg",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "I = ½MR²",
+        "expectedConstant": 0.6,
+        "expectedConstantUnit": "kg",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "disc-rotational-inertia-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "I = ½MR²",
+              "text_bn": "I = ½MR²"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on I = ½MR².",
+          "explanation_bn": "modelটি I = ½MR²-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "square",
+        "expected": 0.6,
+        "result_en": "Half disc mass M/2",
+        "result_bn": "চাকতির অর্ধ ভর M/2",
+        "result_unit": "kg",
+        "x_en": "Disc radius",
+        "x_bn": "চাকতির ব্যাসার্ধ",
+        "x_unit": "m",
+        "x_min": 0.05,
+        "x_max": 0.25,
+        "x_step": 0.05,
+        "x_default": 0.1,
+        "sweep": [
+          0.05,
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "y_en": "Moment of inertia",
+        "y_bn": "জড়তার ভ্রামক",
+        "y_unit": "kg·m²",
+        "scale": 1,
+        "offset": 0,
+        "formula": "I = ½MR²",
+        "apparatus_en": [
+          "rotary table",
+          "disc set",
+          "angular sensor"
+        ],
+        "apparatus_bn": [
+          "rotary table",
+          "চাকতি set",
+          "কৌণিক sensor"
+        ]
+      }
+    },
+    {
+      "id": "torque-equilibrium-lever",
+      "slug": "torque-equilibrium-lever",
+      "title_en": "Torque equilibrium on a lever",
+      "title_bn": "lever-এ torque সাম্য",
+      "category": "mechanics",
+      "domain": "mechanics",
+      "level": "class-9-10",
+      "durationMinutes": 20,
+      "aim_en": "To investigate torque equilibrium on a lever using a controlled five-reading data set and recover load force.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে lever-এ torque সাম্য অনুসন্ধান করা এবং লোড বল নির্ণয় করা।",
+      "theory_en": "The simulator follows τ = Fr. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর τ = Fr অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "τ = Fr",
+      "formula_desc_en": "The recorded values are reduced to Load force.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে লোড বল নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the slotted masses.",
+          "instruction_bn": "slotted mass পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the metre rule, pivot and slotted masses as shown.",
+          "instruction_bn": "মিটার rule, pivot ও slotted mass দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep load arm through five suggested values and record balancing torque.",
+          "instruction_bn": "লোড বাহু পাঁচটি প্রস্তাবিত মানে বদলে সাম্য torque রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Load arm",
+          "label_bn": "লোড বাহু",
+          "unit": "m",
+          "unit_bn": "m",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Balancing torque",
+          "label_bn": "সাম্য torque",
+          "unit": "N·m",
+          "unit_bn": "N·m",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Load force",
+          "label_bn": "লোড বল",
+          "unit": "N",
+          "unit_bn": "N",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "τ = Fr",
+        "expectedConstant": 2.0,
+        "expectedConstantUnit": "N",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "torque-equilibrium-lever-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "τ = Fr",
+              "text_bn": "τ = Fr"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on τ = Fr.",
+          "explanation_bn": "modelটি τ = Fr-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 2.0,
+        "result_en": "Load force",
+        "result_bn": "লোড বল",
+        "result_unit": "N",
+        "x_en": "Load arm",
+        "x_bn": "লোড বাহু",
+        "x_unit": "m",
+        "x_min": 0.1,
+        "x_max": 0.5,
+        "x_step": 0.1,
+        "x_default": 0.2,
+        "sweep": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5
+        ],
+        "y_en": "Balancing torque",
+        "y_bn": "সাম্য torque",
+        "y_unit": "N·m",
+        "scale": 1,
+        "offset": 0,
+        "formula": "τ = Fr",
+        "apparatus_en": [
+          "metre rule",
+          "pivot",
+          "slotted masses"
+        ],
+        "apparatus_bn": [
+          "মিটার rule",
+          "pivot",
+          "slotted mass"
+        ]
+      }
+    },
+    {
+      "id": "density-irregular-solid-displacement",
+      "slug": "density-irregular-solid-displacement",
+      "title_en": "Density by water displacement",
+      "title_bn": "পানি অপসারণে অনিয়মিত কঠিনের ঘনত্ব",
+      "category": "measuring-tools",
+      "domain": "measurement",
+      "level": "class-9-10",
+      "durationMinutes": 20,
+      "aim_en": "To investigate density by water displacement using a controlled five-reading data set and recover solid density.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে পানি অপসারণে অনিয়মিত কঠিনের ঘনত্ব অনুসন্ধান করা এবং কঠিনের ঘনত্ব নির্ণয় করা।",
+      "theory_en": "The simulator follows ρ = m/V. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর ρ = m/V অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "ρ = m/V",
+      "formula_desc_en": "The recorded values are reduced to Solid density.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে কঠিনের ঘনত্ব নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the digital balance.",
+          "instruction_bn": "ডিজিটাল balance পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the measuring cylinder, metal sample and digital balance as shown.",
+          "instruction_bn": "measuring cylinder, ধাতব নমুনা ও ডিজিটাল balance দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep displaced volume through five suggested values and record measured mass.",
+          "instruction_bn": "অপসারিত আয়তন পাঁচটি প্রস্তাবিত মানে বদলে পরিমাপিত ভর রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Displaced volume",
+          "label_bn": "অপসারিত আয়তন",
+          "unit": "cm³",
+          "unit_bn": "cm³",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Measured mass",
+          "label_bn": "পরিমাপিত ভর",
+          "unit": "g",
+          "unit_bn": "g",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Solid density",
+          "label_bn": "কঠিনের ঘনত্ব",
+          "unit": "g/cm³",
+          "unit_bn": "g/cm³",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "ρ = m/V",
+        "expectedConstant": 7.8,
+        "expectedConstantUnit": "g/cm³",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "density-irregular-solid-displacement-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "ρ = m/V",
+              "text_bn": "ρ = m/V"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on ρ = m/V.",
+          "explanation_bn": "modelটি ρ = m/V-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 7.8,
+        "result_en": "Solid density",
+        "result_bn": "কঠিনের ঘনত্ব",
+        "result_unit": "g/cm³",
+        "x_en": "Displaced volume",
+        "x_bn": "অপসারিত আয়তন",
+        "x_unit": "cm³",
+        "x_min": 2,
+        "x_max": 10,
+        "x_step": 2,
+        "x_default": 4,
+        "sweep": [
+          2.0,
+          4.0,
+          6.0,
+          8.0,
+          10.0
+        ],
+        "y_en": "Measured mass",
+        "y_bn": "পরিমাপিত ভর",
+        "y_unit": "g",
+        "scale": 1,
+        "offset": 0,
+        "formula": "ρ = m/V",
+        "apparatus_en": [
+          "measuring cylinder",
+          "metal sample",
+          "digital balance"
+        ],
+        "apparatus_bn": [
+          "measuring cylinder",
+          "ধাতব নমুনা",
+          "ডিজিটাল balance"
+        ]
+      }
+    },
+    {
+      "id": "linear-expansion-metal-rod",
+      "slug": "linear-expansion-metal-rod",
+      "title_en": "Linear expansion of a metal rod",
+      "title_bn": "ধাতব দণ্ডের রৈখিক প্রসারণ",
+      "category": "heat",
+      "domain": "heat",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate linear expansion of a metal rod using a controlled five-reading data set and recover expansion coefficient α.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে ধাতব দণ্ডের রৈখিক প্রসারণ অনুসন্ধান করা এবং প্রসারণ সহগ α নির্ণয় করা।",
+      "theory_en": "The simulator follows ΔL/L = αΔT. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর ΔL/L = αΔT অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "ΔL/L = αΔT",
+      "formula_desc_en": "The recorded values are reduced to Expansion coefficient α.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে প্রসারণ সহগ α নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the micrometer gauge.",
+          "instruction_bn": "মাইক্রোমিটার gauge পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the metal rod, steam jacket and micrometer gauge as shown.",
+          "instruction_bn": "ধাতব দণ্ড, steam jacket ও মাইক্রোমিটার gauge দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep temperature rise through five suggested values and record fractional extension δl/l.",
+          "instruction_bn": "তাপমাত্রা বৃদ্ধি পাঁচটি প্রস্তাবিত মানে বদলে ভগ্নাংশ প্রসারণ ΔL/L রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Temperature rise",
+          "label_bn": "তাপমাত্রা বৃদ্ধি",
+          "unit": "K",
+          "unit_bn": "K",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Fractional extension ΔL/L",
+          "label_bn": "ভগ্নাংশ প্রসারণ ΔL/L",
+          "unit": "",
+          "unit_bn": "",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Expansion coefficient α",
+          "label_bn": "প্রসারণ সহগ α",
+          "unit": "K⁻¹",
+          "unit_bn": "K⁻¹",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "ΔL/L = αΔT",
+        "expectedConstant": 2.3e-05,
+        "expectedConstantUnit": "K⁻¹",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "linear-expansion-metal-rod-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "ΔL/L = αΔT",
+              "text_bn": "ΔL/L = αΔT"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on ΔL/L = αΔT.",
+          "explanation_bn": "modelটি ΔL/L = αΔT-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 2.3e-05,
+        "result_en": "Expansion coefficient α",
+        "result_bn": "প্রসারণ সহগ α",
+        "result_unit": "K⁻¹",
+        "x_en": "Temperature rise",
+        "x_bn": "তাপমাত্রা বৃদ্ধি",
+        "x_unit": "K",
+        "x_min": 20,
+        "x_max": 100,
+        "x_step": 20,
+        "x_default": 40,
+        "sweep": [
+          20.0,
+          40.0,
+          60.0,
+          80.0,
+          100.0
+        ],
+        "y_en": "Fractional extension ΔL/L",
+        "y_bn": "ভগ্নাংশ প্রসারণ ΔL/L",
+        "y_unit": "",
+        "scale": 1,
+        "offset": 0,
+        "formula": "ΔL/L = αΔT",
+        "apparatus_en": [
+          "metal rod",
+          "steam jacket",
+          "micrometer gauge"
+        ],
+        "apparatus_bn": [
+          "ধাতব দণ্ড",
+          "steam jacket",
+          "মাইক্রোমিটার gauge"
+        ]
+      }
+    },
+    {
+      "id": "newton-cooling-temperature-gap",
+      "slug": "newton-cooling-temperature-gap",
+      "title_en": "Newton cooling-rate test",
+      "title_bn": "নিউটনের cooling-rate পরীক্ষা",
+      "category": "heat",
+      "domain": "heat",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate newton cooling-rate test using a controlled five-reading data set and recover cooling constant k.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে নিউটনের cooling-rate পরীক্ষা অনুসন্ধান করা এবং শীতলকরণ ধ্রুবক k নির্ণয় করা।",
+      "theory_en": "The simulator follows |dT/dt| = k(T−Tₐ). Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর |dT/dt| = k(T−Tₐ) অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "|dT/dt| = k(T−Tₐ)",
+      "formula_desc_en": "The recorded values are reduced to Cooling constant k.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে শীতলকরণ ধ্রুবক k নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the data logger.",
+          "instruction_bn": "ডেটা লগার পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the calorimeter, thermometer probe and data logger as shown.",
+          "instruction_bn": "calorimeter, thermometer probe ও ডেটা লগার দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep temperature excess through five suggested values and record cooling rate magnitude.",
+          "instruction_bn": "অতিরিক্ত তাপমাত্রা পাঁচটি প্রস্তাবিত মানে বদলে শীতলকরণ হারের মান রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Temperature excess",
+          "label_bn": "অতিরিক্ত তাপমাত্রা",
+          "unit": "K",
+          "unit_bn": "K",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Cooling rate magnitude",
+          "label_bn": "শীতলকরণ হারের মান",
+          "unit": "K/s",
+          "unit_bn": "K/s",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Cooling constant k",
+          "label_bn": "শীতলকরণ ধ্রুবক k",
+          "unit": "s⁻¹",
+          "unit_bn": "s⁻¹",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "|dT/dt| = k(T−Tₐ)",
+        "expectedConstant": 0.035,
+        "expectedConstantUnit": "s⁻¹",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "newton-cooling-temperature-gap-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "|dT/dt| = k(T−Tₐ)",
+              "text_bn": "|dT/dt| = k(T−Tₐ)"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on |dT/dt| = k(T−Tₐ).",
+          "explanation_bn": "modelটি |dT/dt| = k(T−Tₐ)-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.035,
+        "result_en": "Cooling constant k",
+        "result_bn": "শীতলকরণ ধ্রুবক k",
+        "result_unit": "s⁻¹",
+        "x_en": "Temperature excess",
+        "x_bn": "অতিরিক্ত তাপমাত্রা",
+        "x_unit": "K",
+        "x_min": 10,
+        "x_max": 50,
+        "x_step": 10,
+        "x_default": 20,
+        "sweep": [
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0
+        ],
+        "y_en": "Cooling rate magnitude",
+        "y_bn": "শীতলকরণ হারের মান",
+        "y_unit": "K/s",
+        "scale": 1,
+        "offset": 0,
+        "formula": "|dT/dt| = k(T−Tₐ)",
+        "apparatus_en": [
+          "calorimeter",
+          "thermometer probe",
+          "data logger"
+        ],
+        "apparatus_bn": [
+          "calorimeter",
+          "thermometer probe",
+          "ডেটা লগার"
+        ]
+      }
+    },
+    {
+      "id": "latent-heat-ice-mass",
+      "slug": "latent-heat-ice-mass",
+      "title_en": "Latent heat of fusion by electrical heating",
+      "title_bn": "বৈদ্যুতিক heating-এ বরফের গলন সুপ্ততাপ",
+      "category": "heat",
+      "domain": "heat",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate latent heat of fusion by electrical heating using a controlled five-reading data set and recover latent heat of fusion.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে বৈদ্যুতিক heating-এ বরফের গলন সুপ্ততাপ অনুসন্ধান করা এবং গলনের সুপ্ততাপ নির্ণয় করা।",
+      "theory_en": "The simulator follows m = E/Lf. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর m = E/Lf অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "m = E/Lf",
+      "formula_desc_en": "The recorded values are reduced to Latent heat of fusion.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে গলনের সুপ্ততাপ নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the balance.",
+          "instruction_bn": "balance পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the ice calorimeter, immersion heater and balance as shown.",
+          "instruction_bn": "ice calorimeter, immersion heater ও balance দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep electrical energy through five suggested values and record melted ice mass.",
+          "instruction_bn": "বৈদ্যুতিক শক্তি পাঁচটি প্রস্তাবিত মানে বদলে গলা বরফের ভর রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Electrical energy",
+          "label_bn": "বৈদ্যুতিক শক্তি",
+          "unit": "kJ",
+          "unit_bn": "kJ",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Melted ice mass",
+          "label_bn": "গলা বরফের ভর",
+          "unit": "kg",
+          "unit_bn": "kg",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Latent heat of fusion",
+          "label_bn": "গলনের সুপ্ততাপ",
+          "unit": "J/kg",
+          "unit_bn": "J/kg",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "m = E/Lf",
+        "expectedConstant": 334000,
+        "expectedConstantUnit": "J/kg",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "latent-heat-ice-mass-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "m = E/Lf",
+              "text_bn": "m = E/Lf"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on m = E/Lf.",
+          "explanation_bn": "modelটি m = E/Lf-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "reciprocalK",
+        "expected": 334000,
+        "result_en": "Latent heat of fusion",
+        "result_bn": "গলনের সুপ্ততাপ",
+        "result_unit": "J/kg",
+        "x_en": "Electrical energy",
+        "x_bn": "বৈদ্যুতিক শক্তি",
+        "x_unit": "kJ",
+        "x_min": 20,
+        "x_max": 100,
+        "x_step": 20,
+        "x_default": 40,
+        "sweep": [
+          20.0,
+          40.0,
+          60.0,
+          80.0,
+          100.0
+        ],
+        "y_en": "Melted ice mass",
+        "y_bn": "গলা বরফের ভর",
+        "y_unit": "kg",
+        "scale": 1000,
+        "offset": 0,
+        "formula": "m = E/Lf",
+        "apparatus_en": [
+          "ice calorimeter",
+          "immersion heater",
+          "balance"
+        ],
+        "apparatus_bn": [
+          "ice calorimeter",
+          "immersion heater",
+          "balance"
+        ]
+      }
+    },
+    {
+      "id": "composite-wall-conductivity",
+      "slug": "composite-wall-conductivity",
+      "title_en": "Thermal conductance of a composite wall",
+      "title_bn": "যৌগিক দেয়ালের তাপ পরিবাহিতা",
+      "category": "heat",
+      "domain": "heat",
+      "level": "honours",
+      "durationMinutes": 20,
+      "aim_en": "To investigate thermal conductance of a composite wall using a controlled five-reading data set and recover overall conductance u.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে যৌগিক দেয়ালের তাপ পরিবাহিতা অনুসন্ধান করা এবং সামগ্রিক conductance U নির্ণয় করা।",
+      "theory_en": "The simulator follows Q̇ = UΔT. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর Q̇ = UΔT অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "Q̇ = UΔT",
+      "formula_desc_en": "The recorded values are reduced to Overall conductance U.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে সামগ্রিক conductance U নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the heat-flux sensor.",
+          "instruction_bn": "heat-flux sensor পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the composite slab, heater plate and heat-flux sensor as shown.",
+          "instruction_bn": "যৌগিক slab, heater plate ও heat-flux sensor দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep temperature difference through five suggested values and record heat-flow rate.",
+          "instruction_bn": "তাপমাত্রা পার্থক্য পাঁচটি প্রস্তাবিত মানে বদলে তাপ প্রবাহ হার রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Temperature difference",
+          "label_bn": "তাপমাত্রা পার্থক্য",
+          "unit": "K",
+          "unit_bn": "K",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Heat-flow rate",
+          "label_bn": "তাপ প্রবাহ হার",
+          "unit": "W",
+          "unit_bn": "W",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Overall conductance U",
+          "label_bn": "সামগ্রিক conductance U",
+          "unit": "W/K",
+          "unit_bn": "W/K",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Q̇ = UΔT",
+        "expectedConstant": 0.85,
+        "expectedConstantUnit": "W/K",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "composite-wall-conductivity-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Q̇ = UΔT",
+              "text_bn": "Q̇ = UΔT"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on Q̇ = UΔT.",
+          "explanation_bn": "modelটি Q̇ = UΔT-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.85,
+        "result_en": "Overall conductance U",
+        "result_bn": "সামগ্রিক conductance U",
+        "result_unit": "W/K",
+        "x_en": "Temperature difference",
+        "x_bn": "তাপমাত্রা পার্থক্য",
+        "x_unit": "K",
+        "x_min": 10,
+        "x_max": 50,
+        "x_step": 10,
+        "x_default": 20,
+        "sweep": [
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0
+        ],
+        "y_en": "Heat-flow rate",
+        "y_bn": "তাপ প্রবাহ হার",
+        "y_unit": "W",
+        "scale": 1,
+        "offset": 0,
+        "formula": "Q̇ = UΔT",
+        "apparatus_en": [
+          "composite slab",
+          "heater plate",
+          "heat-flux sensor"
+        ],
+        "apparatus_bn": [
+          "যৌগিক slab",
+          "heater plate",
+          "heat-flux sensor"
+        ]
+      }
+    },
+    {
+      "id": "snell-law-glass-block",
+      "slug": "snell-law-glass-block",
+      "title_en": "Snell’s law with a glass block",
+      "title_bn": "কাচের block-এ Snell-এর সূত্র",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-9-10",
+      "durationMinutes": 20,
+      "aim_en": "To investigate snell’s law with a glass block using a controlled five-reading data set and recover refractive index.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে কাচের block-এ Snell-এর সূত্র অনুসন্ধান করা এবং প্রতিসরাঙ্ক নির্ণয় করা।",
+      "theory_en": "The simulator follows sin i = n sin r. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর sin i = n sin r অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "sin i = n sin r",
+      "formula_desc_en": "The recorded values are reduced to Refractive index.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে প্রতিসরাঙ্ক নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the angle scale.",
+          "instruction_bn": "কোণ scale পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the ray box, glass block and angle scale as shown.",
+          "instruction_bn": "ray box, কাচের block ও কোণ scale দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep sin r through five suggested values and record sin i.",
+          "instruction_bn": "sin r পাঁচটি প্রস্তাবিত মানে বদলে sin i রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "sin r",
+          "label_bn": "sin r",
+          "unit": "",
+          "unit_bn": "",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "sin i",
+          "label_bn": "sin i",
+          "unit": "",
+          "unit_bn": "",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Refractive index",
+          "label_bn": "প্রতিসরাঙ্ক",
+          "unit": "",
+          "unit_bn": "",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "sin i = n sin r",
+        "expectedConstant": 1.5,
+        "expectedConstantUnit": "",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "snell-law-glass-block-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "sin i = n sin r",
+              "text_bn": "sin i = n sin r"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on sin i = n sin r.",
+          "explanation_bn": "modelটি sin i = n sin r-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 1.5,
+        "result_en": "Refractive index",
+        "result_bn": "প্রতিসরাঙ্ক",
+        "result_unit": "",
+        "x_en": "sin r",
+        "x_bn": "sin r",
+        "x_unit": "",
+        "x_min": 0.2,
+        "x_max": 0.8,
+        "x_step": 0.15,
+        "x_default": 0.35,
+        "sweep": [
+          0.2,
+          0.35,
+          0.5,
+          0.65,
+          0.8
+        ],
+        "y_en": "sin i",
+        "y_bn": "sin i",
+        "y_unit": "",
+        "scale": 1,
+        "offset": 0,
+        "formula": "sin i = n sin r",
+        "apparatus_en": [
+          "ray box",
+          "glass block",
+          "angle scale"
+        ],
+        "apparatus_bn": [
+          "ray box",
+          "কাচের block",
+          "কোণ scale"
+        ]
+      }
+    },
+    {
+      "id": "prism-angular-dispersion",
+      "slug": "prism-angular-dispersion",
+      "title_en": "Angular dispersion of a prism",
+      "title_bn": "prism-এর কৌণিক dispersion",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate angular dispersion of a prism using a controlled five-reading data set and recover dispersion coefficient.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে prism-এর কৌণিক dispersion অনুসন্ধান করা এবং dispersion সহগ নির্ণয় করা।",
+      "theory_en": "The simulator follows Δθ = DΔλ. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর Δθ = DΔλ অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "Δθ = DΔλ",
+      "formula_desc_en": "The recorded values are reduced to Dispersion coefficient.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে dispersion সহগ নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the spectral lamp.",
+          "instruction_bn": "spectral lamp পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the spectrometer, glass prism and spectral lamp as shown.",
+          "instruction_bn": "spectrometer, কাচের prism ও spectral lamp দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep wavelength separation through five suggested values and record angular separation.",
+          "instruction_bn": "তরঙ্গদৈর্ঘ্য পার্থক্য পাঁচটি প্রস্তাবিত মানে বদলে কৌণিক বিচ্ছেদ রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Wavelength separation",
+          "label_bn": "তরঙ্গদৈর্ঘ্য পার্থক্য",
+          "unit": "nm",
+          "unit_bn": "nm",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Angular separation",
+          "label_bn": "কৌণিক বিচ্ছেদ",
+          "unit": "rad",
+          "unit_bn": "rad",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Dispersion coefficient",
+          "label_bn": "dispersion সহগ",
+          "unit": "rad/nm",
+          "unit_bn": "rad/nm",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "Δθ = DΔλ",
+        "expectedConstant": 0.035,
+        "expectedConstantUnit": "rad/nm",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "prism-angular-dispersion-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "Δθ = DΔλ",
+              "text_bn": "Δθ = DΔλ"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on Δθ = DΔλ.",
+          "explanation_bn": "modelটি Δθ = DΔλ-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.035,
+        "result_en": "Dispersion coefficient",
+        "result_bn": "dispersion সহগ",
+        "result_unit": "rad/nm",
+        "x_en": "Wavelength separation",
+        "x_bn": "তরঙ্গদৈর্ঘ্য পার্থক্য",
+        "x_unit": "nm",
+        "x_min": 10,
+        "x_max": 50,
+        "x_step": 10,
+        "x_default": 20,
+        "sweep": [
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0
+        ],
+        "y_en": "Angular separation",
+        "y_bn": "কৌণিক বিচ্ছেদ",
+        "y_unit": "rad",
+        "scale": 1,
+        "offset": 0,
+        "formula": "Δθ = DΔλ",
+        "apparatus_en": [
+          "spectrometer",
+          "glass prism",
+          "spectral lamp"
+        ],
+        "apparatus_bn": [
+          "spectrometer",
+          "কাচের prism",
+          "spectral lamp"
+        ]
+      }
+    },
+    {
+      "id": "single-slit-diffraction-width",
+      "slug": "single-slit-diffraction-width",
+      "title_en": "Single-slit diffraction width",
+      "title_bn": "একক চিরের diffraction প্রস্থ",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate single-slit diffraction width using a controlled five-reading data set and recover λd constant.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে একক চিরের diffraction প্রস্থ অনুসন্ধান করা এবং λD ধ্রুবক নির্ণয় করা।",
+      "theory_en": "The simulator follows y = λD/a. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর y = λD/a অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "y = λD/a",
+      "formula_desc_en": "The recorded values are reduced to λD constant.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে λD ধ্রুবক নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the screen ruler.",
+          "instruction_bn": "screen ruler পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the laser, single slit and screen ruler as shown.",
+          "instruction_bn": "laser, একক চির ও screen ruler দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep slit width through five suggested values and record central half-width.",
+          "instruction_bn": "চিরের প্রস্থ পাঁচটি প্রস্তাবিত মানে বদলে কেন্দ্রীয় অর্ধ-প্রস্থ রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Slit width",
+          "label_bn": "চিরের প্রস্থ",
+          "unit": "mm",
+          "unit_bn": "mm",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Central half-width",
+          "label_bn": "কেন্দ্রীয় অর্ধ-প্রস্থ",
+          "unit": "mm",
+          "unit_bn": "mm",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "λD constant",
+          "label_bn": "λD ধ্রুবক",
+          "unit": "mm²",
+          "unit_bn": "mm²",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "y = λD/a",
+        "expectedConstant": 1.1,
+        "expectedConstantUnit": "mm²",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "single-slit-diffraction-width-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "y = λD/a",
+              "text_bn": "y = λD/a"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on y = λD/a.",
+          "explanation_bn": "modelটি y = λD/a-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "inverseX",
+        "expected": 1.1,
+        "result_en": "λD constant",
+        "result_bn": "λD ধ্রুবক",
+        "result_unit": "mm²",
+        "x_en": "Slit width",
+        "x_bn": "চিরের প্রস্থ",
+        "x_unit": "mm",
+        "x_min": 0.1,
+        "x_max": 0.5,
+        "x_step": 0.1,
+        "x_default": 0.2,
+        "sweep": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5
+        ],
+        "y_en": "Central half-width",
+        "y_bn": "কেন্দ্রীয় অর্ধ-প্রস্থ",
+        "y_unit": "mm",
+        "scale": 1,
+        "offset": 0,
+        "formula": "y = λD/a",
+        "apparatus_en": [
+          "laser",
+          "single slit",
+          "screen ruler"
+        ],
+        "apparatus_bn": [
+          "laser",
+          "একক চির",
+          "screen ruler"
+        ]
+      }
+    },
+    {
+      "id": "malus-law-polarizer",
+      "slug": "malus-law-polarizer",
+      "title_en": "Malus law with two polarizers",
+      "title_bn": "দুটি polarizer-এ Malus-এর সূত্র",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate malus law with two polarizers using a controlled five-reading data set and recover reference intensity i₀.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে দুটি polarizer-এ Malus-এর সূত্র অনুসন্ধান করা এবং reference তীব্রতা I₀ নির্ণয় করা।",
+      "theory_en": "The simulator follows I = I₀cos²θ. Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর I = I₀cos²θ অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "I = I₀cos²θ",
+      "formula_desc_en": "The recorded values are reduced to Reference intensity I₀.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে reference তীব্রতা I₀ নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the light sensor.",
+          "instruction_bn": "আলোক sensor পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the LED source, two polarizers and light sensor as shown.",
+          "instruction_bn": "LED উৎস, দুটি polarizer ও আলোক sensor দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep cos θ through five suggested values and record transmitted intensity.",
+          "instruction_bn": "cos θ পাঁচটি প্রস্তাবিত মানে বদলে সঞ্চারিত তীব্রতা রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "cos θ",
+          "label_bn": "cos θ",
+          "unit": "",
+          "unit_bn": "",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Transmitted intensity",
+          "label_bn": "সঞ্চারিত তীব্রতা",
+          "unit": "arb.",
+          "unit_bn": "arb.",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Reference intensity I₀",
+          "label_bn": "reference তীব্রতা I₀",
+          "unit": "arb.",
+          "unit_bn": "arb.",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "I = I₀cos²θ",
+        "expectedConstant": 0.8,
+        "expectedConstantUnit": "arb.",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "malus-law-polarizer-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "I = I₀cos²θ",
+              "text_bn": "I = I₀cos²θ"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on I = I₀cos²θ.",
+          "explanation_bn": "modelটি I = I₀cos²θ-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "square",
+        "expected": 0.8,
+        "result_en": "Reference intensity I₀",
+        "result_bn": "reference তীব্রতা I₀",
+        "result_unit": "arb.",
+        "x_en": "cos θ",
+        "x_bn": "cos θ",
+        "x_unit": "",
+        "x_min": 0.2,
+        "x_max": 1.0,
+        "x_step": 0.2,
+        "x_default": 0.4,
+        "sweep": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "y_en": "Transmitted intensity",
+        "y_bn": "সঞ্চারিত তীব্রতা",
+        "y_unit": "arb.",
+        "scale": 1,
+        "offset": 0,
+        "formula": "I = I₀cos²θ",
+        "apparatus_en": [
+          "LED source",
+          "two polarizers",
+          "light sensor"
+        ],
+        "apparatus_bn": [
+          "LED উৎস",
+          "দুটি polarizer",
+          "আলোক sensor"
+        ]
+      }
+    },
+    {
+      "id": "inverse-square-light-sensor",
+      "slug": "inverse-square-light-sensor",
+      "title_en": "Inverse-square law for light",
+      "title_bn": "আলোর inverse-square সূত্র",
+      "category": "optics",
+      "domain": "optics",
+      "level": "class-9-10",
+      "durationMinutes": 20,
+      "aim_en": "To investigate inverse-square law for light using a controlled five-reading data set and recover source intensity constant.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে আলোর inverse-square সূত্র অনুসন্ধান করা এবং উৎস তীব্রতা ধ্রুবক নির্ণয় করা।",
+      "theory_en": "The simulator follows E = K/r². Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর E = K/r² অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "E = K/r²",
+      "formula_desc_en": "The recorded values are reduced to Source intensity constant.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে উৎস তীব্রতা ধ্রুবক নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the lux meter.",
+          "instruction_bn": "lux meter পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the lamp, optical rail and lux meter as shown.",
+          "instruction_bn": "বাতি, optical rail ও lux meter দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep source distance through five suggested values and record illuminance.",
+          "instruction_bn": "উৎসের দূরত্ব পাঁচটি প্রস্তাবিত মানে বদলে আলোকিতকরণ রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Source distance",
+          "label_bn": "উৎসের দূরত্ব",
+          "unit": "m",
+          "unit_bn": "m",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Illuminance",
+          "label_bn": "আলোকিতকরণ",
+          "unit": "lux",
+          "unit_bn": "lux",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Source intensity constant",
+          "label_bn": "উৎস তীব্রতা ধ্রুবক",
+          "unit": "lux·m²",
+          "unit_bn": "lux·m²",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "E = K/r²",
+        "expectedConstant": 120,
+        "expectedConstantUnit": "lux·m²",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "inverse-square-light-sensor-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "E = K/r²",
+              "text_bn": "E = K/r²"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on E = K/r².",
+          "explanation_bn": "modelটি E = K/r²-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "inverseSquare",
+        "expected": 120,
+        "result_en": "Source intensity constant",
+        "result_bn": "উৎস তীব্রতা ধ্রুবক",
+        "result_unit": "lux·m²",
+        "x_en": "Source distance",
+        "x_bn": "উৎসের দূরত্ব",
+        "x_unit": "m",
+        "x_min": 0.5,
+        "x_max": 2.5,
+        "x_step": 0.5,
+        "x_default": 1,
+        "sweep": [
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+        ],
+        "y_en": "Illuminance",
+        "y_bn": "আলোকিতকরণ",
+        "y_unit": "lux",
+        "scale": 1,
+        "offset": 0,
+        "formula": "E = K/r²",
+        "apparatus_en": [
+          "lamp",
+          "optical rail",
+          "lux meter"
+        ],
+        "apparatus_bn": [
+          "বাতি",
+          "optical rail",
+          "lux meter"
+        ]
+      }
+    },
+    {
+      "id": "sound-intensity-distance",
+      "slug": "sound-intensity-distance",
+      "title_en": "Sound intensity versus distance",
+      "title_bn": "দূরত্বের সঙ্গে শব্দ তীব্রতা",
+      "category": "waves",
+      "domain": "waves",
+      "level": "class-11-12",
+      "durationMinutes": 20,
+      "aim_en": "To investigate sound intensity versus distance using a controlled five-reading data set and recover acoustic power factor.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে দূরত্বের সঙ্গে শব্দ তীব্রতা অনুসন্ধান করা এবং acoustic power factor নির্ণয় করা।",
+      "theory_en": "The simulator follows I ∝ 1/r². Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর I ∝ 1/r² অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "I ∝ 1/r²",
+      "formula_desc_en": "The recorded values are reduced to Acoustic power factor.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে acoustic power factor নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the sound-level meter.",
+          "instruction_bn": "sound-level meter পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the loudspeaker, microphone and sound-level meter as shown.",
+          "instruction_bn": "loudspeaker, microphone ও sound-level meter দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep microphone distance through five suggested values and record sound intensity.",
+          "instruction_bn": "microphone দূরত্ব পাঁচটি প্রস্তাবিত মানে বদলে শব্দ তীব্রতা রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Microphone distance",
+          "label_bn": "microphone দূরত্ব",
+          "unit": "m",
+          "unit_bn": "m",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Sound intensity",
+          "label_bn": "শব্দ তীব্রতা",
+          "unit": "W/m²",
+          "unit_bn": "W/m²",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Acoustic power factor",
+          "label_bn": "acoustic power factor",
+          "unit": "W",
+          "unit_bn": "W",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "I ∝ 1/r²",
+        "expectedConstant": 2.4,
+        "expectedConstantUnit": "W",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "sound-intensity-distance-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "I ∝ 1/r²",
+              "text_bn": "I ∝ 1/r²"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on I ∝ 1/r².",
+          "explanation_bn": "modelটি I ∝ 1/r²-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "inverseSquare",
+        "expected": 2.4,
+        "result_en": "Acoustic power factor",
+        "result_bn": "acoustic power factor",
+        "result_unit": "W",
+        "x_en": "Microphone distance",
+        "x_bn": "microphone দূরত্ব",
+        "x_unit": "m",
+        "x_min": 0.5,
+        "x_max": 2.5,
+        "x_step": 0.5,
+        "x_default": 1,
+        "sweep": [
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+        ],
+        "y_en": "Sound intensity",
+        "y_bn": "শব্দ তীব্রতা",
+        "y_unit": "W/m²",
+        "scale": 1,
+        "offset": 0,
+        "formula": "I ∝ 1/r²",
+        "apparatus_en": [
+          "loudspeaker",
+          "microphone",
+          "sound-level meter"
+        ],
+        "apparatus_bn": [
+          "loudspeaker",
+          "microphone",
+          "sound-level meter"
+        ]
+      }
+    },
+    {
+      "id": "gamma-attenuation-thickness",
+      "slug": "gamma-attenuation-thickness",
+      "title_en": "Gamma attenuation through absorber",
+      "title_bn": "absorber-এ gamma attenuation",
+      "category": "modern-physics",
+      "domain": "modern",
+      "level": "honours",
+      "durationMinutes": 20,
+      "aim_en": "To investigate gamma attenuation through absorber using a controlled five-reading data set and recover linear attenuation coefficient μ.",
+      "aim_bn": "পাঁচটি নিয়ন্ত্রিত পাঠ নিয়ে absorber-এ gamma attenuation অনুসন্ধান করা এবং রৈখিক attenuation সহগ μ নির্ণয় করা।",
+      "theory_en": "The simulator follows I = I₀e^(−μx). Change the independent variable, record repeated readings, inspect the live graph and compare the fitted result with the accepted value.",
+      "theory_bn": "সিমুলেটর I = I₀e^(−μx) অনুসরণ করে। স্বাধীন চলক বদলে পাঠ নিন, live graph দেখুন এবং নির্ণীত ফল accepted মানের সঙ্গে তুলনা করুন।",
+      "formula_latex": "I = I₀e^(−μx)",
+      "formula_desc_en": "The recorded values are reduced to Linear attenuation coefficient μ.",
+      "formula_desc_bn": "রেকর্ড করা মান থেকে রৈখিক attenuation সহগ μ নির্ণয় করা হয়।",
+      "apparatusRequired": [],
+      "setup": {
+        "items": [],
+        "domainState": {}
+      },
+      "procedureSteps": [
+        {
+          "stepNumber": 1,
+          "instruction_en": "Inspect and zero the GM counter.",
+          "instruction_bn": "GM counter পরীক্ষা করে zero করুন।"
+        },
+        {
+          "stepNumber": 2,
+          "instruction_en": "Assemble the sealed gamma source, absorber plates and GM counter as shown.",
+          "instruction_bn": "sealed gamma উৎস, absorber plate ও GM counter দেখানো মতে সাজান।"
+        },
+        {
+          "stepNumber": 3,
+          "instruction_en": "Sweep absorber thickness through five suggested values and record transmitted count rate.",
+          "instruction_bn": "absorber পুরুত্ব পাঁচটি প্রস্তাবিত মানে বদলে সঞ্চারিত count rate রেকর্ড করুন।"
+        },
+        {
+          "stepNumber": 4,
+          "instruction_en": "Use the graph and mean estimate to validate the physical relation.",
+          "instruction_bn": "graph ও mean estimate দিয়ে ভৌত সম্পর্ক যাচাই করুন।"
+        }
+      ],
+      "precautions_en": [
+        "Zero the measuring instrument before the first reading.",
+        "Change only one independent variable at a time.",
+        "Repeat readings and keep units consistent."
+      ],
+      "precautions_bn": [
+        "প্রথম পাঠের আগে মাপযন্ত্র zero করুন।",
+        "একবারে শুধু একটি স্বাধীন চলক বদলান।",
+        "পাঠ পুনরাবৃত্তি করুন এবং একক একই রাখুন।"
+      ],
+      "dataColumns": [
+        {
+          "key": "obsNo",
+          "label_en": "Obs.",
+          "label_bn": "পাঠ"
+        },
+        {
+          "key": "x",
+          "label_en": "Absorber thickness",
+          "label_bn": "absorber পুরুত্ব",
+          "unit": "mm",
+          "unit_bn": "mm",
+          "decimals": 4
+        },
+        {
+          "key": "y",
+          "label_en": "Transmitted count rate",
+          "label_bn": "সঞ্চারিত count rate",
+          "unit": "count/s",
+          "unit_bn": "count/s",
+          "decimals": 6
+        },
+        {
+          "key": "estimate",
+          "label_en": "Linear attenuation coefficient μ",
+          "label_bn": "রৈখিক attenuation সহগ μ",
+          "unit": "mm⁻¹",
+          "unit_bn": "mm⁻¹",
+          "decimals": 6
+        }
+      ],
+      "theoreticalTarget": {
+        "formulaName": "I = I₀e^(−μx)",
+        "expectedConstant": 0.42,
+        "expectedConstantUnit": "mm⁻¹",
+        "xColumn": "x",
+        "yColumn": "y"
+      },
+      "quiz": [
+        {
+          "id": "gamma-attenuation-thickness-q1",
+          "question_en": "Which relation is tested in this practical?",
+          "question_bn": "এই practical-এ কোন সম্পর্ক যাচাই করা হয়?",
+          "options": [
+            {
+              "id": "a",
+              "text_en": "I = I₀e^(−μx)",
+              "text_bn": "I = I₀e^(−μx)"
+            },
+            {
+              "id": "b",
+              "text_en": "The output never changes",
+              "text_bn": "output কখনো বদলায় না"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation_en": "The model is based on I = I₀e^(−μx).",
+          "explanation_bn": "modelটি I = I₀e^(−μx)-এর ওপর ভিত্তি করে।"
+        }
+      ],
+      "model": {
+        "relation": "exponential",
+        "expected": 0.42,
+        "result_en": "Linear attenuation coefficient μ",
+        "result_bn": "রৈখিক attenuation সহগ μ",
+        "result_unit": "mm⁻¹",
+        "x_en": "Absorber thickness",
+        "x_bn": "absorber পুরুত্ব",
+        "x_unit": "mm",
+        "x_min": 1,
+        "x_max": 5,
+        "x_step": 1,
+        "x_default": 2,
+        "sweep": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ],
+        "y_en": "Transmitted count rate",
+        "y_bn": "সঞ্চারিত count rate",
+        "y_unit": "count/s",
+        "scale": 1,
+        "offset": 1000,
+        "formula": "I = I₀e^(−μx)",
+        "apparatus_en": [
+          "sealed gamma source",
+          "absorber plates",
+          "GM counter"
+        ],
+        "apparatus_bn": [
+          "sealed gamma উৎস",
+          "absorber plate",
+          "GM counter"
+        ]
+      }
+    }
+  ]
+}

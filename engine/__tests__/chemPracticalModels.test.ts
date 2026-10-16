@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import experimentsData from '@/data/experiments.json';
+import { guidedExperiments } from '@/lib/labData';
 import {
   allChemPracticalModels,
   clampToControl,
@@ -16,7 +16,7 @@ import {
 } from '@/engine/chemPracticals';
 
 type Exp = { slug: string };
-const experiments = (experimentsData as { experiments: Exp[] }).experiments;
+const experiments = guidedExperiments as Exp[];
 
 function mulberry(seed: number) {
   let a = seed;

@@ -17,6 +17,7 @@ import { GalvanicScene } from './galvanic';
 import { DiffusionScene } from './diffusion';
 import { ChromatographyScene } from './chromatography';
 import { DistillationScene } from './distillation';
+import { AnalysisBenchScene } from './analysisBench';
 
 export const chemScenes: Record<ChemSceneId, React.ComponentType<SceneProps>> = {
   tubes: TubesScene,
@@ -32,5 +33,6 @@ export const chemScenes: Record<ChemSceneId, React.ComponentType<SceneProps>> = 
   galvanic: GalvanicScene,
   diffusion: DiffusionScene,
   chromatography: ChromatographyScene,
-  distillation: DistillationScene
+  distillation: DistillationScene,
+  analysisBench: AnalysisBenchScene
 };

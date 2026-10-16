@@ -1,6 +1,7 @@
 import apparatusData from '@/data/apparatus.json';
 import chemicalsData from '@/data/chemicals.json';
 import experimentsData from '@/data/experiments.json';
+import expandedExperimentsData from '@/content/expanded-chemistry-practicals.json';
 import reactionsData from '@/data/reactions.json';
 import { indexById } from '@/engine/reactionEngine';
 import type {
@@ -21,7 +22,10 @@ import type {
 export const chemicals = chemicalsData.chemicals as unknown as Chemical[];
 export const apparatus = apparatusData.apparatus as unknown as Apparatus[];
 export const reactions = reactionsData.reactions as unknown as Reaction[];
-export const guidedExperiments = experimentsData.experiments as unknown as GuidedExperiment[];
+export const guidedExperiments = [
+  ...experimentsData.experiments,
+  ...expandedExperimentsData.experiments
+] as unknown as GuidedExperiment[];
 
 export const chemicalsById = indexById(chemicals);
 export const apparatusById = indexById(apparatus);

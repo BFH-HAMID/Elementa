@@ -1,5 +1,6 @@
 import equipmentJson from '@/data/equipment.json';
 import physicsExperimentsJson from '@/data/physicsExperiments.json';
+import expandedPhysicsJson from '@/content/expanded-physics-practicals.json';
 import type {
   EquipmentDef,
   EquipmentCategory,
@@ -9,7 +10,10 @@ import type {
 import type { Locale } from '@/engine/types';
 
 export const physicsEquipment = equipmentJson.equipment as unknown as EquipmentDef[];
-export const physicsGuidedExperiments = physicsExperimentsJson.experiments as unknown as GuidedPhysicsExperiment[];
+export const physicsGuidedExperiments = [
+  ...physicsExperimentsJson.experiments,
+  ...expandedPhysicsJson.experiments
+] as unknown as GuidedPhysicsExperiment[];
 
 export const equipmentById = new Map<string, EquipmentDef>(
   physicsEquipment.map((item) => [item.id, item])

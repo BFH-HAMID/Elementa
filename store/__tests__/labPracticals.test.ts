@@ -1,13 +1,13 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { factsFrom, stepSatisfied } from '@/engine/experimentChecks';
+import baseExperiments from '@/data/experiments.json';
 import { chemicalsById, getExperiment, guidedExperiments } from '@/lib/labData';
 import { useLabStore } from '@/store/labStore';
 
 /**
- * Every guided practical is meant to be completable on the virtual bench: the setup seeds
- * the glassware, and the auto-checked steps must all become true while a student follows the
- * printed instructions. This file scripts the walkthrough for every expansion practical and
- * drives the store exactly as the UI does.
+ * Every original reaction-bench practical is completable on the free virtual bench: the setup
+ * seeds the glassware, and auto-checked steps become true while a student follows the printed
+ * instructions. Quantitative model-driven practicals have their own simulator tests.
  */
 
 const state = () => useLabStore.getState();
@@ -287,8 +287,11 @@ beforeEach(() => {
 });
 
 describe('the practicals added to the chemistry lab', () => {
-  it('lists exactly the walkthroughs that exist in the dataset', () => {
-    const newlyAdded = guidedExperiments.filter((experiment) => experiment.order > 11).map((experiment) => experiment.slug);
+  it('lists exactly the original reaction-bench walkthroughs in the base dataset', () => {
+    const baseSlugs = new Set(baseExperiments.experiments.map((experiment) => experiment.slug));
+    const newlyAdded = guidedExperiments
+      .filter((experiment) => experiment.order > 11 && baseSlugs.has(experiment.slug))
+      .map((experiment) => experiment.slug);
     expect(newlyAdded.sort()).toEqual(Object.keys(walkthroughs).sort());
   });
 

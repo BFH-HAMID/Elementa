@@ -52,7 +52,7 @@ export interface CircuitState {
   /** Simulator and sketch messages shown in the bottom panel. */
   simErrors: string[];
   showHelp: boolean;
-  bottomTab: 'serial' | 'examples' | 'advanced' | 'analysis' | 'check' | 'guide';
+  bottomTab: 'serial' | 'examples' | 'practical' | 'advanced' | 'analysis' | 'check' | 'guide';
   /** Compact bench summary for the status line. */
   status: string;
 

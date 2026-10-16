@@ -5,6 +5,7 @@ import { opticsModels } from './optics';
 import { heatModels } from './heat';
 import { wavesModels } from './waves';
 import { modernModels } from './modern';
+import { expandedPhysicsPracticalModels } from './expanded';
 import { withDefaults, zeroNoise } from './helpers';
 
 export * from './types';
@@ -23,7 +24,8 @@ export const allPracticalModels: PracticalModel[] = [
   ...opticsModels,
   ...heatModels,
   ...wavesModels,
-  ...modernModels
+  ...modernModels,
+  ...expandedPhysicsPracticalModels
 ];
 
 export const practicalModels: Record<string, PracticalModel> = Object.fromEntries(allPracticalModels.map((m) => [m.slug, m]));

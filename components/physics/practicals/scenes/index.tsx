@@ -20,6 +20,7 @@ import { FringesScene, OpticalBenchScene, RaysScene } from './optics';
 import { CalorimeterScene, ConductionScene, DensityBottleScene } from './heat';
 import { CapillaryScene, ResonanceTubeScene, StringScene } from './waves';
 import { GmCounterScene, PhotoelectricScene } from './modern';
+import { InstrumentRigScene } from './expanded';
 
 export const practicalScenes: Record<PracticalSceneId, React.ComponentType<SceneProps>> = {
   circuit: CircuitScene,
@@ -46,5 +47,6 @@ export const practicalScenes: Record<PracticalSceneId, React.ComponentType<Scene
   string: StringScene,
   capillary: CapillaryScene,
   photoelectric: PhotoelectricScene,
-  gmCounter: GmCounterScene
+  gmCounter: GmCounterScene,
+  instrumentRig: InstrumentRigScene
 };

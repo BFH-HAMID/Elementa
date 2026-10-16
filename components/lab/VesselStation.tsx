@@ -12,7 +12,7 @@ import { labT } from '@/lib/i18n';
 import { apparatusById, labDataset } from '@/lib/labData';
 import { cn, prefersReducedMotion } from '@/lib/utils';
 import { useLabStore, vesselLabel } from '@/store/labStore';
-import { Burner, Thermometer, TripodStand, VesselFor } from './Apparatus';
+import { Burner, ElectrolysisCell, Thermometer, TripodStand, VesselFor } from './Apparatus';
 import { vesselDropId, type DropTargetData } from './dragTypes';
 
 export function VesselStation({ vessel, index, selected }: { vessel: Vessel; index: number; selected: boolean }) {
@@ -81,6 +81,12 @@ export function VesselStation({ vessel, index, selected }: { vessel: Vessel; ind
         {vessel.thermometer && (
           <div className="absolute right-1 top-1 h-[124px] w-9">
             <Thermometer temperatureC={vessel.temperatureC} className="h-full w-full" />
+          </div>
+        )}
+
+        {vessel.electrolysis && (
+          <div className="pointer-events-none absolute bottom-[-4px] right-[-6px] h-[56px] w-[56px]">
+            <ElectrolysisCell className="h-full w-full" />
           </div>
         )}
 

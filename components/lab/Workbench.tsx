@@ -2,7 +2,8 @@
 
 import { useDroppable } from '@dnd-kit/core';
 import { AnimatePresence } from 'framer-motion';
-import { Flame, Info, Plus } from 'lucide-react';
+import { Flame, Info, Plus, Move } from 'lucide-react';
+import { useRef, useState, useCallback } from 'react';
 import { labT } from '@/lib/i18n';
 import { vessels as glassware } from '@/lib/labData';
 import { cn } from '@/lib/utils';
@@ -11,7 +12,9 @@ import { ApparatusGlyph } from './Apparatus';
 import { VesselStation } from './VesselStation';
 import type { DropTargetData } from './dragTypes';
 
-/** The bench: every station on it is a drop target, and so is the bench itself. */
+/** The bench: every station on it is a drop target, and so is the bench itself.
+ *  Stations are freely positionable on the canvas (drag the handle) so the bench
+ *  behaves like a real laboratory worktop. */
 export function Workbench() {
   const locale = useLabStore((state) => state.locale);
   const vessels = useLabStore((state) => state.vessels);
@@ -23,10 +26,51 @@ export function Workbench() {
   const setBurnerIntensity = useLabStore((state) => state.setBurnerIntensity);
   const attachThermometer = useLabStore((state) => state.attachThermometer);
   const attachElectrolysis = useLabStore((state) => state.attachElectrolysis);
+  const moveVessel = useLabStore((state) => state.moveVessel);
+  const selectVessel = useLabStore((state) => state.selectVessel);
 
   const benchData: DropTargetData = { type: 'bench' };
   const { setNodeRef, isOver } = useDroppable({ id: 'bench', data: benchData });
   const selected = vessels.find((vessel) => vessel.id === selectedVesselId);
+
+  const canvasRef = useRef<HTMLDivElement>(null);
+  const dragRef = useRef<{ id: string; startX: number; startY: number; originX: number; originY: number } | null>(null);
+  const [draggingId, setDraggingId] = useState<string | null>(null);
+
+  const onPointerDown = useCallback(
+    (vesselId: string, event: React.PointerEvent) => {
+      const vessel = vessels.find((v) => v.id === vesselId);
+      if (!vessel) return;
+      // Only start a move when grabbing the handle, not the whole card.
+      (event.target as HTMLElement).setPointerCapture?.(event.pointerId);
+      dragRef.current = {
+        id: vesselId,
+        startX: event.clientX,
+        startY: event.clientY,
+        originX: vessel.x ?? 0,
+        originY: vessel.y ?? 0
+      };
+      setDraggingId(vesselId);
+      selectVessel(vesselId);
+      const onMove = (e: PointerEvent) => {
+        const g = dragRef.current;
+        if (!g || g.id !== vesselId) return;
+        moveVessel(g.id, Math.max(0, g.originX + (e.clientX - g.startX)), Math.max(0, g.originY + (e.clientY - g.startY)));
+      };
+      const onUp = () => {
+        dragRef.current = null;
+        setDraggingId(null);
+        window.removeEventListener('pointermove', onMove);
+        window.removeEventListener('pointerup', onUp);
+        window.removeEventListener('pointercancel', onUp);
+      };
+      window.addEventListener('pointermove', onMove);
+      window.addEventListener('pointerup', onUp);
+      window.addEventListener('pointercancel', onUp);
+      event.stopPropagation();
+    },
+    [vessels, moveVessel, selectVessel]
+  );
 
   return (
     <section ref={setNodeRef} className="flex min-h-[420px] flex-col gap-3" aria-label={labT(locale, 'bench.title')}>
@@ -113,26 +157,45 @@ export function Workbench() {
         </div>
       ) : (
         <div
+          ref={canvasRef}
           className={cn(
-            'flex flex-1 flex-wrap items-start gap-3 rounded-2xl border-2 border-dashed p-3 transition',
-            isOver ? 'border-chemistry-400 bg-chemistry-50/60 dark:bg-chemistry-900/20' : 'border-transparent'
+            'relative flex-1 min-h-[520px] rounded-2xl border-2 border-dashed p-3 transition overflow-auto',
+            isOver ? 'border-chemistry-400 bg-chemistry-50/60 dark:bg-chemistry-900/20' : 'border-transparent bg-[var(--surface-soft)]'
           )}
         >
           <AnimatePresence mode="popLayout">
-            {vessels.map((vessel, index) => (
-              <VesselStation key={vessel.id} vessel={vessel} index={index} selected={vessel.id === selectedVesselId} />
-            ))}
+            {vessels.map((vessel, index) => {
+              const x = vessel.x ?? (index % 2) * 260;
+              const y = vessel.y ?? Math.floor(index / 2) * 260;
+              return (
+                <div
+                  key={vessel.id}
+                  style={{ position: 'absolute', left: x, top: y, width: 230, zIndex: draggingId === vessel.id ? 50 : 1 }}
+                  className={cn(draggingId === vessel.id && 'opacity-90')}
+                >
+                  <div
+                    onPointerDown={(e) => onPointerDown(vessel.id, e)}
+                    className="absolute -top-2 left-1/2 z-20 -translate-x-1/2 cursor-move rounded-full border border-[var(--line)] bg-[var(--surface)] p-1 shadow-card"
+                    title={locale === 'bn' ? 'সরান' : 'Move'}
+                  >
+                    <Move size={12} className="text-[var(--muted)]" />
+                  </div>
+                  <VesselStation vessel={vessel} index={index} selected={vessel.id === selectedVesselId} />
+                </div>
+              );
+            })}
           </AnimatePresence>
 
           {vessels.length < MAX_VESSELS && (
             <button
               type="button"
               onClick={() => addVessel('test-tube')}
-              className="flex h-[240px] w-[112px] flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-[var(--line)] text-[var(--muted)] transition hover:border-chemistry-400 hover:text-chemistry-600"
+              style={{ position: 'absolute', left: 12, bottom: 12 }}
+              className="flex h-10 items-center gap-2 rounded-xl border-2 border-dashed border-[var(--line)] bg-[var(--surface)] px-3 text-[11px] font-bold text-[var(--muted)] transition hover:border-chemistry-400 hover:text-chemistry-600"
               aria-label={labT(locale, 'bench.addVessel')}
             >
-              <Plus size={20} />
-              <span className="px-2 text-center text-[11px] font-bold leading-4">{labT(locale, 'bench.addVessel')}</span>
+              <Plus size={16} />
+              <span>{labT(locale, 'bench.addVessel')}</span>
             </button>
           )}
         </div>

@@ -196,6 +196,9 @@ export type Vessel = {
   colorOverride: string | null;
   /** Temperature at which rules were last evaluated, so heating can re-trigger them. */
   lastResolveTempC: number;
+  /** Optional free-form position on the workbench canvas (pixels). */
+  x?: number;
+  y?: number;
 };
 
 /** Ambient conditions that can unlock heat / spark / current triggered reactions. */

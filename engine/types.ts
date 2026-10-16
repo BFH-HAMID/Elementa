@@ -69,11 +69,33 @@ export type VesselShape =
   | 'cylinder'
   | 'burette'
   | 'jar'
-  | 'dish';
+  | 'dish'
+  | 'watch-glass'
+  | 'crucible'
+  | 'reagent-bottle';
+
+export type ApparatusShape =
+  | VesselShape
+  | 'burner'
+  | 'tripod'
+  | 'thermometer'
+  | 'dropper'
+  | 'spatula'
+  | 'delivery'
+  | 'holder'
+  | 'cell'
+  | 'pipette'
+  | 'funnel'
+  | 'wash-bottle'
+  | 'glass-rod'
+  | 'wire-gauze'
+  | 'retort-stand'
+  | 'test-tube-rack'
+  | 'mortar-pestle';
 
 export type Apparatus = {
   id: string;
-  shape: VesselShape | 'burner' | 'tripod' | 'thermometer' | 'dropper' | 'spatula' | 'delivery' | 'holder' | 'cell';
+  shape: ApparatusShape;
   name_en: string;
   name_bn: string;
   kind: ApparatusKind;
@@ -325,4 +347,23 @@ export type Element = {
   state: PhysicalState;
   state_bn: string;
   radioactive: boolean;
+};
+
+/** A movable, labelled apparatus item placed on the chemistry worktop. */
+export type BenchEquipment = {
+  id: string;
+  apparatusId: string;
+  x: number;
+  y: number;
+  rotation: number;
+  /** Optional logical link to a vessel, e.g. a thermometer inserted in a flask. */
+  linkedVesselId: string | null;
+};
+
+/** A periodic-table reference sample placed on the worktop. It is visual/reference-only. */
+export type ElementSample = {
+  id: string;
+  element: Element;
+  x: number;
+  y: number;
 };

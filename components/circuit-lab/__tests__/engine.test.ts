@@ -61,6 +61,32 @@ describe('circuit solver — DC', () => {
     const f = runOnce(comps, wires);
     expect(f.components.led.current).toBeLessThan(1e-6);
   });
+
+  it.each([
+    { partId: 'motor-driver-l298n', enable: 'ena', inA: 'in1', inB: 'in2', outA: 'out1', outB: 'out2' },
+    { partId: 'motor-driver-tb6612fng', enable: 'pwma', inA: 'ain1', inB: 'ain2', outA: 'ao1', outB: 'ao2', standby: 'stby' }
+  ])('$partId drives and reverses a DC motor through its H-bridge', ({ partId, enable, inA, inB, outA, outB, standby }) => {
+    const comps = [C('bat', 'battery-9v', { volts: 9 }), C('logic', 'usb-5v'), C('driver', partId), C('motor', 'dc-motor-130')];
+    const wires = [
+      W('w1', 'bat.pos', 'driver.vm'),
+      W('w2', 'bat.neg', 'driver.gnd'),
+      W('w3', 'logic.vbus', 'driver.vcc'),
+      W('w4', 'logic.gnd', 'driver.gnd'),
+      W('w5', 'logic.vbus', `driver.${enable}`),
+      W('w6', 'logic.vbus', `driver.${inA}`),
+      W('w7', `driver.${outA}`, 'motor.a'),
+      W('w8', `driver.${outB}`, 'motor.b')
+    ];
+    if (standby) wires.push(W('w9', 'logic.vbus', `driver.${standby}`));
+    const frame = runOnce(comps, wires);
+    expect(frame.components.motor.speed ?? 0).toBeGreaterThan(0.2);
+    expect(Math.abs((frame.components.motor.pinV.a ?? 0) - (frame.components.motor.pinV.b ?? 0))).toBeGreaterThan(2);
+
+    const reversed = wires.filter((w) => w.id !== 'w6');
+    reversed.push(W('w10', 'logic.vbus', `driver.${inB}`));
+    const reverseFrame = runOnce(comps, reversed);
+    expect(reverseFrame.components.motor.direction).toBe(-1);
+  });
 });
 
 describe('circuit solver — transient', () => {
@@ -94,6 +120,33 @@ describe('MCU runtime', () => {
       if (g < 0.05) saw.off = true;
     }
     expect(saw.on && saw.off).toBe(true);
+  });
+
+  it('Arduino Mega maps D53, A15 and the large servo sketch API', () => {
+    const mega = C('mega', 'arduino-mega-2560');
+    mega.code = `#include <Servo.h>\nServo arm;\nvoid setup(){ pinMode(53, OUTPUT); digitalWrite(53, HIGH); Serial.println(analogRead(A15)); arm.attach(9); arm.write(35); }\nvoid loop(){}`;
+    const comps = [mega, C('logic', 'usb-5v'), C('servo', 'servo-mg996r')];
+    const wires = [
+      W('w1', 'logic.vbus', 'mega.A15'),
+      W('w2', 'logic.gnd', 'mega.GND'),
+      W('w3', 'mega.D9', 'servo.orange'),
+      W('w4', 'logic.vbus', 'servo.red'),
+      W('w5', 'logic.gnd', 'servo.brown')
+    ];
+    const engine = new CircuitEngine();
+    const serial: string[] = [];
+    engine.tick({ components: comps, wires, wallMs: 16, speed: 1, running: false });
+    let result = engine.tick({ components: comps, wires, wallMs: 16, speed: 1, running: true });
+    serial.push(...result.serial);
+    for (let i = 0; i < 6; i++) {
+      result = engine.tick({ components: comps, wires, wallMs: 16, speed: 1, running: true });
+      serial.push(...result.serial);
+    }
+    expect(result.frame.components.mega.pinV.D53 ?? 0).toBeGreaterThan(4);
+    const analogValue = Number(serial[serial.length - 1]);
+    expect(analogValue).toBeGreaterThan(1000);
+    expect(analogValue).toBeLessThanOrEqual(1023);
+    expect(result.frame.components.servo.angle).toBe(35);
   });
 
   it('reports a syntax problem instead of crashing', () => {

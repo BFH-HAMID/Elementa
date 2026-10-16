@@ -18,10 +18,12 @@ describe('chemistry lab data integrity', () => {
     expect(chemicalsData.shelfCount).toBe(chemicalsData.chemicals.filter((c) => c.shelf).length);
     expect(reactionsData.count).toBe(reactions.length);
     expect(experimentsData.count).toBe(experiments.length);
+    expect(apparatusData.count).toBe(apparatusData.apparatus.length);
   });
 
   it('has unique ids and slugs', () => {
     expect(chemicals.size).toBe(chemicalsData.chemicals.length);
+    expect(new Set(apparatusData.apparatus.map((item) => item.id)).size).toBe(apparatusData.apparatus.length);
     expect(reactionIds.size).toBe(reactions.length);
     expect(new Set(experiments.map((e) => e.slug)).size).toBe(experiments.length);
     expect(new Set(experiments.map((e) => e.order)).size).toBe(experiments.length);

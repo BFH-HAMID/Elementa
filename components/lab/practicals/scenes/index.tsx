@@ -14,6 +14,9 @@ import { TroughScene } from './trough';
 import { GasJarScene } from './gasJar';
 import { CrossFlaskScene } from './crossFlask';
 import { GalvanicScene } from './galvanic';
+import { DiffusionScene } from './diffusion';
+import { ChromatographyScene } from './chromatography';
+import { DistillationScene } from './distillation';
 
 export const chemScenes: Record<ChemSceneId, React.ComponentType<SceneProps>> = {
   tubes: TubesScene,
@@ -26,5 +29,8 @@ export const chemScenes: Record<ChemSceneId, React.ComponentType<SceneProps>> = 
   trough: TroughScene,
   gasJar: GasJarScene,
   crossFlask: CrossFlaskScene,
-  galvanic: GalvanicScene
+  galvanic: GalvanicScene,
+  diffusion: DiffusionScene,
+  chromatography: ChromatographyScene,
+  distillation: DistillationScene
 };

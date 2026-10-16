@@ -470,24 +470,24 @@ function addResistor(ctx: Ctx, compId: string, a: number, b: number, r: number, 
 }
 
 /** Digital output: ideal source behind rOut, with an internal node. */
-function addDrive(ctx: Ctx, compId: string, pinNode: number, voltage: number, rOut: number) {
+function addDrive(ctx: Ctx, compId: string, pinNode: number, voltage: number, rOut: number, reference = -1) {
   const inner = newNode(ctx);
   const br = newBranch(ctx);
   ctx.elements.push({
     comp: compId,
     stamp(M) {
-      M.v(inner, -1, voltage, br);
+      M.v(inner, reference, voltage, br);
       M.g(inner, pinNode, 1 / rOut);
     }
   });
 }
 
-function addPullDown(ctx: Ctx, compId: string, node: number, r = 1e7) {
+function addPullDown(ctx: Ctx, compId: string, node: number, r = 1e7, reference = -1) {
   if (node < 0) return;
   ctx.elements.push({
     comp: compId,
     stamp(M) {
-      M.g(node, -1, 1 / r);
+      M.g(node, reference, 1 / r);
     }
   });
 }
@@ -967,26 +967,56 @@ function buildTimer555(ctx: Ctx, comp: PlacedComponent) {
   ctx.comp[comp.id] = ctx.comp[comp.id] ?? { pinV: {}, current: 0, power: 0 };
 }
 
-/** Motor drivers: L293D half-bridges and ULN2003 sink array. */
+/** Motor drivers: L293D/L298N/TB6612 H-bridges and the ULN2003 sink array. */
 function buildDriver(ctx: Ctx, def: PartDef, comp: PlacedComponent) {
   const n = (p: string) => nodeOf(ctx, comp.id, p);
   if (def.model.type !== 'driver') return;
   if (def.model.variant === 'l293d') {
-    const vm = pv(ctx, n('16')) - pv(ctx, n('4'));
-    const vl = pv(ctx, n('8')) - pv(ctx, n('4'));
-    const hi = (node: number) => pv(ctx, node) - pv(ctx, n('4')) > 0.5 * Math.max(vl, 0.1);
+    const gnd = n('4');
+    const vm = pv(ctx, n('8')) - pv(ctx, gnd);
+    const logicV = pv(ctx, n('16')) - pv(ctx, gnd);
+    const hi = (node: number) => pv(ctx, node) - pv(ctx, gnd) > 0.5 * Math.max(logicV, 0.1);
     const halves = [
-      { en: '1', in: '2', out: '3' },
-      { en: '1', in: '7', out: '6' },
-      { en: '9', in: '10', out: '11' },
-      { en: '9', in: '15', out: '14' }
+      { en: '1', input: '2', out: '3' },
+      { en: '1', input: '7', out: '6' },
+      { en: '9', input: '10', out: '11' },
+      { en: '9', input: '15', out: '14' }
     ];
     for (const h of halves) {
       const enabled = hi(n(h.en));
-      const inN = n(h.in);
-      const outN = n(h.out);
-      addPullDown(ctx, comp.id, inN);
-      if (enabled && vl > 1) addDrive(ctx, comp.id, outN, hi(inN) ? vm : 0, 0.5);
+      const inN = n(h.input);
+      addPullDown(ctx, comp.id, n(h.en), 1e7, gnd);
+      addPullDown(ctx, comp.id, inN, 1e7, gnd);
+      if (enabled && vm > 1) addDrive(ctx, comp.id, n(h.out), hi(inN) ? Math.max(0, vm - 1.4) : 0, 0.5, gnd);
+    }
+  } else if (def.model.variant === 'l298n' || def.model.variant === 'tb6612fng') {
+    const gnd = n('gnd');
+    const vm = pv(ctx, n('vm')) - pv(ctx, gnd);
+    const logicV = pv(ctx, n('vcc')) - pv(ctx, gnd);
+    const high = (node: number) => pv(ctx, node) - pv(ctx, gnd) > 0.5 * Math.max(logicV, 0.1);
+    const tb6612 = def.model.variant === 'tb6612fng';
+    const channels = tb6612
+      ? [
+          { en: 'pwma', inA: 'ain1', inB: 'ain2', outA: 'ao1', outB: 'ao2' },
+          { en: 'pwmb', inA: 'bin1', inB: 'bin2', outA: 'bo1', outB: 'bo2' }
+        ]
+      : [
+          { en: 'ena', inA: 'in1', inB: 'in2', outA: 'out1', outB: 'out2' },
+          { en: 'enb', inA: 'in3', inB: 'in4', outA: 'out3', outB: 'out4' }
+        ];
+    const standby = tb6612 ? high(n('stby')) : true;
+    for (const channel of channels) {
+      const enabled = standby && high(n(channel.en));
+      const inA = n(channel.inA);
+      const inB = n(channel.inB);
+      addPullDown(ctx, comp.id, n(channel.en), 1e7, gnd);
+      addPullDown(ctx, comp.id, inA, 1e7, gnd);
+      addPullDown(ctx, comp.id, inB, 1e7, gnd);
+      if (!enabled || vm < 1) continue;
+      // The TB6612 has low RDS(on); an L298N loses roughly 1.5–2 V in its bridge.
+      const highSide = Math.max(0, vm - (tb6612 ? 0.2 : 1.8));
+      addDrive(ctx, comp.id, n(channel.outA), high(inA) ? highSide : 0, 0.5, gnd);
+      addDrive(ctx, comp.id, n(channel.outB), high(inB) ? highSide : 0, 0.5, gnd);
     }
   } else if (def.model.variant === 'uln2003') {
     const gnd = n('8');
@@ -994,7 +1024,7 @@ function buildDriver(ctx: Ctx, def: PartDef, comp: PlacedComponent) {
     for (let k = 1; k <= 7; k++) {
       const inN = n(String(k));
       const outN = n(String(17 - k));
-      addPullDown(ctx, comp.id, inN);
+      addPullDown(ctx, comp.id, inN, 1e7, gnd);
       const active = hi(inN);
       ctx.elements.push({
         comp: comp.id,

@@ -7702,8 +7702,8 @@
     "subject": "chemistry",
     "title_en": "Guided chemistry experiments",
     "title_bn": "গাইডেড কেমিস্ট্রি পরীক্ষা",
-    "description_en": "41 walkthroughs that set the virtual bench up for you and tick each step off — each with an interactive practical simulation.",
-    "description_bn": "41টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে — প্রতিটির সাথে ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল সিমুলেশন।",
+    "description_en": "46 walkthroughs that set the virtual bench up for you and tick each step off — each with an interactive practical simulation.",
+    "description_bn": "46টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে — প্রতিটির সাথে ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল সিমুলেশন।",
     "href": "/lab/experiments",
     "tags": [
       "experiments",
@@ -7716,8 +7716,8 @@
     "subject": "chemistry",
     "title_en": "Chemistry practical simulations",
     "title_bn": "রসায়ন প্র্যাকটিক্যাল সিমুলেশন",
-    "description_en": "41 interactive practicals: titrations, ion tests, gas preparation, electrolysis, rates and more — take readings, fill the observation table and check your result.",
-    "description_bn": "41টি ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল: টাইট্রেশন, আয়ন শনাক্তকরণ, গ্যাস প্রস্তুতি, তড়িৎবিশ্লেষণ, বিক্রিয়ার হার ও আরও — পাঠ নাও, পর্যবেক্ষণ সারণি পূরণ করো এবং ফলাফল যাচাই করো।",
+    "description_en": "46 interactive practicals: titrations, ion tests, gas preparation, electrolysis, rates and more — take readings, fill the observation table and check your result.",
+    "description_bn": "46টি ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল: টাইট্রেশন, আয়ন শনাক্তকরণ, গ্যাস প্রস্তুতি, তড়িৎবিশ্লেষণ, বিক্রিয়ার হার ও আরও — পাঠ নাও, পর্যবেক্ষণ সারণি পূরণ করো এবং ফলাফল যাচাই করো।",
     "href": "/lab/experiments",
     "tags": [
       "simulation",
@@ -8439,6 +8439,96 @@
       "class-11-12",
       "equilibrium",
       "le-chatelier"
+    ]
+  },
+  {
+    "slug": "lab-conductivity-solutions",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Electrical conductivity of solutions",
+    "title_bn": "দ্রবণের তড়িৎ পরিবাহিতা",
+    "description_en": "Compare how strongly common aqueous solutions conduct electricity and relate conductance to mobile ions.",
+    "description_bn": "সাধারণ জলীয় দ্রবণ কতটা বিদ্যুৎ পরিবহন করে তুলনা করা এবং পরিবাহিতার সঙ্গে চলনশীল আয়নের সম্পর্ক বোঝা।",
+    "href": "/lab/experiments/conductivity-solutions",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-9-10",
+      "electrolytes",
+      "conductivity",
+      "ions"
+    ]
+  },
+  {
+    "slug": "lab-paper-chromatography",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Paper chromatography of coloured mixtures",
+    "title_bn": "রঙিন মিশ্রণের কাগজ ক্রোমাটোগ্রাফি",
+    "description_en": "Separate the dyes in a mixture and measure their retention factors using paper chromatography.",
+    "description_bn": "কাগজ ক্রোমাটোগ্রাফির সাহায্যে মিশ্রণের রঞ্জকগুলো আলাদা করে তাদের Rf মান মাপা।",
+    "href": "/lab/experiments/paper-chromatography",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-9-10",
+      "chromatography",
+      "separation",
+      "Rf"
+    ]
+  },
+  {
+    "slug": "lab-rate-calcium-carbonate-surface-area",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Reaction rate and calcium carbonate surface area",
+    "title_bn": "ক্যালসিয়াম কার্বনেটের পৃষ্ঠতল ও বিক্রিয়ার হার",
+    "description_en": "Investigate how the particle size of marble changes the rate of its reaction with hydrochloric acid.",
+    "description_bn": "মার্বেলের কণার আকার হাইড্রোক্লোরিক অ্যাসিডের সঙ্গে বিক্রিয়ার হার কীভাবে বদলায় তা পরীক্ষা করা।",
+    "href": "/lab/experiments/rate-calcium-carbonate-surface-area",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-9-10",
+      "kinetics",
+      "surface-area",
+      "calcium-carbonate"
+    ]
+  },
+  {
+    "slug": "lab-diffusion-ammonia-hydrogen-chloride",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Diffusion of ammonia and hydrogen chloride gases",
+    "title_bn": "অ্যামোনিয়া ও হাইড্রোজেন ক্লোরাইড গ্যাসের ব্যাপন",
+    "description_en": "Observe the ammonium-chloride ring and compare the diffusion rates of ammonia and hydrogen chloride.",
+    "description_bn": "অ্যামোনিয়াম ক্লোরাইডের বলয় পর্যবেক্ষণ করে অ্যামোনিয়া ও হাইড্রোজেন ক্লোরাইডের ব্যাপন হার তুলনা করা।",
+    "href": "/lab/experiments/diffusion-ammonia-hydrogen-chloride",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "diffusion",
+      "gas-laws",
+      "grahams-law"
+    ]
+  },
+  {
+    "slug": "lab-simple-distillation-salt-water",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Simple distillation of salt water",
+    "title_bn": "লবণ-পানির সরল পাতন",
+    "description_en": "Separate pure water from a salt solution by vaporisation and condensation.",
+    "description_bn": "বাষ্পীভবন ও ঘনীভবনের মাধ্যমে লবণ দ্রবণ থেকে বিশুদ্ধ পানি আলাদা করা।",
+    "href": "/lab/experiments/simple-distillation-salt-water",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-9-10",
+      "separation",
+      "distillation",
+      "salt-water"
     ]
   }
 ]

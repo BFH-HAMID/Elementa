@@ -231,7 +231,10 @@ export type ChemSceneId =
   | 'trough'
   | 'gasJar'
   | 'crossFlask'
-  | 'galvanic';
+  | 'galvanic'
+  | 'diffusion'
+  | 'chromatography'
+  | 'distillation';
 
 export interface ChemPracticalModel {
   slug: string;

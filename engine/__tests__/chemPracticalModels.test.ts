@@ -53,7 +53,8 @@ describe('chemistry practical simulation models', () => {
   it('covers every guided chemistry experiment', () => {
     const missing = experiments.filter((e) => !getChemPracticalModel(e.slug)).map((e) => e.slug);
     expect(missing).toEqual([]);
-    expect(allChemPracticalModels.length).toBeGreaterThanOrEqual(41);
+    expect(experiments.length).toBeGreaterThanOrEqual(46);
+    expect(allChemPracticalModels).toHaveLength(experiments.length);
   });
 
   it('has a guided walkthrough for every simulation and unique slugs', () => {

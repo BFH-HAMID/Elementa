@@ -16,7 +16,10 @@ import {
 import type {
   ActiveEffect,
   Apparatus,
+  BenchEquipment,
   Chemical,
+  Element,
+  ElementSample,
   GasVolume,
   GuidedExperiment,
   HazardLevel,
@@ -42,14 +45,20 @@ import { labT } from '@/lib/i18n';
 export const STORAGE_KEY = 'elementa-chemistry-lab:v1';
 export const HISTORY_LIMIT = 40;
 export const LOG_LIMIT = 80;
-export const MAX_VESSELS = 4;
+export const MAX_VESSELS = 12;
+export const MAX_BENCH_EQUIPMENT = 32;
+export const MAX_ELEMENT_SAMPLES = 118;
 
+export type BenchPoint = { x: number; y: number };
 export type BurnerState = { lit: boolean; intensity: number };
 
 export type SavedLab = {
   version: 1;
   savedAt: number;
   vessels: Vessel[];
+  /** Optional for backward compatibility with older saved workbenches. */
+  benchEquipment?: BenchEquipment[];
+  elementSamples?: ElementSample[];
   burner: BurnerState;
   pourMl: number;
   log: LogEntry[];
@@ -76,6 +85,9 @@ export type LastOutcome = {
 
 type Snapshot = {
   vessels: Vessel[];
+  benchEquipment: BenchEquipment[];
+  elementSamples: ElementSample[];
+  selectedVesselId: string | null;
   burner: BurnerState;
   effects: ActiveEffect[];
   log: LogEntry[];
@@ -86,6 +98,8 @@ type Snapshot = {
 export type LabStore = {
   locale: Locale;
   vessels: Vessel[];
+  benchEquipment: BenchEquipment[];
+  elementSamples: ElementSample[];
   selectedVesselId: string | null;
   pourMl: number;
   burner: BurnerState;
@@ -104,10 +118,21 @@ export type LabStore = {
   setLocale: (locale: Locale) => void;
   setPourMl: (amount: number) => void;
   selectVessel: (vesselId: string | null) => void;
-  addVessel: (apparatusId: string, label?: { en: string; bn: string }) => string;
+  addVessel: (apparatusId: string, label?: { en: string; bn: string }, position?: BenchPoint) => string;
   removeVessel: (vesselId: string) => void;
   duplicateVessel: (vesselId: string) => string;
   moveVessel: (vesselId: string, x: number, y: number) => void;
+  addBenchEquipment: (apparatusId: string, position?: BenchPoint, linkedVesselId?: string | null) => string;
+  removeBenchEquipment: (equipmentId: string) => void;
+  duplicateBenchEquipment: (equipmentId: string) => string;
+  moveBenchEquipment: (equipmentId: string, x: number, y: number) => void;
+  rotateBenchEquipment: (equipmentId: string) => void;
+  addElementSample: (element: Element, position?: BenchPoint) => string;
+  removeElementSample: (sampleId: string) => void;
+  duplicateElementSample: (sampleId: string) => string;
+  moveElementSample: (sampleId: string, x: number, y: number) => void;
+  pushHistory: () => void;
+  notify: (message_en: string, message_bn: string, tone?: 'info' | 'success' | 'warning') => void;
   setVesselApparatus: (vesselId: string, apparatusId: string) => void;
   addChemical: (vesselId: string, chemicalId: string, amount?: number) => void;
   removePortion: (vesselId: string, chemicalId: string) => void;
@@ -146,6 +171,42 @@ let logCounter = 0;
 function nextId(prefix: string): string {
   logCounter += 1;
   return `${prefix}-${Date.now().toString(36)}-${logCounter}`;
+}
+
+function defaultVesselPosition(index: number): BenchPoint {
+  return { x: 24 + (index % 3) * 266, y: 178 + Math.floor(index / 3) * 500 };
+}
+
+function nextVesselPosition(vessels: Vessel[]): BenchPoint {
+  const occupied = new Set(vessels.map((vessel) => `${vessel.x ?? 0},${vessel.y ?? 0}`));
+  for (let index = 0; ; index += 1) {
+    const point = defaultVesselPosition(index);
+    if (!occupied.has(`${point.x},${point.y}`)) return point;
+  }
+}
+
+function defaultEquipmentPosition(index: number): BenchPoint {
+  return { x: 800 + (index % 4) * 180, y: 62 + Math.floor(index / 4) * 190 };
+}
+
+function nextEquipmentPosition(items: BenchEquipment[]): BenchPoint {
+  const occupied = new Set(items.map((item) => `${item.x},${item.y}`));
+  for (let index = 0; ; index += 1) {
+    const point = defaultEquipmentPosition(index);
+    if (!occupied.has(`${point.x},${point.y}`)) return point;
+  }
+}
+
+function defaultElementPosition(index: number): BenchPoint {
+  return { x: 1600 + (index % 5) * 112, y: 62 + Math.floor(index / 5) * 128 };
+}
+
+function nextElementPosition(samples: ElementSample[]): BenchPoint {
+  const occupied = new Set(samples.map((sample) => `${sample.x},${sample.y}`));
+  for (let index = 0; ; index += 1) {
+    const point = defaultElementPosition(index);
+    if (!occupied.has(`${point.x},${point.y}`)) return point;
+  }
 }
 
 export function createVessel(
@@ -229,6 +290,9 @@ export const useLabStore = create<LabStore>()((set, get) => {
       sediment: vessel.sediment.map((item) => ({ ...item })),
       gases: vessel.gases.map((gas) => ({ ...gas }))
     })),
+    benchEquipment: state.benchEquipment.map((item) => ({ ...item })),
+    elementSamples: state.elementSamples.map((sample) => ({ ...sample, element: { ...sample.element } })),
+    selectedVesselId: state.selectedVesselId,
     burner: { ...state.burner },
     effects: [...state.effects],
     log: [...state.log],
@@ -360,6 +424,8 @@ export const useLabStore = create<LabStore>()((set, get) => {
   return {
     locale: 'bn',
     vessels: [],
+    benchEquipment: [],
+    elementSamples: [],
     selectedVesselId: null,
     pourMl: 10,
     burner: { lit: false, intensity: 0.8 },
@@ -379,17 +445,17 @@ export const useLabStore = create<LabStore>()((set, get) => {
     setPourMl: (amount) => set({ pourMl: clamp(Math.round(amount), 1, 100) }),
     selectVessel: (vesselId) => set({ selectedVesselId: vesselId }),
 
-    addVessel: (apparatusId, label) => {
+    addVessel: (apparatusId, label, position) => {
       const state = get();
       if (state.vessels.length >= MAX_VESSELS) {
-        set({ flash: { message_en: 'The bench holds four stations at most.', message_bn: 'বেঞ্চে সর্বোচ্চ চারটি স্টেশন রাখা যায়।', tone: 'warning' } });
+        set({ flash: { message_en: `The workbench holds up to ${MAX_VESSELS} glassware stations.`, message_bn: `ওয়ার্কবেঞ্চে সর্বোচ্চ ${MAX_VESSELS}টি পাত্র রাখা যায়।`, tone: 'warning' } });
         return '';
       }
       const apparatus = apparatusById.get(apparatusId);
-      const index = state.vessels.length;
       const vessel = createVessel(apparatusId, { labelEn: label?.en, labelBn: label?.bn });
-      vessel.x = (index % 2) * 260;
-      vessel.y = Math.floor(index / 2) * 260;
+      const point = position ?? nextVesselPosition(state.vessels);
+      vessel.x = Math.max(0, Math.min(3000, point.x));
+      vessel.y = Math.max(0, Math.min(3000, point.y));
       commit(() => ({
         vessels: [...get().vessels, vessel],
         selectedVesselId: vessel.id,
@@ -411,6 +477,7 @@ export const useLabStore = create<LabStore>()((set, get) => {
     removeVessel: (vesselId) =>
       commit((state) => ({
         vessels: state.vessels.filter((vessel) => vessel.id !== vesselId),
+        benchEquipment: state.benchEquipment.map((item) => item.linkedVesselId === vesselId ? { ...item, linkedVesselId: null } : item),
         selectedVesselId: state.selectedVesselId === vesselId ? null : state.selectedVesselId,
         effects: state.effects.filter((effect) => effect.vesselId !== vesselId)
       })),
@@ -420,7 +487,7 @@ export const useLabStore = create<LabStore>()((set, get) => {
       const original = state.vessels.find((v) => v.id === vesselId);
       if (!original) return '';
       if (state.vessels.length >= MAX_VESSELS) {
-        set({ flash: { message_en: 'The bench holds four stations at most.', message_bn: 'বেঞ্চে সর্বোচ্চ চারটি স্টেশন রাখা যায়।', tone: 'warning' } });
+        set({ flash: { message_en: `The workbench holds up to ${MAX_VESSELS} glassware stations.`, message_bn: `ওয়ার্কবেঞ্চে সর্বোচ্চ ${MAX_VESSELS}টি পাত্র রাখা যায়।`, tone: 'warning' } });
         return '';
       }
       const clone = { ...original, id: nextVesselId(), x: (original.x ?? 0) + 40, y: (original.y ?? 0) + 40, portions: original.portions.map((p) => ({ ...p })), sediment: original.sediment.map((s) => ({ ...s })), gases: original.gases.map((g) => ({ ...g })) };
@@ -431,6 +498,112 @@ export const useLabStore = create<LabStore>()((set, get) => {
     moveVessel: (vesselId, x, y) => set((state) => ({
       vessels: state.vessels.map((vessel) => (vessel.id === vesselId ? { ...vessel, x, y } : vessel))
     })),
+
+    addBenchEquipment: (apparatusId, position, linkedVesselId = null) => {
+      const state = get();
+      const apparatus = apparatusById.get(apparatusId);
+      if (!apparatus || apparatus.kind === 'vessel') return '';
+      if (state.benchEquipment.length >= MAX_BENCH_EQUIPMENT) {
+        set({ flash: { message_en: `The workbench can hold up to ${MAX_BENCH_EQUIPMENT} loose apparatus items.`, message_bn: `ওয়ার্কবেঞ্চে সর্বোচ্চ ${MAX_BENCH_EQUIPMENT}টি আলাদা যন্ত্র রাখা যায়।`, tone: 'warning' } });
+        return '';
+      }
+      const point = position ?? nextEquipmentPosition(state.benchEquipment);
+      const item: BenchEquipment = {
+        id: nextId('equipment'),
+        apparatusId,
+        x: Math.max(0, Math.min(3000, point.x)),
+        y: Math.max(0, Math.min(3000, point.y)),
+        rotation: 0,
+        linkedVesselId: linkedVesselId && state.vessels.some((vessel) => vessel.id === linkedVesselId) ? linkedVesselId : null
+      };
+      commit(() => ({ benchEquipment: [...get().benchEquipment, item] }));
+      return item.id;
+    },
+
+    removeBenchEquipment: (equipmentId) =>
+      commit((state) => {
+        const item = state.benchEquipment.find((entry) => entry.id === equipmentId);
+        if (!item) return {};
+        const remaining = state.benchEquipment.filter((entry) => entry.id !== equipmentId);
+        const apparatus = apparatusById.get(item.apparatusId);
+        if (!item.linkedVesselId || !apparatus) return { benchEquipment: remaining };
+        const linkedItems = remaining.filter((entry) => entry.linkedVesselId === item.linkedVesselId);
+        const stillHasShape = (shape: string) => linkedItems.some((entry) => apparatusById.get(entry.apparatusId)?.shape === shape);
+        const vessels = state.vessels.map((vessel) => {
+          if (vessel.id !== item.linkedVesselId) return vessel;
+          if (apparatus.shape === 'thermometer' && !stillHasShape('thermometer')) return { ...vessel, thermometer: false };
+          if (apparatus.shape === 'cell' && !stillHasShape('cell')) return { ...vessel, electrolysis: false };
+          if (apparatus.shape === 'burner' && !stillHasShape('burner')) return { ...vessel, heating: false };
+          return vessel;
+        });
+        return { benchEquipment: remaining, vessels };
+      }),
+
+    duplicateBenchEquipment: (equipmentId) => {
+      const state = get();
+      const original = state.benchEquipment.find((item) => item.id === equipmentId);
+      if (!original) return '';
+      if (state.benchEquipment.length >= MAX_BENCH_EQUIPMENT) {
+        set({ flash: { message_en: `The workbench can hold up to ${MAX_BENCH_EQUIPMENT} loose apparatus items.`, message_bn: `ওয়ার্কবেঞ্চে সর্বোচ্চ ${MAX_BENCH_EQUIPMENT}টি আলাদা যন্ত্র রাখা যায়।`, tone: 'warning' } });
+        return '';
+      }
+      const clone = { ...original, id: nextId('equipment'), x: original.x + 32, y: original.y + 32 };
+      commit(() => ({ benchEquipment: [...get().benchEquipment, clone] }));
+      return clone.id;
+    },
+
+    moveBenchEquipment: (equipmentId, x, y) => set((state) => ({
+      benchEquipment: state.benchEquipment.map((item) => item.id === equipmentId ? { ...item, x, y } : item)
+    })),
+
+    rotateBenchEquipment: (equipmentId) =>
+      commit((state) => ({
+        benchEquipment: state.benchEquipment.map((item) => item.id === equipmentId ? { ...item, rotation: (item.rotation + 90) % 360 } : item)
+      })),
+
+    addElementSample: (element, position) => {
+      const state = get();
+      if (state.elementSamples.length >= MAX_ELEMENT_SAMPLES) {
+        set({ flash: { message_en: 'The workbench is full of reference samples. Remove a sample before adding another.', message_bn: 'ওয়ার্কবেঞ্চে রেফারেন্স নমুনা রাখার জায়গা পূর্ণ। নতুনটি যোগ করার আগে একটি সরান।', tone: 'warning' } });
+        return '';
+      }
+      const point = position ?? nextElementPosition(state.elementSamples);
+      const sample: ElementSample = {
+        id: nextId('sample'),
+        element: { ...element },
+        x: Math.max(0, Math.min(3000, point.x)),
+        y: Math.max(0, Math.min(3000, point.y))
+      };
+      commit(() => ({ elementSamples: [...get().elementSamples, sample] }));
+      return sample.id;
+    },
+
+    removeElementSample: (sampleId) =>
+      commit((state) => ({ elementSamples: state.elementSamples.filter((sample) => sample.id !== sampleId) })),
+
+    duplicateElementSample: (sampleId) => {
+      const state = get();
+      const original = state.elementSamples.find((sample) => sample.id === sampleId);
+      if (!original) return '';
+      if (state.elementSamples.length >= MAX_ELEMENT_SAMPLES) {
+        set({ flash: { message_en: 'The workbench is full of reference samples. Remove a sample before adding another.', message_bn: 'ওয়ার্কবেঞ্চে রেফারেন্স নমুনা রাখার জায়গা পূর্ণ। নতুনটি যোগ করার আগে একটি সরান।', tone: 'warning' } });
+        return '';
+      }
+      const clone = { ...original, id: nextId('sample'), element: { ...original.element }, x: original.x + 28, y: original.y + 28 };
+      commit(() => ({ elementSamples: [...get().elementSamples, clone] }));
+      return clone.id;
+    },
+
+    moveElementSample: (sampleId, x, y) => set((state) => ({
+      elementSamples: state.elementSamples.map((sample) => sample.id === sampleId ? { ...sample, x, y } : sample)
+    })),
+
+    pushHistory: () => set((state) => ({
+      history: [...state.history, snapshot(state)].slice(-HISTORY_LIMIT),
+      future: []
+    })),
+
+    notify: (message_en, message_bn, tone = 'info') => set({ flash: { message_en, message_bn, tone } }),
 
     setVesselApparatus: (vesselId, apparatusId) =>
       commit((state) => ({
@@ -883,6 +1056,8 @@ export const useLabStore = create<LabStore>()((set, get) => {
     reset: () =>
       commit((state) => ({
         vessels: [],
+        benchEquipment: [],
+        elementSamples: [],
         selectedVesselId: null,
         effects: [],
         lastOutcome: null,
@@ -930,6 +1105,8 @@ export const useLabStore = create<LabStore>()((set, get) => {
         version: 1,
         savedAt: Date.now(),
         vessels: state.vessels,
+        benchEquipment: state.benchEquipment,
+        elementSamples: state.elementSamples,
         burner: state.burner,
         pourMl: state.pourMl,
         log: state.log,
@@ -960,9 +1137,18 @@ export const useLabStore = create<LabStore>()((set, get) => {
           return false;
         }
         const parsed = JSON.parse(raw) as SavedLab;
+        const isLegacyWorktop = parsed.benchEquipment === undefined && parsed.elementSamples === undefined;
+        const restoredVessels = (parsed.vessels ?? []).map((vessel, index) => {
+          if (!isLegacyWorktop) return vessel;
+          const point = defaultVesselPosition(index);
+          return { ...vessel, x: point.x, y: point.y };
+        });
         const before = snapshot(get());
         set((state) => ({
-          vessels: parsed.vessels ?? [],
+          vessels: restoredVessels,
+          benchEquipment: parsed.benchEquipment ?? [],
+          elementSamples: parsed.elementSamples ?? [],
+          selectedVesselId: restoredVessels[0]?.id ?? null,
           burner: parsed.burner ?? state.burner,
           pourMl: parsed.pourMl ?? state.pourMl,
           log: parsed.log ?? [],
@@ -994,15 +1180,19 @@ export const useLabStore = create<LabStore>()((set, get) => {
     startExperiment: (experiment) => {
       const state = get();
       const before = snapshot(state);
-      const vessels = experiment.setup.vessels.map((setup) =>
-        createVessel(setup.apparatusId, {
+      const vessels = experiment.setup.vessels.map((setup, index) => {
+        const vessel = createVessel(setup.apparatusId, {
           labelEn: setup.label_en,
           labelBn: setup.label_bn,
           contents: setup.portions.map((portion) => ({ chemicalId: portion.chemicalId, mL: portion.mL }))
-        })
-      );
+        });
+        const point = defaultVesselPosition(index);
+        return { ...vessel, x: point.x, y: point.y };
+      });
       set((current) => ({
         vessels,
+        benchEquipment: [],
+        elementSamples: [],
         selectedVesselId: vessels[0]?.id ?? null,
         effects: [],
         hazard: null,

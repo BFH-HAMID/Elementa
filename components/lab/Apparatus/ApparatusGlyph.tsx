@@ -8,12 +8,14 @@ import {
   Burette,
   Burner,
   ConicalFlask,
+  Crucible,
   DeliveryTube,
   Dropper,
   ElectrolysisCell,
   EvaporatingDish,
   GasJar,
   MeasuringCylinder,
+  ReagentBottle,
   Spatula,
   TestTube,
   TestTubeHolder,
@@ -21,7 +23,7 @@ import {
   TripodStand
 } from './index';
 
-const vesselShapesSet = new Set(['tube', 'beaker', 'flask', 'cylinder', 'burette', 'jar', 'dish']);
+const vesselShapesSet = new Set(['tube', 'beaker', 'flask', 'cylinder', 'burette', 'jar', 'dish', 'watch-glass', 'crucible', 'reagent-bottle']);
 
 export type ApparatusGlyphProps = {
   apparatus: Pick<Apparatus, 'id' | 'shape'>;
@@ -52,6 +54,19 @@ export function ApparatusGlyph({ apparatus, size = 30, className }: ApparatusGly
         return <span className={cn('inline-flex shrink-0', className)} style={{ width: size, height: size * 1.5 }}><GasJar {...vesselProps} /></span>;
       case 'dish':
         return <span className={cn('inline-flex shrink-0', className)} style={{ width: size, height: size * 1.5 }}><EvaporatingDish {...vesselProps} /></span>;
+      case 'watch-glass':
+        return (
+          <span className={cn('inline-flex shrink-0', className)} style={{ width: size * 1.5, height: size * 0.7 }}>
+            <svg viewBox="0 0 100 40" className="h-full w-full" aria-hidden="true">
+              <path d="M8 8 Q50 38 92 8 M8 8 Q50 18 92 8" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+              <path d="M20 12 Q50 30 80 12" fill="none" stroke="#fff" strokeOpacity=".85" strokeWidth="2" />
+            </svg>
+          </span>
+        );
+      case 'crucible':
+        return <span className={cn('inline-flex shrink-0', className)} style={{ width: size, height: size * 1.5 }}><Crucible {...vesselProps} /></span>;
+      case 'reagent-bottle':
+        return <span className={cn('inline-flex shrink-0', className)} style={{ width: size, height: size * 1.5 }}><ReagentBottle {...vesselProps} /></span>;
       default:
         break;
     }

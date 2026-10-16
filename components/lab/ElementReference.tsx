@@ -1,10 +1,14 @@
 'use client';
 
-import { Search } from 'lucide-react';
+import { useDraggable } from '@dnd-kit/core';
+import { CSS } from '@dnd-kit/utilities';
+import { Plus, Search } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import type { Element } from '@/engine/types';
 import { useLabI18n } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
+import { useLabStore } from '@/store/labStore';
+import { dragId, type DragPayload } from './dragTypes';
 
 const categoryTone: Record<string, string> = {
   'alkali-metal': 'bg-rose-100 text-rose-900 dark:bg-rose-950 dark:text-rose-100',
@@ -28,6 +32,7 @@ export function ElementReference() {
   const [elements, setElements] = useState<Element[] | null>(null);
   const [query, setQuery] = useState('');
   const [selected, setSelected] = useState<Element | null>(null);
+  const addElementSample = useLabStore((state) => state.addElementSample);
 
   useEffect(() => {
     let active = true;
@@ -85,21 +90,7 @@ export function ElementReference() {
         <ul className="grid grid-cols-4 gap-1.5 sm:grid-cols-6">
           {filtered.map((element) => (
             <li key={element.z}>
-              <button
-                type="button"
-                onClick={() => setSelected(element)}
-                className={cn(
-                  'flex h-full w-full flex-col items-start rounded-lg p-1.5 text-left transition hover:-translate-y-0.5 hover:shadow-card',
-                  categoryTone[element.category] ?? 'bg-[var(--surface-soft)]'
-                )}
-                aria-label={`${element.name_en} (${element.symbol})`}
-              >
-                <span className="text-[9px] font-bold opacity-70">{element.z}</span>
-                <span className="text-sm font-black leading-none">{element.symbol}</span>
-                <span className="mt-0.5 line-clamp-1 text-[9px] font-bold opacity-80">
-                  {locale === 'bn' ? element.name_bn : element.name_en}
-                </span>
-              </button>
+              <ElementTile element={element} locale={locale} onSelect={() => setSelected(element)} />
             </li>
           ))}
           {filtered.length === 0 && <li className="col-span-full p-4 text-center text-xs muted">{t('shelf.noResults', { query })}</li>}
@@ -141,8 +132,44 @@ export function ElementReference() {
               {t('elements.radioactive')} ☢
             </p>
           )}
+          <p className="mt-2 text-[10px] leading-4 muted">{t('elements.sampleNote')}</p>
+          <button type="button" onClick={() => addElementSample(selected)} className="btn-primary mt-3 min-h-9 w-full justify-center rounded-lg px-3 text-xs font-bold">
+            <Plus size={14} /> {t('elements.addToBench')}
+          </button>
         </div>
       )}
     </div>
+  );
+}
+
+function ElementTile({ element, locale, onSelect }: { element: Element; locale: 'bn' | 'en'; onSelect: () => void }) {
+  const payload: DragPayload = { kind: 'element', element, name: locale === 'bn' ? element.name_bn : element.name_en };
+  const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
+    id: dragId({ kind: 'element', elementSymbol: element.symbol }),
+    data: payload
+  });
+
+  return (
+    <button
+      ref={setNodeRef}
+      {...listeners}
+      {...attributes}
+      type="button"
+      onClick={onSelect}
+      style={{ transform: CSS.Translate.toString(transform) }}
+      className={cn(
+        'flex h-full w-full touch-manipulation flex-col items-start rounded-lg p-1.5 text-left transition select-none hover:-translate-y-0.5 hover:shadow-card',
+        categoryTone[element.category] ?? 'bg-[var(--surface-soft)]',
+        isDragging && 'opacity-35'
+      )}
+      aria-label={`${element.name_en} (${element.symbol}) — drag to workbench or select details`}
+      title={locale === 'bn' ? `${element.name_bn} — বেঞ্চে টানুন` : `${element.name_en} — drag to workbench`}
+    >
+      <span className="text-[9px] font-bold opacity-70">{element.z}</span>
+      <span className="text-sm font-black leading-none">{element.symbol}</span>
+      <span className="mt-0.5 line-clamp-1 text-[9px] font-bold opacity-80">
+        {locale === 'bn' ? element.name_bn : element.name_en}
+      </span>
+    </button>
   );
 }

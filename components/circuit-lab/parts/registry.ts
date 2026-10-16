@@ -10,7 +10,7 @@
  * orientation and are multiples of 10 so they land on breadboard holes.
  */
 
-import { breadboardPins, breadboardSize, gridPins } from './holes';
+import { breadboardMiniPins, breadboardMiniSize, breadboardPins, breadboardSize, gridPins } from './holes';
 import type { PartCategory, PartDef, PinDef, PinKind, PropDef, PropValue } from '../types';
 
 export const CATEGORY_ORDER: PartCategory[] = [
@@ -351,6 +351,109 @@ const boards: PartDef[] = [
     art: { usb: true, buttons: [{ id: 'RST', label: 'RST' }, { id: 'FLASH', label: 'FLASH', pin: 'D3' }], onboardLeds: [{ id: 'led', label: 'LED', pin: 'D4', color: 'blue' }], antenna: true, bodyColor: '#24466b' }
   },
   {
+    id: 'arduino-mega-2560',
+    category: 'boards',
+    family: 'board',
+    name: 'Arduino Mega 2560 R3',
+    partNumber: 'ATmega2560-16AU',
+    w: 420,
+    h: 260,
+    pins: [
+      ...Array.from({ length: 54 }, (_, pin) => {
+        const pwm = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 44, 45, 46].includes(pin);
+        const y = pin < 27 ? 10 : 250;
+        const x = 10 + (pin % 27) * 10;
+        const extra = pin === 20 ? ' · SDA' : pin === 21 ? ' · SCL' : '';
+        return P(`D${pin}`, `D${pin}`, x, y, pwm ? 'pwm' : 'io', pin, `Digital ${pin}${pwm ? ' · PWM' : ''}${extra}`);
+      }),
+      ...Array.from({ length: 16 }, (_, i) => P(`A${i}`, `A${i}`, 410, 30 + i * 10, 'ain', 54 + i, `Analog A${i} · ADC${i}`)),
+      P('VIN', 'VIN', 0, 200, 'vin', undefined, 'VIN 7–12 V input'),
+      P('5V', '5V', 0, 210, 'vcc', undefined, '5 V output'),
+      P('3V3', '3V3', 0, 220, 'vcc', undefined, '3.3 V output'),
+      P('GND', 'GND', 0, 230, 'gnd', undefined, 'GND'),
+      P('RESET', 'RESET', 0, 240, 'nc', undefined, 'Reset · active low')
+    ],
+    props: [{ key: 'code', label: 'Sketch', type: 'text' }],
+    defaults: {},
+    model: { type: 'mcu' },
+    description: 'ATmega2560 board with 54 digital I/O (15 PWM), 16 analog inputs, 4 UARTs and the Uno-style 5 V logic ecosystem. I²C is on D20/D21; digital sketch pin numbers map directly to D0–D53.',
+    ratings: ['Logic 5 V', 'VIN 7–12 V recommended', '54 digital I/O · 16 analog inputs', 'USB-B and barrel-jack power inputs'],
+    art: { usb: true, buttons: [{ id: 'RESET', label: 'RESET' }], onboardLeds: [{ id: 'L', label: 'L', pin: 'D13', color: 'orange' }], bodyColor: '#1d6f93' }
+  },
+  {
+    id: 'esp32-s3-devkitc',
+    category: 'boards',
+    family: 'board',
+    name: 'ESP32-S3 DevKitC-1',
+    partNumber: 'ESP32-S3-WROOM-1',
+    w: 140,
+    h: 260,
+    pins: [
+      ...colPins(
+        [
+          ['3V3', 'vcc', '3.3 V output'],
+          ['EN', 'nc', 'Chip enable / reset'],
+          ['D0', 'io', 'GPIO0 · BOOT strap'],
+          ['D1', 'io', 'GPIO1'],
+          ['D2', 'io', 'GPIO2 · onboard LED'],
+          ['D3', 'io', 'GPIO3'],
+          ['D4', 'io', 'GPIO4'],
+          ['D5', 'io', 'GPIO5'],
+          ['D6', 'io', 'GPIO6'],
+          ['D7', 'io', 'GPIO7'],
+          ['D8', 'io', 'GPIO8 · default SDA'],
+          ['D9', 'io', 'GPIO9 · default SCL'],
+          ['D10', 'io', 'GPIO10'],
+          ['D11', 'io', 'GPIO11'],
+          ['D12', 'io', 'GPIO12'],
+          ['D13', 'io', 'GPIO13'],
+          ['D14', 'io', 'GPIO14'],
+          ['D15', 'io', 'GPIO15'],
+          ['D16', 'io', 'GPIO16'],
+          ['D17', 'io', 'GPIO17'],
+          ['D18', 'io', 'GPIO18'],
+          ['GND', 'gnd', 'GND']
+        ],
+        0,
+        20
+      ),
+      ...colPins(
+        [
+          ['GND', 'gnd', 'GND'],
+          ['D48', 'io', 'GPIO48'],
+          ['D47', 'io', 'GPIO47'],
+          ['D46', 'io', 'GPIO46 · boot strap'],
+          ['D45', 'io', 'GPIO45 · boot strap'],
+          ['D44', 'io', 'GPIO44 · UART0 RX'],
+          ['D43', 'io', 'GPIO43 · UART0 TX'],
+          ['D42', 'io', 'GPIO42'],
+          ['D41', 'io', 'GPIO41'],
+          ['D40', 'io', 'GPIO40'],
+          ['D39', 'io', 'GPIO39'],
+          ['D38', 'io', 'GPIO38'],
+          ['D37', 'io', 'GPIO37'],
+          ['D36', 'io', 'GPIO36'],
+          ['D35', 'io', 'GPIO35'],
+          ['D21', 'io', 'GPIO21'],
+          ['D20', 'io', 'GPIO20 · USB D+'],
+          ['D19', 'io', 'GPIO19 · USB D−'],
+          ['RX', 'io', 'UART RX'],
+          ['TX', 'io', 'UART TX'],
+          ['5V', 'vin', '5 V USB / VIN'],
+          ['GND', 'gnd', 'GND']
+        ],
+        130,
+        20
+      )
+    ],
+    props: [{ key: 'code', label: 'Sketch', type: 'text' }],
+    defaults: {},
+    model: { type: 'mcu' },
+    description: 'ESP32-S3 dual-core Wi-Fi/Bluetooth LE development board with USB-C and a metal-shielded module. GPIO uses 3.3 V logic; GPIO8/9 are the default I²C SDA/SCL pair.',
+    ratings: ['Logic 3.3 V · GPIO is not 5 V tolerant', 'USB-C / 5 V input', 'Up to 45 GPIO pins on the module'],
+    art: { usb: true, buttons: [{ id: 'EN', label: 'EN' }, { id: 'BOOT', label: 'BOOT', pin: 'D0' }], onboardLeds: [{ id: 'led', label: 'LED', pin: 'D2', color: 'blue' }], antenna: true, bodyColor: '#155a3c' }
+  },
+  {
     id: 'attiny85',
     category: 'boards',
     family: 'ic-dip',
@@ -400,6 +503,20 @@ const prototyping: PartDef[] = [
     description:
       '30 columns with a centre channel and two power rails. Connectivity matches the full board: holes in a column strip are shared, rail rows are shared end to end.',
     ratings: ['Max 1 A per hole (recommended)', 'Rails carry up to 1 A total']
+  },
+  {
+    id: 'breadboard-mini',
+    category: 'prototyping',
+    family: 'breadboard-mini',
+    name: 'Mini breadboard (170-point)',
+    partNumber: 'BB-170',
+    ...breadboardMiniSize(17),
+    pins: breadboardMiniPins(17),
+    props: [],
+    defaults: {},
+    model: { type: 'prototyping' },
+    description: 'Compact solderless board with 17 columns of five-hole strips on each side of the centre channel. No power rails; each five-hole strip is electrically common.',
+    ratings: ['170 tie points', 'Contact strips are isolated across the centre channel', 'Use 0.6 mm pins, 22–24 AWG wire']
   },
   {
     id: 'perfboard',
@@ -1264,6 +1381,142 @@ const sensors: PartDef[] = [
     model: { type: 'driver', variant: 'stepper' },
     description: '5 V unipolar stepper with 1:64 gearbox (2048 half-steps per output revolution). The ULN2003 driver board sits on the same module; energise coils in sequence (half-step).',
     ratings: ['5 V, ~240 mA', '2048 steps/rev (half-step)', 'Speed max ~15 RPM']
+  },
+  {
+    id: 'servo-mg996r',
+    category: 'sensors',
+    family: 'module',
+    name: 'Standard servo MG996R',
+    partNumber: 'MG996R',
+    w: 90,
+    h: 80,
+    pins: [P('brown', 'GND', 25, 80, 'gnd', undefined, 'Brown · GND'), P('red', 'VCC', 45, 80, 'vcc', undefined, 'Red · 4.8–7.2 V'), P('orange', 'SIG', 65, 80, 'pwm', undefined, 'Orange · PWM signal (50 Hz, 1–2 ms)')],
+    props: [prop('angle', 'Angle', { min: 0, max: 180, step: 1, unit: '°' })],
+    defaults: { angle: 90 },
+    model: { type: 'servo' },
+    description: 'High-torque standard-size hobby servo with metal gears and a three-wire lead. Position follows a 50 Hz, 1–2 ms PWM pulse; use a separate 5–6 V supply for the motor.',
+    ratings: ['Operating 4.8–7.2 V', 'Stall torque up to 11 kg·cm at 6 V', 'Stall current can exceed 2 A']
+  },
+  {
+    id: 'dc-motor-130',
+    category: 'sensors',
+    family: 'module',
+    name: '130-size brushed DC motor',
+    partNumber: '130-DC-6V',
+    w: 70,
+    h: 70,
+    pins: [P('a', 'M+', 20, 70, 'io', undefined, 'Motor terminal A'), P('b', 'M−', 50, 70, 'io', undefined, 'Motor terminal B')],
+    props: [prop('rpm', 'Rated speed', { min: 1000, max: 15000, step: 500, unit: 'RPM' })],
+    defaults: { rpm: 9000 },
+    model: { type: 'motor' },
+    description: 'Small 130-can brushed motor used in toy cars, fans and classroom builds. Reversing the polarity reverses direction; drive it through a transistor or H-bridge, never an MCU pin.',
+    ratings: ['Rated 3–6 V DC', 'Typical no-load speed 6,000–12,000 RPM', 'Use a flyback diode with a transistor driver']
+  },
+  {
+    id: 'micro-metal-gearmotor',
+    category: 'sensors',
+    family: 'module',
+    name: 'Micro metal gearmotor (6 V)',
+    partNumber: 'N20-6V-300RPM',
+    w: 90,
+    h: 60,
+    pins: [P('a', 'M+', 20, 60, 'io', undefined, 'Motor terminal A'), P('b', 'M−', 70, 60, 'io', undefined, 'Motor terminal B')],
+    props: [prop('rpm', 'Rated speed', { min: 30, max: 1000, step: 10, unit: 'RPM' })],
+    defaults: { rpm: 300 },
+    model: { type: 'motor' },
+    description: 'Compact N20 brushed motor with a metal reduction gearbox and offset output shaft. Reversing polarity changes direction; use an H-bridge for speed and direction control.',
+    ratings: ['Rated 6 V DC', 'Gear ratio varies by model', 'Stall current can exceed 500 mA']
+  },
+  {
+    id: 'vibration-motor-coin',
+    category: 'sensors',
+    family: 'module',
+    name: 'Coin vibration motor',
+    partNumber: 'ERM-10MM-3V',
+    w: 50,
+    h: 50,
+    pins: [P('a', 'M+', 15, 50, 'io', undefined, 'Red · positive'), P('b', 'M−', 35, 50, 'io', undefined, 'Black · negative')],
+    props: [prop('rpm', 'Rated speed', { min: 5000, max: 15000, step: 500, unit: 'RPM' })],
+    defaults: { rpm: 11000 },
+    model: { type: 'motor' },
+    description: 'Flat eccentric-rotating-mass motor for haptic feedback. It spins when powered and vibrates the surface it is mounted to; switch it with a transistor or MOSFET.',
+    ratings: ['Rated 3 V DC', 'Typical current 60–100 mA', 'Do not power directly from a GPIO']
+  },
+  {
+    id: 'dc-motor-fan',
+    category: 'sensors',
+    family: 'module',
+    name: 'Mini DC fan motor',
+    partNumber: 'FAN-30MM-5V',
+    w: 70,
+    h: 70,
+    pins: [P('a', 'M+', 20, 70, 'io', undefined, 'Red · positive'), P('b', 'M−', 50, 70, 'io', undefined, 'Black · negative')],
+    props: [prop('rpm', 'Rated speed', { min: 1000, max: 10000, step: 250, unit: 'RPM' })],
+    defaults: { rpm: 5000 },
+    model: { type: 'motor' },
+    description: 'Small two-wire brushed fan with a visible rotor. Use a transistor or motor driver for switching; reversing polarity reverses the direction.',
+    ratings: ['Rated 5 V DC', 'Typical current 80–200 mA', 'Keep fingers clear of the rotating blades']
+  },
+  {
+    id: 'motor-driver-l298n',
+    category: 'sensors',
+    family: 'module',
+    name: 'L298N dual H-bridge module',
+    partNumber: 'L298N-DRIVER',
+    w: 120,
+    h: 100,
+    pins: [
+      P('vm', '+12V', 20, 10, 'vin', undefined, 'Motor supply, 5–35 V'),
+      P('gnd', 'GND', 40, 10, 'gnd', undefined, 'Common ground'),
+      P('vcc', '5V', 60, 10, 'vcc', undefined, 'Logic supply'),
+      P('out1', 'OUT1', 0, 35, 'io', undefined, 'Motor A output 1'),
+      P('out2', 'OUT2', 0, 50, 'io', undefined, 'Motor A output 2'),
+      P('out3', 'OUT3', 120, 35, 'io', undefined, 'Motor B output 1'),
+      P('out4', 'OUT4', 120, 50, 'io', undefined, 'Motor B output 2'),
+      P('ena', 'ENA', 10, 100, 'pwm', undefined, 'Motor A enable / PWM'),
+      P('in1', 'IN1', 30, 100, 'io', undefined, 'Motor A direction input 1'),
+      P('in2', 'IN2', 45, 100, 'io', undefined, 'Motor A direction input 2'),
+      P('in3', 'IN3', 75, 100, 'io', undefined, 'Motor B direction input 1'),
+      P('in4', 'IN4', 90, 100, 'io', undefined, 'Motor B direction input 2'),
+      P('enb', 'ENB', 110, 100, 'pwm', undefined, 'Motor B enable / PWM')
+    ],
+    props: [],
+    defaults: {},
+    model: { type: 'driver', variant: 'l298n' },
+    description: 'Popular red L298N dual H-bridge carrier with screw terminals and a heatsink. ENA/ENB enable each channel; IN1–IN4 choose direction; OUT1–OUT4 feed two DC motors.',
+    ratings: ['Motor supply 5–35 V', 'Up to 2 A peak per channel (module cooling dependent)', 'Logic supply 5 V · share GND with the MCU'],
+    art: { bodyColor: '#b33b32' }
+  },
+  {
+    id: 'motor-driver-tb6612fng',
+    category: 'sensors',
+    family: 'module',
+    name: 'TB6612FNG dual motor driver',
+    partNumber: 'TB6612FNG-MODULE',
+    w: 120,
+    h: 100,
+    pins: [
+      P('vm', 'VM', 15, 10, 'vin', undefined, 'Motor supply, 2.5–13.5 V'),
+      P('vcc', 'VCC', 35, 10, 'vcc', undefined, 'Logic supply, 2.7–5.5 V'),
+      P('gnd', 'GND', 55, 10, 'gnd', undefined, 'Common ground'),
+      P('ao1', 'AO1', 0, 35, 'io', undefined, 'Motor A output 1'),
+      P('ao2', 'AO2', 0, 50, 'io', undefined, 'Motor A output 2'),
+      P('bo1', 'BO1', 120, 35, 'io', undefined, 'Motor B output 1'),
+      P('bo2', 'BO2', 120, 50, 'io', undefined, 'Motor B output 2'),
+      P('pwma', 'PWMA', 10, 100, 'pwm', undefined, 'Motor A PWM / enable'),
+      P('ain1', 'AIN1', 30, 100, 'io', undefined, 'Motor A direction input 1'),
+      P('ain2', 'AIN2', 45, 100, 'io', undefined, 'Motor A direction input 2'),
+      P('stby', 'STBY', 60, 100, 'io', undefined, 'Standby · HIGH to enable'),
+      P('bin1', 'BIN1', 75, 100, 'io', undefined, 'Motor B direction input 1'),
+      P('bin2', 'BIN2', 90, 100, 'io', undefined, 'Motor B direction input 2'),
+      P('pwmb', 'PWMB', 110, 100, 'pwm', undefined, 'Motor B PWM / enable')
+    ],
+    props: [],
+    defaults: {},
+    model: { type: 'driver', variant: 'tb6612fng' },
+    description: 'Compact dual H-bridge carrier using the TB6612FNG. STBY must be HIGH; PWMA/PWMB enable the channels and AIN/BIN inputs set motor direction. More efficient than an L298N for small robots.',
+    ratings: ['VM 2.5–13.5 V', '1.2 A average per channel · 3.2 A peak', 'Logic VCC 2.7–5.5 V · share GND with the MCU'],
+    art: { bodyColor: '#176445' }
   },
   {
     id: 'nrf24l01',

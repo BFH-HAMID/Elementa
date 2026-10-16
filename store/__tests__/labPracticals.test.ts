@@ -6,8 +6,8 @@ import { useLabStore } from '@/store/labStore';
 /**
  * Every guided practical is meant to be completable on the virtual bench: the setup seeds
  * the glassware, and the auto-checked steps must all become true while a student follows the
- * printed instructions. This file scripts the walkthrough for each of the twenty practicals
- * added in the chemistry-lab expansion and drives the store exactly as the UI does.
+ * printed instructions. This file scripts the walkthrough for every expansion practical and
+ * drives the store exactly as the UI does.
  */
 
 const state = () => useLabStore.getState();
@@ -189,6 +189,27 @@ const walkthroughs: Record<string, (b: Bench) => void> = {
     b.add(0, 'KSCN', 1);
     b.add(1, 'KSCN', 1);
     b.add(1, 'NaOH', 2);
+  },
+  'conductivity-solutions': (b) => {
+    b.add(0, 'H2O', 5);
+    b.add(1, 'NaCl', 5);
+    b.add(2, 'HCl', 5);
+    b.add(3, 'CH3COOH', 5);
+    b.add(4, 'ethanol', 5);
+  },
+  'paper-chromatography': (b) => {
+    b.add(2, 'universal', 2);
+  },
+  'rate-calcium-carbonate-surface-area': (b) => {
+    b.add(0, 'HCl', 50);
+  },
+  'diffusion-ammonia-hydrogen-chloride': (b) => {
+    b.add(0, 'NH3', 2);
+    b.add(1, 'HCl', 2);
+  },
+  'simple-distillation-salt-water': (b) => {
+    b.heat(0, 600);
+    b.add(1, 'H2O', 10);
   }
 };
 

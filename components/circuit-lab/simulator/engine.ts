@@ -168,11 +168,12 @@ export class CircuitEngine {
     const def = board ? getPart(board.partId) : undefined;
     const pinsById = new Map((def?.pins ?? []).map((p) => [p.id, p]));
     const resolve = (p: unknown): string => {
-      if (typeof p === 'number') return `${info.pinPrefix}${p}`;
+      const megaAnalogPin = (pin: number) => partId === 'arduino-mega-2560' && pin >= 54 && pin <= 69 ? `A${pin - 54}` : null;
+      if (typeof p === 'number') return megaAnalogPin(p) ?? `${info.pinPrefix}${p}`;
       const s = String(p);
       const bluepill = /^P([A-C]\d+)$/.exec(s);
       if (bluepill && partId === 'stm32-bluepill') return bluepill[1];
-      if (/^\d+$/.test(s)) return `${info.pinPrefix}${s}`;
+      if (/^\d+$/.test(s)) return megaAnalogPin(Number(s)) ?? `${info.pinPrefix}${s}`;
       return s;
     };
     return {
@@ -324,11 +325,13 @@ export class CircuitEngine {
           r.burnt = true;
           r.warnings = [this.burnReasons[id] ?? 'burnt'];
         }
-        if (def?.id === 'servo-sg90') r.angle = Number(this.memory[id]?.angle ?? c?.props.angle ?? 90);
-        if (def?.id === 'dc-motor') {
+        if (def?.model.type === 'servo') r.angle = Number(this.memory[id]?.angle ?? c?.props.angle ?? 90);
+        if (def?.model.type === 'motor') {
           const a = res.pinV.a ?? 0;
           const b = res.pinV.b ?? 0;
-          r.speed = Math.min(1, Math.abs(a - b) / 6);
+          const voltage = a - b;
+          r.speed = Math.min(1, Math.abs(voltage) / 6);
+          r.direction = voltage < 0 ? -1 : 1;
         }
         if (def?.id === 'buzzer') {
           r.on = res.current > 0.0005;

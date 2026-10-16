@@ -11,17 +11,17 @@ dependencies. It deploys as part of the existing Next.js app on Vercel's free ti
 
 | Area | Status |
 |---|---|
-| Parts library (searchable, 8 categories, ≥40 parts with pinouts, ratings and info cards) | Done |
-| Breadboards (full/half, rail + strip connectivity), perfboard, stripboard, PCB pad area | Done (connectivity; no PCB trace routing view yet) |
-| Drag & drop from library, move, rotate (R), flip (F), duplicate, delete, multi-select | Done |
+| Parts library (searchable, 8 categories, 95+ parts with pinouts, ratings, info cards and SVG thumbnails) | Done |
+| Breadboards (full/half/mini, rail + strip connectivity), perfboard, stripboard, PCB pad area | Done (connectivity; no PCB trace routing view yet) |
+| Drag & drop from library; every placed part can move, rotate (R), flip (F), duplicate, delete and multi-select | Done |
 | Undo / redo (40 steps), snap to grid, snap to breadboard holes | Done |
 | Pin → pin wires, colours, curved routing, draggable bend points, delete | Done |
 | Pan / zoom (wheel, pinch, middle-drag, Space+drag), fit to screen, minimap | Done |
 | Pin hover highlight with function tooltip (e.g. `GPIO21 · I²C SDA`) | Done |
 | Context menu (right-click, long-press), keyboard shortcuts, help overlay | Done |
 | DC MNA + transient (C/L companion models), diodes/LEDs, BJT, MOSFET, op-amp, regulators | Done |
-| Digital logic (74HC00/04/08/595), 555 timer, L293D / ULN2003, relay, switches | Done |
-| Sensors and modules (DHT, HC-SR04, PIR, IR, MPU, BMP, soil, LDR, MQ-2, OLED, LCD, I²C LCD, 7-seg, buzzer, servo, motor, NRF24, HC-05, RC522, GPS) | Modelled at the level needed for the bundled examples; sketch APIs cover the common libraries |
+| Digital logic (74HC00/04/08/595), 555 timer, L293D, L298N, TB6612FNG, ULN2003, relay, switches | Done |
+| Sensors and modules (DHT, HC-SR04, PIR, IR, MPU, BMP, soil, LDR, MQ-2, OLED, LCD, 7-seg, buzzer, SG90/MG996R servos, TT/can/gear/fan/vibration motors, NRF24, HC-05, RC522, GPS) | Modelled at the level needed for the bundled examples; sketch APIs cover the common libraries |
 | Simulation in a Web Worker, main-thread fallback | Done |
 | LED brightness ∝ current, spinning motor, servo angle, buzzer rings, LCD/OLED text, 7-seg, current-flow animation | Done |
 | Short circuit / reverse polarity / overcurrent warnings with burn-out and smoke | Done |
@@ -290,15 +290,17 @@ npx vitest run components/circuit-lab
 
 - `engine.test.ts` — DC divider, LED current at 220 Ω on 5 V, reverse LED, RC transient,
   blink with serial output, syntax error reporting, every example simulating without NaN.
-- `geometry.test.ts` — transforms, grid snapping, wire paths, registry invariants (≥40 parts,
-  8 categories, unique pin ids, documented parts), hole-group connectivity, hole snapping.
+- `geometry.test.ts` — transforms, grid snapping, wire paths, registry invariants (95+ parts,
+  8 categories, unique pin ids, documented parts), mini/full breadboard connectivity and hole snapping.
+- `parts-rendering.test.tsx` — renders SVG artwork for every catalog part so palette thumbnails cannot produce invalid geometry.
 - `catalog-projects.test.ts` — every example in the library (40–50 projects): pin ids exist, both languages
   are filled in, the circuit simulates with no errors, no part burns out, and the key physical
   readings (LED current, motor speed, sensor values, relay state) match the expected behaviour. Each
   project has its own assertions, so a wrong wire or value fails a named test.
-- `store.test.ts` — undo/redo, duplicate keeps internal wires, rotation cycles, examples load
-  with a non-empty BOM, the Check-circuit validator flags a missing GND, and the Uno blink
+- `store.test.ts` — undo/redo, duplicate keeps internal wires, rotation cycles, all 95+ catalog
+  parts move/rotate/flip/duplicate/delete, examples load with a non-empty BOM, and the Uno blink
   example lights its LED through breadboard holes.
+- Motor-driver coverage checks both L298N and TB6612FNG H-bridges for forward/reverse motor drive.
 
 ---
 

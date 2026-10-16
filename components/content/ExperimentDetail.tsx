@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowLeft, Beaker, ChevronRight, ClipboardCheck, FlaskConical, NotebookPen } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import type { ExperimentEntry } from '@/lib/schemas';
+import type { QuestionAnswer } from '@/lib/question-bank';
 import { formatLevel } from '@/lib/labels';
 import { Tabs } from '@/components/ui/Tabs';
 import { Card, CardBody, CardHeader, CardTitle } from '@/components/ui/Card';
@@ -14,13 +15,24 @@ import { MathText } from './MathText';
 import { VivaAccordion } from './VivaAccordion';
 import { ViewTracker } from './ViewTracker';
 
-export function ExperimentDetail({ experiment, quizSlug, quizCount }: { experiment: ExperimentEntry; quizSlug?: string; quizCount?: number }) {
+export function ExperimentDetail({
+  experiment,
+  quizSlug,
+  quizCount,
+  supplementalViva = []
+}: {
+  experiment: ExperimentEntry;
+  quizSlug?: string;
+  quizCount?: number;
+  supplementalViva?: QuestionAnswer[];
+}) {
   const locale = useLocale() as 'bn' | 'en';
   const t = useTranslations();
   const title = locale === 'bn' ? experiment.title_bn : experiment.title_en;
   const choose = (en: string, bn?: string) => locale === 'bn' ? bn ?? en : en;
   const keyPoints = locale === 'bn' ? experiment.key_points_bn ?? experiment.key_points : experiment.key_points;
   const reportPoints = locale === 'bn' ? experiment.report_bn ?? experiment.report : experiment.report;
+  const vivaQuestions = [...experiment.viva, ...supplementalViva];
   const tabs = [
     { id: 'aim', label: t('experiments.aim'), content: <p className="text-sm leading-7 muted"><MathText text={choose(experiment.aim, experiment.aim_bn)} /></p> },
     { id: 'theory', label: t('experiments.theory'), content: <p className="text-sm leading-7 muted"><MathText text={choose(experiment.theory, experiment.theory_bn)} /></p> },
@@ -28,7 +40,7 @@ export function ExperimentDetail({ experiment, quizSlug, quizCount }: { experime
     { id: 'procedure', label: t('experiments.procedure'), content: <ExperimentSteps steps={locale === 'bn' ? experiment.procedure_bn ?? experiment.procedure : experiment.procedure} /> },
     { id: 'observation', label: t('experiments.observation'), content: <ObservationTable headers={locale === 'bn' ? experiment.observation_table.headers_bn ?? experiment.observation_table.headers : experiment.observation_table.headers} rows={experiment.observation_table.rows} /> },
     { id: 'calculation', label: t('experiments.calculation'), content: <p className="text-sm leading-7 muted"><MathText text={choose(experiment.calculation, experiment.calculation_bn)} /></p> },
-    { id: 'viva', label: t('experiments.viva'), content: <VivaAccordion items={experiment.viva} locale={locale} /> }
+    { id: 'viva', label: `${t('experiments.viva')} (${vivaQuestions.length})`, content: <VivaAccordion items={vivaQuestions} locale={locale} /> }
   ];
   return (
     <section className="page-shell section-space">

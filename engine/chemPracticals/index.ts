@@ -7,6 +7,9 @@ import { electroModels } from './electro';
 import { thermalModels } from './thermal';
 import { kineticsModels } from './kinetics';
 import { extendedModels } from './extended';
+import { analyticalModels } from './analytical';
+import { curveModels } from './curves';
+import { physicoModels } from './physico';
 import { matchTask, withDefaults, zeroNoise } from './helpers';
 
 export * from './types';
@@ -32,7 +35,10 @@ export const allChemPracticalModels: ChemPracticalModel[] = [
   ...electroModels,
   ...thermalModels,
   ...kineticsModels,
-  ...extendedModels
+  ...extendedModels,
+  ...analyticalModels,
+  ...curveModels,
+  ...physicoModels
 ];
 
 export const chemPracticalModels: Record<string, ChemPracticalModel> = Object.fromEntries(allChemPracticalModels.map((m) => [m.slug, m]));

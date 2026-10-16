@@ -43,10 +43,10 @@ export function VesselStation({ vessel, index, selected, onSelect }: { vessel: V
   const gasTarget = vessels.find((other) => other.id !== vessel.id && apparatusById.get(other.apparatusId)?.acceptsGas);
   const pourTarget = vessels.find((other) => other.id !== vessel.id);
   const canHeat = view.apparatus?.canHeat ?? false;
-  const hasExternalThermometer = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId)?.shape === 'thermometer');
-  const hasExternalCell = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId)?.shape === 'cell');
-  const hasExternalBurner = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId)?.shape === 'burner');
-  const hasExternalTripod = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId)?.shape === 'tripod');
+  const hasExternalThermometer = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId ?? '')?.shape === 'thermometer');
+  const hasExternalCell = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId ?? '')?.shape === 'cell');
+  const hasExternalBurner = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId ?? '')?.shape === 'burner');
+  const hasExternalTripod = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId ?? '')?.shape === 'tripod');
   const phColor = view.ph === null ? '#cbd5e1' : indicatorColor('universal', view.ph);
 
   return (

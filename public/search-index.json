@@ -7702,8 +7702,8 @@
     "subject": "chemistry",
     "title_en": "Guided chemistry experiments",
     "title_bn": "গাইডেড কেমিস্ট্রি পরীক্ষা",
-    "description_en": "46 walkthroughs that set the virtual bench up for you and tick each step off — each with an interactive practical simulation.",
-    "description_bn": "46টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে — প্রতিটির সাথে ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল সিমুলেশন।",
+    "description_en": "67 walkthroughs that set the virtual bench up for you and tick each step off — each with an interactive practical simulation.",
+    "description_bn": "67টি ধাপে ধাপে পরীক্ষা, যেগুলো ভার্চুয়াল বেঞ্চ সাজিয়ে দেয় এবং প্রতিটি ধাপ যাচাই করে — প্রতিটির সাথে ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল সিমুলেশন।",
     "href": "/lab/experiments",
     "tags": [
       "experiments",
@@ -7716,8 +7716,8 @@
     "subject": "chemistry",
     "title_en": "Chemistry practical simulations",
     "title_bn": "রসায়ন প্র্যাকটিক্যাল সিমুলেশন",
-    "description_en": "46 interactive practicals: titrations, ion tests, gas preparation, electrolysis, rates and more — take readings, fill the observation table and check your result.",
-    "description_bn": "46টি ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল: টাইট্রেশন, আয়ন শনাক্তকরণ, গ্যাস প্রস্তুতি, তড়িৎবিশ্লেষণ, বিক্রিয়ার হার ও আরও — পাঠ নাও, পর্যবেক্ষণ সারণি পূরণ করো এবং ফলাফল যাচাই করো।",
+    "description_en": "67 interactive practicals: titrations, ion tests, gas preparation, electrolysis, rates and more — take readings, fill the observation table and check your result.",
+    "description_bn": "67টি ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল: টাইট্রেশন, আয়ন শনাক্তকরণ, গ্যাস প্রস্তুতি, তড়িৎবিশ্লেষণ, বিক্রিয়ার হার ও আরও — পাঠ নাও, পর্যবেক্ষণ সারণি পূরণ করো এবং ফলাফল যাচাই করো।",
     "href": "/lab/experiments",
     "tags": [
       "simulation",
@@ -8529,6 +8529,405 @@
       "separation",
       "distillation",
       "salt-water"
+    ]
+  },
+  {
+    "slug": "lab-mohr-chloride-titration",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Estimation of chloride by the Mohr method",
+    "title_bn": "মোহর পদ্ধতিতে ক্লোরাইডের পরিমাণ",
+    "description_en": "To estimate the chloride content of an unknown solution by titrating it with standard silver nitrate, using potassium chromate as the indicator.",
+    "description_bn": "পটাসিয়াম ক্রোমেট নির্দেশক ব্যবহার করে মানক সিলভার নাইট্রেট দিয়ে অজানা দ্রবণের ক্লোরাইড পরিমাণ নির্ণয় করা।",
+    "href": "/lab/experiments/mohr-chloride-titration",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "titration",
+      "mohr",
+      "precipitation",
+      "chloride"
+    ]
+  },
+  {
+    "slug": "lab-volhard-back-titration",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Estimation of chloride by Volhard back-titration",
+    "title_bn": "ভলহার্ড ব্যাক-টাইট্রেশনে ক্লোরাইডের পরিমাণ",
+    "description_en": "To determine the chloride content of a sample by adding excess silver nitrate and back-titrating the surplus with potassium thiocyanate.",
+    "description_bn": "অতিরিক্ত সিলভার নাইট্রেট যোগ করে এবং অবশিষ্ট অংশ পটাসিয়াম থায়োসায়ানেট দিয়ে ব্যাক-টাইট্রেট করে নমুনার ক্লোরাইড পরিমাণ নির্ণয় করা।",
+    "href": "/lab/experiments/volhard-back-titration",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "titration",
+      "back-titration",
+      "volhard",
+      "chloride"
+    ]
+  },
+  {
+    "slug": "lab-edta-water-hardness",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Determination of the hardness of water by EDTA titration",
+    "title_bn": "EDTA টাইট্রেশনে পানির কঠিনতা নির্ণয়",
+    "description_en": "To find the total hardness of a water sample by complexometric titration with standard EDTA, expressing the result as CaCO₃ in mg L⁻¹.",
+    "description_bn": "মানক EDTA দিয়ে কমপ্লেক্সোমেট্রিক টাইট্রেশনে পানির নমুনার মোট কঠিনতা নির্ণয় করা এবং ফলাফল mg L⁻¹ CaCO₃ হিসেবে প্রকাশ করা।",
+    "href": "/lab/experiments/edta-water-hardness",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "titration",
+      "edta",
+      "complexometry",
+      "hardness"
+    ]
+  },
+  {
+    "slug": "lab-standardise-hcl-carbonate",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Standardisation of hydrochloric acid with sodium carbonate",
+    "title_bn": "সোডিয়াম কার্বোনেট দিয়ে হাইড্রোক্লোরিক অ্যাসিড মানক করা",
+    "description_en": "To find the exact molarity of the hydrochloric acid by titrating it against a primary standard of dried sodium carbonate.",
+    "description_bn": "শুকানো সোডিয়াম কার্বোনেটের প্রাথমিক মানকের বিরুদ্ধে টাইট্রেট করে হাইড্রোক্লোরিক অ্যাসিডের নির্দিষ্ট মোলারিটি বের করা।",
+    "href": "/lab/experiments/standardise-hcl-carbonate",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "standardisation",
+      "titration",
+      "primary-standard",
+      "acid"
+    ]
+  },
+  {
+    "slug": "lab-standardise-naoh-oxalic",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Standardisation of sodium hydroxide with oxalic acid",
+    "title_bn": "অক্সালিক অ্যাসিড দিয়ে সোডিয়াম হাইড্রোক্সাইড মানক করা",
+    "description_en": "To standardise sodium hydroxide against oxalic acid, a primary standard that reacts with sodium hydroxide in a 1:2 ratio.",
+    "description_bn": "অক্সালিক অ্যাসিডের বিরুদ্ধে সোডিয়াম হাইড্রোক্সাইড মানক করা — এটি সোডিয়াম হাইড্রোক্সাইডের সঙ্গে ১:২ অনুপাতে বিক্রিয়া করে।",
+    "href": "/lab/experiments/standardise-naoh-oxalic",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "standardisation",
+      "titration",
+      "primary-standard",
+      "base"
+    ]
+  },
+  {
+    "slug": "lab-copper-iodometry",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Estimation of copper(II) by iodometry",
+    "title_bn": "আয়োডোমেট্রি দিয়ে কপার(II) এর পরিমাণ নির্ণয়",
+    "description_en": "To estimate copper(II) in an unknown solution by liberating iodine with potassium iodide and titrating the iodine with sodium thiosulphate.",
+    "description_bn": "পটাসিয়াম আয়োডাইড দিয়ে আয়োডিন মুক্ত করে ও তা সোডিয়াম থায়োসালফেটে টাইট্রেট করে অজানা দ্রবণে কপার(II) নির্ণয় করা।",
+    "href": "/lab/experiments/copper-iodometry",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "titration",
+      "iodometry",
+      "redox",
+      "copper"
+    ]
+  },
+  {
+    "slug": "lab-vitamin-c-iodometry",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Estimation of vitamin C in a tablet by iodometry",
+    "title_bn": "আয়োডোমেট্রি দিয়ে ট্যাবলেটে ভিটামিন সির পরিমাণ নির্ণয়",
+    "description_en": "To find the mass of vitamin C in a tablet by titrating it with standard iodine in the presence of starch.",
+    "description_bn": "স্টার্চের উপস্থিতিতে মানক আয়োডিন দিয়ে টাইট্রেট করে ট্যাবলেটে ভিটামিন সির ভর নির্ণয় করা।",
+    "href": "/lab/experiments/vitamin-c-iodometry",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "titration",
+      "iodometry",
+      "vitamin-c",
+      "food"
+    ]
+  },
+  {
+    "slug": "lab-winkler-dissolved-oxygen",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Determination of dissolved oxygen by the Winkler method",
+    "title_bn": "উইঙ্কলার পদ্ধতিতে দ্রবীভূত অক্সিজেন নির্ণয়",
+    "description_en": "To measure the dissolved oxygen in a water sample by the Winkler iodometric method and express it in mg L⁻¹.",
+    "description_bn": "উইঙ্কলার আয়োডোমেট্রিক পদ্ধতিতে পানির নমুনায় দ্রবীভূত অক্সিজেন মেপে mg L⁻¹-এ প্রকাশ করা।",
+    "href": "/lab/experiments/winkler-dissolved-oxygen",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "iodometry",
+      "winkler",
+      "water-testing",
+      "oxygen"
+    ]
+  },
+  {
+    "slug": "lab-double-indicator-carbonate",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Titration of a carbonate solution with two indicators",
+    "title_bn": "দুটি নির্দেশক দিয়ে কার্বোনেট দ্রবণের টাইট্রেশন",
+    "description_en": "To find the carbonate and hydrogen carbonate content of a solution by titrating it with hydrochloric acid using phenolphthalein and then methyl orange.",
+    "description_bn": "ফেনফথ্যালিন ও মিথাইল অরেঞ্জ ব্যবহার করে হাইড্রোক্লোরিক অ্যাসিড টাইট্রেশনে কার্বোনেট ও হাইড্রোজেন কার্বোনেটের পরিমাণ নির্ণয় করা।",
+    "href": "/lab/experiments/double-indicator-carbonate",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "titration",
+      "carbonate",
+      "double-indicator",
+      "acid-base"
+    ]
+  },
+  {
+    "slug": "lab-conductometric-titration",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Conductometric titration of a strong acid with a strong base",
+    "title_bn": "তীব্র অ্যাসিড ও তীব্র ক্ষারের পরিবাহিতা টাইট্রেশন",
+    "description_en": "To find the equivalence point of a hydrochloric acid–sodium hydroxide titration by plotting conductance against the volume of base added.",
+    "description_bn": "যোগ করা ক্ষারের আয়তন বনাম পরিবাহিতার লেখচিত্র এঁকে হাইড্রোক্লোরিক অ্যাসিড–সোডিয়াম হাইড্রোক্সাইড টাইট্রেশনের সমতুল্যবিন্দু নির্ণয় করা।",
+    "href": "/lab/experiments/conductometric-titration",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "titration",
+      "conductometry",
+      "curve",
+      "acid-base"
+    ]
+  },
+  {
+    "slug": "lab-potentiometric-redox-titration",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Potentiometric titration of iron(II) with cerium(IV)",
+    "title_bn": "সেরিয়াম(IV) দিয়ে আয়রন(II) এর পটেনশিওমেট্রিক টাইট্রেশন",
+    "description_en": "To find the equivalence point of the iron(II)–cerium(IV) reaction by plotting the cell potential against the volume of titrant.",
+    "description_bn": "টাইট্রেন্টের আয়তন বনাম কোষের বিভবের লেখচিত্র এঁকে আয়রন(II)–সেরিয়াম(IV) বিক্রিয়ার সমতুল্যবিন্দু নির্ণয় করা।",
+    "href": "/lab/experiments/potentiometric-redox-titration",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "titration",
+      "potentiometry",
+      "redox",
+      "curve"
+    ]
+  },
+  {
+    "slug": "lab-beer-lambert-absorbance",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Beer–Lambert law: absorbance and concentration",
+    "title_bn": "বিয়ার–ল্যাম্বার্ট সূত্র: শোষণ রং ও ঘনত্ব",
+    "description_en": "To verify the Beer–Lambert law by plotting the absorbance of a coloured solution against its concentration and finding the molar absorptivity.",
+    "description_bn": "রঙিন দ্রবণের শোষণ রং বনাম ঘনত্বের লেখচিত্র এঁকে বিয়ার–ল্যাম্বার্ট সূত্র যাচাই করা এবং মোলার শোষণী গ্রহণযোগ্যতা বের করা।",
+    "href": "/lab/experiments/beer-lambert-absorbance",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "spectrophotometry",
+      "beer-lambert",
+      "graph",
+      "solutions"
+    ]
+  },
+  {
+    "slug": "lab-charcoal-adsorption-isotherm",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Adsorption of acetic acid on charcoal",
+    "title_bn": "কয়লায় অ্যাসিটিক অ্যাসিডের শোষণ",
+    "description_en": "To study the adsorption of acetic acid from solution by activated charcoal and to determine the saturation capacity of the charcoal.",
+    "description_bn": "দ্রবণ থেকে সক্রিয় কয়লা দ্বারা অ্যাসিটিক অ্যাসিডের শোষণ পড়া এবং কয়লার সম্পৃক্তি ধারণক্ষমতা নির্ণয় করা।",
+    "href": "/lab/experiments/charcoal-adsorption-isotherm",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "adsorption",
+      "isotherm",
+      "charcoal",
+      "equilibrium"
+    ]
+  },
+  {
+    "slug": "lab-partition-coefficient",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Partition of iodine between water and carbon tetrachloride",
+    "title_bn": "পানি ও কার্বন টেট্রাক্লোরাইডে আয়োডিনের পার্টিশন",
+    "description_en": "To determine the partition coefficient of iodine between carbon tetrachloride and water from the concentrations in the two layers.",
+    "description_bn": "দুই স্তরের ঘনত্ব থেকে কার্বন টেট্রাক্লোরাইড ও পানির মধ্যে আয়োডিনের পার্টিশন গুণাঙ্ক নির্ণয় করা।",
+    "href": "/lab/experiments/partition-coefficient",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "partition",
+      "equilibrium",
+      "solvent",
+      "iodine"
+    ]
+  },
+  {
+    "slug": "lab-stalagmometer-surface-tension",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Surface tension by the drop-weight method",
+    "title_bn": "ফোঁটা-ভর পদ্ধতিতে পৃষ্ঠত্বণ নির্ণয়",
+    "description_en": "To find the surface tension of a liquid by counting the drops that fall from a stalagmometer of known volume.",
+    "description_bn": "জানা আয়তনের স্ট্যালাগমোমিটার থেকে পড়া ফোঁটা গুনে তরলের পৃষ্ঠত্বণ নির্ণয় করা।",
+    "href": "/lab/experiments/stalagmometer-surface-tension",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "surface-tension",
+      "drops",
+      "physical-property",
+      "measurement"
+    ]
+  },
+  {
+    "slug": "lab-ostwald-viscometer-viscosity",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Relative viscosity with an Ostwald viscometer",
+    "title_bn": "ওস্টওয়াল্ড ভিসকোমিটারে আপেক্ষিক সান্দ্রতা",
+    "description_en": "To compare the viscosity of a solution with that of water by timing the efflux of both liquids in an Ostwald viscometer.",
+    "description_bn": "ওস্টওয়াল্ড ভিসকোমিটারে দুই তরলের প্রবাহকাল মেপে দ্রবণের সান্দ্রতা পানির সঙ্গে তুলনা করা।",
+    "href": "/lab/experiments/ostwald-viscometer-viscosity",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "viscosity",
+      "ostwald",
+      "physical-property",
+      "measurement"
+    ]
+  },
+  {
+    "slug": "lab-freezing-point-depression",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Freezing-point depression and the van ’t Hoff factor",
+    "title_bn": "ফ্রিজিং পয়েন্ট অবনমন ও ভ্যান ’ট হোফ ফ্যাক্টর",
+    "description_en": "To measure the freezing point of solutions of glucose, sodium chloride and calcium chloride and deduce the van ’t Hoff factor of each.",
+    "description_bn": "গ্লুকোজ, সোডিয়াম ক্লোরাইড ও ক্যালসিয়াম ক্লোরাইড দ্রবণের ফ্রিজিং পয়েন্ট মেপে প্রতিটির ভ্যান ’ট হোফ ফ্যাক্টর বের করা।",
+    "href": "/lab/experiments/freezing-point-depression",
+    "tags": [
+      "lab",
+      "simulation",
+      "class-11-12",
+      "colligative-property",
+      "freezing-point",
+      "van-t-hoff",
+      "electrolyte"
+    ]
+  },
+  {
+    "slug": "lab-conductance-cell-constant",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Cell constant of a conductivity cell",
+    "title_bn": "পরিবাহিতা সেলের ধ্রুববই নির্ণয়",
+    "description_en": "To determine the cell constant of a conductivity cell using standard potassium chloride solutions of known conductivity.",
+    "description_bn": "জানা পরিবাহিতার পটাসিয়াম ক্লোরাইড মানক দিয়ে পরিবাহিতা সেলের ধ্রুববই নির্ণয় করা।",
+    "href": "/lab/experiments/conductance-cell-constant",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "conductometry",
+      "cell-constant",
+      "standardisation",
+      "measurement"
+    ]
+  },
+  {
+    "slug": "lab-ester-hydrolysis-kinetics",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Kinetics of the acid hydrolysis of an ester",
+    "title_bn": "এস্টারের অ্যাসিড হাইড্রোলাইসের গতিবিদ্যা",
+    "description_en": "To follow the hydrolysis of methyl acetate in acid by titration and to find the first-order rate constant from a plot of ln[ester] against time.",
+    "description_bn": "অ্যাসিডে মিথাইল অ্যাসিটেটের হাইড্রোলাইস টাইট্রেশন দিয়ে অনুসরণ করে ln[এস্টার] বনাম সময়ের লেখচিত্র থেকে প্রথম-ক্রম বিক্রিয়া ধ্রুববই বের করা।",
+    "href": "/lab/experiments/ester-hydrolysis-kinetics",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "kinetics",
+      "first-order",
+      "ester",
+      "titration"
+    ]
+  },
+  {
+    "slug": "lab-aspirin-synthesis",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "Synthesis of aspirin and its percentage yield",
+    "title_bn": "অ্যাসপিরিন সংশ্লেষণ ও শতকরা প্রাপ্তি",
+    "description_en": "To prepare aspirin from salicylic acid and acetic anhydride and to calculate the percentage yield from the mass of dried crystals.",
+    "description_bn": "স্যালিসিলিক অ্যাসিড ও অ্যাসিটিক অ্যানহাইড্রাইড থেকে অ্যাসপিরিন তৈরি করা এবং শুকানো স্ফটিকের ভর থেকে শতকরা প্রাপ্তি বের করা।",
+    "href": "/lab/experiments/aspirin-synthesis",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "synthesis",
+      "organic",
+      "aspirin",
+      "yield"
+    ]
+  },
+  {
+    "slug": "lab-nernst-concentration-cell",
+    "kind": "lab",
+    "subject": "chemistry",
+    "title_en": "The Nernst equation with a copper concentration cell",
+    "title_bn": "কপার ঘনত্ব কোষে নার্নস্ট সমীকরণ",
+    "description_en": "To measure the EMF of a copper concentration cell and check it against the Nernst equation.",
+    "description_bn": "কপার ঘনত্ব কোষের EMF মেপে নার্নস্ট সমীকরণের সঙ্গে মিলিয়ে দেখা।",
+    "href": "/lab/experiments/nernst-concentration-cell",
+    "tags": [
+      "lab",
+      "simulation",
+      "honours",
+      "electrochemistry",
+      "nernst",
+      "concentration-cell",
+      "voltage"
     ]
   }
 ]

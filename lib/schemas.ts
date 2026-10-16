@@ -90,6 +90,8 @@ export const experimentFrontmatterSchema = z.object({
   sources_of_error_bn: z.array(z.string()).optional(),
   viva: z.array(z.object({ q: z.string(), a: z.string(), q_bn: z.string().optional(), a_bn: z.string().optional() })),
   simulation: z.string().optional(),
+  /** Slug of a Chemistry Lab practical whose simulation matches this experiment. */
+  lab_practical: z.string().optional(),
   tags: z.array(z.string()).default([])
 });
 

@@ -210,6 +210,74 @@ const walkthroughs: Record<string, (b: Bench) => void> = {
   'simple-distillation-salt-water': (b) => {
     b.heat(0, 600);
     b.add(1, 'H2O', 10);
+  },
+  'mohr-chloride-titration': (b) => {
+    b.add(0, 'K2CrO4', 1);
+    b.add(0, 'AgNO3', 10);
+  },
+  'volhard-back-titration': (b) => {
+    b.add(0, 'FeCl3', 1);
+    b.add(0, 'KSCN', 5);
+  },
+  'edta-water-hardness': (b) => {
+    b.add(0, 'EDTA', 25);
+  },
+  'standardise-hcl-carbonate': (b) => {
+    b.add(0, 'methyl-orange', 1);
+    b.add(0, 'HCl', 5);
+  },
+  'standardise-naoh-oxalic': (b) => {
+    b.add(0, 'phenolphthalein', 1);
+  },
+  'copper-iodometry': (b) => {
+    b.add(0, 'starch', 1);
+  },
+  'vitamin-c-iodometry': (b) => {
+    b.add(0, 'starch', 1);
+  },
+  'winkler-dissolved-oxygen': (b) => {
+    b.add(0, 'H2SO4', 5);
+  },
+  'double-indicator-carbonate': (b) => {
+    b.add(0, 'phenolphthalein', 1);
+    b.add(0, 'HCl', 5);
+    b.add(0, 'methyl-orange', 1);
+  },
+  'conductometric-titration': (b) => {
+    b.add(0, 'NaOH', 5);
+  },
+  'potentiometric-redox-titration': (b) => {
+    b.add(1, 'Ce4+', 5);
+  },
+  'beer-lambert-absorbance': (b) => {
+    b.add(1, 'KMnO4', 2);
+  },
+  'charcoal-adsorption-isotherm': (b) => {
+    b.add(0, 'NaOH', 5);
+  },
+  'partition-coefficient': (b) => {
+    b.add(1, 'iodine', 1);
+  },
+  'stalagmometer-surface-tension': (b) => {
+    b.add(1, 'H2O', 2);
+  },
+  'ostwald-viscometer-viscosity': (b) => {
+    b.add(1, 'sucrose', 5);
+  },
+  'freezing-point-depression': (b) => {
+    b.add(2, 'H2O', 20);
+  },
+  'conductance-cell-constant': (b) => {
+    b.add(1, 'KCl', 5);
+  },
+  'ester-hydrolysis-kinetics': (b) => {
+    b.heat(0, 30);
+  },
+  'aspirin-synthesis': (b) => {
+    b.heat(0, 30);
+  },
+  'nernst-concentration-cell': (b) => {
+    b.add(2, 'KNO3', 5);
   }
 };
 

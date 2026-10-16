@@ -4,10 +4,12 @@ import { useDroppable } from '@dnd-kit/core';
 import { cn } from '@/lib/utils';
 import { labT } from '@/lib/i18n';
 import { apparatus, vessels as glassware } from '@/lib/labData';
+import { labInstrumentSize } from '@/lib/labInstruments';
 import { useLabStore, MAX_VESSELS, type BenchPoint } from '@/store/labStore';
 import type { ElementSample, Vessel } from '@/engine/types';
 import { ApparatusGlyph } from './Apparatus';
 import { BenchEquipmentItem, benchEquipmentSize } from './BenchEquipmentItem';
+import { BenchInstrumentItem } from './BenchInstrumentItem';
 import { ElementSampleItem } from './ElementSampleItem';
 import { VesselStation } from './VesselStation';
 import type { DropTargetData } from './dragTypes';
@@ -88,6 +90,12 @@ export function Workbench() {
       height = Math.max(height, p.y + VESSEL_HEIGHT + 48);
     });
     benchEquipment.forEach((item) => {
+      if (item.instrumentId) {
+        const size = labInstrumentSize(item.instrumentId);
+        width = Math.max(width, item.x + size.width + 48);
+        height = Math.max(height, item.y + size.height + 48);
+        return;
+      }
       const apparatusItem = apparatus.find((entry) => entry.id === item.apparatusId);
       const size = benchEquipmentSize(apparatusItem?.shape ?? 'spatula');
       width = Math.max(width, item.x + size.width + 48);
@@ -406,19 +414,34 @@ export function Workbench() {
             })}
 
             {benchEquipment.map((item) => (
-              <BenchEquipmentItem
-                key={item.id}
-                item={item}
-                locale={locale}
-                selected={selectedPlacement?.type === 'equipment' && selectedPlacement.id === item.id}
-                dragging={draggingId === item.id}
-                vessel={item.linkedVesselId ? vessels.find((vessel) => vessel.id === item.linkedVesselId) ?? null : null}
-                onPointerDown={(event, id) => beginGesture(event, id, 'equipment')}
-                onSelect={selectEquipment}
-                onRemove={removeBenchEquipment}
-                onDuplicate={duplicateBenchEquipment}
-                onRotate={rotateBenchEquipment}
-              />
+              item.instrumentId ? (
+                <BenchInstrumentItem
+                  key={item.id}
+                  item={item}
+                  locale={locale}
+                  selected={selectedPlacement?.type === 'equipment' && selectedPlacement.id === item.id}
+                  dragging={draggingId === item.id}
+                  onPointerDown={(event, id) => beginGesture(event, id, 'equipment')}
+                  onSelect={selectEquipment}
+                  onRemove={removeBenchEquipment}
+                  onDuplicate={duplicateBenchEquipment}
+                  onRotate={rotateBenchEquipment}
+                />
+              ) : (
+                <BenchEquipmentItem
+                  key={item.id}
+                  item={item}
+                  locale={locale}
+                  selected={selectedPlacement?.type === 'equipment' && selectedPlacement.id === item.id}
+                  dragging={draggingId === item.id}
+                  vessel={item.linkedVesselId ? vessels.find((vessel) => vessel.id === item.linkedVesselId) ?? null : null}
+                  onPointerDown={(event, id) => beginGesture(event, id, 'equipment')}
+                  onSelect={selectEquipment}
+                  onRemove={removeBenchEquipment}
+                  onDuplicate={duplicateBenchEquipment}
+                  onRotate={rotateBenchEquipment}
+                />
+              )
             ))}
 
             {elementSamples.map((sample: ElementSample) => (
@@ -439,7 +462,7 @@ export function Workbench() {
               <button
                 type="button"
                 onClick={() => addVessel('test-tube')}
-                style={{ position: 'absolute', left: 24, top: 122 }}
+                style={{ position: 'absolute', left: 24, top: 56 }}
                 className="flex h-9 items-center gap-2 rounded-xl border border-slate-400/70 bg-white/70 px-3 text-[10px] font-extrabold text-slate-600 shadow-sm transition hover:bg-white hover:text-chemistry-700"
                 aria-label={labT(locale, 'bench.addVessel')}
               >

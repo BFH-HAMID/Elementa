@@ -3,7 +3,7 @@
 import React from 'react';
 import { indicatorColor } from '@/engine/phCalc';
 import type { TubesView, TubeView } from '@/engine/chemPracticals';
-import { BENCH, C, Digital, SceneFrame, Stopwatch, Thermometer, Txt, clampN, fmt, pick, vObj, type SceneProps } from '../primitives';
+import { BENCH, C, Digital, SceneFrame, Stopwatch, Thermometer, Txt, clampN, fmt, pick, vNum, vObj, vStr, type SceneProps } from '../primitives';
 import { Bunsen, TubeHolder } from './shared';
 import { Bulb, Dropper, PaperStrip, RackBack, RackFront, Wire } from '../kit';
 import { DeliveryTube, TestTube } from '../glass';
@@ -75,6 +75,9 @@ export function TubesScene({ view, t, bn }: SceneProps) {
     return top + TUBE_H - 1.6 - clampN(spec.level ?? 0.45, 0, 0.95) * (TUBE_H - 8);
   };
   const bath = vObj<{ temp: number; tube?: number }>(view, 'bath');
+  const meterLabel = vStr(view, 'meterLabel', bn ? 'pH মিটার' : 'pH meter');
+  const meterUnit = vStr(view, 'meterUnit', '');
+  const meterDigits = vNum(view, 'meterDigits', 2);
   const rackX0 = rackTubes.length ? tubeX(rackTubes[0].i) - w : left;
   const rackX1 = rackTubes.length ? tubeX(rackTubes[rackTubes.length - 1].i) + w : right;
   const heatedTop = TUBE_TOP - 62;
@@ -145,7 +148,7 @@ export function TubesScene({ view, t, bn }: SceneProps) {
         <g>
           <path d={`M ${tubeX(v.meter.tube) + 8} ${TUBE_TOP - 24} C ${tubeX(v.meter.tube) + 24} ${TUBE_TOP - 70} 470 ${TUBE_TOP - 60} 500 ${TUBE_TOP - 20}`} fill="none" stroke="#2b333c" strokeWidth="2" />
           <rect x={tubeX(v.meter.tube) + 4} y={TUBE_TOP - 26} width="5" height={liquidTop(all[v.meter.tube]) - TUBE_TOP + 56} rx="2" fill="#e9eef3" stroke="#7d8995" strokeWidth="0.8" />
-          <Digital x={472} y={TUBE_TOP - 26} w={112} h={50} value={fmt(v.meter.value, 2)} label={bn ? 'pH মিটার' : 'pH meter'} />
+          <Digital x={472} y={TUBE_TOP - 26} w={112} h={50} value={fmt(v.meter.value, meterDigits)} unit={meterUnit} label={meterLabel} />
         </g>
       )}
       {/* conductivity tester */}

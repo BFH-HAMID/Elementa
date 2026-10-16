@@ -56,6 +56,34 @@ describe('instrument artwork', () => {
       }
     });
   }
+
+  it('shows a rated incandescent bulb as an unmistakably bright light source', () => {
+    const entry = EQUIPMENT_ART['incandescent-bulb'];
+    const svg = renderToStaticMarkup(
+      <svg viewBox={entry.vb} xmlns="http://www.w3.org/2000/svg">
+        <entry.Comp
+          {...baseCtx}
+          live
+          p={{ ratedVoltage: 6, ratedPower: 3, filamentColdResistance: 4 }}
+          res={{
+            itemId: 'bulb',
+            voltageDrop: 6,
+            current: 0.5,
+            power: 3,
+            burnedOut: false,
+            luminousIntensity: 1.15,
+            filamentTemperatureC: 2700,
+            colorTemperatureK: 2700,
+            effectiveResistance: 12
+          }}
+        />
+      </svg>
+    );
+    expect(svg).toContain('data-bulb-state="very-bright"');
+    expect(svg).toContain('ix-glow-bulb-outer');
+    expect(svg).toContain('ix-bloom-strong');
+    expect(svg).toContain('BRIGHT');
+  });
 });
 
 /**

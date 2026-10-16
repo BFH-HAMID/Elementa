@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { solveCircuit } from '../circuitSolver';
+import { bulbOperatingPoint, solveCircuit } from '../circuitSolver';
 import type { BenchItem, CircuitWire } from '../physicsTypes';
 
 describe('Circuit Solver Engine (MNA)', () => {
@@ -131,6 +131,51 @@ describe('Circuit Solver Engine (MNA)', () => {
     const result = solveCircuit(items, wires);
     expect(result.isOpenCircuit).toBe(true);
     expect(result.componentResults['res-1'].current).toBeLessThan(1e-5);
+  });
+
+  it('heats a rated incandescent bulb to its bright hot-filament operating point', () => {
+    const items: BenchItem[] = [
+      {
+        id: 'batt-1',
+        equipmentId: 'battery-dc',
+        x: 0,
+        y: 0,
+        rotation: 0,
+        properties: { voltage: 6, internalResistance: 0 },
+        state: {}
+      },
+      {
+        id: 'bulb-1',
+        equipmentId: 'incandescent-bulb',
+        x: 100,
+        y: 0,
+        rotation: 0,
+        properties: { ratedVoltage: 6, ratedPower: 3, filamentColdResistance: 4 },
+        state: {}
+      }
+    ];
+    const wires: CircuitWire[] = [
+      { id: 'w1', fromItemId: 'batt-1', fromTerminalId: 'pos', toItemId: 'bulb-1', toTerminalId: 't1', color: 'red' },
+      { id: 'w2', fromItemId: 'bulb-1', fromTerminalId: 't2', toItemId: 'batt-1', toTerminalId: 'neg', color: 'black' }
+    ];
+
+    const result = solveCircuit(items, wires).componentResults['bulb-1'];
+    expect(result.burnedOut).toBe(false);
+    expect(result.effectiveResistance).toBeCloseTo(12, 1);
+    expect(result.current).toBeCloseTo(0.5, 2);
+    expect(result.power).toBeCloseTo(3, 1);
+    expect(result.luminousIntensity).toBeGreaterThan(1);
+    expect(result.filamentTemperatureC).toBeGreaterThan(2500);
+    expect(result.colorTemperatureK).toBeGreaterThan(2500);
+  });
+
+  it('renders under-voltage bulbs as physically dimmer and warmer', () => {
+    const dim = bulbOperatingPoint(3, 6, 3, 4);
+    const rated = bulbOperatingPoint(6, 6, 3, 4);
+    expect(dim.effectiveResistance).toBeGreaterThan(4);
+    expect(dim.effectiveResistance).toBeLessThan(rated.effectiveResistance);
+    expect(dim.luminousIntensity).toBeLessThan(rated.luminousIntensity * 0.25);
+    expect(dim.colorTemperatureK).toBeLessThan(rated.colorTemperatureK);
   });
 
   it('detects bulb burnout when overpowered', () => {

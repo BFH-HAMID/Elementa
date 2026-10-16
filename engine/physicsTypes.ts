@@ -104,6 +104,11 @@ export interface ComponentCircuitResult {
   displayReading?: number;
   displayUnit?: string;
   polarityError?: boolean;
+  /** Incandescent bulb operating data for physically driven light rendering. */
+  effectiveResistance?: number;
+  filamentTemperatureC?: number;
+  luminousIntensity?: number;
+  colorTemperatureK?: number;
 }
 
 export interface CircuitSolverResult {

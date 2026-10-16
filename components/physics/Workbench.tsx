@@ -164,6 +164,23 @@ export function Workbench() {
   // Let the bench fill the visible area even when the tools occupy less of it.
   const canvasWidth = Math.max(world.width, containerWidth > 0 ? Math.floor((containerWidth - 2) / scale) : 0);
 
+  // A lit lamp illuminates the shared bench, not just the pixels inside its card.
+  // This makes rated bulbs read immediately as bright physical light sources.
+  const bulbLights = useMemo(
+    () =>
+      items.flatMap((item) => {
+        if (item.equipmentId !== 'incandescent-bulb') return [];
+        const result = circuitResult.componentResults[item.id];
+        const intensity = Math.max(0, Math.min(1.45, result?.luminousIntensity ?? 0));
+        if (intensity < 0.008 || result?.burnedOut) return [];
+        const def = equipmentById.get(item.equipmentId);
+        const width = def?.width ?? 90;
+        const height = def?.height ?? 90;
+        return [{ id: item.id, x: item.x + width / 2, y: item.y + height * 0.38, intensity }];
+      }),
+    [circuitResult.componentResults, items]
+  );
+
   const toWorld = useCallback((clientX: number, clientY: number) => {
     const rect = worldRef.current?.getBoundingClientRect();
     if (!rect) return { x: 0, y: 0 };
@@ -743,6 +760,28 @@ export function Workbench() {
                     </p>
                   </div>
                 )}
+
+                {/* Warm light cast by solved incandescent-lamp power. */}
+                {bulbLights.map((light) => {
+                  const size = 150 + light.intensity * 105;
+                  return (
+                    <div
+                      key={`lamp-light-${light.id}`}
+                      aria-hidden
+                      className="pointer-events-none absolute z-[2] rounded-full"
+                      style={{
+                        left: light.x - size / 2,
+                        top: light.y - size / 2,
+                        width: size,
+                        height: size,
+                        opacity: Math.min(0.92, 0.2 + light.intensity * 0.58),
+                        background: 'radial-gradient(circle, rgba(255,255,244,.98) 0%, rgba(255,225,132,.62) 17%, rgba(251,191,36,.30) 38%, rgba(245,158,11,.10) 57%, transparent 74%)',
+                        filter: `blur(${Math.max(2, 7 - light.intensity * 3)}px)`,
+                        transform: `scale(${0.92 + light.intensity * 0.08})`
+                      }}
+                    />
+                  );
+                })}
 
                 {/* Tools */}
                 {items.map((item) => {

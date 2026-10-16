@@ -142,6 +142,9 @@ export function EquipmentRenderer({
   const width = def.width || 120;
   const height = def.height || 80;
   const props = item.properties || {};
+  const bulbLight = item.equipmentId === 'incandescent-bulb' && !circuitResult?.burnedOut
+    ? Math.max(0, Math.min(1.45, circuitResult?.luminousIntensity ?? 0))
+    : 0;
   // Narrow tools (lenses, mirrors, screens…) show their full name as a caption under the card.
   const captionBelow = width < 96;
   const name = isBangla ? def.name_bn : def.name_en;
@@ -182,7 +185,10 @@ export function EquipmentRenderer({
         width,
         height,
         transform: `rotate(${item.rotation || 0}deg)`,
-        touchAction: 'none'
+        touchAction: 'none',
+        boxShadow: bulbLight > 0.008
+          ? `0 1px 1px rgba(15,30,48,.10), 0 10px 22px -12px rgba(15,30,48,.55), 0 0 ${18 + bulbLight * 26}px ${4 + bulbLight * 7}px rgba(251,191,36,${Math.min(0.72, 0.22 + bulbLight * 0.34)})`
+          : undefined
       }}
       className={cn(
         'instrument-card group absolute select-none rounded-xl border transition-[box-shadow,border-color]',

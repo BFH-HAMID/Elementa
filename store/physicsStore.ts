@@ -783,8 +783,18 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
   recomputeSimulation: () => {
     const { items, wires, mode, activeExperimentSlug } = get();
 
-    // 1. Circuit Solver
-    const circuitResult = solveCircuit(items, wires);
+    // 1. Circuit Solver. A genuinely over-driven filament burns open and stays
+    // open until the student resets/replaces it, just like the physical bulb.
+    let circuitResult = solveCircuit(items, wires);
+    const newlyBurned = new Set(
+      items
+        .filter((item) => item.equipmentId === 'incandescent-bulb' && !item.burnedOut && circuitResult.componentResults[item.id]?.burnedOut)
+        .map((item) => item.id)
+    );
+    const simulatedItems = newlyBurned.size
+      ? items.map((item) => newlyBurned.has(item.id) ? { ...item, burnedOut: true } : item)
+      : items;
+    if (newlyBurned.size) circuitResult = solveCircuit(simulatedItems, wires);
 
     // 2. Optics simulation
     let opticsResult: OpticsSimulationResult = { rays: [], images: [] };
@@ -836,6 +846,7 @@ export const usePhysicsStore = create<PhysicsStoreState>((set, get) => ({
     }
 
     set({
+      items: simulatedItems,
       circuitResult,
       opticsResult,
       mechanicsState

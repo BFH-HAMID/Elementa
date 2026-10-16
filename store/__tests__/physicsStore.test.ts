@@ -30,6 +30,24 @@ describe('Physics Store', () => {
     expect(usePhysicsStore.getState().circuitResult.isOpenCircuit).toBe(false);
   });
 
+  it('lights a rated bulb brightly and keeps an over-voltage burnout open', () => {
+    const s = usePhysicsStore.getState;
+    const battery = s().addItem('battery-dc', 50, 50);
+    const bulb = s().addItem('incandescent-bulb', 220, 50);
+    s().updateItemProperties(battery, { voltage: 6, internalResistance: 0 });
+    s().connectPorts({ itemId: battery, terminalId: 'pos' }, { itemId: bulb, terminalId: 't1' });
+    s().connectPorts({ itemId: bulb, terminalId: 't2' }, { itemId: battery, terminalId: 'neg' });
+
+    expect(s().items.find((item) => item.id === bulb)?.burnedOut).not.toBe(true);
+    expect(s().circuitResult.componentResults[bulb].luminousIntensity).toBeGreaterThan(1);
+
+    s().updateItemProperties(battery, { voltage: 24 });
+    expect(s().items.find((item) => item.id === bulb)?.burnedOut).toBe(true);
+    expect(s().circuitResult.componentResults[bulb].burnedOut).toBe(true);
+    expect(s().circuitResult.componentResults[bulb].luminousIntensity).toBe(0);
+    expect(s().circuitResult.componentResults[bulb].current).toBeLessThan(1e-6);
+  });
+
   it('loads guided experiment setup correctly', () => {
     usePhysicsStore.getState().loadExperiment('ohms-law');
     expect(usePhysicsStore.getState().activeExperimentSlug).toBe('ohms-law');

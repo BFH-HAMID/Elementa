@@ -46,6 +46,7 @@ export interface PropDef {
 
 export type PartCategory =
   | 'boards'
+  | 'robotics'
   | 'prototyping'
   | 'passives'
   | 'semiconductors'
@@ -76,6 +77,7 @@ export type PartFamily =
   | 'optocoupler'
   | 'ic-dip'
   | 'module' // sensor / display / wireless modules (blue PCB + pins)
+  | 'robotics' // flight electronics, FPV equipment and brushless motors
   | 'battery-9v'
   | 'battery-pack'
   | 'usb-power'
@@ -116,6 +118,7 @@ export type SimModel =
   | { type: 'meter'; variant: 'multimeter' | 'scope' | 'la' | 'fgen' }
   | { type: 'optocoupler' }
   | { type: 'regulator' }
+  | { type: 'robotics'; variant: 'flight-controller' | 'esc' | 'pdb' | 'bms' | 'receiver' | 'fpv-camera' | 'vtx' | 'telemetry' | 'brushless' }
   | { type: 'prototyping' }; // breadboard / perfboard / pcb: connectivity only
 
 export interface PartDef {

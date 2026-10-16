@@ -12,6 +12,7 @@ import type { CircuitProject, PlacedComponent, PlacedWire, PropValue, SimFrame, 
 import type { Viewport } from '@/components/circuit-lab/geometry';
 import { getPart } from '@/components/circuit-lab/parts/registry';
 import { EXAMPLE_PROJECTS } from '@/components/circuit-lab/projects/examples';
+import { getAdvancedProject } from '@/components/circuit-lab/projects/catalog-advanced';
 
 export const CIRCUIT_STORAGE_KEY = 'elementa-circuit-lab:v1';
 const HISTORY_LIMIT = 40;
@@ -51,7 +52,7 @@ export interface CircuitState {
   /** Simulator and sketch messages shown in the bottom panel. */
   simErrors: string[];
   showHelp: boolean;
-  bottomTab: 'serial' | 'examples' | 'analysis' | 'check' | 'guide';
+  bottomTab: 'serial' | 'examples' | 'advanced' | 'analysis' | 'check' | 'guide';
   /** Compact bench summary for the status line. */
   status: string;
 
@@ -459,7 +460,7 @@ export const useCircuitStore = create<CircuitState>()((set, get) => ({
   },
 
   loadExample: (id) => {
-    const ex = EXAMPLE_PROJECTS.find((e) => e.id === id);
+    const ex = EXAMPLE_PROJECTS.find((e) => e.id === id) ?? getAdvancedProject(id);
     if (!ex) return;
     get().loadProject({ version: 1, name: ex.name, components: ex.components, wires: ex.wires }, id);
   },

@@ -807,8 +807,8 @@ function BatteryArt({ def, comp, sim, hoverPin, connectedPins }: ArtProps) {
       ) : (
         <g>
           <rect x={4} y={4} width={def.w - 8} height={def.h - 14} rx={4} fill={def.family === 'battery-pack' && def.id === 'battery-aa4' ? '#2a3b4f' : '#2f3a46'} stroke="#0a0c0f" />
-          <text x={def.w / 2} y={28} fontSize={6} textAnchor="middle" fill="#e6ecf2">{def.id === 'lipo-37' ? `${volts.toFixed(2)}V` : `${volts}V`}</text>
-          <text x={def.w / 2} y={37} fontSize={3.6} textAnchor="middle" fill="#9aa6b2">{def.id === 'lipo-37' ? '1S LiPo' : '4 × AA'}</text>
+          <text x={def.w / 2} y={28} fontSize={6} textAnchor="middle" fill="#e6ecf2">{def.id.startsWith('lipo-') ? `${volts.toFixed(2)}V` : `${volts}V`}</text>
+          <text x={def.w / 2} y={37} fontSize={3.6} textAnchor="middle" fill="#9aa6b2">{def.id === 'lipo-37' ? '1S LiPo' : def.id === 'lipo-2s' ? '2S LiPo' : def.id === 'lipo-3s' ? '3S LiPo' : '4 × AA'}</text>
         </g>
       )}
       {pinsOf(def, { def, comp, hoverPin, connectedPins })}
@@ -964,6 +964,77 @@ function PerfArt({ def, hoverPin, connectedPins }: ArtProps) {
       <text x={def.w / 2} y={def.h - 4} fontSize={4} textAnchor="middle" fill="#fff8ec" opacity={0.85}>
         {def.name}
       </text>
+    </g>
+  );
+}
+
+function RoboticsArt({ def, comp, sim, hoverPin, connectedPins, simTime = 0 }: ArtProps) {
+  const kind = def.model.type === 'robotics' ? def.model.variant : '';
+  const motor = kind === 'brushless';
+  const x = def.w / 2;
+  const y = motor ? def.h / 2 - 6 : (def.h - 8) / 2;
+  const color = def.art?.bodyColor ?? '#174763';
+  const speed = sim?.speed ?? 0;
+  return (
+    <g>
+      <rect x={3} y={3} width={def.w - 6} height={def.h - 9} rx={5} fill={color} stroke="#071c30" strokeWidth={1.5} />
+      <rect x={6} y={6} width={def.w - 12} height={def.h - 15} rx={3} fill="none" stroke="#74c9c6" strokeWidth={0.7} opacity={0.35} />
+      {[{ x: 11, y: 11 }, { x: def.w - 11, y: 11 }, { x: 11, y: def.h - 18 }, { x: def.w - 11, y: def.h - 18 }].map((p, i) => (
+        <g key={i}><circle cx={p.x} cy={p.y} r={3.6} fill="#ccae61" /><circle cx={p.x} cy={p.y} r={2.1} fill="#132735" /></g>
+      ))}
+      <path d={`M12 ${def.h / 2} H${x - 19} M${x + 19} ${def.h / 2} H${def.w - 12} M${x} 9 V${y - 15}`} stroke="#caa45b" strokeWidth={0.9} opacity={0.65} fill="none" />
+      {motor ? (
+        <g>
+          <circle cx={x} cy={y} r={29} fill="#1c222b" stroke="#838e95" strokeWidth={2} />
+          {[0, 60, 120, 180, 240, 300].map((angle) => (
+            <g key={angle} transform={`rotate(${angle} ${x} ${y})`}>
+              <rect x={x - 5} y={y - 25} width={10} height={12} rx={3} fill="#b97835" stroke="#edb666" strokeWidth={0.8} />
+            </g>
+          ))}
+          <circle cx={x} cy={y} r={12} fill="#606973" stroke="#c1cbd2" />
+          <g transform={`rotate(${Math.round(simTime * speed * 480)} ${x} ${y})`}>
+            <path d={`M${x - 42} ${y - 5} Q${x - 8} ${y - 13} ${x} ${y} Q${x - 15} ${y + 7} ${x - 42} ${y - 5} Z M${x + 42} ${y + 5} Q${x + 8} ${y + 13} ${x} ${y} Q${x + 15} ${y - 7} ${x + 42} ${y + 5} Z`} fill="#cbd9dd" stroke="#3d5965" strokeWidth={1} opacity={speed > 0.5 ? 0.62 : 0.96} />
+            <circle cx={x} cy={y} r={4} fill="#111e27" stroke="#e1e9e6" strokeWidth={1} />
+          </g>
+          <text x={x} y={def.h - 4} fontSize={5} textAnchor="middle" fill="#e0eef0">{speed > 0 ? `${Math.round(speed * 100)}% RPM` : '2205 · BLDC'}</text>
+        </g>
+      ) : kind === 'fpv-camera' ? (
+        <g>
+          <rect x={x - 24} y={12} width={48} height={45} rx={4} fill="#101b28" stroke="#94a2a8" strokeWidth={1.2} />
+          <circle cx={x} cy={34} r={19} fill="#2e3741" stroke="#abb6bd" strokeWidth={2} />
+          <circle cx={x} cy={34} r={13} fill="#0a101e" stroke="#596f89" strokeWidth={2} />
+          <circle cx={x} cy={34} r={7} fill="#0c1f3d" stroke="#52a9ce" strokeWidth={1.2} />
+          <circle cx={x - 2.5} cy={30} r={2.3} fill="#b8e6f7" opacity={0.8} />
+          <text x={x} y={65} fontSize={5} textAnchor="middle" fill="#e4f3fa">FPV CAMERA</text>
+        </g>
+      ) : kind === 'pdb' ? (
+        <g>
+          <circle cx={x - 21} cy={y - 9} r={12} fill="#d4b56b" /><circle cx={x + 21} cy={y - 9} r={12} fill="#d4b56b" />
+          <circle cx={x - 21} cy={y + 16} r={12} fill="#d4b56b" /><circle cx={x + 21} cy={y + 16} r={12} fill="#d4b56b" />
+          {[[-21,-9],[21,-9],[-21,16],[21,16]].map(([dx,dy], i) => <circle key={i} cx={x + dx} cy={y + dy} r={6.5} fill="#123d4b" stroke="#eece7b" strokeWidth={1.2} />)}
+          <rect x={x - 11} y={y - 4} width={22} height={16} rx={2} fill="#151b24" stroke="#899ca9" />
+          <text x={x} y={y + 6} fontSize={5} textAnchor="middle" fill="#edf7f8">5V</text>
+        </g>
+      ) : kind === 'esc' ? (
+        <g>
+          {[0, 1, 2, 3].map((i) => <rect key={i} x={24 + i * 15} y={18} width={11} height={14} rx={1} fill="#141923" stroke="#66788a" strokeWidth={0.8} />)}
+          {[0, 1, 2, 3].map((i) => <rect key={i} x={24 + i * 15} y={39} width={11} height={14} rx={1} fill="#141923" stroke="#66788a" strokeWidth={0.8} />)}
+          <text x={x} y={65} textAnchor="middle" fontSize={5} fill="#ebf2f9">ESC · {Math.round(speed * 100)}%</text>
+        </g>
+      ) : (
+        <g>
+          {def.art?.antenna ? (
+            <g><path d={`M${def.w - 24} 14 L${def.w - 11} 3`} fill="none" stroke="#cdd7da" strokeWidth={2} strokeLinecap="round" /><path d={`M${def.w - 17} 8 Q${def.w - 6} 10 ${def.w - 7} 18`} fill="none" stroke="#5de3cb" strokeWidth={1} opacity={0.65} /></g>
+          ) : null}
+          {kind === 'vtx' ? [0, 1, 2, 3, 4].map((i) => <rect key={i} x={x - 24 + i * 10} y={18} width={5} height={36} rx={1} fill="#9daab0" stroke="#475966" />) : null}
+          <rect x={x - 21} y={y - 15} width={42} height={30} rx={3} fill={kind === 'bms' ? '#242d33' : '#151e29'} stroke="#8899a5" strokeWidth={0.9} />
+          <text x={x} y={y + 2} textAnchor="middle" fontSize={kind === 'flight-controller' ? 6 : 7} fontWeight="bold" fill="#e9f3f9">{def.art?.chipLabel ?? def.partNumber}</text>
+          <text x={x} y={def.h - 13} textAnchor="middle" fontSize={4.1} fill="#c4e7e4">{kind === 'flight-controller' ? 'FLIGHT CONTROLLER' : kind === 'bms' ? 'PROTECTED OUTPUT' : kind === 'receiver' ? 'RADIO RECEIVER' : kind === 'vtx' ? 'VIDEO · 5.8G' : 'UART TELEMETRY'}</text>
+        </g>
+      )}
+      {!motor ? <circle cx={def.w - 16} cy={def.h - 19} r={3.5} fill={sim?.on ? '#4afaac' : sim?.powered ? '#ffd45e' : '#46515d'} /> : null}
+      {pinsOf(def, { def, comp, hoverPin, connectedPins })}
+      {edgeLabels(def, { def, comp, hoverPin })}
     </g>
   );
 }
@@ -1250,6 +1321,8 @@ export function PartArt(props: ArtProps): ReactNode {
   switch (def.family) {
     case 'board':
       return <BoardArt {...props} />;
+    case 'robotics':
+      return <RoboticsArt {...props} />;
     case 'breadboard':
     case 'breadboard-half':
     case 'breadboard-mini':

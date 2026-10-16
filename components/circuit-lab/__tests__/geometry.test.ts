@@ -38,10 +38,11 @@ describe('geometry', () => {
 });
 
 describe('parts registry', () => {
-  it('has at least 95 parts across the 8 categories', () => {
-    expect(PARTS.length).toBeGreaterThanOrEqual(95);
+  it('has at least 105 parts across 9 categories, including drone & robotics', () => {
+    expect(PARTS.length).toBeGreaterThanOrEqual(105);
     const cats = new Set(PARTS.map((p) => p.category));
-    expect(cats.size).toBe(8);
+    expect(cats.size).toBe(9);
+    expect(cats.has('robotics')).toBe(true);
   });
 
   it('includes realistic board, motor, driver and compact breadboard additions', () => {

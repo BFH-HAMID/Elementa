@@ -24,7 +24,8 @@
 
 PhysChem Lab is a free, bilingual (Bangla + English) physics and chemistry learning platform for Bangladesh. It combines original equation notes, practical experiment guides, short quizzes and interactive browser simulations for NCTB Classes 6–12 through an introductory National University Honours level.
 
-It also ships two full virtual laboratories:
+It also ships a Circuit Lab alongside two full virtual laboratories:
+- **Circuit Lab** at `/lab/circuit`: wire and simulate electronics, search 9 part categories including FC, ESC, PDB/BEC, 1S protector, RC receiver, FPV camera/VTX, telemetry and LiPo boards. Includes the original 50 circuits plus 20 new guided drone, RC rover, boat and battery-protection builds with bilingual steps and an explicitly synthetic, circuit-linked mission trainer. See [`CIRCUIT_LAB_GUIDE.md`](CIRCUIT_LAB_GUIDE.md) and [`ADVANCED_CIRCUIT_LAB_GUIDE.md`](ADVANCED_CIRCUIT_LAB_GUIDE.md).
 - **Elementa Physics Lab** at `/lab/physics`: an interactive multi-domain physics workbench featuring a Modified Nodal Analysis (MNA) circuit solver with interactive wiring, ray optics with Snell's law & prism dispersion, 2D mechanics simulations (pendulum, springs, inclined plane, projectile, Atwood machine), wave acoustics (resonance tube, sonometer, oscilloscope), calorimetry, and modern physics (photoelectric effect, GM counter), alongside live Recharts graphs, statistical error tables with CSV export, and 45 guided practicals, including the full Physics Practical-1 list supplied for Properties of Matter, Waves and Oscillations, Heat, Thermodynamics and Radiation. See [`PHYSICS_LAB_GUIDE.md`](PHYSICS_LAB_GUIDE.md).
 - **Elementa Chemistry Lab** at `/lab/chemistry`: a bilingual wet-lab worktop with movable SVG glassware, 26 realistic apparatus items and periodic-table reference samples. Arrange up to 12 vessels, add/duplicate/rotate equipment, pour acids, bases, salts and metals, heat mixtures, spark gas jars, collect gases, electrolyse water, and read pH and indicator colours. Live liquid levels, bubbling, precipitate, smoke and flame effects sit alongside a balanced-equation box, observation notebook and safety layer. It includes 46 guided walkthroughs plus interactive practical simulations with apparatus, controls, valid-reading checks, hints, observation tables, graphs, CSV export and checked results. See [`CHEMISTRY_LAB_GUIDE.md`](CHEMISTRY_LAB_GUIDE.md).
 
@@ -79,7 +80,7 @@ Before opening a pull request, run the same checks used by deployment:
 ```bash
 npm run typecheck
 npm run lint
-npm test          # 1,265 Vitest tests across physics, chemistry, lab UI and circuit models
+npm test          # Vitest suites across physics, chemistry, lab UI and circuit models
 npm run build
 npm start
 ```

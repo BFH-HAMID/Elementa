@@ -11,7 +11,7 @@ dependencies. It deploys as part of the existing Next.js app on Vercel's free ti
 
 | Area | Status |
 |---|---|
-| Parts library (searchable, 8 categories, 95+ parts with pinouts, ratings, info cards and SVG thumbnails) | Done |
+| Parts library (searchable, 9 categories, 105+ parts with pinouts, ratings, info cards and SVG thumbnails, including drone & robotics boards) | Done |
 | Breadboards (full/half/mini, rail + strip connectivity), perfboard, stripboard, PCB pad area | Done (connectivity; no PCB trace routing view yet) |
 | Drag & drop from library; every placed part can move, rotate (R), flip (F), duplicate, delete and multi-select | Done |
 | Undo / redo (40 steps), snap to grid, snap to breadboard holes | Done |
@@ -28,7 +28,7 @@ dependencies. It deploys as part of the existing Next.js app on Vercel's free ti
 | Sketch editor (line numbers, Tab, auto-indent), Arduino-style C++ subset, Run/Stop/Reset | Done |
 | Serial monitor | Done |
 | Multimeter (V / A / Ω, unpowered-circuit ohmmeter), oscilloscope (2 channels), logic analyser (8 channels) | Done |
-| 50 example projects (12 core + 21 circuit + 17 MCU) with bilingual steps, wiring and explanation, each verified by the simulator | Done |
+| 50 original examples (12 core + 21 circuit + 17 MCU) and 20 additional guided drone/RC-vehicle/protection projects with bilingual procedures and circuit-linked educational mission trainer | Done |
 | Save (browser) / load, export & import JSON, share link (`?circuit=`), PNG and SVG export | Done |
 | Bill of materials, netlist, rule-based “Check circuit” validator | Done |
 | Synced schematic view (netlist-labelled symbols, live net voltages, click-to-select) | Done. Toggle with the schematic button in the toolbar. See §4.7. |
@@ -71,6 +71,7 @@ components/circuit-lab/
   geometry.ts                          Transforms, snapping, wire paths, viewport maths
   parts/
     registry.ts                        ★ Data-driven part library (add parts here)
+    robotics.ts                        FC, ESC, PDB, BMS, RC, FPV, telemetry, motor and LiPo definitions
     holes.ts                           Breadboard / perfboard hole generators + connectivity keys
     renderers.tsx                      ★ SVG artwork per part family (no external images)
   simulator/
@@ -79,6 +80,8 @@ components/circuit-lab/
     mcu.ts                             Sketch transpiler (C subset → JS generators) + VM + host API
     simWorker.ts                       Web Worker entry (runs engine.ts)
     useSimEngine.ts                    React hook: worker lifecycle, 30 Hz ticks, store updates
+    vehicleSim.ts                      Pure bounded educational drone/rover/boat motion model
+  advanced/                            Bilingual project finder, procedures, mission and 1S bench
   canvas/BenchCanvas.tsx               SVG workspace: pointer handling, wires, parts, minimap, menu
   palette/PartPalette.tsx              Search (fuse.js), categories, drag source / tap-to-add
   inspector/Inspector.tsx              Properties, info card, pinout, ratings, wire colour, sketch
@@ -88,6 +91,8 @@ components/circuit-lab/
   schematic/layout.ts                  Pure schematic layout: symbols, net labels, grid packing
   schematic/SchematicView.tsx          Schematic toolbar, store wrapper and SVG canvas
   projects/examples.ts                 ★ Example registry: merges the core, circuit and MCU sets into EXAMPLE_PROJECTS
+  projects/catalog-advanced.ts         20 wired drone/RC/boat/1S guided builds (separate from original 50)
+  projects/validateAdvanced.ts         Required wiring and power checklist
   projects/builders.ts                 `C()` and `W()` helpers that keep example data short
   projects/catalog-circuits.ts         21 circuit examples (no MCU): discretes, op-amps, logic, sensors-without-MCU
   projects/catalog-mcu.ts              17 Uno/ESP32 examples with Arduino sketches
@@ -99,7 +104,11 @@ components/circuit-lab/
   lib/nets.ts                          Net resolution and naming (shared by netlist and schematic)
   __tests__/                           Vitest suites (see §8)
     catalog-projects.test.ts           Checks all 50 examples: pin ids, bilingual text, no errors or burns, physical values
+    advanced-projects.test.ts          Pins, bilingual guides, safe operating points, ESC/RC/video/1S behavior
+    vehicleSim.test.ts                 Battery, motion, GPS/link loss, obstacles and power-off invariants
 ```
+
+For the advanced projects, exact user steps, component map, electrical-versus-mission model boundaries and physical build safety, see [`ADVANCED_CIRCUIT_LAB_GUIDE.md`](ADVANCED_CIRCUIT_LAB_GUIDE.md).
 
 The lab's other integration points:
 
@@ -290,14 +299,14 @@ npx vitest run components/circuit-lab
 
 - `engine.test.ts` — DC divider, LED current at 220 Ω on 5 V, reverse LED, RC transient,
   blink with serial output, syntax error reporting, every example simulating without NaN.
-- `geometry.test.ts` — transforms, grid snapping, wire paths, registry invariants (95+ parts,
-  8 categories, unique pin ids, documented parts), mini/full breadboard connectivity and hole snapping.
+- `geometry.test.ts` — transforms, grid snapping, wire paths, registry invariants (105+ parts,
+  9 categories, unique pin ids, documented parts), mini/full breadboard connectivity and hole snapping.
 - `parts-rendering.test.tsx` — renders SVG artwork for every catalog part so palette thumbnails cannot produce invalid geometry.
 - `catalog-projects.test.ts` — every example in the library (40–50 projects): pin ids exist, both languages
   are filled in, the circuit simulates with no errors, no part burns out, and the key physical
   readings (LED current, motor speed, sensor values, relay state) match the expected behaviour. Each
   project has its own assertions, so a wrong wire or value fails a named test.
-- `store.test.ts` — undo/redo, duplicate keeps internal wires, rotation cycles, all 95+ catalog
+- `store.test.ts` — undo/redo, duplicate keeps internal wires, rotation cycles, all 105+ catalog
   parts move/rotate/flip/duplicate/delete, examples load with a non-empty BOM, and the Uno blink
   example lights its LED through breadboard holes.
 - Motor-driver coverage checks both L298N and TB6612FNG H-bridges for forward/reverse motor drive.

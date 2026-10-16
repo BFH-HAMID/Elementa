@@ -499,8 +499,10 @@ function buildSource(ctx: Ctx, def: PartDef, comp: PlacedComponent) {
   const negPin = def.pins.find((p) => ['neg', 'gnd'].includes(p.id))!;
   const pos = nodeOf(ctx, comp.id, posPin.id);
   const neg = nodeOf(ctx, comp.id, negPin.id);
-  const rint: Record<string, number> = { 'battery-9v': 1.0, 'battery-aa4': 0.6, 'lipo-37': 0.1, 'usb-5v': 0.5, 'bench-supply': 0.01, 'ac-source': 50 };
-  const limit: Record<string, number> = { 'battery-9v': 0.5, 'battery-aa4': 2.0, 'lipo-37': 3.0, 'usb-5v': 0.5, 'bench-supply': num(comp.props.limit, 1), 'ac-source': 1e9 };
+  const rint: Record<string, number> = { 'battery-9v': 1.0, 'battery-aa4': 0.6, 'lipo-37': 0.1, 'lipo-2s': 0.08, 'lipo-3s': 0.055, 'usb-5v': 0.5, 'bench-supply': 0.01, 'ac-source': 50 };
+  // High-discharge packs may legitimately deliver more than 5 A; the old
+  // fixed short-circuit threshold must not destroy a correctly loaded drone.
+  const limit: Record<string, number> = { 'battery-9v': 0.5, 'battery-aa4': 2.0, 'lipo-37': 3.0, 'lipo-2s': 18, 'lipo-3s': 35, 'usb-5v': 0.5, 'bench-supply': num(comp.props.limit, 1), 'ac-source': 1e9 };
   const R = rint[def.id] ?? 0.5;
   const isAC = def.id === 'ac-source' || def.id === 'function-generator' || (def.model.type === 'source' && def.model.ac === true);
   const foldback = def.id === 'bench-supply' || def.id === 'usb-5v';
@@ -524,10 +526,10 @@ function buildSource(ctx: Ctx, def: PartDef, comp: PlacedComponent) {
       ctx.sourceCurrents[comp.id] = iDel;
       ctx.current[comp.id] = Math.abs(iDel);
       setMem(ctx, comp.id, { iDel });
-      if (!isAC && Math.abs(iDel) > 5) {
+      if (!isAC && Math.abs(iDel) > Math.max(5, 2 * lim)) {
         ctx.warnings.push(`${def.name}: short circuit (${iDel.toFixed(1)} A)`);
         if (!foldback) ctx.newBurns[comp.id] = 'short-circuit';
-      } else if (!isAC && Math.abs(iDel) > 2 * lim && !foldback) {
+      } else if (!isAC && Math.abs(iDel) > (def.id.startsWith('lipo-') ? lim : 2 * lim) && !foldback) {
         ctx.warnings.push(`${def.name}: overcurrent (${iDel.toFixed(2)} A)`);
         ctx.newBurns[comp.id] = 'overcurrent';
       }
@@ -1299,6 +1301,154 @@ function buildBoard(ctx: Ctx, def: PartDef, comp: PlacedComponent) {
   ctx.comp[comp.id].powered = powered;
 }
 
+/**
+ * Robotics connectors: actual RF, composite video and BLDC commutation are
+ * deliberately NOT emulated. Power paths and low-voltage control signals are
+ * solved in the same nodal network as the rest of the circuit lab. The mission
+ * scene (vehicleSim.ts) supplies the system-level dynamics separately.
+ */
+function buildRobotics(ctx: Ctx, def: PartDef, comp: PlacedComponent) {
+  if (def.model.type !== 'robotics') return;
+  const id = comp.id;
+  const n = (p: string) => nodeOf(ctx, id, p);
+  const v = (p: string, g = 'gnd') => pv(ctx, n(p)) - pv(ctx, n(g));
+  const result: CompSimResult = { pinV: {}, current: 0, power: 0 };
+  ctx.comp[id] = result;
+
+  switch (def.model.variant) {
+    case 'pdb': {
+      const vb = v('batp', 'batn');
+      const powered = vb >= 6 && vb <= 17;
+      ctx.powered[id] = powered;
+      for (const port of ['esc1p', 'esc2p', 'esc3p', 'esc4p']) {
+        addResistor(ctx, id, n('batp'), n(port), 0.035);
+      }
+      if (powered) {
+        addResistor(ctx, id, n('batp'), n('batn'), 120); // BEC quiescent draw
+        addDrive(ctx, id, n('v5'), 5, 0.25, n('batn'));
+      }
+      result.on = powered;
+      break;
+    }
+    case 'bms': {
+      // B− and OUT− are deliberately NOT joined by the topology. Both poles
+      // open on a protection event; a missing battery cannot power the load.
+      const cellV = v('bpos', 'bneg');
+      const closed = cellV >= 3 && cellV <= 4.25 && !bool(comp.props.fault);
+      if (closed) {
+        addResistor(ctx, id, n('bpos'), n('outpos'), 0.08);
+        addResistor(ctx, id, n('bneg'), n('outneg'), 0.08);
+      }
+      ctx.powered[id] = closed;
+      result.on = closed;
+      break;
+    }
+    case 'receiver': {
+      const supply = v('vcc');
+      const powered = supply >= 4.5 && supply <= 5.5;
+      const linked = powered && bool(comp.props.link);
+      ctx.powered[id] = powered;
+      if (powered) addResistor(ctx, id, n('vcc'), n('gnd'), 240);
+      if (linked) {
+        const throttle = Math.min(100, Math.max(0, num(comp.props.throttle, 0)));
+        const steer = Math.min(100, Math.max(-100, num(comp.props.steering, 0)));
+        addDrive(ctx, id, n('ch1'), 1.65 * (1 + steer / 100), 100, n('gnd'));
+        addDrive(ctx, id, n('ch2'), 3.3 * throttle / 100, 100, n('gnd'));
+      } else {
+        addPullDown(ctx, id, n('ch1'), 1000, n('gnd'));
+        addPullDown(ctx, id, n('ch2'), 1000, n('gnd'));
+      }
+      result.on = linked;
+      break;
+    }
+    case 'flight-controller': {
+      const supply = v('vcc');
+      const powered = supply >= 4.5 && supply <= 5.5;
+      ctx.powered[id] = powered;
+      if (supply > 6.5) {
+        ctx.warnings.push(`${def.name}: overvoltage on 5 V input (${supply.toFixed(1)} V)`);
+        ctx.newBurns[id] = 'overvoltage on 5 V flight controller';
+      }
+      if (powered) addResistor(ctx, id, n('vcc'), n('gnd'), 65);
+      const armed = powered && bool(comp.props.armed);
+      // Use the receiver only when CH2 and RC share an actual wired node.
+      const receiver = [...ctx.topo.comps].find(([other, entry]) =>
+        entry.def.id === 'rc-receiver' && n('rc') >= 0 && ctx.topo.nodeOf.get(`${other}|ch2`) === n('rc'));
+      const rxSupply = receiver ? pv(ctx, nodeOf(ctx, receiver[0], 'vcc')) - pv(ctx, nodeOf(ctx, receiver[0], 'gnd')) : 0;
+      const linked = receiver ? bool(receiver[1].comp.props.link) && rxSupply >= 4.5 && rxSupply <= 5.5 : false;
+      // A training-only failsafe may maintain a hover-like motor command while
+      // the separate *educational mission* returns home. This only engages if
+      // a powered GPS TX is actually wired to the FC RX. It is not flight code.
+      const gps = [...ctx.topo.comps].find(([other, entry]) =>
+        entry.def.id === 'gps-neo6m' && n('gpsrx') >= 0 && ctx.topo.nodeOf.get(`${other}|txd`) === n('gpsrx'));
+      const gpsSupply = gps ? pv(ctx, nodeOf(ctx, gps[0], 'vcc')) - pv(ctx, nodeOf(ctx, gps[0], 'gnd')) : 0;
+      const assisted = receiver && !linked && bool(comp.props.assistedRth) && gpsSupply >= 3 && gpsSupply <= 5.5;
+      const t = receiver ? (linked ? v('rc') / 3.3 : assisted ? 0.68 : 0) : num(comp.props.throttle, 0) / 100;
+      const throttle = armed ? Math.min(1, Math.max(0, t)) : 0;
+      for (const port of ['esc1', 'esc2', 'esc3', 'esc4']) {
+        if (powered) addDrive(ctx, id, n(port), 3.3 * throttle, 100, n('gnd'));
+      }
+      result.speed = throttle;
+      result.on = armed;
+      break;
+    }
+    case 'esc': {
+      const vb = v('vbat');
+      const powered = vb >= 6 && vb <= 17;
+      ctx.powered[id] = powered;
+      // A 0–3.3 V *training* command represents throttle. This is NOT the
+      // actual 1–2 ms / 50 Hz servo pulse of a real ESC, nor is its output a
+      // BLDC inverter simulation. The resistive load approximates pack sag.
+      const throttle = powered ? Math.min(1, Math.max(0, v('sig') / 3.3)) : 0;
+      if (powered) {
+        const drawA = 0.12 + 5 * throttle * throttle;
+        addResistor(ctx, id, n('vbat'), n('gnd'), Math.max(1.5, vb / drawA));
+        const phase = ctx.t * 70 * 2 * Math.PI;
+        (['u', 'v', 'w'] as const).forEach((port, i) =>
+          addDrive(ctx, id, n(port), vb * (0.5 + 0.43 * throttle * Math.sin(phase + i * 2 * Math.PI / 3)), 25, n('gnd')));
+      }
+      result.speed = throttle;
+      result.on = powered && throttle > 0.02;
+      break;
+    }
+    case 'fpv-camera': {
+      const powered = v('vcc') >= 4.5 && v('vcc') <= 5.5;
+      ctx.powered[id] = powered;
+      if (powered) {
+        addResistor(ctx, id, n('vcc'), n('gnd'), 120);
+        addDrive(ctx, id, n('video'), 0.8, 75, n('gnd')); // signal present, not encoded video
+      }
+      result.on = powered;
+      break;
+    }
+    case 'vtx': {
+      const powered = v('vcc') >= 4.5 && v('vcc') <= 5.5;
+      ctx.powered[id] = powered;
+      if (powered) addResistor(ctx, id, n('vcc'), n('gnd'), 38);
+      result.on = powered && v('video') > 0.35;
+      break;
+    }
+    case 'telemetry': {
+      const powered = v('vcc') >= 4.5 && v('vcc') <= 5.5;
+      ctx.powered[id] = powered;
+      if (powered) addResistor(ctx, id, n('vcc'), n('gnd'), 100);
+      result.on = powered;
+      break;
+    }
+    case 'brushless': {
+      // No additional winding load: the ESC already owns the averaged load.
+      // Engine.buildFrame checks that all THREE phase nets connect to one ESC.
+      result.speed = 0;
+      result.on = false;
+      break;
+    }
+  }
+  // Unmodelled digital buses and signal inputs are high impedance.
+  for (const p of def.pins) {
+    if (p.kind === 'io' || p.kind === 'ain' || p.kind === 'pwm') addPullDown(ctx, id, n(p.id));
+  }
+}
+
 /** Dispatch one placed component to its element builder. */
 function buildComponent(ctx: Ctx, comp: PlacedComponent, def: PartDef) {
   if (ctx.burnt.has(comp.id)) {
@@ -1407,6 +1557,9 @@ function buildComponent(ctx: Ctx, comp: PlacedComponent, def: PartDef) {
     case 'sensor':
     case 'wireless':
       buildSensor(ctx, def, comp);
+      return;
+    case 'robotics':
+      buildRobotics(ctx, def, comp);
       return;
     case 'switch':
       buildSwitch(ctx, def, comp);

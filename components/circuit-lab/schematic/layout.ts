@@ -91,7 +91,7 @@ const MAX_ROW = 1000;
 const GAP_X = 56;
 const GAP_Y = 52;
 
-const CATEGORY_ORDER: PartCategory[] = ['boards', 'power', 'ics', 'sensors', 'semiconductors', 'passives', 'tools', 'prototyping'];
+const CATEGORY_ORDER: PartCategory[] = ['boards', 'robotics', 'power', 'ics', 'sensors', 'semiconductors', 'passives', 'tools', 'prototyping'];
 const TWO_TERMINAL_MODELS = new Set<SimModel['type']>(['resistor', 'capacitor', 'inductor', 'diode', 'led', 'switch', 'source', 'buzzer', 'motor', 'regulator']);
 
 export const textWidth = (s: string, size: number) => Math.ceil(s.length * size * CHAR) + 2;

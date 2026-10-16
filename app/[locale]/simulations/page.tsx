@@ -181,14 +181,14 @@ export default function SimulationsPage({ params, searchParams }: { params: { lo
             <Link href={`/${locale}/lab/circuit`} className="text-xs font-black text-slate-700 flex items-center gap-1 dark:text-slate-200">{bn ? 'ল্যাবে যান' : 'Open Lab'} <ArrowRight size={12} /></Link>
           </div>
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-            {circuitProjects.slice(0, 24).map((project: any) => (
+            {circuitProjects.slice(0, 24).map((project) => (
               <Link key={project.id} href={`/${locale}/lab/circuit?project=${project.id}`} className="card card-hover p-4">
                 <div className="flex items-start justify-between gap-2">
-                  <span className="pill bg-slate-100 text-[10px] font-black text-slate-700 dark:bg-slate-800 dark:text-slate-200">{project.category || 'circuit'}</span>
-                  <span className="text-[10px] muted">{project.difficulty || 'beginner'}</span>
+                  <span className="pill bg-slate-100 text-[10px] font-black text-slate-700 dark:bg-slate-800 dark:text-slate-200">circuit</span>
+                  <span className="text-[10px] muted">{project.difficulty}</span>
                 </div>
-                <h3 className="mt-2 text-sm font-bold">{project.title_en || project.title || project.id}</h3>
-                <p className="mt-1 line-clamp-2 text-xs muted">{project.description_en || project.description || ''}</p>
+                <h3 className="mt-2 text-sm font-bold">{project.title[locale]}</h3>
+                <p className="mt-1 line-clamp-2 text-xs muted">{project.summary[locale]}</p>
                 <span className="mt-3 inline-flex items-center gap-1 text-xs font-black text-slate-700 dark:text-slate-200">{bn ? 'প্রজেক্ট খুলুন' : 'Open project'} <ArrowRight size={12} /></span>
               </Link>
             ))}

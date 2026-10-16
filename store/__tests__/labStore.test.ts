@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { factsFrom, stepSatisfied } from '@/engine/experimentChecks';
 import { chemicalsById, getExperiment } from '@/lib/labData';
-import { useLabStore } from '@/store/labStore';
+import { STORAGE_KEY, useLabStore } from '@/store/labStore';
 
 /**
  * Integration tests for the bench itself: the same actions the UI fires when a student
@@ -210,6 +210,65 @@ describe('bench controls', () => {
     expect(state().vessels).toHaveLength(0);
   });
 
+  it('allows multiple glassware stations and fills an open worktop position after removal', () => {
+    const ids = Array.from({ length: 6 }, () => state().addVessel('test-tube'));
+    expect(ids.every(Boolean)).toBe(true);
+    expect(state().vessels).toHaveLength(6);
+
+    state().removeVessel(ids[1]!);
+    state().addVessel('beaker');
+    const positions = state().vessels.map((vessel) => `${vessel.x},${vessel.y}`);
+    expect(new Set(positions).size).toBe(6);
+  });
+
+  it('keeps quick-added apparatus in distinct worktop positions after removal', () => {
+    const ids = Array.from({ length: 5 }, () => state().addBenchEquipment('spatula'));
+    expect(ids.every(Boolean)).toBe(true);
+    state().removeBenchEquipment(ids[1]!);
+    expect(state().addBenchEquipment('filter-funnel')).toBeTruthy();
+    const positions = state().benchEquipment.map((item) => `${item.x},${item.y}`);
+    expect(new Set(positions).size).toBe(5);
+  });
+
+  it('places, moves, duplicates and removes real apparatus with undo support', () => {
+    const vesselId = state().addVessel('beaker');
+    const thermometerId = state().addBenchEquipment('thermometer', { x: 520, y: 96 }, vesselId);
+    state().attachThermometer(vesselId, true);
+    expect(state().benchEquipment[0]?.linkedVesselId).toBe(vesselId);
+    expect(vesselOf(vesselId)?.thermometer).toBe(true);
+
+    const duplicateId = state().duplicateBenchEquipment(thermometerId);
+    expect(state().benchEquipment).toHaveLength(2);
+    state().moveBenchEquipment(duplicateId, 710, 140);
+    state().rotateBenchEquipment(duplicateId);
+    expect(state().benchEquipment.find((item) => item.id === duplicateId)).toMatchObject({ x: 710, y: 140, rotation: 90 });
+
+    state().removeBenchEquipment(thermometerId);
+    expect(vesselOf(vesselId)?.thermometer).toBe(true); // the duplicate still holds the vessel
+    state().removeBenchEquipment(duplicateId);
+    expect(vesselOf(vesselId)?.thermometer).toBe(false);
+    state().undo();
+    expect(state().benchEquipment).toHaveLength(1);
+    expect(vesselOf(vesselId)?.thermometer).toBe(true);
+  });
+
+  it('adds multiple movable element reference samples without treating them as reagents', () => {
+    const hydrogen = {
+      z: 1, symbol: 'H', name_en: 'Hydrogen', name_bn: 'হাইড্রোজেন', mass: 1.008,
+      category: 'nonmetal', category_bn: 'অধাতু', group: 1, period: 1, block: 's' as const,
+      state: 'gas' as const, state_bn: 'গ্যাস', radioactive: false
+    };
+    const first = state().addElementSample(hydrogen, { x: 480, y: 180 });
+    const second = state().duplicateElementSample(first);
+    expect(state().elementSamples).toHaveLength(2);
+    state().moveElementSample(second, 720, 240);
+    expect(state().elementSamples.find((sample) => sample.id === second)?.x).toBe(720);
+    state().removeElementSample(first);
+    state().undo();
+    expect(state().elementSamples).toHaveLength(2);
+    expect(state().vessels).toHaveLength(0);
+  });
+
   it('stirs sediment back into suspension with a spatula', () => {
     const id = state().addVessel('test-tube');
     state().addChemical(id, 'AgNO3', 5);
@@ -232,10 +291,35 @@ describe('bench controls', () => {
     expect(total).toBeGreaterThan(0);
   });
 
-  it('saves to and loads from localStorage', () => {
+  it('migrates older saved vessel positions below the new worktop header', () => {
+    installLocalStorage();
+    const id = state().addVessel('beaker');
+    const vessel = state().vessels.find((item) => item.id === id)!;
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      version: 1,
+      savedAt: Date.now(),
+      vessels: [{ ...vessel, x: 0, y: 0 }],
+      burner: { lit: false, intensity: 0.8 },
+      pourMl: 10,
+      log: [],
+      activeExperiment: null
+    }));
+
+    state().reset();
+    expect(state().load()).toBe(true);
+    expect(state().vessels[0]).toMatchObject({ x: 24, y: 178 });
+  });
+
+  it('saves and restores glassware, loose equipment and element samples', () => {
     installLocalStorage();
     const id = state().addVessel('beaker');
     state().addChemical(id, 'CuSO4', 25);
+    state().addBenchEquipment('bunsen-burner', { x: 400, y: 80 }, id);
+    state().addElementSample({
+      z: 8, symbol: 'O', name_en: 'Oxygen', name_bn: 'অক্সিজেন', mass: 15.999,
+      category: 'nonmetal', category_bn: 'অধাতু', group: 16, period: 2, block: 'p',
+      state: 'gas', state_bn: 'গ্যাস', radioactive: false
+    }, { x: 760, y: 100 });
 
     expect(state().hasSavedLab()).toBe(false);
     state().save();
@@ -243,11 +327,15 @@ describe('bench controls', () => {
 
     state().reset();
     expect(state().vessels).toHaveLength(0);
+    expect(state().benchEquipment).toHaveLength(0);
+    expect(state().elementSamples).toHaveLength(0);
 
     expect(state().load()).toBe(true);
     const restored = state().vessels[0];
     expect(restored?.apparatusId).toBe('beaker');
     expect(restored?.portions.some((portion) => portion.chemicalId === 'CuSO4')).toBe(true);
+    expect(state().benchEquipment[0]?.apparatusId).toBe('bunsen-burner');
+    expect(state().elementSamples[0]?.element.symbol).toBe('O');
   });
 });
 

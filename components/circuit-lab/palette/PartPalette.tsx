@@ -10,6 +10,7 @@ import { useMemo, useState } from 'react';
 import Fuse from 'fuse.js';
 import { Search, Cpu, Grid3x3, Component, Zap, CircuitBoard, Radio, Battery, Wrench } from 'lucide-react';
 import { CATEGORY_ORDER, PARTS } from '../parts/registry';
+import { PartArt } from '../parts/renderers';
 import { PART_DRAG_MIME } from '../canvas/BenchCanvas';
 import { useCircuitStore } from '@/store/circuitStore';
 import { useCircuitI18n } from '../lib/i18n';
@@ -27,6 +28,17 @@ const CATEGORY_META: Record<PartCategory, { en: string; bn: string; icon: typeof
   power: { en: 'Power & switches', bn: 'পাওয়ার ও সুইচ', icon: Battery },
   tools: { en: 'Instruments', bn: 'যন্ত্র', icon: Wrench }
 };
+
+function PartThumbnail({ def }: { def: PartDef }) {
+  const comp = { id: `palette-${def.id}`, partId: def.id, x: 0, y: 0, rotation: 0 as const, flipH: false, props: def.defaults, state: {} };
+  return (
+    <span className="flex h-10 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-[color:var(--line)] bg-[color:var(--surface-soft)] p-0.5" aria-hidden="true">
+      <svg viewBox={`-6 -6 ${def.w + 12} ${def.h + 12}`} className="h-full w-full" preserveAspectRatio="xMidYMid meet">
+        <PartArt def={def} comp={comp} />
+      </svg>
+    </span>
+  );
+}
 
 export function PartPalette({ onPick }: { onPick?: () => void }) {
   const { locale, t } = useCircuitI18n();
@@ -66,7 +78,8 @@ export function PartPalette({ onPick }: { onPick?: () => void }) {
       )}
       title={def.description}
     >
-      <span className="min-w-0 flex-1">
+      <PartThumbnail def={def} />
+      <span className="min-w-0 flex-1 pt-0.5">
         <span className="block truncate font-medium text-[color:var(--ink)]">{def.name}</span>
         <span className="block truncate text-xs text-[color:var(--muted)]">{def.partNumber}</span>
       </span>

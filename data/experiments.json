@@ -1,5 +1,5 @@
 {
-  "count": 41,
+  "count": 46,
   "experiments": [
     {
       "order": 1,
@@ -6214,6 +6214,639 @@
       "title_bn": "আয়রন(III) থায়োসায়ানেট দিয়ে লা শাতেলিয়ের নীতি",
       "aim_en": "Disturb the blood-red Fe³⁺ + SCN⁻ ⇌ [Fe(SCN)]²⁺ equilibrium by adding reagents, heating and cooling, and predict which way it shifts.",
       "aim_bn": "বিকারক যোগ করে, গরম ও ঠান্ডা করে রক্ত-লাল Fe³⁺ + SCN⁻ ⇌ [Fe(SCN)]²⁺ সাম্যাবস্থা বিঘ্নিত করা এবং কোন দিকে সরে তা নির্ণয় করা।"
+    },
+    {
+      "order": 42,
+      "slug": "conductivity-solutions",
+      "title_en": "Electrical conductivity of solutions",
+      "title_bn": "দ্রবণের তড়িৎ পরিবাহিতা",
+      "aim_en": "Compare how strongly common aqueous solutions conduct electricity and relate conductance to mobile ions.",
+      "aim_bn": "সাধারণ জলীয় দ্রবণ কতটা বিদ্যুৎ পরিবহন করে তুলনা করা এবং পরিবাহিতার সঙ্গে চলনশীল আয়নের সম্পর্ক বোঝা।",
+      "level": "class-9-10",
+      "durationMinutes": 15,
+      "apparatus": [
+        "test-tube",
+        "electrolysis-cell"
+      ],
+      "chemicals": [
+        "H2O",
+        "NaCl",
+        "HCl",
+        "CH3COOH",
+        "ethanol"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Solution A",
+            "label_bn": "A দ্রবণ",
+            "portions": []
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Solution B",
+            "label_bn": "B দ্রবণ",
+            "portions": []
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Solution C",
+            "label_bn": "C দ্রবণ",
+            "portions": []
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Solution D",
+            "label_bn": "D দ্রবণ",
+            "portions": []
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Solution E",
+            "label_bn": "E দ্রবণ",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Place the five labelled, clean test tubes in the rack; each is a separate sample station.",
+          "text_bn": "চিহ্নিত পাঁচটি পরিষ্কার পরীক্ষা-নল র‍্যাকে রাখো; প্রতিটি আলাদা নমুনা-স্টেশন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 5
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add distilled water to Tube A and test it with the low-voltage conductivity probes.",
+          "text_bn": "নল A-তে পাতিত পানি দিয়ে কম-ভোল্টেজ পরিবাহিতা প্রোব দিয়ে পরীক্ষা করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Add sodium chloride solution to Tube B, rinse the probes, and compare the bulb.",
+          "text_bn": "নল B-তে সোডিয়াম ক্লোরাইড দ্রবণ দিয়ে প্রোব ধুয়ে বাল্ব তুলনা করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "NaCl"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Test dilute hydrochloric acid in Tube C; keep the probes from touching each other.",
+          "text_bn": "নল C-তে লঘু হাইড্রোক্লোরিক অ্যাসিড পরীক্ষা করো; প্রোব দুটি যেন পরস্পর না ছোঁয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 2,
+            "chemicalId": "HCl"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Test acetic acid in Tube D and note that a weak acid gives a dimmer response.",
+          "text_bn": "নল D-তে অ্যাসিটিক অ্যাসিড পরীক্ষা করে দুর্বল অ্যাসিডে বাল্ব কম জ্বলে কি না লেখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 3,
+            "chemicalId": "CH3COOH"
+          }
+        },
+        {
+          "order": 6,
+          "text_en": "Test ethanol in Tube E, then compare all five conductance readings.",
+          "text_bn": "নল E-তে ইথানল পরীক্ষা করে পাঁচটি পরিবাহিতা-পাঠ তুলনা করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 4,
+            "chemicalId": "ethanol"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Use only a low-voltage cell, never a wall socket. Wear goggles, use dilute acid, and rinse the probes between samples.",
+        "bn": "শুধু কম-ভোল্টেজ সেল ব্যবহার করো, কখনো দেয়ালের সকেট নয়। গগলস পরো, লঘু অ্যাসিড নাও এবং নমুনার মাঝে প্রোব ধুয়ে নাও।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which sample should make the conductivity bulb glow most strongly?",
+          "question_bn": "কোন নমুনায় পরিবাহিতা পরীক্ষকের বাল্ব সবচেয়ে উজ্জ্বল জ্বলার কথা?",
+          "options_en": [
+            "Dilute HCl",
+            "Ethanol",
+            "Distilled water",
+            "Acetic acid"
+          ],
+          "options_bn": [
+            "লঘু HCl",
+            "ইথানল",
+            "পাতিত পানি",
+            "অ্যাসিটিক অ্যাসিড"
+          ],
+          "answer": 0,
+          "explain_en": "HCl is a strong electrolyte and produces many mobile ions in water.",
+          "explain_bn": "HCl একটি তীব্র ইলেক্ট্রোলাইট; পানিতে এটি অনেক চলনশীল আয়ন তৈরি করে।"
+        }
+      ],
+      "tags": [
+        "electrolytes",
+        "conductivity",
+        "ions"
+      ]
+    },
+    {
+      "order": 43,
+      "slug": "paper-chromatography",
+      "title_en": "Paper chromatography of coloured mixtures",
+      "title_bn": "রঙিন মিশ্রণের কাগজ ক্রোমাটোগ্রাফি",
+      "aim_en": "Separate the dyes in a mixture and measure their retention factors using paper chromatography.",
+      "aim_bn": "কাগজ ক্রোমাটোগ্রাফির সাহায্যে মিশ্রণের রঞ্জকগুলো আলাদা করে তাদের Rf মান মাপা।",
+      "level": "class-9-10",
+      "durationMinutes": 18,
+      "apparatus": [
+        "beaker",
+        "watch-glass",
+        "dropper",
+        "filter-funnel",
+        "glass-stirring-rod"
+      ],
+      "chemicals": [
+        "H2O",
+        "ethanol",
+        "universal"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "beaker",
+            "label_en": "Water solvent",
+            "label_bn": "পানির দ্রাবক",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 15
+              }
+            ]
+          },
+          {
+            "apparatusId": "beaker",
+            "label_en": "Ethanol solvent",
+            "label_bn": "ইথানল দ্রাবক",
+            "portions": [
+              {
+                "chemicalId": "ethanol",
+                "mL": 15
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Indicator dye sample",
+            "label_bn": "ইন্ডিকেটর রঞ্জকের নমুনা",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Prepare a shallow solvent chamber and a labelled sample tube.",
+          "text_bn": "অল্প দ্রাবকসহ চেম্বার ও চিহ্নিত নমুনা-নল প্রস্তুত করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 3
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Use the water station as one mobile phase; keep the solvent level below the pencil baseline.",
+          "text_bn": "পানির স্টেশনকে একটি চলমান দ্রাবক হিসেবে নাও; দ্রাবকের স্তর পেন্সিলের বেসলাইনের নিচে রাখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Use ethanol as a second mobile phase and keep it away from any flame.",
+          "text_bn": "দ্বিতীয় চলমান দ্রাবক হিসেবে ইথানল নাও এবং শিখা থেকে দূরে রাখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "ethanol"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Place a tiny spot of universal indicator mixture on the paper baseline and develop the chromatogram.",
+          "text_bn": "কাগজের বেসলাইনে ইউনিভার্সাল ইন্ডিকেটর মিশ্রণের ছোট ফোঁটা দিয়ে ক্রোমাটোগ্রাম তৈরি করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 2,
+            "chemicalId": "universal"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Ethanol is flammable: keep the developing chamber away from burners and use a small volume.",
+        "bn": "ইথানল দাহ্য: বিকাশ চেম্বার বার্নার থেকে দূরে রাখো এবং অল্প পরিমাণ ব্যবহার করো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "A dye travels 4.0 cm while the solvent front travels 8.0 cm. What is its Rf?",
+          "question_bn": "একটি রঞ্জক 4.0 cm এবং দ্রাবক-ফ্রন্ট 8.0 cm গেলে রঞ্জকের Rf কত?",
+          "options_en": [
+            "0.50",
+            "2.00",
+            "4.00",
+            "8.00"
+          ],
+          "options_bn": [
+            "0.50",
+            "2.00",
+            "4.00",
+            "8.00"
+          ],
+          "answer": 0,
+          "explain_en": "Rf is the pigment distance divided by the solvent-front distance: 4.0 ÷ 8.0 = 0.50.",
+          "explain_bn": "Rf = রঞ্জকের দূরত্ব ÷ দ্রাবক-ফ্রন্টের দূরত্ব = 4.0 ÷ 8.0 = 0.50।"
+        }
+      ],
+      "tags": [
+        "chromatography",
+        "separation",
+        "Rf"
+      ]
+    },
+    {
+      "order": 44,
+      "slug": "rate-calcium-carbonate-surface-area",
+      "title_en": "Reaction rate and calcium carbonate surface area",
+      "title_bn": "ক্যালসিয়াম কার্বনেটের পৃষ্ঠতল ও বিক্রিয়ার হার",
+      "aim_en": "Investigate how the particle size of marble changes the rate of its reaction with hydrochloric acid.",
+      "aim_bn": "মার্বেলের কণার আকার হাইড্রোক্লোরিক অ্যাসিডের সঙ্গে বিক্রিয়ার হার কীভাবে বদলায় তা পরীক্ষা করা।",
+      "level": "class-9-10",
+      "durationMinutes": 20,
+      "apparatus": [
+        "conical-flask",
+        "beaker",
+        "gas-jar",
+        "delivery-tube",
+        "measuring-cylinder",
+        "mortar-pestle"
+      ],
+      "chemicals": [
+        "CaCO3",
+        "HCl"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Marble chips",
+            "label_bn": "মার্বেল টুকরো",
+            "portions": [
+              {
+                "chemicalId": "CaCO3",
+                "mL": 2
+              }
+            ]
+          },
+          {
+            "apparatusId": "beaker",
+            "label_en": "Dilute hydrochloric acid",
+            "label_bn": "লঘু হাইড্রোক্লোরিক অ্যাসিড",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Set up the flask and gas-collection apparatus; keep the acid separate until timing begins.",
+          "text_bn": "ফ্লাস্ক ও গ্যাস সংগ্রহের যন্ত্র সাজাও; সময় নেওয়া শুরু না হওয়া পর্যন্ত অ্যাসিড আলাদা রাখো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Weigh equal portions of large marble chips, small chips and powder for the comparison.",
+          "text_bn": "তুলনার জন্য মার্বেলের বড় টুকরো, ছোট টুকরো ও গুঁড়ার সমান ভর নাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "CaCO3"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Measure the same volume and concentration of dilute HCl for each trial.",
+          "text_bn": "প্রতিটি পরীক্ষায় একই আয়তন ও ঘনমাত্রার লঘু HCl মাপো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "HCl"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Add the acid to the marble, start the stopwatch immediately and record the carbon dioxide volume.",
+          "text_bn": "মার্বেলে অ্যাসিড দিয়ে সঙ্গে সঙ্গে স্টপওয়াচ চালু করো এবং কার্বন ডাই-অক্সাইডের আয়তন লেখো।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "caco3-hcl"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Wear goggles, use dilute HCl, avoid breathing marble dust, and keep the gas outlet unblocked.",
+        "bn": "গগলস পরো, লঘু HCl ব্যবহার করো, মার্বেলের গুঁড়া শ্বাসে নিও না এবং গ্যাসের নল বন্ধ কোরো না।"
+      },
+      "expectedReactions": [
+        "caco3-hcl"
+      ],
+      "quiz": [
+        {
+          "question_en": "Why does powdered marble produce carbon dioxide faster than large chips?",
+          "question_bn": "মার্বেলের গুঁড়া বড় টুকরোর চেয়ে দ্রুত কার্বন ডাই-অক্সাইড তৈরি করে কেন?",
+          "options_en": [
+            "It exposes a larger surface area to the acid",
+            "It contains more calcium carbonate by mass",
+            "The powder makes the acid hotter",
+            "It changes the final reaction products"
+          ],
+          "options_bn": [
+            "অ্যাসিডের সংস্পর্শে বেশি পৃষ্ঠতল থাকে",
+            "একই ভরে এতে বেশি ক্যালসিয়াম কার্বনেট থাকে",
+            "গুঁড়া অ্যাসিডকে গরম করে",
+            "এতে বিক্রিয়ার শেষ উৎপাদ বদলে যায়"
+          ],
+          "answer": 0,
+          "explain_en": "More particles are exposed at once, so there are more effective collisions per second.",
+          "explain_bn": "একসঙ্গে বেশি কণা উন্মুক্ত থাকে, তাই প্রতি সেকেন্ডে কার্যকর সংঘর্ষের সংখ্যা বাড়ে।"
+        }
+      ],
+      "tags": [
+        "kinetics",
+        "surface-area",
+        "calcium-carbonate"
+      ]
+    },
+    {
+      "order": 45,
+      "slug": "diffusion-ammonia-hydrogen-chloride",
+      "title_en": "Diffusion of ammonia and hydrogen chloride gases",
+      "title_bn": "অ্যামোনিয়া ও হাইড্রোজেন ক্লোরাইড গ্যাসের ব্যাপন",
+      "aim_en": "Observe the ammonium-chloride ring and compare the diffusion rates of ammonia and hydrogen chloride.",
+      "aim_bn": "অ্যামোনিয়াম ক্লোরাইডের বলয় পর্যবেক্ষণ করে অ্যামোনিয়া ও হাইড্রোজেন ক্লোরাইডের ব্যাপন হার তুলনা করা।",
+      "level": "class-11-12",
+      "durationMinutes": 12,
+      "apparatus": [
+        "gas-jar",
+        "test-tube",
+        "retort-stand",
+        "glass-stirring-rod"
+      ],
+      "chemicals": [
+        "NH3",
+        "HCl"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Ammonia source",
+            "label_bn": "অ্যামোনিয়ার উৎস",
+            "portions": []
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Hydrogen chloride source",
+            "label_bn": "হাইড্রোজেন ক্লোরাইডের উৎস",
+            "portions": []
+          },
+          {
+            "apparatusId": "gas-jar",
+            "label_en": "Diffusion tube station",
+            "label_bn": "ব্যাপন নল স্টেশন",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Secure the long glass tube horizontally and prepare cotton wool for both ends.",
+          "text_bn": "লম্বা কাচের নলটি আড়াআড়িভাবে আটকাও এবং দুই প্রান্তের জন্য তুলা প্রস্তুত করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 3
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare the ammonia source at one end of the tube.",
+          "text_bn": "নলের এক প্রান্তে অ্যামোনিয়ার উৎস প্রস্তুত করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NH3"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Prepare the hydrochloric-acid source at the opposite end and start the stopwatch at the same time.",
+          "text_bn": "বিপরীত প্রান্তে হাইড্রোক্লোরিক অ্যাসিডের উৎস রাখো এবং একই সময়ে স্টপওয়াচ চালু করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "HCl"
+          }
+        }
+      ],
+      "safety": {
+        "level": "high",
+        "en": "Perform only in a fume cupboard with eye protection. Ammonia and concentrated HCl fumes are corrosive and harmful to inhale; use tiny quantities and never smell them directly.",
+        "bn": "শুধু ধোঁয়া-নিষ্কাশন কক্ষে চোখের সুরক্ষা পরে পরীক্ষা করো। অ্যামোনিয়া ও গাঢ় HCl-এর ধোঁয়া ক্ষয়কারী ও শ্বাসে ক্ষতিকর; অতি অল্প পরিমাণ নাও এবং কখনো সরাসরি গন্ধ শুঁকবে না।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Where should the white ammonium-chloride ring form in a one-metre tube?",
+          "question_bn": "এক মিটার নলে সাদা অ্যামোনিয়াম ক্লোরাইডের বলয় কোথায় তৈরি হওয়ার কথা?",
+          "options_en": [
+            "Closer to the HCl end",
+            "Closer to the ammonia end",
+            "Exactly at the midpoint",
+            "Outside the tube"
+          ],
+          "options_bn": [
+            "HCl প্রান্তের কাছে",
+            "অ্যামোনিয়া প্রান্তের কাছে",
+            "ঠিক মধ্যবিন্দুতে",
+            "নলের বাইরে"
+          ],
+          "answer": 0,
+          "explain_en": "NH₃ has the lower molar mass and diffuses faster, so it travels farther before meeting HCl.",
+          "explain_bn": "NH₃-এর মোলার ভর কম, তাই এটি দ্রুত ছড়িয়ে HCl-এর সঙ্গে মিলিত হওয়ার আগে বেশি দূর যায়।"
+        }
+      ],
+      "tags": [
+        "diffusion",
+        "gas-laws",
+        "grahams-law"
+      ]
+    },
+    {
+      "order": 46,
+      "slug": "simple-distillation-salt-water",
+      "title_en": "Simple distillation of salt water",
+      "title_bn": "লবণ-পানির সরল পাতন",
+      "aim_en": "Separate pure water from a salt solution by vaporisation and condensation.",
+      "aim_bn": "বাষ্পীভবন ও ঘনীভবনের মাধ্যমে লবণ দ্রবণ থেকে বিশুদ্ধ পানি আলাদা করা।",
+      "level": "class-9-10",
+      "durationMinutes": 25,
+      "apparatus": [
+        "conical-flask",
+        "beaker",
+        "thermometer",
+        "bunsen-burner",
+        "tripod-stand",
+        "wire-gauze",
+        "delivery-tube",
+        "measuring-cylinder"
+      ],
+      "chemicals": [
+        "H2O",
+        "NaCl"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Salt solution in distillation flask",
+            "label_bn": "পাতন ফ্লাস্কে লবণ দ্রবণ",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 95
+              },
+              {
+                "chemicalId": "NaCl",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "beaker",
+            "label_en": "Receiving vessel",
+            "label_bn": "গ্রাহক পাত্র",
+            "portions": []
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Arrange the distillation flask, thermometer, condenser and a separate receiving vessel.",
+          "text_bn": "পাতন ফ্লাস্ক, থার্মোমিটার, কনডেনসার ও আলাদা গ্রাহক পাত্র সাজাও।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Check that the salt solution contains both water and dissolved sodium chloride.",
+          "text_bn": "লবণ দ্রবণে পানি ও দ্রবীভূত সোডিয়াম ক্লোরাইড দুটিই আছে কি না দেখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NaCl"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Start gentle heating; keep the system open and cooling water flowing through the condenser.",
+          "text_bn": "ধীরে তাপ দাও; যন্ত্র খোলা রাখো এবং কনডেনসারে শীতল পানি চালু রাখো।",
+          "check": {
+            "type": "heating",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Watch the thermometer as the solution warms toward boiling; the practical check is reached at 90 °C or above.",
+          "text_bn": "দ্রবণ স্ফুটনের দিকে গরম হলে থার্মোমিটার দেখো; ৯০ °C বা বেশি হলে এই ধাপটি পূর্ণ হবে।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 90
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Collect the condensed water in the receiver; the non-volatile salt remains in the flask.",
+          "text_bn": "ঘনীভূত পানি গ্রাহক পাত্রে সংগ্রহ করো; অবাষ্পীয় লবণ ফ্লাস্কে থেকে যায়।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "H2O"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Wear goggles, clamp hot glassware, keep the apparatus open to the air, use gentle heat, and stop before the flask boils dry.",
+        "bn": "গগলস পরো, গরম কাচের যন্ত্র আটকাও, যন্ত্র বাতাসের জন্য খোলা রাখো, ধীরে তাপ দাও এবং ফ্লাস্ক শুকিয়ে যাওয়ার আগেই থামাও।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Why does the distillate contain water but very little sodium chloride?",
+          "question_bn": "পাতিত পানিতে পানি থাকে কিন্তু সোডিয়াম ক্লোরাইড খুব কম থাকে কেন?",
+          "options_en": [
+            "Water vaporises and condenses; dissolved salt is non-volatile",
+            "Salt boils first and is left behind",
+            "The condenser filters out all ions mechanically",
+            "Water reacts with sodium chloride to make a gas"
+          ],
+          "options_bn": [
+            "পানি বাষ্প হয়ে ঘনীভূত হয়; দ্রবীভূত লবণ অবাষ্পীয়",
+            "লবণ আগে ফুটে উঠে ফ্লাস্কে থেকে যায়",
+            "কনডেনসার যান্ত্রিকভাবে সব আয়ন ছেঁকে ফেলে",
+            "পানি সোডিয়াম ক্লোরাইডের সঙ্গে বিক্রিয়া করে গ্যাস বানায়"
+          ],
+          "answer": 0,
+          "explain_en": "Under these conditions water enters the vapour phase while sodium chloride remains in the boiling flask.",
+          "explain_bn": "এই অবস্থায় পানি বাষ্পে পরিণত হয়, আর সোডিয়াম ক্লোরাইড স্ফুটন ফ্লাস্কে থেকে যায়।"
+        }
+      ],
+      "tags": [
+        "separation",
+        "distillation",
+        "salt-water"
+      ]
     }
   ]
 }

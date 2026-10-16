@@ -378,6 +378,16 @@ export class McuVM {
       A3: 'A3',
       A4: 'A4',
       A5: 'A5',
+      A6: 'A6',
+      A7: 'A7',
+      A8: 'A8',
+      A9: 'A9',
+      A10: 'A10',
+      A11: 'A11',
+      A12: 'A12',
+      A13: 'A13',
+      A14: 'A14',
+      A15: 'A15',
       PI: Math.PI,
       Math,
       min: Math.min,
@@ -493,7 +503,7 @@ export class McuVM {
       compId: string | null = null;
       attach(pin: unknown) {
         const p = self.pinOf(pin);
-        const dev = host.attached(p, ['orange'], ['servo-sg90']);
+        const dev = host.attached(p, ['orange'], ['servo-sg90', 'servo-mg996r']);
         this.compId = dev ? dev.compId : null;
         if (this.compId) host.setMemory(this.compId, 'angle', 90);
       }

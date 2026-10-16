@@ -99,6 +99,39 @@ export const vesselShapes: Record<VesselShape, ShapeGeometry> = {
     base: null,
     graduations: null,
     highlight: 'M26 110 Q50 122 74 110'
+  },
+  'watch-glass': {
+    viewBox: { width: 100, height: 170 },
+    glass: 'M10 92 Q50 126 90 92 M10 92 Q50 104 90 92',
+    cavity: 'M14 94 Q50 105 86 94 Q50 120 14 94 Z',
+    box: { x: 14, y: 94, width: 72, height: 24 },
+    rimY: 92,
+    rim: null,
+    base: null,
+    graduations: null,
+    highlight: 'M24 99 Q50 110 76 99'
+  },
+  crucible: {
+    viewBox: { width: 100, height: 170 },
+    glass: 'M26 63 Q50 54 74 63 L68 130 Q50 141 32 130 Z M22 59 Q50 49 78 59 L78 66 Q50 76 22 66 Z M20 52 Q50 42 80 52 L78 59 Q50 67 22 59 Z',
+    cavity: 'M31 66 Q50 72 69 66 L64 127 Q50 134 36 127 Z',
+    box: { x: 34, y: 66, width: 32, height: 66 },
+    rimY: 59,
+    rim: { cx: 50, rx: 28 },
+    base: null,
+    graduations: null,
+    highlight: 'M38 76 L40 119'
+  },
+  'reagent-bottle': {
+    viewBox: { width: 100, height: 170 },
+    glass: 'M38 22 L62 22 L62 43 L74 54 L74 137 Q74 145 66 145 L34 145 Q26 145 26 137 L26 54 L38 43 Z M36 12 L64 12 L64 24 L36 24 Z M39 7 L61 7 L61 12 L39 12 Z',
+    cavity: 'M40 25 L60 25 L60 46 L70 56 L70 136 Q70 141 65 141 L35 141 Q30 141 30 136 L30 56 L40 46 Z',
+    box: { x: 30, y: 25, width: 40, height: 116 },
+    rimY: 22,
+    rim: null,
+    base: null,
+    graduations: null,
+    highlight: 'M34 62 L34 131'
   }
 };
 
@@ -111,5 +144,13 @@ export const apparatusGlyphPaths: Record<string, string> = {
   spatula: 'M46 10 h8 v34 h-8 Z M40 44 h20 v8 h-20 Z M48 52 h4 v26 h-4 Z',
   delivery: 'M20 20 q0 30 20 34 q20 4 20 30 M20 20 h8 M60 84 h-8',
   holder: 'M22 30 h40 a10 10 0 0 1 0 20 h-40 Z M62 40 h20 M46 50 v28',
-  cell: 'M24 24 h20 v52 h-20 Z M56 24 h20 v52 h-20 Z M44 40 h12 M30 76 v14 M70 76 v14 M34 34 h12 M34 44 h12 M62 34 h8 M62 44 h8'
+  cell: 'M24 24 h20 v52 h-20 Z M56 24 h20 v52 h-20 Z M44 40 h12 M30 76 v14 M70 76 v14 M34 34 h12 M34 44 h12 M62 34 h8 M62 44 h8',
+  pipette: 'M44 10 h12 v25 l-5 8 v30 h-2 V43 l-5 -8 Z M42 73 h16 v6 H42 Z M48 79 h4 v12 h-4 Z M44 21 h12 M44 28 h12 M44 35 h7',
+  funnel: 'M18 16 h64 L57 55 v29 h-14 V55 Z M23 22 h54 M42 52 h16',
+  'wash-bottle': 'M36 24 h28 v7 h-28 Z M39 31 h22 l6 11 v41 q0 7 -7 7 H40 q-7 0 -7 -7 V42 Z M58 32 l15 -14 q4 -4 8 0 l-2 4 -15 18 M72 18 l8 -5 M44 48 h14 v20 H44 Z',
+  'glass-rod': 'M48 8 q2 -3 4 0 v77 q-2 5 -4 0 Z M48 16 h4 M48 78 h4',
+  'wire-gauze': 'M20 26 h60 v48 H20 Z M27 26 v48 M34 26 v48 M41 26 v48 M48 26 v48 M55 26 v48 M62 26 v48 M69 26 v48 M76 26 v48 M20 34 h60 M20 42 h60 M20 50 h60 M20 58 h60 M20 66 h60 M26 76 l-5 9 M74 76 l5 9',
+  'retort-stand': 'M12 82 h76 v8 H12 Z M45 10 h10 v72 H45 Z M54 25 h24 v6 H54 Z M72 20 h8 v16 h-8 Z M70 28 h-20 v5 h20',
+  'test-tube-rack': 'M15 40 h70 v10 H15 Z M20 50 h6 v30 h-6 Z M74 50 h6 v30 h-6 Z M22 34 v-18 q0 -4 4 -4 q4 0 4 4 v18 M40 34 v-18 q0 -4 4 -4 q4 0 4 4 v18 M58 34 v-18 q0 -4 4 -4 q4 0 4 4 v18 M76 34 v-18 q0 -4 4 -4 q4 0 4 4 v18 M25 50 v9 M43 50 v9 M61 50 v9 M79 50 v9',
+  'mortar-pestle': 'M16 53 Q50 85 84 53 L77 80 Q50 95 23 80 Z M14 50 Q50 67 86 50 M58 20 L76 47 M55 18 Q59 14 63 18 L79 42 Q82 47 77 50 L73 52 L53 25 Q50 21 55 18 Z'
 };

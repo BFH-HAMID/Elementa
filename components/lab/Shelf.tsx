@@ -33,6 +33,7 @@ export function Shelf() {
   const setPourMl = useLabStore((state) => state.setPourMl);
   const addChemical = useLabStore((state) => state.addChemical);
   const addVessel = useLabStore((state) => state.addVessel);
+  const addBenchEquipment = useLabStore((state) => state.addBenchEquipment);
 
   // Tap is the mobile fallback for dragging: with no station selected, drop a test tube
   // on the bench first so a single tap always does something useful.
@@ -188,6 +189,7 @@ export function Shelf() {
                       apparatus={item}
                       onQuickUse={() => {
                         if (item.kind === 'vessel') addVessel(item.id);
+                        else addBenchEquipment(item.id);
                       }}
                     />
                   ))}

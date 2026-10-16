@@ -38,10 +38,30 @@ describe('geometry', () => {
 });
 
 describe('parts registry', () => {
-  it('has at least 40 parts across the 8 categories', () => {
-    expect(PARTS.length).toBeGreaterThanOrEqual(40);
+  it('has at least 95 parts across the 8 categories', () => {
+    expect(PARTS.length).toBeGreaterThanOrEqual(95);
     const cats = new Set(PARTS.map((p) => p.category));
     expect(cats.size).toBe(8);
+  });
+
+  it('includes realistic board, motor, driver and compact breadboard additions', () => {
+    const ids = new Set(PARTS.map((p) => p.id));
+    for (const id of [
+      'arduino-mega-2560',
+      'esp32-s3-devkitc',
+      'breadboard-mini',
+      'dc-motor-130',
+      'micro-metal-gearmotor',
+      'vibration-motor-coin',
+      'dc-motor-fan',
+      'servo-mg996r',
+      'motor-driver-l298n',
+      'motor-driver-tb6612fng'
+    ]) expect(ids.has(id), id).toBe(true);
+    const mini = getPart('breadboard-mini')!;
+    expect(mini.pins).toHaveLength(170);
+    expect(holeGroupKey('h1a')).toBe(holeGroupKey('h1e'));
+    expect(holeGroupKey('h1a')).not.toBe(holeGroupKey('h1f'));
   });
 
   it('every pin id is unique within its part', () => {

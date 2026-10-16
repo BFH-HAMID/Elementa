@@ -3,6 +3,7 @@ import { useCircuitStore } from '@/store/circuitStore';
 import { EXAMPLE_PROJECTS } from '../projects/examples';
 import { CircuitEngine } from '../simulator/engine';
 import { billOfMaterials, checkCircuit } from '../lib/analysis';
+import { PARTS } from '../parts/registry';
 
 describe('circuit store', () => {
   beforeEach(() => {
@@ -37,6 +38,31 @@ describe('circuit store', () => {
     for (let i = 0; i < 4; i++) useCircuitStore.getState().rotateSelection(1);
     const comp = useCircuitStore.getState().components.find((c) => c.id === id)!;
     expect(comp.rotation).toBe(0);
+  });
+
+  it('all catalog parts can be moved, rotated, flipped, duplicated and deleted', () => {
+    useCircuitStore.getState().newProject();
+    const ids = PARTS.map((part, i) => useCircuitStore.getState().addComponent(part.id, i * 5, i * 10));
+    const st = useCircuitStore.getState();
+    st.select(ids, []);
+    st.moveComponents(ids, 25, 35);
+    st.rotateSelection(1);
+    st.flipSelection();
+    const placed = useCircuitStore.getState().components;
+    expect(placed).toHaveLength(PARTS.length);
+    for (const comp of placed) {
+      expect(comp.x).toBeGreaterThanOrEqual(25);
+      expect(comp.y).toBeGreaterThanOrEqual(35);
+      expect(comp.rotation).toBe(90);
+      expect(comp.flipH).toBe(true);
+    }
+
+    useCircuitStore.getState().duplicateSelection();
+    expect(useCircuitStore.getState().components).toHaveLength(PARTS.length * 2);
+    const copies = useCircuitStore.getState().selectedComps;
+    useCircuitStore.getState().deleteSelection();
+    expect(useCircuitStore.getState().components.map((c) => c.id).sort()).toEqual(ids.sort());
+    expect(useCircuitStore.getState().components.some((c) => copies.includes(c.id))).toBe(false);
   });
 
   it('every example loads and has a non-empty BOM', () => {

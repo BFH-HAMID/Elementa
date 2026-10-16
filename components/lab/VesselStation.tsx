@@ -15,12 +15,12 @@ import { useLabStore, vesselLabel } from '@/store/labStore';
 import { Burner, ElectrolysisCell, Thermometer, TripodStand, VesselFor } from './Apparatus';
 import { vesselDropId, type DropTargetData } from './dragTypes';
 
-export function VesselStation({ vessel, index, selected }: { vessel: Vessel; index: number; selected: boolean }) {
+export function VesselStation({ vessel, index, selected, onSelect }: { vessel: Vessel; index: number; selected: boolean; onSelect: (vesselId: string) => void }) {
   const locale = useLabStore((state) => state.locale);
   const burner = useLabStore((state) => state.burner);
   const allEffects = useLabStore((state) => state.effects);
   const vessels = useLabStore((state) => state.vessels);
-  const selectVessel = useLabStore((state) => state.selectVessel);
+  const benchEquipment = useLabStore((state) => state.benchEquipment);
   const setHeating = useLabStore((state) => state.setHeating);
   const spark = useLabStore((state) => state.spark);
   const collectGas = useLabStore((state) => state.collectGas);
@@ -43,6 +43,10 @@ export function VesselStation({ vessel, index, selected }: { vessel: Vessel; ind
   const gasTarget = vessels.find((other) => other.id !== vessel.id && apparatusById.get(other.apparatusId)?.acceptsGas);
   const pourTarget = vessels.find((other) => other.id !== vessel.id);
   const canHeat = view.apparatus?.canHeat ?? false;
+  const hasExternalThermometer = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId)?.shape === 'thermometer');
+  const hasExternalCell = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId)?.shape === 'cell');
+  const hasExternalBurner = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId)?.shape === 'burner');
+  const hasExternalTripod = benchEquipment.some((item) => item.linkedVesselId === vessel.id && apparatusById.get(item.apparatusId)?.shape === 'tripod');
   const phColor = view.ph === null ? '#cbd5e1' : indicatorColor('universal', view.ph);
 
   return (
@@ -53,7 +57,7 @@ export function VesselStation({ vessel, index, selected }: { vessel: Vessel; ind
       exit={{ opacity: 0, scale: 0.94 }}
       transition={{ type: 'spring', stiffness: 260, damping: 26 }}
       ref={setNodeRef}
-      onClick={() => selectVessel(vessel.id)}
+      onClick={() => onSelect(vessel.id)}
       className={cn(
         'card relative flex min-w-[210px] flex-1 flex-col overflow-hidden transition',
         selected ? 'border-physics-400 shadow-glow' : 'hover:border-physics-200',
@@ -79,22 +83,22 @@ export function VesselStation({ vessel, index, selected }: { vessel: Vessel; ind
           />
         </div>
 
-        {vessel.thermometer && (
+        {vessel.thermometer && !hasExternalThermometer && (
           <div className="absolute right-1 top-1 h-[124px] w-9">
             <Thermometer temperatureC={vessel.temperatureC} className="h-full w-full" />
           </div>
         )}
 
-        {vessel.electrolysis && (
+        {vessel.electrolysis && !hasExternalCell && (
           <div className="pointer-events-none absolute bottom-[-4px] right-[-6px] h-[56px] w-[56px]">
             <ElectrolysisCell className="h-full w-full" />
           </div>
         )}
 
-        {view.heating && (
+        {view.heating && (!hasExternalBurner || !hasExternalTripod) && (
           <div className="pointer-events-none absolute inset-x-0 bottom-[-6px] flex flex-col items-center">
-            <TripodStand className="w-[104px]" />
-            <Burner lit={burner.lit} intensity={burner.intensity} flameColor={flameColor} reducedMotion={reducedMotion} className="-mt-3 w-[76px]" />
+            {!hasExternalTripod && <TripodStand className="w-[104px]" />}
+            {!hasExternalBurner && <Burner lit={burner.lit} intensity={burner.intensity} flameColor={flameColor} reducedMotion={reducedMotion} className={cn(!hasExternalTripod && '-mt-3', 'w-[76px]')} />}
           </div>
         )}
 

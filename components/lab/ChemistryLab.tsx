@@ -17,9 +17,10 @@ import { ClipboardList, FlaskConical, ListChecks } from 'lucide-react';
 import type { Locale } from '@/engine/types';
 import { allChemPracticalModels, hasChemPracticalModel } from '@/engine/chemPracticals';
 import { labT, useLabI18n } from '@/lib/i18n';
-import { apparatusById, getExperiment } from '@/lib/labData';
+import { apparatusById, chemicalsById, getExperiment } from '@/lib/labData';
 import { cn } from '@/lib/utils';
-import { useLabStore } from '@/store/labStore';
+import { useLabStore, type BenchPoint } from '@/store/labStore';
+import { benchEquipmentSize } from './BenchEquipmentItem';
 import { ChemPracticalSimulator } from './practicals/ChemPracticalSimulator';
 import { ApparatusGlyph } from './Apparatus';
 import { EquationBox } from './EquationBox';
@@ -99,7 +100,10 @@ export function ChemistryLab() {
     const payload = (event.active.data.current as DragPayload | undefined) ?? null;
     const target = (event.over?.data.current as DropTargetData | undefined) ?? null;
     setActiveDrag(null);
-    if (payload && target) drop(payload, target);
+    if (payload && target) {
+      const point = target.type === 'bench' ? benchDropPoint(event, payload) : undefined;
+      drop(payload, target, point);
+    }
   };
 
   return (
@@ -195,58 +199,115 @@ export function ChemistryLab() {
   );
 }
 
-/** What a dropped chemical or piece of apparatus actually does to the bench. */
-function drop(payload: DragPayload, target: DropTargetData) {
+/** Convert the drag overlay position into world coordinates on the zoomable worktop. */
+function benchDropPoint(event: DragEndEvent, payload: DragPayload): BenchPoint | undefined {
+  if (typeof document === 'undefined') return undefined;
+  const surface = document.querySelector<HTMLElement>('[data-chemistry-bench-surface="true"]');
+  const rect = surface?.getBoundingClientRect();
+  const activeRect = event.active.rect.current.translated ?? event.active.rect.current.initial;
+  if (!surface || !rect || !activeRect) return undefined;
+
+  const zoom = Number(surface.dataset.zoom) || 1;
+  const cx = (activeRect.left + activeRect.width / 2 - rect.left) / zoom;
+  const cy = (activeRect.top + activeRect.height / 2 - rect.top) / zoom;
+  const size = payload.kind === 'apparatus' && payload.apparatusKind !== 'vessel'
+    ? benchEquipmentSize(payload.shape)
+    : payload.kind === 'element'
+      ? { width: 112, height: 128 }
+      : { width: 230, height: 490 };
+  return { x: Math.max(0, cx - size.width / 2), y: Math.max(0, cy - size.height / 2) };
+}
+
+/** What a dropped chemical, element or piece of apparatus actually does to the bench. */
+function drop(payload: DragPayload, target: DropTargetData, position?: BenchPoint) {
   const store = useLabStore.getState();
 
   if (payload.kind === 'chemical') {
     let vesselId: string;
     if (target.type === 'vessel') vesselId = target.vesselId;
-    else vesselId = store.selectedVesselId ?? store.vessels[0]?.id ?? store.addVessel('test-tube');
+    else vesselId = store.selectedVesselId ?? store.vessels[0]?.id ?? store.addVessel('test-tube', undefined, position);
     if (!vesselId) return;
     store.selectVessel(vesselId);
     store.addChemical(vesselId, payload.chemicalId, store.pourMl);
     return;
   }
 
+  if (payload.kind === 'element') {
+    if (target.type === 'bench') {
+      store.addElementSample(payload.element, position);
+      return;
+    }
+    const elementalForms: Record<string, string> = { H: 'H2', N: 'N2', O: 'O2', Cl: 'Cl2' };
+    const knownChemical = chemicalsById.get(payload.element.symbol) ?? chemicalsById.get(elementalForms[payload.element.symbol] ?? '');
+    if (knownChemical?.shelf) {
+      store.selectVessel(target.vesselId);
+      const amount = knownChemical.state === 'solid' ? 1 : knownChemical.state === 'gas' ? 20 : 5;
+      store.addChemical(target.vesselId, knownChemical.id, amount);
+      return;
+    }
+    const vessel = store.vessels.find((item) => item.id === target.vesselId);
+    const sampleIndex = store.elementSamples.length;
+    store.addElementSample(payload.element, {
+      x: (vessel?.x ?? 24) + 246 + (sampleIndex % 4) * 112,
+      y: (vessel?.y ?? 178) + Math.floor(sampleIndex / 4) * 128
+    });
+    store.notify(labT('en', 'elements.notAReagent'), labT('bn', 'elements.notAReagent'), 'info');
+    return;
+  }
+
   if (target.type === 'bench') {
-    if (payload.apparatusKind === 'vessel') store.addVessel(payload.apparatusId);
+    if (payload.apparatusKind === 'vessel') store.addVessel(payload.apparatusId, undefined, position);
+    else store.addBenchEquipment(payload.apparatusId, position);
     return;
   }
 
   const vesselId = target.vesselId;
-  switch (payload.apparatusKind) {
-    case 'vessel':
-      store.setVesselApparatus(vesselId, payload.apparatusId);
-      break;
-    case 'heat':
-    case 'support':
-      // Dropping the burner, the tripod or the tube holder means "heat this station".
+  const vessel = store.vessels.find((item) => item.id === vesselId);
+  if (payload.apparatusKind === 'vessel') {
+    store.setVesselApparatus(vesselId, payload.apparatusId);
+    return;
+  }
+
+  const linkedEquipmentCount = store.benchEquipment.filter((item) => item.linkedVesselId === vesselId).length;
+  const equipmentPosition = position ?? {
+    x: (vessel?.x ?? 24) + 246 + (linkedEquipmentCount % 3) * 142,
+    y: (vessel?.y ?? 178) + 42 + Math.floor(linkedEquipmentCount / 3) * 172
+  };
+  const equipmentId = store.addBenchEquipment(payload.apparatusId, equipmentPosition, vesselId);
+  if (!equipmentId) return;
+  store.selectVessel(vesselId);
+
+  switch (payload.apparatusId) {
+    case 'bunsen-burner':
       store.setHeating(vesselId, true);
       break;
-    case 'measure':
+    case 'thermometer':
       store.attachThermometer(vesselId, true);
       break;
-    case 'power':
+    case 'electrolysis-cell':
       store.attachElectrolysis(vesselId, true);
       break;
-    case 'tool':
-      if (payload.apparatusId === 'delivery-tube') {
-        const jar = store.vessels.find((vessel) => vessel.id !== vesselId && apparatusById.get(vessel.apparatusId)?.acceptsGas);
-        const jarId = jar?.id ?? store.addVessel('gas-jar');
-        if (jarId) store.collectGas(vesselId, jarId);
-      } else if (payload.apparatusId === 'dropper') {
-        const source =
-          store.vessels.find((vessel) => vessel.id === store.selectedVesselId && vessel.id !== vesselId) ??
-          store.vessels.find((vessel) => vessel.id !== vesselId && vessel.portions.length > 0);
-        if (source) store.dispense(source.id, vesselId, 1);
-      } else if (payload.apparatusId === 'spatula') {
-        store.stir(vesselId);
-      } else {
-        store.setHeating(vesselId, true);
-      }
+    case 'delivery-tube': {
+      const jar = store.vessels.find((item) => item.id !== vesselId && apparatusById.get(item.apparatusId)?.acceptsGas);
+      const jarId = jar?.id ?? store.addVessel('gas-jar', undefined, { x: equipmentPosition.x + 40, y: equipmentPosition.y + 180 });
+      if (jarId) store.collectGas(vesselId, jarId);
+      break;
+    }
+    case 'dropper':
+    case 'graduated-pipette': {
+      const source =
+        store.vessels.find((item) => item.id === store.selectedVesselId && item.id !== vesselId) ??
+        store.vessels.find((item) => item.id !== vesselId && item.portions.length > 0);
+      if (source) store.dispense(source.id, vesselId, 1);
+      break;
+    }
+    case 'spatula':
+    case 'glass-stirring-rod':
+      store.stir(vesselId);
       break;
     default:
+      // Supports and other tools are now real, movable bench objects. Their physical
+      // presence does not silently start heating or alter the vessel's contents.
       break;
   }
 }
@@ -263,10 +324,22 @@ function DragChip({ payload, locale }: { payload: DragPayload; locale: Locale })
     );
   }
 
-  const apparatus = apparatusById.get(payload.apparatusId);
+  if (payload.kind === 'element') {
+    return (
+      <div className="flex items-center gap-2 rounded-xl border border-chemistry-300 bg-white px-3 py-2 shadow-float">
+        <span className="grid h-9 w-9 place-items-center rounded-lg bg-chemistry-100 font-mono text-sm font-black text-chemistry-900">{payload.element.symbol}</span>
+        <span className="min-w-0">
+          <span className="block max-w-[150px] truncate text-[11px] font-black text-slate-800">{payload.name}</span>
+          <span className="block font-mono text-[9px] font-bold text-slate-500">Z {payload.element.z} · {payload.element.mass} u</span>
+        </span>
+      </div>
+    );
+  }
+
+  const apparatusItem = apparatusById.get(payload.apparatusId);
   return (
     <div className="flex items-center gap-2 rounded-xl border border-physics-300 bg-[var(--surface)] px-3 py-2 text-physics-700 shadow-float dark:text-physics-200">
-      {apparatus && <ApparatusGlyph apparatus={apparatus} size={20} />}
+      {apparatusItem && <ApparatusGlyph apparatus={apparatusItem} size={20} />}
       <span className="max-w-[160px] truncate text-[11px] font-black">{payload.name}</span>
     </div>
   );

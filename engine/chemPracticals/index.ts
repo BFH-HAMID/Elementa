@@ -6,6 +6,7 @@ import { redoxModels } from './redox';
 import { electroModels } from './electro';
 import { thermalModels } from './thermal';
 import { kineticsModels } from './kinetics';
+import { extendedModels } from './extended';
 import { matchTask, withDefaults, zeroNoise } from './helpers';
 
 export * from './types';
@@ -30,7 +31,8 @@ export const allChemPracticalModels: ChemPracticalModel[] = [
   ...redoxModels,
   ...electroModels,
   ...thermalModels,
-  ...kineticsModels
+  ...kineticsModels,
+  ...extendedModels
 ];
 
 export const chemPracticalModels: Record<string, ChemPracticalModel> = Object.fromEntries(allChemPracticalModels.map((m) => [m.slug, m]));

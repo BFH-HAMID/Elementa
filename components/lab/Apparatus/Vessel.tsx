@@ -44,6 +44,7 @@ export function Vessel({
 }: VesselProps) {
   const geometry = vesselShapes[shape];
   const { viewBox, glass, cavity, box, rim, base, graduations, highlight } = geometry;
+  const ceramic = shape === 'crucible';
   const liquidTop = box.y + box.height * (1 - Math.min(1, Math.max(0, fill)));
   const ticks = graduations
     ? Array.from({ length: graduations.count }).map((_, index) => {
@@ -73,8 +74,8 @@ export function Vessel({
 
       {base && <path d={base} fill="#9fb3c8" fillOpacity="0.35" stroke="#7d94ab" strokeWidth="1.4" strokeLinejoin="round" />}
 
-      {/* Glass body */}
-      <path d={cavity} fill={`url(#${clipId}-glass)`} />
+      {/* Clear glassware or opaque porcelain, depending on the apparatus. */}
+      <path d={cavity} fill={ceramic ? '#d8c5a4' : `url(#${clipId}-glass)`} />
 
       <g clipPath={`url(#${clipId})`}>
         <LiquidView
@@ -90,15 +91,21 @@ export function Vessel({
         <EffectsLayer geometry={geometry} effects={effects} liquidTop={liquidTop} clipId={clipId} reducedMotion={reducedMotion} />
       </g>
 
+      {shape === 'reagent-bottle' && (
+        <g aria-hidden="true">
+          <rect x="36" y="87" width="28" height="23" rx="2" fill="#fffdf3" fillOpacity="0.86" stroke="#9ba8af" strokeWidth="0.8" />
+          <path d="M41 94 H59 M41 99 H55 M41 104 H52" stroke="#7d94ab" strokeWidth="1" strokeLinecap="round" />
+        </g>
+      )}
       <path
         d={glass}
         fill="none"
-        stroke="var(--lab-glass, #7d94ab)"
-        strokeWidth="2.4"
+        stroke={ceramic ? '#8b765c' : 'var(--lab-glass, #7d94ab)'}
+        strokeWidth={ceramic ? 3 : 2.4}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path d={highlight} fill="none" stroke="#ffffff" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" />
+      <path d={highlight} fill="none" stroke={ceramic ? '#fff9e9' : '#ffffff'} strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" />
       {rim && (
         <>
           <ellipse cx={rim.cx} cy={geometry.rimY} rx={rim.rx} ry={3} fill="none" stroke="var(--lab-glass, #7d94ab)" strokeWidth="2.2" />

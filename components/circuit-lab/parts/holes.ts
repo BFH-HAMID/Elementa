@@ -48,6 +48,32 @@ export function breadboardPins(cols: number): PinDef[] {
   return pins;
 }
 
+/** 170-point mini breadboard: ten contact rows split by a centre channel, no rails. */
+export function breadboardMiniPins(cols = 17): PinDef[] {
+  const pins: PinDef[] = [];
+  const left = 20;
+  const bodyTop = 20;
+  for (let c = 1; c <= cols; c++) {
+    for (let r = 0; r < BB_ROWS.length; r++) {
+      const gap = r >= 5 ? 10 : 0;
+      const row = BB_ROWS[r];
+      pins.push({
+        id: `h${c}${row}`,
+        label: `${c}${row.toUpperCase()}`,
+        x: left + (c - 1) * BB_COL_PITCH,
+        y: bodyTop + r * BB_COL_PITCH + gap,
+        kind: 'io',
+        func: `Hole ${c}${row.toUpperCase()}`
+      });
+    }
+  }
+  return pins;
+}
+
+export function breadboardMiniSize(cols = 17) {
+  return { w: 30 + cols * BB_COL_PITCH, h: 140 };
+}
+
 export function breadboardSize(cols: number) {
   return { w: 20 + cols * BB_COL_PITCH + 10, h: 50 + 10 * 10 + 20 + 40 + 10 };
 }

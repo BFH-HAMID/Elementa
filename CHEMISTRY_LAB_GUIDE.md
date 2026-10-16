@@ -104,9 +104,11 @@ Field reference:
 | `indicator` | `litmus` · `phenolphthalein` · `methyl-orange` · `universal` | Makes the chemical an indicator: its colour is mixed into the liquid according to pH. |
 | `gasTest` | `{ name_en, name_bn }` | Text shown for the classic confirming test of a gas. |
 
-`data/elements.json` is reference data only (all 118 elements, bilingual names, group, period,
-block, state, radioactivity). It is loaded lazily by `components/lab/ElementReference.tsx` so the
-118-element grid never costs the bench anything.
+`data/elements.json` contains all 118 elements and is loaded lazily by `components/lab/ElementReference.tsx`.
+The periodic-table tiles can be dragged to the worktop as movable, labelled reference samples. Dropping
+an element onto a vessel adds it as a reagent only when the chemistry model contains that elemental
+substance; otherwise it places a labelled reference sample beside the vessel. Reference samples are
+not a claim about the element's real-world appearance or safe handling.
 
 ---
 
@@ -134,7 +136,7 @@ Append to `data/apparatus.json` → `apparatus[]` and update `count`.
 | Field | Values | Effect |
 | --- | --- | --- |
 | `kind` | `vessel` · `heat` · `support` · `measure` · `tool` · `power` | Decides what dropping it does (see below). |
-| `shape` | `tube` · `beaker` · `flask` · `cylinder` · `burette` · `jar` · `dish` (vessels) or `burner` · `tripod` · `thermometer` · `dropper` · `spatula` · `delivery` · `holder` · `cell` (tools) | Picks the SVG drawing. New vessel shapes need a component in `components/lab/Apparatus/` plus an entry in `vesselComponents`; unknown shapes fall back to the test tube. |
+| `shape` | Vessels: `tube` · `beaker` · `flask` · `cylinder` · `burette` · `jar` · `dish` · `watch-glass` · `crucible` · `reagent-bottle`; tools/supports: `burner` · `tripod` · `thermometer` · `dropper` · `spatula` · `delivery` · `holder` · `cell` · `pipette` · `funnel` · `wash-bottle` · `glass-rod` · `wire-gauze` · `retort-stand` · `test-tube-rack` · `mortar-pestle` | Picks the SVG drawing. New vessel shapes need a component in `components/lab/Apparatus/` plus an entry in `vesselComponents`; tool glyphs live in `vesselShapes.ts`. |
 | `capacityMl` | number | Fill level, headspace for gases, "vessel is full" warning. |
 | `canHeat` | boolean | `false` refuses heating with a message (measuring cylinders and burettes must not be heated). |
 | `acceptsGas` | boolean | `true` makes it a gas-collection target for the delivery tube. |
@@ -144,15 +146,21 @@ Append to `data/apparatus.json` → `apparatus[]` and update `count`.
 | Dropped on a vessel | Result |
 | --- | --- |
 | another vessel | the station changes glassware, contents scale proportionally (`setVesselApparatus`) |
-| `heat` / `support` (burner, tripod, tube holder) | the station starts heating and the burner lights itself |
-| `measure` (thermometer) | a thermometer is clamped to the station |
-| `power` (electrolysis cell) | current flows; `electrolysis` triggers become available |
-| delivery tube | gas is pushed into a gas jar (one is added automatically if the bench has none) |
-| dropper | 1 mL is transferred from the selected station into this one |
-| spatula | the mixture is stirred — settled solid clouds the liquid, then settles again |
+| Bunsen burner | a movable burner is placed beside the station and heating starts |
+| tripod / retort stand / rack / wire gauze | the support is placed beside the station; it does not silently start heating |
+| thermometer | a movable thermometer is linked to the station and reads its temperature |
+| electrolysis cell | the cell is linked to the station; current-triggered rules become available |
+| delivery tube | the tube is placed; gas is transferred to a gas jar (one is added if needed) |
+| dropper / graduated pipette | 1 mL is transferred from the selected station into this one |
+| spatula / glass rod | the mixture is stirred — settled solid clouds the liquid, then settles again |
+| other tools | the realistic, movable apparatus is placed without changing the mixture |
 
-Dropping on the **bench** (not on a vessel) adds a new station for glassware, and adds the
-chemical to the selected station — creating a test tube first if the bench is empty.
+Dropping on the **worktop** (not on a vessel) creates a movable vessel or apparatus object. A
+chemical is poured into the selected station (or a test tube is created if the bench is empty); an
+element tile creates a labelled reference sample. A sample placed on an empty area can be dragged,
+rotated when it is apparatus, duplicated, selected, removed with its × button or the Delete key,
+and restored with undo/redo. The worktop supports up to 12 glassware stations, 32 loose apparatus
+items and 118 element samples. Its layout, contents and equipment are saved in the browser.
 
 ---
 
@@ -276,14 +284,15 @@ carry such records — follow their tone.
 
 ## 6. Add a guided experiment
 
-The lab ships 41 guided experiments (see the catalog at `/bn|/en/lab/experiments`). Twenty came from
-`scripts/add-chemistry-lab-practicals.py` and the last ten (rates, water of crystallisation, molar volume,
+The lab ships 46 guided experiments (see the catalog at `/bn|/en/lab/experiments`). Twenty came from
+`scripts/add-chemistry-lab-practicals.py` and ten more (rates, water of crystallisation, molar volume,
 Faraday's law, the Daniell cell, catalysis, a solubility curve, rock-salt purification and Le Chatelier's
-principle) from `scripts/add-chemistry-practical-simulations.py`, which also adds the chemicals and reaction
-rules they need. Both generators append only when a `slug`/`id` is new and recompute the `count` fields. To add
-another, append to `data/experiments.json` → `experiments[]` and update `count` (or extend a script and run it).
-Every guided experiment must also have a practical simulation model — see §13 — and a scripted walkthrough in
-`store/__tests__/labPracticals.test.ts`.
+principle) from `scripts/add-chemistry-practical-simulations.py`. The latest five extend the catalog with
+solution conductivity, paper chromatography, calcium-carbonate surface-area kinetics, ammonia/HCl diffusion
+and simple distillation. The generators append only when a `slug`/`id` is new and recompute the `count` fields.
+To add another, append to `data/experiments.json` → `experiments[]` and update `count` (or extend a script and
+run it). Every guided experiment must also have a practical simulation model — see §13 — and a scripted
+walkthrough in `store/__tests__/labPracticals.test.ts`.
 
 ```json
 {
@@ -515,7 +524,8 @@ have **Simulation** buttons, and the simulator's own picker steps through all pr
 | Redox & electrochemistry | KMnO₄ / K₂Cr₂O₇ titrations of Fe²⁺, iodometry, Cu/Zn + HNO₃, oxidation of alcohols, metal displacement, metals + acid (balloons), rusting, Daniell cell (Nernst-corrected EMF) |
 | Electrolysis | Hofmann voltameter (H₂ : O₂ = 2 : 1), brine (Faraday constant from H₂), copper(II) sulphate (Faraday constant from Δm) |
 | Heating & thermal | heating curve and boiling point, sublimation of NH₄Cl (% in a mixture), the limestone cycle, burning metals (empirical formula MO), water of crystallisation (x in CuSO₄·xH₂O), purifying rock salt, KNO₃ solubility curve |
-| Kinetics & stoichiometry | disappearing cross (order of reaction), disappearing cross vs temperature (activation energy), golden rain (Job's method → PbI₂) |
+| Kinetics & stoichiometry | disappearing cross (order of reaction), disappearing cross vs temperature (activation energy), golden rain (Job's method → PbI₂), CaCO₃ surface-area effect on reaction rate |
+| Conductivity, transport & separation | solution conductivity (strong/weak/non-electrolytes), NH₃/HCl diffusion and Graham's law, paper chromatography and Rf, simple distillation of salt water |
 
 **How it works**
 

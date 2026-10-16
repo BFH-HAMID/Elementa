@@ -58,6 +58,7 @@ export type PartCategory =
 export type PartFamily =
   | 'board' // microcontroller boards (ESP32, Uno, Pico, …)
   | 'breadboard'
+  | 'breadboard-mini'
   | 'perfboard'
   | 'resistor'
   | 'capacitor-ceramic'
@@ -111,7 +112,7 @@ export type SimModel =
   | { type: 'display'; variant: 'lcd16x2' | 'lcd16x2-i2c' | 'oled' | '7seg' }
   | { type: 'sensor'; variant: 'dht' | 'hcsr04' | 'pir' | 'ir' | 'mpu6050' | 'bmp280' | 'soil' | 'touch' | 'mq' | 'ldr-module' }
   | { type: 'wireless'; variant: 'nrf24' | 'hc05' | 'rfid' | 'gps' }
-  | { type: 'driver'; variant: 'l293d' | 'l298n' | 'uln2003' | 'stepper' }
+  | { type: 'driver'; variant: 'l293d' | 'l298n' | 'tb6612fng' | 'uln2003' | 'stepper' }
   | { type: 'meter'; variant: 'multimeter' | 'scope' | 'la' | 'fgen' }
   | { type: 'optocoupler' }
   | { type: 'regulator' }
@@ -203,6 +204,8 @@ export interface CompSimResult {
   on?: boolean;
   /** 0..1 motor speed / buzzer activity. */
   speed?: number;
+  /** Direction of a reversible motor: 1 forward, -1 reverse. */
+  direction?: 1 | -1;
   /** Servo angle in degrees. */
   angle?: number;
   /** Text rendered on LCD/OLED/serial. */

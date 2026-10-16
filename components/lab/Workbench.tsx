@@ -3,7 +3,7 @@
 import { useDroppable } from '@dnd-kit/core';
 import { AnimatePresence } from 'framer-motion';
 import { Flame, Info, Plus, Move } from 'lucide-react';
-import { useRef, useState, useCallback } from 'react';
+import { useRef, useState, useCallback, useEffect } from 'react';
 import { labT } from '@/lib/i18n';
 import { vessels as glassware } from '@/lib/labData';
 import { cn } from '@/lib/utils';
@@ -27,6 +27,7 @@ export function Workbench() {
   const attachThermometer = useLabStore((state) => state.attachThermometer);
   const attachElectrolysis = useLabStore((state) => state.attachElectrolysis);
   const moveVessel = useLabStore((state) => state.moveVessel);
+  const removeVessel = useLabStore((state) => state.removeVessel);
   const selectVessel = useLabStore((state) => state.selectVessel);
 
   const benchData: DropTargetData = { type: 'bench' };
@@ -71,6 +72,19 @@ export function Workbench() {
     },
     [vessels, moveVessel, selectVessel]
   );
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
+      if ((e.key === 'Delete' || e.key === 'Backspace') && selectedVesselId) {
+        e.preventDefault();
+        removeVessel(selectedVesselId);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [selectedVesselId, removeVessel]);
 
   return (
     <section ref={setNodeRef} className="flex min-h-[420px] flex-col gap-3" aria-label={labT(locale, 'bench.title')}>

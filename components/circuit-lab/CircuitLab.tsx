@@ -21,11 +21,13 @@ import { BottomPanel } from './panels/BottomPanel';
 import { SchematicView, SCHEMATIC_SVG_ID } from './schematic/SchematicView';
 import { SHARE_PARAM } from './lib/exporters';
 import { cn } from '@/lib/utils';
+import { Plane, ArrowRight, CircuitBoard } from 'lucide-react';
+import { ADVANCED_PROJECTS } from './projects/catalog-advanced';
 
 const SVG_ID = 'circuit-bench-svg';
 
 export default function CircuitLab() {
-  const { t, shortcuts } = useCircuitI18n();
+  const { t, shortcuts, locale } = useCircuitI18n();
   const frame = useCircuitStore((s) => s.frame);
   const running = useCircuitStore((s) => s.running);
   const simErrors = useCircuitStore((s) => s.simErrors);
@@ -37,6 +39,7 @@ export default function CircuitLab() {
   }, []);
   const help = useCircuitStore((s) => s.showHelp);
   const view = useCircuitStore((s) => s.view);
+  const activeExampleId = useCircuitStore((s) => s.activeExampleId);
   const fitActive = useCallback(() => {
     if (useCircuitStore.getState().view === 'schematic') useCircuitStore.getState().setSchematicZoom(null);
     else fitRef.current();
@@ -56,11 +59,11 @@ export default function CircuitLab() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Open the bench centred on the content once it is laid out.
+  // Refit after a preset loads so large flight stacks are visible at once.
   useEffect(() => {
     const id = window.setTimeout(() => fitRef.current(), 120);
     return () => window.clearTimeout(id);
-  }, []);
+  }, [activeExampleId]);
 
   const shortStatus = frame?.isShortCircuit ? t('shortCircuit') : frame && !running && components > 0 && frame.isOpenCircuit ? t('openCircuit') : null;
   const problem = simErrors.find((e) => e.toLowerCase().includes('overcurrent') || e.toLowerCase().includes('burnt') || e.toLowerCase().includes('overheat'));
@@ -79,6 +82,30 @@ export default function CircuitLab() {
             {problem}
           </p>
         ) : null}
+      </div>
+
+      <div className="relative overflow-hidden rounded-2xl border border-sky-400/25 bg-[#102635] p-4 text-white shadow-lg sm:p-5">
+        <div className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-cyan-400/15 blur-2xl" aria-hidden />
+        <div className="relative flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <div className="rounded-xl border border-cyan-300/25 bg-cyan-300/10 p-2.5 text-cyan-200"><Plane className="h-6 w-6" aria-hidden /></div>
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-300">{locale === 'bn' ? `নতুন · ${ADVANCED_PROJECTS.length}টি প্রজেক্ট` : `NEW · ${ADVANCED_PROJECTS.length} GUIDED PROJECTS`}</p>
+              <h2 className="mt-1 text-lg font-bold">{t('advanced')}</h2>
+              <p className="mt-1 max-w-2xl text-xs leading-5 text-slate-300">
+{locale === 'en'
+                  ? 'F4, ESC, PDB, GPS, RC, FPV and telemetry boards. Open a wired build, follow the bilingual guide and test power, motion, battery and link loss.'
+                  : 'F4, ESC, PDB, GPS, RC, FPV ও টেলিমেট্রি বোর্ড। তারসহ বিল্ড খুলে গাইড অনুযায়ী পাওয়ার, চলাচল, ব্যাটারি ও লিংক হারানোর প্রভাব দেখুন।'}
+              </p>
+            </div>
+          </div>
+          <button type="button" onClick={() => {
+            useCircuitStore.getState().setBottomTab('advanced');
+            window.requestAnimationFrame(() => document.getElementById('circuit-projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+          }} className="inline-flex items-center gap-2 rounded-xl bg-cyan-300 px-4 py-2.5 text-sm font-bold text-slate-950 transition hover:bg-cyan-200">
+            <CircuitBoard className="h-4 w-4" aria-hidden /> {locale === 'en' ? 'Explore projects' : 'প্রজেক্টগুলো দেখুন'} <ArrowRight className="h-4 w-4" aria-hidden />
+          </button>
+        </div>
       </div>
 
       <div className="flex gap-2 lg:hidden">

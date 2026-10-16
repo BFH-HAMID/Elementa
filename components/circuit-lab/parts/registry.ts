@@ -11,10 +11,12 @@
  */
 
 import { breadboardMiniPins, breadboardMiniSize, breadboardPins, breadboardSize, gridPins } from './holes';
+import { ROBOTICS_PARTS } from './robotics';
 import type { PartCategory, PartDef, PinDef, PinKind, PropDef, PropValue } from '../types';
 
 export const CATEGORY_ORDER: PartCategory[] = [
   'boards',
+  'robotics',
   'prototyping',
   'passives',
   'semiconductors',
@@ -1841,7 +1843,7 @@ const tools: PartDef[] = [
   }
 ];
 
-const partList: PartDef[] = [...boards, ...prototyping, ...passives, ...semiconductors, ...ICS, ...sensors, ...power, ...tools];
+const partList: PartDef[] = [...boards, ...ROBOTICS_PARTS, ...prototyping, ...passives, ...semiconductors, ...ICS, ...sensors, ...power, ...tools];
 
 // Ensure each part has defaults for every declared prop (no undefined values).
 export const PARTS: PartDef[] = partList.map((p) => {

@@ -5,13 +5,15 @@
 import { useMemo } from 'react';
 import { useCircuitStore } from '@/store/circuitStore';
 import { EXAMPLE_PROJECTS } from '../projects/examples';
+import { AdvancedProjectsPanel } from '../advanced/AdvancedProjectsPanel';
 import { billOfMaterials, checkCircuit, netlist } from '../lib/analysis';
 import { useCircuitI18n, type CircuitKey } from '../lib/i18n';
 import { cn } from '@/lib/utils';
 
-const TABS: { id: 'serial' | 'examples' | 'analysis' | 'check' | 'guide'; key: CircuitKey }[] = [
+const TABS: { id: 'serial' | 'examples' | 'advanced' | 'analysis' | 'check' | 'guide'; key: CircuitKey }[] = [
   { id: 'serial', key: 'serial' },
   { id: 'examples', key: 'examples' },
+  { id: 'advanced', key: 'advanced' },
   { id: 'analysis', key: 'analysis' },
   { id: 'check', key: 'check' },
   { id: 'guide', key: 'guide' }
@@ -23,7 +25,7 @@ export function BottomPanel() {
   const setTab = useCircuitStore((s) => s.setBottomTab);
 
   return (
-    <section aria-label={t('serial')} className="card flex min-h-0 flex-col p-0">
+    <section id="circuit-projects" aria-label={t('advanced')} className="card flex min-h-0 flex-col p-0">
       <div role="tablist" aria-label={t('serial')} className="flex flex-wrap gap-1 border-b border-[color:var(--line)] px-2 pt-2">
         {TABS.map((x) => (
           <button
@@ -43,6 +45,7 @@ export function BottomPanel() {
       <div role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`} className="min-h-0 flex-1 overflow-auto p-3 text-sm">
         {tab === 'serial' ? <SerialTab /> : null}
         {tab === 'examples' ? <ExamplesTab locale={locale} /> : null}
+        {tab === 'advanced' ? <AdvancedProjectsPanel /> : null}
         {tab === 'analysis' ? <AnalysisTab /> : null}
         {tab === 'check' ? <CheckTab /> : null}
         {tab === 'guide' ? <GuideTab /> : null}

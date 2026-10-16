@@ -333,6 +333,22 @@ export class CircuitEngine {
           r.speed = Math.min(1, Math.abs(voltage) / 6);
           r.direction = voltage < 0 ? -1 : 1;
         }
+        if (def?.id === 'brushless-2205') {
+          // All three phases must reach the SAME ESC. A single signal wire or
+          // an unwired motor must never appear to spin in the training view.
+          const nodes = this.topo?.nodeOf;
+          const motorNodes = ['u', 'v', 'w'].map((p) => nodes?.get(`${id}|${p}`));
+          const connected = this.components.find((esc) => {
+            if (esc.partId !== 'esc-30a') return false;
+            const escNodes = ['u', 'v', 'w'].map((p) => nodes?.get(`${esc.id}|${p}`));
+            return new Set(motorNodes).size === 3 && motorNodes.every((node) => node !== undefined && node >= 0 && escNodes.includes(node));
+          });
+          const esc = connected ? out.comp[connected.id] : undefined;
+          r.speed = esc?.speed ?? 0;
+          r.current = esc?.current ?? 0;
+          r.on = Boolean(esc?.on);
+          r.powered = Boolean(esc?.powered);
+        }
         if (def?.id === 'buzzer') {
           r.on = res.current > 0.0005;
           r.speed = r.on ? 1 : 0;

@@ -6,6 +6,7 @@ import { useRef, useState } from 'react';
 import { Play, Square, RotateCcw, Undo2, Redo2, RotateCw, FlipHorizontal2, Copy, Trash2, Maximize2, Activity, Magnet, FilePlus2, Save, FolderOpen, Download, Upload, Share2, ImageDown, FileCode2, HelpCircle, MousePointer2, Hand, Grid3x3, GitFork } from 'lucide-react';
 import { useCircuitStore, CIRCUIT_STORAGE_KEY, isValidProject } from '@/store/circuitStore';
 import { EXAMPLE_PROJECTS } from '../projects/examples';
+import { ADVANCED_PROJECTS } from '../projects/catalog-advanced';
 import { useCircuitI18n } from '../lib/i18n';
 import { exportPng, exportSvg, projectFileText, shareUrl } from '../lib/exporters';
 import { cn, downloadText } from '@/lib/utils';
@@ -223,16 +224,25 @@ export function Toolbar({ svgId, onFit }: { svgId: string; onFit: () => void }) 
           aria-label={t('examples')}
           value={activeExampleId ?? ''}
           onChange={(e) => {
-            if (e.target.value) useCircuitStore.getState().loadExample(e.target.value);
+            const id = e.target.value;
+            if (!id) return;
+            const store = useCircuitStore.getState();
+            store.loadExample(id);
+            if (ADVANCED_PROJECTS.some((project) => project.id === id)) store.setBottomTab('advanced');
           }}
           className="input h-9 w-full text-sm"
         >
           <option value="">{t('examples')}…</option>
-          {EXAMPLE_PROJECTS.map((ex) => (
-            <option key={ex.id} value={ex.id}>
-              {locale === 'bn' ? ex.title.bn : ex.title.en}
-            </option>
-          ))}
+          <optgroup label={locale === 'bn' ? 'সার্কিট ও MCU' : 'Circuits & MCU'}>
+            {EXAMPLE_PROJECTS.map((ex) => (
+              <option key={ex.id} value={ex.id}>{locale === 'bn' ? ex.title.bn : ex.title.en}</option>
+            ))}
+          </optgroup>
+          <optgroup label={locale === 'bn' ? 'ড্রোন ও অ্যাডভান্সড বিল্ড' : 'Drone & advanced builds'}>
+            {ADVANCED_PROJECTS.map((ex) => (
+              <option key={ex.id} value={ex.id}>{locale === 'bn' ? ex.title.bn : ex.title.en}</option>
+            ))}
+          </optgroup>
         </select>
       </label>
       <IconBtn label={t('newProject')} onClick={() => useCircuitStore.getState().newProject()}>

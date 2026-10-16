@@ -8,7 +8,7 @@
 
 import { useMemo, useState } from 'react';
 import Fuse from 'fuse.js';
-import { Search, Cpu, Grid3x3, Component, Zap, CircuitBoard, Radio, Battery, Wrench } from 'lucide-react';
+import { Search, Cpu, Grid3x3, Component, Zap, CircuitBoard, Radio, Battery, Wrench, Plane } from 'lucide-react';
 import { CATEGORY_ORDER, PARTS } from '../parts/registry';
 import { PartArt } from '../parts/renderers';
 import { PART_DRAG_MIME } from '../canvas/BenchCanvas';
@@ -20,6 +20,7 @@ import { cn } from '@/lib/utils';
 
 const CATEGORY_META: Record<PartCategory, { en: string; bn: string; icon: typeof Cpu }> = {
   boards: { en: 'Boards', bn: 'বোর্ড', icon: Cpu },
+  robotics: { en: 'Drone & robotics', bn: 'ড্রোন ও রোবটিক্স', icon: Plane },
   prototyping: { en: 'Prototyping', bn: 'প্রোটোটাইপিং', icon: Grid3x3 },
   passives: { en: 'Passives', bn: 'প্যাসিভ', icon: Component },
   semiconductors: { en: 'Semiconductors', bn: 'সেমিকন্ডাক্টর', icon: Zap },
@@ -111,7 +112,7 @@ export function PartPalette({ onPick }: { onPick?: () => void }) {
             const Icon = meta.icon;
             const items = PARTS.filter((p) => p.category === cat);
             return (
-              <details key={cat} open={cat === 'boards' || cat === 'passives' || cat === 'semiconductors'} className="group mb-2">
+              <details key={cat} open={cat === 'boards' || cat === 'robotics' || cat === 'passives' || cat === 'semiconductors'} className="group mb-2">
                 <summary className="flex cursor-pointer list-none items-center gap-2 rounded-lg px-2 py-1.5 text-xs font-semibold uppercase tracking-wide text-[color:var(--muted)] hover:bg-[color:var(--surface-soft)]">
                   <Icon className="h-3.5 w-3.5" aria-hidden />
                   <span className="flex-1">{locale === 'bn' ? meta.bn : meta.en}</span>

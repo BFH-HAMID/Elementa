@@ -5,12 +5,13 @@ import { ViewTracker } from '@/components/content/ViewTracker';
 import { CircuitLabLoader } from '@/components/circuit-lab/CircuitLabLoader';
 import { isLocale } from '@/i18n/routing';
 import { EXAMPLE_PROJECTS } from '@/components/circuit-lab/projects/examples';
+import { ADVANCED_PROJECTS } from '@/components/circuit-lab/projects/catalog-advanced';
 import { PARTS } from '@/components/circuit-lab/parts/registry';
 
 const COPY = {
   en: {
     title: 'Circuit Lab',
-    tagline: 'Build, wire and simulate circuits and microcontroller sketches in your browser.',
+    tagline: 'Build and simulate circuits, drone electronics and 20 guided robotics projects in your browser.',
     parts: 'Parts',
     examples: 'Example projects',
     sim: 'Simulation',
@@ -19,7 +20,7 @@ const COPY = {
   },
   bn: {
     title: 'সার্কিট ল্যাব',
-    tagline: 'ব্রাউজারে সার্কিট ও মাইক্রোকন্ট্রোলার স্কেচ তৈরি, ওয়্যার ও সিমুলেট করুন।',
+    tagline: 'ব্রাউজারে সার্কিট, ড্রোন ইলেকট্রনিক্স ও ২০টি নির্দেশনাসহ রোবটিক্স প্রজেক্ট তৈরি ও সিমুলেট করুন।',
     parts: 'যন্ত্রাংশ',
     examples: 'উদাহরণ প্রকল্প',
     sim: 'সিমুলেশন',
@@ -72,7 +73,7 @@ export default function CircuitLabPage({ params }: { params: { locale: string } 
         <div className="card grid gap-4 p-5 sm:grid-cols-4">
           {[
             { value: PARTS.length, label: copy.parts },
-            { value: EXAMPLE_PROJECTS.length, label: copy.examples },
+            { value: EXAMPLE_PROJECTS.length + ADVANCED_PROJECTS.length, label: copy.examples },
             { value: 'Web Worker', label: copy.sim },
             { value: 'SVG', label: copy.docs }
           ].map((stat) => (

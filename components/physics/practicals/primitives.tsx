@@ -141,19 +141,32 @@ export const SceneFrame = React.forwardRef<SVGSVGElement, { children: React.Reac
     <svg ref={setRef} viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full select-none" role="img" aria-label={label}>
       <defs>
         <pattern id="pr-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-          <path d="M 20 0 L 0 0 0 20" fill="none" stroke={C.line} strokeWidth="0.6" opacity="0.55" />
+          <path d="M 20 0 L 0 0 0 20" fill="none" stroke={C.line} strokeWidth="0.5" opacity="0.4" />
         </pattern>
-        {/* bench surface: warm laminate with a soft top light and a vignette */}
-        <linearGradient id="pr-bench" x1="0.15" y1="0" x2="0.85" y2="1">
-          <stop offset="0%" stopColor="#f3f6f9" />
-          <stop offset="34%" stopColor="#e8edf3" />
-          <stop offset="72%" stopColor="#d8e0e8" />
-          <stop offset="100%" stopColor="#c2ccd6" />
+        <pattern id="pr-bench-texture" width="80" height="80" patternUnits="userSpaceOnUse">
+          <rect width="80" height="80" fill="none" />
+          <circle cx={12} cy={18} r={0.6} fill="#000" opacity={0.04} />
+          <circle cx={34} cy={42} r={0.5} fill="#fff" opacity={0.05} />
+          <circle cx={62} cy={28} r={0.7} fill="#000" opacity={0.03} />
+          <path d="M 0 20 Q 40 18 80 22" fill="none" stroke="#b0b8c4" strokeWidth={0.3} opacity={0.15} />
+        </pattern>
+        {/* bench surface: realistic lab bench - light wood laminate with depth */}
+        <linearGradient id="pr-bench" x1="0.1" y1="0" x2="0.9" y2="1">
+          <stop offset="0%" stopColor="#f8fafc" />
+          <stop offset="20%" stopColor="#f1f5f9" />
+          <stop offset="50%" stopColor="#e8edf3" />
+          <stop offset="80%" stopColor="#dbe3ea" />
+          <stop offset="100%" stopColor="#cbd5e1" />
         </linearGradient>
-        <radialGradient id="pr-light" cx="0.42" cy="0.18" r="0.85">
-          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.55" />
-          <stop offset="55%" stopColor="#ffffff" stopOpacity="0.12" />
-          <stop offset="100%" stopColor="#0b1220" stopOpacity="0.10" />
+        <radialGradient id="pr-light" cx="0.38" cy="0.12" r="0.9">
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.65" />
+          <stop offset="35%" stopColor="#ffffff" stopOpacity="0.18" />
+          <stop offset="70%" stopColor="#e2e8f0" stopOpacity="0.08" />
+          <stop offset="100%" stopColor="#0f172a" stopOpacity="0.12" />
+        </radialGradient>
+        <radialGradient id="pr-vignette" cx="0.5" cy="0.5" r="0.85">
+          <stop offset="60%" stopColor="#000000" stopOpacity="0" />
+          <stop offset="100%" stopColor="#0f172a" stopOpacity="0.08" />
         </radialGradient>
         <linearGradient id="pr-metal" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#e2e8f0" />
@@ -233,11 +246,58 @@ export const SceneFrame = React.forwardRef<SVGSVGElement, { children: React.Reac
         <filter id="pr-glow-soft" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur stdDeviation="3.4" />
         </filter>
+        {/* realistic bulb & filament glow filters */}
+        <radialGradient id="pr-glow-bulb-real" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+          <stop offset="20%" stopColor="#fffbeb" stopOpacity="0.9" />
+          <stop offset="45%" stopColor="#fde68a" stopOpacity="0.55" />
+          <stop offset="75%" stopColor="#f59e0b" stopOpacity="0.18" />
+          <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
+        </radialGradient>
+        <radialGradient id="pr-glow-bulb-warm-real" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0%" stopColor="#fff7ed" stopOpacity="0.85" />
+          <stop offset="35%" stopColor="#fed7aa" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#fb923c" stopOpacity="0" />
+        </radialGradient>
+        <filter id="pr-bloom" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="4.5" result="b1" />
+          <feGaussianBlur stdDeviation="9" result="b2" />
+          <feMerge>
+            <feMergeNode in="b2" />
+            <feMergeNode in="b1" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="pr-bloom-strong" x="-120%" y="-120%" width="340%" height="340%">
+          <feGaussianBlur stdDeviation="7" result="b1" />
+          <feGaussianBlur stdDeviation="14" result="b2" />
+          <feMerge>
+            <feMergeNode in="b2" />
+            <feMergeNode in="b1" />
+            <feMergeNode in="b1" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        {/* wood grain for realistic boards */}
+        <pattern id="pr-wood-grain" width="100" height="20" patternUnits="userSpaceOnUse">
+          <path d="M 0 8 Q 25 6 50 8 T 100 8" fill="none" stroke="#8a6a3a" strokeWidth={0.4} opacity={0.18} />
+          <path d="M 0 14 Q 30 16 60 14 T 100 15" fill="none" stroke="#5a3c14" strokeWidth={0.3} opacity={0.12} />
+        </pattern>
+        <linearGradient id="pr-wood-real" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#e8c99a" />
+          <stop offset="25%" stopColor="#d4a76a" />
+          <stop offset="60%" stopColor="#b78a4a" />
+          <stop offset="100%" stopColor="#9a6b35" />
+        </linearGradient>
       </defs>
-      {/* the bench itself: surface, overhead light, faint vignette */}
+      {/* realistic bench: layered lighting with texture and vignette */}
       <rect x="0" y="0" width={W} height={H} fill="url(#pr-bench)" />
-      <rect x="0" y="0" width={W} height={H} fill="url(#pr-grid)" opacity="0.35" />
+      <rect x="0" y="0" width={W} height={H} fill="url(#pr-bench-texture)" opacity={0.6} />
+      <rect x="0" y="0" width={W} height={H} fill="url(#pr-grid)" opacity={0.22} />
       <rect x="0" y="0" width={W} height={H} fill="url(#pr-light)" />
+      <rect x="0" y="0" width={W} height={H} fill="url(#pr-vignette)" />
+      {/* subtle ambient occlusion at bottom */}
+      <rect x="0" y={H - 40} width={W} height={40} fill="url(#pr-bench)" opacity={0.15} />
       {children}
     </svg>
   );
@@ -660,10 +720,16 @@ export function Stand({ x, base, top, clampY, clampArm = 0 }: { x: number; base:
 export function Battery({ x, y, label }: { x: number; y: number; label?: string }) {
   return (
     <g>
-      <line x1={x - 6} y1={y - 14} x2={x - 6} y2={y + 14} stroke={C.ink} strokeWidth={2.4} />
-      <line x1={x + 6} y1={y - 8} x2={x + 6} y2={y + 8} stroke={C.ink} strokeWidth={4} />
+      {/* realistic battery cell with body */}
+      <rect x={x - 10} y={y - 16} width={20} height={32} rx={3} fill="url(#ix-steel)" stroke="#475569" strokeWidth={0.6} filter="url(#pr-ground)" />
+      <rect x={x - 10} y={y - 16} width={20} height={8} rx={3} fill="#ffffff" opacity={0.25} />
+      <line x1={x - 6} y1={y - 12} x2={x - 6} y2={y + 12} stroke="#1e293b" strokeWidth={2.6} strokeLinecap="round" />
+      <line x1={x + 6} y1={y - 7} x2={x + 6} y2={y + 7} stroke="#0f172a" strokeWidth={4.2} strokeLinecap="round" />
+      {/* terminals */}
+      <circle cx={x - 6} cy={y - 14} r={2} fill="#e2e8f0" stroke="#64748b" strokeWidth={0.4} />
+      <circle cx={x + 6} cy={y - 10} r={2.2} fill="#fbbf24" stroke="#92400e" strokeWidth={0.4} />
       {label && (
-        <Txt x={x} y={y - 20} size={10} color={C.ink}>
+        <Txt x={x} y={y - 22} size={10} color={C.ink} weight={700}>
           {label}
         </Txt>
       )}
@@ -671,8 +737,8 @@ export function Battery({ x, y, label }: { x: number; y: number; label?: string 
   );
 }
 
-/** Zig-zag resistor between two points (horizontal or vertical). */
-export function Resistor({ x1, y1, x2, y2, label, color = C.ink }: { x1: number; y1: number; x2: number; y2: number; label?: string; color?: string }) {
+/** Zig-zag resistor between two points - realistic with heat glow when current flows */
+export function Resistor({ x1, y1, x2, y2, label, color = C.ink, power }: { x1: number; y1: number; x2: number; y2: number; label?: string; color?: string; power?: number }) {
   const len = Math.hypot(x2 - x1, y2 - y1);
   const ang = (Math.atan2(y2 - y1, x2 - x1) * 180) / Math.PI;
   const zig = Math.min(46, len * 0.6);
@@ -682,13 +748,24 @@ export function Resistor({ x1, y1, x2, y2, label, color = C.ink }: { x1: number;
   for (let i = 0; i < n; i++) d += ` L ${lead + (zig * (i + 0.5)) / n} ${i % 2 === 0 ? -6 : 6}`;
   d += ` L ${lead + zig} 0 L ${len} 0`;
   const vertical = Math.abs(Math.abs(ang) - 90) < 1;
+  const heat = power ? Math.min(power / 2, 1) : 0;
   return (
     <g>
+      {/* heat glow when dissipating power */}
+      {heat > 0.05 && (
+        <g transform={`translate(${x1} ${y1}) rotate(${ang})`}>
+          <path d={d} fill="none" stroke="#fb923c" strokeWidth={8} opacity={heat * 0.25} filter="url(#pr-bloom)" />
+        </g>
+      )}
       <g transform={`translate(${x1} ${y1}) rotate(${ang})`}>
-        <path d={d} fill="none" stroke={color} strokeWidth={2} strokeLinejoin="round" />
+        {/* ceramic body background */}
+        <rect x={lead - 2} y={-8} width={zig + 4} height={16} rx={3} fill="#f8fafc" stroke="#cbd5e1" strokeWidth={0.5} opacity={0.9} />
+        <path d={d} fill="none" stroke={heat > 0.3 ? '#dc2626' : color} strokeWidth={2.2} strokeLinejoin="round" strokeLinecap="round" />
+        {/* highlights */}
+        <path d={d} fill="none" stroke="#ffffff" strokeWidth={0.8} opacity={0.4} strokeLinejoin="round" />
       </g>
       {label && (
-        <Txt x={(x1 + x2) / 2 + (vertical ? 14 : 0)} y={(y1 + y2) / 2 + (vertical ? 4 : -11)} size={10} color={C.ink} anchor={vertical ? 'start' : 'middle'}>
+        <Txt x={(x1 + x2) / 2 + (vertical ? 14 : 0)} y={(y1 + y2) / 2 + (vertical ? 4 : -11)} size={10} color={heat > 0.3 ? '#dc2626' : C.ink} anchor={vertical ? 'start' : 'middle'} weight={heat > 0.3 ? 800 : 700}>
           {label}
         </Txt>
       )}
@@ -697,10 +774,18 @@ export function Resistor({ x1, y1, x2, y2, label, color = C.ink }: { x1: number;
 }
 
 export function Wire({ d, color = C.ink, width = 2, dash }: { d: string; color?: string; width?: number; dash?: string }) {
-  return <path d={d} fill="none" stroke={color} strokeWidth={width} strokeLinejoin="round" strokeLinecap="round" strokeDasharray={dash} />;
+  return (
+    <g>
+      {/* subtle outer glow for thick wires carrying current */}
+      {width > 1.5 && !dash && <path d={d} fill="none" stroke={color} strokeWidth={width + 3} opacity={0.12} strokeLinejoin="round" strokeLinecap="round" />}
+      <path d={d} fill="none" stroke={color} strokeWidth={width} strokeLinejoin="round" strokeLinecap="round" strokeDasharray={dash} />
+      {/* highlight */}
+      {!dash && width >= 2 && <path d={d} fill="none" stroke="#ffffff" strokeWidth={0.6} opacity={0.2} strokeLinejoin="round" strokeLinecap="round" strokeDasharray={dash} />}
+    </g>
+  );
 }
 
-/** Animated dots moving along a polyline to visualise current. */
+/** Animated dots moving along a polyline to visualise current - REALISTIC glowing electrons */
 export function CurrentDots({ points, speed, t, color = C.amber }: { points: [number, number][]; speed: number; t: number; color?: string }) {
   if (Math.abs(speed) < 1e-3 || points.length < 2) return null;
   const segs: { x1: number; y1: number; x2: number; y2: number; len: number }[] = [];
@@ -712,7 +797,8 @@ export function CurrentDots({ points, speed, t, color = C.amber }: { points: [nu
     segs.push({ x1, y1, x2, y2, len });
     total += len;
   }
-  const spacing = 34;
+  const intensity = Math.min(Math.abs(speed) / 40, 1);
+  const spacing = 28 - intensity * 8;
   const count = Math.floor(total / spacing);
   const offset = (((t * speed * 60) % spacing) + spacing) % spacing;
   const dots: React.ReactNode[] = [];
@@ -721,7 +807,16 @@ export function CurrentDots({ points, speed, t, color = C.amber }: { points: [nu
     for (const s of segs) {
       if (d <= s.len) {
         const f = d / s.len;
-        dots.push(<circle key={k} cx={s.x1 + (s.x2 - s.x1) * f} cy={s.y1 + (s.y2 - s.y1) * f} r={2.6} fill={color} />);
+        const cx = s.x1 + (s.x2 - s.x1) * f;
+        const cy = s.y1 + (s.y2 - s.y1) * f;
+        dots.push(
+          <g key={k}>
+            {/* outer glow */}
+            <circle cx={cx} cy={cy} r={5 + intensity * 2} fill={color} opacity={0.25} filter="url(#pr-bloom)" />
+            <circle cx={cx} cy={cy} r={3.2 + intensity} fill={color} opacity={0.7} />
+            <circle cx={cx} cy={cy} r={1.6} fill="#ffffff" opacity={0.85} />
+          </g>
+        );
         break;
       }
       d -= s.len;

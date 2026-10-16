@@ -539,7 +539,7 @@ export function Display({
   );
 }
 
-/** Incandescent bulb glow + filament, driven by the solved power. */
+/** Incandescent bulb glow + filament, driven by the solved power - REALISTIC version */
 export function BulbGlow({
   cx,
   cy,
@@ -557,32 +557,64 @@ export function BulbGlow({
   live: boolean;
   filament?: boolean;
 }) {
-  const level = clamp(power / 60, 0, 1.15);
+  const level = clamp(power / 3, 0, 1.4);
   const glow = burned ? 0 : level;
+  const isBright = glow >= 0.6;
+  const isVeryBright = glow >= 1.0;
   return (
     <g>
+      {/* Light spill on bench below */}
+      {glow > 0.02 && (
+        <ellipse cx={cx} cy={cy + r * 1.8} rx={r * (1.6 + glow)} ry={r * 0.45} fill="url(#ix-light-spill-bulb)" opacity={clamp(0.2 + glow * 0.5, 0, 0.85)} />
+      )}
+      {/* Multi-layer volumetric glow - makes it SUPER obvious when ON */}
       {glow > 0.01 && (
-        <circle
-          cx={cx}
-          cy={cy}
-          r={r * (2.1 + glow * 1.5)}
-          fill="url(#ix-glow-white)"
-          opacity={clamp(0.25 + glow * 0.7, 0, 0.95)}
-          style={live ? { animation: `ix-lamp ${(1.1 - glow * 0.25).toFixed(2)}s ease-in-out infinite` } : undefined}
-        />
+        <>
+          <circle cx={cx} cy={cy} r={r * (3.8 + glow * 1.2)} fill="url(#ix-glow-bulb-outer)" opacity={clamp(0.12 + glow * 0.4, 0, 0.75)} filter="url(#ix-bloom-strong)" />
+          <circle cx={cx} cy={cy} r={r * (2.6 + glow * 0.8)} fill="url(#ix-glow-bulb-warm)" opacity={clamp(0.22 + glow * 0.55, 0, 0.92)} filter="url(#ix-bloom-bulb)" />
+          <circle cx={cx} cy={cy} r={r * (1.8 + glow * 0.5)} fill="url(#ix-glow-bulb-core)" opacity={clamp(0.3 + glow * 0.6, 0, 1)} style={live ? { animation: `ix-lamp ${(1.3 - glow * 0.25).toFixed(2)}s ease-in-out infinite` } : undefined} />
+        </>
       )}
-      <circle cx={cx} cy={cy} r={r} fill={glow > 0.02 && !burned ? 'url(#ix-lens-bulb)' : 'url(#ix-lens-bulb-dark)'} stroke="#7d8894" strokeWidth={0.7} />
-      {filament && (
-        <path
-          d={`M ${cx - r * 0.4} ${cy + r * 0.5} L ${cx - r * 0.4} ${cy - r * 0.15} l ${r * 0.2} -${r * 0.25} l ${r * 0.4} 0 l ${r * 0.2} ${r * 0.25} L ${cx + r * 0.4} ${cy + r * 0.5}`}
-          fill="none"
-          stroke={burned ? '#3f4650' : glow > 0.02 ? `rgba(255,${Math.round(230 - level * 40)},${Math.round(160 - level * 90)},1)` : '#8b939c'}
-          strokeWidth={1.1}
-          strokeLinejoin="round"
-          filter={glow > 0.05 ? 'url(#ix-glow)' : undefined}
-        />
+      {/* Light rays when bright */}
+      {glow > 0.5 && live && (
+        <g opacity={clamp((glow - 0.4) * 0.6, 0, 0.55)} style={{ animation: 'ix-pulse 2s ease-in-out infinite' }}>
+          {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => {
+            const rad = (a * Math.PI) / 180;
+            const x1 = cx + Math.cos(rad) * r * 1.2;
+            const y1 = cy + Math.sin(rad) * r * 1.2;
+            const x2 = cx + Math.cos(rad) * r * (2.2 + glow * 0.5);
+            const y2 = cy + Math.sin(rad) * r * (2.2 + glow * 0.5);
+            return <line key={a} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#fde68a" strokeWidth={isVeryBright ? 1.2 : 0.8} opacity={0.5} strokeLinecap="round" />;
+          })}
+        </g>
       )}
-      {glow > 0.05 && !burned && <circle cx={cx} cy={cy - r * 0.1} r={r * 0.22} fill="#fffbe8" opacity={0.85} filter="url(#ix-glow)" />}
+      {/* Glass envelope */}
+      <circle cx={cx} cy={cy} r={r} fill={glow > 0.02 && !burned ? 'url(#ix-lens-bulb)' : 'url(#ix-lens-bulb-dark)'} stroke={burned ? '#1f2937' : glow > 0.3 ? (isVeryBright ? '#fde68a' : '#fbbf24') : '#7d8894'} strokeWidth={glow > 0.5 ? 1.2 : 0.7} filter={glow > 0.2 ? 'url(#ix-bloom-bulb)' : undefined} />
+      <circle cx={cx} cy={cy} r={r} fill="url(#ix-envelope)" opacity={burned ? 0.35 : glow > 0.1 ? 0.18 : 0.5} />
+      {/* Specular highlight */}
+      <path d={`M ${cx - r * 0.55} ${cy - r * 0.4} Q ${cx - r * 0.65} ${cy} ${cx - r * 0.35} ${cy + r * 0.4}`} fill="none" stroke="#ffffff" strokeOpacity={glow > 0.2 ? 0.85 : 0.6} strokeWidth={glow > 0.2 ? r * 0.18 : r * 0.12} strokeLinecap="round" />
+      {filament && !burned && (
+        <g filter={glow > 0.05 ? 'url(#ix-filament-bloom)' : undefined}>
+          <path
+            d={`M ${cx - r * 0.35} ${cy + r * 0.4} L ${cx - r * 0.35} ${cy - r * 0.15} l ${r * 0.18} -${r * 0.22} l ${r * 0.34} 0 l ${r * 0.18} ${r * 0.22} L ${cx + r * 0.35} ${cy + r * 0.4}`}
+            fill="none"
+            stroke={glow > 0.02 ? (isVeryBright ? '#ffffff' : isBright ? '#fffbeb' : '#fdba74') : '#8b939c'}
+            strokeWidth={glow > 0.3 ? clamp(1.2 + glow * 0.6, 1.2, 2) : 1.1}
+            strokeLinejoin="round"
+            strokeLinecap="round"
+          />
+          {glow > 0.05 && <circle cx={cx} cy={cy - r * 0.05} r={r * (0.22 + glow * 0.15)} fill="#ffffff" opacity={clamp(0.4 + glow * 0.5, 0, 0.95)} filter="url(#ix-glow-wide)" />}
+          {glow > 0.3 && <circle cx={cx} cy={cy - r * 0.05} r={r * 0.12} fill="#fffbeb" opacity={0.9} />}
+        </g>
+      )}
+      {burned && (
+        <>
+          <path d={`M ${cx - r * 0.2} ${cy - r * 0.1} L ${cx + r * 0.2} ${cy + r * 0.1}`} stroke="#111827" strokeWidth={r * 0.08} />
+          <circle cx={cx} cy={cy} r={r} fill="#0f172a" opacity={0.3} />
+        </>
+      )}
+      {/* Status dot */}
+      {glow > 0.1 && !burned && <circle cx={cx + r * 0.85} cy={cy - r * 0.85} r={r * 0.18} fill={isVeryBright ? '#ffffff' : '#fde68a'} stroke="#d97706" strokeWidth={0.4} filter="url(#ix-glow)" />}
     </g>
   );
 }

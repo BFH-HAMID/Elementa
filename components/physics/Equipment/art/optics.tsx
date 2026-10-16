@@ -373,35 +373,55 @@ function laserEntry(colour: 'red' | 'green'): ArtEntry {
 }
 
 const whiteLightSource: ArtEntry = {
-  vb: '0 0 100 66',
+  vb: '0 0 100 70',
   Comp: ({ p, bn, live }) => {
     const intensity = clamp(num(p.intensity, 80) / 100, 0.1, 1);
     const slit = clamp(num(p.slitWidthMm, 1), 0.2, 5);
     return (
       <g>
-        <Contact cx={46} cy={62} rx={30} opacity={0.3} />
-        {/* lamp housing with cooling fins and a chimney */}
+        <Contact cx={46} cy={66} rx={30} opacity={live ? 0.45 : 0.3} />
+        {/* light spill on bench when ON */}
+        {live && <ellipse cx={46} cy={64} rx={34} ry={8} fill="url(#ix-light-spill-bulb)" opacity={0.45 * intensity} />}
+        {/* lamp housing with cooling fins and a chimney - realistic metal */}
         <rect x={10} y={14} width={54} height={40} rx={4} fill="url(#ix-charcoal)" stroke="#0b1220" strokeWidth={0.9} filter="url(#ix-drop)" />
-        <rect x={10} y={14} width={54} height={9} rx={4} fill="#ffffff" opacity={0.12} />
+        <rect x={10} y={14} width={54} height={9} rx={4} fill="#ffffff" opacity={0.14} />
         {Array.from({ length: 6 }).map((_, i) => (
           <line key={i} x1={14} y1={30 + i * 3.4} x2={40} y2={30 + i * 3.4} stroke="#94a3b8" strokeOpacity={0.35} strokeWidth={1.1} />
         ))}
         <rect x={30} y={4} width={16} height={10} rx={2.4} fill="url(#ix-charcoal)" stroke="#0b1220" strokeWidth={0.6} />
-        {live && <ellipse cx={38} cy={10} rx={5} ry={3} fill="url(#ix-glow-amber)" opacity={0.5} style={{ animation: 'ix-pulse 3s ease-in-out infinite' }} />}
-        {/* filament window */}
-        <circle cx={40} cy={40} r={11} fill="url(#ix-lens-bulb)" stroke="#8ea3b5" strokeWidth={0.7} />
-        {live && <circle cx={40} cy={40} r={20} fill="url(#ix-glow-white)" opacity={0.55 * intensity} style={{ animation: 'ix-pulse 2.6s ease-in-out infinite' }} />}
-        <path d={`M 34 40 l 4 -6 h 4 l 4 6`} fill="none" stroke={live ? '#ffd9a0' : '#9aa4ad'} strokeWidth={1.2} filter={live ? 'url(#ix-glow)' : undefined} />
-        {/* collimator barrel + adjustable slit */}
-        <rect x={62} y={30} width={26} height={16} rx={3} fill="url(#ix-steel)" stroke="#475569" strokeWidth={0.7} />
+        {live && (
+          <g style={{ animation: 'ix-lamp 2.2s ease-in-out infinite' }}>
+            <ellipse cx={38} cy={10} rx={6} ry={3.5} fill="url(#ix-glow-amber)" opacity={0.6 * intensity} filter="url(#ix-bloom-bulb)" />
+            <ellipse cx={38} cy={9} rx={2} ry={1} fill="#fffbeb" opacity={0.7} />
+          </g>
+        )}
+        {/* filament window - realistic bulb with strong glow */}
+        {live && (
+          <>
+            <circle cx={40} cy={40} r={28} fill="url(#ix-glow-bulb-outer)" opacity={0.35 * intensity} filter="url(#ix-bloom-strong)" />
+            <circle cx={40} cy={40} r={19} fill="url(#ix-glow-bulb-warm)" opacity={0.55 * intensity} filter="url(#ix-bloom-bulb)" />
+            <circle cx={40} cy={40} r={13} fill="url(#ix-glow-bulb-core)" opacity={0.7 * intensity} style={{ animation: 'ix-bulb-glow 1.8s ease-in-out infinite' }} />
+          </>
+        )}
+        <circle cx={40} cy={40} r={12} fill={live ? 'url(#ix-lens-bulb)' : 'url(#ix-lens-bulb-dark)'} stroke={live ? '#fbbf24' : '#8ea3b5'} strokeWidth={live ? 1.2 : 0.7} filter={live ? 'url(#ix-bloom-bulb)' : undefined} />
+        <circle cx={40} cy={40} r={12} fill="url(#ix-envelope)" opacity={live ? 0.18 : 0.5} />
+        {/* specular highlight */}
+        <path d="M 32 32 Q 30 38 33 44" fill="none" stroke="#ffffff" strokeOpacity={live ? 0.85 : 0.6} strokeWidth={2} strokeLinecap="round" />
+        <path d="M 44 40 l 2.5 -4 h 2.5 l 2.5 4 M 45 36 l 1.5 -2.5 h 1 l 1.5 2.5" fill="none" stroke={live ? '#fffbeb' : '#9aa4ad'} strokeWidth={live ? 1.4 : 1.2} strokeLinecap="round" strokeLinejoin="round" filter={live ? 'url(#ix-filament-bloom)' : undefined} />
+        {live && <ellipse cx={40} cy={36} rx={3} ry={2} fill="#ffffff" opacity={0.85 * intensity} filter="url(#ix-glow-wide)" />}
+        {/* collimator barrel + adjustable slit - with light beam */}
+        <rect x={62} y={30} width={26} height={16} rx={3} fill="url(#ix-steel)" stroke="#475569" strokeWidth={0.7} filter="url(#ix-drop)" />
         <rect x={62} y={30} width={26} height={5} rx={2} fill="#ffffff" opacity={0.35} />
         <rect x={86} y={26} width={6} height={24} rx={1.6} fill="url(#ix-charcoal)" stroke="#0b1220" strokeWidth={0.5} />
-        <rect x={88} y={38 - slit * 1.6} width={2.4} height={slit * 3.2} rx={1} fill="#fffbe8" />
+        <rect x={88} y={38 - slit * 1.6} width={2.4} height={slit * 3.2} rx={1} fill={live ? '#fffbeb' : '#fffbe8'} filter={live ? 'url(#ix-glow)' : undefined} />
         {live && (
-          <rect x={90} y={38 - slit * 1.6 - 1} width={8} height={slit * 3.2 + 2} rx={2} fill="#ffffff" opacity={0.5 * intensity} filter="url(#ix-blur)" />
+          <>
+            <rect x={90} y={38 - slit * 1.6 - 1} width={12} height={slit * 3.2 + 2} rx={2} fill="#ffffff" opacity={0.6 * intensity} filter="url(#ix-bloom-bulb)" />
+            <rect x={90} y={38 - slit * 1.6} width={20} height={slit * 3.2} fill="url(#ix-glow-white)" opacity={0.25 * intensity} />
+          </>
         )}
-        <Etch x={46} y={62} size={4.6} color="#334155" weight={800} mono>
-          {`slit ${slit.toFixed(1)} mm · ${Math.round(intensity * 100)}%`}
+        <Etch x={46} y={66} size={4.6} color={live ? '#78350f' : '#334155'} weight={800} mono>
+          {`${live ? '● ON ' : ''}slit ${slit.toFixed(1)} mm · ${Math.round(intensity * 100)}%`}
         </Etch>
         {bn && (
           <Etch x={26} y={12} size={4.2} color="#475569">

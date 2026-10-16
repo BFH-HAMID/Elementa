@@ -35,6 +35,9 @@ export function TitrationScene({ view, t, bn }: SceneProps) {
   const curve = vObj<CurveView>(view, 'curve');
   const endpoint = vBool(view, 'endpoint');
   const flaskLabel = vStr(view, 'flaskLabel');
+  const meterLabel = vStr(view, 'meterLabel', bn ? 'pH মিটার' : 'pH meter');
+  const meterUnit = vStr(view, 'meterUnit', '');
+  const meterDigits = vNum(view, 'meterDigits', 2);
   const reading = clampN(safe(burette.reading), 0, burette.max ?? 50);
   const dripping = useRecentChange(reading, t);
   const cx = 236;
@@ -61,7 +64,7 @@ export function TitrationScene({ view, t, bn }: SceneProps) {
         <g>
           <path d={`M ${cx - 30} ${flaskTop - 50} C ${cx - 40} ${flaskTop - 90} 330 ${flaskTop - 110} 360 ${flaskTop - 92}`} fill="none" stroke="#2b333c" strokeWidth="2" />
           <rect x={cx - 33} y={flaskTop - 52} width="6" height={surfaceY - flaskTop + 72} rx="2.5" fill="#e9eef3" stroke="#7d8995" strokeWidth="0.8" />
-          <Digital x={340} y={flaskTop - 112} w={104} h={48} value={fmt(vNum(view, 'meter', 7), 2)} label={bn ? 'pH মিটার' : 'pH meter'} />
+          <Digital x={340} y={flaskTop - 112} w={104} h={48} value={fmt(vNum(view, 'meter', 7), meterDigits)} unit={meterUnit} label={meterLabel} />
         </g>
       )}
       {thermo !== undefined && <Digital x={340} y={flaskTop - 56} w={104} h={40} value={`${fmt(vNum(view, 'thermo', 25), 1)}`} unit="°C" label={bn ? 'থার্মোমিটার' : 'thermometer'} />}

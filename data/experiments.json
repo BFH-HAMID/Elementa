@@ -1,5 +1,5 @@
 {
-  "count": 46,
+  "count": 67,
   "experiments": [
     {
       "order": 1,
@@ -6847,6 +6847,3126 @@
         "distillation",
         "salt-water"
       ]
+    },
+    {
+      "order": 47,
+      "level": "honours",
+      "durationMinutes": 40,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "graduated-pipette",
+        "retort-stand",
+        "wash-bottle",
+        "watch-glass"
+      ],
+      "chemicals": [
+        "NaCl",
+        "AgNO3",
+        "K2CrO4",
+        "HNO3"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — sample",
+            "label_bn": "ফ্লাস্ক ক — নমুনা",
+            "portions": [
+              {
+                "chemicalId": "NaCl",
+                "mL": 25
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — AgNO₃ 0.100 M",
+            "label_bn": "বুরেট — AgNO₃ 0.100 M",
+            "portions": [
+              {
+                "chemicalId": "AgNO3",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse the conical flask with distilled water and place it under the burette on a white tile.",
+          "text_bn": "কোনিক্যাল ফ্লাস্ক খোলা পানিতে ধুয়ে সাদা টাইলের উপর বুরেটের নিচে রাখো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Pipette 25.0 mL of the chloride solution into the flask.",
+          "text_bn": "ক্লোরাইড দ্রবণের 25.0 mL ফ্লাস্কে পিপেট করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NaCl"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Add 1 mL of potassium chromate indicator and a drop of dilute nitric acid to turn the solution yellow.",
+          "text_bn": "1 mL পটাসিয়াম ক্রোমেট নির্দেশক ও এক ফোঁটা লঘু নাইট্রিক অ্যাসিড দাও যাতে দ্রবণ হলুদ হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "K2CrO4"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Fill the burette with 0.100 M silver nitrate and record the initial reading.",
+          "text_bn": "বুরেটে 0.100 M সিলভার নাইট্রেট নিয়ে প্রাথমিক পাঠ লিখে রাখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "AgNO3"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Run the silver nitrate in slowly, swirling the flask, until a permanent brick-red Ag₂CrO₄ appears in the supernatant.",
+          "text_bn": "বুরেট ধীরে ধীরে চালাও, ফ্লাস্ক ঘুরিয়ে ফেলতে ফেলতে, যতক্ষণ না উপরের তরলে স্থায়ী ইট-লাল Ag₂CrO₄ দেখা দেয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "agno3-nacl"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Silver nitrate and potassium chromate are toxic and stain the skin black; wash any splash immediately.",
+        "bn": "সিলভার নাইট্রেট ও পটাসিয়াম ক্রোমেট বিষাক্ত এবং ত্বকে কালো দাগ ফেলে; ছিটকে গেলে সঙ্গে সঙ্গে ধুয়ে ফেলো।"
+      },
+      "expectedReactions": [
+        "agno3-nacl"
+      ],
+      "quiz": [
+        {
+          "question_en": "What colour shows the end point of a Mohr titration?",
+          "question_bn": "মোহর টাইট্রেশনে শেষ বিন্দু কোন রঙে দেখা যায়?",
+          "options_en": [
+            "Brick red",
+            "Blue",
+            "Pale pink",
+            "Green"
+          ],
+          "options_bn": [
+            "ইট-লাল",
+            "নীল",
+            "হালকা গোলাপি",
+            "সবুজ"
+          ],
+          "answer": 0,
+          "explain_en": "A faint permanent brick-red Ag₂CrO₄ in the supernatant marks the end point.",
+          "explain_bn": "উপরের তরলে স্থায়ী ঈষৎ ইট-লাল Ag₂CrO₄ শেষ বিন্দু নির্দেশ করে।"
+        },
+        {
+          "question_en": "Why is nitric acid added before the Mohr titration?",
+          "question_bn": "মোহর টাইট্রেশনের আগে নাইট্রিক অ্যাসিড কেন যোগ করা হয়?",
+          "options_en": [
+            "To destroy carbonate ions",
+            "To destroy carbonate ions",
+            "To neutralise the acid",
+            "To dry the solution"
+          ],
+          "options_bn": [
+            "কার্বোনেট আয়ন ধ্বংস করতে",
+            "কার্বোনেট আয়ন ধ্বংস করতে",
+            "অ্যাসিড প্রশম করতে",
+            "দ্রবণ শুকাতে"
+          ],
+          "answer": 0,
+          "explain_en": "Carbonate would precipitate the silver ions as silver carbonate, so it is removed with dilute nitric acid.",
+          "explain_bn": "কার্বোনেট সিলভার আয়নকে সিলভার কার্বোনেট হিসেবে ধ্বংস করে, তাই লঘু নাইট্রিক অ্যাসিড দিয়ে তা সরানো হয়।"
+        }
+      ],
+      "tags": [
+        "titration",
+        "mohr",
+        "precipitation",
+        "chloride"
+      ],
+      "slug": "mohr-chloride-titration",
+      "title_en": "Estimation of chloride by the Mohr method",
+      "title_bn": "মোহর পদ্ধতিতে ক্লোরাইডের পরিমাণ",
+      "aim_en": "To estimate the chloride content of an unknown solution by titrating it with standard silver nitrate, using potassium chromate as the indicator.",
+      "aim_bn": "পটাসিয়াম ক্রোমেট নির্দেশক ব্যবহার করে মানক সিলভার নাইট্রেট দিয়ে অজানা দ্রবণের ক্লোরাইড পরিমাণ নির্ণয় করা।"
+    },
+    {
+      "order": 48,
+      "level": "honours",
+      "durationMinutes": 45,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "graduated-pipette",
+        "retort-stand",
+        "filter-funnel",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "NaCl",
+        "AgNO3",
+        "KSCN",
+        "FeCl3",
+        "HNO3"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — sample + excess AgNO₃",
+            "label_bn": "ফ্লাস্ক ক — নমুনা + অতিরিক্ত AgNO₃",
+            "portions": [
+              {
+                "chemicalId": "NaCl",
+                "mL": 25
+              },
+              {
+                "chemicalId": "AgNO3",
+                "mL": 50
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — KSCN 0.100 M",
+            "label_bn": "বুরেট — KSCN 0.100 M",
+            "portions": [
+              {
+                "chemicalId": "KSCN",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Pipette 25.0 mL of the chloride solution into the flask.",
+          "text_bn": "ক্লোরাইড দ্রবণের 25.0 mL ফ্লাস্কে পিপেট করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NaCl"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add 50.0 mL of 0.100 M silver nitrate so that the silver ions are in excess.",
+          "text_bn": "0.100 M সিলভার নাইট্রেটের 50.0 mL যোগ করো যাতে সিলভার আয়ন অতিরিক্ত থাকে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "AgNO3"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Filter off the silver chloride precipitate and wash the filtrate into a clean flask.",
+          "text_bn": "সিলভার ক্লোরাইড অধক্ষেপ ফিল্টার করে ফিলট্রেট পরিষ্কার ফ্লাস্কে নাও।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Add the iron(III) salt indicator, then titrate with 0.100 M potassium thiocyanate.",
+          "text_bn": "আয়রন(III) লবণ নির্দেশক দাও, তারপর 0.100 M পটাসিয়াম থায়োসায়ানেট দিয়ে টাইট্রেট করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "FeCl3"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Stop at the first permanent blood-red FeSCN²⁺ colour and record the titre.",
+          "text_bn": "প্রথম স্থায়ী রক্ত-লাল FeSCN²⁺ রং দেখা দেলেই থামাও এবং টাইটার লিখে রাখো।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "fecl3-kscn"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Silver nitrate, thiocyanate and iron(III) salt are irritants; do not touch the precipitate with bare fingers.",
+        "bn": "সিলভার নাইট্রেট, থায়োসায়ানেট ও আয়রন(III) লবণ চকচকে; অধক্ষেপ হাত দিয়ে ধরবে না।"
+      },
+      "expectedReactions": [
+        "agno3-nacl",
+        "fecl3-kscn"
+      ],
+      "quiz": [
+        {
+          "question_en": "Why is the excess silver nitrate removed by back-titration?",
+          "question_bn": "অতিরিক্ত সিলভার নাইট্রেট কেন ব্যাক-টাইট্রেশন করা হয়?",
+          "options_en": [
+            "To save money",
+            "To make the chloride precipitate dissolve",
+            "Because the direct titration has no end point",
+            "To remove the colour"
+          ],
+          "options_bn": [
+            "খরচ বাঁচাতে",
+            "ক্লোরাইড অধক্ষেপ দ্রবীভূত করতে",
+            "সরাসরি টাইট্রেশনে শেষ বিন্দু নেই বলে",
+            "রং সরাতে"
+          ],
+          "answer": 2,
+          "explain_en": "The Volhard method uses a back-titration so that the sharp iron(III) end point can be used.",
+          "explain_bn": "ভলহার্ড পদ্ধতিতে ব্যাক-টাইট্রেশন ব্যবহার করা হয় যাতে খাড়া আয়রন(III) শেষ বিন্দু পাওয়া যায়।"
+        },
+        {
+          "question_en": "Which colour marks the end point of the Volhard titration?",
+          "question_bn": "ভলহার্ড টাইট্রেশনে শেষ বিন্দু কোন রঙে দেখা যায়?",
+          "options_en": [
+            "Blue",
+            "Blood red",
+            "Brick red",
+            "Violet"
+          ],
+          "options_bn": [
+            "নীল",
+            "রক্ত-লাল",
+            "ইট-লাল",
+            "বেগুনি"
+          ],
+          "answer": 1,
+          "explain_en": "The first permanent blood-red FeSCN²⁺ complex shows that all the silver ions have been used up.",
+          "explain_bn": "প্রথম স্থায়ী রক্ত-লাল FeSCN²⁺ জটিল দেখায় সব সিলভার আয়ন ব্যবহৃত হয়ে গেছে।"
+        }
+      ],
+      "tags": [
+        "titration",
+        "back-titration",
+        "volhard",
+        "chloride"
+      ],
+      "slug": "volhard-back-titration",
+      "title_en": "Estimation of chloride by Volhard back-titration",
+      "title_bn": "ভলহার্ড ব্যাক-টাইট্রেশনে ক্লোরাইডের পরিমাণ",
+      "aim_en": "To determine the chloride content of a sample by adding excess silver nitrate and back-titrating the surplus with potassium thiocyanate.",
+      "aim_bn": "অতিরিক্ত সিলভার নাইট্রেট যোগ করে এবং অবশিষ্ট অংশ পটাসিয়াম থায়োসায়ানেট দিয়ে ব্যাক-টাইট্রেট করে নমুনার ক্লোরাইড পরিমাণ নির্ণয় করা।"
+    },
+    {
+      "order": 49,
+      "level": "honours",
+      "durationMinutes": 45,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "graduated-pipette",
+        "retort-stand",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "EDTA",
+        "CaCl2",
+        "MgCl2",
+        "NH4OH",
+        "NaCl"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — hard water + buffer",
+            "label_bn": "ফ্লাস্ক ক — কঠিন পানি + বাফার",
+            "portions": [
+              {
+                "chemicalId": "NaCl",
+                "mL": 50
+              },
+              {
+                "chemicalId": "NH4OH",
+                "mL": 2
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — EDTA 0.0100 M",
+            "label_bn": "বুরেট — EDTA 0.0100 M",
+            "portions": [
+              {
+                "chemicalId": "EDTA",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Pipette 50.0 mL of the water sample into the conical flask.",
+          "text_bn": "পানির নমুনার 50.0 mL কোনিক্যাল ফ্লাস্কে পিপেট করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NaCl"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add the pH 10 buffer and a pinch of Eriochrome Black T; the solution turns wine red.",
+          "text_bn": "pH 10 বাফার ও এরিওক্রোম ব্ল্যাক টি সামান্য যোগ করো; দ্রবণ ওয়াইন-লাল হবে।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "NH4OH"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Titrate with 0.0100 M EDTA from the burette, swirling the flask throughout.",
+          "text_bn": "বুরেট থেকে 0.0100 M EDTA দিয়ে টাইট্রেট করো, ফ্লাস্ক বারবার ঘুরিয়ে ফেলো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "EDTA"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Stop at the end point where the wine-red colour becomes pure blue and stays blue.",
+          "text_bn": "যেখানে ওয়াইন-লাল রং স্থায়ী বিশুদ্ধ নীরে বদলায় সেখানেই থামাও।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "EDTA and buffer solutions are irritants; the flask must never be heated while it is being titrated.",
+        "bn": "EDTA ও বাফার দ্রবণ চকচকে; টাইট্রেশনের সময় ফ্লাস্ক কখনও উত্তাপ করবে না।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which colour change marks the end point of the EDTA titration?",
+          "question_bn": "EDTA টাইট্রেশনে শেষ বিন্দু কোন রঙ পরিবর্তনে চিহ্নিত?",
+          "options_en": [
+            "Wine red to blue",
+            "Colourless to pink",
+            "Yellow to orange",
+            "Brown to black"
+          ],
+          "options_bn": [
+            "ওয়াইন-লাল থেকে নীল",
+            "বর্ণহীন থেকে গোলাপি",
+            "হলুদ থেকে কমলা",
+            "বাদামি থেকে কালো"
+          ],
+          "answer": 0,
+          "explain_en": "The wine-red metal–indicator complex is replaced by the blue EDTA complex at the end point.",
+          "explain_bn": "শেষ বিন্দুতে ওয়াইন-লাল ধাতু-নির্দেশক জটিলের বদলে নীল EDTA জটিল তৈরি হয়।"
+        },
+        {
+          "question_en": "Why is a pH 10 buffer used in the EDTA titration?",
+          "question_bn": "EDTA টাইট্রেশনে pH 10 বাফার কেন ব্যবহার করা হয়?",
+          "options_en": [
+            "To keep the indicator blue",
+            "To speed up the reaction",
+            "To dissolve the sample",
+            "To raise the boiling point"
+          ],
+          "options_bn": [
+            "নির্দেশককে নীল রাখতে",
+            "বিক্রিয়া দ্রুত করতে",
+            "নমুনা গলাতে",
+            "স্ফুটনাঙ্গ বাড়াতে"
+          ],
+          "answer": 0,
+          "explain_en": "At pH 10 the metal–indicator complex is stable and EDTA still binds the metal ions quantitatively.",
+          "explain_bn": "pH 10-এ ধাতু-নির্দেশক জটিল স্থিত থাকে এবং EDTA ধাতু আয়নকে পরিমাণগতভাবে ধরতে পারে।"
+        }
+      ],
+      "tags": [
+        "titration",
+        "edta",
+        "complexometry",
+        "hardness"
+      ],
+      "slug": "edta-water-hardness",
+      "title_en": "Determination of the hardness of water by EDTA titration",
+      "title_bn": "EDTA টাইট্রেশনে পানির কঠিনতা নির্ণয়",
+      "aim_en": "To find the total hardness of a water sample by complexometric titration with standard EDTA, expressing the result as CaCO₃ in mg L⁻¹.",
+      "aim_bn": "মানক EDTA দিয়ে কমপ্লেক্সোমেট্রিক টাইট্রেশনে পানির নমুনার মোট কঠিনতা নির্ণয় করা এবং ফলাফল mg L⁻¹ CaCO₃ হিসেবে প্রকাশ করা।"
+    },
+    {
+      "order": 50,
+      "level": "honours",
+      "durationMinutes": 40,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "graduated-pipette",
+        "measuring-cylinder",
+        "retort-stand",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "Na2CO3",
+        "HCl",
+        "methyl-orange"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — Na₂CO₃ standard",
+            "label_bn": "ফ্লাস্ক ক — Na₂CO₃ মানক",
+            "portions": [
+              {
+                "chemicalId": "Na2CO3",
+                "mL": 25
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — HCl (unknown)",
+            "label_bn": "বুরেট — HCl (অজানা)",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Dissolve 0.5300 g of dried sodium carbonate in water and make up to 250.0 mL.",
+          "text_bn": "শুকানো সোডিয়াম কার্বোনেটের 0.5300 g পানিতে গলিয়ে 250.0 mL করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "Na2CO3"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Pipette 25.0 mL of the standard into the flask and add two drops of methyl orange.",
+          "text_bn": "মানকের 25.0 mL ফ্লাস্কে পিপেট করে দুই ফোঁটা মিথাইল অরেঞ্জ দাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "methyl-orange"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Titrate with the hydrochloric acid from the burette until the yellow turns orange.",
+          "text_bn": "বুরেট থেকে হাইড্রোক্লোরিক অ্যাসিড দিয়ে টাইট্রেট করো যতক্ষণ না হলুদ কমলা হয়।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "na2co3-hcl"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Record the titre and work out the molarity of the acid.",
+          "text_bn": "টাইটার লিখে রাখো এবং অ্যাসিডের মোলারিটি বের করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Concentrated acid must be diluted by adding acid to water; wear eye protection throughout.",
+        "bn": "ঘন অ্যাসিড পানিতে নয়, অ্যাসিডে পানি যোগ করে মিশিয়ে লাগাও; চোখের সুরক্ষা পরে রাখো।"
+      },
+      "expectedReactions": [
+        "na2co3-hcl"
+      ],
+      "quiz": [
+        {
+          "question_en": "Why is sodium carbonate used to standardise hydrochloric acid?",
+          "question_bn": "হাইড্রোক্লোরিক অ্যাসিড মানক করতে সোডিয়াম কার্বোনেট কেন ব্যবহার করা হয়?",
+          "options_en": [
+            "It is cheap",
+            "It is a primary standard of known purity",
+            "It dissolves in water",
+            "It turns the indicator pink"
+          ],
+          "options_bn": [
+            "সস্তা",
+            "পরিচিত বিশুদ্ধতার প্রাথমিক মানক",
+            "পানিতে গোলা",
+            "নির্দেশক গোলাপি করে"
+          ],
+          "answer": 1,
+          "explain_en": "Dried sodium carbonate has a fixed composition and can be weighed accurately, so it fixes the acid concentration.",
+          "explain_bn": "শুকানো সোডিয়াম কার্বোনেটের গঠন নির্দিষ্ট, তাই তা ওজন করে অ্যাসিডের ঘনত্ব নির্দিষ্ট করা যায়।"
+        },
+        {
+          "question_en": "How many moles of HCl react with one mole of sodium carbonate?",
+          "question_bn": "এক মোল সোডিয়াম কার্বোনেটের সঙ্গে কত মোল HCl বিক্রিয়া করে?",
+          "options_en": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "options_bn": [
+            "১",
+            "২",
+            "৩",
+            "৪"
+          ],
+          "answer": 1,
+          "explain_en": "Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂, so two moles of acid are needed per mole of carbonate.",
+          "explain_bn": "Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂, তাই প্রতি মোল কার্বোনেটে দুই মোল অ্যাসিড লাগে।"
+        }
+      ],
+      "tags": [
+        "standardisation",
+        "titration",
+        "primary-standard",
+        "acid"
+      ],
+      "slug": "standardise-hcl-carbonate",
+      "title_en": "Standardisation of hydrochloric acid with sodium carbonate",
+      "title_bn": "সোডিয়াম কার্বোনেট দিয়ে হাইড্রোক্লোরিক অ্যাসিড মানক করা",
+      "aim_en": "To find the exact molarity of the hydrochloric acid by titrating it against a primary standard of dried sodium carbonate.",
+      "aim_bn": "শুকানো সোডিয়াম কার্বোনেটের প্রাথমিক মানকের বিরুদ্ধে টাইট্রেট করে হাইড্রোক্লোরিক অ্যাসিডের নির্দিষ্ট মোলারিটি বের করা।"
+    },
+    {
+      "order": 51,
+      "level": "honours",
+      "durationMinutes": 40,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "graduated-pipette",
+        "measuring-cylinder",
+        "retort-stand",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "H2C2O4",
+        "NaOH",
+        "phenolphthalein"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — oxalic acid standard",
+            "label_bn": "ফ্লাস্ক ক — অক্সালিক অ্যাসিড মানক",
+            "portions": [
+              {
+                "chemicalId": "H2C2O4",
+                "mL": 25
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — NaOH (unknown)",
+            "label_bn": "বুরেট — NaOH (অজানা)",
+            "portions": [
+              {
+                "chemicalId": "NaOH",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Pipette 25.0 mL of the 0.0500 M oxalic acid standard into the flask.",
+          "text_bn": "0.0500 M অক্সালিক অ্যাসিড মানকের 25.0 mL ফ্লাস্কে পিপেট করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2C2O4"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add two drops of phenolphthalein indicator.",
+          "text_bn": "দুই ফোঁটা ফেনফথ্যালিন নির্দেশক দাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "phenolphthalein"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Titrate with the sodium hydroxide from the burette until a faint permanent pink appears.",
+          "text_bn": "বুরেট থেকে সোডিয়াম হাইড্রোক্সাইড দিয়ে টাইট্রেট করো যতক্ষণ না হালকা স্থায়ী গোলাপি রং দেখা দেয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "NaOH"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Record the titre and calculate the molarity of the sodium hydroxide.",
+          "text_bn": "টাইটার লিখে রাখো এবং সোডিয়াম হাইড্রোক্সাইডের মোলারিটি হিসাব করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Sodium hydroxide is corrosive and absorbs carbon dioxide; keep the bottle closed and use a pipette filler.",
+        "bn": "সোডিয়াম হাইড্রোক্সাইড ক্ষয়কারক ও কার্বন ডাই-অক্সাইড শোষণ করে; বোতল বন্ধ রাখো আর পিপেট ফিলার ব্যবহার করো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Why must oxalic acid be used as a primary standard rather than a secondary one?",
+          "question_bn": "অক্সালিক অ্যাসিডকে প্রাথমিক মানক হিসেবে কেন ব্যবহার করা হয়?",
+          "options_en": [
+            "It reacts faster",
+            "It is pure, stable and can be weighed accurately",
+            "It is soluble in water",
+            "It is a strong acid"
+          ],
+          "options_bn": [
+            "এটি দ্রুত বিক্রিয়া করে",
+            "এটি বিশুদ্ধ, স্থিতিশীল ও সঠিকভাবে ওজন করা যায়",
+            "এটি পানিতে গোলা",
+            "এটি তীব্র অ্যাসিড"
+          ],
+          "answer": 1,
+          "explain_en": "A primary standard must have a known composition and not absorb water or carbon dioxide from the air.",
+          "explain_bn": "প্রাথমিক মানকের গঠন জানা থাকে এবং তাতে বাতাস থেকে পানি বা কার্বন ডাই-অক্সাইড টানে না।"
+        },
+        {
+          "question_en": "Which indicator suits the titration of oxalic acid with sodium hydroxide?",
+          "question_bn": "অক্সালিক অ্যাসিডের সোডিয়াম হাইড্রোক্সাইড টাইট্রেশনে কোন নির্দেশক উপযুক্ত?",
+          "options_en": [
+            "Methyl orange",
+            "Phenolphthalein",
+            "Litmus",
+            "Starch"
+          ],
+          "options_bn": [
+            "মিথাইল অরেঞ্জ",
+            "ফেনফথ্যালিন",
+            "লিটমাস",
+            "স্টার্চ"
+          ],
+          "answer": 1,
+          "explain_en": "The equivalence point of a weak acid–strong base titration is alkaline, so phenolphthalein is used.",
+          "explain_bn": "দুর্বল অ্যাসিড–তীব্র ক্ষার টাইট্রেশনের সমতুল্যবিন্দু ক্ষারীয়, তাই ফেনফথ্যালিন ব্যবহার হয়।"
+        }
+      ],
+      "tags": [
+        "standardisation",
+        "titration",
+        "primary-standard",
+        "base"
+      ],
+      "slug": "standardise-naoh-oxalic",
+      "title_en": "Standardisation of sodium hydroxide with oxalic acid",
+      "title_bn": "অক্সালিক অ্যাসিড দিয়ে সোডিয়াম হাইড্রোক্সাইড মানক করা",
+      "aim_en": "To standardise sodium hydroxide against oxalic acid, a primary standard that reacts with sodium hydroxide in a 1:2 ratio.",
+      "aim_bn": "অক্সালিক অ্যাসিডের বিরুদ্ধে সোডিয়াম হাইড্রোক্সাইড মানক করা — এটি সোডিয়াম হাইড্রোক্সাইডের সঙ্গে ১:২ অনুপাতে বিক্রিয়া করে।"
+    },
+    {
+      "order": 52,
+      "level": "honours",
+      "durationMinutes": 45,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "graduated-pipette",
+        "retort-stand",
+        "dropper",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "CuSO4",
+        "KI",
+        "Na2S2O3",
+        "starch"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — CuSO₄ + excess KI",
+            "label_bn": "ফ্লাস্ক ক — CuSO₄ + অতিরিক্ত KI",
+            "portions": [
+              {
+                "chemicalId": "CuSO4",
+                "mL": 25
+              },
+              {
+                "chemicalId": "KI",
+                "mL": 10
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — Na₂S₂O₃ 0.0500 M",
+            "label_bn": "বুরেট — Na₂S₂O₃ 0.0500 M",
+            "portions": [
+              {
+                "chemicalId": "Na2S2O3",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Pipette 25.0 mL of the copper(II) solution into the flask and add excess potassium iodide.",
+          "text_bn": "কপার(II) দ্রবণের 25.0 mL ফ্লাস্কে পিপেট করে অতিরিক্ত পটাসিয়াম আয়োডাইড যোগ করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "CuSO4"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Stir the mixture: copper(I) iodide precipitates and the solution turns brown with free iodine.",
+          "text_bn": "মিশ্রণটি নাড়ো: কপার(I) আয়োডাইড অধক্ষেপ পড়ে এবং মুক্ত আয়োডিনে দ্রবণ বাদামি হয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "KI"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Titrate the iodine with 0.0500 M sodium thiosulphate, adding starch near the end point.",
+          "text_bn": "0.0500 M সোডিয়াম থায়োসালফেট দিয়ে আয়োডিন টাইট্রেট করো, শেষের দিকে স্টার্চ যোগ করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Na2S2O3"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Stop when the blue-black colour just disappears and record the titre.",
+          "text_bn": "নীল-কালো রং ঠিক অদৃশ্য হলেই থামাও এবং টাইটার লিখে রাখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "starch"
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Sodium thiosulphate and iodine solutions are irritants; starch solution is made fresh each time.",
+        "bn": "সোডিয়াম থায়োসালফেট ও আয়োডিন দ্রবণ চকচকে; স্টার্চ দ্রবণ প্রতিবার নতুন করে বানানো ভালো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Why is excess potassium iodide added to the copper(II) solution?",
+          "question_bn": "কপার(II) দ্রবণে অতিরিক্ত পটাসিয়াম আয়োডাইড কেন যোগ করা হয়?",
+          "options_en": [
+            "To raise the pH",
+            "To liberate iodine and precipitate copper(I) iodide",
+            "To dissolve the copper",
+            "To colour the solution blue"
+          ],
+          "options_bn": [
+            "pH বাড়াতে",
+            "আয়োডিন মুক্ত করতে ও কপার(I) আয়োডাইড ধ্বংস করতে",
+            "কপার গলাতে",
+            "দ্রবণ নীল করতে"
+          ],
+          "answer": 1,
+          "explain_en": "Copper(II) oxidises iodide to iodine while itself being reduced to copper(I) iodide.",
+          "explain_bn": "কপার(II) আয়োডাইডকে আয়োডিনে অক্সিডাইজ করে আর নিজে কপার(I) আয়োডাইডে রিডিউস হয়।"
+        },
+        {
+          "question_en": "Which solution is used in the burette for this titration?",
+          "question_bn": "এই টাইট্রেশনে বুরেটে কোন দ্রবণ ব্যবহার হয়?",
+          "options_en": [
+            "Sodium thiosulphate",
+            "Sodium hydroxide",
+            "Hydrochloric acid",
+            "Potassium iodide"
+          ],
+          "options_bn": [
+            "সোডিয়াম থায়োসালফেট",
+            "সোডিয়াম হাইড্রোক্সাইড",
+            "হাইড্রোক্লোরিক অ্যাসিড",
+            "পটাসিয়াম আয়োডাইড"
+          ],
+          "answer": 0,
+          "explain_en": "The liberated iodine is titrated with sodium thiosulphate, which reduces iodine back to iodide.",
+          "explain_bn": "মুক্ত আয়োডিন সোডিয়াম থায়োসালফেট দিয়ে টাইট্রেট করা হয়, যা আয়োডিনকে আয়োডাইডে ফিরিয়ে দেয়।"
+        }
+      ],
+      "tags": [
+        "titration",
+        "iodometry",
+        "redox",
+        "copper"
+      ],
+      "slug": "copper-iodometry",
+      "title_en": "Estimation of copper(II) by iodometry",
+      "title_bn": "আয়োডোমেট্রি দিয়ে কপার(II) এর পরিমাণ নির্ণয়",
+      "aim_en": "To estimate copper(II) in an unknown solution by liberating iodine with potassium iodide and titrating the iodine with sodium thiosulphate.",
+      "aim_bn": "পটাসিয়াম আয়োডাইড দিয়ে আয়োডিন মুক্ত করে ও তা সোডিয়াম থায়োসালফেটে টাইট্রেট করে অজানা দ্রবণে কপার(II) নির্ণয় করা।"
+    },
+    {
+      "order": 53,
+      "level": "class-11-12",
+      "durationMinutes": 30,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "graduated-pipette",
+        "retort-stand",
+        "dropper",
+        "mortar-pestle"
+      ],
+      "chemicals": [
+        "ascorbic-acid",
+        "I2",
+        "KI",
+        "starch"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — vitamin C solution",
+            "label_bn": "ফ্লাস্ক ক — ভিটামিন সি দ্রবণ",
+            "portions": [
+              {
+                "chemicalId": "ascorbic-acid",
+                "mL": 10
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — I₂ 0.0500 M in KI",
+            "label_bn": "বুরেট — I₂ 0.0500 M in KI",
+            "portions": [
+              {
+                "chemicalId": "I2",
+                "mL": 50
+              },
+              {
+                "chemicalId": "KI",
+                "mL": 20
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Crush one tablet, dissolve it in water and make up to 100.0 mL.",
+          "text_bn": "একটি ট্যাবলেট গুঁড়ো করে পানিতে গলিয়ে 100.0 mL করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "ascorbic-acid"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Pipette 10.0 mL of the solution into the flask and add freshly prepared starch solution.",
+          "text_bn": "দ্রবণের 10.0 mL ফ্লাস্কে পিপেট করে নতুন বানানো স্টার্চ দ্রবণ দাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "starch"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Titrate with 0.0500 M iodine until the first permanent blue-black colour appears.",
+          "text_bn": "0.0500 M আয়োডিন দিয়ে টাইট্রেট করো যতক্ষণ না প্রথম স্থায়ী নীল-কালো রং দেখা দেয়।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "I2"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Record the titre and calculate the vitamin C content in mg per mL.",
+          "text_bn": "টাইটার লিখে রাখো এবং mg মিলি প্রতি ভিটামিন সির পরিমাণ হিসাব করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Iodine vapour irritates the eyes; keep the bottle stoppered and work in a well-ventilated place.",
+        "bn": "আয়োডিনের বাষ্প চোখে জ্বালা করে; বোতল বন্ধ রাখো আর ভালো বাতাস চলাচলের জায়গায় কাজ করো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "What is the molar ratio of iodine to vitamin C in this titration?",
+          "question_bn": "এই টাইট্রেশনে আয়োডিন ও ভিটামিন সির মোলার অনুপাত কত?",
+          "options_en": [
+            "1:1",
+            "1:2",
+            "2:1",
+            "3:1"
+          ],
+          "options_bn": [
+            "১:১",
+            "১:২",
+            "২:১",
+            "৩:১"
+          ],
+          "answer": 0,
+          "explain_en": "One mole of iodine removes two hydrogen atoms from one mole of ascorbic acid.",
+          "explain_bn": "এক মোল আয়োডিন এক মোল অ্যাসকরবিক অ্যাসিড থেকে দুটি হাইড্রোজেন সরিয়ে দেয়।"
+        },
+        {
+          "question_en": "Why is starch added only near the end point?",
+          "question_bn": "স্টার্চ কেন শুধু শেষ বিন্দুর কাছে যোগ করা হয়?",
+          "options_en": [
+            "It speeds up the reaction",
+            "The starch–iodine complex is too stable to release the iodine early",
+            "It is the titrant",
+            "It neutralises the acid"
+          ],
+          "options_bn": [
+            "এটি বিক্রিয়া দ্রুত করে",
+            "স্টার্চ–আয়োডিন জটিল এত শক্তিশালী যে আয়োডিন আগেই ছাড়ে না",
+            "এটি টাইট্রেন্ট",
+            "এটি অ্যাসিড প্রশম করে"
+          ],
+          "answer": 1,
+          "explain_en": "Too much iodine at the start would be locked up in the starch complex and the end point would be reached early.",
+          "explain_bn": "শুরুতে বেশি আয়োডিন থাকলে স্টার্চ জটিলে আটকে যেত, ফলে শেষ বিন্দু আগেই চলে আসত।"
+        }
+      ],
+      "tags": [
+        "titration",
+        "iodometry",
+        "vitamin-c",
+        "food"
+      ],
+      "slug": "vitamin-c-iodometry",
+      "title_en": "Estimation of vitamin C in a tablet by iodometry",
+      "title_bn": "আয়োডোমেট্রি দিয়ে ট্যাবলেটে ভিটামিন সির পরিমাণ নির্ণয়",
+      "aim_en": "To find the mass of vitamin C in a tablet by titrating it with standard iodine in the presence of starch.",
+      "aim_bn": "স্টার্চের উপস্থিতিতে মানক আয়োডিন দিয়ে টাইট্রেট করে ট্যাবলেটে ভিটামিন সির ভর নির্ণয় করা।"
+    },
+    {
+      "order": 54,
+      "level": "honours",
+      "durationMinutes": 50,
+      "apparatus": [
+        "burette",
+        "reagent-bottle",
+        "graduated-pipette",
+        "dropper",
+        "test-tube",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "MnO2",
+        "KI",
+        "NaOH",
+        "H2SO4",
+        "Na2S2O3",
+        "starch"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Bottle A — fixed sample (MnO₂ + KI)",
+            "label_bn": "বোতল ক — স্থির করা নমুনা (MnO₂ + KI)",
+            "portions": [
+              {
+                "chemicalId": "MnO2",
+                "mL": 2
+              },
+              {
+                "chemicalId": "KI",
+                "mL": 20
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — Na₂S₂O₃ 0.0200 M",
+            "label_bn": "বুরেট — Na₂S₂O₃ 0.0200 M",
+            "portions": [
+              {
+                "chemicalId": "Na2S2O3",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Fill a 300 mL bottle with the water sample and add the alkaline manganese(II) and iodide solutions.",
+          "text_bn": "300 mL বোতলে পানির নমুনা নিয়ে ক্ষারীয় ম্যাঙ্গানিজ(II) ও আয়োডাইড দ্রবণ যোগ করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "MnO2"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Stopper the bottle and shake until the brown manganese oxide has settled.",
+          "text_bn": "বোতল বন্ধ করে ঝাঁকাও যতক্ষণ না বাদামি ম্যাঙ্গানিজ অক্সাইড জমাট বসে যায়।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "KI"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Add sulphuric acid to release the iodine and then titrate it with sodium thiosulphate.",
+          "text_bn": "সালফিউরিক অ্যাসিড দিয়ে আয়োডিন মুক্ত করে তারপর সোডিয়াম থায়োসালফেটে টাইট্রেট করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2SO4"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Add starch near the end point and stop when the blue colour just vanishes.",
+          "text_bn": "শেষের দিকে স্টার্চ দাও এবং নীল রং ঠিক অদৃশ্য হলেই থামাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Na2S2O3"
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Sulphuric acid is corrosive and the alkaline iodide mixture is caustic; wear gloves and goggles.",
+        "bn": "সালফিউরিক অ্যাসিড ক্ষয়কারক এবং ক্ষারীয় আয়োডাইড মিশ্রণ ক্ষারীয়; দস্তানা ও চোখের সুরক্ষা পরো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "What does the alkaline manganese(II) do in the Winkler method?",
+          "question_bn": "উইঙ্কলার পদ্ধতিতে ক্ষারীয় ম্যাঙ্গানিজ(II) কী করে?",
+          "options_en": [
+            "Dissolves the oxygen",
+            "Fixes the oxygen as a brown oxide",
+            "Colours the sample blue",
+            "Neutralises the acid"
+          ],
+          "options_bn": [
+            "অক্সিজেন দ্রবীভূত করে",
+            "অক্সিজেনকে বাদামি অক্সাইড হিসেবে স্থির করে",
+            "নমুনাকে নীল করে",
+            "অ্যাসিড প্রশম করে"
+          ],
+          "answer": 1,
+          "explain_en": "The oxygen is fixed as brown manganese oxide, which is then acidified to release iodine.",
+          "explain_bn": "অক্সিজেন বাদামি ম্যাঙ্গানিজ অক্সাইড হিসেবে স্থির হয়, পরে অ্যাসিড করে আয়োডিন মুক্ত হয়।"
+        },
+        {
+          "question_en": "How many moles of thiosulphate are used per mole of dissolved oxygen?",
+          "question_bn": "প্রতি মোল দ্রবীভূত অক্সিজেনে কত মোল থায়োসালফেট লাগে?",
+          "options_en": [
+            "1",
+            "2",
+            "4",
+            "8"
+          ],
+          "options_bn": [
+            "১",
+            "২",
+            "৪",
+            "৮"
+          ],
+          "answer": 2,
+          "explain_en": "One mole of oxygen liberates two moles of iodine, and each mole of iodine needs two moles of thiosulphate.",
+          "explain_bn": "এক মোল অক্সিজেন দুই মোল আয়োডিন মুক্ত করে এবং প্রতি মোল আয়োডিনের জন্য দুই মোল থায়োসালফেট লাগে।"
+        }
+      ],
+      "tags": [
+        "iodometry",
+        "winkler",
+        "water-testing",
+        "oxygen"
+      ],
+      "slug": "winkler-dissolved-oxygen",
+      "title_en": "Determination of dissolved oxygen by the Winkler method",
+      "title_bn": "উইঙ্কলার পদ্ধতিতে দ্রবীভূত অক্সিজেন নির্ণয়",
+      "aim_en": "To measure the dissolved oxygen in a water sample by the Winkler iodometric method and express it in mg L⁻¹.",
+      "aim_bn": "উইঙ্কলার আয়োডোমেট্রিক পদ্ধতিতে পানির নমুনায় দ্রবীভূত অক্সিজেন মেপে mg L⁻¹-এ প্রকাশ করা।"
+    },
+    {
+      "order": 55,
+      "level": "class-11-12",
+      "durationMinutes": 40,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "graduated-pipette",
+        "retort-stand",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "Na2CO3",
+        "HCl",
+        "phenolphthalein",
+        "methyl-orange"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — carbonate solution",
+            "label_bn": "ফ্লাস্ক ক — কার্বোনেট দ্রবণ",
+            "portions": [
+              {
+                "chemicalId": "Na2CO3",
+                "mL": 25
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — HCl 0.100 M",
+            "label_bn": "বুরেট — HCl 0.100 M",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Pipette 25.0 mL of the carbonate solution into the flask and add phenolphthalein.",
+          "text_bn": "কার্বোনেট দ্রবণের 25.0 mL ফ্লাস্কে পিপেট করে ফেনফথ্যালিন দাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "phenolphthalein"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Titrate with 0.100 M HCl until the pink just disappears — the first end point.",
+          "text_bn": "0.100 M HCl দিয়ে টাইট্রেট করো যতক্ষণ না গোলাপি ঠিক মিলিয়ে যায় — প্রথম শেষ বিন্দু।",
+          "check": {
+            "type": "reactionFired",
+            "reactionId": "na2co3-hcl"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Now add methyl orange and continue titrating until the yellow turns orange — the second end point.",
+          "text_bn": "এবার মিথাইল অরেঞ্জ যোগ করে টাইট্রেশন চালিয়ে যাও যতক্ষণ না হলুদ কমলা হয় — দ্বিতীয় শেষ বিন্দু।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "methyl-orange"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Record both titres; the difference between them gives the carbonate amount.",
+          "text_bn": "দুটি টাইটার লিখে রাখো; তাদের পার্থক্য থেকে কার্বোনেটের পরিমাণ পাওয়া যায়।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Hydrochloric acid is corrosive; add it to the flask carefully and wear eye protection.",
+        "bn": "হাইড্রোক্লোরিক অ্যাসিড ক্ষয়কারক; ফ্লাস্কে ধীরে যোগ করো আর চোখের সুরক্ষা পরো।"
+      },
+      "expectedReactions": [
+        "na2co3-hcl"
+      ],
+      "quiz": [
+        {
+          "question_en": "What does the first end point (phenolphthalein) measure?",
+          "question_bn": "প্রথম শেষ বিন্দু (ফেনফথ্যালিন) কী মাপে?",
+          "options_en": [
+            "All the carbonate",
+            "The carbonate converted to hydrogen carbonate",
+            "The bicarbonate only",
+            "The total alkali"
+          ],
+          "options_bn": [
+            "সমস্ত কার্বোনেট",
+            "হাইড্রোজেন কার্বোনেটে রূপান্তরিত কার্বোনেট",
+            "শুধু হাইড্রোজেন কার্বোনেট",
+            "মোট ক্ষার"
+          ],
+          "answer": 1,
+          "explain_en": "At the phenolphthalein end point the carbonate has become hydrogen carbonate.",
+          "explain_bn": "ফেনফথ্যালিন শেষ বিন্দুতে কার্বোনেট হাইড্রোজেন কার্বোনেটে পরিণত হয়।"
+        },
+        {
+          "question_en": "Which indicator gives the second end point of the carbonate titration?",
+          "question_bn": "কার্বোনেট টাইট্রেশনের দ্বিতীয় শেষ বিন্দু কোন নির্দেশক দেয়?",
+          "options_en": [
+            "Phenolphthalein",
+            "Methyl orange",
+            "Litmus",
+            "Universal indicator"
+          ],
+          "options_bn": [
+            "ফেনফথ্যালিন",
+            "মিথাইল অরেঞ্জ",
+            "লিটমাস",
+            "ইউনিভার্সাল ইন্ডিকেটর"
+          ],
+          "answer": 1,
+          "explain_en": "Methyl orange changes from yellow to orange when the hydrogen carbonate is fully neutralised.",
+          "explain_bn": "হাইড্রোজেন কার্বোনেট পুরো প্রশম হলে মিথাইল অরেঞ্জ হলুদ থেকে কমলা হয়।"
+        }
+      ],
+      "tags": [
+        "titration",
+        "carbonate",
+        "double-indicator",
+        "acid-base"
+      ],
+      "slug": "double-indicator-carbonate",
+      "title_en": "Titration of a carbonate solution with two indicators",
+      "title_bn": "দুটি নির্দেশক দিয়ে কার্বোনেট দ্রবণের টাইট্রেশন",
+      "aim_en": "To find the carbonate and hydrogen carbonate content of a solution by titrating it with hydrochloric acid using phenolphthalein and then methyl orange.",
+      "aim_bn": "ফেনফথ্যালিন ও মিথাইল অরেঞ্জ ব্যবহার করে হাইড্রোক্লোরিক অ্যাসিড টাইট্রেশনে কার্বোনেট ও হাইড্রোজেন কার্বোনেটের পরিমাণ নির্ণয় করা।"
+    },
+    {
+      "order": 56,
+      "level": "honours",
+      "durationMinutes": 45,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "graduated-pipette",
+        "retort-stand",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "HCl",
+        "NaOH"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — HCl with the conductivity cell",
+            "label_bn": "ফ্লাস্ক ক — HCl ও পরিবাহিতা সেল",
+            "portions": [
+              {
+                "chemicalId": "HCl",
+                "mL": 25
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — NaOH 0.0500 M",
+            "label_bn": "বুরেট — NaOH 0.0500 M",
+            "portions": [
+              {
+                "chemicalId": "NaOH",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse the conductivity cell with the standard acid and dip it into the sample.",
+          "text_bn": "পরিবাহিতা সেল মানক অ্যাসিডে ধুয়ে নমুনায় ডোবানো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "HCl"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Run in 0.0500 M NaOH in 5 mL steps, recording the conductance each time.",
+          "text_bn": "5 mL ধাপে 0.0500 M NaOH যোগ করে প্রতিবার পরিবাহিতা লিখে রাখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "NaOH"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Take finer readings around the point where the conductance stops falling.",
+          "text_bn": "যেখানে পরিবাহিতা কমতে থামে তার আশেপাশে আরও সূক্ষ্ম পাঠ নাও।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the conductance against volume: the break in the curve is the equivalence point.",
+          "text_bn": "পরিবাহিতা বনাম আয়তনের লেখচিত্র আঁকো: ভাঙা জায়গাই সমতুল্যবিন্দু।",
+          "check": {
+            "type": "phRange",
+            "vessel": 0,
+            "min": 0,
+            "max": 14
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Both solutions are corrosive; the conductivity cell is fragile and must be rinsed with distilled water afterwards.",
+        "bn": "দুটো দ্রবণই ক্ষয়কারক; সেল ভঙ্গুর, তাই পরে খোলা পানিতে ধুয়ে ফেলো।"
+      },
+      "expectedReactions": [
+        "hcl-naoh"
+      ],
+      "quiz": [
+        {
+          "question_en": "Why does the conductance fall during the first part of the titration?",
+          "question_bn": "টাইট্রেশনের প্রথম অংশে পরিবাহিতা কেন কমে?",
+          "options_en": [
+            "The ions are absorbed by the glass",
+            "Fast H⁺ ions are replaced by slow Na⁺ ions",
+            "The solution gets colder",
+            "Water is being added"
+          ],
+          "options_bn": [
+            "আয়নগুলো কাচে শোষিত হয়",
+            "দ্রুত H⁺ আয়নের বদলে ধীর Na⁺ আয়ন আসে",
+            "দ্রবণ ঠান্ডা হয়",
+            "পানি যোগ হয়"
+          ],
+          "answer": 1,
+          "explain_en": "The highly mobile hydrogen ions are replaced by the much less mobile sodium ions.",
+          "explain_bn": "অত্যন্ত চলাচলশীল হাইড্রোজেন আয়নের বদলে কম চলাচলশীল সোডিয়াম আয়ন আসে।"
+        },
+        {
+          "question_en": "How is the equivalence point found from the conductance curve?",
+          "question_bn": "পরিবাহিতা লেখচিত্র থেকে সমতুল্যবিন্দু কীভাবে পাওয়া যায়?",
+          "options_en": [
+            "From the highest point",
+            "From the break where the curve changes direction",
+            "From the first reading",
+            "From the pH at the end"
+          ],
+          "options_bn": [
+            "সর্বোচ্চ বিন্দু থেকে",
+            "লেখচিত্র যেখানে দিক বদলায় সেই ভাঙা জায়গা থেকে",
+            "প্রথম পাঠ থেকে",
+            "শেষের pH থেকে"
+          ],
+          "answer": 1,
+          "explain_en": "The conductance falls, then rises, and the break between the two straight branches is the equivalence point.",
+          "explain_bn": "পরিবাহিতা কমে তারপর বাড়ে, আর দুই সরল শাখার মাঝের ভাঙা জায়গাই সমতুল্যবিন্দু।"
+        }
+      ],
+      "tags": [
+        "titration",
+        "conductometry",
+        "curve",
+        "acid-base"
+      ],
+      "slug": "conductometric-titration",
+      "title_en": "Conductometric titration of a strong acid with a strong base",
+      "title_bn": "তীব্র অ্যাসিড ও তীব্র ক্ষারের পরিবাহিতা টাইট্রেশন",
+      "aim_en": "To find the equivalence point of a hydrochloric acid–sodium hydroxide titration by plotting conductance against the volume of base added.",
+      "aim_bn": "যোগ করা ক্ষারের আয়তন বনাম পরিবাহিতার লেখচিত্র এঁকে হাইড্রোক্লোরিক অ্যাসিড–সোডিয়াম হাইড্রোক্সাইড টাইট্রেশনের সমতুল্যবিন্দু নির্ণয় করা।"
+    },
+    {
+      "order": 57,
+      "level": "honours",
+      "durationMinutes": 50,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "graduated-pipette",
+        "retort-stand",
+        "thermometer",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "FeSO4",
+        "Ce4+",
+        "H2SO4"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — Fe²⁺ solution + Pt electrode",
+            "label_bn": "ফ্লাস্ক ক — Fe²⁺ দ্রবণ + Pt ইলেকট্রোড",
+            "portions": [
+              {
+                "chemicalId": "FeSO4",
+                "mL": 25
+              },
+              {
+                "chemicalId": "H2SO4",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — Ce(IV) 0.0200 M",
+            "label_bn": "বুরেট — Ce(IV) 0.0200 M",
+            "portions": [
+              {
+                "chemicalId": "Ce4+",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse the platinum electrode with dilute sulphuric acid and dip it into the sample.",
+          "text_bn": "প্লাটিনাম ইলেকট্রোড লঘু সালফিউরিক অ্যাসিডে ধুয়ে নমুনায় ডোবাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "FeSO4"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Connect the electrode to the potentiometer and record the initial potential.",
+          "text_bn": "ইলেকট্রোড পটেনশিওমিটারে যুক্ত করে প্রাথমিক বিভব লিখে রাখো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Run in the cerium(IV) solution in small steps and record the potential each time.",
+          "text_bn": "সেরিয়াম(IV) দ্রবণ অল্প অল্প করে যোগ করে প্রতিবার বিভব লিখে রাখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Ce4+"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot potential against volume: the steepest part of the jump is the equivalence point.",
+          "text_bn": "বিভব বনাম আয়তনের লেখচিত্র আঁকো: চাপের সবচেয়ে খাড়া অংশই সমতুল্যবিন্দু।",
+          "check": {
+            "type": "phRange",
+            "vessel": 0,
+            "min": 0,
+            "max": 14
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Cerium(IV) solution is strongly oxidising and sulphuric acid is corrosive; never mix the two in a closed container.",
+        "bn": "সেরিয়াম(IV) দ্রবণ শক্তিশালী অক্সিজাইজার এবং সালফিউরিক অ্যাসিড ক্ষয়কারক; দুটো কখনও বন্ধ পাত্রে মেশাবে না।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "What happens to the cell potential near the equivalence point?",
+          "question_bn": "সমতুল্যবিন্দুর কাছে কোষের বিভবের কী হয়?",
+          "options_en": [
+            "It rises steeply",
+            "It falls slowly",
+            "It stays constant",
+            "It becomes zero"
+          ],
+          "options_bn": [
+            "তীব্রভাবে বাড়ে",
+            "ধীরে কমে",
+            "অপরিবর্তিত থাকে",
+            "শূন্য হয়"
+          ],
+          "answer": 0,
+          "explain_en": "Before the end point Fe³⁺/Fe²⁺ sets the potential; after it Ce⁴⁺/Ce³⁺ does, so the potential jumps.",
+          "explain_bn": "শেষ বিন্দুর আগে Fe³⁺/Fe²⁺ জোড়া বিভব ঠিক করে, পরে Ce⁴⁺/Ce³⁺ জোড়া, তাই বিভব চাপ উৎপন্ন হয়।"
+        },
+        {
+          "question_en": "Which electrode is used to follow this titration?",
+          "question_bn": "এই টাইট্রেশন অনুসরণে কোন ইলেকট্রোড ব্যবহার হয়?",
+          "options_en": [
+            "A platinum electrode",
+            "A copper electrode",
+            "A silver electrode",
+            "A glass electrode"
+          ],
+          "options_bn": [
+            "প্লাটিনাম ইলেকট্রোড",
+            "কপার ইলেকট্রোড",
+            "সিলভার ইলেকট্রোড",
+            "গ্লাস ইলেকট্রোড"
+          ],
+          "answer": 0,
+          "explain_en": "A platinum electrode is inert and responds to the Fe³⁺/Fe²⁺ and Ce⁴⁺/Ce³⁺ couples.",
+          "explain_bn": "প্লাটিনাম ইলেকট্রোড নিষ্ক্রিয় এবং Fe³⁺/Fe²⁺ ও Ce⁴⁺/Ce³⁺ জোড়ার প্রতি সাড়া দেয়।"
+        }
+      ],
+      "tags": [
+        "titration",
+        "potentiometry",
+        "redox",
+        "curve"
+      ],
+      "slug": "potentiometric-redox-titration",
+      "title_en": "Potentiometric titration of iron(II) with cerium(IV)",
+      "title_bn": "সেরিয়াম(IV) দিয়ে আয়রন(II) এর পটেনশিওমেট্রিক টাইট্রেশন",
+      "aim_en": "To find the equivalence point of the iron(II)–cerium(IV) reaction by plotting the cell potential against the volume of titrant.",
+      "aim_bn": "টাইট্রেন্টের আয়তন বনাম কোষের বিভবের লেখচিত্র এঁকে আয়রন(II)–সেরিয়াম(IV) বিক্রিয়ার সমতুল্যবিন্দু নির্ণয় করা।"
+    },
+    {
+      "order": 58,
+      "level": "honours",
+      "durationMinutes": 45,
+      "apparatus": [
+        "test-tube",
+        "test-tube-rack",
+        "graduated-pipette",
+        "dropper",
+        "watch-glass",
+        "measuring-cylinder"
+      ],
+      "chemicals": [
+        "KMnO4",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Cuvette 1 — blank",
+            "label_bn": "কিউভেট ১ — ফাঁকা",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Cuvette 2 — standard solution",
+            "label_bn": "কিউভেট ২ — মানক দ্রবণ",
+            "portions": [
+              {
+                "chemicalId": "KMnO4",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Cuvette 3 — unknown sample",
+            "label_bn": "কিউভেট ৩ — অজানা নমুনা",
+            "portions": [
+              {
+                "chemicalId": "KMnO4",
+                "mL": 5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Prepare the blank and a series of known concentrations of the coloured solution.",
+          "text_bn": "ফাঁকা দ্রবণ ও রঙিন দ্রবণের কয়েকটি পরিচিত ঘনত্ব তৈরি করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Set the blank to zero on the colorimeter before measuring the standards.",
+          "text_bn": "মানক মাপার আগে কালারিমিটারে ফাঁকা দিয়ে শূন্য সেট করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "KMnO4"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record the absorbance of each known solution, then plot absorbance against concentration.",
+          "text_bn": "প্রতিটি পরিচিত দ্রবণের শোষণ রং লিখে রাখো, তারপর শোষণ রং বনাম ঘনত্বের লেখচিত্র আঁকো।",
+          "check": {
+            "type": "contains",
+            "vessel": 2,
+            "chemicalId": "KMnO4"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Read the absorbance of the unknown and find its concentration on the line.",
+          "text_bn": "অজানা নমুনার শোষণ রং পড়ে লেখচিত্রের রেখা থেকে তার ঘনত্ব বের করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 3
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Potassium permanganate stains everything purple and is a strong oxidiser; wash spills immediately.",
+        "bn": "পটাসিয়াম পারমাঙ্গানেট সব জিনিসে বেগুনি দাগ ফেলে এবং শক্তিশালী অক্সিজাইজার; ছিটকে গেলে সঙ্গে সঙ্গে ধোবো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "What is the shape of the absorbance–concentration graph?",
+          "question_bn": "শোষণ রং–ঘনত্ব লেখচিত্রের আকার কেমন?",
+          "options_en": [
+            "A curve flattening out",
+            "A straight line through the origin",
+            "A falling curve",
+            "A horizontal line"
+          ],
+          "options_bn": [
+            "সমতল হয়ে যাওয়া বক্ররেখা",
+            "মূলবিন্দুর মধ্য দিয়ে সরলরেখা",
+            "নামতে থাকা বক্ররেখা",
+            "অনুভূমিক রেখা"
+          ],
+          "answer": 1,
+          "explain_en": "A = εbc is linear in c, so the graph is a straight line through the origin.",
+          "explain_bn": "A = εbc সমীকরণে c-এর সঙ্গে A সরল, তাই লেখচিত্র মূলবিন্দুর মধ্য দিয়ে সরলরেখা।"
+        },
+        {
+          "question_en": "What is the gradient of the absorbance–concentration line?",
+          "question_bn": "শোষণ রং–ঘনত্ব রেখার ঢাল কী?",
+          "options_en": [
+            "ε",
+            "εb",
+            "b",
+            "1/ε"
+          ],
+          "options_bn": [
+            "ε",
+            "εb",
+            "b",
+            "1/ε"
+          ],
+          "answer": 1,
+          "explain_en": "A = εbc, so the slope of the A–c line is εb and dividing by the path length b gives ε.",
+          "explain_bn": "A = εbc, তাই A–c রেখার ঢাল εb এবং পথের দৈর্ঘ্য b দিয়ে ভাগ করলে ε পাওয়া যায়।"
+        }
+      ],
+      "tags": [
+        "spectrophotometry",
+        "beer-lambert",
+        "graph",
+        "solutions"
+      ],
+      "slug": "beer-lambert-absorbance",
+      "title_en": "Beer–Lambert law: absorbance and concentration",
+      "title_bn": "বিয়ার–ল্যাম্বার্ট সূত্র: শোষণ রং ও ঘনত্ব",
+      "aim_en": "To verify the Beer–Lambert law by plotting the absorbance of a coloured solution against its concentration and finding the molar absorptivity.",
+      "aim_bn": "রঙিন দ্রবণের শোষণ রং বনাম ঘনত্বের লেখচিত্র এঁকে বিয়ার–ল্যাম্বার্ট সূত্র যাচাই করা এবং মোলার শোষণী গ্রহণযোগ্যতা বের করা।"
+    },
+    {
+      "order": 59,
+      "level": "honours",
+      "durationMinutes": 50,
+      "apparatus": [
+        "conical-flask",
+        "reagent-bottle",
+        "filter-funnel",
+        "burette",
+        "graduated-pipette",
+        "spatula",
+        "measuring-cylinder"
+      ],
+      "chemicals": [
+        "CH3COOH",
+        "activated-charcoal",
+        "NaOH",
+        "phenolphthalein"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — acid + charcoal",
+            "label_bn": "ফ্লাস্ক ক — অ্যাসিড + কয়লা",
+            "portions": [
+              {
+                "chemicalId": "CH3COOH",
+                "mL": 50
+              },
+              {
+                "chemicalId": "activated-charcoal",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "reagent-bottle",
+            "label_en": "Burette — NaOH 0.100 M",
+            "label_bn": "বুরেট — NaOH 0.100 M",
+            "portions": [
+              {
+                "chemicalId": "NaOH",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Weigh 5.00 g of activated charcoal into a clean conical flask.",
+          "text_bn": "পরিষ্কার কোনিক্যাল ফ্লাস্কে 5.00 g সক্রিয় কয়লা ওজন করে নাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "activated-charcoal"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add 50.0 mL of acetic acid solution, stopper the flask and shake for ten minutes.",
+          "text_bn": "50.0 mL অ্যাসিটিক অ্যাসিড দ্রবণ যোগ করে বন্ধ করে দশ মিনিট ঝাঁকাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "CH3COOH"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Filter off the charcoal and titrate the filtrate with sodium hydroxide to find the acid left.",
+          "text_bn": "কয়লা ফিল্টার করে ফিলট্রেট সোডিয়াম হাইড্রোক্সাইডে টাইট্রেট করে বাকি অ্যাসিড বের করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "NaOH"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Repeat with different starting concentrations and plot 1/q against 1/C.",
+          "text_bn": "বিভিন্ন প্রাথমিক ঘনত্বে পুনরাবৃত্তি করে 1/q বনাম 1/C লেখচিত্র আঁকো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Charcoal dust and the acetic acid vapour are unpleasant to inhale; do the shaking in a well-ventilated place.",
+        "bn": "কয়লার ধুলো ও অ্যাসিটিক অ্যাসিডের বাষ্প শ্বাসে খারাপ; ভালো বাতাস চলাচলের জায়গায় ঝাঁকাও।"
+      },
+      "expectedReactions": [
+        "ch3cooh-naoh"
+      ],
+      "quiz": [
+        {
+          "question_en": "What does the intercept of the 1/q against 1/C line give?",
+          "question_bn": "1/q বনাম 1/C রেখার ইন্টারসেপ্ট কী দেয়?",
+          "options_en": [
+            "The adsorption capacity qm",
+            "The equilibrium concentration",
+            "The mass of charcoal",
+            "The initial concentration"
+          ],
+          "options_bn": [
+            "শোষণ ধারণক্ষমতা qm",
+            "সমতুল্য ঘনত্ব",
+            "কয়লার ভর",
+            "প্রাথমিক ঘনত্ব"
+          ],
+          "answer": 0,
+          "explain_en": "The Langmuir equation in linear form is 1/q = 1/qm + 1/(qm·b·C), so the intercept is 1/qm.",
+          "explain_bn": "রৈখিক রূপে ল্যামবুয়ার সমীকরণ 1/q = 1/qm + 1/(qm·b·C), তাই ইন্টারসেপ্ট 1/qm।"
+        },
+        {
+          "question_en": "Why is the charcoal shaken with the acid solution?",
+          "question_bn": "কেন কয়লাকে অ্যাসিড দ্রবণের সঙ্গে ঝাঁকানো হয়?",
+          "options_en": [
+            "To heat the solution",
+            "To reach the equilibrium between the surface and the solution",
+            "To dissolve the charcoal",
+            "To filter the solution"
+          ],
+          "options_bn": [
+            "দ্রবণ উত্তাপ করতে",
+            "পৃষ্ঠ ও দ্রবণের মধ্যে সমতুল্যে পৌঁছাতে",
+            "কয়লা গলাতে",
+            "দ্রবণ ছেঁকতে"
+          ],
+          "answer": 1,
+          "explain_en": "Shaking brings the fresh surface into contact with the solution so adsorption reaches equilibrium quickly.",
+          "explain_bn": "ঝাঁকালে নতুন পৃষ্ঠ দ্রবণের সঙ্গে মিশে দ্রুত সমতুল্যে পৌঁছায়।"
+        }
+      ],
+      "tags": [
+        "adsorption",
+        "isotherm",
+        "charcoal",
+        "equilibrium"
+      ],
+      "slug": "charcoal-adsorption-isotherm",
+      "title_en": "Adsorption of acetic acid on charcoal",
+      "title_bn": "কয়লায় অ্যাসিটিক অ্যাসিডের শোষণ",
+      "aim_en": "To study the adsorption of acetic acid from solution by activated charcoal and to determine the saturation capacity of the charcoal.",
+      "aim_bn": "দ্রবণ থেকে সক্রিয় কয়লা দ্বারা অ্যাসিটিক অ্যাসিডের শোষণ পড়া এবং কয়লার সম্পৃক্তি ধারণক্ষমতা নির্ণয় করা।"
+    },
+    {
+      "order": 60,
+      "level": "honours",
+      "durationMinutes": 40,
+      "apparatus": [
+        "test-tube",
+        "test-tube-rack",
+        "dropper",
+        "graduated-pipette",
+        "spatula",
+        "watch-glass"
+      ],
+      "chemicals": [
+        "iodine",
+        "CCl4",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Tube A — water layer",
+            "label_bn": "নল ক — জলীয় স্তর",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 10
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Tube B — CCl₄ layer",
+            "label_bn": "নল খ — CCl₄ স্তর",
+            "portions": [
+              {
+                "chemicalId": "CCl4",
+                "mL": 10
+              },
+              {
+                "chemicalId": "iodine",
+                "mL": 1
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Put 10.0 mL of carbon tetrachloride and 10.0 mL of water into a clean test tube.",
+          "text_bn": "পরিষ্কার নলে 10.0 mL কার্বন টেট্রাক্লোরাইড ও 10.0 mL পানি নাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add a measured amount of iodine, stopper the tube and shake, then let the layers separate.",
+          "text_bn": "নির্দিষ্ট পরিমাণ আয়োডিন দাও, নল বন্ধ করে ঝাঁকাও, তারপর স্তর আলাদা হতে দাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "iodine"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Take a sample from each layer and find the concentration of iodine in each.",
+          "text_bn": "প্রতিটি স্তর থেকে নমুনা নিয়ে আয়োডিনের ঘনত্ব বের করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "CCl4"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Calculate the partition coefficient K = c(CCl₄) ÷ c(water).",
+          "text_bn": "পার্টিশন গুণাঙ্ক K = c(CCl₄) ÷ c(water) বের করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Carbon tetrachloride is toxic and its vapour is heavier than air; use it only in a fume cupboard.",
+        "bn": "কার্বন টেট্রাক্লোরাইড বিষাক্ত এবং এর বাষ্প বাতাসের চেয়ে ভারী; শুধুমাত্র ফিউম ক্যাবিনেটে ব্যবহার করো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which layer holds most of the iodine?",
+          "question_bn": "কোন স্তরে বেশিরভাগ আয়োডিন থাকে?",
+          "options_en": [
+            "The water layer",
+            "The CCl₄ layer",
+            "Both equally",
+            "Neither — it all reacts"
+          ],
+          "options_bn": [
+            "জলীয় স্তর",
+            "CCl₄ স্তর",
+            "দুটো সমান",
+            "কোনোটিই নয় — সব বিক্রিয়া করে"
+          ],
+          "answer": 1,
+          "explain_en": "Iodine is non-polar and dissolves far better in the non-polar CCl₄ layer.",
+          "explain_bn": "আয়োডিন অধ্রুবী, তাই অধ্রুবী CCl₄ স্তরে অনেক ভালো দ্রবীভূত হয়।"
+        },
+        {
+          "question_en": "How is the partition coefficient calculated?",
+          "question_bn": "পার্টিশন গুণাঙ্ক কীভাবে হিসাব হয়?",
+          "options_en": [
+            "c(water) ÷ c(CCl₄)",
+            "c(CCl₄) ÷ c(water)",
+            "c(CCl₄) × c(water)",
+            "c(CCl₄) + c(water)"
+          ],
+          "options_bn": [
+            "c(জলীয়) ÷ c(CCl₄)",
+            "c(CCl₄) ÷ c(জলীয়)",
+            "c(CCl₄) × c(জলীয়)",
+            "c(CCl₄) + c(জলীয়)"
+          ],
+          "answer": 1,
+          "explain_en": "The partition coefficient is the ratio of the concentration in the organic layer to that in the aqueous layer.",
+          "explain_bn": "পার্টিশন গুণাঙ্ক হলো জৈব স্তরের ঘনত্বের সঙ্গে জলীয় স্তরের ঘনত্বের অনুপাত।"
+        }
+      ],
+      "tags": [
+        "partition",
+        "equilibrium",
+        "solvent",
+        "iodine"
+      ],
+      "slug": "partition-coefficient",
+      "title_en": "Partition of iodine between water and carbon tetrachloride",
+      "title_bn": "পানি ও কার্বন টেট্রাক্লোরাইডে আয়োডিনের পার্টিশন",
+      "aim_en": "To determine the partition coefficient of iodine between carbon tetrachloride and water from the concentrations in the two layers.",
+      "aim_bn": "দুই স্তরের ঘনত্ব থেকে কার্বন টেট্রাক্লোরাইড ও পানির মধ্যে আয়োডিনের পার্টিশন গুণাঙ্ক নির্ণয় করা।"
+    },
+    {
+      "order": 61,
+      "level": "class-11-12",
+      "durationMinutes": 30,
+      "apparatus": [
+        "test-tube",
+        "dropper",
+        "watch-glass",
+        "graduated-pipette",
+        "measuring-cylinder"
+      ],
+      "chemicals": [
+        "H2O",
+        "ethanol"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "watch-glass",
+            "label_en": "Watch glass — drops collected",
+            "label_bn": "ওয়াচ গ্লাস — ফোঁটা জমা",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 2
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Tube A — the liquid",
+            "label_bn": "নল ক — তরল",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 5
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Clean the stalagmometer and fill it with 2.0 mL of the liquid.",
+          "text_bn": "স্ট্যালাগমোমিটার পরিষ্কার করে 2.0 mL তরল নাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Hold it vertically over the watch glass and count every drop as it falls.",
+          "text_bn": "ওয়াচ গ্লাসের উপরে খাড়া ধরে রাখো এবং প্রতিটি পড়া ফোঁটা গোনো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Keep counting until the bulb is empty — that is the number of drops n.",
+          "text_bn": "বাল্ব খালি হওয়া পর্যন্ত গোনতে থাকো — ওই সংখ্যাই ফোঁটার সংখ্যা n।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Calculate γ = ρVg ÷ (2πrn) and compare it with the value for water.",
+          "text_bn": "γ = ρVg ÷ (2πrn) বের করে পানির মানের সঙ্গে তুলনা করো।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 20
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Ethanol is flammable — keep it away from the burner; handle the fragile stalagmometer carefully.",
+        "bn": "ইথানল জ্বননীল; বার্নার থেকে দূরে রাখো আর ভঙ্গুর স্ট্যালাগমোমিটার সাবধানে ধরো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Why must the number of drops be counted to the very last drop?",
+          "question_bn": "ফোঁটার সংখ্যা কেন শেষ ফোঁটা পর্যন্ত গোনতে হয়?",
+          "options_en": [
+            "To make the count round",
+            "Because the drop count sets the mass of one drop",
+            "To keep the watch glass dry",
+            "To wash the instrument"
+          ],
+          "options_bn": [
+            "গোনা বোল্ড মাপার জন্য",
+            "কারণ ফোঁটার সংখ্যা একটি ফোঁটার ভর নির্ধারণ করে",
+            "ওয়াচ গ্লাস শুকনো রাখতে",
+            "যন্ত্র ধুয়ে রাখতে"
+          ],
+          "answer": 1,
+          "explain_en": "The mass of a single drop is the total mass divided by n, so an incorrect count spoils the surface tension.",
+          "explain_bn": "একটি ফোঁটার ভর মোট ভর ভাগ n, তাই ভুল গোনা পৃষ্ঠত্বণ হিসাব নষ্ট করে।"
+        },
+        {
+          "question_en": "What is the accepted surface tension of water at room temperature?",
+          "question_bn": "ঘরের তাপমাত্রায় পানির গ্রহণযোগ্য পৃষ্ঠত্বণ কত?",
+          "options_en": [
+            "28.9 mN m⁻¹",
+            "72.8 mN m⁻¹",
+            "100 mN m⁻¹",
+            "150 mN m⁻¹"
+          ],
+          "options_bn": [
+            "28.9 mN m⁻¹",
+            "72.8 mN m⁻¹",
+            "100 mN m⁻¹",
+            "150 mN m⁻¹"
+          ],
+          "answer": 1,
+          "explain_en": "Water has a surface tension of about 72.8 mN m⁻¹ at 25 °C.",
+          "explain_bn": "পানির পৃষ্ঠত্বণ 25 °C-এ প্রায় 72.8 mN m⁻¹।"
+        }
+      ],
+      "tags": [
+        "surface-tension",
+        "drops",
+        "physical-property",
+        "measurement"
+      ],
+      "slug": "stalagmometer-surface-tension",
+      "title_en": "Surface tension by the drop-weight method",
+      "title_bn": "ফোঁটা-ভর পদ্ধতিতে পৃষ্ঠত্বণ নির্ণয়",
+      "aim_en": "To find the surface tension of a liquid by counting the drops that fall from a stalagmometer of known volume.",
+      "aim_bn": "জানা আয়তনের স্ট্যালাগমোমিটার থেকে পড়া ফোঁটা গুনে তরলের পৃষ্ঠত্বণ নির্ণয় করা।"
+    },
+    {
+      "order": 62,
+      "level": "class-11-12",
+      "durationMinutes": 40,
+      "apparatus": [
+        "test-tube",
+        "test-tube-rack",
+        "graduated-pipette",
+        "dropper",
+        "measuring-cylinder"
+      ],
+      "chemicals": [
+        "H2O",
+        "sucrose"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Tube A — distilled water",
+            "label_bn": "নল ক — বিশুদ্ধ পানি",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 10
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Tube B — sucrose solution",
+            "label_bn": "নল খ — সুক্রোজ দ্রবণ",
+            "portions": [
+              {
+                "chemicalId": "sucrose",
+                "mL": 10
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse the viscometer with distilled water, then fill it with water to the upper mark.",
+          "text_bn": "ভিসকোমিটার বিশুদ্ধ পানিতে ধুয়ে উপরের চিহ্ন পর্যন্ত পানি ভরো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Time the efflux of the water between the two marks and repeat three times.",
+          "text_bn": "দুই চিহ্নের মধ্যে পানির প্রবাহকাল মাপো এবং তিনবার পুনরাবৃত্তি করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Rinse the viscometer with the sucrose solution, refill it and time the efflux in the same way.",
+          "text_bn": "ভিসকোমিটার সুক্রোজ দ্রবণে ধুয়ে আবার ভরে একইভাবে প্রবাহকাল মাপো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "sucrose"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Calculate the relative viscosity η/η₀ ≈ t(solution) ÷ t(water).",
+          "text_bn": "আপেক্ষিক সান্দ্রতা η/η₀ ≈ t(দ্রবণ) ÷ t(পানি) বের করো।",
+          "check": {
+            "type": "temperature",
+            "vessel": 1,
+            "min": 20
+          }
+        }
+      ],
+      "safety": {
+        "level": "none",
+        "en": "The liquids used are dilute and harmless, but always hold the viscometer upright so the timing is fair.",
+        "bn": "ব্যবহৃত তরল খুব পাতলা ও নিরাপদ, তবে ভিসকোমিটার সবসময় সোজা ধরো যাতে সময় মাপা ঠিক হয়।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Why is the efflux time of the solution longer than that of water?",
+          "question_bn": "দ্রবণের প্রবাহকাল পানির চেয়ে বেশি কেন?",
+          "options_en": [
+            "The solution is more viscous",
+            "The solution is more dense",
+            "The viscometer is dirty",
+            "The solution is warmer"
+          ],
+          "options_bn": [
+            "দ্রবণ বেশি সান্দ্র",
+            "দ্রবণ ঘন",
+            "ভিসকোমিটার ময়লা",
+            "দ্রবণ বেশি গরম"
+          ],
+          "answer": 0,
+          "explain_en": "A more viscous liquid flows more slowly through the same capillary, so it takes longer to fall.",
+          "explain_bn": "বেশি সান্দ্র তরল একই নলে ধীরে প্রবাহিত হয়, তাই পড়তে বেশি সময় লাগে।"
+        },
+        {
+          "question_en": "For a dilute solution, the relative viscosity equals…",
+          "question_bn": "পাতলা দ্রবণের ক্ষেত্রে আপেক্ষিক সান্দ্রতা সমান…",
+          "options_en": [
+            "t(water) ÷ t(solution)",
+            "t(solution) ÷ t(water)",
+            "t(solution) − t(water)",
+            "t(solution) + t(water)"
+          ],
+          "options_bn": [
+            "t(পানি) ÷ t(দ্রবণ)",
+            "t(দ্রবণ) ÷ t(পানি)",
+            "t(দ্রবণ) − t(পানি)",
+            "t(দ্রবণ) + t(পানি)"
+          ],
+          "answer": 1,
+          "explain_en": "With nearly equal densities the Ostwald equation reduces to η/η₀ = t/t₀.",
+          "explain_bn": "ঘনত্ব প্রায় সমান হলে ওস্টওয়াল্ড সমীকরণ সরলীকৃত হয়ে η/η₀ = t/t₀ হয়।"
+        }
+      ],
+      "tags": [
+        "viscosity",
+        "ostwald",
+        "physical-property",
+        "measurement"
+      ],
+      "slug": "ostwald-viscometer-viscosity",
+      "title_en": "Relative viscosity with an Ostwald viscometer",
+      "title_bn": "ওস্টওয়াল্ড ভিসকোমিটারে আপেক্ষিক সান্দ্রতা",
+      "aim_en": "To compare the viscosity of a solution with that of water by timing the efflux of both liquids in an Ostwald viscometer.",
+      "aim_bn": "ওস্টওয়াল্ড ভিসকোমিটারে দুই তরলের প্রবাহকাল মেপে দ্রবণের সান্দ্রতা পানির সঙ্গে তুলনা করা।"
+    },
+    {
+      "order": 63,
+      "level": "class-11-12",
+      "durationMinutes": 45,
+      "apparatus": [
+        "test-tube",
+        "test-tube-rack",
+        "thermometer",
+        "bunsen-burner",
+        "beaker",
+        "dropper",
+        "spatula"
+      ],
+      "chemicals": [
+        "glucose",
+        "NaCl",
+        "CaCl2",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Tube A — glucose solution",
+            "label_bn": "নল ক — গ্লুকোজ দ্রবণ",
+            "portions": [
+              {
+                "chemicalId": "glucose",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Tube B — NaCl solution",
+            "label_bn": "নল খ — NaCl দ্রবণ",
+            "portions": [
+              {
+                "chemicalId": "NaCl",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "beaker",
+            "label_en": "Beaker — freezing bath",
+            "label_bn": "বিকার — ফ্রিজিং বাথ",
+            "portions": [
+              {
+                "chemicalId": "H2O",
+                "mL": 100
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Prepare a solution of known molality and place it in a tube in the freezing bath.",
+          "text_bn": "জানা মোলালিটির দ্রবণ বানিয়ে ফ্রিজিং বাথের ভেতরের নলে রাখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "glucose"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Cool the bath with ice and salt, stirring gently, and watch for the first crystals.",
+          "text_bn": "বরফ ও লবণ দিয়ে বাথ ঠান্ডা করো আর হালকা করে নাড়তে থাকো, প্রথম স্ফটিক খেয়াল করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 2,
+            "chemicalId": "H2O"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Read the temperature the instant the first ice appears.",
+          "text_bn": "প্রথম বরফ দেখা দেওয়ার সঙ্গে সঙ্গে তাপমাত্রা পড়ো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "NaCl"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Repeat with sodium chloride and calcium chloride, then compare the three van ’t Hoff factors.",
+          "text_bn": "সোডিয়াম ক্লোরাইড ও ক্যালসিয়াম ক্লোরাইড দিয়ে পুনরাবৃত্তি করে তিনটি ভ্যান ’ট হোফ ফ্যাক্টর তুলনা করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 3
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "The freezing bath is very cold and salty; wear gloves and do not touch the ice mixture with bare skin.",
+        "bn": "ফ্রিজিং বাথ খুব ঠান্ডা ও লবণাক্ত; দস্তানা পরো আর খোলা চামড়ায় বরফের মিশ্রণ ছোঁয়ো না।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which solute gives the largest freezing-point depression here?",
+          "question_bn": "এখানে কোন দ্রাব্যের ফ্রিজিং পয়েন্ট অবনমন সবচেয়ে বেশি?",
+          "options_en": [
+            "Glucose",
+            "Sodium chloride",
+            "Calcium chloride",
+            "They are all equal"
+          ],
+          "options_bn": [
+            "গ্লুকোজ",
+            "সোডিয়াম ক্লোরাইড",
+            "ক্যালসিয়াম ক্লোরাইড",
+            "সব সমান"
+          ],
+          "answer": 2,
+          "explain_en": "Calcium chloride gives three ions per formula unit, so it depresses the freezing point the most.",
+          "explain_bn": "ক্যালসিয়াম ক্লোরাইড প্রতি সূত্র এককে তিনটি আয়ন দেয়, তাই সবচেয়ে বেশি অবনমন হয়।"
+        },
+        {
+          "question_en": "What is the van ’t Hoff factor of a non-electrolyte?",
+          "question_bn": "অবিদ্যুতের ভ্যান ’ট হোফ ফ্যাক্টর কত?",
+          "options_en": [
+            "1",
+            "2",
+            "3",
+            "0"
+          ],
+          "options_bn": [
+            "১",
+            "২",
+            "৩",
+            "০"
+          ],
+          "answer": 0,
+          "explain_en": "A non-electrolyte does not dissociate, so one molecule gives one particle and i = 1.",
+          "explain_bn": "অবিদ্যুত বিচ্ছিন্ন হয় না, তাই একটি অণু থেকে একটি কণা হয় এবং i = 1।"
+        }
+      ],
+      "tags": [
+        "colligative-property",
+        "freezing-point",
+        "van-t-hoff",
+        "electrolyte"
+      ],
+      "slug": "freezing-point-depression",
+      "title_en": "Freezing-point depression and the van ’t Hoff factor",
+      "title_bn": "ফ্রিজিং পয়েন্ট অবনমন ও ভ্যান ’ট হোফ ফ্যাক্টর",
+      "aim_en": "To measure the freezing point of solutions of glucose, sodium chloride and calcium chloride and deduce the van ’t Hoff factor of each.",
+      "aim_bn": "গ্লুকোজ, সোডিয়াম ক্লোরাইড ও ক্যালসিয়াম ক্লোরাইড দ্রবণের ফ্রিজিং পয়েন্ট মেপে প্রতিটির ভ্যান ’ট হোফ ফ্যাক্টর বের করা।"
+    },
+    {
+      "order": 64,
+      "level": "honours",
+      "durationMinutes": 40,
+      "apparatus": [
+        "test-tube",
+        "graduated-pipette",
+        "measuring-cylinder",
+        "dropper",
+        "thermometer",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "KCl",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Cell — 0.01 M KCl",
+            "label_bn": "সেল — 0.01 M KCl",
+            "portions": [
+              {
+                "chemicalId": "KCl",
+                "mL": 50
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Cell — 0.1 M KCl",
+            "label_bn": "সেল — 0.1 M KCl",
+            "portions": [
+              {
+                "chemicalId": "KCl",
+                "mL": 50
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse the conductivity cell with distilled water and fill it with 0.01 M potassium chloride.",
+          "text_bn": "পরিবাহিতা সেল খোলা পানিতে ধুয়ে 0.01 M পটাসিয়াম ক্লোরাইড দিয়ে ভরো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "KCl"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Dip the cell in the standard solution, stir and read the resistance once it is steady.",
+          "text_bn": "সেলটি মানক দ্রবণে ডোবানো, নাড়ো এবং স্থিত হলে প্রতিরোধ পড়ো।",
+          "check": {
+            "type": "temperature",
+            "vessel": 0,
+            "min": 20,
+            "max": 30
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Repeat with the 0.1 M standard and check that the same cell constant comes out.",
+          "text_bn": "0.1 M মানক দিয়ে পুনরাবৃত্তি করে দেখো একই ধ্রুববই আসে কিনা।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "KCl"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Calculate the cell constant = κ ÷ G, where G = 1/R.",
+          "text_bn": "সেল ধ্রুববই = κ ÷ G বের করো, যেখানে G = 1/R।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "The cell is fragile and the solutions are irritants; rinse the cell with distilled water after the experiment.",
+        "bn": "সেল ভঙ্গুর এবং দ্রবণ চকচকে; পরীক্ষার পর সেল খোলা পানিতে ধুয়ে ফেলো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "What is the cell constant of a conductivity cell?",
+          "question_bn": "পরিবাহিতা সেলের ধ্রুববই কী?",
+          "options_en": [
+            "l/A",
+            "A/l",
+            "G/κ",
+            "R·κ"
+          ],
+          "options_bn": [
+            "l/A",
+            "A/l",
+            "G/κ",
+            "R·κ"
+          ],
+          "answer": 0,
+          "explain_en": "The cell constant is the ratio of the distance between the electrodes l to their area A.",
+          "explain_bn": "সেল ধ্রুববই হলো ইলেকট্রোডের দূরত্ব l ও তাদের ক্ষেত্রফল A-এর অনুপাত।"
+        },
+        {
+          "question_en": "Why is a standard KCl solution used?",
+          "question_bn": "কেন মানক KCl দ্রবণ ব্যবহার করা হয়?",
+          "options_en": [
+            "It is coloured",
+            "Its conductivity is known accurately",
+            "It is cheap",
+            "It conducts no current"
+          ],
+          "options_bn": [
+            "এটি রঙিন",
+            "এর পরিবাহিতা নির্ভুলভাবে জানা",
+            "সস্তা",
+            "এতে কোনো বিদ্যুৎ চলে না"
+          ],
+          "answer": 1,
+          "explain_en": "Only a standard solution with a known specific conductance can give the cell constant.",
+          "explain_bn": "শুধু নির্দিষ্ট পরিবাহিতার মানক দ্রবণই সেলের ধ্রুববই দিতে পারে।"
+        }
+      ],
+      "tags": [
+        "conductometry",
+        "cell-constant",
+        "standardisation",
+        "measurement"
+      ],
+      "slug": "conductance-cell-constant",
+      "title_en": "Cell constant of a conductivity cell",
+      "title_bn": "পরিবাহিতা সেলের ধ্রুববই নির্ণয়",
+      "aim_en": "To determine the cell constant of a conductivity cell using standard potassium chloride solutions of known conductivity.",
+      "aim_bn": "জানা পরিবাহিতার পটাসিয়াম ক্লোরাইড মানক দিয়ে পরিবাহিতা সেলের ধ্রুববই নির্ণয় করা।"
+    },
+    {
+      "order": 65,
+      "level": "honours",
+      "durationMinutes": 50,
+      "apparatus": [
+        "burette",
+        "conical-flask",
+        "test-tube",
+        "test-tube-rack",
+        "thermometer",
+        "bunsen-burner",
+        "graduated-pipette",
+        "wash-bottle"
+      ],
+      "chemicals": [
+        "methyl-acetate",
+        "H2SO4",
+        "NaOH",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Tube A — ester + acid",
+            "label_bn": "নল ক — এস্টার + অ্যাসিড",
+            "portions": [
+              {
+                "chemicalId": "methyl-acetate",
+                "mL": 10
+              },
+              {
+                "chemicalId": "H2SO4",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask B — for the titration",
+            "label_bn": "ফ্লাস্ক খ — টাইট্রেশনের জন্য",
+            "portions": [
+              {
+                "chemicalId": "NaOH",
+                "mL": 25
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Mix the ester with the acid catalyst and start the stopwatch at once.",
+          "text_bn": "এস্টার অ্যাসিড উদ্দীপকের সঙ্গে মিশিয়ে সঙ্গে সঙ্গে ঘড়ি চালু করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "methyl-acetate"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Keep the mixture at 40 °C in a water bath.",
+          "text_bn": "মিশ্রণটি পানির বাথে 40 °C-এ রাখো।",
+          "check": {
+            "type": "heating",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "At recorded times withdraw a sample and titrate it with standard alkali.",
+          "text_bn": "নির্ধারিত সময়ে একটি নমুনা নিয়ে মানক ক্ষারে টাইট্রেট করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "NaOH"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot ln[ester] against time: the gradient of the straight line is the rate constant.",
+          "text_bn": "ln[এস্টার] বনাম সময়ের লেখচিত্র আঁকো: সরল রেখার ঢালই বিক্রিয়া ধ্রুববই।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Methyl acetate and concentrated sulphuric acid are flammable and corrosive; use only a small quantity.",
+        "bn": "মিথাইল অ্যাসিটেট ও ঘন সালফিউরিক অ্যাসিড জ্বননীল ও ক্ষয়কারক; অল্প পরিমাণই ব্যবহার করো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "What does the gradient of the ln[ester] against time line give?",
+          "question_bn": "ln[এস্টার] বনাম সময়ের রেখার ঢাল কী দেয়?",
+          "options_en": [
+            "The rate constant",
+            "The half-life only",
+            "The activation energy",
+            "The order of the reaction"
+          ],
+          "options_bn": [
+            "বিক্রিয়া ধ্রুববই",
+            "শুধু অর্ধায়ু",
+            "সক্রিয়করণ শক্তি",
+            "বিক্রিয়ার ক্রম"
+          ],
+          "answer": 0,
+          "explain_en": "For a first-order reaction ln[ester] = ln[ester]₀ − kt, so the gradient is −k.",
+          "explain_bn": "প্রথম-ক্রম বিক্রিয়ায় ln[এস্টার] = ln[এস্টার]₀ − kt, তাই ঢাল −k।"
+        },
+        {
+          "question_en": "Why is the reaction kept at a constant temperature?",
+          "question_bn": "কেন বিক্রিয়াটি ধ্রুববই তাপমাত্রায় রাখা হয়?",
+          "options_en": [
+            "To dry the mixture",
+            "Because the rate constant depends on temperature",
+            "To speed up the stirring",
+            "To dissolve the ester"
+          ],
+          "options_bn": [
+            "মিশ্রণ শুকাতে",
+            "কারণ বিক্রিয়া ধ্রুববই তাপমাত্রার উপর নির্ভরশীল",
+            "নাড়া দ্রুত করতে",
+            "এস্টার গলাতে"
+          ],
+          "answer": 1,
+          "explain_en": "The rate constant changes with temperature, so the temperature must be kept constant for a fair comparison.",
+          "explain_bn": "বিক্রিয়া ধ্রুববই তাপমাত্রার সঙ্গে বদলায়, তাই ন্যায্য তুলনার জন্য তাপমাত্রা ধ্রুববই রাখতে হয়।"
+        }
+      ],
+      "tags": [
+        "kinetics",
+        "first-order",
+        "ester",
+        "titration"
+      ],
+      "slug": "ester-hydrolysis-kinetics",
+      "title_en": "Kinetics of the acid hydrolysis of an ester",
+      "title_bn": "এস্টারের অ্যাসিড হাইড্রোলাইসের গতিবিদ্যা",
+      "aim_en": "To follow the hydrolysis of methyl acetate in acid by titration and to find the first-order rate constant from a plot of ln[ester] against time.",
+      "aim_bn": "অ্যাসিডে মিথাইল অ্যাসিটেটের হাইড্রোলাইস টাইট্রেশন দিয়ে অনুসরণ করে ln[এস্টার] বনাম সময়ের লেখচিত্র থেকে প্রথম-ক্রম বিক্রিয়া ধ্রুববই বের করা।"
+    },
+    {
+      "order": 66,
+      "level": "honours",
+      "durationMinutes": 60,
+      "apparatus": [
+        "conical-flask",
+        "beaker",
+        "bunsen-burner",
+        "tripod-stand",
+        "thermometer",
+        "filter-funnel",
+        "evaporating-dish",
+        "watch-glass",
+        "spatula",
+        "graduated-pipette"
+      ],
+      "chemicals": [
+        "salicylic-acid",
+        "acetic-anhydride",
+        "H2SO4",
+        "aspirin",
+        "H2O"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "conical-flask",
+            "label_en": "Flask A — reaction mixture",
+            "label_bn": "ফ্লাস্ক ক — বিক্রিয়া মিশ্রণ",
+            "portions": [
+              {
+                "chemicalId": "salicylic-acid",
+                "mL": 2
+              },
+              {
+                "chemicalId": "acetic-anhydride",
+                "mL": 5
+              }
+            ]
+          },
+          {
+            "apparatusId": "evaporating-dish",
+            "label_en": "Dish — the dried crystals",
+            "label_bn": "বাটি — শুকানো স্ফটিক",
+            "portions": [
+              {
+                "chemicalId": "aspirin",
+                "mL": 1
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Weigh 2.0 g of salicylic acid into a dry conical flask.",
+          "text_bn": "শুকনো কোনিক্যাল ফ্লাস্কে 2.0 g স্যালিসিলিক অ্যাসিড ওজন করো।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "salicylic-acid"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Add 5 mL of acetic anhydride and two drops of concentrated sulphuric acid.",
+          "text_bn": "5 mL অ্যাসিটিক অ্যানহাইড্রাইড ও দুই ফোঁটা ঘন সালফিউরিক অ্যাসিড দাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "acetic-anhydride"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Heat the mixture gently in a water bath for fifteen minutes.",
+          "text_bn": "মিশ্রণটি পানির বাথে পনেরো মিনিট আলতো উত্তাপ করো।",
+          "check": {
+            "type": "heating",
+            "vessel": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Cool the mixture, add water, filter off the crystals and dry them to constant mass.",
+          "text_bn": "মিশ্রণ ঠান্ডা করে পানি দাও, স্ফটিক ছেঁকে নিয়ে ধ্রুববই ওজন পর্যন্ত শুকাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "aspirin"
+          }
+        },
+        {
+          "order": 5,
+          "text_en": "Calculate the theoretical mass from the stoichiometry and then the percentage yield.",
+          "text_bn": "স্টোইকিওমেট্রি থেকে তাত্ত্বিক ভর বের করে শতকরা প্রাপ্তি হিসাব করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 2
+          }
+        }
+      ],
+      "safety": {
+        "level": "danger",
+        "en": "Acetic anhydride and concentrated sulphuric acid are corrosive and the reaction is exothermic; add the anhydride slowly in a fume cupboard.",
+        "bn": "অ্যাসিটিক অ্যানহাইড্রাইড ও ঘন সালফিউরিক অ্যাসিড ক্ষয়কারক এবং বিক্রিয়াটি তাপড়োরক; ফিউম ক্যাবিনেটে ধীরে ধীরে যোগ করো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "What is the role of the sulphuric acid in the aspirin synthesis?",
+          "question_bn": "অ্যাসপিরিন সংশ্লেষণে সালফিউরিক অ্যাসিডের ভূমিকা কী?",
+          "options_en": [
+            "A reducing agent",
+            "A catalyst for the acetylation",
+            "The source of the acetyl group",
+            "A drying agent"
+          ],
+          "options_bn": [
+            "বিপাককারী",
+            "অ্যাসিটাইলেশনের উদ্দীপক",
+            "অ্যাসিটাইল গ্রুপের উৎস",
+            "শুকানোরূপ কারক"
+          ],
+          "answer": 1,
+          "explain_en": "A trace of sulphuric acid catalyses the acetylation of salicylic acid by acetic anhydride.",
+          "explain_bn": "সালফিউরিক অ্যাসিডের সামান্য উপস্থিতি অ্যাসিটিক অ্যানহাইড্রাইড দিয়ে স্যালিসিলিক অ্যাসিডের অ্যাসিটাইলেশনে উদ্দীপক হিসেবে কাজ করে।"
+        },
+        {
+          "question_en": "How is the percentage yield calculated?",
+          "question_bn": "শতকরা প্রাপ্তি কীভাবে হিসাব হয়?",
+          "options_en": [
+            "(mass obtained ÷ theoretical mass) × 100",
+            "theoretical mass ÷ mass obtained",
+            "mass obtained − theoretical mass",
+            "theoretical mass × mass obtained"
+          ],
+          "options_bn": [
+            "(প্রাপ্ত ভর ÷ তাত্ত্বিক ভর) × ১০০",
+            "তাত্ত্বিক ভর ÷ প্রাপ্ত ভর",
+            "প্রাপ্ত ভর − তাত্ত্বিক ভর",
+            "তাত্ত্বিক ভর × প্রাপ্ত ভর"
+          ],
+          "answer": 0,
+          "explain_en": "The percentage yield compares the mass actually obtained with the mass the stoichiometry predicts.",
+          "explain_bn": "শতকরা প্রাপ্তি স্টোইকিওমেট্রির হিসাবে পাওয়া ভরের সঙ্গে প্রকৃতপক্ষে পাওয়া ভরের তুলনা করে।"
+        }
+      ],
+      "tags": [
+        "synthesis",
+        "organic",
+        "aspirin",
+        "yield"
+      ],
+      "slug": "aspirin-synthesis",
+      "title_en": "Synthesis of aspirin and its percentage yield",
+      "title_bn": "অ্যাসপিরিন সংশ্লেষণ ও শতকরা প্রাপ্তি",
+      "aim_en": "To prepare aspirin from salicylic acid and acetic anhydride and to calculate the percentage yield from the mass of dried crystals.",
+      "aim_bn": "স্যালিসিলিক অ্যাসিড ও অ্যাসিটিক অ্যানহাইড্রাইড থেকে অ্যাসপিরিন তৈরি করা এবং শুকানো স্ফটিকের ভর থেকে শতকরা প্রাপ্তি বের করা।"
+    },
+    {
+      "order": 67,
+      "level": "honours",
+      "durationMinutes": 45,
+      "apparatus": [
+        "electrolysis-cell",
+        "beaker",
+        "thermometer",
+        "graduated-pipette",
+        "measuring-cylinder",
+        "dropper"
+      ],
+      "chemicals": [
+        "CuSO4",
+        "Cu",
+        "KNO3",
+        "H2SO4"
+      ],
+      "setup": {
+        "vessels": [
+          {
+            "apparatusId": "beaker",
+            "label_en": "Beaker A — 0.0100 M CuSO₄",
+            "label_bn": "বিকার ক — 0.0100 M CuSO₄",
+            "portions": [
+              {
+                "chemicalId": "CuSO4",
+                "mL": 50
+              },
+              {
+                "chemicalId": "Cu",
+                "mL": 2
+              }
+            ]
+          },
+          {
+            "apparatusId": "beaker",
+            "label_en": "Beaker B — 0.1000 M CuSO₄",
+            "label_bn": "বিকার খ — 0.1000 M CuSO₄",
+            "portions": [
+              {
+                "chemicalId": "CuSO4",
+                "mL": 50
+              },
+              {
+                "chemicalId": "Cu",
+                "mL": 2
+              }
+            ]
+          },
+          {
+            "apparatusId": "test-tube",
+            "label_en": "Salt bridge tube — KNO₃",
+            "label_bn": "লবণ সেতু নল — KNO₃",
+            "portions": [
+              {
+                "chemicalId": "KNO3",
+                "mL": 15
+              }
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Fill two beakers with copper(II) sulfate solutions of different concentrations.",
+          "text_bn": "দুটি বিকারে ভিন্ন ঘনত্বের কপার(II) সালফেট দ্রবণ নাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 0,
+            "chemicalId": "CuSO4"
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Dip a copper electrode in each beaker and join the cell with a salt bridge.",
+          "text_bn": "প্রতিটি বিকারে একটি করে কপার ইলেকট্রোড ডোবাও এবং লবণ সেতু দিয়ে কোষ জোড়া লাগাও।",
+          "check": {
+            "type": "contains",
+            "vessel": 2,
+            "chemicalId": "KNO3"
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Connect the electrodes to the voltmeter and record the potential difference.",
+          "text_bn": "ইলেকট্রোডগুলো ভোল্টমিটারে যুক্ত করে বিভব পার্থক্য লিখে রাখো।",
+          "check": {
+            "type": "contains",
+            "vessel": 1,
+            "chemicalId": "Cu"
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Compare the measured EMF with E = (0.0591 ÷ 2) log(c₂ ÷ c₁) and repeat for other pairs.",
+          "text_bn": "মাপা EMF-কে E = (0.0591 ÷ 2) log(c₂ ÷ c₁)-এর সঙ্গে মিলিয়ে দেখো আর অন্য জোড়ায় পুনরাবৃত্তি করো।",
+          "check": {
+            "type": "vesselCount",
+            "min": 3
+          }
+        }
+      ],
+      "safety": {
+        "level": "caution",
+        "en": "Copper sulfate is harmful if swallowed and the salt bridge must not touch both solutions at once; rinse everything afterwards.",
+        "bn": "কপার সালফেট গিলে খলতে ক্ষতিকর এবং লবণ সেতু একসঙ্গে দুই দ্রবণে ছোঁয়া যাবে না; পরে সব ধুয়ে ফেলো।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "What is the Nernst equation for the copper concentration cell?",
+          "question_bn": "কপার ঘনত্ব কোষের নার্নস্ট সমীকরণ কী?",
+          "options_en": [
+            "E = (0.0591 ÷ 2) log(c₂ ÷ c₁)",
+            "E = 0.0591 log(c₁ ÷ c₂)",
+            "E = 2 × 0.0591 log(c₂ ÷ c₁)",
+            "E = (c₂ ÷ c₁)²"
+          ],
+          "options_bn": [
+            "E = (0.0591 ÷ 2) log(c₂ ÷ c₁)",
+            "E = 0.0591 log(c₁ ÷ c₂)",
+            "E = 2 × 0.0591 log(c₂ ÷ c₁)",
+            "E = (c₂ ÷ c₁)²"
+          ],
+          "answer": 0,
+          "explain_en": "With n = 2 for Cu²⁺/Cu, E = (0.0591 ÷ n) log(c₂ ÷ c₁) at 25 °C.",
+          "explain_bn": "Cu²⁺/Cu-এর জন্য n = 2, তাই 25 °C-এ E = (0.0591 ÷ n) log(c₂ ÷ c₁)।"
+        },
+        {
+          "question_en": "What happens to the EMF when the concentration ratio is increased?",
+          "question_bn": "ঘনত্বের অনুপাত বাড়ালে EMF কী হয়?",
+          "options_en": [
+            "It increases",
+            "It decreases",
+            "It stays the same",
+            "It becomes zero"
+          ],
+          "options_bn": [
+            "বাড়ে",
+            "কমে",
+            "অপরিবর্তিত থাকে",
+            "শূন্য হয়"
+          ],
+          "answer": 0,
+          "explain_en": "The EMF is proportional to the logarithm of the ratio, so it rises as the ratio grows.",
+          "explain_bn": "EMF অনুপাতের লগারিদ্মের সমানুপাতী, তাই অনুপাত বাড়লে EMF-ও বাড়ে।"
+        }
+      ],
+      "tags": [
+        "electrochemistry",
+        "nernst",
+        "concentration-cell",
+        "voltage"
+      ],
+      "slug": "nernst-concentration-cell",
+      "title_en": "The Nernst equation with a copper concentration cell",
+      "title_bn": "কপার ঘনত্ব কোষে নার্নস্ট সমীকরণ",
+      "aim_en": "To measure the EMF of a copper concentration cell and check it against the Nernst equation.",
+      "aim_bn": "কপার ঘনত্ব কোষের EMF মেপে নার্নস্ট সমীকরণের সঙ্গে মিলিয়ে দেখা।"
     }
   ]
 }

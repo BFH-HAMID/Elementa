@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowLeft, Beaker, ChevronRight, ClipboardCheck, NotebookPen } from 'lucide-react';
+import { ArrowLeft, Beaker, ChevronRight, ClipboardCheck, FlaskConical, NotebookPen } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import type { ExperimentEntry } from '@/lib/schemas';
 import { formatLevel } from '@/lib/labels';
@@ -47,9 +47,18 @@ export function ExperimentDetail({ experiment, quizSlug, quizCount }: { experime
           <h1 className="display-title max-w-4xl">{title}</h1>
           <p className="mt-4 max-w-3xl text-base leading-7 muted"><MathText text={choose(experiment.aim, experiment.aim_bn)} /></p>
         </div>
-        {(experiment.simulation || quizSlug) && (
+        {(experiment.simulation || experiment.lab_practical || quizSlug) && (
           <div className="flex flex-wrap gap-2">
             {experiment.simulation && <LinkButton href={`/${locale}/simulations/${experiment.simulation}`} icon={<Beaker size={17} />}>{t('experiments.tryVirtual')}</LinkButton>}
+            {experiment.lab_practical && (
+              <LinkButton
+                href={`/${locale}/lab/chemistry?experiment=${experiment.lab_practical}&mode=simulation`}
+                icon={<FlaskConical size={17} />}
+                data-testid="lab-simulation-link"
+              >
+                {t('experiments.labSimulation')}
+              </LinkButton>
+            )}
             {quizSlug && <LinkButton href={`/${locale}/quiz/${quizSlug}`} icon={<ClipboardCheck size={17} />}>{locale === 'bn' ? `ব্যাখ্যাসহ কুইজ (${quizCount ?? 0})` : `Practice quiz (${quizCount ?? 0})`}</LinkButton>}
           </div>
         )}

@@ -1,5 +1,8 @@
 {
-  "brand": {"name": "PhysChem Lab", "tagline": "Learn it. See it. Try it."},
+  "brand": {
+    "name": "PhysChem Lab",
+    "tagline": "Learn it. See it. Try it."
+  },
   "nav": {
     "home": "Home",
     "equations": "Equations",
@@ -65,7 +68,12 @@
     "equationCard": "Understand the language of science",
     "experimentCard": "Learn by doing",
     "simulationCard": "Change a variable. See the result.",
-    "stats": {"equations": "equations", "experiments": "experiments", "simulations": "simulations", "languages": "languages"},
+    "stats": {
+      "equations": "equations",
+      "experiments": "experiments",
+      "simulations": "simulations",
+      "languages": "languages"
+    },
     "continue": "Continue where you left off",
     "recent": "Recently viewed",
     "why": "Built for curious learners",
@@ -87,10 +95,22 @@
     "simulationCounts": "{custom} original labs · {phet} PhET simulations",
     "quizCount": "{count, plural, one {# quiz} other {# quizzes}}",
     "resources": {
-      "equations": {"title": "Equations", "description": "Search chapter formulas, follow derivations and use supported calculators."},
-      "experiments": {"title": "Experiments & practicals", "description": "Browse syllabus lab topics and step-by-step experiment guides."},
-      "simulations": {"title": "Interactive simulations", "description": "Try original lab models and explore the PhET simulation catalog."},
-      "quizzes": {"title": "Quizzes", "description": "Practice key ideas with short questions and instant explanations."}
+      "equations": {
+        "title": "Equations",
+        "description": "Search chapter formulas, follow derivations and use supported calculators."
+      },
+      "experiments": {
+        "title": "Experiments & practicals",
+        "description": "Browse syllabus lab topics and step-by-step experiment guides."
+      },
+      "simulations": {
+        "title": "Interactive simulations",
+        "description": "Try original lab models and explore the PhET simulation catalog."
+      },
+      "quizzes": {
+        "title": "Quizzes",
+        "description": "Practice key ideas with short questions and instant explanations."
+      }
     },
     "physics": {
       "name": "Physics",
@@ -137,6 +157,7 @@
     "title": "Experiments",
     "subtitle": "Plan, observe and explain practical work before you enter the lab.",
     "tryVirtual": "Try virtual experiment",
+    "labSimulation": "Open lab simulation",
     "aim": "Aim",
     "theory": "Theory",
     "apparatus": "Apparatus",
@@ -220,7 +241,24 @@
     "linkedin": "LinkedIn",
     "email": "Email"
   },
-  "errors": {"title": "The lab light flickered.", "text": "This page hit an unexpected error. Your local progress is safe.", "notFound": "This experiment has not been added yet.", "home": "Return home"},
-  "pwa": {"title": "Keep the lab close", "description": "Install PhysChem Lab for a faster, app-like study space.", "install": "Install app", "later": "Later", "close": "Dismiss", "offline": "You are offline. Saved pages are still available.", "updateReady": "A fresh version of the lab is ready.", "refresh": "Refresh"},
-  "footer": {"built": "Made for curious learners in Bangladesh", "license": "Open educational project"}
+  "errors": {
+    "title": "The lab light flickered.",
+    "text": "This page hit an unexpected error. Your local progress is safe.",
+    "notFound": "This experiment has not been added yet.",
+    "home": "Return home"
+  },
+  "pwa": {
+    "title": "Keep the lab close",
+    "description": "Install PhysChem Lab for a faster, app-like study space.",
+    "install": "Install app",
+    "later": "Later",
+    "close": "Dismiss",
+    "offline": "You are offline. Saved pages are still available.",
+    "updateReady": "A fresh version of the lab is ready.",
+    "refresh": "Refresh"
+  },
+  "footer": {
+    "built": "Made for curious learners in Bangladesh",
+    "license": "Open educational project"
+  }
 }

@@ -128,10 +128,14 @@ button { cursor: pointer; }
 /* Instrument artwork: living details on the physics bench             */
 /* ------------------------------------------------------------------ */
 
-/* Indicator lamps, LEDs and neon tell-tales breathing gently. */
+/* Indicator lamps, LEDs and neon tell-tales breathing gently - realistic. */
 @keyframes ix-pulse {
-  0%, 100% { opacity: 0.72; }
-  50% { opacity: 1; }
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+@keyframes ix-pulse-strong {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
 }
 
 /* Gas flame: a fast, small flicker so the cone never looks frozen. */
@@ -142,10 +146,25 @@ button { cursor: pointer; }
   100% { transform: scaleY(1) scaleX(1); }
 }
 
-/* Filament lamp warming up / cooling down. */
+/* Filament lamp warming up / cooling down - realistic warm flicker */
 @keyframes ix-lamp {
-  0%, 100% { opacity: 0.82; }
-  45% { opacity: 1; }
+  0%, 100% { opacity: 0.88; filter: brightness(1); }
+  25% { opacity: 0.92; filter: brightness(1.05); }
+  50% { opacity: 1; filter: brightness(1.12); }
+  75% { opacity: 0.94; filter: brightness(1.06); }
+}
+@keyframes ix-filament-flicker {
+  0%, 100% { opacity: 0.9; }
+  10% { opacity: 1; }
+  20% { opacity: 0.88; }
+  30% { opacity: 1; }
+  50% { opacity: 0.92; }
+  70% { opacity: 1; }
+  80% { opacity: 0.9; }
+}
+@keyframes ix-bulb-glow {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
 }
 
 /* GM counter / scaler neon blips. */
@@ -153,6 +172,10 @@ button { cursor: pointer; }
   0%, 100% { opacity: 0.25; }
   8% { opacity: 1; }
   16% { opacity: 0.25; }
+}
+@keyframes ix-blink-fast {
+  0%, 50%, 100% { opacity: 0.3; }
+  25% { opacity: 1; }
 }
 
 /* Ripple tank, sonometer loops, Newton's cradle: a slow mechanical sway. */

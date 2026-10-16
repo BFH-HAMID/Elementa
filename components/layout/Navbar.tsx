@@ -13,6 +13,7 @@ import {
   FlaskConical,
   Home,
   Info,
+  Layers,
   Menu,
   Sparkles,
   X
@@ -172,10 +173,21 @@ export function Navbar() {
           </div>
 
           <Link
+            href={hrefFor('/lab')}
+            aria-current={isActive('/lab') && !isActive('/lab/physics') && !isActive('/lab/chemistry') && !isActive('/lab/circuit') ? 'page' : undefined}
+            className={cn(
+              'ml-1 flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-sm font-black text-[var(--ink)] shadow-sm transition hover:bg-[var(--surface-soft)]',
+              isActive('/lab') && !isActive('/lab/physics') && !isActive('/lab/chemistry') && !isActive('/lab/circuit') && 'ring-2 ring-slate-300'
+            )}
+          >
+            <Layers size={15} />
+            Labs
+          </Link>
+          <Link
             href={hrefFor('/lab/physics')}
             aria-current={isActive('/lab/physics') ? 'page' : undefined}
             className={cn(
-              'ml-1 flex items-center gap-1.5 rounded-lg bg-physics-600 px-3 py-2 text-sm font-black text-white shadow-sm transition hover:bg-physics-700 dark:bg-physics-600 dark:hover:bg-physics-500',
+              'flex items-center gap-1.5 rounded-lg bg-physics-600 px-3 py-2 text-sm font-black text-white shadow-sm transition hover:bg-physics-700 dark:bg-physics-600 dark:hover:bg-physics-500',
               isActive('/lab/physics') && 'ring-2 ring-physics-300 dark:ring-physics-700'
             )}
           >
@@ -197,8 +209,8 @@ export function Navbar() {
             href={hrefFor('/lab/circuit')}
             aria-current={isActive('/lab/circuit') ? 'page' : undefined}
             className={cn(
-              'flex items-center gap-1.5 rounded-lg bg-physics-700 px-3 py-2 text-sm font-black text-white shadow-sm transition hover:bg-physics-800 dark:bg-physics-700 dark:hover:bg-physics-600',
-              isActive('/lab/circuit') && 'ring-2 ring-sun-300 dark:ring-sun-700'
+              'flex items-center gap-1.5 rounded-lg bg-slate-800 px-3 py-2 text-sm font-black text-white shadow-sm transition hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600',
+              isActive('/lab/circuit') && 'ring-2 ring-slate-300 dark:ring-slate-600'
             )}
           >
             <Cpu size={15} />
@@ -272,6 +284,20 @@ export function Navbar() {
                   </Link>
                 );
               })}
+              <Link
+                href={hrefFor('/lab')}
+                onClick={() => setMobileOpen(false)}
+                aria-current={isActive('/lab') && !isActive('/lab/physics') && !isActive('/lab/chemistry') && !isActive('/lab/circuit') ? 'page' : undefined}
+                className={cn(
+                  'flex min-w-0 items-center gap-2 rounded-xl border border-[var(--line)] p-3 text-sm font-black transition',
+                  isActive('/lab') && !isActive('/lab/physics') && !isActive('/lab/chemistry') && !isActive('/lab/circuit')
+                    ? 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100'
+                    : 'bg-[var(--surface)] text-[var(--ink)]'
+                )}
+              >
+                <Layers size={17} className="shrink-0" />
+                <span className="truncate">Labs Hub</span>
+              </Link>
               <Link
                 href={hrefFor('/lab/physics')}
                 onClick={() => setMobileOpen(false)}

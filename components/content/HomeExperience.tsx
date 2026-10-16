@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion, MotionConfig, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
-import { ArrowRight, Atom, BookOpen, FlaskConical, Sparkles } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, FlaskConical, Sparkles, Cpu, Beaker, Layers } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useLabStore } from '@/lib/store';
 import { Badge } from '@/components/ui/Badge';
@@ -268,35 +268,102 @@ function SubjectDirectory() {
     }
   ];
 
+  const labs = [
+    {
+      href: `/${locale}/lab/physics`,
+      icon: Atom,
+      name: locale === 'bn' ? 'ফিজিক্স ল্যাব' : 'Physics Lab',
+      title: locale === 'bn' ? 'ফিজিক্স ল্যাব — আলাদা' : 'Physics Lab — Separate',
+      description: locale === 'bn' ? '৪৬টি প্র্যাকটিক্যাল, বাস্তব বাল্বের আলো, কোনো ডুপ্লিকেট নেই।' : '46 practicals, realistic bulb glow, no duplicates.',
+      focus: '46 sims',
+      color: 'border-l-physics-600'
+    },
+    {
+      href: `/${locale}/lab/chemistry`,
+      icon: Beaker,
+      name: locale === 'bn' ? 'কেমিস্ট্রি ল্যাব' : 'Chemistry Lab',
+      title: locale === 'bn' ? 'কেমিস্ট্রি ল্যাব — আলাদা' : 'Chemistry Lab — Separate',
+      description: locale === 'bn' ? '৭২টি প্র্যাকটিক্যাল, ড্র্যাগ-ড্রপ বেঞ্চ, কোনো ডুপ্লিকেট নেই।' : '72 practicals, drag-drop bench, no duplicates.',
+      focus: '72 sims',
+      color: 'border-l-chemistry-600'
+    },
+    {
+      href: `/${locale}/lab/circuit`,
+      icon: Cpu,
+      name: locale === 'bn' ? 'সার্কিট ল্যাব' : 'Circuit Lab',
+      title: locale === 'bn' ? 'সার্কিট ল্যাব — আলাদা' : 'Circuit Lab — Separate',
+      description: locale === 'bn' ? '২০+ রোবটিক্স প্রজেক্ট, Arduino, কোনো ডুপ্লিকেট নেই।' : '20+ robotics projects, Arduino, no duplicates.',
+      focus: '20+ projects',
+      color: 'border-l-slate-700'
+    },
+  ];
+
   return (
-    <section className="page-shell pt-10 sm:pt-12" aria-labelledby="subject-directory-title">
-      <div className="mb-5 max-w-3xl">
-        <p className="eyebrow">{t('directoryEyebrow')}</p>
-        <h2 id="subject-directory-title" className="section-title mt-2">{t('directoryTitle')}</h2>
-        <p className="mt-2 text-sm leading-6 muted">{t('directoryDescription')}</p>
-      </div>
-      <div className="grid gap-4 md:grid-cols-2">
-        {subjects.map(({ href, icon: Icon, name, title, description, focus, tone }) => (
-          <Link key={href} href={href} className="group block h-full">
-            <Card className={`card-hover h-full border-l-4 p-5 sm:p-6 ${tone === 'physics' ? 'border-l-physics-500' : 'border-l-chemistry-500'}`}>
-              <div className="flex items-start justify-between gap-4">
-                <span className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl ${tone === 'physics' ? 'bg-physics-100 text-physics-700 dark:bg-physics-900 dark:text-physics-100' : 'bg-chemistry-100 text-chemistry-700 dark:bg-chemistry-900 dark:text-chemistry-100'}`}>
-                  <Icon size={23} />
-                </span>
-                <Badge tone={tone}>{name}</Badge>
-              </div>
-              <h3 className="mt-5 text-xl font-extrabold">{title}</h3>
-              <p className="mt-2 text-sm leading-6 muted">{description}</p>
-              <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--line)] pt-4">
-                <span className="text-xs font-bold muted">{focus}</span>
-                <span className={`inline-flex items-center gap-1 text-sm font-black transition group-hover:gap-2 ${tone === 'physics' ? 'text-physics-700 dark:text-physics-200' : 'text-chemistry-700 dark:text-chemistry-200'}`}>
-                  {t('openHub')} <ArrowRight size={15} />
-                </span>
-              </div>
-            </Card>
+    <>
+      <section className="page-shell pt-10 sm:pt-12" aria-labelledby="subject-directory-title">
+        <div className="mb-5 max-w-3xl">
+          <p className="eyebrow">{t('directoryEyebrow')}</p>
+          <h2 id="subject-directory-title" className="section-title mt-2">{t('directoryTitle')}</h2>
+          <p className="mt-2 text-sm leading-6 muted">{t('directoryDescription')}</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {subjects.map(({ href, icon: Icon, name, title, description, focus, tone }) => (
+            <Link key={href} href={href} className="group block h-full">
+              <Card className={`card-hover h-full border-l-4 p-5 sm:p-6 ${tone === 'physics' ? 'border-l-physics-500' : 'border-l-chemistry-500'}`}>
+                <div className="flex items-start justify-between gap-4">
+                  <span className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl ${tone === 'physics' ? 'bg-physics-100 text-physics-700 dark:bg-physics-900 dark:text-physics-100' : 'bg-chemistry-100 text-chemistry-700 dark:bg-chemistry-900 dark:text-chemistry-100'}`}>
+                    <Icon size={23} />
+                  </span>
+                  <Badge tone={tone}>{name}</Badge>
+                </div>
+                <h3 className="mt-5 text-xl font-extrabold">{title}</h3>
+                <p className="mt-2 text-sm leading-6 muted">{description}</p>
+                <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--line)] pt-4">
+                  <span className="text-xs font-bold muted">{focus}</span>
+                  <span className={`inline-flex items-center gap-1 text-sm font-black transition group-hover:gap-2 ${tone === 'physics' ? 'text-physics-700 dark:text-physics-200' : 'text-chemistry-700 dark:text-chemistry-200'}`}>
+                    {t('openHub')} <ArrowRight size={15} />
+                  </span>
+                </div>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="page-shell pt-10" aria-labelledby="lab-directory-title">
+        <div className="mb-5 max-w-3xl">
+          <p className="eyebrow flex items-center gap-2"><Layers size={14} /> {locale === 'bn' ? 'ল্যাবসমূহ — আলাদা আলাদা, কোনো ডুপ্লিকেট নেই' : 'Labs — Separate, No Duplicates'}</p>
+          <h2 id="lab-directory-title" className="section-title mt-2">{locale === 'bn' ? 'তিনটি ল্যাব আলাদা আলাদা' : 'Three Labs — Separate & Organized'}</h2>
+          <p className="mt-2 text-sm leading-6 muted">{locale === 'bn' ? 'ফিজিক্স, কেমিস্ট্রি ও সার্কিট ল্যাব প্রতিটি নিজস্ব রুট, যন্ত্রপাতি ও সিমুলেশন নিয়ে — কোনো ডুপ্লিকেট নেই।' : 'Physics, Chemistry and Circuit labs each have their own route, equipment and simulations — no duplicates.'}</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-3">
+          {labs.map(({ href, icon: Icon, name, title, description, focus, color }) => (
+            <Link key={href} href={href} className="group block h-full">
+              <Card className={`card-hover h-full border-l-4 p-5 sm:p-6 ${color}`}>
+                <div className="flex items-start justify-between gap-4">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-100">
+                    <Icon size={23} />
+                  </span>
+                  <Badge>{name}</Badge>
+                </div>
+                <h3 className="mt-5 text-lg font-extrabold">{title}</h3>
+                <p className="mt-2 text-sm leading-6 muted">{description}</p>
+                <div className="mt-5 flex items-center justify-between border-t border-[var(--line)] pt-4">
+                  <span className="text-xs font-bold muted">{focus}</span>
+                  <span className="inline-flex items-center gap-1 text-sm font-black text-slate-700 dark:text-slate-200 group-hover:gap-2">
+                    {locale === 'bn' ? 'ল্যাবে যান' : 'Open Lab'} <ArrowRight size={15} />
+                  </span>
+                </div>
+              </Card>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-4 flex justify-center">
+          <Link href={`/${locale}/lab`} className="inline-flex items-center gap-2 rounded-xl bg-slate-800 px-5 py-2.5 text-sm font-black text-white hover:bg-slate-900">
+            <Layers size={16} /> {locale === 'bn' ? 'সব ল্যাব দেখুন — হাব' : 'View All Labs — Hub'} <ArrowRight size={14} />
           </Link>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }

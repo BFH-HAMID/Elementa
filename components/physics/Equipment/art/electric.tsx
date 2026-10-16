@@ -549,54 +549,176 @@ const postOfficeBox: ArtEntry = {
 };
 
 const bulb: ArtEntry = {
-  vb: '0 0 96 82',
+  vb: '0 0 96 96',
   Comp: ({ p, res, live, burned }) => {
     const power = res?.power ?? 0;
+    const voltage = res?.voltageDrop ?? 0;
+    const current = res?.current ?? 0;
     const dead = burned || res?.burnedOut;
-    const lit = power > 0.05 && !dead;
+    const lit = power > 0.03 && !dead;
+    const ratedP = num(p.ratedPower, 3);
+    const ratedV = num(p.ratedVoltage, 6);
+    // brightness 0..1.2 based on power relative to rating
+    const brightness = dead ? 0 : clamp(power / Math.max(0.5, ratedP * 0.6), 0, 1.4);
+    const isDim = brightness > 0 && brightness < 0.35;
+    const isBright = brightness >= 0.7;
+    const isVeryBright = brightness >= 1.0;
+    // color temperature: dim = orange, bright = yellow-white, very bright = white
+    const filamentColor = dead ? '#3f4650' : isVeryBright ? '#ffffff' : isBright ? '#fffbeb' : isDim ? '#fdba74' : '#a8b0b8';
+    const filamentGlow = dead ? 0 : clamp(brightness * 1.1, 0, 1);
+
     return (
       <g>
-        <Contact cx={48} cy={79} rx={20} opacity={0.3} />
-        {/* bayonet cap: brass shell, rolled seam, glass pip */}
-        <rect x={41} y={52} width={14} height={17} rx={2.4} fill="url(#ix-brass)" stroke="#6d4a0a" strokeWidth={0.5} />
-        {Array.from({ length: 4 }).map((_, i) => (
-          <line key={i} x1={41} y1={55 + i * 3.6} x2={55} y2={55 + i * 3.6} stroke="#6d4a0a" strokeWidth={0.5} opacity={0.65} />
-        ))}
-        <rect x={41} y={52} width={14} height={17} rx={2.4} fill="url(#ix-brass-h)" opacity={0.35} />
-        <ellipse cx={48} cy={70} rx={7} ry={2.6} fill="#8a6a12" />
-        <ellipse cx={48} cy={52} rx={7} ry={2.4} fill="#3a2708" opacity={0.6} />
-        {/* glass envelope: rim light down each side, shadow where it meets the cap */}
-        <path
-          d={`M 48 7 C 67 7 75 24 75 36 C 75 49 64 55 58 55 L 38 55 C 32 55 21 48 21 36 C 21 24 29 7 48 7 Z`}
-          fill={lit ? 'url(#ix-lens-bulb)' : 'url(#ix-lens-bulb-dark)'}
-          stroke="#7f93a6"
-          strokeWidth={0.9}
-        />
-        <path d={`M 48 7 C 67 7 75 24 75 36 C 75 49 64 55 58 55 L 38 55 C 32 55 21 48 21 36 C 21 24 29 7 48 7 Z`} fill="url(#ix-envelope)" opacity={lit ? 0.25 : 0.6} />
-        <path d={`M 30 16 C 26 24 25 32 26 40`} fill="none" stroke="#ffffff" strokeOpacity={0.75} strokeWidth={2.4} strokeLinecap="round" />
-        <path d={`M 66 16 C 70 24 71 32 70 40`} fill="none" stroke="#ffffff" strokeOpacity={0.35} strokeWidth={1.4} strokeLinecap="round" />
-        <path d={`M 24 44 C 30 52 40 55 48 55`} fill="none" stroke="#4b6b86" strokeOpacity={0.35} strokeWidth={1.6} strokeLinecap="round" />
+        {/* Light spill on the bench - this is what makes it obvious the bulb is ON */}
         {lit && (
-          <g style={live ? { animation: 'ix-pulse 1.9s ease-in-out infinite' } : undefined}>
-            <circle cx={48} cy={32} r={30} fill="url(#ix-glow-white)" opacity={clamp(power / 8, 0.15, 0.95)} />
+          <g>
+            <ellipse cx={48} cy={84} rx={38 + brightness * 18} ry={9 + brightness * 5} fill="url(#ix-light-spill-bulb)" opacity={clamp(0.25 + brightness * 0.55, 0, 0.92)} />
+            <ellipse cx={48} cy={86} rx={28 + brightness * 12} ry={5 + brightness * 2.5} fill="#fffbeb" opacity={clamp(brightness * 0.35, 0, 0.6)} filter="url(#ix-blur)" />
           </g>
         )}
-        {/* stem, support wires and the coiled filament */}
-        <path d="M 42 54 L 42 44 M 54 54 L 54 44" fill="none" stroke="#8a939c" strokeWidth={0.8} />
-        <path d="M 42 44 L 44 30 M 54 44 L 52 30" fill="none" stroke="#8a939c" strokeWidth={0.7} />
+        <Contact cx={48} cy={84} rx={22} opacity={lit ? 0.45 : 0.28} />
+
+        {/* Outer volumetric glow - visible even from distance */}
+        {lit && (
+          <g style={live ? { animation: `ix-lamp ${(1.4 - brightness * 0.3).toFixed(2)}s ease-in-out infinite` } : undefined}>
+            <circle cx={48} cy={32} r={58} fill="url(#ix-glow-bulb-outer)" opacity={clamp(0.15 + brightness * 0.5, 0, 0.85)} filter="url(#ix-bloom-strong)" />
+            <circle cx={48} cy={32} r={42} fill="url(#ix-glow-bulb-warm)" opacity={clamp(0.25 + brightness * 0.65, 0, 0.95)} filter="url(#ix-bloom-bulb)" />
+            <circle cx={48} cy={32} r={28} fill="url(#ix-glow-bulb-core)" opacity={clamp(0.35 + brightness * 0.6, 0, 1)} />
+          </g>
+        )}
+
+        {/* Light rays when very bright - unmistakable ON state */}
+        {lit && isBright && live && (
+          <g opacity={clamp((brightness - 0.5) * 0.7, 0, 0.65)} style={{ animation: 'ix-pulse 2.2s ease-in-out infinite' }}>
+            {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => {
+              const rad = (a * Math.PI) / 180;
+              const x1 = 48 + Math.cos(rad) * 30;
+              const y1 = 32 + Math.sin(rad) * 30;
+              const x2 = 48 + Math.cos(rad) * (42 + brightness * 8);
+              const y2 = 32 + Math.sin(rad) * (42 + brightness * 8);
+              return <line key={a} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#fde68a" strokeWidth={isVeryBright ? 1.6 : 1} opacity={0.6} strokeLinecap="round" />;
+            })}
+          </g>
+        )}
+
+        {/* Bayonet cap - realistic brass with threads and insulator */}
+        <g>
+          <rect x={40} y={52} width={16} height={20} rx={2.6} fill="url(#ix-brass)" stroke="#6d4a0a" strokeWidth={0.6} filter="url(#ix-drop)" />
+          {/* screw threads */}
+          {[0, 1, 2, 3].map((i) => (
+            <path key={i} d={`M 40 ${55 + i * 3.8} Q 48 ${56 + i * 3.8} 56 ${55 + i * 3.8}`} fill="none" stroke="#5a3f0a" strokeWidth={0.6} opacity={0.8} />
+          ))}
+          <rect x={40} y={52} width={16} height={20} rx={2.6} fill="url(#ix-brass-h)" opacity={0.4} />
+          <rect x={40} y={52} width={16} height={4} rx={1.5} fill="#ffffff" opacity={0.22} />
+          <ellipse cx={48} cy={72} rx={8} ry={3} fill="#7a5a12" stroke="#5a420d" strokeWidth={0.5} />
+          <ellipse cx={48} cy={72.5} rx={8} ry={3} fill="#0b1220" opacity={0.18} />
+          <circle cx={48} cy={73} r={2.2} fill="#2a2416" stroke="#5a4a1e" strokeWidth={0.4} />
+          {/* solder pip */}
+          <circle cx={48} cy={73} r={1} fill={lit ? '#fde68a' : '#8a7a5a'} opacity={lit ? 0.9 : 0.6} />
+        </g>
+
+        {/* Glass envelope - highly realistic */}
         <path
-          d="M 44 30 l 1.4 -5 1.6 5 1.6 -5 1.6 5 1.6 -5 1.4 5"
-          fill="none"
-          stroke={dead ? '#3f4650' : lit ? '#ffe3b0' : '#a8b0b8'}
-          strokeWidth={1.15}
-          strokeLinejoin="round"
-          filter={power > 0.1 ? 'url(#ix-glow)' : undefined}
+          d={`M 48 4 C 68 4 78 20 78 34 C 78 48 67 54 60 56 L 36 56 C 29 54 18 48 18 34 C 18 20 28 4 48 4 Z`}
+          fill={dead ? '#2a2f36' : lit ? 'url(#ix-lens-bulb)' : 'url(#ix-lens-bulb-dark)'}
+          stroke={dead ? '#1f2937' : lit ? (isVeryBright ? '#fde68a' : '#fbbf24') : '#7f93a6'}
+          strokeWidth={lit ? (isVeryBright ? 1.4 : 1.1) : 0.9}
+          filter={lit ? 'url(#ix-bloom-bulb)' : 'url(#ix-drop)'}
+          opacity={dead ? 0.85 : lit ? 0.92 : 0.88}
         />
-        {lit && power > 0.1 && <ellipse cx={48} cy={29} rx={8} ry={6} fill="#fff6d8" opacity={clamp(power / 6, 0.2, 0.85)} filter="url(#ix-glow-wide)" />}
-        {dead && <path d="M 45 30 l 6 4" stroke="#111827" strokeWidth={1.4} />}
-        <Etch x={48} y={81} size={5.6} color="#334155" weight={800} mono>
-          {dead ? 'FILAMENT OPEN' : `${num(p.ratedPower, 3)} W · ${num(p.ratedVoltage, 6)} V`}
-        </Etch>
+        {/* Glass thickness and internal reflections */}
+        <path d={`M 48 4 C 68 4 78 20 78 34 C 78 48 67 54 60 56 L 36 56 C 29 54 18 48 18 34 C 18 20 28 4 48 4 Z`} fill="url(#ix-envelope)" opacity={dead ? 0.3 : lit ? 0.18 : 0.55} />
+        {/* Bright rim light when lit */}
+        {lit && <path d={`M 48 4 C 68 4 78 20 78 34`} fill="none" stroke="#ffffff" strokeOpacity={clamp(0.4 + brightness * 0.5, 0, 0.9)} strokeWidth={1.8} strokeLinecap="round" />}
+        {/* Left highlight - strong specular */}
+        <path d={`M 28 12 C 24 20 23 28 24 38`} fill="none" stroke="#ffffff" strokeOpacity={lit ? 0.85 : 0.75} strokeWidth={lit ? 3 : 2.4} strokeLinecap="round" />
+        <path d={`M 32 14 C 30 20 29 28 30 36`} fill="none" stroke="#ffffff" strokeOpacity={lit ? 0.5 : 0.35} strokeWidth={1.2} strokeLinecap="round" />
+        {/* Right highlight */}
+        <path d={`M 68 12 C 72 20 73 28 72 38`} fill="none" stroke="#ffffff" strokeOpacity={lit ? 0.45 : 0.35} strokeWidth={lit ? 2 : 1.4} strokeLinecap="round" />
+        {/* Bottom shadow near cap */}
+        <path d={`M 22 46 C 30 54 40 57 48 57`} fill="none" stroke={lit ? '#fb923c' : '#4b6b86'} strokeOpacity={lit ? 0.25 : 0.35} strokeWidth={1.6} strokeLinecap="round" />
+
+        {/* Internal stem and support structure */}
+        <g opacity={dead ? 0.5 : 1}>
+          <path d="M 41 56 L 41 44 L 43 30" fill="none" stroke="#9ca3af" strokeWidth={0.9} />
+          <path d="M 55 56 L 55 44 L 53 30" fill="none" stroke="#9ca3af" strokeWidth={0.9} />
+          {/* glass stem */}
+          <rect x={46} y={44} width={4} height={12} rx={1} fill="#cbd5e1" opacity={0.6} />
+          <rect x={46.5} y={44} width={1} height={12} fill="#ffffff" opacity={0.5} />
+        </g>
+
+        {/* Filament - coiled tungsten, the heart of the bulb */}
+        {dead ? (
+          <g>
+            <path d="M 43 30 L 44 24 L 48 26 L 52 24 L 53 30" fill="none" stroke="#4b5563" strokeWidth={1.2} strokeLinejoin="round" opacity={0.6} />
+            <path d="M 45 24 L 48 34" stroke="#111827" strokeWidth={1.4} strokeLinecap="round" />
+            <circle cx={48} cy={32} r={1.5} fill="#111827" />
+          </g>
+        ) : (
+          <g filter={lit ? 'url(#ix-filament-bloom)' : undefined}>
+            {/* filament supports glow when lit */}
+            {lit && <path d="M 43 30 L 44 18 M 53 30 L 52 18" fill="none" stroke="#fed7aa" strokeWidth={1.2} opacity={filamentGlow * 0.6} />}
+            {/* realistic coiled filament - double coil */}
+            <path
+              d="M 43 30 
+                 c 0 -3 2 -6 3 -8 c 1 -2 2 -3 3 -3
+                 c 1.5 0 2.5 1.5 3 3 c 0.5 1.5 0.5 3 1 4.5
+                 c 0.5 -1.5 0.5 -3 1 -4.5 c 0.5 -1.5 1.5 -3 3 -3 c 1 0 2 1 3 3 c 1 2 3 5 3 8"
+              fill="none"
+              stroke={filamentColor}
+              strokeWidth={lit ? clamp(1.2 + brightness * 0.8, 1.2, 2.2) : 1.15}
+              strokeLinejoin="round"
+              strokeLinecap="round"
+              opacity={lit ? 0.95 : 0.7}
+            />
+            {/* second coil layer for realism */}
+            <path
+              d="M 44 28 
+                 q 1.2 -2.5 2.4 0 t 2.4 0 t 2.4 0 t 2.4 0"
+              fill="none"
+              stroke={isDim ? '#fb923c' : filamentColor}
+              strokeWidth={lit ? 0.9 : 0.7}
+              opacity={lit ? 0.8 : 0.5}
+            />
+            {/* hot spot at center of filament */}
+            {lit && (
+              <ellipse cx={48} cy={23} rx={clamp(3 + brightness * 4, 3, 8)} ry={clamp(2 + brightness * 3, 2, 6)} fill="#ffffff" opacity={clamp(0.5 + brightness * 0.4, 0, 0.95)} filter="url(#ix-glow-wide)" />
+            )}
+            {lit && isBright && (
+              <ellipse cx={48} cy={23} rx={clamp(1.5 + brightness * 2, 1.5, 4)} ry={clamp(1 + brightness * 1.5, 1, 3)} fill="#fffbeb" opacity={0.9} />
+            )}
+          </g>
+        )}
+
+        {/* Soot/blackening when burned out or overpowered */}
+        {dead && (
+          <g>
+            <path d={`M 48 4 C 68 4 78 20 78 34 C 78 48 67 54 60 56 L 36 56 C 29 54 18 48 18 34 C 18 20 28 4 48 4 Z`} fill="#0f172a" opacity={0.35} />
+            <ellipse cx={48} cy={20} rx={18} ry={12} fill="#1f2937" opacity={0.25} />
+          </g>
+        )}
+
+        {/* Status indicator - makes it super clear if bulb is ON */}
+        {lit && (
+          <g>
+            <circle cx={72} cy={14} r={5} fill={isVeryBright ? '#ffffff' : '#fde68a'} stroke={isVeryBright ? '#f59e0b' : '#d97706'} strokeWidth={0.8} filter="url(#ix-glow)" opacity={0.95} />
+            <circle cx={72} cy={14} r={2.2} fill="#ffffff" opacity={0.9} />
+          </g>
+        )}
+        {dead && <circle cx={72} cy={14} r={4} fill="#ef4444" stroke="#7f1d1d" strokeWidth={0.8} />}
+
+        {/* Power and brightness indicator */}
+        <g>
+          <rect x={18} y={80} width={60} height={14} rx={3} fill={dead ? '#1f2937' : lit ? (isVeryBright ? '#fef3c7' : '#fffbeb') : '#f1f5f9'} stroke={dead ? '#374151' : lit ? '#fbbf24' : '#cbd5e1'} strokeWidth={0.6} />
+          <text x={48} y={89.5} fontSize={5.2} textAnchor="middle" fontWeight={800} fontFamily="ui-monospace, monospace" fill={dead ? '#ef4444' : lit ? (isVeryBright ? '#92400e' : '#78350f') : '#334155'}>
+            {dead ? 'BURNED OUT' : lit ? `${power.toFixed(2)}W ${isVeryBright ? '● BRIGHT' : isBright ? '● ON' : '● DIM'}` : `${ratedP}W ${ratedV}V OFF`}
+          </text>
+        </g>
+
+        {/* Subtle flicker for dim bulbs - real filament behavior */}
+        {lit && isDim && live && (
+          <circle cx={48} cy={32} r={20} fill="#ffffff" opacity={0.08} style={{ animation: 'ix-blink 0.35s ease-in-out infinite' }} />
+        )}
       </g>
     );
   }

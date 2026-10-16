@@ -374,14 +374,17 @@ export function InstrumentDefs() {
 
         {/* ── Glows: radial falloff used for lamps, LEDs, flames ───── */}
         <radialGradient id="ix-glow-white" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0%" stopColor="#fffdf0" stopOpacity="1" />
-          <stop offset="30%" stopColor="#fde68a" stopOpacity="0.72" />
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+          <stop offset="15%" stopColor="#fffbeb" stopOpacity="0.95" />
+          <stop offset="35%" stopColor="#fde68a" stopOpacity="0.75" />
+          <stop offset="65%" stopColor="#fbbf24" stopOpacity="0.35" />
           <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="ix-glow-amber" cx="0.5" cy="0.5" r="0.5">
           <stop offset="0%" stopColor="#fff8e1" stopOpacity="0.98" />
-          <stop offset="26%" stopColor="#fbbf24" stopOpacity="0.68" />
-          <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
+          <stop offset="26%" stopColor="#fbbf24" stopOpacity="0.75" />
+          <stop offset="60%" stopColor="#f59e0b" stopOpacity="0.3" />
+          <stop offset="100%" stopColor="#ea580c" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="ix-glow-red" cx="0.5" cy="0.5" r="0.5">
           <stop offset="0%" stopColor="#fff1f0" stopOpacity="0.95" />
@@ -430,15 +433,56 @@ export function InstrumentDefs() {
           <stop offset="42%" stopColor="#3b8ff5" />
           <stop offset="100%" stopColor="#10306b" />
         </radialGradient>
-        <radialGradient id="ix-lens-bulb" cx="0.42" cy="0.36" r="0.7">
-          <stop offset="0%" stopColor="#fffdf3" stopOpacity="0.98" />
-          <stop offset="52%" stopColor="#ffe9a8" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#c8a75a" stopOpacity="0.28" />
+        {/* Realistic incandescent bulb - bright warm when lit */}
+        <radialGradient id="ix-lens-bulb" cx="0.45" cy="0.38" r="0.82">
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+          <stop offset="18%" stopColor="#fff8e1" stopOpacity="0.95" />
+          <stop offset="38%" stopColor="#ffe8a0" stopOpacity="0.85" />
+          <stop offset="62%" stopColor="#ffb84d" stopOpacity="0.6" />
+          <stop offset="82%" stopColor="#ff9a3d" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#cc7a2a" stopOpacity="0.2" />
         </radialGradient>
         <radialGradient id="ix-lens-bulb-dark" cx="0.42" cy="0.36" r="0.7">
-          <stop offset="0%" stopColor="#e6e9ee" stopOpacity="0.55" />
-          <stop offset="60%" stopColor="#9aa3ad" stopOpacity="0.28" />
-          <stop offset="100%" stopColor="#5b636c" stopOpacity="0.22" />
+          <stop offset="0%" stopColor="#f0f3f7" stopOpacity="0.65" />
+          <stop offset="45%" stopColor="#c8d0d9" stopOpacity="0.38" />
+          <stop offset="75%" stopColor="#8a93a0" stopOpacity="0.22" />
+          <stop offset="100%" stopColor="#5b636c" stopOpacity="0.18" />
+        </radialGradient>
+        {/* Bulb realistic glow layers - from core to outer halo */}
+        <radialGradient id="ix-glow-bulb-core" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+          <stop offset="22%" stopColor="#fffbeb" stopOpacity="0.9" />
+          <stop offset="48%" stopColor="#fef3c7" stopOpacity="0.55" />
+          <stop offset="100%" stopColor="#fbbf24" stopOpacity="0" />
+        </radialGradient>
+        <radialGradient id="ix-glow-bulb-warm" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0%" stopColor="#fff7ed" stopOpacity="0.9" />
+          <stop offset="30%" stopColor="#fed7aa" stopOpacity="0.6" />
+          <stop offset="58%" stopColor="#fb923c" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#ea580c" stopOpacity="0" />
+        </radialGradient>
+        <radialGradient id="ix-glow-bulb-outer" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0%" stopColor="#fffbeb" stopOpacity="0.45" />
+          <stop offset="40%" stopColor="#fde68a" stopOpacity="0.22" />
+          <stop offset="70%" stopColor="#fbbf24" stopOpacity="0.08" />
+          <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
+        </radialGradient>
+        <radialGradient id="ix-light-spill-bulb" cx="0.5" cy="0" r="0.85">
+          <stop offset="0%" stopColor="#fffbeb" stopOpacity="0.55" />
+          <stop offset="25%" stopColor="#fef3c7" stopOpacity="0.28" />
+          <stop offset="55%" stopColor="#fde68a" stopOpacity="0.12" />
+          <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
+        </radialGradient>
+        <linearGradient id="ix-filament-hot" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="#ffedd5" />
+          <stop offset="30%" stopColor="#fffbeb" />
+          <stop offset="60%" stopColor="#fef3c7" />
+          <stop offset="100%" stopColor="#fde68a" />
+        </linearGradient>
+        <radialGradient id="ix-filament-glow" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.95" />
+          <stop offset="35%" stopColor="#fef3c7" stopOpacity="0.7" />
+          <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
         </radialGradient>
 
         {/* ── Flames ──────────────────────────────────────────────── */}
@@ -551,6 +595,39 @@ export function InstrumentDefs() {
         <marker id="ix-arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
           <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626" />
         </marker>
+
+        {/* ── Realistic bulb bloom & light filters ─────────────────── */}
+        <filter id="ix-bloom-bulb" x="-120%" y="-120%" width="340%" height="340%">
+          <feGaussianBlur stdDeviation="6" result="b1" />
+          <feGaussianBlur stdDeviation="12" result="b2" />
+          <feMerge>
+            <feMergeNode in="b2" />
+            <feMergeNode in="b1" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="ix-bloom-strong" x="-150%" y="-150%" width="400%" height="400%">
+          <feGaussianBlur stdDeviation="10" result="b1" />
+          <feGaussianBlur stdDeviation="20" result="b2" />
+          <feMerge>
+            <feMergeNode in="b2" />
+            <feMergeNode in="b1" />
+            <feMergeNode in="b1" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="ix-bulb-inner" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="2.5" result="blur" />
+          <feComposite in="blur" in2="SourceGraphic" operator="over" />
+        </filter>
+        <filter id="ix-filament-bloom" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="1.8" result="b" />
+          <feMerge>
+            <feMergeNode in="b" />
+            <feMergeNode in="b" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
 
         {/* ── Bench surface (used by the workbench canvas) ─────────── */}
         <pattern id="ix-matte" width="6" height="6" patternUnits="userSpaceOnUse">

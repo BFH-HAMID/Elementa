@@ -106,6 +106,8 @@ export type LabStore = {
   selectVessel: (vesselId: string | null) => void;
   addVessel: (apparatusId: string, label?: { en: string; bn: string }) => string;
   removeVessel: (vesselId: string) => void;
+  duplicateVessel: (vesselId: string) => string;
+  moveVessel: (vesselId: string, x: number, y: number) => void;
   setVesselApparatus: (vesselId: string, apparatusId: string) => void;
   addChemical: (vesselId: string, chemicalId: string, amount?: number) => void;
   removePortion: (vesselId: string, chemicalId: string) => void;
@@ -384,7 +386,10 @@ export const useLabStore = create<LabStore>()((set, get) => {
         return '';
       }
       const apparatus = apparatusById.get(apparatusId);
+      const index = state.vessels.length;
       const vessel = createVessel(apparatusId, { labelEn: label?.en, labelBn: label?.bn });
+      vessel.x = (index % 2) * 260;
+      vessel.y = Math.floor(index / 2) * 260;
       commit(() => ({
         vessels: [...get().vessels, vessel],
         selectedVesselId: vessel.id,
@@ -409,6 +414,23 @@ export const useLabStore = create<LabStore>()((set, get) => {
         selectedVesselId: state.selectedVesselId === vesselId ? null : state.selectedVesselId,
         effects: state.effects.filter((effect) => effect.vesselId !== vesselId)
       })),
+
+    duplicateVessel: (vesselId) => {
+      const state = get();
+      const original = state.vessels.find((v) => v.id === vesselId);
+      if (!original) return '';
+      if (state.vessels.length >= MAX_VESSELS) {
+        set({ flash: { message_en: 'The bench holds four stations at most.', message_bn: 'বেঞ্চে সর্বোচ্চ চারটি স্টেশন রাখা যায়।', tone: 'warning' } });
+        return '';
+      }
+      const clone = { ...original, id: nextVesselId(), x: (original.x ?? 0) + 40, y: (original.y ?? 0) + 40, portions: original.portions.map((p) => ({ ...p })), sediment: original.sediment.map((s) => ({ ...s })), gases: original.gases.map((g) => ({ ...g })) };
+      commit(() => ({ vessels: [...get().vessels, clone], selectedVesselId: clone.id }));
+      return clone.id;
+    },
+
+    moveVessel: (vesselId, x, y) => set((state) => ({
+      vessels: state.vessels.map((vessel) => (vessel.id === vesselId ? { ...vessel, x, y } : vessel))
+    })),
 
     setVesselApparatus: (vesselId, apparatusId) =>
       commit((state) => ({

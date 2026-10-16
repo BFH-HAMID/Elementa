@@ -2,7 +2,7 @@
 
 import { useDroppable } from '@dnd-kit/core';
 import { motion } from 'framer-motion';
-import { ArrowUpToLine, Droplets, Flame, Trash2, X, Zap } from 'lucide-react';
+import { ArrowUpToLine, Copy, Droplets, Flame, Trash2, X, Zap } from 'lucide-react';
 import { useMemo, type ReactNode } from 'react';
 import { heatColour } from '@/engine/heatModel';
 import { indicatorColor } from '@/engine/phCalc';
@@ -12,7 +12,7 @@ import { labT } from '@/lib/i18n';
 import { apparatusById, labDataset } from '@/lib/labData';
 import { cn, prefersReducedMotion } from '@/lib/utils';
 import { useLabStore, vesselLabel } from '@/store/labStore';
-import { Burner, Thermometer, TripodStand, VesselFor } from './Apparatus';
+import { Burner, ElectrolysisCell, Thermometer, TripodStand, VesselFor } from './Apparatus';
 import { vesselDropId, type DropTargetData } from './dragTypes';
 
 export function VesselStation({ vessel, index, selected }: { vessel: Vessel; index: number; selected: boolean }) {
@@ -27,6 +27,7 @@ export function VesselStation({ vessel, index, selected }: { vessel: Vessel; ind
   const dispense = useLabStore((state) => state.dispense);
   const emptyVessel = useLabStore((state) => state.emptyVessel);
   const removeVessel = useLabStore((state) => state.removeVessel);
+  const duplicateVessel = useLabStore((state) => state.duplicateVessel);
   const removePortion = useLabStore((state) => state.removePortion);
 
   const reducedMotion = useMemo(() => prefersReducedMotion(), []);
@@ -84,6 +85,12 @@ export function VesselStation({ vessel, index, selected }: { vessel: Vessel; ind
           </div>
         )}
 
+        {vessel.electrolysis && (
+          <div className="pointer-events-none absolute bottom-[-4px] right-[-6px] h-[56px] w-[56px]">
+            <ElectrolysisCell className="h-full w-full" />
+          </div>
+        )}
+
         {view.heating && (
           <div className="pointer-events-none absolute inset-x-0 bottom-[-6px] flex flex-col items-center">
             <TripodStand className="w-[104px]" />
@@ -103,6 +110,17 @@ export function VesselStation({ vessel, index, selected }: { vessel: Vessel; ind
       <div className={cn('flex flex-col gap-2 p-3', view.heating && 'pt-9')}>
         <div className="flex items-start justify-between gap-2">
           <h3 className="text-sm font-extrabold leading-tight">{label}</h3>
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              duplicateVessel(vessel.id);
+            }}
+            aria-label="Duplicate"
+            className="btn-ghost min-h-7 rounded-lg p-1.5"
+          >
+            <Copy size={14} />
+          </button>
           <button
             type="button"
             onClick={(event) => {

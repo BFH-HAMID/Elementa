@@ -1,6 +1,6 @@
 {
-  "count": 117,
-  "shelfCount": 61,
+  "count": 120,
+  "shelfCount": 63,
   "categories": {
     "acid": {
       "en": "Acids",
@@ -128,7 +128,7 @@
         "kind": "acid",
         "strength": "weak",
         "protons": 1,
-        "ka": 0.000018
+        "ka": 1.8e-05
       },
       "notes_en": "Weak organic acid, Ka = 1.8 × 10⁻⁵.",
       "notes_bn": "দুর্বল জৈব অ্যাসিড, Ka = 1.8 × 10⁻⁵।"
@@ -226,7 +226,7 @@
         "kind": "base",
         "strength": "weak",
         "hydroxides": 1,
-        "kb": 0.000018
+        "kb": 1.8e-05
       },
       "notes_en": "Weak alkali with a pungent smell.",
       "notes_bn": "ঝাঁজালো গন্ধযুক্ত দুর্বল ক্ষার।"
@@ -975,7 +975,7 @@
         "kind": "acid",
         "strength": "weak",
         "protons": 2,
-        "ka": 4.3e-7
+        "ka": 4.3e-07
       },
       "notes_en": "Heavier than air; does not support burning.",
       "notes_bn": "বাতাসের চেয়ে ভারী; দহনে সহায়তা করে না।"
@@ -1096,7 +1096,7 @@
         "kind": "base",
         "strength": "weak",
         "hydroxides": 1,
-        "kb": 0.000018
+        "kb": 1.8e-05
       },
       "gasTest": {
         "name_en": "Turns damp red litmus blue",
@@ -1544,7 +1544,7 @@
         "kind": "base",
         "strength": "weak",
         "hydroxides": 2,
-        "kb": 0.000022
+        "kb": 2.2e-05
       },
       "notes_en": "Pale blue gelatinous precipitate.",
       "notes_bn": "হালকা নীল আঠালো অধঃক্ষেপ।"
@@ -1568,7 +1568,7 @@
         "kind": "base",
         "strength": "weak",
         "hydroxides": 3,
-        "kb": 1e-9
+        "kb": 1e-09
       },
       "notes_en": "Rust-brown precipitate.",
       "notes_bn": "মরচে-বাদামি অধঃক্ষেপ।"
@@ -1592,7 +1592,7 @@
         "kind": "base",
         "strength": "weak",
         "hydroxides": 2,
-        "kb": 0.000001
+        "kb": 1e-06
       },
       "notes_en": "Dirty green precipitate that browns in air.",
       "notes_bn": "ঘোলা সবুজ অধঃক্ষেপ যা বাতাসে বাদামি হয়।"
@@ -1616,7 +1616,7 @@
         "kind": "base",
         "strength": "weak",
         "hydroxides": 2,
-        "kb": 0.000001
+        "kb": 1e-06
       }
     },
     {
@@ -1638,7 +1638,7 @@
         "kind": "base",
         "strength": "weak",
         "hydroxides": 3,
-        "kb": 1e-9
+        "kb": 1e-09
       }
     },
     {
@@ -2060,7 +2060,7 @@
       "soluble": true,
       "precipitate": false,
       "amphoteric": false,
-      "id": "I2",
+      "id": "iodine",
       "formula": "I₂",
       "name_en": "Iodine",
       "name_bn": "আয়োডিন",
@@ -2297,7 +2297,7 @@
         "kind": "acid",
         "strength": "weak",
         "protons": 2,
-        "ka": 4.3e-7
+        "ka": 4.3e-07
       }
     },
     {
@@ -2341,7 +2341,7 @@
         "kind": "acid",
         "strength": "weak",
         "protons": 1,
-        "ka": 3e-8
+        "ka": 3e-08
       }
     },
     {
@@ -2599,6 +2599,62 @@
       },
       "notes_en": "Insoluble in water — the impurity in rock salt.",
       "notes_bn": "পানিতে অদ্রবণীয় — খনিজ লবণের অপদ্রব্য।"
+    },
+    {
+      "shelf": true,
+      "hazard": "none",
+      "opacity": 0.3,
+      "soluble": true,
+      "precipitate": false,
+      "amphoteric": false,
+      "id": "starch",
+      "formula": "(C₆H₁₀O₅)n",
+      "name_en": "Starch solution",
+      "name_bn": "স্টার্চ দ্রবণ",
+      "category": "solvent",
+      "state": "liquid",
+      "color": "#f4f1e6",
+      "molarMass": 162.14,
+      "concentrationM": 0.01,
+      "notes_en": "Indicator for iodine; turns blue-black.",
+      "notes_bn": "আয়োডিনের নির্দেশক; নীল-কালো হয়।"
+    },
+    {
+      "shelf": true,
+      "hazard": "irritant",
+      "opacity": 0.6,
+      "soluble": true,
+      "precipitate": false,
+      "amphoteric": false,
+      "id": "bromothymol-blue",
+      "formula": "C₂₇H₂₈Br₂O₅S",
+      "name_en": "Bromothymol blue",
+      "name_bn": "ব্রোমোথাইমল ব্লু",
+      "category": "indicator",
+      "state": "liquid",
+      "color": "#6fbf73",
+      "molarMass": 624.4,
+      "concentrationM": 0.001,
+      "notes_en": "pH indicator: yellow (acid) to blue (base).",
+      "notes_bn": "pH নির্দেশক: অ্যাসিডে হলুদ, ক্ষারে নীল।"
+    },
+    {
+      "shelf": false,
+      "hazard": "irritant",
+      "opacity": 0.9,
+      "soluble": true,
+      "precipitate": false,
+      "amphoteric": false,
+      "id": "I2",
+      "formula": "I₂",
+      "name_en": "Iodine",
+      "name_bn": "আয়োডিন",
+      "category": "gas",
+      "state": "solid",
+      "color": "#6b3f8a",
+      "molarMass": 253.8,
+      "notes_en": "Violet vapour, brown in solution.",
+      "notes_bn": "বেগুনি বাষ্প, দ্রবণে বাদামি।"
     }
   ]
 }

@@ -12,7 +12,8 @@ Open it from the header button **Chemistry Lab / কেমিস্ট্রি 
 /bn|/en/lab/chemistry                    the bench: shelf, vessels, notebooks
 /bn|/en/lab/experiments                  catalog of the guided walkthroughs
 /bn|/en/lab/experiments/<slug>           one walkthrough, printed as a lab manual
-/bn|/en/lab/chemistry?experiment=<slug>  the bench with that walkthrough pre-loaded
+/bn|/en/lab/chemistry?experiment=<slug>             the interactive practical simulation
+/bn|/en/lab/chemistry?experiment=<slug>&mode=bench  the bench with that walkthrough pre-loaded
 ```
 
 ---
@@ -29,7 +30,7 @@ data/*.json  ──►  lib/labData.ts  ──►  engine/*.ts (pure)  ──►
 | Content | `data/chemicals.json`, `data/apparatus.json`, `data/reactions.json`, `data/experiments.json`, `data/elements.json` | Every chemical, every piece of glassware, every reaction rule, every guided experiment, all 118 elements. Adding content never requires touching TypeScript. |
 | Access | `lib/labData.ts` | Loads the JSON once, indexes it by id, and exposes helpers (`chemicalName`, `apparatusName`, `capacityOf`, `partnerIdsFor`, `getExperiment`, `datasetStats`). |
 | Engine | `engine/reactionEngine.ts`, `engine/phCalc.ts`, `engine/heatModel.ts`, `engine/colorMixer.ts`, `engine/vesselView.ts`, `engine/experimentChecks.ts`, `engine/types.ts` | Pure functions: pick a reaction, apply stoichiometry, compute pH, step the heat model, mix colours, project a `VesselView` for drawing, check guided-experiment steps. No React, no store, no clock of their own — they take data and return data. |
-| State | `store/labStore.ts` | Zustand store: bench contents, burner, effects, notebook, history (undo/redo), localStorage save/load, guided-experiment progress, the 5 Hz `tick()` that advances heat and settles gases. |
+| State | `store/labStore.ts`, `store/chemPracticalStore.ts` | Zustand stores. `labStore`: bench contents, burner, effects, notebook, history (undo/redo), localStorage save/load, guided-experiment progress, the 5 Hz `tick()` that advances heat and settles gases. `chemPracticalStore`: the practical simulations — controls, the ▶ stopwatch, recorded rows per practical (saved in localStorage). |
 | UI | `components/lab/**` | `ChemistryLab` (drag-and-drop shell), `Shelf`, `Workbench`, `VesselStation`, `Apparatus/*` (SVG glassware), `LiquidView`, `EffectsLayer`, `PhMeter`, `EquationBox`, `ObservationPanel`, `ExperimentGuidePanel`, `SafetyOverlay`, `LabToolbar`, `ElementReference`. |
 | Copy | `lib/i18n.ts`, `messages/{bn,en}.json` | All lab strings live in `lib/i18n.ts` as one bilingual dictionary (`labT(locale, key, vars)`); only the header button label is in `messages/*.json` (`nav.chemistryLab`). |
 | Tests | `engine/__tests__/*.test.ts`, `store/__tests__/*.test.ts` | Vitest unit tests: reaction selection and chaining, mole/volume conversion, pH and indicators, the heat and boiling model, guided-step checking, the store's bench operations and a scripted walkthrough of every new guided experiment. |
@@ -275,10 +276,14 @@ carry such records — follow their tone.
 
 ## 6. Add a guided experiment
 
-The lab ships 31 guided experiments (see the catalog at `/bn|/en/lab/experiments`) — the last twenty came from
-`scripts/add-chemistry-lab-practicals.py`, a small generator that appends an experiment only when its `slug` is
-new and recomputes `count`. To add another, append to `data/experiments.json` → `experiments[]` and update
-`count` (or extend the script and run it).
+The lab ships 41 guided experiments (see the catalog at `/bn|/en/lab/experiments`). Twenty came from
+`scripts/add-chemistry-lab-practicals.py` and the last ten (rates, water of crystallisation, molar volume,
+Faraday's law, the Daniell cell, catalysis, a solubility curve, rock-salt purification and Le Chatelier's
+principle) from `scripts/add-chemistry-practical-simulations.py`, which also adds the chemicals and reaction
+rules they need. Both generators append only when a `slug`/`id` is new and recompute the `count` fields. To add
+another, append to `data/experiments.json` → `experiments[]` and update `count` (or extend a script and run it).
+Every guided experiment must also have a practical simulation model — see §13 — and a scripted walkthrough in
+`store/__tests__/labPracticals.test.ts`.
 
 ```json
 {
@@ -492,3 +497,52 @@ gains the lab entries automatically through `scripts/build-search-index.mjs`.
 | A flame test or decomposition never fires | The chemical is still dissolved: a wet vessel is clamped at its boiling point. Boil the liquid off (or start from the dry solid) and the temperature climbs past `minTempC`. |
 | A guided step will not tick | Compare the check against the bench: `vessel` is a zero-based station index, `reactionFired` needs the exact reaction id. `checkHint()` under the step says what the lab wants. |
 | The bench resets when you navigate away | In-memory by design. Use **Save lab** (or ⌘/Ctrl+S) to keep it in `localStorage`, then **Load lab**. |
+
+---
+
+## 13. Interactive practical simulations
+
+Every guided practical also opens as a **practical simulation** — a live, hand-operated version of the real
+apparatus. `/lab/chemistry?experiment=<slug>` shows it by default (the segmented switch above it flips to
+**Virtual bench (guided steps)**; `&mode=bench` opens the bench directly). The catalog cards and the detail pages
+have **Simulation** buttons, and the simulator's own picker steps through all practicals.
+
+| Group | Practicals with a simulation |
+| --- | --- |
+| Acids, bases and salts | litmus & indicators (classify 6 samples), neutralisation pH curve, burette titration (concordant titres → [HCl]), salt hydrolysis, strong vs weak acid (pKa of ethanoic acid), enthalpy of neutralisation (thermometric titration) |
+| Qualitative analysis | flame tests (air hole, cleaning the wire, cobalt glass), halide test with AgNO₃ + NH₃, sulphate test with BaCl₂ + HCl, cation tests with NaOH, carbonate vs hydrogencarbonate, gas identification, Le Chatelier with iron(III) thiocyanate |
+| Gases | hydrogen over water, CO₂ by mass loss, chlorine (Cl₂ : KMnO₄ mole ratio), aluminium + alkali (mol H₂ per mol Al), molar volume of hydrogen, catalytic decomposition of H₂O₂, alkali metals in water (Ar of sodium) |
+| Redox & electrochemistry | KMnO₄ / K₂Cr₂O₇ titrations of Fe²⁺, iodometry, Cu/Zn + HNO₃, oxidation of alcohols, metal displacement, metals + acid (balloons), rusting, Daniell cell (Nernst-corrected EMF) |
+| Electrolysis | Hofmann voltameter (H₂ : O₂ = 2 : 1), brine (Faraday constant from H₂), copper(II) sulphate (Faraday constant from Δm) |
+| Heating & thermal | heating curve and boiling point, sublimation of NH₄Cl (% in a mixture), the limestone cycle, burning metals (empirical formula MO), water of crystallisation (x in CuSO₄·xH₂O), purifying rock salt, KNO₃ solubility curve |
+| Kinetics & stoichiometry | disappearing cross (order of reaction), disappearing cross vs temperature (activation energy), golden rain (Job's method → PbI₂) |
+
+**How it works**
+
+- `engine/chemPracticals/*.ts` — one pure `ChemPracticalModel` per practical: `controls` (conditions, a `time`
+  control with a ▶ play rate, `view` controls that don't restart the process, and an optional `inference` control
+  for the student's conclusion), `tasks` (the readings to take — a chip sets several controls at once),
+  `columns` (the observation table), `compute(params, noise, ctx)` → live readings + table row + scene `view` +
+  status + `ready`, a `result` (concentration, ΔH, ratio, F, Ea… or "correct conclusions out of N" for
+  identification practicals) and `solve()` for **Show me**. `runChemPractical()` adds `obsNo` and the matched
+  task; `summarizeChemResult()` gives the % error (or the score).
+- Identification practicals score each sample by its *latest* recorded row (`__key`, `__correct`), so a wrong
+  conclusion can be fixed by recording that sample again. Conclusions are only checked after recording.
+- `components/lab/practicals/` — `ChemPracticalSimulator.tsx` (UI), `ChemDataPlot.tsx` (graph of the table),
+  `primitives.tsx` / `glass.tsx` / `kit.tsx` (self-contained SVG glassware and apparatus; every paint server is
+  defined in `ChemDefs` with a `cx-` prefix) and `scenes/*.tsx` (640×360 scenes registered in `scenes/index.tsx`).
+- `store/chemPracticalStore.ts` — changing a *condition* restarts the stopwatch and clears the conclusion; the ▶
+  loop pauses exactly on the next suggested reading time; rows are saved per practical in localStorage
+  (`elementa-chem-practicals:v1`), which also drives the progress badges on the catalog.
+- Tests: `engine/__tests__/chemPracticalModels.test.ts` (every guided experiment has a model; **Show me** lands on
+  a recordable setting for every task, also after slider rounding; clean readings recover the accepted value
+  within 3 % and noisy ones within 8 %; wrong conclusions are scored wrong),
+  `components/lab/practicals/__tests__/chemScenes.test.tsx` (every scene across its control range and several
+  animation times, no `NaN`/negative sizes; `CHEM_SHEET=<dir>` dumps standalone SVGs for eyeballing),
+  `store/__tests__/chemPracticalStore.test.ts` and `engine/__tests__/labDataIntegrity.test.ts`.
+
+**Adding a practical simulation:** write a model in the matching `engine/chemPracticals/<group>.ts` and add it to
+that file's exported array; reuse a scene id (`tubes` takes a list of `TubeView`s — liquids, precipitates,
+bubbles, fumes, solids, balloons, oil layers…; `titration`, `gas`, `heating` and `electrolysis` take a `kind`/
+`variant`), or write a new scene and register it. Give every task a valid `solve()`, then run
+`npx vitest run engine/__tests__/chemPracticalModels.test.ts components/lab/practicals`.

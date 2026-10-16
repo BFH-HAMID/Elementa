@@ -801,8 +801,11 @@ export const useLabStore = create<LabStore>()((set, get) => {
 
         // Heat-triggered rules are re-checked whenever the temperature climbs a step, and the
         // reaction is applied to the vessel — a thermal decomposition has to change what is in
-        // the tube, not just write a line in the notebook.
-        if (canHeat && next.temperatureC - vessel.lastResolveTempC >= 8) {
+        // the tube, not just write a line in the notebook. Reaching the boiling point is a step
+        // of its own: the temperature then plateaus, so "boils at 100 °C" rules would otherwise
+        // be missed when the last check happened just below the boiling point.
+        const reachedBoiling = volume > 0 && next.temperatureC >= boilingPointC - 0.5 && vessel.lastResolveTempC < boilingPointC - 0.5;
+        if (canHeat && (next.temperatureC - vessel.lastResolveTempC >= 8 || reachedBoiling)) {
           const context = contextFor(next, state.burner);
           const result = resolveVessel(next, labDataset, context);
           if (result.outcomes.length > 0) {

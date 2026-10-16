@@ -1,5 +1,5 @@
 {
-  "count": 119,
+  "count": 126,
   "version": 1,
   "reactions": [
     {
@@ -6340,6 +6340,396 @@
       "equation_bn": "CuSO₄·5H₂O(কঠি) →[তাপ] CuSO₄(কঠি) + 5H₂O(গ্যা)↑",
       "observation_en": "Heating drives off water of crystallisation — blue fades to white.",
       "observation_bn": "তাপ দিলে কেলাস পানি বেরিয়ে যায় — নীল রঙ সাদা হয়ে আসে।"
+    },
+    {
+      "category": "redox",
+      "reactants": [
+        {
+          "id": "Na2S2O3",
+          "coefficient": 1
+        },
+        {
+          "id": "HCl",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "NaCl",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "S",
+          "coefficient": 1,
+          "state": "s"
+        },
+        {
+          "id": "SO2",
+          "coefficient": 1,
+          "state": "g"
+        },
+        {
+          "id": "H2O",
+          "coefficient": 1,
+          "state": "l"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f1ead0",
+        "gas": "SO2",
+        "gasRate": 0.2,
+        "precipitate": {
+          "id": "S",
+          "color": "#f1e39a",
+          "density": 0.4
+        },
+        "smoke": null,
+        "deltaT": 1,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 2,
+      "tags": [
+        "rate"
+      ],
+      "id": "na2s2o3-hcl",
+      "equation": "Na₂S₂O₃(aq) + 2HCl(aq) → 2NaCl(aq) + S(s)↓ + SO₂(g) + H₂O(l)",
+      "equation_bn": "Na₂S₂O₃(দ্রব) + 2HCl(দ্রব) → 2NaCl(দ্রব) + S(কঠি)↓ + SO₂(গ্যা) + H₂O(ত)",
+      "observation_en": "The clear solution slowly turns cloudy pale yellow as colloidal sulfur forms — the cross underneath disappears.",
+      "observation_bn": "সালফার তৈরি হওয়ায় স্বচ্ছ দ্রবণ ধীরে ঘোলাটে হালকা হলুদ হয় — নিচের ক্রস অদৃশ্য হয়ে যায়।",
+      "hazard_en": "Sulfur dioxide is a choking gas — work in a well-ventilated room.",
+      "hazard_bn": "সালফার ডাই-অক্সাইড শ্বাসরোধী গ্যাস — বায়ুচলাচলযুক্ত ঘরে কাজ করো।"
+    },
+    {
+      "category": "decomposition",
+      "reactants": [
+        {
+          "id": "H2O2",
+          "coefficient": 2
+        },
+        {
+          "id": "MnO2",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "H2O",
+          "coefficient": 2,
+          "state": "l"
+        },
+        {
+          "id": "O2",
+          "coefficient": 1,
+          "state": "g"
+        },
+        {
+          "id": "MnO2",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": null,
+        "gas": "O2",
+        "gasRate": 1,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 8,
+        "flame": null,
+        "glow": false,
+        "sound": "fizz",
+        "dissolve": false
+      },
+      "hazard": "caution",
+      "priority": 2,
+      "tags": [
+        "catalysis"
+      ],
+      "id": "h2o2-mno2",
+      "equation": "2H₂O₂(aq) →[MnO₂] 2H₂O(l) + O₂(g)↑",
+      "equation_bn": "2H₂O₂(দ্রব) →[MnO₂] 2H₂O(ত) + O₂(গ্যা)↑",
+      "observation_en": "Vigorous fizzing — oxygen pours off and the black manganese(IV) oxide is left unchanged: it is a catalyst.",
+      "observation_bn": "তীব্র বুদবুদ — অক্সিজেন বের হয় এবং কালো ম্যাঙ্গানিজ(IV) অক্সাইড অপরিবর্তিত থাকে: এটি প্রভাবক।"
+    },
+    {
+      "category": "decomposition",
+      "reactants": [
+        {
+          "id": "CuSO4-5H2O",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "CuSO4-anh",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": true,
+        "minTempC": 110,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#f1f1ec",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": {
+          "color": "#eef4f8",
+          "density": 0.5
+        },
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "water-of-crystallisation"
+      ],
+      "id": "cuso4-5h2o-heat",
+      "equation": "CuSO₄·5H₂O(s) →[Δ] CuSO₄(s) + 5H₂O(g)↑",
+      "equation_bn": "CuSO₄·5H₂O(কঠি) →[তাপ] CuSO₄(কঠি) + 5H₂O(গ্যা)↑",
+      "observation_en": "Steam is driven off and the blue crystals crumble to a white powder of anhydrous copper(II) sulphate.",
+      "observation_bn": "বাষ্প বেরিয়ে যায় এবং নীল কেলাস ভেঙে অনার্দ্র কপার(II) সালফেটের সাদা গুঁড়া হয়।"
+    },
+    {
+      "category": "combination",
+      "reactants": [
+        {
+          "id": "CuSO4-anh",
+          "coefficient": 1
+        },
+        {
+          "id": "H2O",
+          "coefficient": 5
+        }
+      ],
+      "products": [
+        {
+          "id": "CuSO4-5H2O",
+          "coefficient": 1,
+          "state": "s"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#2f6fd0",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 20,
+        "flame": null,
+        "glow": false,
+        "sound": "hiss",
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 2,
+      "tags": [
+        "water-of-crystallisation"
+      ],
+      "id": "cuso4-anh-h2o",
+      "equation": "CuSO₄(s) + 5H₂O(l) → CuSO₄·5H₂O(s)",
+      "equation_bn": "CuSO₄(কঠি) + 5H₂O(ত) → CuSO₄·5H₂O(কঠি)",
+      "observation_en": "The white powder turns blue again and gets hot — the reaction is reversible, and this is a test for water.",
+      "observation_bn": "সাদা গুঁড়া আবার নীল হয় ও গরম হয়ে ওঠে — বিক্রিয়াটি উভমুখী, আর এটিই পানির পরীক্ষা।"
+    },
+    {
+      "category": "complex",
+      "reactants": [
+        {
+          "id": "FeCl3",
+          "coefficient": 1
+        },
+        {
+          "id": "KSCN",
+          "coefficient": 1
+        }
+      ],
+      "products": [
+        {
+          "id": "FeSCN",
+          "coefficient": 1,
+          "state": "aq"
+        },
+        {
+          "id": "KCl",
+          "coefficient": 1,
+          "state": "aq"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#9b1414",
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "equilibrium"
+      ],
+      "id": "fecl3-kscn",
+      "equation": "FeCl₃(aq) + KSCN(aq) ⇌ [Fe(SCN)]Cl₂(aq) + KCl(aq)",
+      "equation_bn": "FeCl₃(দ্রব) + KSCN(দ্রব) ⇌ [Fe(SCN)]Cl₂(দ্রব) + KCl(দ্রব)",
+      "observation_en": "A deep blood-red colour appears at once — the [Fe(SCN)]²⁺ complex ion.",
+      "observation_bn": "সাথে সাথে গাঢ় রক্ত-লাল রং দেখা দেয় — [Fe(SCN)]²⁺ জটিল আয়ন।"
+    },
+    {
+      "category": "electrolysis",
+      "reactants": [
+        {
+          "id": "CuSO4",
+          "coefficient": 2
+        },
+        {
+          "id": "H2O",
+          "coefficient": 2
+        }
+      ],
+      "products": [
+        {
+          "id": "Cu",
+          "coefficient": 2,
+          "state": "s"
+        },
+        {
+          "id": "H2SO4",
+          "coefficient": 2,
+          "state": "aq"
+        },
+        {
+          "id": "O2",
+          "coefficient": 1,
+          "state": "g"
+        }
+      ],
+      "trigger": {
+        "heat": false,
+        "minTempC": null,
+        "spark": false,
+        "electrolysis": true,
+        "light": false
+      },
+      "inert": false,
+      "effects": {
+        "colorTo": "#9cc3ea",
+        "gas": "O2",
+        "gasRate": 0.5,
+        "precipitate": {
+          "id": "Cu",
+          "color": "#c8763c",
+          "density": 0.6
+        },
+        "smoke": null,
+        "deltaT": 2,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 3,
+      "tags": [
+        "electrolysis",
+        "faraday"
+      ],
+      "id": "cuso4-electrolysis",
+      "equation": "2CuSO₄(aq) + 2H₂O(l) →[electricity] 2Cu(s) + 2H₂SO₄(aq) + O₂(g)↑",
+      "equation_bn": "2CuSO₄(দ্রব) + 2H₂O(ত) →[বিদ্যুৎ] 2Cu(কঠি) + 2H₂SO₄(দ্রব) + O₂(গ্যা)↑",
+      "observation_en": "Pink-brown copper plates the cathode, oxygen bubbles at the anode and the blue colour slowly fades.",
+      "observation_bn": "ক্যাথোডে গোলাপি-বাদামি কপার জমে, অ্যানোডে অক্সিজেনের বুদবুদ ওঠে এবং নীল রং ধীরে ফিকে হয়।"
+    },
+    {
+      "category": "physical",
+      "reactants": [
+        {
+          "id": "KNO3",
+          "coefficient": 1
+        }
+      ],
+      "products": [],
+      "trigger": {
+        "heat": true,
+        "minTempC": 60,
+        "spark": false,
+        "electrolysis": false,
+        "light": false
+      },
+      "inert": true,
+      "effects": {
+        "colorTo": null,
+        "gas": null,
+        "gasRate": 0,
+        "precipitate": null,
+        "smoke": null,
+        "deltaT": 0,
+        "flame": null,
+        "glow": false,
+        "sound": null,
+        "dissolve": false
+      },
+      "hazard": "none",
+      "priority": 1,
+      "tags": [
+        "solubility"
+      ],
+      "id": "kno3-dissolve-heat",
+      "equation": "KNO₃(s) ⇌ K⁺(aq) + NO₃⁻(aq) — solubility rises steeply with temperature",
+      "equation_bn": "KNO₃(কঠি) ⇌ K⁺(দ্রব) + NO₃⁻(দ্রব) — তাপমাত্রার সাথে দ্রাব্যতা দ্রুত বাড়ে",
+      "observation_en": "All the potassium nitrate dissolves in the hot water; as it cools, needle-shaped crystals reappear.",
+      "observation_bn": "গরম পানিতে সব পটাশিয়াম নাইট্রেট দ্রবীভূত হয়; ঠান্ডা হলে সুচের মতো কেলাস আবার দেখা দেয়।"
     }
   ]
 }

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, Beaker, ChevronRight, Clock, FlaskConical, ListChecks, ShieldAlert, Sparkles } from 'lucide-react';
+import { ArrowLeft, Beaker, ChevronRight, ClipboardList, Clock, FlaskConical, ListChecks, ShieldAlert, Sparkles, Target } from 'lucide-react';
+import { getChemPracticalModel } from '@/engine/chemPracticals';
 import { checkHint } from '@/engine/experimentChecks';
 import { equationFor, observationFor } from '@/engine/reactionEngine';
 import { labT } from '@/lib/i18n';
@@ -42,6 +43,7 @@ export default function LabExperimentDetailPage({ params }: { params: { locale: 
   const title = locale === 'bn' ? experiment.title_bn : experiment.title_en;
   const aim = locale === 'bn' ? experiment.aim_bn : experiment.aim_en;
   const safety = (locale === 'bn' ? experiment.safety.bn : experiment.safety.en) ?? experiment.safety.en;
+  const simulation = getChemPracticalModel(experiment.slug);
 
   return (
     <section className="page-shell section-space">
@@ -72,10 +74,40 @@ export default function LabExperimentDetailPage({ params }: { params: { locale: 
             {aim}
           </p>
         </div>
-        <Link href={`/${locale}/lab/chemistry?experiment=${experiment.slug}`} className="btn-primary shrink-0">
-          <Beaker size={17} /> {labT(locale, 'action.openInLab')}
-        </Link>
+        <div className="flex shrink-0 flex-wrap gap-2">
+          {simulation && (
+            <Link href={`/${locale}/lab/chemistry?experiment=${experiment.slug}&mode=simulation`} className="btn-primary">
+              <ClipboardList size={17} /> {locale === 'bn' ? 'প্র্যাকটিক্যাল সিমুলেশন শুরু করো' : 'Start the practical simulation'}
+            </Link>
+          )}
+          <Link href={`/${locale}/lab/chemistry?experiment=${experiment.slug}&mode=bench`} className={simulation ? 'btn-secondary' : 'btn-primary'}>
+            <Beaker size={17} /> {locale === 'bn' ? 'ভার্চুয়াল বেঞ্চে করো' : 'Do it on the virtual bench'}
+          </Link>
+        </div>
       </div>
+
+      {simulation && (
+        <div className="card mb-5 grid gap-4 border-chemistry-200 bg-chemistry-50/60 p-5 dark:border-chemistry-800 dark:bg-chemistry-950/30 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
+          <div className="min-w-0">
+            <p className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-[0.14em] text-chemistry-700 dark:text-chemistry-200">
+              <ClipboardList size={14} /> {locale === 'bn' ? 'ইন্টার‍্যাক্টিভ প্র্যাকটিক্যাল সিমুলেশন' : 'Interactive practical simulation'}
+            </p>
+            <p className={cn('mt-2 text-sm leading-6', locale === 'bn' && 'font-bengali')}>{locale === 'bn' ? simulation.howTo_bn : simulation.howTo_en}</p>
+            <div className="mt-3 flex flex-wrap gap-2 text-[11px] font-bold">
+              <span className="pill bg-[var(--surface)]">
+                <Target size={11} /> {locale === 'bn' ? 'ফলাফল' : 'Result'}: {locale === 'bn' ? simulation.result.bn : simulation.result.en}
+              </span>
+              <span className="pill bg-[var(--surface)]">
+                <ListChecks size={11} /> {simulation.tasks?.length ?? simulation.minReadings} {locale === 'bn' ? 'টি পাঠ' : 'readings'}
+              </span>
+              {simulation.formula && <span className="pill bg-[var(--surface)] font-mono">{simulation.formula}</span>}
+            </div>
+          </div>
+          <Link href={`/${locale}/lab/chemistry?experiment=${experiment.slug}&mode=simulation`} className="btn-primary justify-self-start">
+            <ClipboardList size={17} /> {locale === 'bn' ? 'সিমুলেশন খোলো' : 'Open simulation'}
+          </Link>
+        </div>
+      )}
 
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(280px,360px)]">
         <div className="space-y-5">
@@ -182,7 +214,7 @@ export default function LabExperimentDetailPage({ params }: { params: { locale: 
                 </li>
               ))}
             </ul>
-            <Link href={`/${locale}/lab/chemistry?experiment=${experiment.slug}`} className="btn-secondary mt-4 w-full justify-center">
+            <Link href={`/${locale}/lab/chemistry?experiment=${experiment.slug}&mode=bench`} className="btn-secondary mt-4 w-full justify-center">
               {labT(locale, 'action.openInLab')}
             </Link>
           </div>

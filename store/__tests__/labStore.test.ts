@@ -252,6 +252,44 @@ describe('bench controls', () => {
     expect(vesselOf(vesselId)?.thermometer).toBe(true);
   });
 
+  it('places a lab instrument on the bench as a plain movable object', () => {
+    const id = state().addBenchInstrument('digital-multimeter');
+    expect(id).toBeTruthy();
+    const item = state().benchEquipment.find((entry) => entry.id === id);
+    expect(item?.instrumentId).toBe('digital-multimeter');
+    expect(item?.apparatusId).toBeUndefined();
+    expect(item?.linkedVesselId).toBeNull();
+    expect(item?.x).toBeGreaterThanOrEqual(0);
+    // An instrument is a bench object, never a vessel: no glassware appears.
+    expect(state().vessels).toHaveLength(0);
+  });
+
+  it('ignores an instrument that is not in the catalogue', () => {
+    expect(state().addBenchInstrument('not-a-real-instrument')).toBe('');
+    expect(state().benchEquipment).toHaveLength(0);
+  });
+
+  it('moves, duplicates, rotates and removes instruments with undo support', () => {
+    const id = state().addBenchInstrument('physical-beam-balance');
+    const duplicateId = state().duplicateBenchEquipment(id);
+    expect(state().benchEquipment).toHaveLength(2);
+    state().moveBenchEquipment(duplicateId, 640, 180);
+    state().rotateBenchEquipment(duplicateId);
+    expect(state().benchEquipment.find((item) => item.id === duplicateId)).toMatchObject({ x: 640, y: 180, rotation: 90 });
+
+    state().removeBenchEquipment(id);
+    expect(state().benchEquipment).toHaveLength(1);
+    state().undo();
+    expect(state().benchEquipment).toHaveLength(2);
+  });
+
+  it('keeps quick-added instruments in distinct worktop positions', () => {
+    const ids = Array.from({ length: 4 }, () => state().addBenchInstrument('digital-multimeter'));
+    expect(ids.every(Boolean)).toBe(true);
+    const positions = state().benchEquipment.map((item) => `${item.x},${item.y}`);
+    expect(new Set(positions).size).toBe(4);
+  });
+
   it('adds multiple movable element reference samples without treating them as reagents', () => {
     const hydrogen = {
       z: 1, symbol: 'H', name_en: 'Hydrogen', name_bn: 'হাইড্রোজেন', mass: 1.008,

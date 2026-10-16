@@ -45,10 +45,10 @@ export function BenchEquipmentItem({
   onRotate: (id: string) => void;
 }) {
   const burner = useLabStore((state) => state.burner);
-  const apparatus = apparatusById.get(item.apparatusId);
+  const apparatus = apparatusById.get(item.apparatusId ?? '');
   if (!apparatus) return null;
   const size = benchEquipmentSize(apparatus.shape);
-  const name = apparatusName(item.apparatusId, locale);
+  const name = apparatusName(item.apparatusId ?? '', locale);
 
   return (
     <div
@@ -126,6 +126,6 @@ function EquipmentDrawing({
   if (shape === 'delivery') return <DeliveryTube className="h-[54px] w-[118px]" />;
   if (shape === 'holder') return <TestTubeHolder className="h-[104px] w-[72px]" />;
   if (shape === 'cell') return <ElectrolysisCell className="h-[92px] w-[84px]" />;
-  const apparatus = apparatusById.get(item.apparatusId);
+  const apparatus = apparatusById.get(item.apparatusId ?? '');
   return apparatus ? <ApparatusGlyph apparatus={apparatus} size={shape === 'test-tube-rack' ? 82 : 70} className="text-slate-600" /> : null;
 }

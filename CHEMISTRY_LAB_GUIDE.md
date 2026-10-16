@@ -162,6 +162,26 @@ rotated when it is apparatus, duplicated, selected, removed with its × button o
 and restored with undo/redo. The worktop supports up to 12 glassware stations, 32 loose apparatus
 items and 118 element samples. Its layout, contents and equipment are saved in the browser.
 
+### The 65 lab instruments
+
+The shelf has a second tab, **ল্যাব যন্ত্র / Lab instruments**, holding the whole
+`data/equipment.json` catalogue — the same 65 instruments the physics lab uses (balances,
+thermometers, calorimeters, burners, meters, stopwatches, power supplies …). They are read
+through `lib/labInstruments.ts`, so the catalogue is never duplicated.
+
+| Layer | File | Responsibility |
+| --- | --- | --- |
+| Content | `data/equipment.json` | One record per instrument: name in both languages, category, footprint (`width`/`height`) and its editable properties. |
+| Access | `lib/labInstruments.ts` | `labInstruments`, `labInstrumentById`, `labInstrumentCategories`, `labInstrumentName()`, `labInstrumentSize()`. |
+| State | `store/labStore.ts` | `addBenchInstrument()` puts an instrument on the worktop; it is stored in the same `benchEquipment` list as the glassware tools, with `instrumentId` set instead of `apparatusId`. |
+| UI | `components/lab/Shelf.tsx` | The **ল্যাব যন্ত্র** tab: search, department filters, draggable thumbnails. |
+| UI | `components/lab/BenchInstrumentItem.tsx` | The instrument on the bench. |
+
+An instrument is a **plain bench object**. It has no readings, so it is drawn as the instrument
+itself — the shared `components/physics/Equipment/art` artwork — with a small caption and
+nothing else: no card, no badges, no text box. Instruments are never poured into, heated with or
+linked to a station, and they never change what is inside a beaker.
+
 ---
 
 ## 5. Add a reaction

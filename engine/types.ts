@@ -352,7 +352,10 @@ export type Element = {
 /** A movable, labelled apparatus item placed on the chemistry worktop. */
 export type BenchEquipment = {
   id: string;
-  apparatusId: string;
+  /** id in `data/apparatus.json` — the chemistry glassware and bench tools. */
+  apparatusId?: string;
+  /** id in `data/equipment.json` — one of the 65 lab instruments (balances, meters…). */
+  instrumentId?: string;
   x: number;
   y: number;
   rotation: number;

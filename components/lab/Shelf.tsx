@@ -2,13 +2,15 @@
 
 import { useDraggable } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
-import { FlaskConical, Search, X } from 'lucide-react';
+import { FlaskConical, Gauge, Search, X } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import type { Apparatus, Chemical, ChemicalHazard } from '@/engine/types';
 import { labT, useLabI18n, type LabKey } from '@/lib/i18n';
 import { apparatus, chemicalsInCategory, shelfCategories, shelfChemicals } from '@/lib/labData';
+import { labInstrumentCategories, labInstruments, type LabInstrument } from '@/lib/labInstruments';
 import { cn } from '@/lib/utils';
 import { useLabStore } from '@/store/labStore';
+import { EquipmentArt } from '@/components/physics/Equipment/art';
 import { ApparatusGlyph } from './Apparatus';
 import { ElementReference } from './ElementReference';
 import { dragId, type DragPayload } from './dragTypes';
@@ -23,17 +25,19 @@ const hazardTone: Record<ChemicalHazard, string> = {
   dangerous: 'bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-200'
 };
 
-type TabId = 'all' | 'apparatus' | 'elements' | string;
+type TabId = 'all' | 'apparatus' | 'elements' | 'instruments' | string;
 
 export function Shelf() {
   const { t, locale } = useLabI18n();
   const [tab, setTab] = useState<TabId>('all');
   const [query, setQuery] = useState('');
+  const [instrumentCategory, setInstrumentCategory] = useState('all');
   const pourMl = useLabStore((state) => state.pourMl);
   const setPourMl = useLabStore((state) => state.setPourMl);
   const addChemical = useLabStore((state) => state.addChemical);
   const addVessel = useLabStore((state) => state.addVessel);
   const addBenchEquipment = useLabStore((state) => state.addBenchEquipment);
+  const addBenchInstrument = useLabStore((state) => state.addBenchInstrument);
 
   // Tap is the mobile fallback for dragging: with no station selected, drop a test tube
   // on the bench first so a single tap always does something useful.
@@ -52,7 +56,7 @@ export function Shelf() {
 
   const chemicals = useMemo(() => {
     if (tab === 'all') return shelfChemicals.filter(matches);
-    if (tab === 'apparatus' || tab === 'elements') return [];
+    if (tab === 'apparatus' || tab === 'elements' || tab === 'instruments') return [];
     return chemicalsInCategory(tab as Chemical['category']).filter(matches);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tab, needle]);
@@ -70,14 +74,32 @@ export function Shelf() {
     [needle]
   );
 
+  // The 65 lab instruments: searchable, and filtered by their own departments.
+  // A search always looks through every department, whatever filter is active.
+  const instrumentMatches = useMemo(
+    () =>
+      labInstruments.filter(
+        (item) =>
+          (needle || instrumentCategory === 'all' || item.category === instrumentCategory) &&
+          (!needle ||
+            item.id.includes(needle) ||
+            item.name_en.toLowerCase().includes(needle) ||
+            item.name_bn.includes(query.trim()))
+      ),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [needle, instrumentCategory]
+  );
+
   const tabs: { id: TabId; label: string }[] = [
     { id: 'all', label: t('shelf.all') },
     ...shelfCategories.map((category) => ({ id: category.id, label: locale === 'bn' ? category.bn : category.en })),
     { id: 'apparatus', label: t('shelf.apparatus') },
+    { id: 'instruments', label: t('shelf.instruments') },
     { id: 'elements', label: t('shelf.elements') }
   ];
 
   const showApparatus = tab === 'apparatus' || (needle.length > 0 && apparatusMatches.length > 0);
+  const showInstruments = tab === 'instruments' || (needle.length > 0 && instrumentMatches.length > 0);
 
   return (
     <section className="card flex h-full flex-col overflow-hidden" aria-label={t('shelf.title')}>
@@ -88,7 +110,7 @@ export function Shelf() {
             <h2 className="mt-1 text-lg font-extrabold tracking-tight">{t('shelf.title')}</h2>
           </div>
           <span className="pill bg-chemistry-100 text-chemistry-800 dark:bg-chemistry-900 dark:text-chemistry-100">
-            {shelfChemicals.length}+{apparatus.length}
+            {shelfChemicals.length}+{apparatus.length}+{labInstruments.length}
           </span>
         </div>
 
@@ -161,7 +183,7 @@ export function Shelf() {
           <ElementReference />
         ) : (
           <>
-            {chemicals.length === 0 && !showApparatus && (
+            {chemicals.length === 0 && !showApparatus && !showInstruments && (
               <p className="p-6 text-center text-sm muted">{t('shelf.noResults', { query })}</p>
             )}
 
@@ -194,6 +216,62 @@ export function Shelf() {
                     />
                   ))}
                 </ul>
+              </div>
+            )}
+
+            {showInstruments && (
+              <div className="mt-5">
+                <h3 className="mb-2 flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[var(--muted)]">
+                  <Gauge size={14} /> {t('shelf.instruments')}
+                </h3>
+
+                {tab === 'instruments' && (
+                  <div className="mb-2 flex flex-wrap gap-1.5">
+                    <button
+                      type="button"
+                      onClick={() => setInstrumentCategory('all')}
+                      aria-pressed={instrumentCategory === 'all'}
+                      className={cn(
+                        'rounded-full px-2.5 py-1 text-[11px] font-bold transition',
+                        instrumentCategory === 'all'
+                          ? 'bg-chemistry-600 text-white shadow-sm'
+                          : 'bg-[var(--surface-soft)] text-[var(--muted)] hover:text-[var(--ink)]'
+                      )}
+                    >
+                      {t('shelf.all')}
+                    </button>
+                    {labInstrumentCategories.map((category) => (
+                      <button
+                        key={category.id}
+                        type="button"
+                        onClick={() => setInstrumentCategory(category.id)}
+                        aria-pressed={instrumentCategory === category.id}
+                        className={cn(
+                          'rounded-full px-2.5 py-1 text-[11px] font-bold transition',
+                          instrumentCategory === category.id
+                            ? 'bg-chemistry-600 text-white shadow-sm'
+                            : 'bg-[var(--surface-soft)] text-[var(--muted)] hover:text-[var(--ink)]'
+                        )}
+                      >
+                        {locale === 'bn' ? category.bn : category.en}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {instrumentMatches.length === 0 ? (
+                  <p className="p-6 text-center text-sm muted">{t('shelf.noResults', { query })}</p>
+                ) : (
+                  <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 2xl:grid-cols-3">
+                    {instrumentMatches.map((instrument) => (
+                      <InstrumentChip
+                        key={instrument.id}
+                        instrument={instrument}
+                        onQuickUse={() => addBenchInstrument(instrument.id)}
+                      />
+                    ))}
+                  </ul>
+                )}
               </div>
             )}
           </>
@@ -291,6 +369,59 @@ function ApparatusChip({ apparatus, onQuickUse }: { apparatus: Apparatus; onQuic
           <span className="block truncate text-xs font-bold">{locale === 'bn' ? apparatus.name_bn : apparatus.name_en}</span>
           <span className="block truncate font-mono text-[10px] font-bold text-[var(--muted)]">
             {apparatus.capacityMl > 0 ? `${apparatus.capacityMl} ${t('unit.mL')}` : apparatus.kind}
+          </span>
+        </span>
+      </button>
+    </li>
+  );
+}
+
+/**
+ * A lab instrument from the shared 65-piece catalogue.
+ *
+ * The thumbnail is the instrument's own artwork — the same drawing the physics
+ * lab shows — so a student recognises the real instrument before placing it.
+ */
+function InstrumentChip({ instrument, onQuickUse }: { instrument: LabInstrument; onQuickUse: () => void }) {
+  const { t, locale } = useLabI18n();
+  const payload: DragPayload = {
+    kind: 'instrument',
+    instrumentId: instrument.id,
+    category: instrument.category,
+    name: locale === 'bn' ? instrument.name_bn : instrument.name_en
+  };
+  const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({ id: dragId(payload), data: payload });
+  const category = labInstrumentCategories.find((item) => item.id === instrument.category);
+
+  return (
+    <li>
+      <button
+        ref={setNodeRef}
+        {...listeners}
+        {...attributes}
+        type="button"
+        onClick={onQuickUse}
+        title={t('shelf.instrumentHint')}
+        style={{ transform: CSS.Translate.toString(transform) }}
+        className={cn(
+          'flex w-full touch-manipulation items-center gap-2 rounded-xl border border-[var(--line)] bg-[var(--surface)] p-2 text-left transition select-none',
+          'hover:border-physics-300 hover:shadow-card active:scale-[.97]',
+          isDragging && 'opacity-35'
+        )}
+      >
+        <span className="grid h-12 w-16 shrink-0 place-items-center rounded-lg border border-black/5 bg-white/70 p-1 dark:bg-white/10">
+          <EquipmentArt
+            equipmentId={instrument.id}
+            p={instrument.defaultProperties ?? {}}
+            bn={locale === 'bn'}
+            live={false}
+            detailed={false}
+          />
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block truncate text-xs font-bold">{locale === 'bn' ? instrument.name_bn : instrument.name_en}</span>
+          <span className="block truncate text-[10px] font-bold text-[var(--muted)]">
+            {category ? (locale === 'bn' ? category.bn : category.en) : instrument.category}
           </span>
         </span>
       </button>

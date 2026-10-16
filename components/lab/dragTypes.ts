@@ -19,6 +19,12 @@ export type DragPayload =
       name: string;
     }
   | {
+      kind: 'instrument';
+      instrumentId: string;
+      category: string;
+      name: string;
+    }
+  | {
       kind: 'element';
       element: Element;
       name: string;
@@ -28,9 +34,10 @@ export type DropTargetData =
   | { type: 'vessel'; vesselId: string; name: string }
   | { type: 'bench' };
 
-export const dragId = (payload: { kind: string; chemicalId?: string; apparatusId?: string; elementSymbol?: string }) => {
+export const dragId = (payload: { kind: string; chemicalId?: string; apparatusId?: string; instrumentId?: string; elementSymbol?: string }) => {
   if (payload.kind === 'chemical') return `chemical:${payload.chemicalId}`;
   if (payload.kind === 'element') return `element:${payload.elementSymbol}`;
+  if (payload.kind === 'instrument') return `instrument:${payload.instrumentId}`;
   return `apparatus:${payload.apparatusId}`;
 };
 

@@ -34,6 +34,7 @@ import type {
   Vessel
 } from '@/engine/types';
 import { apparatusById, chemicalsById, labDataset } from '@/lib/labData';
+import { labInstrumentById } from '@/lib/labInstruments';
 import { labT } from '@/lib/i18n';
 
 /**
@@ -123,6 +124,7 @@ export type LabStore = {
   duplicateVessel: (vesselId: string) => string;
   moveVessel: (vesselId: string, x: number, y: number) => void;
   addBenchEquipment: (apparatusId: string, position?: BenchPoint, linkedVesselId?: string | null) => string;
+  addBenchInstrument: (instrumentId: string, position?: BenchPoint) => string;
   removeBenchEquipment: (equipmentId: string) => void;
   duplicateBenchEquipment: (equipmentId: string) => string;
   moveBenchEquipment: (equipmentId: string, x: number, y: number) => void;
@@ -185,8 +187,21 @@ function nextVesselPosition(vessels: Vessel[]): BenchPoint {
   }
 }
 
+/**
+ * Loose bench items start just to the right of the glassware column, where the
+ * eye already is — the old far-right corner put every new item off-screen on a
+ * phone.
+ */
 function defaultEquipmentPosition(index: number): BenchPoint {
-  return { x: 800 + (index % 4) * 180, y: 62 + Math.floor(index / 4) * 190 };
+  return { x: 300 + (index % 2) * 260, y: 56 + Math.floor(index / 2) * 200 };
+}
+
+function nextInstrumentPosition(items: BenchEquipment[]): BenchPoint {
+  const occupied = new Set(items.map((item) => `${item.x},${item.y}`));
+  for (let index = 0; ; index += 1) {
+    const point = defaultEquipmentPosition(index);
+    if (!occupied.has(`${point.x},${point.y}`)) return point;
+  }
 }
 
 function nextEquipmentPosition(items: BenchEquipment[]): BenchPoint {
@@ -520,15 +535,35 @@ export const useLabStore = create<LabStore>()((set, get) => {
       return item.id;
     },
 
+    addBenchInstrument: (instrumentId, position) => {
+      const state = get();
+      if (!labInstrumentById.has(instrumentId)) return '';
+      if (state.benchEquipment.length >= MAX_BENCH_EQUIPMENT) {
+        set({ flash: { message_en: `The workbench can hold up to ${MAX_BENCH_EQUIPMENT} loose apparatus items.`, message_bn: `ওয়ার্কবেঞ্চে সর্বোচ্চ ${MAX_BENCH_EQUIPMENT}টি আলাদা যন্ত্র রাখা যায়।`, tone: 'warning' } });
+        return '';
+      }
+      const point = position ?? nextInstrumentPosition(state.benchEquipment);
+      const item: BenchEquipment = {
+        id: nextId('equipment'),
+        instrumentId,
+        x: Math.max(0, Math.min(3000, point.x)),
+        y: Math.max(0, Math.min(3000, point.y)),
+        rotation: 0,
+        linkedVesselId: null
+      };
+      commit(() => ({ benchEquipment: [...get().benchEquipment, item] }));
+      return item.id;
+    },
+
     removeBenchEquipment: (equipmentId) =>
       commit((state) => {
         const item = state.benchEquipment.find((entry) => entry.id === equipmentId);
         if (!item) return {};
         const remaining = state.benchEquipment.filter((entry) => entry.id !== equipmentId);
-        const apparatus = apparatusById.get(item.apparatusId);
+        const apparatus = apparatusById.get(item.apparatusId ?? '');
         if (!item.linkedVesselId || !apparatus) return { benchEquipment: remaining };
         const linkedItems = remaining.filter((entry) => entry.linkedVesselId === item.linkedVesselId);
-        const stillHasShape = (shape: string) => linkedItems.some((entry) => apparatusById.get(entry.apparatusId)?.shape === shape);
+        const stillHasShape = (shape: string) => linkedItems.some((entry) => apparatusById.get(entry.apparatusId ?? '')?.shape === shape);
         const vessels = state.vessels.map((vessel) => {
           if (vessel.id !== item.linkedVesselId) return vessel;
           if (apparatus.shape === 'thermometer' && !stillHasShape('thermometer')) return { ...vessel, thermometer: false };

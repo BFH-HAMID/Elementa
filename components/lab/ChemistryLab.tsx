@@ -18,6 +18,8 @@ import type { Locale } from '@/engine/types';
 import { allChemPracticalModels, hasChemPracticalModel } from '@/engine/chemPracticals';
 import { labT, useLabI18n } from '@/lib/i18n';
 import { apparatusById, chemicalsById, getExperiment } from '@/lib/labData';
+import { labInstrumentById, labInstrumentSize } from '@/lib/labInstruments';
+import { EquipmentArt } from '@/components/physics/Equipment/art';
 import { cn } from '@/lib/utils';
 import { useLabStore, type BenchPoint } from '@/store/labStore';
 import { benchEquipmentSize } from './BenchEquipmentItem';
@@ -210,17 +212,28 @@ function benchDropPoint(event: DragEndEvent, payload: DragPayload): BenchPoint |
   const zoom = Number(surface.dataset.zoom) || 1;
   const cx = (activeRect.left + activeRect.width / 2 - rect.left) / zoom;
   const cy = (activeRect.top + activeRect.height / 2 - rect.top) / zoom;
-  const size = payload.kind === 'apparatus' && payload.apparatusKind !== 'vessel'
-    ? benchEquipmentSize(payload.shape)
-    : payload.kind === 'element'
-      ? { width: 112, height: 128 }
-      : { width: 230, height: 490 };
+  const size = payload.kind === 'instrument'
+    ? labInstrumentSize(payload.instrumentId)
+    : payload.kind === 'apparatus' && payload.apparatusKind !== 'vessel'
+      ? benchEquipmentSize(payload.shape)
+      : payload.kind === 'element'
+        ? { width: 112, height: 128 }
+        : { width: 230, height: 490 };
   return { x: Math.max(0, cx - size.width / 2), y: Math.max(0, cy - size.height / 2) };
 }
 
 /** What a dropped chemical, element or piece of apparatus actually does to the bench. */
 function drop(payload: DragPayload, target: DropTargetData, position?: BenchPoint) {
   const store = useLabStore.getState();
+
+  // Lab instruments are plain bench objects: they are never poured into or heated
+  // with a vessel, they just stand on the worktop next to the glassware.
+  if (payload.kind === 'instrument') {
+    const vessel = target.type === 'vessel' ? store.vessels.find((item) => item.id === target.vesselId) : null;
+    const point = position ?? (vessel ? { x: (vessel.x ?? 24) + 246, y: (vessel.y ?? 178) + 42 } : undefined);
+    store.addBenchInstrument(payload.instrumentId, point);
+    return;
+  }
 
   if (payload.kind === 'chemical') {
     let vesselId: string;
@@ -332,6 +345,24 @@ function DragChip({ payload, locale }: { payload: DragPayload; locale: Locale })
           <span className="block max-w-[150px] truncate text-[11px] font-black text-slate-800">{payload.name}</span>
           <span className="block font-mono text-[9px] font-bold text-slate-500">Z {payload.element.z} · {payload.element.mass} u</span>
         </span>
+      </div>
+    );
+  }
+
+  if (payload.kind === 'instrument') {
+    const instrument = labInstrumentById.get(payload.instrumentId);
+    return (
+      <div className="flex items-center gap-2 rounded-xl border border-physics-300 bg-[var(--surface)] px-3 py-2 text-physics-700 shadow-float dark:text-physics-200">
+        <span className="h-8 w-12 shrink-0">
+          <EquipmentArt
+            equipmentId={payload.instrumentId}
+            p={instrument?.defaultProperties ?? {}}
+            bn={locale === 'bn'}
+            live={false}
+            detailed={false}
+          />
+        </span>
+        <span className="max-w-[160px] truncate text-[11px] font-black">{payload.name}</span>
       </div>
     );
   }

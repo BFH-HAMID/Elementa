@@ -37,6 +37,7 @@ export function Workbench() {
   const canvasRef = useRef<HTMLDivElement>(null);
   const dragRef = useRef<{ id: string; startX: number; startY: number; originX: number; originY: number } | null>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
+  const [zoom, setZoom] = useState(1);
 
   const onPointerDown = useCallback(
     (vesselId: string, event: React.PointerEvent) => {
@@ -56,7 +57,7 @@ export function Workbench() {
       const onMove = (e: PointerEvent) => {
         const g = dragRef.current;
         if (!g || g.id !== vesselId) return;
-        moveVessel(g.id, Math.max(0, g.originX + (e.clientX - g.startX)), Math.max(0, g.originY + (e.clientY - g.startY)));
+        moveVessel(g.id, Math.max(0, g.originX + (e.clientX - g.startX) / zoom), Math.max(0, g.originY + (e.clientY - g.startY) / zoom));
       };
       const onUp = () => {
         dragRef.current = null;
@@ -70,7 +71,7 @@ export function Workbench() {
       window.addEventListener('pointercancel', onUp);
       event.stopPropagation();
     },
-    [vessels, moveVessel, selectVessel]
+    [vessels, moveVessel, selectVessel, zoom]
   );
 
   useEffect(() => {
@@ -116,6 +117,13 @@ export function Workbench() {
           <span className="font-mono text-xs font-black">{Math.round(burner.intensity * 100)}%</span>
         </label>
 
+        <div className="ml-auto flex items-center gap-1">
+          {[0.75, 1, 1.25].map((z) => (
+            <button key={z} type="button" onClick={() => setZoom(z)} className={cn('btn-ghost min-h-8 rounded-lg px-2 text-xs font-bold', zoom === z && 'bg-chemistry-100 text-chemistry-700 dark:bg-chemistry-900 dark:text-chemistry-100')}>
+              {Math.round(z * 100)}%
+            </button>
+          ))}
+        </div>
         {selected && (
           <div className="flex items-center gap-1.5">
             <button
@@ -172,6 +180,7 @@ export function Workbench() {
       ) : (
         <div
           ref={canvasRef}
+          style={{ transform: `scale(${zoom})`, transformOrigin: 'top left' }}
           className={cn(
             'relative flex-1 min-h-[520px] rounded-2xl border-2 border-dashed p-3 transition overflow-auto',
             isOver ? 'border-chemistry-400 bg-chemistry-50/60 dark:bg-chemistry-900/20' : 'border-transparent bg-[var(--surface-soft)]'

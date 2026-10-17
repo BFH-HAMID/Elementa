@@ -2,7 +2,7 @@
 
 /** Tabbed bottom panel: serial monitor, examples, bill of materials & netlist, circuit check, guide. */
 
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useCircuitStore } from '@/store/circuitStore';
 import { EXAMPLE_PROJECTS } from '../projects/examples';
 import { AdvancedProjectsPanel } from '../advanced/AdvancedProjectsPanel';
@@ -10,9 +10,10 @@ import { billOfMaterials, checkCircuit, netlist } from '../lib/analysis';
 import { useCircuitI18n, type CircuitKey } from '../lib/i18n';
 import { cn } from '@/lib/utils';
 
-const TABS: { id: 'serial' | 'examples' | 'advanced' | 'analysis' | 'check' | 'guide'; key: CircuitKey }[] = [
+const TABS: { id: 'serial' | 'examples' | 'practical' | 'advanced' | 'analysis' | 'check' | 'guide'; key: CircuitKey }[] = [
   { id: 'serial', key: 'serial' },
   { id: 'examples', key: 'examples' },
+  { id: 'practical', key: 'practical' },
   { id: 'advanced', key: 'advanced' },
   { id: 'analysis', key: 'analysis' },
   { id: 'check', key: 'check' },
@@ -45,6 +46,7 @@ export function BottomPanel() {
       <div role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`} className="min-h-0 flex-1 overflow-auto p-3 text-sm">
         {tab === 'serial' ? <SerialTab /> : null}
         {tab === 'examples' ? <ExamplesTab locale={locale} /> : null}
+        {tab === 'practical' ? <PracticalTab locale={locale} /> : null}
         {tab === 'advanced' ? <AdvancedProjectsPanel /> : null}
         {tab === 'analysis' ? <AnalysisTab /> : null}
         {tab === 'check' ? <CheckTab /> : null}
@@ -84,6 +86,7 @@ function SerialTab() {
 function ExamplesTab({ locale }: { locale: 'en' | 'bn' }) {
   const { t } = useCircuitI18n();
   const loadExample = useCircuitStore((s) => s.loadExample);
+  const setBottomTab = useCircuitStore((s) => s.setBottomTab);
   const active = useCircuitStore((s) => s.activeExampleId);
   return (
     <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
@@ -103,11 +106,152 @@ function ExamplesTab({ locale }: { locale: 'en' | 'bn' }) {
             </ol>
             <p className="mt-2 text-[color:var(--muted)]">{locale === 'bn' ? ex.explanation.bn : ex.explanation.en}</p>
           </details>
-          <button type="button" className="btn btn-primary mt-3 w-full text-xs" onClick={() => loadExample(ex.id)}>
+          <button type="button" className="btn btn-primary mt-3 w-full text-xs" onClick={() => { loadExample(ex.id); if (ex.practical) setBottomTab('practical'); }}>
             {locale === 'bn' ? 'এই উদাহরণ খুলুন' : 'Open example'}
           </button>
         </article>
       ))}
+    </div>
+  );
+}
+
+type CircuitReadingRow = { x: number; y: number; estimate: number };
+
+function PracticalTab({ locale }: { locale: 'en' | 'bn' }) {
+  const activeId = useCircuitStore((s) => s.activeExampleId);
+  const components = useCircuitStore((s) => s.components);
+  const frame = useCircuitStore((s) => s.frame);
+  const running = useCircuitStore((s) => s.running);
+  const setRunning = useCircuitStore((s) => s.setRunning);
+  const setProp = useCircuitStore((s) => s.setProp);
+  const project = useMemo(() => EXAMPLE_PROJECTS.find((entry) => entry.id === activeId), [activeId]);
+  const practical = project?.practical;
+  const [rows, setRows] = useState<CircuitReadingRow[]>([]);
+
+  useEffect(() => setRows([]), [activeId]);
+
+  const x = practical
+    ? Number(components.find((component) => component.id === practical.control.componentId)?.props[practical.control.prop] ?? practical.control.values[0])
+    : 0;
+  let live: number | null = null;
+  if (practical && frame) {
+    if (practical.reading.kind === 'sourceCurrent') {
+      const value = frame.sourceCurrents[practical.reading.componentId];
+      if (typeof value === 'number' && Number.isFinite(value)) live = Math.abs(value) * practical.reading.scale;
+    } else {
+      const value = frame.components[practical.reading.componentId]?.pinV[practical.reading.pinId ?? ''];
+      if (typeof value === 'number' && Number.isFinite(value)) live = value * practical.reading.scale;
+    }
+  }
+
+  const estimates = rows.map((row) => row.estimate).filter(Number.isFinite);
+  const result = estimates.length ? estimates.reduce((sum, value) => sum + value, 0) / estimates.length : null;
+  const error = practical && result !== null && practical.result.expected !== 0
+    ? (Math.abs(result - practical.result.expected) / Math.abs(practical.result.expected)) * 100
+    : null;
+  const good = Boolean(practical && error !== null && rows.length >= practical.control.values.length && error <= practical.result.tolerancePercent);
+
+  if (!project || !practical) {
+    return (
+      <div className="rounded-2xl border border-dashed border-[color:var(--line)] p-6 text-center text-[color:var(--muted)]">
+        <p className="font-semibold text-[color:var(--ink)]">{locale === 'bn' ? 'একটি quantitative circuit practical খুলুন' : 'Open a quantitative circuit practical'}</p>
+        <p className="mt-2 text-xs">{locale === 'bn' ? 'Examples tab-এর নতুন ৩০টি practical-এ live control, table, graph ও result validation আছে।' : 'The 30 new projects in Examples include a live control, table, graph and result validation.'}</p>
+      </div>
+    );
+  }
+
+  const capture = () => {
+    if (live === null || !Number.isFinite(live) || live === 0) return;
+    const estimate = practical.result.mode === 'resistance' ? x / (live / 1000) : live / x;
+    if (!Number.isFinite(estimate)) return;
+    setRows((current) => [...current.filter((row) => Math.abs(row.x - x) > 1e-9), { x, y: live, estimate }].sort((a, b) => a.x - b.x));
+  };
+
+  const graphPoints = (() => {
+    if (rows.length === 0) return '';
+    const minX = Math.min(...rows.map((row) => row.x));
+    const maxX = Math.max(...rows.map((row) => row.x));
+    const minY = Math.min(...rows.map((row) => row.y));
+    const maxY = Math.max(...rows.map((row) => row.y));
+    return rows
+      .map((row) => {
+        const gx = 35 + ((row.x - minX) / Math.max(maxX - minX, 1)) * 310;
+        const gy = 112 - ((row.y - minY) / Math.max(maxY - minY, 1e-9)) * 88;
+        return `${gx},${gy}`;
+      })
+      .join(' ');
+  })();
+
+  return (
+    <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(340px,.9fr)]">
+      <section className="rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface-soft)] p-4">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[.14em] text-[color:var(--brand)]">{locale === 'bn' ? 'Full interactive practical' : 'Full interactive practical'}</p>
+            <h3 className="mt-1 text-base font-bold text-[color:var(--ink)]">{locale === 'bn' ? project.title.bn : project.title.en}</h3>
+            <p className="mt-1 text-xs text-[color:var(--muted)]">{practical.formula}</p>
+          </div>
+          <button type="button" className="btn btn-primary px-4 py-2 text-xs" onClick={() => setRunning(!running)}>{running ? (locale === 'bn' ? 'Stop' : 'Stop') : (locale === 'bn' ? 'Run' : 'Run')}</button>
+        </div>
+
+        <label className="mt-4 block text-xs font-semibold text-[color:var(--ink)]">
+          {locale === 'bn' ? practical.control.bn : practical.control.en}: <span className="tabular-nums text-[color:var(--brand)]">{x} {practical.control.unit}</span>
+          <input
+            className="mt-2 w-full accent-[color:var(--brand)]"
+            type="range"
+            min={practical.control.min}
+            max={practical.control.max}
+            step={practical.control.step}
+            value={x}
+            onChange={(event) => setProp(practical.control.componentId, practical.control.prop, Number(event.target.value))}
+          />
+        </label>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {practical.control.values.map((value) => (
+            <button key={value} type="button" onClick={() => setProp(practical.control.componentId, practical.control.prop, value)} className={cn('rounded-lg border px-2 py-1 text-xs tabular-nums', x === value ? 'border-[color:var(--brand)] bg-physics-50 text-physics-800 dark:bg-physics-900/30 dark:text-physics-100' : 'border-[color:var(--line)]')}>{value} {practical.control.unit}</button>
+          ))}
+        </div>
+
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <div className="rounded-xl border border-[color:var(--line)] bg-[color:var(--surface)] p-3">
+            <p className="text-[10px] uppercase tracking-wider text-[color:var(--muted)]">{locale === 'bn' ? practical.reading.bn : practical.reading.en}</p>
+            <p className="mt-1 font-mono text-xl font-bold text-emerald-700 dark:text-emerald-300">{live === null ? '—' : live.toPrecision(6)} {practical.reading.unit}</p>
+          </div>
+          <div className={cn('rounded-xl border p-3', good ? 'border-emerald-300 bg-emerald-50 dark:bg-emerald-900/20' : 'border-[color:var(--line)] bg-[color:var(--surface)]')}>
+            <p className="text-[10px] uppercase tracking-wider text-[color:var(--muted)]">{locale === 'bn' ? practical.result.bn : practical.result.en}</p>
+            <p className="mt-1 font-mono text-xl font-bold text-[color:var(--ink)]">{result === null ? '—' : result.toPrecision(6)} {practical.result.unit}</p>
+            <p className="mt-1 text-[10px] text-[color:var(--muted)]">{locale === 'bn' ? 'accepted' : 'Accepted'}: {practical.result.expected.toPrecision(6)} {practical.result.unit}{error === null ? '' : ` · ${error.toFixed(2)}% error`}</p>
+          </div>
+        </div>
+        <div className="mt-3 flex gap-2">
+          <button type="button" className="btn btn-primary flex-1 text-xs" disabled={!running || live === null || live === 0} onClick={capture}>{locale === 'bn' ? 'পাঠ রেকর্ড করুন' : 'Record reading'}</button>
+          <button type="button" className="btn btn-ghost text-xs" onClick={() => setRows([])}>{locale === 'bn' ? 'মুছুন' : 'Clear'}</button>
+        </div>
+        <p className={cn('mt-2 text-xs font-semibold', good ? 'text-emerald-700 dark:text-emerald-300' : 'text-[color:var(--muted)]')}>
+          {good ? (locale === 'bn' ? '✓ ফল accepted tolerance-এর মধ্যে।' : '✓ Result is within the accepted tolerance.') : (locale === 'bn' ? `${rows.length}/${practical.control.values.length} পাঠ · সব task শেষ করে ফল validate করুন।` : `${rows.length}/${practical.control.values.length} readings · complete the sweep to validate the result.`)}
+        </p>
+      </section>
+
+      <section className="min-w-0 space-y-3">
+        <div className="overflow-auto rounded-2xl border border-[color:var(--line)]">
+          <table className="w-full min-w-[430px] text-left text-xs">
+            <thead className="bg-[color:var(--surface-soft)] text-[color:var(--muted)]"><tr><th className="p-2">#</th><th className="p-2">{locale === 'bn' ? practical.control.bn : practical.control.en}</th><th className="p-2">{locale === 'bn' ? practical.reading.bn : practical.reading.en}</th><th className="p-2">{locale === 'bn' ? practical.result.bn : practical.result.en}</th></tr></thead>
+            <tbody>{rows.map((row, index) => <tr key={row.x} className="border-t border-[color:var(--line)]"><td className="p-2">{index + 1}</td><td className="p-2 font-mono">{row.x.toPrecision(5)} {practical.control.unit}</td><td className="p-2 font-mono">{row.y.toPrecision(6)} {practical.reading.unit}</td><td className="p-2 font-mono">{row.estimate.toPrecision(6)} {practical.result.unit}</td></tr>)}</tbody>
+          </table>
+          {rows.length === 0 ? <p className="p-4 text-center text-xs text-[color:var(--muted)]">{locale === 'bn' ? 'এখনও কোনো পাঠ নেই' : 'No readings recorded yet'}</p> : null}
+        </div>
+        <div className="rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface)] p-3">
+          <p className="mb-2 text-xs font-semibold text-[color:var(--ink)]">{locale === 'bn' ? 'Live data graph' : 'Live data graph'}</p>
+          <svg viewBox="0 0 370 130" className="h-36 w-full" role="img" aria-label="Circuit practical observation graph">
+            <line x1="35" y1="112" x2="352" y2="112" stroke="currentColor" opacity=".35" />
+            <line x1="35" y1="14" x2="35" y2="112" stroke="currentColor" opacity=".35" />
+            {graphPoints ? <polyline points={graphPoints} fill="none" stroke="#1677d2" strokeWidth="2.5" /> : null}
+            {graphPoints.split(' ').filter(Boolean).map((point) => { const [cx, cy] = point.split(','); return <circle key={point} cx={cx} cy={cy} r="4" fill="#16a34a" />; })}
+            <text x="190" y="127" textAnchor="middle" fontSize="9" fill="currentColor">{locale === 'bn' ? practical.control.bn : practical.control.en} ({practical.control.unit})</text>
+            <text x="8" y="66" textAnchor="middle" fontSize="9" fill="currentColor" transform="rotate(-90 8 66)">{locale === 'bn' ? practical.reading.bn : practical.reading.en}</text>
+          </svg>
+        </div>
+      </section>
     </div>
   );
 }

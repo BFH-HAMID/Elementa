@@ -234,7 +234,8 @@ export type ChemSceneId =
   | 'galvanic'
   | 'diffusion'
   | 'chromatography'
-  | 'distillation';
+  | 'distillation'
+  | 'analysisBench';
 
 export interface ChemPracticalModel {
   slug: string;

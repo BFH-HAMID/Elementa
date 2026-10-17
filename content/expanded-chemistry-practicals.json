@@ -1,0 +1,3995 @@
+{
+  "count": 30,
+  "experiments": [
+    {
+      "order": 68,
+      "slug": "standardise-naoh-oxalic-acid",
+      "title_en": "Standardise NaOH with oxalic acid",
+      "title_bn": "oxalic acid দিয়ে NaOH standardisation",
+      "aim_en": "To determine naoh concentration in a five-point quantitative analysis of standardise naoh with oxalic acid.",
+      "aim_bn": "oxalic acid দিয়ে NaOH standardisation practical-এ পাঁচটি quantitative reading নিয়ে NaOH ঘনমাত্রা নির্ণয় করা।",
+      "level": "class-11-12",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the burette, pipette and conical flask.",
+          "text_bn": "burette, pipette ও conical flask rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare NaOH, oxalic acid and phenolphthalein using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ NaOH, oxalic acid ও phenolphthalein প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record oxalic acid aliquot equivalent at all five suggested naoh titre settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত NaOH titre setting-এ oxalic acid aliquot equivalent record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate naoh concentration and compare with the accepted value.",
+          "text_bn": "graph এঁকে NaOH ঘনমাত্রা হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain naoh concentration?",
+          "question_bn": "NaOH ঘনমাত্রা নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "C = n/V",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "C = n/V",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies C = n/V.",
+          "explain_bn": "এই analysis-এ C = n/V সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.1,
+        "result_en": "NaOH concentration",
+        "result_bn": "NaOH ঘনমাত্রা",
+        "result_unit": "mol/L",
+        "x_en": "NaOH titre",
+        "x_bn": "NaOH titre",
+        "x_unit": "mL",
+        "x_min": 15,
+        "x_max": 35,
+        "x_step": 5,
+        "x_default": 20,
+        "tasks": [
+          15.0,
+          20.0,
+          25.0,
+          30.0,
+          35.0
+        ],
+        "y_en": "Oxalic acid aliquot equivalent",
+        "y_bn": "oxalic acid aliquot equivalent",
+        "y_unit": "mmol",
+        "scale": 1,
+        "offset": 0,
+        "formula": "C = n/V",
+        "apparatus_en": [
+          "burette",
+          "pipette",
+          "conical flask"
+        ],
+        "apparatus_bn": [
+          "burette",
+          "pipette",
+          "conical flask"
+        ],
+        "reagents_en": [
+          "NaOH",
+          "oxalic acid",
+          "phenolphthalein"
+        ],
+        "reagents_bn": [
+          "NaOH",
+          "oxalic acid",
+          "phenolphthalein"
+        ]
+      }
+    },
+    {
+      "order": 69,
+      "slug": "standardise-hcl-sodium-carbonate",
+      "title_en": "Standardise HCl with sodium carbonate",
+      "title_bn": "sodium carbonate দিয়ে HCl standardisation",
+      "aim_en": "To determine hcl concentration in a five-point quantitative analysis of standardise hcl with sodium carbonate.",
+      "aim_bn": "sodium carbonate দিয়ে HCl standardisation practical-এ পাঁচটি quantitative reading নিয়ে HCl ঘনমাত্রা নির্ণয় করা।",
+      "level": "class-11-12",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the burette, volumetric pipette and conical flask.",
+          "text_bn": "burette, volumetric pipette ও conical flask rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare HCl, sodium carbonate and methyl orange using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ HCl, sodium carbonate ও methyl orange প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record carbonate acid-equivalent at all five suggested hcl titre settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত HCl titre setting-এ carbonate acid-equivalent record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate hcl concentration and compare with the accepted value.",
+          "text_bn": "graph এঁকে HCl ঘনমাত্রা হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain hcl concentration?",
+          "question_bn": "HCl ঘনমাত্রা নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "C = n/V",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "C = n/V",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies C = n/V.",
+          "explain_bn": "এই analysis-এ C = n/V সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.12,
+        "result_en": "HCl concentration",
+        "result_bn": "HCl ঘনমাত্রা",
+        "result_unit": "mol/L",
+        "x_en": "HCl titre",
+        "x_bn": "HCl titre",
+        "x_unit": "mL",
+        "x_min": 10,
+        "x_max": 30,
+        "x_step": 5,
+        "x_default": 15,
+        "tasks": [
+          10.0,
+          15.0,
+          20.0,
+          25.0,
+          30.0
+        ],
+        "y_en": "Carbonate acid-equivalent",
+        "y_bn": "carbonate acid-equivalent",
+        "y_unit": "mmol",
+        "scale": 1,
+        "offset": 0,
+        "formula": "C = n/V",
+        "apparatus_en": [
+          "burette",
+          "volumetric pipette",
+          "conical flask"
+        ],
+        "apparatus_bn": [
+          "burette",
+          "volumetric pipette",
+          "conical flask"
+        ],
+        "reagents_en": [
+          "HCl",
+          "sodium carbonate",
+          "methyl orange"
+        ],
+        "reagents_bn": [
+          "HCl",
+          "sodium carbonate",
+          "methyl orange"
+        ]
+      }
+    },
+    {
+      "order": 70,
+      "slug": "vinegar-acidity-titration",
+      "title_en": "Acidity of vinegar by titration",
+      "title_bn": "titration দিয়ে vinegar-এর acidity",
+      "aim_en": "To determine acetic-acid factor in a five-point quantitative analysis of acidity of vinegar by titration.",
+      "aim_bn": "titration দিয়ে vinegar-এর acidity practical-এ পাঁচটি quantitative reading নিয়ে acetic acid factor নির্ণয় করা।",
+      "level": "class-9-10",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the burette, pipette and titration flask.",
+          "text_bn": "burette, pipette ও titration flask rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare dilute vinegar, NaOH and phenolphthalein using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ dilute vinegar, NaOH ও phenolphthalein প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record neutralised acid mass at all five suggested vinegar aliquot settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত vinegar aliquot setting-এ neutralised acid ভর record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate acetic-acid factor and compare with the accepted value.",
+          "text_bn": "graph এঁকে acetic acid factor হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain acetic-acid factor?",
+          "question_bn": "acetic acid factor নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "m = cV",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "m = cV",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies m = cV.",
+          "explain_bn": "এই analysis-এ m = cV সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.08,
+        "result_en": "Acetic-acid factor",
+        "result_bn": "acetic acid factor",
+        "result_unit": "g/mL",
+        "x_en": "Vinegar aliquot",
+        "x_bn": "vinegar aliquot",
+        "x_unit": "mL",
+        "x_min": 5,
+        "x_max": 25,
+        "x_step": 5,
+        "x_default": 10,
+        "tasks": [
+          5.0,
+          10.0,
+          15.0,
+          20.0,
+          25.0
+        ],
+        "y_en": "Neutralised acid mass",
+        "y_bn": "neutralised acid ভর",
+        "y_unit": "g",
+        "scale": 1,
+        "offset": 0,
+        "formula": "m = cV",
+        "apparatus_en": [
+          "burette",
+          "pipette",
+          "titration flask"
+        ],
+        "apparatus_bn": [
+          "burette",
+          "pipette",
+          "titration flask"
+        ],
+        "reagents_en": [
+          "dilute vinegar",
+          "NaOH",
+          "phenolphthalein"
+        ],
+        "reagents_bn": [
+          "dilute vinegar",
+          "NaOH",
+          "phenolphthalein"
+        ]
+      }
+    },
+    {
+      "order": 71,
+      "slug": "antacid-neutralising-capacity",
+      "title_en": "Neutralising capacity of an antacid",
+      "title_bn": "antacid-এর neutralising capacity",
+      "aim_en": "To determine neutralising capacity in a five-point quantitative analysis of neutralising capacity of an antacid.",
+      "aim_bn": "antacid-এর neutralising capacity practical-এ পাঁচটি quantitative reading নিয়ে neutralising capacity নির্ণয় করা।",
+      "level": "class-9-10",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the digital balance, conical flask and burette.",
+          "text_bn": "digital balance, conical flask ও burette rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare antacid suspension, HCl and NaOH using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ antacid suspension, HCl ও NaOH প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record acid consumed at all five suggested antacid mass settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত antacid ভর setting-এ ব্যয়িত acid record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate neutralising capacity and compare with the accepted value.",
+          "text_bn": "graph এঁকে neutralising capacity হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain neutralising capacity?",
+          "question_bn": "neutralising capacity নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "n = capacity × mass",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "n = capacity × mass",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies n = capacity × mass.",
+          "explain_bn": "এই analysis-এ n = capacity × mass সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 3.2,
+        "result_en": "Neutralising capacity",
+        "result_bn": "neutralising capacity",
+        "result_unit": "mmol/g",
+        "x_en": "Antacid mass",
+        "x_bn": "antacid ভর",
+        "x_unit": "g",
+        "x_min": 0.5,
+        "x_max": 2.5,
+        "x_step": 0.5,
+        "x_default": 1,
+        "tasks": [
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+        ],
+        "y_en": "Acid consumed",
+        "y_bn": "ব্যয়িত acid",
+        "y_unit": "mmol",
+        "scale": 1,
+        "offset": 0,
+        "formula": "n = capacity × mass",
+        "apparatus_en": [
+          "digital balance",
+          "conical flask",
+          "burette"
+        ],
+        "apparatus_bn": [
+          "digital balance",
+          "conical flask",
+          "burette"
+        ],
+        "reagents_en": [
+          "antacid suspension",
+          "HCl",
+          "NaOH"
+        ],
+        "reagents_bn": [
+          "antacid suspension",
+          "HCl",
+          "NaOH"
+        ]
+      }
+    },
+    {
+      "order": 72,
+      "slug": "vitamin-c-iodometric-assay",
+      "title_en": "Vitamin C by iodometric assay",
+      "title_bn": "iodometry-তে vitamin C নির্ণয়",
+      "aim_en": "To determine ascorbic-acid concentration in a five-point quantitative analysis of vitamin c by iodometric assay.",
+      "aim_bn": "iodometry-তে vitamin C নির্ণয় practical-এ পাঁচটি quantitative reading নিয়ে ascorbic acid ঘনমাত্রা নির্ণয় করা।",
+      "level": "class-11-12",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the microburette, pipette and iodine flask.",
+          "text_bn": "microburette, pipette ও iodine flask rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare fruit juice, iodine and starch indicator using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ fruit juice, iodine ও starch indicator প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record ascorbic acid found at all five suggested sample volume settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত নমুনার আয়তন setting-এ নির্ণীত ascorbic acid record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate ascorbic-acid concentration and compare with the accepted value.",
+          "text_bn": "graph এঁকে ascorbic acid ঘনমাত্রা হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain ascorbic-acid concentration?",
+          "question_bn": "ascorbic acid ঘনমাত্রা নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "m = cV",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "m = cV",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies m = cV.",
+          "explain_bn": "এই analysis-এ m = cV সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.88,
+        "result_en": "Ascorbic-acid concentration",
+        "result_bn": "ascorbic acid ঘনমাত্রা",
+        "result_unit": "mg/mL",
+        "x_en": "Sample volume",
+        "x_bn": "নমুনার আয়তন",
+        "x_unit": "mL",
+        "x_min": 2,
+        "x_max": 10,
+        "x_step": 2,
+        "x_default": 4,
+        "tasks": [
+          2.0,
+          4.0,
+          6.0,
+          8.0,
+          10.0
+        ],
+        "y_en": "Ascorbic acid found",
+        "y_bn": "নির্ণীত ascorbic acid",
+        "y_unit": "mg",
+        "scale": 1,
+        "offset": 0,
+        "formula": "m = cV",
+        "apparatus_en": [
+          "microburette",
+          "pipette",
+          "iodine flask"
+        ],
+        "apparatus_bn": [
+          "microburette",
+          "pipette",
+          "iodine flask"
+        ],
+        "reagents_en": [
+          "fruit juice",
+          "iodine",
+          "starch indicator"
+        ],
+        "reagents_bn": [
+          "fruit juice",
+          "iodine",
+          "starch indicator"
+        ]
+      }
+    },
+    {
+      "order": 73,
+      "slug": "bleach-active-chlorine-iodometry",
+      "title_en": "Active chlorine in bleach",
+      "title_bn": "bleach-এ active chlorine",
+      "aim_en": "To determine active chlorine concentration in a five-point quantitative analysis of active chlorine in bleach.",
+      "aim_bn": "bleach-এ active chlorine practical-এ পাঁচটি quantitative reading নিয়ে active chlorine ঘনমাত্রা নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the iodine flask, burette and volumetric flask.",
+          "text_bn": "iodine flask, burette ও volumetric flask rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare bleach, potassium iodide and thiosulfate using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ bleach, potassium iodide ও thiosulfate প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record active-chlorine index at all five suggested bleach aliquot settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত bleach aliquot setting-এ active-chlorine index record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate active chlorine concentration and compare with the accepted value.",
+          "text_bn": "graph এঁকে active chlorine ঘনমাত্রা হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain active chlorine concentration?",
+          "question_bn": "active chlorine ঘনমাত্রা নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "index = cV",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "index = cV",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies index = cV.",
+          "explain_bn": "এই analysis-এ index = cV সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 5.25,
+        "result_en": "Active chlorine concentration",
+        "result_bn": "active chlorine ঘনমাত্রা",
+        "result_unit": "%",
+        "x_en": "Bleach aliquot",
+        "x_bn": "bleach aliquot",
+        "x_unit": "mL",
+        "x_min": 1,
+        "x_max": 5,
+        "x_step": 1,
+        "x_default": 2,
+        "tasks": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ],
+        "y_en": "Active-chlorine index",
+        "y_bn": "active-chlorine index",
+        "y_unit": "%·mL",
+        "scale": 1,
+        "offset": 0,
+        "formula": "index = cV",
+        "apparatus_en": [
+          "iodine flask",
+          "burette",
+          "volumetric flask"
+        ],
+        "apparatus_bn": [
+          "iodine flask",
+          "burette",
+          "volumetric flask"
+        ],
+        "reagents_en": [
+          "bleach",
+          "potassium iodide",
+          "thiosulfate"
+        ],
+        "reagents_bn": [
+          "bleach",
+          "potassium iodide",
+          "thiosulfate"
+        ]
+      }
+    },
+    {
+      "order": 74,
+      "slug": "water-hardness-edta-titration",
+      "title_en": "Water hardness by EDTA titration",
+      "title_bn": "EDTA titration-এ পানির hardness",
+      "aim_en": "To determine hardness factor in a five-point quantitative analysis of water hardness by edta titration.",
+      "aim_bn": "EDTA titration-এ পানির hardness practical-এ পাঁচটি quantitative reading নিয়ে hardness factor নির্ণয় করা।",
+      "level": "class-11-12",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the burette, Erlenmeyer flask and buffer dropper.",
+          "text_bn": "burette, Erlenmeyer flask ও buffer dropper rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare hard water, EDTA and eriochrome black T using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ hard water, EDTA ও eriochrome black T প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record caco₃ equivalent at all five suggested water sample volume settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত পানির নমুনা setting-এ CaCO₃ equivalent record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate hardness factor and compare with the accepted value.",
+          "text_bn": "graph এঁকে hardness factor হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain hardness factor?",
+          "question_bn": "hardness factor নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "m = factor × V",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "m = factor × V",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies m = factor × V.",
+          "explain_bn": "এই analysis-এ m = factor × V সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 2.4,
+        "result_en": "Hardness factor",
+        "result_bn": "hardness factor",
+        "result_unit": "mg/mL",
+        "x_en": "Water sample volume",
+        "x_bn": "পানির নমুনা",
+        "x_unit": "mL",
+        "x_min": 10,
+        "x_max": 50,
+        "x_step": 10,
+        "x_default": 20,
+        "tasks": [
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0
+        ],
+        "y_en": "CaCO₃ equivalent",
+        "y_bn": "CaCO₃ equivalent",
+        "y_unit": "mg",
+        "scale": 1,
+        "offset": 0,
+        "formula": "m = factor × V",
+        "apparatus_en": [
+          "burette",
+          "Erlenmeyer flask",
+          "buffer dropper"
+        ],
+        "apparatus_bn": [
+          "burette",
+          "Erlenmeyer flask",
+          "buffer dropper"
+        ],
+        "reagents_en": [
+          "hard water",
+          "EDTA",
+          "eriochrome black T"
+        ],
+        "reagents_bn": [
+          "hard water",
+          "EDTA",
+          "eriochrome black T"
+        ]
+      }
+    },
+    {
+      "order": 75,
+      "slug": "chloride-mohr-titration",
+      "title_en": "Chloride by Mohr titration",
+      "title_bn": "Mohr titration-এ chloride",
+      "aim_en": "To determine chloride concentration in a five-point quantitative analysis of chloride by mohr titration.",
+      "aim_bn": "Mohr titration-এ chloride practical-এ পাঁচটি quantitative reading নিয়ে chloride ঘনমাত্রা নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the silver-nitrate burette, pipette and white tile.",
+          "text_bn": "silver-nitrate burette, pipette ও white tile rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare chloride sample, silver nitrate and chromate indicator using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ chloride sample, silver nitrate ও chromate indicator প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record chloride mass at all five suggested sample volume settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত নমুনার আয়তন setting-এ chloride ভর record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate chloride concentration and compare with the accepted value.",
+          "text_bn": "graph এঁকে chloride ঘনমাত্রা হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain chloride concentration?",
+          "question_bn": "chloride ঘনমাত্রা নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "mCl = cV",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "mCl = cV",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies mCl = cV.",
+          "explain_bn": "এই analysis-এ mCl = cV সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.355,
+        "result_en": "Chloride concentration",
+        "result_bn": "chloride ঘনমাত্রা",
+        "result_unit": "mg/mL",
+        "x_en": "Sample volume",
+        "x_bn": "নমুনার আয়তন",
+        "x_unit": "mL",
+        "x_min": 5,
+        "x_max": 25,
+        "x_step": 5,
+        "x_default": 10,
+        "tasks": [
+          5.0,
+          10.0,
+          15.0,
+          20.0,
+          25.0
+        ],
+        "y_en": "Chloride mass",
+        "y_bn": "chloride ভর",
+        "y_unit": "mg",
+        "scale": 1,
+        "offset": 0,
+        "formula": "mCl = cV",
+        "apparatus_en": [
+          "silver-nitrate burette",
+          "pipette",
+          "white tile"
+        ],
+        "apparatus_bn": [
+          "silver-nitrate burette",
+          "pipette",
+          "white tile"
+        ],
+        "reagents_en": [
+          "chloride sample",
+          "silver nitrate",
+          "chromate indicator"
+        ],
+        "reagents_bn": [
+          "chloride sample",
+          "silver nitrate",
+          "chromate indicator"
+        ]
+      }
+    },
+    {
+      "order": 76,
+      "slug": "iron-permanganate-redox-titration",
+      "title_en": "Iron(II) by permanganate titration",
+      "title_bn": "permanganate titration-এ iron(II)",
+      "aim_en": "To determine iron(ii) concentration in a five-point quantitative analysis of iron(ii) by permanganate titration.",
+      "aim_bn": "permanganate titration-এ iron(II) practical-এ পাঁচটি quantitative reading নিয়ে iron(II) ঘনমাত্রা নির্ণয় করা।",
+      "level": "class-11-12",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the permanganate burette, pipette and conical flask.",
+          "text_bn": "permanganate burette, pipette ও conical flask rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare iron(II) sample, KMnO₄ and sulfuric acid using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ iron(II) sample, KMnO₄ ও sulfuric acid প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record iron mass at all five suggested iron sample volume settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত iron নমুনার আয়তন setting-এ iron ভর record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate iron(ii) concentration and compare with the accepted value.",
+          "text_bn": "graph এঁকে iron(II) ঘনমাত্রা হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain iron(ii) concentration?",
+          "question_bn": "iron(II) ঘনমাত্রা নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "mFe = cV",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "mFe = cV",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies mFe = cV.",
+          "explain_bn": "এই analysis-এ mFe = cV সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.279,
+        "result_en": "Iron(II) concentration",
+        "result_bn": "iron(II) ঘনমাত্রা",
+        "result_unit": "mg/mL",
+        "x_en": "Iron sample volume",
+        "x_bn": "iron নমুনার আয়তন",
+        "x_unit": "mL",
+        "x_min": 5,
+        "x_max": 25,
+        "x_step": 5,
+        "x_default": 10,
+        "tasks": [
+          5.0,
+          10.0,
+          15.0,
+          20.0,
+          25.0
+        ],
+        "y_en": "Iron mass",
+        "y_bn": "iron ভর",
+        "y_unit": "mg",
+        "scale": 1,
+        "offset": 0,
+        "formula": "mFe = cV",
+        "apparatus_en": [
+          "permanganate burette",
+          "pipette",
+          "conical flask"
+        ],
+        "apparatus_bn": [
+          "permanganate burette",
+          "pipette",
+          "conical flask"
+        ],
+        "reagents_en": [
+          "iron(II) sample",
+          "KMnO₄",
+          "sulfuric acid"
+        ],
+        "reagents_bn": [
+          "iron(II) sample",
+          "KMnO₄",
+          "sulfuric acid"
+        ]
+      }
+    },
+    {
+      "order": 77,
+      "slug": "copper-iodometric-thiosulfate",
+      "title_en": "Copper by iodometric thiosulfate",
+      "title_bn": "iodometric thiosulfate-এ copper",
+      "aim_en": "To determine copper concentration in a five-point quantitative analysis of copper by iodometric thiosulfate.",
+      "aim_bn": "iodometric thiosulfate-এ copper practical-এ পাঁচটি quantitative reading নিয়ে copper ঘনমাত্রা নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the iodine flask, thiosulfate burette and pipette.",
+          "text_bn": "iodine flask, thiosulfate burette ও pipette rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare copper solution, potassium iodide and thiosulfate using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ copper solution, potassium iodide ও thiosulfate প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record copper mass at all five suggested copper sample volume settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত copper নমুনার আয়তন setting-এ copper ভর record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate copper concentration and compare with the accepted value.",
+          "text_bn": "graph এঁকে copper ঘনমাত্রা হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain copper concentration?",
+          "question_bn": "copper ঘনমাত্রা নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "mCu = cV",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "mCu = cV",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies mCu = cV.",
+          "explain_bn": "এই analysis-এ mCu = cV সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.636,
+        "result_en": "Copper concentration",
+        "result_bn": "copper ঘনমাত্রা",
+        "result_unit": "mg/mL",
+        "x_en": "Copper sample volume",
+        "x_bn": "copper নমুনার আয়তন",
+        "x_unit": "mL",
+        "x_min": 5,
+        "x_max": 25,
+        "x_step": 5,
+        "x_default": 10,
+        "tasks": [
+          5.0,
+          10.0,
+          15.0,
+          20.0,
+          25.0
+        ],
+        "y_en": "Copper mass",
+        "y_bn": "copper ভর",
+        "y_unit": "mg",
+        "scale": 1,
+        "offset": 0,
+        "formula": "mCu = cV",
+        "apparatus_en": [
+          "iodine flask",
+          "thiosulfate burette",
+          "pipette"
+        ],
+        "apparatus_bn": [
+          "iodine flask",
+          "thiosulfate burette",
+          "pipette"
+        ],
+        "reagents_en": [
+          "copper solution",
+          "potassium iodide",
+          "thiosulfate"
+        ],
+        "reagents_bn": [
+          "copper solution",
+          "potassium iodide",
+          "thiosulfate"
+        ]
+      }
+    },
+    {
+      "order": 78,
+      "slug": "buffer-capacity-acid-addition",
+      "title_en": "Buffer capacity against added acid",
+      "title_bn": "যোগ করা acid-এর বিপরীতে buffer capacity",
+      "aim_en": "To determine buffer response coefficient in a five-point quantitative analysis of buffer capacity against added acid.",
+      "aim_bn": "যোগ করা acid-এর বিপরীতে buffer capacity practical-এ পাঁচটি quantitative reading নিয়ে buffer response coefficient নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the pH meter, microburette and buffer beaker.",
+          "text_bn": "pH meter, microburette ও buffer beaker rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare acetate buffer, HCl and distilled water using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ acetate buffer, HCl ও distilled water প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record controlled ph change at all five suggested acid added settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত যোগ করা acid setting-এ নিয়ন্ত্রিত pH পরিবর্তন record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate buffer response coefficient and compare with the accepted value.",
+          "text_bn": "graph এঁকে buffer response coefficient হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain buffer response coefficient?",
+          "question_bn": "buffer response coefficient নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "ΔpH = β⁻¹n",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "ΔpH = β⁻¹n",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies ΔpH = β⁻¹n.",
+          "explain_bn": "এই analysis-এ ΔpH = β⁻¹n সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.85,
+        "result_en": "Buffer response coefficient",
+        "result_bn": "buffer response coefficient",
+        "result_unit": "pH/mmol",
+        "x_en": "Acid added",
+        "x_bn": "যোগ করা acid",
+        "x_unit": "mmol",
+        "x_min": 0.5,
+        "x_max": 2.5,
+        "x_step": 0.5,
+        "x_default": 1,
+        "tasks": [
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+        ],
+        "y_en": "Controlled pH change",
+        "y_bn": "নিয়ন্ত্রিত pH পরিবর্তন",
+        "y_unit": "pH",
+        "scale": 1,
+        "offset": 0,
+        "formula": "ΔpH = β⁻¹n",
+        "apparatus_en": [
+          "pH meter",
+          "microburette",
+          "buffer beaker"
+        ],
+        "apparatus_bn": [
+          "pH meter",
+          "microburette",
+          "buffer beaker"
+        ],
+        "reagents_en": [
+          "acetate buffer",
+          "HCl",
+          "distilled water"
+        ],
+        "reagents_bn": [
+          "acetate buffer",
+          "HCl",
+          "distilled water"
+        ]
+      }
+    },
+    {
+      "order": 79,
+      "slug": "weak-acid-pka-half-equivalence",
+      "title_en": "pKa at half-equivalence",
+      "title_bn": "half-equivalence-এ pKa",
+      "aim_en": "To determine acid pKa from the pH-axis intercept around half-equivalence using five quantitative readings.",
+      "aim_bn": "half-equivalence-এর আশেপাশে পাঁচটি quantitative reading নিয়ে pH-axis intercept থেকে acid pKa নির্ণয় করা।",
+      "level": "class-11-12",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the pH electrode, automatic burette and stirred cell.",
+          "text_bn": "pH electrode, automatic burette ও stirred cell rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare acetic acid, NaOH and buffer standards using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ acetic acid, NaOH ও buffer standards প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record measured ph at all five suggested volume from half-equivalence settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত half-equivalence থেকে আয়তন setting-এ পরিমাপিত pH record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate buffer-curve slope and compare with the accepted value.",
+          "text_bn": "graph এঁকে buffer curve slope হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation gives pKa near half-equivalence?",
+          "question_bn": "half-equivalence-এর কাছে কোন equation pKa দেয়?",
+          "options_en": [
+            "pH = pKa + slope·ΔV",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "pH = pKa + slope·ΔV",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "Extrapolating pH to zero displacement gives the pKa intercept.",
+          "explain_bn": "zero displacement-এ pH extrapolate করলে pKa intercept পাওয়া যায়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "intercept",
+        "expected": 4.76,
+        "result_en": "Acid pKa",
+        "result_bn": "acid pKa",
+        "result_unit": "pKa",
+        "x_en": "Volume from half-equivalence",
+        "x_bn": "half-equivalence থেকে আয়তন",
+        "x_unit": "mL",
+        "x_min": 1,
+        "x_max": 5,
+        "x_step": 1,
+        "x_default": 2,
+        "tasks": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ],
+        "y_en": "Measured pH",
+        "y_bn": "পরিমাপিত pH",
+        "y_unit": "pH",
+        "scale": 0.12,
+        "offset": 0,
+        "formula": "pH = pKa + slope·ΔV",
+        "apparatus_en": [
+          "pH electrode",
+          "automatic burette",
+          "stirred cell"
+        ],
+        "apparatus_bn": [
+          "pH electrode",
+          "automatic burette",
+          "stirred cell"
+        ],
+        "reagents_en": [
+          "acetic acid",
+          "NaOH",
+          "buffer standards"
+        ],
+        "reagents_bn": [
+          "acetic acid",
+          "NaOH",
+          "buffer standards"
+        ]
+      }
+    },
+    {
+      "order": 80,
+      "slug": "salt-solubility-temperature",
+      "title_en": "Salt solubility versus temperature",
+      "title_bn": "তাপমাত্রার সঙ্গে লবণের দ্রাব্যতা",
+      "aim_en": "To determine solubility temperature coefficient in a five-point quantitative analysis of salt solubility versus temperature.",
+      "aim_bn": "তাপমাত্রার সঙ্গে লবণের দ্রাব্যতা practical-এ পাঁচটি quantitative reading নিয়ে দ্রাব্যতার temperature coefficient নির্ণয় করা।",
+      "level": "class-9-10",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the heated water bath, solubility tube and thermometer.",
+          "text_bn": "heated water bath, solubility tube ও thermometer rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare potassium nitrate, water and ice using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ potassium nitrate, water ও ice প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record additional dissolved salt at all five suggested temperature rise settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত তাপমাত্রা বৃদ্ধি setting-এ অতিরিক্ত দ্রবীভূত লবণ record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate solubility temperature coefficient and compare with the accepted value.",
+          "text_bn": "graph এঁকে দ্রাব্যতার temperature coefficient হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain solubility temperature coefficient?",
+          "question_bn": "দ্রাব্যতার temperature coefficient নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "ΔS = kΔT",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "ΔS = kΔT",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies ΔS = kΔT.",
+          "explain_bn": "এই analysis-এ ΔS = kΔT সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.72,
+        "result_en": "Solubility temperature coefficient",
+        "result_bn": "দ্রাব্যতার temperature coefficient",
+        "result_unit": "g/°C",
+        "x_en": "Temperature rise",
+        "x_bn": "তাপমাত্রা বৃদ্ধি",
+        "x_unit": "°C",
+        "x_min": 10,
+        "x_max": 50,
+        "x_step": 10,
+        "x_default": 20,
+        "tasks": [
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0
+        ],
+        "y_en": "Additional dissolved salt",
+        "y_bn": "অতিরিক্ত দ্রবীভূত লবণ",
+        "y_unit": "g",
+        "scale": 1,
+        "offset": 0,
+        "formula": "ΔS = kΔT",
+        "apparatus_en": [
+          "heated water bath",
+          "solubility tube",
+          "thermometer"
+        ],
+        "apparatus_bn": [
+          "heated water bath",
+          "solubility tube",
+          "thermometer"
+        ],
+        "reagents_en": [
+          "potassium nitrate",
+          "water",
+          "ice"
+        ],
+        "reagents_bn": [
+          "potassium nitrate",
+          "water",
+          "ice"
+        ]
+      }
+    },
+    {
+      "order": 81,
+      "slug": "ksp-conductometric-dilution",
+      "title_en": "Ksp proxy by conductometric dilution",
+      "title_bn": "conductometric dilution-এ Ksp proxy",
+      "aim_en": "To determine ionic-product constant in a five-point quantitative analysis of ksp proxy by conductometric dilution.",
+      "aim_bn": "conductometric dilution-এ Ksp proxy practical-এ পাঁচটি quantitative reading নিয়ে ionic product ধ্রুবক নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the conductivity cell, volumetric flask and pipette.",
+          "text_bn": "conductivity cell, volumetric flask ও pipette rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare saturated calcium sulfate, water and conductivity standard using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ saturated calcium sulfate, water ও conductivity standard প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record conductivity at all five suggested dilution volume settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত dilution আয়তন setting-এ পরিবাহিতা record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate ionic-product constant and compare with the accepted value.",
+          "text_bn": "graph এঁকে ionic product ধ্রুবক হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain ionic-product constant?",
+          "question_bn": "ionic product ধ্রুবক নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "κ = K/V",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "κ = K/V",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies κ = K/V.",
+          "explain_bn": "এই analysis-এ κ = K/V সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "inverseX",
+        "expected": 1.8,
+        "result_en": "Ionic-product constant",
+        "result_bn": "ionic product ধ্রুবক",
+        "result_unit": "mS·mL/cm",
+        "x_en": "Dilution volume",
+        "x_bn": "dilution আয়তন",
+        "x_unit": "mL",
+        "x_min": 10,
+        "x_max": 50,
+        "x_step": 10,
+        "x_default": 20,
+        "tasks": [
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0
+        ],
+        "y_en": "Conductivity",
+        "y_bn": "পরিবাহিতা",
+        "y_unit": "mS/cm",
+        "scale": 1,
+        "offset": 0,
+        "formula": "κ = K/V",
+        "apparatus_en": [
+          "conductivity cell",
+          "volumetric flask",
+          "pipette"
+        ],
+        "apparatus_bn": [
+          "conductivity cell",
+          "volumetric flask",
+          "pipette"
+        ],
+        "reagents_en": [
+          "saturated calcium sulfate",
+          "water",
+          "conductivity standard"
+        ],
+        "reagents_bn": [
+          "saturated calcium sulfate",
+          "water",
+          "conductivity standard"
+        ]
+      }
+    },
+    {
+      "order": 82,
+      "slug": "iodine-clock-concentration-rate",
+      "title_en": "Iodine-clock rate versus concentration",
+      "title_bn": "ঘনমাত্রার সঙ্গে iodine-clock rate",
+      "aim_en": "To determine rate constant in a five-point quantitative analysis of iodine-clock rate versus concentration.",
+      "aim_bn": "ঘনমাত্রার সঙ্গে iodine-clock rate practical-এ পাঁচটি quantitative reading নিয়ে বিক্রিয়া হার ধ্রুবক নির্ণয় করা।",
+      "level": "class-11-12",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the reaction flask, stopwatch and volumetric pipette.",
+          "text_bn": "reaction flask, stopwatch ও volumetric pipette rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare iodide, persulfate and starch-thiosulfate using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ iodide, persulfate ও starch-thiosulfate প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record initial rate at all five suggested reactant concentration index settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত বিকারক concentration index setting-এ প্রাথমিক হার record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate rate constant and compare with the accepted value.",
+          "text_bn": "graph এঁকে বিক্রিয়া হার ধ্রুবক হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain rate constant?",
+          "question_bn": "বিক্রিয়া হার ধ্রুবক নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "rate = k[A]",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "rate = k[A]",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies rate = k[A].",
+          "explain_bn": "এই analysis-এ rate = k[A] সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.045,
+        "result_en": "Rate constant",
+        "result_bn": "বিক্রিয়া হার ধ্রুবক",
+        "result_unit": "s⁻¹",
+        "x_en": "Reactant concentration index",
+        "x_bn": "বিকারক concentration index",
+        "x_unit": "",
+        "x_min": 1,
+        "x_max": 5,
+        "x_step": 1,
+        "x_default": 2,
+        "tasks": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ],
+        "y_en": "Initial rate",
+        "y_bn": "প্রাথমিক হার",
+        "y_unit": "s⁻¹",
+        "scale": 1,
+        "offset": 0,
+        "formula": "rate = k[A]",
+        "apparatus_en": [
+          "reaction flask",
+          "stopwatch",
+          "volumetric pipette"
+        ],
+        "apparatus_bn": [
+          "reaction flask",
+          "stopwatch",
+          "volumetric pipette"
+        ],
+        "reagents_en": [
+          "iodide",
+          "persulfate",
+          "starch-thiosulfate"
+        ],
+        "reagents_bn": [
+          "iodide",
+          "persulfate",
+          "starch-thiosulfate"
+        ]
+      }
+    },
+    {
+      "order": 83,
+      "slug": "iodide-oxidation-temperature-rate",
+      "title_en": "Iodide oxidation rate versus temperature",
+      "title_bn": "তাপমাত্রার সঙ্গে iodide oxidation rate",
+      "aim_en": "To determine observed temperature coefficient in a five-point quantitative analysis of iodide oxidation rate versus temperature.",
+      "aim_bn": "তাপমাত্রার সঙ্গে iodide oxidation rate practical-এ পাঁচটি quantitative reading নিয়ে পর্যবেক্ষিত temperature coefficient নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the thermostatic bath, reaction tubes and stopwatch.",
+          "text_bn": "thermostatic bath, reaction tubes ও stopwatch rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare potassium iodide, hydrogen peroxide and starch using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ potassium iodide, hydrogen peroxide ও starch প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record relative induction time at all five suggested temperature rise settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত তাপমাত্রা বৃদ্ধি setting-এ আপেক্ষিক induction time record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate observed temperature coefficient and compare with the accepted value.",
+          "text_bn": "graph এঁকে পর্যবেক্ষিত temperature coefficient হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain observed temperature coefficient?",
+          "question_bn": "পর্যবেক্ষিত temperature coefficient নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "t = t₀e^(−kΔT)",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "t = t₀e^(−kΔT)",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies t = t₀e^(−kΔT).",
+          "explain_bn": "এই analysis-এ t = t₀e^(−kΔT) সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "exponential",
+        "expected": 0.032,
+        "result_en": "Observed temperature coefficient",
+        "result_bn": "পর্যবেক্ষিত temperature coefficient",
+        "result_unit": "°C⁻¹",
+        "x_en": "Temperature rise",
+        "x_bn": "তাপমাত্রা বৃদ্ধি",
+        "x_unit": "°C",
+        "x_min": 5,
+        "x_max": 25,
+        "x_step": 5,
+        "x_default": 10,
+        "tasks": [
+          5.0,
+          10.0,
+          15.0,
+          20.0,
+          25.0
+        ],
+        "y_en": "Relative induction time",
+        "y_bn": "আপেক্ষিক induction time",
+        "y_unit": "s",
+        "scale": 1,
+        "offset": 60,
+        "formula": "t = t₀e^(−kΔT)",
+        "apparatus_en": [
+          "thermostatic bath",
+          "reaction tubes",
+          "stopwatch"
+        ],
+        "apparatus_bn": [
+          "thermostatic bath",
+          "reaction tubes",
+          "stopwatch"
+        ],
+        "reagents_en": [
+          "potassium iodide",
+          "hydrogen peroxide",
+          "starch"
+        ],
+        "reagents_bn": [
+          "potassium iodide",
+          "hydrogen peroxide",
+          "starch"
+        ]
+      }
+    },
+    {
+      "order": 84,
+      "slug": "catalyst-hydrogen-peroxide-decomposition",
+      "title_en": "Catalysed peroxide decomposition",
+      "title_bn": "catalyst-সহ peroxide decomposition",
+      "aim_en": "To determine oxygen yield factor in a five-point quantitative analysis of catalysed peroxide decomposition.",
+      "aim_bn": "catalyst-সহ peroxide decomposition practical-এ পাঁচটি quantitative reading নিয়ে oxygen yield factor নির্ণয় করা।",
+      "level": "class-9-10",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the conical flask, gas syringe and balance.",
+          "text_bn": "conical flask, gas syringe ও balance rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare hydrogen peroxide, manganese dioxide and water using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ hydrogen peroxide, manganese dioxide ও water প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record oxygen volume rate at all five suggested catalyst mass settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত catalyst ভর setting-এ oxygen আয়তন হার record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate oxygen yield factor and compare with the accepted value.",
+          "text_bn": "graph এঁকে oxygen yield factor হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain oxygen yield factor?",
+          "question_bn": "oxygen yield factor নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "rate = k·mcat",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "rate = k·mcat",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies rate = k·mcat.",
+          "explain_bn": "এই analysis-এ rate = k·mcat সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 18,
+        "result_en": "Oxygen yield factor",
+        "result_bn": "oxygen yield factor",
+        "result_unit": "mL/g",
+        "x_en": "Catalyst mass",
+        "x_bn": "catalyst ভর",
+        "x_unit": "g",
+        "x_min": 0.1,
+        "x_max": 0.5,
+        "x_step": 0.1,
+        "x_default": 0.2,
+        "tasks": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5
+        ],
+        "y_en": "Oxygen volume rate",
+        "y_bn": "oxygen আয়তন হার",
+        "y_unit": "mL/min",
+        "scale": 1,
+        "offset": 0,
+        "formula": "rate = k·mcat",
+        "apparatus_en": [
+          "conical flask",
+          "gas syringe",
+          "balance"
+        ],
+        "apparatus_bn": [
+          "conical flask",
+          "gas syringe",
+          "balance"
+        ],
+        "reagents_en": [
+          "hydrogen peroxide",
+          "manganese dioxide",
+          "water"
+        ],
+        "reagents_bn": [
+          "hydrogen peroxide",
+          "manganese dioxide",
+          "water"
+        ]
+      }
+    },
+    {
+      "order": 85,
+      "slug": "arrhenius-activation-energy",
+      "title_en": "Activation energy from Arrhenius plot",
+      "title_bn": "Arrhenius plot থেকে activation energy",
+      "aim_en": "To determine activation energy factor in a five-point quantitative analysis of activation energy from arrhenius plot.",
+      "aim_bn": "Arrhenius plot থেকে activation energy practical-এ পাঁচটি quantitative reading নিয়ে activation energy factor নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the temperature bath, spectrophotometer and timer.",
+          "text_bn": "temperature bath, spectrophotometer ও timer rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare kinetic sample, thermostat fluid and quench solution using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ kinetic sample, thermostat fluid ও quench solution প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record −ln(rate) index at all five suggested reciprocal-temperature index settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত reciprocal-temperature index setting-এ −ln(rate) index record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate activation energy factor and compare with the accepted value.",
+          "text_bn": "graph এঁকে activation energy factor হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain activation energy factor?",
+          "question_bn": "activation energy factor নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "−ln k = (Ea/R)(1/T) + c",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "−ln k = (Ea/R)(1/T) + c",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies −ln k = (Ea/R)(1/T) + c.",
+          "explain_bn": "এই analysis-এ −ln k = (Ea/R)(1/T) + c সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 42.5,
+        "result_en": "Activation energy factor",
+        "result_bn": "activation energy factor",
+        "result_unit": "kJ/mol",
+        "x_en": "Reciprocal-temperature index",
+        "x_bn": "reciprocal-temperature index",
+        "x_unit": "10³/K",
+        "x_min": 2.8,
+        "x_max": 3.6,
+        "x_step": 0.2,
+        "x_default": 3.0,
+        "tasks": [
+          2.8,
+          3.0,
+          3.2,
+          3.4,
+          3.6
+        ],
+        "y_en": "−ln(rate) index",
+        "y_bn": "−ln(rate) index",
+        "y_unit": "",
+        "scale": 0.12027904738994467,
+        "offset": 0,
+        "formula": "−ln k = (Ea/R)(1/T) + c",
+        "apparatus_en": [
+          "temperature bath",
+          "spectrophotometer",
+          "timer"
+        ],
+        "apparatus_bn": [
+          "temperature bath",
+          "spectrophotometer",
+          "timer"
+        ],
+        "reagents_en": [
+          "kinetic sample",
+          "thermostat fluid",
+          "quench solution"
+        ],
+        "reagents_bn": [
+          "kinetic sample",
+          "thermostat fluid",
+          "quench solution"
+        ]
+      }
+    },
+    {
+      "order": 86,
+      "slug": "partition-coefficient-solvent-extraction",
+      "title_en": "Partition coefficient by solvent extraction",
+      "title_bn": "solvent extraction-এ partition coefficient",
+      "aim_en": "To determine partition coefficient in a five-point quantitative analysis of partition coefficient by solvent extraction.",
+      "aim_bn": "solvent extraction-এ partition coefficient practical-এ পাঁচটি quantitative reading নিয়ে partition coefficient নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the separating funnel, shaker and colorimeter.",
+          "text_bn": "separating funnel, shaker ও colorimeter rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare iodine solution, organic solvent and thiosulfate using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ iodine solution, organic solvent ও thiosulfate প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record organic concentration at all five suggested aqueous concentration settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত aqueous ঘনমাত্রা setting-এ organic ঘনমাত্রা record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate partition coefficient and compare with the accepted value.",
+          "text_bn": "graph এঁকে partition coefficient হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain partition coefficient?",
+          "question_bn": "partition coefficient নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "K = Corg/Caq",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "K = Corg/Caq",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies K = Corg/Caq.",
+          "explain_bn": "এই analysis-এ K = Corg/Caq সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 3.4,
+        "result_en": "Partition coefficient",
+        "result_bn": "partition coefficient",
+        "result_unit": "",
+        "x_en": "Aqueous concentration",
+        "x_bn": "aqueous ঘনমাত্রা",
+        "x_unit": "mmol/L",
+        "x_min": 0.5,
+        "x_max": 2.5,
+        "x_step": 0.5,
+        "x_default": 1,
+        "tasks": [
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+        ],
+        "y_en": "Organic concentration",
+        "y_bn": "organic ঘনমাত্রা",
+        "y_unit": "mmol/L",
+        "scale": 1,
+        "offset": 0,
+        "formula": "K = Corg/Caq",
+        "apparatus_en": [
+          "separating funnel",
+          "shaker",
+          "colorimeter"
+        ],
+        "apparatus_bn": [
+          "separating funnel",
+          "shaker",
+          "colorimeter"
+        ],
+        "reagents_en": [
+          "iodine solution",
+          "organic solvent",
+          "thiosulfate"
+        ],
+        "reagents_bn": [
+          "iodine solution",
+          "organic solvent",
+          "thiosulfate"
+        ]
+      }
+    },
+    {
+      "order": 87,
+      "slug": "charcoal-adsorption-capacity-sweep",
+      "title_en": "Charcoal adsorption isotherm",
+      "title_bn": "charcoal adsorption isotherm",
+      "aim_en": "To determine adsorption capacity constant in a five-point quantitative analysis of charcoal adsorption isotherm.",
+      "aim_bn": "charcoal adsorption isotherm practical-এ পাঁচটি quantitative reading নিয়ে adsorption capacity ধ্রুবক নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the stoppered flasks, charcoal filter and colorimeter.",
+          "text_bn": "stoppered flasks, charcoal filter ও colorimeter rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare activated charcoal, dye solution and water using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ activated charcoal, dye solution ও water প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record adsorbed amount at all five suggested equilibrium concentration settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত সাম্য ঘনমাত্রা setting-এ শোষিত পরিমাণ record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate adsorption capacity constant and compare with the accepted value.",
+          "text_bn": "graph এঁকে adsorption capacity ধ্রুবক হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain adsorption capacity constant?",
+          "question_bn": "adsorption capacity ধ্রুবক নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "q = K/C",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "q = K/C",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies q = K/C.",
+          "explain_bn": "এই analysis-এ q = K/C সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "inverseX",
+        "expected": 1.25,
+        "result_en": "Adsorption capacity constant",
+        "result_bn": "adsorption capacity ধ্রুবক",
+        "result_unit": "mg²/mL",
+        "x_en": "Equilibrium concentration",
+        "x_bn": "সাম্য ঘনমাত্রা",
+        "x_unit": "mg/mL",
+        "x_min": 0.5,
+        "x_max": 2.5,
+        "x_step": 0.5,
+        "x_default": 1,
+        "tasks": [
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+        ],
+        "y_en": "Adsorbed amount",
+        "y_bn": "শোষিত পরিমাণ",
+        "y_unit": "mg",
+        "scale": 1,
+        "offset": 0,
+        "formula": "q = K/C",
+        "apparatus_en": [
+          "stoppered flasks",
+          "charcoal filter",
+          "colorimeter"
+        ],
+        "apparatus_bn": [
+          "stoppered flasks",
+          "charcoal filter",
+          "colorimeter"
+        ],
+        "reagents_en": [
+          "activated charcoal",
+          "dye solution",
+          "water"
+        ],
+        "reagents_bn": [
+          "activated charcoal",
+          "dye solution",
+          "water"
+        ]
+      }
+    },
+    {
+      "order": 88,
+      "slug": "surface-tension-surfactant",
+      "title_en": "Surface tension versus surfactant level",
+      "title_bn": "surfactant মাত্রার সঙ্গে পৃষ্ঠটান",
+      "aim_en": "To determine surface-tension gradient in a five-point quantitative analysis of surface tension versus surfactant level.",
+      "aim_bn": "surfactant মাত্রার সঙ্গে পৃষ্ঠটান practical-এ পাঁচটি quantitative reading নিয়ে পৃষ্ঠটান gradient নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the stalagmometer, thermostatic beaker and drop counter.",
+          "text_bn": "stalagmometer, thermostatic beaker ও drop counter rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare surfactant solution, water and cleaning solvent using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ surfactant solution, water ও cleaning solvent প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record surface tension at all five suggested surfactant concentration settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত surfactant ঘনমাত্রা setting-এ পৃষ্ঠটান record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate surface-tension gradient and compare with the accepted value.",
+          "text_bn": "graph এঁকে পৃষ্ঠটান gradient হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain surface-tension gradient?",
+          "question_bn": "পৃষ্ঠটান gradient নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "γ = γ₀ − kC",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "γ = γ₀ − kC",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies γ = γ₀ − kC.",
+          "explain_bn": "এই analysis-এ γ = γ₀ − kC সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "offset",
+        "expected": -4.6,
+        "result_en": "Surface-tension gradient",
+        "result_bn": "পৃষ্ঠটান gradient",
+        "result_unit": "mN·m⁻¹/%",
+        "x_en": "Surfactant concentration",
+        "x_bn": "surfactant ঘনমাত্রা",
+        "x_unit": "%",
+        "x_min": 0.2,
+        "x_max": 1.0,
+        "x_step": 0.2,
+        "x_default": 0.4,
+        "tasks": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "y_en": "Surface tension",
+        "y_bn": "পৃষ্ঠটান",
+        "y_unit": "mN/m",
+        "scale": 1,
+        "offset": 72,
+        "formula": "γ = γ₀ − kC",
+        "apparatus_en": [
+          "stalagmometer",
+          "thermostatic beaker",
+          "drop counter"
+        ],
+        "apparatus_bn": [
+          "stalagmometer",
+          "thermostatic beaker",
+          "drop counter"
+        ],
+        "reagents_en": [
+          "surfactant solution",
+          "water",
+          "cleaning solvent"
+        ],
+        "reagents_bn": [
+          "surfactant solution",
+          "water",
+          "cleaning solvent"
+        ]
+      }
+    },
+    {
+      "order": 89,
+      "slug": "viscosity-temperature-capillary",
+      "title_en": "Viscosity versus temperature",
+      "title_bn": "তাপমাত্রার সঙ্গে সান্দ্রতা",
+      "aim_en": "To determine viscosity temperature coefficient in a five-point quantitative analysis of viscosity versus temperature.",
+      "aim_bn": "তাপমাত্রার সঙ্গে সান্দ্রতা practical-এ পাঁচটি quantitative reading নিয়ে সান্দ্রতার temperature coefficient নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the Ostwald viscometer, water bath and stopwatch.",
+          "text_bn": "Ostwald viscometer, water bath ও stopwatch rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare glycerol solution, water and density standard using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ glycerol solution, water ও density standard প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record dynamic viscosity at all five suggested temperature rise settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত তাপমাত্রা বৃদ্ধি setting-এ গতীয় সান্দ্রতা record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate viscosity temperature coefficient and compare with the accepted value.",
+          "text_bn": "graph এঁকে সান্দ্রতার temperature coefficient হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain viscosity temperature coefficient?",
+          "question_bn": "সান্দ্রতার temperature coefficient নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "η = η₀e^(−kΔT)",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "η = η₀e^(−kΔT)",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies η = η₀e^(−kΔT).",
+          "explain_bn": "এই analysis-এ η = η₀e^(−kΔT) সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "exponential",
+        "expected": 0.028,
+        "result_en": "Viscosity temperature coefficient",
+        "result_bn": "সান্দ্রতার temperature coefficient",
+        "result_unit": "°C⁻¹",
+        "x_en": "Temperature rise",
+        "x_bn": "তাপমাত্রা বৃদ্ধি",
+        "x_unit": "°C",
+        "x_min": 5,
+        "x_max": 25,
+        "x_step": 5,
+        "x_default": 10,
+        "tasks": [
+          5.0,
+          10.0,
+          15.0,
+          20.0,
+          25.0
+        ],
+        "y_en": "Dynamic viscosity",
+        "y_bn": "গতীয় সান্দ্রতা",
+        "y_unit": "mPa·s",
+        "scale": 1,
+        "offset": 1.5,
+        "formula": "η = η₀e^(−kΔT)",
+        "apparatus_en": [
+          "Ostwald viscometer",
+          "water bath",
+          "stopwatch"
+        ],
+        "apparatus_bn": [
+          "Ostwald viscometer",
+          "water bath",
+          "stopwatch"
+        ],
+        "reagents_en": [
+          "glycerol solution",
+          "water",
+          "density standard"
+        ],
+        "reagents_bn": [
+          "glycerol solution",
+          "water",
+          "density standard"
+        ]
+      }
+    },
+    {
+      "order": 90,
+      "slug": "refractive-index-sugar-concentration",
+      "title_en": "Sugar concentration by refractive index",
+      "title_bn": "refractive index দিয়ে sugar concentration",
+      "aim_en": "To determine refractive-index slope in a five-point quantitative analysis of sugar concentration by refractive index.",
+      "aim_bn": "refractive index দিয়ে sugar concentration practical-এ পাঁচটি quantitative reading নিয়ে প্রতিসরাঙ্ক slope নির্ণয় করা।",
+      "level": "class-9-10",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the Abbe refractometer, sample dropper and prism cleaner.",
+          "text_bn": "Abbe refractometer, sample dropper ও prism cleaner rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare sugar solution, distilled water and reference oil using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ sugar solution, distilled water ও reference oil প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record refractive index at all five suggested sugar concentration settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত চিনির ঘনমাত্রা setting-এ প্রতিসরাঙ্ক record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate refractive-index slope and compare with the accepted value.",
+          "text_bn": "graph এঁকে প্রতিসরাঙ্ক slope হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain refractive-index slope?",
+          "question_bn": "প্রতিসরাঙ্ক slope নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "n = n₀ + kC",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "n = n₀ + kC",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies n = n₀ + kC.",
+          "explain_bn": "এই analysis-এ n = n₀ + kC সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "offset",
+        "expected": 0.00145,
+        "result_en": "Refractive-index slope",
+        "result_bn": "প্রতিসরাঙ্ক slope",
+        "result_unit": "RIU/%",
+        "x_en": "Sugar concentration",
+        "x_bn": "চিনির ঘনমাত্রা",
+        "x_unit": "%",
+        "x_min": 5,
+        "x_max": 25,
+        "x_step": 5,
+        "x_default": 10,
+        "tasks": [
+          5.0,
+          10.0,
+          15.0,
+          20.0,
+          25.0
+        ],
+        "y_en": "Refractive index",
+        "y_bn": "প্রতিসরাঙ্ক",
+        "y_unit": "RIU",
+        "scale": 1,
+        "offset": 1.333,
+        "formula": "n = n₀ + kC",
+        "apparatus_en": [
+          "Abbe refractometer",
+          "sample dropper",
+          "prism cleaner"
+        ],
+        "apparatus_bn": [
+          "Abbe refractometer",
+          "sample dropper",
+          "prism cleaner"
+        ],
+        "reagents_en": [
+          "sugar solution",
+          "distilled water",
+          "reference oil"
+        ],
+        "reagents_bn": [
+          "sugar solution",
+          "distilled water",
+          "reference oil"
+        ]
+      }
+    },
+    {
+      "order": 91,
+      "slug": "calorific-value-spirit-burner",
+      "title_en": "Calorific value with a spirit burner",
+      "title_bn": "spirit burner দিয়ে calorific value",
+      "aim_en": "To determine fuel energy factor in a five-point quantitative analysis of calorific value with a spirit burner.",
+      "aim_bn": "spirit burner দিয়ে calorific value practical-এ পাঁচটি quantitative reading নিয়ে জ্বালানি energy factor নির্ণয় করা।",
+      "level": "class-9-10",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the spirit burner, copper calorimeter and balance.",
+          "text_bn": "spirit burner, copper calorimeter ও balance rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare ethanol fuel, water and wick using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ ethanol fuel, water ও wick প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record heat transferred at all five suggested fuel mass burned settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত দগ্ধ জ্বালানির ভর setting-এ স্থানান্তরিত তাপ record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate fuel energy factor and compare with the accepted value.",
+          "text_bn": "graph এঁকে জ্বালানি energy factor হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain fuel energy factor?",
+          "question_bn": "জ্বালানি energy factor নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "Q = qm",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "Q = qm",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies Q = qm.",
+          "explain_bn": "এই analysis-এ Q = qm সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 22.0,
+        "result_en": "Fuel energy factor",
+        "result_bn": "জ্বালানি energy factor",
+        "result_unit": "kJ/g",
+        "x_en": "Fuel mass burned",
+        "x_bn": "দগ্ধ জ্বালানির ভর",
+        "x_unit": "g",
+        "x_min": 0.2,
+        "x_max": 1.0,
+        "x_step": 0.2,
+        "x_default": 0.4,
+        "tasks": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "y_en": "Heat transferred",
+        "y_bn": "স্থানান্তরিত তাপ",
+        "y_unit": "kJ",
+        "scale": 1,
+        "offset": 0,
+        "formula": "Q = qm",
+        "apparatus_en": [
+          "spirit burner",
+          "copper calorimeter",
+          "balance"
+        ],
+        "apparatus_bn": [
+          "spirit burner",
+          "copper calorimeter",
+          "balance"
+        ],
+        "reagents_en": [
+          "ethanol fuel",
+          "water",
+          "wick"
+        ],
+        "reagents_bn": [
+          "ethanol fuel",
+          "water",
+          "wick"
+        ]
+      }
+    },
+    {
+      "order": 92,
+      "slug": "enthalpy-salt-dissolution",
+      "title_en": "Enthalpy of salt dissolution",
+      "title_bn": "লবণ দ্রবণের enthalpy",
+      "aim_en": "To determine heat per gram dissolved in a five-point quantitative analysis of enthalpy of salt dissolution.",
+      "aim_bn": "লবণ দ্রবণের enthalpy practical-এ পাঁচটি quantitative reading নিয়ে প্রতি গ্রাম দ্রবণের তাপ নির্ণয় করা।",
+      "level": "class-11-12",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the polystyrene cup, thermometer and balance.",
+          "text_bn": "polystyrene cup, thermometer ও balance rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare ammonium nitrate, water and calibration salt using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ ammonium nitrate, water ও calibration salt প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record heat change magnitude at all five suggested salt mass settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত লবণের ভর setting-এ তাপ পরিবর্তনের মান record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate heat per gram dissolved and compare with the accepted value.",
+          "text_bn": "graph এঁকে প্রতি গ্রাম দ্রবণের তাপ হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain heat per gram dissolved?",
+          "question_bn": "প্রতি গ্রাম দ্রবণের তাপ নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "|Q| = q·m",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "|Q| = q·m",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies |Q| = q·m.",
+          "explain_bn": "এই analysis-এ |Q| = q·m সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 3.9,
+        "result_en": "Heat per gram dissolved",
+        "result_bn": "প্রতি গ্রাম দ্রবণের তাপ",
+        "result_unit": "kJ/g",
+        "x_en": "Salt mass",
+        "x_bn": "লবণের ভর",
+        "x_unit": "g",
+        "x_min": 1,
+        "x_max": 5,
+        "x_step": 1,
+        "x_default": 2,
+        "tasks": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ],
+        "y_en": "Heat change magnitude",
+        "y_bn": "তাপ পরিবর্তনের মান",
+        "y_unit": "kJ",
+        "scale": 1,
+        "offset": 0,
+        "formula": "|Q| = q·m",
+        "apparatus_en": [
+          "polystyrene cup",
+          "thermometer",
+          "balance"
+        ],
+        "apparatus_bn": [
+          "polystyrene cup",
+          "thermometer",
+          "balance"
+        ],
+        "reagents_en": [
+          "ammonium nitrate",
+          "water",
+          "calibration salt"
+        ],
+        "reagents_bn": [
+          "ammonium nitrate",
+          "water",
+          "calibration salt"
+        ]
+      }
+    },
+    {
+      "order": 93,
+      "slug": "hess-law-neutralisation",
+      "title_en": "Hess’s law from two neutralisations",
+      "title_bn": "দুটি neutralisation থেকে Hess-এর সূত্র",
+      "aim_en": "To determine reaction heat factor in a five-point quantitative analysis of hess’s law from two neutralisations.",
+      "aim_bn": "দুটি neutralisation থেকে Hess-এর সূত্র practical-এ পাঁচটি quantitative reading নিয়ে বিক্রিয়া তাপ factor নির্ণয় করা।",
+      "level": "class-11-12",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the insulated calorimeter, temperature probe and volumetric cylinder.",
+          "text_bn": "insulated calorimeter, temperature probe ও volumetric cylinder rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare HCl, NaOH and sodium acetate using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ HCl, NaOH ও sodium acetate প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record measured heat at all five suggested reacted amount index settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত বিক্রিয়ার পরিমাণ index setting-এ পরিমাপিত তাপ record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate reaction heat factor and compare with the accepted value.",
+          "text_bn": "graph এঁকে বিক্রিয়া তাপ factor হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain reaction heat factor?",
+          "question_bn": "বিক্রিয়া তাপ factor নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "ΔH₃ = ΔH₁ + ΔH₂",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "ΔH₃ = ΔH₁ + ΔH₂",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies ΔH₃ = ΔH₁ + ΔH₂.",
+          "explain_bn": "এই analysis-এ ΔH₃ = ΔH₁ + ΔH₂ সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 5.7,
+        "result_en": "Reaction heat factor",
+        "result_bn": "বিক্রিয়া তাপ factor",
+        "result_unit": "kJ/mol index",
+        "x_en": "Reacted amount index",
+        "x_bn": "বিক্রিয়ার পরিমাণ index",
+        "x_unit": "",
+        "x_min": 1,
+        "x_max": 5,
+        "x_step": 1,
+        "x_default": 2,
+        "tasks": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ],
+        "y_en": "Measured heat",
+        "y_bn": "পরিমাপিত তাপ",
+        "y_unit": "kJ",
+        "scale": 1,
+        "offset": 0,
+        "formula": "ΔH₃ = ΔH₁ + ΔH₂",
+        "apparatus_en": [
+          "insulated calorimeter",
+          "temperature probe",
+          "volumetric cylinder"
+        ],
+        "apparatus_bn": [
+          "insulated calorimeter",
+          "temperature probe",
+          "volumetric cylinder"
+        ],
+        "reagents_en": [
+          "HCl",
+          "NaOH",
+          "sodium acetate"
+        ],
+        "reagents_bn": [
+          "HCl",
+          "NaOH",
+          "sodium acetate"
+        ]
+      }
+    },
+    {
+      "order": 94,
+      "slug": "nernst-concentration-cell-sweep",
+      "title_en": "Nernst concentration cell",
+      "title_bn": "Nernst concentration cell",
+      "aim_en": "To determine nernst slope in a five-point quantitative analysis of nernst concentration cell.",
+      "aim_bn": "Nernst concentration cell practical-এ পাঁচটি quantitative reading নিয়ে Nernst slope নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the two half-cells, salt bridge and high-impedance voltmeter.",
+          "text_bn": "two half-cells, salt bridge ও high-impedance voltmeter rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare copper sulfate solutions, salt bridge gel and copper electrodes using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ copper sulfate solutions, salt bridge gel ও copper electrodes প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record cell potential at all five suggested log concentration ratio settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত log concentration ratio setting-এ cell বিভব record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate nernst slope and compare with the accepted value.",
+          "text_bn": "graph এঁকে Nernst slope হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain nernst slope?",
+          "question_bn": "Nernst slope নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "E = (0.0592/n)log(C₂/C₁)",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "E = (0.0592/n)log(C₂/C₁)",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies E = (0.0592/n)log(C₂/C₁).",
+          "explain_bn": "এই analysis-এ E = (0.0592/n)log(C₂/C₁) সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.0592,
+        "result_en": "Nernst slope",
+        "result_bn": "Nernst slope",
+        "result_unit": "V/decade",
+        "x_en": "Log concentration ratio",
+        "x_bn": "log concentration ratio",
+        "x_unit": "decade",
+        "x_min": 1,
+        "x_max": 5,
+        "x_step": 1,
+        "x_default": 2,
+        "tasks": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ],
+        "y_en": "Cell potential",
+        "y_bn": "cell বিভব",
+        "y_unit": "V",
+        "scale": 1,
+        "offset": 0,
+        "formula": "E = (0.0592/n)log(C₂/C₁)",
+        "apparatus_en": [
+          "two half-cells",
+          "salt bridge",
+          "high-impedance voltmeter"
+        ],
+        "apparatus_bn": [
+          "two half-cells",
+          "salt bridge",
+          "high-impedance voltmeter"
+        ],
+        "reagents_en": [
+          "copper sulfate solutions",
+          "salt bridge gel",
+          "copper electrodes"
+        ],
+        "reagents_bn": [
+          "copper sulfate solutions",
+          "salt bridge gel",
+          "copper electrodes"
+        ]
+      }
+    },
+    {
+      "order": 95,
+      "slug": "faraday-copper-electroplating",
+      "title_en": "Faraday law in copper electroplating",
+      "title_bn": "copper electroplating-এ Faraday সূত্র",
+      "aim_en": "To determine electrochemical equivalent in a five-point quantitative analysis of faraday law in copper electroplating.",
+      "aim_bn": "copper electroplating-এ Faraday সূত্র practical-এ পাঁচটি quantitative reading নিয়ে তড়িৎ রাসায়নিক সমতুল্য নির্ণয় করা।",
+      "level": "class-11-12",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the electrolysis cell, DC current source and digital balance.",
+          "text_bn": "electrolysis cell, DC current source ও digital balance rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare copper sulfate, copper electrodes and dilute sulfuric acid using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ copper sulfate, copper electrodes ও dilute sulfuric acid প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record copper deposited at all five suggested charge passed settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত প্রবাহিত আধান setting-এ জমা copper record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate electrochemical equivalent and compare with the accepted value.",
+          "text_bn": "graph এঁকে তড়িৎ রাসায়নিক সমতুল্য হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain electrochemical equivalent?",
+          "question_bn": "তড়িৎ রাসায়নিক সমতুল্য নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "m = ZQ",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "m = ZQ",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies m = ZQ.",
+          "explain_bn": "এই analysis-এ m = ZQ সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.000329,
+        "result_en": "Electrochemical equivalent",
+        "result_bn": "তড়িৎ রাসায়নিক সমতুল্য",
+        "result_unit": "g/C",
+        "x_en": "Charge passed",
+        "x_bn": "প্রবাহিত আধান",
+        "x_unit": "C",
+        "x_min": 100,
+        "x_max": 500,
+        "x_step": 100,
+        "x_default": 200,
+        "tasks": [
+          100.0,
+          200.0,
+          300.0,
+          400.0,
+          500.0
+        ],
+        "y_en": "Copper deposited",
+        "y_bn": "জমা copper",
+        "y_unit": "g",
+        "scale": 1,
+        "offset": 0,
+        "formula": "m = ZQ",
+        "apparatus_en": [
+          "electrolysis cell",
+          "DC current source",
+          "digital balance"
+        ],
+        "apparatus_bn": [
+          "electrolysis cell",
+          "DC current source",
+          "digital balance"
+        ],
+        "reagents_en": [
+          "copper sulfate",
+          "copper electrodes",
+          "dilute sulfuric acid"
+        ],
+        "reagents_bn": [
+          "copper sulfate",
+          "copper electrodes",
+          "dilute sulfuric acid"
+        ]
+      }
+    },
+    {
+      "order": 96,
+      "slug": "polymer-gel-time-initiator",
+      "title_en": "Polymer gel time versus initiator",
+      "title_bn": "initiator-এর সঙ্গে polymer gel time",
+      "aim_en": "To determine gel-time constant in a five-point quantitative analysis of polymer gel time versus initiator.",
+      "aim_bn": "initiator-এর সঙ্গে polymer gel time practical-এ পাঁচটি quantitative reading নিয়ে gel-time ধ্রুবক নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the reaction vial, thermostatic block and tilt timer.",
+          "text_bn": "reaction vial, thermostatic block ও tilt timer rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare monomer solution, initiator and inhibitor using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ monomer solution, initiator ও inhibitor প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record gel time at all five suggested initiator concentration settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত initiator ঘনমাত্রা setting-এ gel time record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate gel-time constant and compare with the accepted value.",
+          "text_bn": "graph এঁকে gel-time ধ্রুবক হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain gel-time constant?",
+          "question_bn": "gel-time ধ্রুবক নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "tgel = K/Cinit",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "tgel = K/Cinit",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies tgel = K/Cinit.",
+          "explain_bn": "এই analysis-এ tgel = K/Cinit সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "inverseX",
+        "expected": 18.0,
+        "result_en": "Gel-time constant",
+        "result_bn": "gel-time ধ্রুবক",
+        "result_unit": "min·%",
+        "x_en": "Initiator concentration",
+        "x_bn": "initiator ঘনমাত্রা",
+        "x_unit": "%",
+        "x_min": 0.5,
+        "x_max": 2.5,
+        "x_step": 0.5,
+        "x_default": 1,
+        "tasks": [
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5
+        ],
+        "y_en": "Gel time",
+        "y_bn": "gel time",
+        "y_unit": "min",
+        "scale": 1,
+        "offset": 0,
+        "formula": "tgel = K/Cinit",
+        "apparatus_en": [
+          "reaction vial",
+          "thermostatic block",
+          "tilt timer"
+        ],
+        "apparatus_bn": [
+          "reaction vial",
+          "thermostatic block",
+          "tilt timer"
+        ],
+        "reagents_en": [
+          "monomer solution",
+          "initiator",
+          "inhibitor"
+        ],
+        "reagents_bn": [
+          "monomer solution",
+          "initiator",
+          "inhibitor"
+        ]
+      }
+    },
+    {
+      "order": 97,
+      "slug": "phosphate-beer-lambert",
+      "title_en": "Phosphate by Beer–Lambert calibration",
+      "title_bn": "Beer–Lambert calibration-এ phosphate",
+      "aim_en": "To determine beer–lambert slope in a five-point quantitative analysis of phosphate by beer–lambert calibration.",
+      "aim_bn": "Beer–Lambert calibration-এ phosphate practical-এ পাঁচটি quantitative reading নিয়ে Beer–Lambert slope নির্ণয় করা।",
+      "level": "honours",
+      "durationMinutes": 25,
+      "apparatus": [],
+      "chemicals": [],
+      "setup": {
+        "vessels": []
+      },
+      "steps": [
+        {
+          "order": 1,
+          "text_en": "Rinse, assemble and zero the colorimeter, cuvettes and volumetric flasks.",
+          "text_bn": "colorimeter, cuvettes ও volumetric flasks rinse করে সাজিয়ে zero করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 2,
+          "text_en": "Prepare phosphate standards, molybdate reagent and reducing reagent using clean labelled glassware.",
+          "text_bn": "পরিষ্কার labelled glassware-এ phosphate standards, molybdate reagent ও reducing reagent প্রস্তুত করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 3,
+          "text_en": "Record absorbance at all five suggested phosphate concentration settings.",
+          "text_bn": "পাঁচটি প্রস্তাবিত phosphate ঘনমাত্রা setting-এ absorbance record করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        },
+        {
+          "order": 4,
+          "text_en": "Plot the graph, calculate beer–lambert slope and compare with the accepted value.",
+          "text_bn": "graph এঁকে Beer–Lambert slope হিসাব করুন ও accepted মানের সঙ্গে তুলনা করুন।",
+          "check": {
+            "type": "vesselCount",
+            "min": 0
+          }
+        }
+      ],
+      "safety": {
+        "level": "low",
+        "en": "Wear eye protection, label every solution and dispose of the microscale mixture as instructed.",
+        "bn": "চোখের সুরক্ষা ব্যবহার করুন, সব দ্রবণ label করুন এবং নির্দেশমতো microscale mixture নিষ্পত্তি করুন।"
+      },
+      "expectedReactions": [],
+      "quiz": [
+        {
+          "question_en": "Which equation is used to obtain beer–lambert slope?",
+          "question_bn": "Beer–Lambert slope নির্ণয়ে কোন equation ব্যবহৃত হয়?",
+          "options_en": [
+            "A = εbc",
+            "The signal is constant",
+            "Only colour is compared",
+            "No measurements are needed"
+          ],
+          "options_bn": [
+            "A = εbc",
+            "signal ধ্রুব",
+            "শুধু রং তুলনা",
+            "কোনো measurement দরকার নেই"
+          ],
+          "answer": 0,
+          "explain_en": "This analysis linearises or directly applies A = εbc.",
+          "explain_bn": "এই analysis-এ A = εbc সরাসরি বা linearised ভাবে ব্যবহৃত হয়।"
+        }
+      ],
+      "tags": [
+        "expanded-practical",
+        "quantitative-analysis",
+        "graph",
+        "validation"
+      ],
+      "model": {
+        "relation": "direct",
+        "expected": 0.082,
+        "result_en": "Beer–Lambert slope",
+        "result_bn": "Beer–Lambert slope",
+        "result_unit": "AU/(mg/L)",
+        "x_en": "Phosphate concentration",
+        "x_bn": "phosphate ঘনমাত্রা",
+        "x_unit": "mg/L",
+        "x_min": 1,
+        "x_max": 5,
+        "x_step": 1,
+        "x_default": 2,
+        "tasks": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ],
+        "y_en": "Absorbance",
+        "y_bn": "absorbance",
+        "y_unit": "AU",
+        "scale": 1,
+        "offset": 0,
+        "formula": "A = εbc",
+        "apparatus_en": [
+          "colorimeter",
+          "cuvettes",
+          "volumetric flasks"
+        ],
+        "apparatus_bn": [
+          "colorimeter",
+          "cuvettes",
+          "volumetric flasks"
+        ],
+        "reagents_en": [
+          "phosphate standards",
+          "molybdate reagent",
+          "reducing reagent"
+        ],
+        "reagents_bn": [
+          "phosphate standards",
+          "molybdate reagent",
+          "reducing reagent"
+        ]
+      }
+    }
+  ]
+}

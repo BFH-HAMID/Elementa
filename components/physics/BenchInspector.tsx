@@ -107,7 +107,7 @@ export function BenchInspector() {
       <div className="min-w-0">
         <div className="flex items-start gap-2.5">
           <span className="instrument-card grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-xl border border-[var(--line)]">
-            <EquipmentArt equipmentId={item.equipmentId} p={item.properties || {}} bn={isBangla} live detailed={false} className="p-[2px]" />
+            <EquipmentArt equipmentId={item.equipmentId} p={item.properties || {}} res={result} burned={item.burnedOut} bn={isBangla} live detailed={false} className="p-[2px]" />
           </span>
           <div className="min-w-0">
             <p className="truncate text-sm font-black text-[var(--ink)]">{isBangla ? def.name_bn : def.name_en}</p>
@@ -120,6 +120,20 @@ export function BenchInspector() {
             <span className="rounded-md bg-[var(--surface)] px-2 py-0.5 text-physics-700 dark:text-physics-300">V = {formatNumber(result.voltageDrop)} V</span>
             <span className="rounded-md bg-[var(--surface)] px-2 py-0.5 text-physics-700 dark:text-physics-300">I = {formatNumber(result.current)} A</span>
             <span className="rounded-md bg-[var(--surface)] px-2 py-0.5 text-physics-700 dark:text-physics-300">P = {formatNumber(result.power)} W</span>
+          </div>
+        )}
+
+        {item.equipmentId === 'incandescent-bulb' && result && !result.burnedOut && (
+          <div className="mt-1.5 flex flex-wrap gap-1.5 text-[10px] font-black">
+            <span className="rounded-md bg-amber-50 px-2 py-0.5 text-amber-800 dark:bg-amber-900/30 dark:text-amber-200">
+              {isBangla ? 'আলোর উজ্জ্বলতা' : 'Light'} {Math.round((result.luminousIntensity ?? 0) * 100)}%
+            </span>
+            <span className="rounded-md bg-orange-50 px-2 py-0.5 text-orange-800 dark:bg-orange-900/30 dark:text-orange-200">
+              {isBangla ? 'ফিলামেন্ট' : 'Filament'} ≈ {Math.round(result.filamentTemperatureC ?? 20)} °C
+            </span>
+            <span className="rounded-md bg-[var(--surface)] px-2 py-0.5 font-mono text-[var(--muted)]">
+              R<sub>hot</sub> = {formatNumber(result.effectiveResistance ?? 0)} Ω
+            </span>
           </div>
         )}
 

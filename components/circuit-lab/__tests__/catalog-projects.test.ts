@@ -3,6 +3,7 @@ import { CircuitEngine } from '../simulator/engine';
 import { EXAMPLE_PROJECTS, type ExampleProject } from '../projects/examples';
 import { CIRCUIT_PROJECTS } from '../projects/catalog-circuits';
 import { MCU_PROJECTS } from '../projects/catalog-mcu';
+import { EXPANDED_CIRCUIT_PROJECTS } from '../projects/catalog-expanded';
 import { getPart } from '../parts/registry';
 import type { PlacedComponent } from '../types';
 
@@ -72,18 +73,19 @@ function ex(id: string): ExampleProject {
   return found;
 }
 
-const NEW_PROJECTS = [...CIRCUIT_PROJECTS, ...MCU_PROJECTS];
+const NEW_PROJECTS = [...CIRCUIT_PROJECTS, ...MCU_PROJECTS, ...EXPANDED_CIRCUIT_PROJECTS];
 
 describe('catalogue size and structure', () => {
-  it('the library holds 40 to 50 example projects with unique ids', () => {
-    expect(EXAMPLE_PROJECTS.length).toBeGreaterThanOrEqual(40);
-    expect(EXAMPLE_PROJECTS.length).toBeLessThanOrEqual(50);
+  it('the library holds 80 example projects with unique ids', () => {
+    expect(EXAMPLE_PROJECTS).toHaveLength(80);
     const ids = EXAMPLE_PROJECTS.map((p) => p.id);
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it('adds 38 new projects on top of the original 12', () => {
-    expect(NEW_PROJECTS.length).toBe(38);
+  it('adds 68 projects on top of the original 12, including 30 quantitative practicals', () => {
+    expect(NEW_PROJECTS.length).toBe(68);
+    expect(EXPANDED_CIRCUIT_PROJECTS).toHaveLength(30);
+    expect(EXPANDED_CIRCUIT_PROJECTS.every((project) => project.practical)).toBe(true);
   });
 
   for (const p of NEW_PROJECTS) {
@@ -127,6 +129,31 @@ describe('catalogue size and structure', () => {
         for (const v of Object.values(c.pinV ?? {})) expect(Number.isFinite(v)).toBe(true);
         expect(Number.isFinite(c.current)).toBe(true);
       }
+    });
+  }
+});
+
+describe('expanded circuit practical worksheets', () => {
+  for (const project of EXPANDED_CIRCUIT_PROJECTS) {
+    it(`${project.id}: five simulated readings recover the accepted result`, () => {
+      const practical = project.practical!;
+      expect(practical.control.values).toHaveLength(5);
+      const estimates: number[] = [];
+      for (const x of practical.control.values) {
+        const run = simulate(project, 40, (_tick, components) => withProps(components, practical.control.componentId, { [practical.control.prop]: x }));
+        let y: number;
+        if (practical.reading.kind === 'sourceCurrent') {
+          y = Math.abs(run.last.frame.sourceCurrents[practical.reading.componentId] ?? 0) * practical.reading.scale;
+        } else {
+          y = (view(run.last, practical.reading.componentId).pinV?.[practical.reading.pinId ?? ''] ?? 0) * practical.reading.scale;
+        }
+        expect(Number.isFinite(y)).toBe(true);
+        expect(Math.abs(y)).toBeGreaterThan(0);
+        estimates.push(practical.result.mode === 'resistance' ? x / (y / 1000) : y / x);
+      }
+      const measured = estimates.reduce((sum, value) => sum + value, 0) / estimates.length;
+      const error = (Math.abs(measured - practical.result.expected) / Math.abs(practical.result.expected)) * 100;
+      expect(error).toBeLessThanOrEqual(practical.result.tolerancePercent);
     });
   }
 });

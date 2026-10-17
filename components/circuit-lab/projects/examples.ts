@@ -12,10 +12,31 @@ import type { PlacedComponent, PlacedWire } from '../types';
 import { C, W } from './builders';
 import { CIRCUIT_PROJECTS } from './catalog-circuits';
 import { MCU_PROJECTS } from './catalog-mcu';
+import { EXPANDED_CIRCUIT_PROJECTS } from './catalog-expanded';
 
 export interface Bilingual {
   en: string;
   bn: string;
+}
+
+export interface CircuitPractical {
+  /** Slider changes a real component property while the engine is running. */
+  control: Bilingual & { componentId: string; prop: string; unit: string; min: number; max: number; step: number; values: number[] };
+  /** Live reading is sampled from the simulation frame. */
+  reading: Bilingual & {
+    kind: 'sourceCurrent' | 'nodeVoltage';
+    componentId: string;
+    pinId?: string;
+    unit: string;
+    scale: number;
+  };
+  result: Bilingual & {
+    mode: 'resistance' | 'ratio';
+    expected: number;
+    unit: string;
+    tolerancePercent: number;
+  };
+  formula: string;
 }
 
 export interface ExampleProject {
@@ -29,6 +50,8 @@ export interface ExampleProject {
   steps: Bilingual[];
   /** How the circuit works. */
   explanation: Bilingual;
+  /** Optional full practical worksheet: live control, readings, table, graph and validation. */
+  practical?: CircuitPractical;
   components: PlacedComponent[];
   wires: PlacedWire[];
 }
@@ -727,7 +750,12 @@ const ldr: ExampleProject = {
 const BASE_PROJECTS: ExampleProject[] = [blink, traffic, astable, rcFilter, transistor, ultrasonic, dht, esp32Oled, motorDriver, servo, pot, ldr];
 
 /** Every example, in catalogue order: the core set, then circuit and MCU catalogues. */
-export const EXAMPLE_PROJECTS: ExampleProject[] = [...BASE_PROJECTS, ...CIRCUIT_PROJECTS, ...MCU_PROJECTS];
+export const EXAMPLE_PROJECTS: ExampleProject[] = [
+  ...BASE_PROJECTS,
+  ...CIRCUIT_PROJECTS,
+  ...MCU_PROJECTS,
+  ...EXPANDED_CIRCUIT_PROJECTS
+];
 
 export function getExample(id: string): ExampleProject | undefined {
   return EXAMPLE_PROJECTS.find((e) => e.id === id);

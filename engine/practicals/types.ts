@@ -123,7 +123,8 @@ export type PracticalSceneId =
   | 'photoelectric'
   | 'gmCounter'
   | 'induction'
-  | 'searle';
+  | 'searle'
+  | 'instrumentRig';
 
 export interface PracticalModel {
   slug: string;

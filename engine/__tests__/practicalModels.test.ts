@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import physicsExperiments from '@/data/physicsExperiments.json';
+import { physicsGuidedExperiments } from '@/lib/physicsData';
 import {
   allPracticalModels,
   clampToControl,
@@ -14,7 +14,7 @@ import {
 } from '@/engine/practicals';
 
 type Exp = { slug: string; dataColumns?: { key: string }[] };
-const experiments: Exp[] = (Array.isArray(physicsExperiments) ? physicsExperiments : (physicsExperiments as { experiments: Exp[] }).experiments) as Exp[];
+const experiments = physicsGuidedExperiments as Exp[];
 
 function collectRows(model: PracticalModel, noisy = false) {
   const base = defaultParams(model);

@@ -1,0 +1,973 @@
+{
+  "version": 1,
+  "count": 128,
+  "topics": [
+    {
+      "slug": "projectile-motion",
+      "simulation_slug": "projectile-motion",
+      "subject": "physics",
+      "title_en": "Projectile motion",
+      "title_bn": "প্রক্ষেপণ গতি",
+      "experiment_slugs": [
+        "projectile-motion-lab"
+      ],
+      "questions": [
+        {
+          "q": "How is the launch velocity split into components?",
+          "q_bn": "প্রাথমিক বেগকে কীভাবে উপাংশে ভাগ করা হয়?",
+          "a": "For launch speed u at angle θ, the horizontal component is u cos θ and the vertical component is u sin θ.",
+          "a_bn": "u বেগে θ কোণে নিক্ষেপ করলে অনুভূমিক উপাংশ u cos θ এবং উল্লম্ব উপাংশ u sin θ।"
+        },
+        {
+          "q": "What is the horizontal acceleration in the ideal projectile model?",
+          "q_bn": "আদর্শ প্রক্ষেপণ মডেলে অনুভূমিক ত্বরণ কত?",
+          "a": "It is zero because air resistance is neglected; only gravity acts vertically.",
+          "a_bn": "এটি শূন্য, কারণ বায়ুর বাধা উপেক্ষা করা হয়; শুধু মহাকর্ষ উল্লম্বভাবে কাজ করে।"
+        },
+        {
+          "q": "Which angle gives maximum range on level ground?",
+          "q_bn": "সমতল ভূমিতে কোন কোণে পাল্লা সর্বাধিক হয়?",
+          "a": "A 45° launch gives maximum range when launch and landing heights are equal and drag is negligible.",
+          "a_bn": "নিক্ষেপ ও পতনের উচ্চতা সমান এবং বায়ুর বাধা নগণ্য হলে ৪৫° কোণে পাল্লা সর্বাধিক হয়।"
+        },
+        {
+          "q": "Why can complementary launch angles give the same range?",
+          "q_bn": "পরিপূরক নিক্ষেপ কোণে পাল্লা সমান হতে পারে কেন?",
+          "a": "The range contains sin(2θ), and sin(2θ) has the same value for complementary angles such as 30° and 60°.",
+          "a_bn": "পাল্লার সূত্রে sin(2θ) থাকে; ৩০° ও ৬০°-এর মতো পরিপূরক কোণে sin(2θ)-এর মান সমান।"
+        },
+        {
+          "q": "What determines the maximum height of a projectile?",
+          "q_bn": "প্রক্ষেপণের সর্বোচ্চ উচ্চতা কী কী মানের ওপর নির্ভর করে?",
+          "a": "It depends on the square of the vertical launch component and inversely on gravity: H = u² sin²θ/(2g).",
+          "a_bn": "এটি উল্লম্ব প্রাথমিক বেগের বর্গের সমানুপাতিক এবং g-এর ব্যস্তানুপাতিক: H = u² sin²θ/(2g)।"
+        },
+        {
+          "q": "How is flight time found for equal launch and landing heights?",
+          "q_bn": "নিক্ষেপ ও পতনের উচ্চতা সমান হলে উড্ডয়নকাল কীভাবে পাওয়া যায়?",
+          "a": "The ideal flight time is T = 2u sin θ/g.",
+          "a_bn": "আদর্শ উড্ডয়নকাল T = 2u sin θ/g।"
+        },
+        {
+          "q": "Does projectile mass affect the ideal trajectory?",
+          "q_bn": "আদর্শ প্রক্ষেপণ পথে বস্তুর ভর কি প্রভাব ফেলে?",
+          "a": "No. With uniform gravity and no drag, all masses have the same acceleration g.",
+          "a_bn": "না। সমান মহাকর্ষ ও বায়ুর বাধাহীন অবস্থায় সব ভরের ত্বরণ g।"
+        },
+        {
+          "q": "Why may a real projectile fall short of the simulated range?",
+          "q_bn": "বাস্তব প্রক্ষেপণ সিমুলেশনের চেয়ে কম দূরে পড়তে পারে কেন?",
+          "a": "Air drag, wind, spin and unequal launch and landing heights are omitted from the simple model.",
+          "a_bn": "সরল মডেলে বায়ুর বাধা, বাতাস, ঘূর্ণন এবং নিক্ষেপ-পতনের অসম উচ্চতা ধরা হয় না।"
+        }
+      ]
+    },
+    {
+      "slug": "vector-addition",
+      "simulation_slug": "vector-addition",
+      "subject": "physics",
+      "title_en": "Vector addition",
+      "title_bn": "ভেক্টর যোগ",
+      "experiment_slugs": [
+        "vector-addition-force-table"
+      ],
+      "questions": [
+        {
+          "q": "How does a vector differ from a scalar?",
+          "q_bn": "ভেক্টর ও স্কেলারের পার্থক্য কী?",
+          "a": "A vector has magnitude and direction, while a scalar has magnitude only.",
+          "a_bn": "ভেক্টরের মান ও দিক দুটোই থাকে, স্কেলারের শুধু মান থাকে।"
+        },
+        {
+          "q": "What are the rectangular components of a vector A at angle θ?",
+          "q_bn": "θ কোণে A ভেক্টরের আয়তাকার উপাংশ কী?",
+          "a": "The components are Aₓ = A cos θ and Aᵧ = A sin θ.",
+          "a_bn": "উপাংশ দুটি হলো Aₓ = A cos θ এবং Aᵧ = A sin θ।"
+        },
+        {
+          "q": "What is the resultant of two vectors in the same direction?",
+          "q_bn": "একই দিকের দুটি ভেক্টরের লব্ধি কত?",
+          "a": "Their magnitudes add, so R = A + B in that common direction.",
+          "a_bn": "তাদের মান যোগ হয়, তাই একই দিকে R = A + B।"
+        },
+        {
+          "q": "What is the resultant of two opposite collinear vectors?",
+          "q_bn": "বিপরীতমুখী একই সরলরেখার দুটি ভেক্টরের লব্ধি কী?",
+          "a": "Its magnitude is |A − B| and it points in the direction of the larger vector.",
+          "a_bn": "এর মান |A − B| এবং দিক বড় ভেক্টরের দিকে।"
+        },
+        {
+          "q": "How do you combine two perpendicular vectors?",
+          "q_bn": "পরস্পর লম্ব দুটি ভেক্টর কীভাবে যোগ করা হয়?",
+          "a": "The magnitude is √(A² + B²), obtained from the Pythagorean theorem.",
+          "a_bn": "পিথাগোরাসের সূত্রে লব্ধির মান √(A² + B²)।"
+        },
+        {
+          "q": "What is an equilibrant?",
+          "q_bn": "সাম্যকারী ভেক্টর কী?",
+          "a": "It has the same magnitude as the resultant but the opposite direction, making the net vector zero.",
+          "a_bn": "এর মান লব্ধির সমান কিন্তু দিক বিপরীত; ফলে মোট ভেক্টর শূন্য হয়।"
+        },
+        {
+          "q": "What does the parallelogram law represent?",
+          "q_bn": "সামান্তরিক সূত্র কী বোঝায়?",
+          "a": "Two vectors drawn from one point form adjacent sides; the diagonal from that point is their resultant.",
+          "a_bn": "এক বিন্দু থেকে আঁকা দুই ভেক্টর সামান্তরিকের সন্নিহিত বাহু হলে সেই বিন্দু থেকে কর্ণটি লব্ধি।"
+        },
+        {
+          "q": "Why should direction be found with both x and y components?",
+          "q_bn": "দিক নির্ণয়ে x ও y উভয় উপাংশ কেন দরকার?",
+          "a": "The signs of both components identify the correct quadrant; using only a simple tangent can lose that information.",
+          "a_bn": "দুই উপাংশের চিহ্ন সঠিক চতুর্ভাগ নির্ধারণ করে; শুধু সাধারণ tangent নিলে সেই তথ্য হারাতে পারে।"
+        }
+      ]
+    },
+    {
+      "slug": "mass-spring-oscillator",
+      "simulation_slug": "mass-spring-oscillator",
+      "subject": "physics",
+      "title_en": "Mass–spring oscillator",
+      "title_bn": "স্প্রিং-ভর দোলক",
+      "experiment_slugs": [
+        "mass-spring-shm"
+      ],
+      "questions": [
+        {
+          "q": "What does Hooke’s law state?",
+          "q_bn": "হুকের সূত্র কী বলে?",
+          "a": "Within the elastic limit, the restoring force is F = −kx; the minus sign shows it opposes displacement.",
+          "a_bn": "স্থিতিস্থাপক সীমার মধ্যে প্রত্যাবর্তী বল F = −kx; ঋণাত্মক চিহ্নটি সরণের বিপরীত দিক বোঝায়।"
+        },
+        {
+          "q": "What is the ideal period of a mass–spring oscillator?",
+          "q_bn": "আদর্শ স্প্রিং-ভর দোলকের দোলনকাল কত?",
+          "a": "T = 2π√(m/k), where m is the oscillating mass and k is the spring constant.",
+          "a_bn": "T = 2π√(m/k), যেখানে m দোলায়মান ভর এবং k স্প্রিং ধ্রুবক।"
+        },
+        {
+          "q": "What happens to the period if the mass is quadrupled?",
+          "q_bn": "ভর চার গুণ করলে দোলনকাল কী হয়?",
+          "a": "The period doubles because T is proportional to √m.",
+          "a_bn": "T, √m-এর সমানুপাতিক বলে দোলনকাল দ্বিগুণ হয়।"
+        },
+        {
+          "q": "What happens to the period when the spring constant increases?",
+          "q_bn": "স্প্রিং ধ্রুবক বাড়লে দোলনকাল কী হয়?",
+          "a": "The period decreases because T is proportional to 1/√k.",
+          "a_bn": "T, 1/√k-এর সমানুপাতিক বলে দোলনকাল কমে।"
+        },
+        {
+          "q": "Does amplitude change the ideal spring period?",
+          "q_bn": "বিস্তার কি আদর্শ স্প্রিংয়ের দোলনকাল বদলায়?",
+          "a": "No, not while Hooke’s law remains valid and the motion is simple harmonic.",
+          "a_bn": "না, যতক্ষণ হুকের সূত্র প্রযোজ্য এবং গতি সরল ছন্দিত থাকে।"
+        },
+        {
+          "q": "What is the total energy of an ideal oscillator?",
+          "q_bn": "আদর্শ দোলকের মোট শক্তি কত?",
+          "a": "The constant total mechanical energy is E = ½kA².",
+          "a_bn": "ধ্রুব মোট যান্ত্রিক শক্তি E = ½kA²।"
+        },
+        {
+          "q": "Where is kinetic energy greatest?",
+          "q_bn": "গতিশক্তি কোথায় সর্বাধিক?",
+          "a": "At the equilibrium position, where speed is greatest and spring potential energy is least.",
+          "a_bn": "সাম্য অবস্থানে, যেখানে বেগ সর্বাধিক এবং স্প্রিংয়ের স্থিতিশক্তি সর্বনিম্ন।"
+        },
+        {
+          "q": "What does damping do to the motion?",
+          "q_bn": "স্যাঁতসেঁতে প্রতিরোধ বা damping গতিতে কী করে?",
+          "a": "It removes mechanical energy, so the amplitude decreases with time.",
+          "a_bn": "এটি যান্ত্রিক শক্তি অপসারণ করে, ফলে সময়ের সঙ্গে বিস্তার কমে।"
+        }
+      ]
+    },
+    {
+      "slug": "fluid-flow-bernoulli",
+      "simulation_slug": "fluid-flow-bernoulli",
+      "subject": "physics",
+      "title_en": "Fluid flow and Bernoulli",
+      "title_bn": "প্রবাহ ও বার্নৌলি",
+      "experiment_slugs": [
+        "venturi-bernoulli"
+      ],
+      "questions": [
+        {
+          "q": "What does the continuity equation express?",
+          "q_bn": "ধারাবাহিকতার সমীকরণ কী প্রকাশ করে?",
+          "a": "For steady incompressible flow, volume flow rate is conserved: A₁v₁ = A₂v₂.",
+          "a_bn": "স্থির অসংকোচনীয় প্রবাহে আয়তন প্রবাহ হার ধ্রুব: A₁v₁ = A₂v₂।"
+        },
+        {
+          "q": "Why does fluid speed up in a narrower pipe?",
+          "q_bn": "সরু নলে প্রবাহীর বেগ বাড়ে কেন?",
+          "a": "The same volume must pass each cross-section per unit time, so lower area requires higher speed.",
+          "a_bn": "প্রতি একক সময়ে একই আয়তন প্রতিটি প্রস্থচ্ছেদ দিয়ে যায়, তাই ক্ষেত্রফল কমলে বেগ বাড়ে।"
+        },
+        {
+          "q": "How does pressure change in a horizontal narrowing?",
+          "q_bn": "অনুভূমিক নল সরু হলে চাপ কীভাবে বদলায়?",
+          "a": "In the ideal Bernoulli model, higher speed in the narrow section corresponds to lower static pressure.",
+          "a_bn": "আদর্শ বার্নৌলি মডেলে সরু অংশের বেশি বেগের সঙ্গে স্থিতি চাপ কমে।"
+        },
+        {
+          "q": "What is volume flow rate?",
+          "q_bn": "আয়তন প্রবাহ হার কী?",
+          "a": "Q = Av, the volume crossing a section per unit time, measured in m³/s in SI.",
+          "a_bn": "Q = Av, অর্থাৎ একক সময়ে প্রস্থচ্ছেদ পার হওয়া আয়তন; SI একক m³/s।"
+        },
+        {
+          "q": "Which assumptions underlie Bernoulli’s equation?",
+          "q_bn": "বার্নৌলি সমীকরণে কী কী অনুমান করা হয়?",
+          "a": "The flow is steady, incompressible and non-viscous along a streamline.",
+          "a_bn": "প্রবাহটি একটি প্রবাহরেখা বরাবর স্থির, অসংকোচনীয় ও অসান্দ্র ধরা হয়।"
+        },
+        {
+          "q": "How does increasing height affect pressure at the same speed?",
+          "q_bn": "একই বেগে উচ্চতা বাড়লে চাপ কীভাবে বদলায়?",
+          "a": "Pressure decreases because more energy per unit volume is stored as gravitational potential energy ρgh.",
+          "a_bn": "ρgh আকারে বেশি শক্তি মহাকর্ষীয় স্থিতিশক্তি হওয়ায় চাপ কমে।"
+        },
+        {
+          "q": "How is mass flow rate related to volume flow rate?",
+          "q_bn": "ভর প্রবাহ হার ও আয়তন প্রবাহ হারের সম্পর্ক কী?",
+          "a": "Mass flow rate is ṁ = ρQ, where ρ is fluid density.",
+          "a_bn": "ভর প্রবাহ হার ṁ = ρQ, যেখানে ρ প্রবাহীর ঘনত্ব।"
+        },
+        {
+          "q": "Why does a real pipe lose more pressure than the ideal model predicts?",
+          "q_bn": "বাস্তব নলে আদর্শ মডেলের চেয়ে বেশি চাপ কমে কেন?",
+          "a": "Viscosity, turbulence, wall friction and fittings dissipate mechanical energy.",
+          "a_bn": "সান্দ্রতা, ঘূর্ণি, দেয়ালের ঘর্ষণ ও সংযোগস্থলে যান্ত্রিক শক্তি ক্ষয় হয়।"
+        }
+      ]
+    },
+    {
+      "slug": "wheatstone-bridge",
+      "simulation_slug": "wheatstone-bridge",
+      "subject": "physics",
+      "title_en": "Wheatstone bridge",
+      "title_bn": "হুইটস্টোন ব্রিজ",
+      "experiment_slugs": [
+        "wheatstone-bridge-balance"
+      ],
+      "questions": [
+        {
+          "q": "What is the Wheatstone bridge balance condition?",
+          "q_bn": "হুইটস্টোন ব্রিজের সাম্য শর্ত কী?",
+          "a": "For the labelled arms used here, balance occurs when R₁/R₂ = R₃/R₄.",
+          "a_bn": "এখানে চিহ্নিত বাহুগুলোর জন্য সাম্যে R₁/R₂ = R₃/R₄।"
+        },
+        {
+          "q": "Why is the bridge called a null method?",
+          "q_bn": "ব্রিজকে null পদ্ধতি বলা হয় কেন?",
+          "a": "The measurement is made when the detector reads zero current rather than from its calibrated deflection.",
+          "a_bn": "detector-এর calibrated বিচ্যুতি নয়, শূন্য প্রবাহের অবস্থায় পরিমাপ নেওয়া হয়।"
+        },
+        {
+          "q": "What flows through the galvanometer at exact balance?",
+          "q_bn": "পূর্ণ সাম্যে গ্যালভানোমিটারে কত প্রবাহ চলে?",
+          "a": "Ideally zero current, because its two terminals are at the same potential.",
+          "a_bn": "আদর্শভাবে শূন্য, কারণ এর দুই প্রান্ত একই বিভবে থাকে।"
+        },
+        {
+          "q": "How can R₄ be found from the balance ratio?",
+          "q_bn": "সাম্য অনুপাত থেকে R₄ কীভাবে নির্ণয় করা যায়?",
+          "a": "Rearranging R₁/R₂ = R₃/R₄ gives R₄ = R₂R₃/R₁.",
+          "a_bn": "R₁/R₂ = R₃/R₄ পুনর্বিন্যাস করলে R₄ = R₂R₃/R₁।"
+        },
+        {
+          "q": "Does ideal balance depend on supply voltage?",
+          "q_bn": "আদর্শ সাম্য কি উৎস ভোল্টেজের ওপর নির্ভর করে?",
+          "a": "No. The balance condition depends on resistance ratios, provided the detector can sense the null safely.",
+          "a_bn": "না। detector নিরাপদে null ধরতে পারলে সাম্য শুধু রোধের অনুপাতের ওপর নির্ভর করে।"
+        },
+        {
+          "q": "When is a bridge most sensitive?",
+          "q_bn": "ব্রিজ কখন সবচেয়ে সংবেদনশীল?",
+          "a": "Sensitivity is generally best when all four arm resistances are of a similar order.",
+          "a_bn": "চার বাহুর রোধ কাছাকাছি মাত্রার হলে সাধারণত সংবেদনশীলতা সর্বোত্তম হয়।"
+        },
+        {
+          "q": "What does a non-zero galvanometer current indicate?",
+          "q_bn": "গ্যালভানোমিটারে শূন্য নয় এমন প্রবাহ কী বোঝায়?",
+          "a": "The midpoint potentials differ, so the two arm ratios are not balanced.",
+          "a_bn": "মধ্যবিন্দু দুটির বিভব আলাদা, তাই দুই বাহুর অনুপাত সাম্যে নেই।"
+        },
+        {
+          "q": "Why should resistor heating be minimized?",
+          "q_bn": "রোধকের উত্তাপ কম রাখা দরকার কেন?",
+          "a": "Heating can change resistance and shift the balance point during measurement.",
+          "a_bn": "উত্তাপে রোধ বদলে যেতে পারে এবং পরিমাপের সময় সাম্যবিন্দু সরে যেতে পারে।"
+        }
+      ]
+    },
+    {
+      "slug": "simple-pendulum",
+      "simulation_slug": "simple-pendulum",
+      "subject": "physics",
+      "title_en": "Simple pendulum",
+      "title_bn": "সরল দোলক",
+      "experiment_slugs": [
+        "simple-pendulum",
+        "katers-pendulum-gravity"
+      ],
+      "questions": [
+        {
+          "q": "What is the small-angle pendulum period?",
+          "q_bn": "ক্ষুদ্র কোণে দোলকের দোলনকাল কত?",
+          "a": "T = 2π√(L/g), where L is measured from the pivot to the bob’s centre.",
+          "a_bn": "T = 2π√(L/g), যেখানে L ঝোলনবিন্দু থেকে ববের কেন্দ্র পর্যন্ত দৈর্ঘ্য।"
+        },
+        {
+          "q": "What happens to the period if length is quadrupled?",
+          "q_bn": "দৈর্ঘ্য চার গুণ করলে দোলনকাল কী হয়?",
+          "a": "The period doubles because T is proportional to √L.",
+          "a_bn": "T, √L-এর সমানুপাতিক বলে দোলনকাল দ্বিগুণ হয়।"
+        },
+        {
+          "q": "How does stronger gravity affect the period?",
+          "q_bn": "বেশি মহাকর্ষ দোলনকালে কী প্রভাব ফেলে?",
+          "a": "It shortens the period because T is proportional to 1/√g.",
+          "a_bn": "T, 1/√g-এর সমানুপাতিক বলে দোলনকাল কমে।"
+        },
+        {
+          "q": "Does bob mass change the ideal period?",
+          "q_bn": "ববের ভর কি আদর্শ দোলনকাল বদলায়?",
+          "a": "No. The mass cancels from the ideal equation of motion.",
+          "a_bn": "না। আদর্শ গতিসমীকরণ থেকে ভর কেটে যায়।"
+        },
+        {
+          "q": "Why must the swing angle be small?",
+          "q_bn": "দোলনের কোণ ছোট রাখা হয় কেন?",
+          "a": "The formula uses sin θ ≈ θ, an approximation that becomes inaccurate at large angles.",
+          "a_bn": "সূত্রে sin θ ≈ θ ধরা হয়, যা বড় কোণে আর যথেষ্ট নির্ভুল নয়।"
+        },
+        {
+          "q": "Why time many oscillations?",
+          "q_bn": "অনেক দোলনের সময় একসঙ্গে নেওয়া হয় কেন?",
+          "a": "A longer measured interval reduces the relative effect of stopwatch reaction-time error.",
+          "a_bn": "দীর্ঘ সময় মাপলে stopwatch-এর reaction-time ত্রুটির আপেক্ষিক প্রভাব কমে।"
+        },
+        {
+          "q": "Where is pendulum speed greatest?",
+          "q_bn": "দোলকের বেগ কোথায় সর্বাধিক?",
+          "a": "At the lowest point, where gravitational potential energy is minimum.",
+          "a_bn": "সর্বনিম্ন বিন্দুতে, যেখানে মহাকর্ষীয় স্থিতিশক্তি সর্বনিম্ন।"
+        },
+        {
+          "q": "Can a pendulum measure local gravity?",
+          "q_bn": "দোলক দিয়ে কি স্থানীয় g মাপা যায়?",
+          "a": "Yes. Measuring L and T allows g = 4π²L/T² to be calculated.",
+          "a_bn": "হ্যাঁ। L ও T মেপে g = 4π²L/T² হিসাব করা যায়।"
+        }
+      ]
+    },
+    {
+      "slug": "ohms-law-circuit",
+      "simulation_slug": "ohms-law-circuit",
+      "subject": "physics",
+      "title_en": "Ohm's law circuit",
+      "title_bn": "ওহমের সূত্র সার্কিট",
+      "experiment_slugs": [
+        "ohms-law-experiment"
+      ],
+      "questions": [
+        {
+          "q": "What does Ohm's law state?",
+          "q_bn": "ওহমের সূত্র কী বলে?",
+          "a": "For an ohmic conductor at constant temperature, V = IR.",
+          "a_bn": "তাপমাত্রা ধ্রুব থাকলে ohmic পরিবাহীর জন্য V = IR।"
+        },
+        {
+          "q": "What does the slope of a V-versus-I graph represent?",
+          "q_bn": "V বনাম I লেখচিত্রের ঢাল কী বোঝায়?",
+          "a": "The slope ΔV/ΔI is the resistance R.",
+          "a_bn": "ঢাল ΔV/ΔI হলো রোধ R।"
+        },
+        {
+          "q": "How are resistances combined in series?",
+          "q_bn": "series-এ রোধ কীভাবে যোগ হয়?",
+          "a": "Series resistances add directly: R_eq = R₁ + R₂ + …",
+          "a_bn": "series রোধ সরাসরি যোগ হয়: R_eq = R₁ + R₂ + …।"
+        },
+        {
+          "q": "Why is parallel equivalent resistance smaller than either branch?",
+          "q_bn": "parallel সমতুল্য রোধ প্রতিটি শাখার চেয়ে কম কেন?",
+          "a": "Parallel branches provide additional paths for current, increasing total conductance.",
+          "a_bn": "parallel শাখা প্রবাহের অতিরিক্ত পথ দেয়, ফলে মোট conductance বাড়ে।"
+        },
+        {
+          "q": "Why is an ammeter connected in series?",
+          "q_bn": "ammeter series-এ যুক্ত করা হয় কেন?",
+          "a": "It must carry the same current as the component being measured and has very low resistance.",
+          "a_bn": "এতে মাপা component-এর একই প্রবাহ চলতে হয় এবং এর রোধ খুব কম।"
+        },
+        {
+          "q": "Why is a voltmeter connected in parallel?",
+          "q_bn": "voltmeter parallel-এ যুক্ত করা হয় কেন?",
+          "a": "It compares the potential at two terminals and has very high resistance.",
+          "a_bn": "এটি দুই প্রান্তের বিভব তুলনা করে এবং এর রোধ খুব বেশি।"
+        },
+        {
+          "q": "How is electrical power calculated?",
+          "q_bn": "বৈদ্যুতিক ক্ষমতা কীভাবে হিসাব করা হয়?",
+          "a": "P = VI; for a resistor it can also be written I²R or V²/R.",
+          "a_bn": "P = VI; রোধকের জন্য এটি I²R বা V²/R-ও লেখা যায়।"
+        },
+        {
+          "q": "Why might a filament lamp not obey a straight V–I line?",
+          "q_bn": "filament lamp-এর V–I রেখা সরল নাও হতে পারে কেন?",
+          "a": "Its filament heats up, changing resistance as current increases.",
+          "a_bn": "প্রবাহ বাড়লে filament গরম হয়ে রোধ বদলে যায়।"
+        }
+      ]
+    },
+    {
+      "slug": "wave-interference",
+      "simulation_slug": "wave-interference",
+      "subject": "physics",
+      "title_en": "Wave interference",
+      "title_bn": "তরঙ্গের ব্যতিচার",
+      "experiment_slugs": [
+        "meldes-string-frequency",
+        "wave-energy-string-lab",
+        "resonance-tube-speed"
+      ],
+      "questions": [
+        {
+          "q": "What is the superposition principle?",
+          "q_bn": "উপরিপাতন নীতি কী?",
+          "a": "When waves overlap, the resultant displacement is the algebraic sum of their individual displacements.",
+          "a_bn": "তরঙ্গ overlap করলে লব্ধি সরণ তাদের পৃথক সরণের বীজগাণিতিক যোগফল।"
+        },
+        {
+          "q": "When does perfect constructive interference occur?",
+          "q_bn": "পূর্ণ গঠনমূলক ব্যতিচার কখন হয়?",
+          "a": "For equal-frequency waves it occurs at a phase difference of 0 or an integer multiple of 2π.",
+          "a_bn": "সমান কম্পাঙ্কের তরঙ্গে phase difference 0 বা 2π-এর পূর্ণগুণিতক হলে।"
+        },
+        {
+          "q": "When does complete destructive interference occur?",
+          "q_bn": "পূর্ণ ধ্বংসাত্মক ব্যতিচার কখন হয়?",
+          "a": "Equal-amplitude waves cancel when their phase difference is π modulo 2π.",
+          "a_bn": "সমান বিস্তারের তরঙ্গের phase difference π (mod 2π) হলে তারা বাতিল হয়।"
+        },
+        {
+          "q": "What is the resultant amplitude of two equal waves with phase gap φ?",
+          "q_bn": "φ phase gap-সহ সমান দুটি তরঙ্গের লব্ধি বিস্তার কত?",
+          "a": "Its magnitude is 2A|cos(φ/2)|.",
+          "a_bn": "এর মান 2A|cos(φ/2)|।"
+        },
+        {
+          "q": "Does interference change the frequency of the source waves?",
+          "q_bn": "ব্যতিচার কি উৎস তরঙ্গের কম্পাঙ্ক বদলায়?",
+          "a": "No. It changes the resultant amplitude pattern, not the original frequencies.",
+          "a_bn": "না। এটি লব্ধি বিস্তারের pattern বদলায়, মূল কম্পাঙ্ক নয়।"
+        },
+        {
+          "q": "What is a node in a standing wave?",
+          "q_bn": "স্থির তরঙ্গে node কী?",
+          "a": "A node is a position of permanently zero displacement in the ideal pattern.",
+          "a_bn": "node হলো আদর্শ pattern-এ সবসময় শূন্য সরণের অবস্থান।"
+        },
+        {
+          "q": "What is an antinode?",
+          "q_bn": "antinode কী?",
+          "a": "It is a position where the standing-wave oscillation amplitude is maximum.",
+          "a_bn": "এটি স্থির তরঙ্গে সর্বাধিক দোলন বিস্তারের অবস্থান।"
+        },
+        {
+          "q": "Is energy destroyed at a destructive-interference point?",
+          "q_bn": "ধ্বংসাত্মক ব্যতিচারের বিন্দুতে শক্তি কি ধ্বংস হয়?",
+          "a": "No. Interference redistributes energy to other regions; it does not destroy total energy.",
+          "a_bn": "না। ব্যতিচার শক্তিকে অন্য অঞ্চলে পুনর্বণ্টন করে; মোট শক্তি ধ্বংস করে না।"
+        }
+      ]
+    },
+    {
+      "slug": "newtons-second-law",
+      "simulation_slug": "newtons-second-law",
+      "subject": "physics",
+      "title_en": "Newton's second law",
+      "title_bn": "নিউটনের দ্বিতীয় সূত্র",
+      "experiment_slugs": [
+        "atwood-machine-acceleration",
+        "inclined-plane-friction"
+      ],
+      "questions": [
+        {
+          "q": "What is Newton's second law in vector form?",
+          "q_bn": "নিউটনের দ্বিতীয় সূত্রের ভেক্টর রূপ কী?",
+          "a": "The net external force is ΣF = ma for constant mass.",
+          "a_bn": "ধ্রুব ভরের জন্য মোট বাহ্যিক বল ΣF = ma।"
+        },
+        {
+          "q": "What does “net force” mean?",
+          "q_bn": "“মোট বল” বলতে কী বোঝায়?",
+          "a": "It is the vector sum of all external forces acting on the object.",
+          "a_bn": "এটি বস্তুর ওপর ক্রিয়াশীল সব বাহ্যিক বলের ভেক্টর যোগফল।"
+        },
+        {
+          "q": "Does zero net force mean an object must be at rest?",
+          "q_bn": "মোট বল শূন্য মানে কি বস্তুটি স্থির?",
+          "a": "No. It may be at rest or move with constant velocity.",
+          "a_bn": "না। এটি স্থির থাকতে পারে বা ধ্রুব বেগে চলতে পারে।"
+        },
+        {
+          "q": "What happens to acceleration if the same force acts on twice the mass?",
+          "q_bn": "একই বল দ্বিগুণ ভরের ওপর কাজ করলে ত্বরণ কী হয়?",
+          "a": "The acceleration halves because a = F/m.",
+          "a_bn": "a = F/m বলে ত্বরণ অর্ধেক হয়।"
+        },
+        {
+          "q": "What is one newton?",
+          "q_bn": "এক নিউটন কী?",
+          "a": "One newton is the force that gives 1 kg a 1 m/s² acceleration: 1 N = 1 kg·m/s².",
+          "a_bn": "১ kg ভরকে ১ m/s² ত্বরণ দেওয়ার বল: ১ N = ১ kg·m/s²।"
+        },
+        {
+          "q": "Why do action and reaction not cancel on one object?",
+          "q_bn": "ক্রিয়া ও প্রতিক্রিয়া কেন একটি বস্তুর ওপর বাতিল হয় না?",
+          "a": "They act on different objects, so they are not both included in one object’s force sum.",
+          "a_bn": "তারা ভিন্ন বস্তুর ওপর কাজ করে, তাই একটি বস্তুর বলের যোগফলে দুটো একসঙ্গে থাকে না।"
+        },
+        {
+          "q": "How is friction included in the acceleration calculation?",
+          "q_bn": "ত্বরণ হিসাবের মধ্যে ঘর্ষণ কীভাবে ধরা হয়?",
+          "a": "Subtract opposing friction from the applied force first, then divide the net force by mass.",
+          "a_bn": "প্রয়োগ বল থেকে বিপরীত ঘর্ষণ বাদ দিয়ে মোট বলকে ভর দিয়ে ভাগ করা হয়।"
+        },
+        {
+          "q": "What does the slope of an acceleration-versus-force graph give?",
+          "q_bn": "ত্বরণ বনাম বল লেখচিত্রের ঢাল কী দেয়?",
+          "a": "For fixed mass, a = F/m, so the slope is 1/m.",
+          "a_bn": "ভর ধ্রুব হলে a = F/m, তাই ঢাল 1/m।"
+        }
+      ]
+    },
+    {
+      "slug": "lens-ray-diagram",
+      "simulation_slug": "lens-ray-diagram",
+      "subject": "physics",
+      "title_en": "Lens ray diagram",
+      "title_bn": "লেন্সের রশ্মি চিত্র",
+      "experiment_slugs": [
+        "lens-focal-length"
+      ],
+      "questions": [
+        {
+          "q": "What does a ray parallel to the principal axis do after a convex lens?",
+          "q_bn": "প্রধান অক্ষের সমান্তরাল রশ্মি উত্তল লেন্সের পরে কী করে?",
+          "a": "It refracts through the principal focus on the far side.",
+          "a_bn": "এটি প্রতিসরিত হয়ে অপর পাশের প্রধান ফোকাস দিয়ে যায়।"
+        },
+        {
+          "q": "What happens to a ray through the optical centre of a thin lens?",
+          "q_bn": "পাতলা লেন্সের আলোককেন্দ্র দিয়ে যাওয়া রশ্মির কী হয়?",
+          "a": "In the thin-lens approximation it continues essentially undeviated.",
+          "a_bn": "পাতলা লেন্সের approximation-এ এটি প্রায় অবিচ্যুতভাবে চলে।"
+        },
+        {
+          "q": "What image forms when an object is beyond 2f?",
+          "q_bn": "বস্তু 2f-এর বাইরে থাকলে কেমন প্রতিবিম্ব হয়?",
+          "a": "A real, inverted, diminished image forms between f and 2f.",
+          "a_bn": "f ও 2f-এর মধ্যে বাস্তব, উল্টো ও খর্বিত প্রতিবিম্ব হয়।"
+        },
+        {
+          "q": "What image forms when the object is at 2f?",
+          "q_bn": "বস্তু 2f-এ থাকলে কেমন প্রতিবিম্ব হয়?",
+          "a": "A real, inverted image of equal size forms at 2f on the other side.",
+          "a_bn": "অপর পাশে 2f-এ সমান আকারের বাস্তব ও উল্টো প্রতিবিম্ব হয়।"
+        },
+        {
+          "q": "What image forms when the object lies between f and 2f?",
+          "q_bn": "বস্তু f ও 2f-এর মধ্যে থাকলে কেমন প্রতিবিম্ব হয়?",
+          "a": "A real, inverted, magnified image forms beyond 2f.",
+          "a_bn": "2f-এর বাইরে বাস্তব, উল্টো ও বিবর্ধিত প্রতিবিম্ব হয়।"
+        },
+        {
+          "q": "What happens when the object is inside the focal length?",
+          "q_bn": "বস্তু focal length-এর ভেতরে থাকলে কী হয়?",
+          "a": "The image is virtual, upright and magnified, so it cannot be projected on a screen.",
+          "a_bn": "প্রতিবিম্ব অবাস্তব, সোজা ও বিবর্ধিত হয়; তাই screen-এ ধরা যায় না।"
+        },
+        {
+          "q": "How is linear magnification related to distances?",
+          "q_bn": "রৈখিক বিবর্ধন ও দূরত্বের সম্পর্ক কী?",
+          "a": "In magnitude, m = image distance/object distance = image height/object height.",
+          "a_bn": "মান হিসেবে m = প্রতিবিম্ব দূরত্ব/বস্তু দূরত্ব = প্রতিবিম্ব উচ্চতা/বস্তু উচ্চতা।"
+        },
+        {
+          "q": "Why should lens measurements use the optical centre?",
+          "q_bn": "লেন্সের দূরত্ব আলোককেন্দ্র থেকে মাপা উচিত কেন?",
+          "a": "The thin-lens equation defines object and image distances from the lens’s optical centre.",
+          "a_bn": "পাতলা লেন্সের সমীকরণে বস্তু ও প্রতিবিম্ব দূরত্ব লেন্সের আলোককেন্দ্র থেকে সংজ্ঞায়িত।"
+        }
+      ]
+    },
+    {
+      "slug": "young-double-slit",
+      "simulation_slug": "young-double-slit",
+      "subject": "physics",
+      "title_en": "Young's double-slit experiment",
+      "title_bn": "ইয়ং-এর দ্বিচির পরীক্ষা",
+      "experiment_slugs": [
+        "young-double-slit-lab"
+      ],
+      "questions": [
+        {
+          "q": "What is the fringe-width formula?",
+          "q_bn": "ঝালর-প্রস্থের সূত্র কী?",
+          "a": "For small angles, β = λD/d.",
+          "a_bn": "ক্ষুদ্র কোণে β = λD/d।"
+        },
+        {
+          "q": "What happens to fringe width when wavelength increases?",
+          "q_bn": "তরঙ্গদৈর্ঘ্য বাড়লে ঝালর-প্রস্থ কী হয়?",
+          "a": "It increases in direct proportion to wavelength.",
+          "a_bn": "এটি তরঙ্গদৈর্ঘ্যের সমানুপাতিক হারে বাড়ে।"
+        },
+        {
+          "q": "What happens if screen distance is doubled?",
+          "q_bn": "পর্দার দূরত্ব দ্বিগুণ করলে কী হয়?",
+          "a": "The fringe width doubles, provided the small-angle approximation remains valid.",
+          "a_bn": "ক্ষুদ্র-কোণ approximation প্রযোজ্য থাকলে ঝালর-প্রস্থ দ্বিগুণ হয়।"
+        },
+        {
+          "q": "What happens when slit separation increases?",
+          "q_bn": "চিরের ব্যবধান বাড়লে কী হয়?",
+          "a": "The fringes become narrower because β is inversely proportional to d.",
+          "a_bn": "β, d-এর ব্যস্তানুপাতিক বলে ঝালরগুলো সরু হয়।"
+        },
+        {
+          "q": "Why are coherent sources required?",
+          "q_bn": "সুসঙ্গত উৎস কেন দরকার?",
+          "a": "A stable phase difference is needed to keep the bright and dark fringes stationary.",
+          "a_bn": "উজ্জ্বল ও অন্ধকার ঝালর স্থির রাখতে স্থিতিশীল phase difference দরকার।"
+        },
+        {
+          "q": "Why is the central fringe bright?",
+          "q_bn": "কেন্দ্রীয় ঝালর উজ্জ্বল কেন?",
+          "a": "At the centre the path difference is zero, so the waves arrive in phase.",
+          "a_bn": "কেন্দ্রে পথ পার্থক্য শূন্য, তাই তরঙ্গগুলো একই phase-এ পৌঁছায়।"
+        },
+        {
+          "q": "What is the relative intensity pattern for equal slits?",
+          "q_bn": "সমান দুই চিরের আপেক্ষিক তীব্রতার pattern কী?",
+          "a": "Ideally it varies as cos² of the phase-related position factor.",
+          "a_bn": "আদর্শভাবে এটি অবস্থান-সম্পর্কিত phase factor-এর cos² অনুযায়ী বদলায়।"
+        },
+        {
+          "q": "Which approximation is used to derive evenly spaced fringes?",
+          "q_bn": "সমদূরবর্তী ঝালর নির্ণয়ে কোন approximation ব্যবহৃত হয়?",
+          "a": "For a distant screen, sin θ ≈ tan θ ≈ y/D.",
+          "a_bn": "দূরের পর্দার জন্য sin θ ≈ tan θ ≈ y/D ধরা হয়।"
+        }
+      ]
+    },
+    {
+      "slug": "acid-base-titration",
+      "simulation_slug": "acid-base-titration",
+      "subject": "chemistry",
+      "title_en": "Acid–base titration",
+      "title_bn": "অ্যাসিড–বেস টাইট্রেশন",
+      "experiment_slugs": [
+        "acid-base-titration",
+        "naoh-oxalic-standardization",
+        "hcl-sodium-carbonate-standardization"
+      ],
+      "questions": [
+        {
+          "q": "What defines the equivalence point?",
+          "q_bn": "সমতুল্য বিন্দু কীভাবে সংজ্ঞায়িত হয়?",
+          "a": "Reactants have been mixed in the exact stoichiometric mole ratio.",
+          "a_bn": "বিক্রিয়কগুলো সঠিক stoichiometric mole ratio-তে মিশেছে।"
+        },
+        {
+          "q": "How does an endpoint differ from the equivalence point?",
+          "q_bn": "endpoint ও equivalence point-এর পার্থক্য কী?",
+          "a": "The endpoint is the observed indicator change; the equivalence point is the theoretical stoichiometric point.",
+          "a_bn": "endpoint হলো indicator-এর দৃশ্যমান পরিবর্তন; equivalence point হলো তাত্ত্বিক stoichiometric বিন্দু।"
+        },
+        {
+          "q": "Why should the burette be rinsed with titrant?",
+          "q_bn": "burette-কে titrant দিয়ে ধোয়া হয় কেন?",
+          "a": "Residual water would dilute the titrant and change its effective concentration.",
+          "a_bn": "অবশিষ্ট পানি titrant-কে dilute করে কার্যকর ঘনমাত্রা বদলে দিত।"
+        },
+        {
+          "q": "Why is a white tile placed under the flask?",
+          "q_bn": "flask-এর নিচে সাদা tile রাখা হয় কেন?",
+          "a": "It makes the first permanent indicator colour change easier to see.",
+          "a_bn": "এতে indicator-এর প্রথম স্থায়ী রঙ পরিবর্তন সহজে দেখা যায়।"
+        },
+        {
+          "q": "How should a colourless burette liquid be read?",
+          "q_bn": "বর্ণহীন burette তরল কীভাবে পড়তে হয়?",
+          "a": "Read the bottom of the meniscus at eye level to avoid parallax.",
+          "a_bn": "parallax এড়াতে চোখের সমতলে meniscus-এর নিচের অংশ পড়তে হয়।"
+        },
+        {
+          "q": "Why does rinsing the conical flask with distilled water not change the titre?",
+          "q_bn": "conical flask distilled water দিয়ে ধুলে titre বদলায় না কেন?",
+          "a": "It changes total volume but not the moles of analyte already delivered by pipette.",
+          "a_bn": "এতে মোট আয়তন বদলায়, কিন্তু pipette-এ নেওয়া analyte-এর mole বদলায় না।"
+        },
+        {
+          "q": "What is the pH at strong-acid–strong-base equivalence at 25 °C?",
+          "q_bn": "২৫ °C-এ strong acid–strong base equivalence-এ pH কত?",
+          "a": "Ideally pH 7, because the resulting salt does not hydrolyse appreciably.",
+          "a_bn": "আদর্শভাবে pH ৭, কারণ উৎপন্ন লবণ উল্লেখযোগ্য hydrolysis করে না।"
+        },
+        {
+          "q": "Why is titrant added dropwise near the endpoint?",
+          "q_bn": "endpoint-এর কাছে titrant ফোঁটায় ফোঁটায় দেওয়া হয় কেন?",
+          "a": "The pH changes steeply there, so one extra large addition can overshoot the endpoint.",
+          "a_bn": "সেখানে pH দ্রুত বদলায়, তাই একবারে বেশি দিলে endpoint পেরিয়ে যেতে পারে।"
+        }
+      ]
+    },
+    {
+      "slug": "ph-scale",
+      "simulation_slug": "ph-scale",
+      "subject": "chemistry",
+      "title_en": "pH scale",
+      "title_bn": "pH স্কেল",
+      "experiment_slugs": [
+        "weak-acid-ph-approx-lab",
+        "acid-base-titration"
+      ],
+      "questions": [
+        {
+          "q": "How is pH defined?",
+          "q_bn": "pH কীভাবে সংজ্ঞায়িত?",
+          "a": "pH = −log₁₀ a(H⁺); in dilute ideal solutions, activity is approximated by [H⁺].",
+          "a_bn": "pH = −log₁₀ a(H⁺); dilute ideal দ্রবণে activity-কে [H⁺] দিয়ে approximate করা হয়।"
+        },
+        {
+          "q": "What happens to pH when [H⁺] decreases tenfold?",
+          "q_bn": "[H⁺] দশ গুণ কমলে pH কী হয়?",
+          "a": "The pH increases by one unit.",
+          "a_bn": "pH এক একক বাড়ে।"
+        },
+        {
+          "q": "Why is neutral water pH 7 at 25 °C?",
+          "q_bn": "২৫ °C-এ নিরপেক্ষ পানির pH ৭ কেন?",
+          "a": "At that temperature, [H⁺] = [OH⁻] = 1.0 × 10⁻⁷ mol/L.",
+          "a_bn": "ঐ তাপমাত্রায় [H⁺] = [OH⁻] = 1.0 × 10⁻⁷ mol/L।"
+        },
+        {
+          "q": "What is the pH–pOH relation at 25 °C?",
+          "q_bn": "২৫ °C-এ pH ও pOH-এর সম্পর্ক কী?",
+          "a": "pH + pOH = 14.00 for dilute aqueous solutions.",
+          "a_bn": "dilute aqueous দ্রবণের জন্য pH + pOH = 14.00।"
+        },
+        {
+          "q": "Does pH 3 mean three times more acidic than pH 6?",
+          "q_bn": "pH ৩ কি pH ৬-এর চেয়ে তিন গুণ বেশি অম্লীয়?",
+          "a": "No. The scale is logarithmic; pH 3 has 1000 times the hydrogen-ion activity of pH 6.",
+          "a_bn": "না। scale logarithmic; pH ৩-এ pH ৬-এর তুলনায় hydrogen-ion activity ১০০০ গুণ।"
+        },
+        {
+          "q": "What happens when an acidic solution is diluted?",
+          "q_bn": "অম্লীয় দ্রবণ dilute করলে কী হয়?",
+          "a": "Its hydrogen-ion concentration usually falls and its pH moves upward toward neutrality.",
+          "a_bn": "সাধারণত hydrogen-ion concentration কমে এবং pH নিরপেক্ষতার দিকে বাড়ে।"
+        },
+        {
+          "q": "Why can a weak acid have a higher pH than an equally concentrated strong acid?",
+          "q_bn": "সমঘনমাত্রার weak acid-এর pH strong acid-এর চেয়ে বেশি হতে পারে কেন?",
+          "a": "A weak acid ionizes only partially, producing fewer hydrogen ions.",
+          "a_bn": "weak acid আংশিক ionize করে, তাই কম hydrogen ion তৈরি হয়।"
+        },
+        {
+          "q": "Must every aqueous pH lie between 0 and 14?",
+          "q_bn": "সব aqueous pH কি ০ থেকে ১৪-এর মধ্যেই হতে হবে?",
+          "a": "No. Concentrated solutions can have pH below 0 or above 14; the familiar range is a dilute-solution guide.",
+          "a_bn": "না। concentrated দ্রবণে pH ০-এর নিচে বা ১৪-এর ওপরে হতে পারে; পরিচিত rangeটি dilute দ্রবণের নির্দেশক।"
+        }
+      ]
+    },
+    {
+      "slug": "ideal-gas-law",
+      "simulation_slug": "ideal-gas-law",
+      "subject": "chemistry",
+      "title_en": "Ideal gas law",
+      "title_bn": "আদর্শ গ্যাস সূত্র",
+      "experiment_slugs": [
+        "boyle-law-syringe"
+      ],
+      "questions": [
+        {
+          "q": "What is the ideal gas equation?",
+          "q_bn": "আদর্শ গ্যাস সমীকরণ কী?",
+          "a": "PV = nRT.",
+          "a_bn": "PV = nRT।"
+        },
+        {
+          "q": "Why must temperature be in kelvin?",
+          "q_bn": "তাপমাত্রা kelvin-এ নিতে হয় কেন?",
+          "a": "Gas-law proportionalities use absolute temperature measured from absolute zero.",
+          "a_bn": "গ্যাস সূত্রের proportionality absolute zero থেকে মাপা absolute temperature ব্যবহার করে।"
+        },
+        {
+          "q": "What does Boyle’s law predict?",
+          "q_bn": "বয়েলের সূত্র কী বলে?",
+          "a": "At fixed temperature and amount, pressure is inversely proportional to volume: PV = constant.",
+          "a_bn": "তাপমাত্রা ও mole ধ্রুব হলে চাপ আয়তনের ব্যস্তানুপাতিক: PV = ধ্রুব।"
+        },
+        {
+          "q": "What does Charles’s law predict?",
+          "q_bn": "চার্লসের সূত্র কী বলে?",
+          "a": "At fixed pressure and amount, volume is proportional to absolute temperature.",
+          "a_bn": "চাপ ও mole ধ্রুব হলে আয়তন absolute temperature-এর সমানুপাতিক।"
+        },
+        {
+          "q": "What microscopic process creates gas pressure?",
+          "q_bn": "অণুবীক্ষণিকভাবে গ্যাসের চাপ কীভাবে তৈরি হয়?",
+          "a": "Molecules collide with container walls and transfer momentum.",
+          "a_bn": "অণুগুলো পাত্রের দেয়ালে সংঘর্ষ করে ভরবেগ স্থানান্তর করে।"
+        },
+        {
+          "q": "What happens to pressure if moles increase at fixed V and T?",
+          "q_bn": "V ও T ধ্রুব রেখে mole বাড়ালে চাপ কী হয়?",
+          "a": "Pressure increases in direct proportion to n.",
+          "a_bn": "চাপ n-এর সমানুপাতিক হারে বাড়ে।"
+        },
+        {
+          "q": "When does a real gas behave most ideally?",
+          "q_bn": "বাস্তব গ্যাস কখন সবচেয়ে আদর্শ আচরণ করে?",
+          "a": "Generally at low pressure and high temperature, where intermolecular effects are less important.",
+          "a_bn": "সাধারণত কম চাপ ও বেশি তাপমাত্রায়, যখন আন্তঃআণবিক প্রভাব কম গুরুত্বপূর্ণ।"
+        },
+        {
+          "q": "Which SI units match R = 8.314 J mol⁻¹ K⁻¹?",
+          "q_bn": "R = 8.314 J mol⁻¹ K⁻¹-এর সঙ্গে কোন SI একক মেলে?",
+          "a": "Use pressure in pascals, volume in cubic metres, amount in moles and temperature in kelvin.",
+          "a_bn": "চাপ pascal, আয়তন cubic metre, পরিমাণ mole এবং তাপমাত্রা kelvin-এ নিতে হয়।"
+        }
+      ]
+    },
+    {
+      "slug": "molecule-viewer",
+      "simulation_slug": "molecule-viewer",
+      "subject": "chemistry",
+      "title_en": "Molecular structure",
+      "title_bn": "আণবিক গঠন",
+      "experiment_slugs": [],
+      "questions": [
+        {
+          "q": "What is the shape of a water molecule?",
+          "q_bn": "পানির অণুর আকৃতি কী?",
+          "a": "Water is bent because oxygen has two bonding pairs and two lone pairs.",
+          "a_bn": "oxygen-এর দুটি bonding pair ও দুটি lone pair থাকায় পানির অণু বাঁকা।"
+        },
+        {
+          "q": "What is the geometry of methane?",
+          "q_bn": "মিথেনের জ্যামিতি কী?",
+          "a": "Methane is tetrahedral, with bond angles close to 109.5°.",
+          "a_bn": "মিথেন tetrahedral, bond angle প্রায় 109.5°।"
+        },
+        {
+          "q": "What is the basic geometry of benzene?",
+          "q_bn": "benzene-এর মৌলিক জ্যামিতি কী?",
+          "a": "Benzene is a planar hexagonal ring with delocalized π electrons.",
+          "a_bn": "benzene একটি সমতল ষড়ভুজীয় ring, যেখানে π electron delocalized।"
+        },
+        {
+          "q": "Why is molecular shape important?",
+          "q_bn": "আণবিক আকৃতি গুরুত্বপূর্ণ কেন?",
+          "a": "Shape influences polarity, intermolecular forces, reactivity and biological recognition.",
+          "a_bn": "আকৃতি polarity, আন্তঃআণবিক বল, reactivity ও biological recognition-কে প্রভাবিত করে।"
+        },
+        {
+          "q": "What can a ball-and-stick model fail to show accurately?",
+          "q_bn": "ball-and-stick model কী সঠিকভাবে দেখাতে পারে না?",
+          "a": "Atomic sizes and bond lengths are not usually drawn to the same physical scale, and electron density is simplified.",
+          "a_bn": "পরমাণুর আকার ও bond length সাধারণত একই physical scale-এ নয় এবং electron density সরলীকৃত।"
+        },
+        {
+          "q": "Why is water polar?",
+          "q_bn": "পানি polar কেন?",
+          "a": "Its O–H bonds are polar and the bent geometry prevents their dipoles from cancelling.",
+          "a_bn": "O–H bond polar এবং বাঁকা আকৃতির কারণে dipoleগুলো বাতিল হয় না।"
+        },
+        {
+          "q": "Why is methane approximately non-polar?",
+          "q_bn": "মিথেন প্রায় non-polar কেন?",
+          "a": "Its four similar bond dipoles cancel in the symmetric tetrahedral geometry.",
+          "a_bn": "সুষম tetrahedral জ্যামিতিতে চারটি সদৃশ bond dipole পরস্পরকে বাতিল করে।"
+        },
+        {
+          "q": "How many atoms are shown in one benzene molecule?",
+          "q_bn": "একটি benzene অণুতে কতটি পরমাণু দেখানো হয়?",
+          "a": "C₆H₆ contains six carbon atoms and six hydrogen atoms, twelve atoms in total.",
+          "a_bn": "C₆H₆-এ ছয়টি carbon ও ছয়টি hydrogen, মোট বারোটি পরমাণু।"
+        }
+      ]
+    },
+    {
+      "slug": "reaction-rate-temperature",
+      "simulation_slug": "reaction-rate-temperature",
+      "subject": "chemistry",
+      "title_en": "Reaction rate and temperature",
+      "title_bn": "বিক্রিয়ার হার ও তাপমাত্রা",
+      "experiment_slugs": [
+        "iodine-clock-rate-law",
+        "hydrogen-peroxide-decomposition",
+        "ester-hydrolysis-kinetics"
+      ],
+      "questions": [
+        {
+          "q": "What is the Arrhenius equation?",
+          "q_bn": "Arrhenius সমীকরণ কী?",
+          "a": "k = A exp(−Eₐ/RT), relating the rate constant to temperature and activation energy.",
+          "a_bn": "k = A exp(−Eₐ/RT), যা rate constant-কে তাপমাত্রা ও activation energy-এর সঙ্গে যুক্ত করে।"
+        },
+        {
+          "q": "Why does rate usually increase with temperature?",
+          "q_bn": "তাপমাত্রা বাড়লে সাধারণত হার বাড়ে কেন?",
+          "a": "A larger fraction of molecular collisions has enough energy to cross the activation barrier.",
+          "a_bn": "বেশি সংখ্যক আণবিক সংঘর্ষ activation barrier পার হওয়ার মতো শক্তি পায়।"
+        },
+        {
+          "q": "What does a catalyst do to activation energy?",
+          "q_bn": "catalyst activation energy-তে কী করে?",
+          "a": "It provides an alternative pathway with a lower activation energy.",
+          "a_bn": "এটি কম activation energy-সহ বিকল্প reaction pathway দেয়।"
+        },
+        {
+          "q": "Does a catalyst change the equilibrium constant?",
+          "q_bn": "catalyst কি equilibrium constant বদলায়?",
+          "a": "No. It speeds forward and reverse reactions without changing the equilibrium position at a fixed temperature.",
+          "a_bn": "না। নির্দিষ্ট তাপমাত্রায় equilibrium position না বদলে forward ও reverse উভয় reaction দ্রুত করে।"
+        },
+        {
+          "q": "What is the slope of an ln k versus 1/T plot?",
+          "q_bn": "ln k বনাম 1/T plot-এর ঢাল কত?",
+          "a": "The Arrhenius form gives slope −Eₐ/R.",
+          "a_bn": "Arrhenius form অনুযায়ী ঢাল −Eₐ/R।"
+        },
+        {
+          "q": "Why must Eₐ and R use compatible units?",
+          "q_bn": "Eₐ ও R-এর একক compatible হওয়া দরকার কেন?",
+          "a": "The exponent Eₐ/(RT) must be dimensionless; for R in J mol⁻¹ K⁻¹, Eₐ must be in J/mol.",
+          "a_bn": "exponent Eₐ/(RT) dimensionless হতে হয়; R যদি J mol⁻¹ K⁻¹ হয়, Eₐ-কে J/mol নিতে হবে।"
+        },
+        {
+          "q": "How can higher reactant concentration increase rate?",
+          "q_bn": "reactant concentration বাড়লে হার কীভাবে বাড়তে পারে?",
+          "a": "More reacting particles per volume generally produce more frequent effective collisions.",
+          "a_bn": "প্রতি আয়তনে বেশি reacting particle থাকায় কার্যকর সংঘর্ষ সাধারণত বেশি হয়।"
+        },
+        {
+          "q": "Is “the rate doubles for every 10 °C rise” a universal law?",
+          "q_bn": "“প্রতি ১০ °C বৃদ্ধিতে হার দ্বিগুণ” কি সর্বজনীন সূত্র?",
+          "a": "No. It is only a rough rule for some reactions; the Arrhenius relation gives the temperature dependence.",
+          "a_bn": "না। এটি কিছু reaction-এর আনুমানিক নিয়ম; temperature dependence Arrhenius relation দিয়ে নির্ণীত হয়।"
+        }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import { extendedModels } from './extended';
 import { analyticalModels } from './analytical';
 import { curveModels } from './curves';
 import { physicoModels } from './physico';
+import { expandedChemPracticalModels } from './expanded';
 import { matchTask, withDefaults, zeroNoise } from './helpers';
 
 export * from './types';
@@ -38,7 +39,8 @@ export const allChemPracticalModels: ChemPracticalModel[] = [
   ...extendedModels,
   ...analyticalModels,
   ...curveModels,
-  ...physicoModels
+  ...physicoModels,
+  ...expandedChemPracticalModels
 ];
 
 export const chemPracticalModels: Record<string, ChemPracticalModel> = Object.fromEntries(allChemPracticalModels.map((m) => [m.slug, m]));

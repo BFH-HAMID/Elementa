@@ -553,22 +553,34 @@ const bulb: ArtEntry = {
   Comp: ({ p, res, live, burned }) => {
     const power = res?.power ?? 0;
     const voltage = res?.voltageDrop ?? 0;
-    const current = res?.current ?? 0;
     const dead = burned || res?.burnedOut;
-    const lit = power > 0.03 && !dead;
     const ratedP = num(p.ratedPower, 3);
     const ratedV = num(p.ratedVoltage, 6);
-    // brightness 0..1.2 based on power relative to rating
-    const brightness = dead ? 0 : clamp(power / Math.max(0.5, ratedP * 0.6), 0, 1.4);
-    const isDim = brightness > 0 && brightness < 0.35;
-    const isBright = brightness >= 0.7;
+    // The solver supplies perceived luminous output from its hot-tungsten model.
+    // The fallback keeps static stories and older saved benches visually compatible.
+    const brightness = dead ? 0 : clamp(res?.luminousIntensity ?? power / Math.max(0.5, ratedP), 0, 1.45);
+    const lit = brightness > 0.008 && !dead;
+    const isDim = brightness > 0 && brightness < 0.3;
+    const isBright = brightness >= 0.72;
     const isVeryBright = brightness >= 1.0;
-    // color temperature: dim = orange, bright = yellow-white, very bright = white
-    const filamentColor = dead ? '#3f4650' : isVeryBright ? '#ffffff' : isBright ? '#fffbeb' : isDim ? '#fdba74' : '#a8b0b8';
-    const filamentGlow = dead ? 0 : clamp(brightness * 1.1, 0, 1);
+    const colorTemperature = res?.colorTemperatureK ?? (1200 + brightness * 1500);
+    // A cooler filament is visibly orange; near-rated tungsten becomes warm white.
+    const filamentColor = dead
+      ? '#3f4650'
+      : colorTemperature >= 2550
+        ? '#ffffff'
+        : colorTemperature >= 2050
+          ? '#fffbeb'
+          : colorTemperature >= 1500
+            ? '#fdba74'
+            : '#fb923c';
+    const filamentGlow = dead ? 0 : clamp(brightness * 1.15, 0, 1);
 
     return (
-      <g>
+      <g
+        data-bulb-state={dead ? 'burned' : isVeryBright ? 'very-bright' : isBright ? 'bright' : lit ? 'dim' : 'off'}
+        data-bulb-lumens={brightness.toFixed(3)}
+      >
         {/* Light spill on the bench - this is what makes it obvious the bulb is ON */}
         {lit && (
           <g>
@@ -711,7 +723,7 @@ const bulb: ArtEntry = {
         <g>
           <rect x={18} y={80} width={60} height={14} rx={3} fill={dead ? '#1f2937' : lit ? (isVeryBright ? '#fef3c7' : '#fffbeb') : '#f1f5f9'} stroke={dead ? '#374151' : lit ? '#fbbf24' : '#cbd5e1'} strokeWidth={0.6} />
           <text x={48} y={89.5} fontSize={5.2} textAnchor="middle" fontWeight={800} fontFamily="ui-monospace, monospace" fill={dead ? '#ef4444' : lit ? (isVeryBright ? '#92400e' : '#78350f') : '#334155'}>
-            {dead ? 'BURNED OUT' : lit ? `${power.toFixed(2)}W ${isVeryBright ? '● BRIGHT' : isBright ? '● ON' : '● DIM'}` : `${ratedP}W ${ratedV}V OFF`}
+            {dead ? 'BURNED OUT' : lit ? `${voltage.toFixed(1)}V · ${power.toFixed(2)}W ${isVeryBright ? '● BRIGHT' : isBright ? '● ON' : '● DIM'}` : `${ratedP}W ${ratedV}V OFF`}
           </text>
         </g>
 

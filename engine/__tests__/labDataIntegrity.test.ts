@@ -3,6 +3,7 @@ import chemicalsData from '@/data/chemicals.json';
 import reactionsData from '@/data/reactions.json';
 import experimentsData from '@/data/experiments.json';
 import apparatusData from '@/data/apparatus.json';
+import { guidedExperiments } from '@/lib/labData';
 import type { GuidedExperiment, Reaction } from '@/engine/types';
 
 /** Cross-references between the chemistry-lab data files must never dangle. */
@@ -10,14 +11,15 @@ const chemicals = new Set(chemicalsData.chemicals.map((c) => c.id));
 const apparatus = new Set(apparatusData.apparatus.map((a) => a.id));
 const reactions = reactionsData.reactions as unknown as Reaction[];
 const reactionIds = new Set(reactions.map((r) => r.id));
-const experiments = experimentsData.experiments as unknown as GuidedExperiment[];
+const experiments = guidedExperiments;
+const baseExperiments = experimentsData.experiments as unknown as GuidedExperiment[];
 
 describe('chemistry lab data integrity', () => {
   it('keeps the count fields in step with the lists', () => {
     expect(chemicalsData.count).toBe(chemicalsData.chemicals.length);
     expect(chemicalsData.shelfCount).toBe(chemicalsData.chemicals.filter((c) => c.shelf).length);
     expect(reactionsData.count).toBe(reactions.length);
-    expect(experimentsData.count).toBe(experiments.length);
+    expect(experimentsData.count).toBe(baseExperiments.length);
     expect(apparatusData.count).toBe(apparatusData.apparatus.length);
   });
 

@@ -96,6 +96,52 @@ export interface CircuitBranch {
   internalResistance?: number;
   isClosed?: boolean;
   forwardDrop?: number;
+  /** Incandescent filaments heat up and gain resistance as voltage rises. */
+  bulb?: { coldResistance: number; hotResistance: number; ratedVoltage: number; ratedPower: number };
+}
+
+export interface BulbOperatingPoint {
+  effectiveResistance: number;
+  current: number;
+  power: number;
+  /** Approximate tungsten temperature, used for the colour of the filament. */
+  filamentTemperatureC: number;
+  /** Perceived light output: 0 = dark, 1 = normal rated brightness. */
+  luminousIntensity: number;
+  colorTemperatureK: number;
+}
+
+const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
+
+/**
+ * A compact incandescent-lamp model. Tungsten is close to its cold resistance
+ * at zero volts and approaches V²/P at the rated operating point. Light output
+ * rises much faster than electrical power, which gives the familiar orange dim
+ * filament below rating and bright warm-white glow at rating.
+ */
+export function bulbOperatingPoint(
+  voltage: number,
+  ratedVoltage = 6,
+  ratedPower = 3,
+  coldResistance = 4
+): BulbOperatingPoint {
+  const v = Math.abs(Number.isFinite(voltage) ? voltage : 0);
+  const vr = Math.max(0.1, Math.abs(ratedVoltage));
+  const pr = Math.max(0.05, Math.abs(ratedPower));
+  const coldR = Math.max(0.05, Math.abs(coldResistance));
+  const hotR = Math.max(coldR, (vr * vr) / pr);
+  const voltageRatio = v / vr;
+  const warmFraction = Math.pow(clamp(voltageRatio, 0, 1), 0.65);
+  const overVoltageRise = voltageRatio > 1 ? 1 + 0.12 * (voltageRatio - 1) : 1;
+  const effectiveResistance = (coldR + (hotR - coldR) * warmFraction) * overVoltageRise;
+  const current = effectiveResistance > 0 ? v / effectiveResistance : 0;
+  const power = v * current;
+  const powerRatio = power / pr;
+  const thermalFraction = Math.pow(clamp(powerRatio, 0, 1.6), 0.42);
+  const filamentTemperatureC = 20 + 2680 * thermalFraction;
+  const luminousIntensity = clamp(Math.pow(Math.max(0, powerRatio), 1.6) * 1.15, 0, 1.45);
+  const colorTemperatureK = 900 + 1800 * Math.pow(clamp(powerRatio, 0, 1), 0.45);
+  return { effectiveResistance, current, power, filamentTemperatureC, luminousIntensity, colorTemperatureK };
 }
 
 /**
@@ -268,7 +314,10 @@ export function solveCircuit(
       case 'incandescent-bulb': {
         const nodeA = ds.find(`${item.id}:t1`);
         const nodeB = ds.find(`${item.id}:t2`);
-        const coldR = Number(props.filamentColdResistance ?? 4);
+        const coldR = Math.max(0.05, Number(props.filamentColdResistance ?? 4));
+        const ratedV = Math.max(0.1, Number(props.ratedVoltage ?? 6));
+        const ratedP = Math.max(0.05, Number(props.ratedPower ?? 3));
+        const hotR = Math.max(coldR, (ratedV * ratedV) / ratedP);
         const isBurned = Boolean(item.burnedOut);
         branches.push({
           id: item.id,
@@ -276,7 +325,8 @@ export function solveCircuit(
           type: 'resistor',
           nodeA,
           nodeB,
-          value: isBurned ? 1e9 : coldR
+          value: isBurned ? 1e9 : coldR,
+          bulb: isBurned ? undefined : { coldResistance: coldR, hotResistance: hotR, ratedVoltage: ratedV, ratedPower: ratedP }
         });
         break;
       }
@@ -427,6 +477,16 @@ export function solveCircuit(
 
     // Stamp conductance for passive branches
     for (const b of branches) {
+      if (b.bulb) {
+        const vA = nodeVoltages[b.nodeA] ?? 0;
+        const vB = nodeVoltages[b.nodeB] ?? 0;
+        b.value = bulbOperatingPoint(
+          Math.abs(vA - vB),
+          b.bulb.ratedVoltage,
+          b.bulb.ratedPower,
+          b.bulb.coldResistance
+        ).effectiveResistance;
+      }
       let g = 1 / b.value;
 
       if (b.type === 'diode') {
@@ -495,6 +555,7 @@ export function solveCircuit(
     let vDrop = 0;
     let branchCurrent = 0;
     let polarityError = false;
+    let bulbState: BulbOperatingPoint | null = null;
 
     switch (item.equipmentId) {
       case 'battery-dc':
@@ -521,7 +582,6 @@ export function solveCircuit(
 
       case 'resistor-fixed':
       case 'resistance-box':
-      case 'incandescent-bulb':
       case 'immersion-heater': {
         const n1 = ds.find(`${item.id}:t1`);
         const n2 = ds.find(`${item.id}:t2`);
@@ -530,9 +590,24 @@ export function solveCircuit(
         vDrop = Math.abs(v1 - v2);
         const r = item.equipmentId === 'resistor-fixed' ? Number(props.resistance ?? 100)
           : item.equipmentId === 'resistance-box' ? Number(props.resistance ?? 50)
-          : item.equipmentId === 'immersion-heater' ? Number(props.coilResistance ?? 5)
-          : Number(props.filamentColdResistance ?? 4);
+          : Number(props.coilResistance ?? 5);
         branchCurrent = r > 0 ? vDrop / r : 0;
+        break;
+      }
+
+      case 'incandescent-bulb': {
+        const n1 = ds.find(`${item.id}:t1`);
+        const n2 = ds.find(`${item.id}:t2`);
+        const v1 = nodeVoltages[n1] ?? 0;
+        const v2 = nodeVoltages[n2] ?? 0;
+        vDrop = Math.abs(v1 - v2);
+        bulbState = bulbOperatingPoint(
+          vDrop,
+          Number(props.ratedVoltage ?? 6),
+          Number(props.ratedPower ?? 3),
+          Number(props.filamentColdResistance ?? 4)
+        );
+        branchCurrent = item.burnedOut ? vDrop / 1e9 : bulbState.current;
         break;
       }
 
@@ -661,7 +736,11 @@ export function solveCircuit(
       deflection,
       displayReading,
       displayUnit,
-      polarityError
+      polarityError,
+      effectiveResistance: bulbState?.effectiveResistance,
+      filamentTemperatureC: bulbState?.filamentTemperatureC,
+      luminousIntensity: burnedOut ? 0 : bulbState?.luminousIntensity,
+      colorTemperatureK: bulbState?.colorTemperatureK
     };
   }
 
